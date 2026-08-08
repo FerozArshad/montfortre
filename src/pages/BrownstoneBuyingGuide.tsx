@@ -124,11 +124,84 @@ const HTML = `<style>
  .no-sb { -ms-overflow-style:none; scrollbar-width:none; }
  .no-sb::-webkit-scrollbar { display:none; }
  a:hover > .ig-ov { opacity:1; }
+
+ /* ===== Responsive overrides (layout styles are inline, hence !important).
+        Desktop >=1440px is untouched: every rule below sits in a max-width query. ===== */
+ @media (max-width:1024px) {
+  [style*="px 64px"] { padding-left:32px !important; padding-right:32px !important; }
+  [style*="grid-template-columns:1.05fr 0.95fr"], [style*="grid-template-columns:1.15fr 0.85fr"],
+  [style*="grid-template-columns:1.02fr 0.98fr"], [style*="grid-template-columns:1.1fr 0.9fr"],
+  [style*="grid-template-columns:0.95fr 1.05fr"], [style*="grid-template-columns:0.9fr 1.1fr"],
+  [style*="grid-template-columns:240px minmax(0,1fr)"] { grid-template-columns:1fr !important; gap:40px !important; }
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"],
+  [style*="grid-template-columns:repeat(4,minmax(0,1fr))"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  [style*="grid-template-columns:1.2fr 1fr 0.9fr auto"] { grid-template-columns:1fr 1fr !important; }
+  [style*="font-size:62px"] { font-size:44px !important; }
+  [style*="font-size:60px"] { font-size:43px !important; }
+  [style*="font-size:58px"] { font-size:42px !important; }
+  [style*="font-size:56px"] { font-size:40px !important; }
+  [style*="font-size:54px"] { font-size:42px !important; }
+  [style*="font-size:52px"] { font-size:38px !important; }
+  [style*="font-size:46px"] { font-size:36px !important; }
+  [style*="font-size:44px"] { font-size:35px !important; }
+  [style*="font-size:42px"] { font-size:34px !important; }
+ }
+ @media (max-width:768px) {
+  [style*="px 64px"] { padding-left:20px !important; padding-right:20px !important; }
+  section[style*="padding:130px"], section[style*="padding:120px"], section[style*="padding:110px"],
+  section[style*="padding:100px"], section[style*="padding:96px"], section[style*="padding:92px"],
+  section[style*="padding:90px"], section[style*="padding:88px"],
+  section[style*="padding:80px"] { padding-top:56px !important; padding-bottom:56px !important; }
+  footer[style*="padding:88px"] { padding-top:56px !important; }
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"],
+  [style*="grid-template-columns:repeat(4,minmax(0,1fr))"] { grid-template-columns:1fr !important; gap:24px !important; }
+  [style*="grid-template-columns:auto auto auto"],
+  [style*="grid-template-columns:1.2fr 1fr 0.9fr auto"],
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns:300px 1fr"],
+  [style*="grid-template-columns:120px 1fr"],
+  [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns:1fr !important; }
+  [style*="font-size:62px"] { font-size:32px !important; }
+  [style*="font-size:60px"] { font-size:31px !important; }
+  [style*="font-size:58px"] { font-size:31px !important; }
+  [style*="font-size:56px"] { font-size:30px !important; }
+  [style*="font-size:54px"] { font-size:32px !important; }
+  [style*="font-size:52px"] { font-size:30px !important; }
+  [style*="font-size:46px"] { font-size:29px !important; }
+  [style*="font-size:44px"] { font-size:28px !important; }
+  [style*="font-size:42px"] { font-size:27px !important; }
+  [style*="font-size:40px"] { font-size:30px !important; }
+  [style*="font-size:38px"] { font-size:26px !important; }
+  [style*="font-size:34px"] { font-size:25px !important; }
+  [style*="font-size:32px"] { font-size:24px !important; }
+  [style*="font-size:30px"] { font-size:24px !important; }
+  [style*="font-size:27px"] { font-size:20px !important; }
+  [style*="font-size:26px"] { font-size:21px !important; }
+  [style*="font-size:24px"] { font-size:19px !important; }
+  div[style*="white-space:nowrap"] { white-space:normal !important; }
+  div[style*="display:flex; gap:12px"] { flex-wrap:wrap !important; }
+  div[style*="justify-content:space-between"] { flex-wrap:wrap !important; }
+  [style*="padding:56px 60px"] { padding:28px 20px !important; gap:24px !important; }
+  [style*="flex-direction:column"][style*="align-items:flex-end"] { align-items:flex-start !important; }
+  footer [style*="justify-self:center"], footer [style*="justify-self:end"] { justify-self:start !important; text-align:left !important; }
+  [style*="left:24px; right:24px"] { left:12px !important; right:12px !important; }
+ }
+ @media (max-width:480px) {
+  [style*="font-size:62px"] { font-size:28px !important; }
+  [style*="font-size:60px"] { font-size:28px !important; }
+  [style*="font-size:58px"] { font-size:27px !important; }
+  [style*="font-size:56px"] { font-size:27px !important; }
+  [style*="font-size:54px"] { font-size:28px !important; }
+  [style*="font-size:52px"] { font-size:26px !important; }
+  [style*="font-size:46px"] { font-size:26px !important; }
+  [style*="padding:56px 60px"] { padding:24px 16px !important; }
+  [style*="flex:0 0 300px"] { flex:0 0 260px !important; }
+ }
 </style>
 
 
 
-<div style="min-width:1440px; background:#F9F6E6; overflow-x:hidden">
+<div style="width:100%; max-width:100%; background:#F9F6E6; overflow-x:hidden">
 
  <header style="position:sticky; top:0; z-index:90; background:#fff; box-shadow:0 1px 0 rgba(18,16,14,0.1)">
   <div style="max-width:1440px; margin:0 auto; padding:26px 64px; display:flex; align-items:center; gap:40px">

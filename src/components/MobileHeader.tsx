@@ -128,9 +128,11 @@ export default function MobileHeader() {
         fontFamily: "'DM Sans',system-ui,sans-serif",
       }}
     >
-      {/* Top bar */}
+      {/* Top bar (kept above the slide-in menu so the close button stays reachable) */}
       <div
         style={{
+          position: "relative",
+          zIndex: 210,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",

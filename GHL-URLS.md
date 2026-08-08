@@ -21,6 +21,8 @@ Fetch each file with download_to_repo into the same repo path (the part after /m
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
 
 ## Public assets
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/og-home.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/favicon.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/instagram/ig-1.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/instagram/ig-2.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/instagram/ig-3.jpg
