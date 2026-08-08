@@ -3,10 +3,19 @@
 Fetch each file with download_to_repo into the same repo path (the part after /main/).
 
 ## Source files
-- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Home.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/ROUTES.tsx.snippet
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/TRANSFER-GUIDE.md
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/Seo.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useStyleHover.ts
-- https://raw.githubusercontent.com/FerozArshad/montfortre/main/TRANSFER-GUIDE.md
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/AboutUs.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Blog.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BrownstoneBuyingGuide.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Harlem.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Home.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Services.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/StanleyMontfort.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SuccessStories.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
 
 ## Public assets
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/instagram/ig-1.jpg
@@ -58,3 +67,12 @@ Fetch each file with download_to_repo into the same repo path (the part after /m
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-sro-free-home-valuation.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-sro-mortgages.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/selling-sros-in-nyc.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-buying-a-brownstone-in-nyc.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-buying-a-condo-in-nyc.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-co-ownership-buying-in-nyc.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-nyc-brownstone-mortgages.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-nyc-co-op-free-home-valuation.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-selling-brownstones-in-nyc.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-selling-co-ops-in-nyc.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-selling-condos-in-nyc.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-selling-probate-properties-in-nyc.webp
