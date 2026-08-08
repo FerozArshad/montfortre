@@ -1,5 +1,6 @@
 import Seo from "../components/Seo";
 import useStyleHover from "../hooks/useStyleHover";
+import useCarousels from "../hooks/useCarousels";
 
 const TITLE = "Montfort Real Estate | New York Realtor";
 const METAS = [
@@ -115,6 +116,7 @@ const HTML = `<style>
  @keyframes v4-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
  @keyframes v4-rise { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
  .mnav-item > .mnav-drop { opacity:0; visibility:hidden; transform:translateY(12px) scale(0.98); transform-origin:top left; pointer-events:none; transition:opacity .24s ease, transform .3s cubic-bezier(0.22,0.61,0.36,1), visibility .3s; }
+ .mnav-item > .mnav-drop::before { content:""; position:absolute; left:0; right:0; bottom:100%; height:22px; }
  .mnav-item:hover > .mnav-drop { opacity:1; visibility:visible; transform:translateY(0) scale(1); pointer-events:auto; }
  .mnav-item:hover > .mnav-top { color:#C98A2C; }
  .mnav-item:hover .mnav-chev { transform:rotate(180deg); color:#C98A2C; }
@@ -156,8 +158,10 @@ const HTML = `<style>
   [style*="grid-template-columns:1fr 1fr"],
   [style*="grid-template-columns:300px 1fr"],
   [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns:1fr !important; }
+  /* Services intro: desktop side-gap was 80px — collapse it when stacked */
+  [style*="grid-template-columns:1fr 1fr"][style*="gap:80px"] { gap:14px !important; align-items:start !important; }
   [style*="grid-template-columns:620px 1fr"] { gap:24px !important; }
-  h1[style*="font-size:38px"] { font-size:24px !important; }
+  h1[style*="font-size:38px"] { font-size:24px !important; margin-top:12px !important; }
   h2[style*="font-size:54px"] { font-size:32px !important; }
   h2[style*="font-size:46px"] { font-size:29px !important; }
   h2[style*="font-size:44px"] { font-size:28px !important; }
@@ -168,11 +172,57 @@ const HTML = `<style>
   [style*="font-size:27px"] { font-size:19px !important; }
   [style*="font-size:26px"] { font-size:21px !important; }
   [style*="font-size:24px"] { font-size:19px !important; }
-  [style*="padding:72px 64px 40px"] { padding-top:36px !important; padding-bottom:32px !important; }
-  [style*="padding:34px 38px 84px"] { padding:26px 20px 84px !important; }
-  [style*="translate(-50%,50%)"] { padding:14px 16px !important; gap:14px !important; width:calc(100% - 8px); max-width:calc(100% - 8px); justify-content:center; }
-  [style*="translate(-50%,50%)"] > div:first-child { padding-right:12px !important; }
+ [style*="padding:72px 64px 40px"] { padding-top:24px !important; padding-bottom:24px !important; }
+ [style*="padding:34px 38px 84px"] { padding:22px 18px 70px !important; }
+ [style*="animation:v4-in"] { padding-bottom:36px !important; }
+ [style*="font-size:16.5px"] { font-size:15px !important; }
+ [style*="margin:26px 0 22px"] { margin:16px 0 14px !important; }
+ [style*="margin:30px 0 20px"] { margin:18px 0 14px !important; }
+ a[style*="min-height:54px"] { min-height:46px !important; padding-top:12px !important; padding-bottom:12px !important; }
+ a[style*="border:2px solid #113B5F"][style*="min-height:54px"] { display:none !important; }
+ [style*="mask-image"] { margin-top:12px !important; }
   div[style*="white-space:nowrap"] { white-space:normal !important; }
+  /* Hidden-cost pill: keep "THE COST OF GOING ALONE" on one line */
+  [style*="background:#C98A2C"][style*="letter-spacing:0.16em"][style*="white-space:nowrap"] {
+    white-space:nowrap !important;
+    font-size:10px !important;
+    letter-spacing:0.08em !important;
+    padding:11px 16px !important;
+    max-width:calc(100% - 8px) !important;
+    box-sizing:border-box !important;
+  }
+  /* Google reviews badge: compact two-column card (keep after nowrap reset) */
+  a[aria-label="Read verified Google reviews"] {
+    padding:12px 12px !important;
+    gap:10px !important;
+    width:calc(100% - 24px) !important;
+    max-width:360px !important;
+    justify-content:center !important;
+    white-space:nowrap !important;
+    box-sizing:border-box !important;
+  }
+  a[aria-label="Read verified Google reviews"] > div {
+    white-space:nowrap !important;
+    flex-shrink:0 !important;
+  }
+  a[aria-label="Read verified Google reviews"] > div:first-child {
+    padding-right:10px !important;
+    gap:4px !important;
+  }
+  a[aria-label="Read verified Google reviews"] > div:last-child {
+    gap:4px !important;
+  }
+  a[aria-label="Read verified Google reviews"] img {
+    width:24px !important;
+    height:24px !important;
+  }
+  a[aria-label="Read verified Google reviews"] [style*="font-size:30px"] { font-size:22px !important; }
+  a[aria-label="Read verified Google reviews"] [style*="letter-spacing:0.16em"] {
+    font-size:8.5px !important;
+    letter-spacing:0.06em !important;
+  }
+  a[aria-label="Read verified Google reviews"] [style*="font-size:19px"] { font-size:14px !important; letter-spacing:0.08em !important; }
+  a[aria-label="Read verified Google reviews"] [style*="font-size:15px"] { font-size:12.5px !important; white-space:nowrap !important; }
   div[style*="display:flex; gap:12px"] { flex-wrap:wrap !important; }
   div[style*="justify-content:space-between"] { flex-wrap:wrap !important; }
   a[style*="height:480px"] { height:400px !important; }
@@ -180,6 +230,96 @@ const HTML = `<style>
   [style*="flex:0 0 380px"] { flex:0 0 290px !important; }
   [style*="padding:56px 60px"] { padding:28px 20px !important; gap:24px !important; }
   [style*="border-left:1px solid #D9CFA6"] { border-left:none !important; }
+ [style*="border-right:1px solid #D9CFA6"] { border-right:none !important; }
+ /* Dark-section gold CTA: keep label on one line */
+ a[style*="background:#C98A2C"][style*="min-height:56px"] {
+  white-space:nowrap !important;
+  font-size:12.5px !important;
+  letter-spacing:0.04em !important;
+  padding:16px 18px !important;
+  width:100% !important;
+  max-width:100% !important;
+  box-sizing:border-box !important;
+  justify-content:center !important;
+  text-align:center !important;
+ }
+ /* Credential / affiliation card under Stanley portrait: wider + single-line labels */
+ [style*="width:88%"][style*="grid-template-columns:1fr 1px 1fr"] {
+  width:100% !important;
+  padding:16px 14px !important;
+  gap:12px !important;
+ }
+ [style*="width:88%"][style*="grid-template-columns:1fr 1px 1fr"] [style*="font-size:15px"] {
+  font-size:12.5px !important;
+  white-space:nowrap !important;
+  letter-spacing:-0.02em !important;
+ }
+ [style*="padding:34px 34px 0"] {
+  padding-left:0 !important;
+  padding-right:0 !important;
+ }
+ /* Founder: portrait first, then copy; More about Stanley sits under the portrait */
+ [style*="grid-template-columns:1fr 520px"] { gap:28px !important; }
+ [style*="grid-template-columns:1fr 520px"] > [data-reveal]:first-child { order:2; }
+ [style*="grid-template-columns:1fr 520px"] > [data-reveal]:last-child {
+  order:1;
+  max-width:none !important;
+  width:100% !important;
+  margin:0 !important;
+ }
+ a.founder-more-m {
+  display:block !important;
+  text-align:center !important;
+ }
+ [style*="align-items:center; gap:16px; margin-top:40px"] > a[href="/stanley-montfort/"] {
+  display:none !important;
+ }
+ /* Founder CTAs: Schedule button full-width alone */
+ [style*="align-items:center; gap:16px; margin-top:40px"] {
+  flex-direction:column !important;
+  align-items:stretch !important;
+  gap:18px !important;
+ }
+ [style*="align-items:center; gap:16px; margin-top:40px"] > a[style*="border-radius:100px"] {
+  width:100% !important;
+  box-sizing:border-box !important;
+  text-align:center !important;
+  white-space:nowrap !important;
+  font-size:13px !important;
+  padding:16px 22px !important;
+ }
+ /* Expect cards: kill the desktop 64px column padding so all three align */
+ [style*="grid-template-rows:auto auto auto 1fr auto"] {
+  padding:0 !important;
+  grid-template-rows:auto auto auto auto auto !important;
+  row-gap:0 !important;
+ }
+ /* Match card 3 density: tighter divider → title → body on mobile */
+ [style*="grid-template-rows:auto auto auto 1fr auto"] > [style*="height:1px"][style*="background:#D9CFA6"] {
+  margin-top:16px !important;
+ }
+ [style*="grid-template-rows:auto auto auto 1fr auto"] > h3[style*="font-size:25px"],
+ [style*="grid-template-rows:auto auto auto 1fr auto"] > [style*="font-size:25px"][style*="margin-top:24px"] {
+  margin-top:12px !important;
+  font-size:22px !important;
+  line-height:1.3 !important;
+ }
+ [style*="grid-template-rows:auto auto auto 1fr auto"] > p {
+  margin-top:10px !important;
+ }
+ /* Review quote mark: smaller and tighter above the text */
+ [style*="font-size:82px"] { font-size:48px !important; height:26px !important; }
+ [style*="font-size:82px"] + p { margin-top:10px !important; }
+ /* Reviews: swipe + dots on mobile; the side arrows overlap the card text */
+ #review-prev, #review-next { display:none !important; }
+ /* Footer bottom bar: match the left-aligned footer content */
+ footer [style*="margin:40px auto 0"] { text-align:left !important; }
+ /* Founder stats: compact 3-across strip instead of a tall stack */
+ div[style*="repeat(3,minmax(0,1fr))"][style*="border-top:1px solid #D9CFA6"] { grid-template-columns:repeat(3,1fr) !important; gap:0 !important; margin-top:30px !important; padding-top:26px !important; }
+ div[style*="repeat(3,minmax(0,1fr))"][style*="border-top:1px solid #D9CFA6"] > div { padding:0 8px !important; text-align:center !important; }
+ div[style*="repeat(3,minmax(0,1fr))"][style*="border-top:1px solid #D9CFA6"] > div:not(:first-child) { border-left:1px solid #D9CFA6 !important; }
+ div[style*="repeat(3,minmax(0,1fr))"][style*="border-top:1px solid #D9CFA6"] [style*="font-size:40px"] { font-size:24px !important; }
+ div[style*="repeat(3,minmax(0,1fr))"][style*="border-top:1px solid #D9CFA6"] [style*="max-width:190px"] { max-width:none !important; margin-top:8px !important; font-size:12px !important; line-height:1.45 !important; }
   [style*="padding:0 32px"] { padding:0 !important; }
   [style*="flex-direction:column"][style*="align-items:flex-end"] { align-items:flex-start !important; }
   footer [style*="justify-self:center"], footer [style*="justify-self:end"] { justify-self:start !important; text-align:left !important; }
@@ -246,17 +386,17 @@ const HTML = `<style>
      </div>
     </div>
     <a href="/success-stories/" style="color:#0F1729; padding:8px 0">Success Stories</a>
-    <a href="/about-us/" style="color:#0F1729; padding:8px 0">About</a>
     <div class="mnav-item" style="position:relative">
-     <a href="/blog/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">Resources
+     <a href="/about-us/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">About
       <svg class="mnav-chev" width="11" height="11" viewBox="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
      </a>
      <div class="mnav-drop" style="position:absolute; top:calc(100% + 18px); left:-24px; width:240px; background:#fff; border:1px solid #EAE1BE; border-top:3px solid #C98A2C; box-shadow:0 30px 70px rgba(17,59,95,0.22); border-radius:16px; padding:14px; display:flex; flex-direction:column; gap:2px">
       <a href="/about-us/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">About Us</a>
       <a href="/stanley-montfort/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Stanley Montfort</a>
-      <a href="/contact/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Contact</a>
      </div>
     </div>
+    <a href="/blog/" style="color:#0F1729; padding:8px 0">Resources</a>
+    <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:#0F1729; padding:8px 0">Contact</a>
    </nav>
    <a href="tel:+1-646-970-1078" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:#0F1729; transition:color 0.2s ease" style-hover="color:#C98A2C">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -345,7 +485,7 @@ const HTML = `<style>
       </div>
      </div>
 
-     <div style="position:absolute; left:50%; bottom:0; transform:translate(-50%,50%); display:inline-flex; align-items:center; gap:24px; background:#FFFFFF; border:1px solid rgba(201,138,44,0.6); border-radius:16px; box-shadow:0 18px 40px rgba(17,59,95,0.3); padding:18px 30px; white-space:nowrap">
+     <a href="https://maps.google.com/?cid=11378470238102062088" target="_blank" rel="noopener" aria-label="Read verified Google reviews" style="position:absolute; left:50%; bottom:0; transform:translate(-50%,50%); display:inline-flex; align-items:center; gap:24px; background:#FFFFFF; border:1px solid rgba(201,138,44,0.6); border-radius:16px; box-shadow:0 18px 40px rgba(17,59,95,0.3); padding:18px 30px; white-space:nowrap; text-decoration:none; color:inherit">
       <div style="display:flex; flex-direction:column; gap:8px; padding-right:24px; border-right:1px solid #E0D9B8">
        <div style="display:flex; align-items:center; gap:11px">
         <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google" style="width:30px; height:30px; display:block">
@@ -357,7 +497,7 @@ const HTML = `<style>
        <span style="color:#F5A623; font-size:19px; letter-spacing:0.14em; line-height:1">★★★★★</span>
        <span style="font-size:15px; line-height:1.4; color:#0F1729">Over <strong style="font-weight:700">57 reviews</strong></span>
       </div>
-     </div>
+     </a>
     </div>
    </div>
 
@@ -476,6 +616,7 @@ const HTML = `<style>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-size:15px; font-weight:700; letter-spacing:-0.01em; color:#F9F6E6; margin-top:6px">REBNY Member Firm</div>
      </div>
     </div>
+    <a href="/stanley-montfort/" class="founder-more-m" style="display:none; margin:22px auto 0; font-size:12.5px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#113B5F; border-bottom:2px solid #C98A2C; padding-bottom:5px; width:fit-content">More about Stanley →</a>
    </div>
   </div>
  </section>
@@ -625,7 +766,7 @@ const HTML = `<style>
       <img src="/redesign-assets/expect/offmarket.png" alt="On and off market real estate search" style="width: 220px; height: 220px; display: block; flex: 0 0 auto" width="250" height="250">
      </div>
      <div style="height:1px; background:#D9CFA6; margin:26px 0 0"></div>
-     <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:25px; line-height:1.34; color:#0F1729; margin-top:24px; text-wrap:pretty; margin:0">Identify On &amp; <strong style="font-weight:700; color:#0F1729">Off Market <a href="/advice-for-buyers-looking-to-purchase-brownstones/" style="color:#113B5F">Real Estate</a></strong></h3>
+     <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:25px; line-height:1.34; color:#0F1729; text-wrap:pretty; margin:24px 0 0">Identify On &amp; <strong style="font-weight:700; color:#0F1729">Off Market <a href="/advice-for-buyers-looking-to-purchase-brownstones/" style="color:#113B5F">Real Estate</a></strong></h3>
      <p style="font-size:16px; line-height:1.8; color:#3B4C5E; margin:14px 0 0; text-wrap:pretty">With our efficient <a href="/co-ownership-advantages-and-disadvantages-in-nyc/" style="color:#113B5F">real estate</a> searching process we'll provide you with weekly updates of both on and off market real estate to not waste your time seeing properties that do not fit your search criteria</p>
      <a href="/perfect-home-finder/" style="display:flex; align-items:center; gap:10px; margin-top:28px; font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#113B5F" style-hover="color:#C98A2C">Perfect home finder <span style="color:#C98A2C">→</span></a>
     </div>
@@ -634,7 +775,7 @@ const HTML = `<style>
       <img src="/redesign-assets/expect/troublesome.png" alt="Troublesome brownstone interior" style="width: 231px; height: 220px; display: block; flex: 0 0 auto" width="250" height="250">
      </div>
      <div style="height:1px; background:#D9CFA6; margin:26px 0 0"></div>
-     <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:25px; line-height:1.34; color:#0F1729; margin-top:24px; text-wrap:pretty; margin:0">Avoid a <strong style="font-weight:700; color:#0F1729">Troublesome <a href="/advice-for-buyers-looking-to-purchase-brownstones/" style="color:#113B5F">Real Estate</a></strong></h3>
+     <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:25px; line-height:1.34; color:#0F1729; text-wrap:pretty; margin:24px 0 0">Avoid a <strong style="font-weight:700; color:#0F1729">Troublesome <a href="/advice-for-buyers-looking-to-purchase-brownstones/" style="color:#113B5F">Real Estate</a></strong></h3>
      <p style="font-size:16px; line-height:1.8; color:#3B4C5E; margin:14px 0 0; text-wrap:pretty">With our <strong style="font-weight:700; color:#0F1729">real estate due diligence</strong> process you'll keep more money in your pocket and avoid costly mistakes</p>
      <a href="/whats-my-home-worth/" style="display:flex; align-items:center; gap:10px; margin-top:28px; font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#113B5F" style-hover="color:#C98A2C">What’s my home worth <span style="color:#C98A2C">→</span></a>
     </div>
@@ -743,7 +884,7 @@ const HTML = `<style>
       <div style="display:flex; align-items:center; gap:9px; margin-top:24px; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#113B5F">Learn more <span style="color:#C98A2C">→</span></div>
      </div>
     </a>
-    <a data-reveal="" href="/services/" style="display:flex; flex-direction:column; justify-content:space-between; background:#113B5F; border-radius:16px; padding:34px 32px; transition:background .4s ease, transform .4s ease" style-hover="background:#0F1729; transform:translateY(-7px)">
+    <a data-reveal="" href="https://calendly.com/montfort" target="_blank" rel="noopener" style="display:flex; flex-direction:column; justify-content:space-between; background:#113B5F; border-radius:16px; padding:34px 32px; transition:background .4s ease, transform .4s ease" style-hover="background:#0F1729; transform:translateY(-7px)">
      <div>
       <div style="font-size:10.5px; font-weight:800; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8">Not sure where to start?</div>
       <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; line-height:1.3; color:#F9F6E6; margin-top:18px; text-wrap:pretty; margin:0">Let’s find the right service for you.</h3>
@@ -896,7 +1037,7 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; margin-top:52px">
     <a href="https://www.instagram.com/p/DbZFQBTD4hS/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-1.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100% object-fit:cover" width="640" height="800">
+     <img src="/instagram/ig-1.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="640" height="800">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">Just Listed: 904 Gates Avenue, Bedford-Stuyvesant</p>
@@ -907,7 +1048,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DbWdWwVCUnb/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-2.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100% object-fit:cover" width="1439" height="959">
+     <img src="/instagram/ig-2.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1439" height="959">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">A 4-unit Brooklyn property where the numbers really stand out</p>
@@ -918,7 +1059,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DbHHdBzGiZ3/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-3.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100% object-fit:cover" width="1439" height="959">
+     <img src="/instagram/ig-3.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1439" height="959">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">SOLD: 481 West 145th Street, last asking $2,550,000</p>
@@ -929,7 +1070,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DalKzvTEWlq/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-4.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100% object-fit:cover" width="720" height="900">
+     <img src="/instagram/ig-4.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="720" height="900">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">What if owning a brownstone cost less each month than renting?</p>
@@ -940,7 +1081,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DadYwSGFTy_/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-5.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100% object-fit:cover" width="720" height="900">
+     <img src="/instagram/ig-5.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="720" height="900">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">SOLD: 49 East 126th Street, last asking $2,250,000</p>
@@ -951,7 +1092,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DaQ7iNZicGp/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-6.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100% object-fit:cover" width="1080" height="1350">
+     <img src="/instagram/ig-6.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1080" height="1350">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">How to create $2,000,000+ in equity buying a brownstone</p>
@@ -962,7 +1103,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DaLXUDZkbRu/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-7.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100% object-fit:cover" width="1080" height="1350">
+     <img src="/instagram/ig-7.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1080" height="1350">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">SOLD: 265 West 139th Street, a Strivers’ Row landmark</p>
@@ -973,7 +1114,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/reel/DY0PDihu1pt/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-8.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100% object-fit:cover" width="1080" height="1350">
+     <img src="/instagram/ig-8.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1080" height="1350">
      <span style="position:absolute; top:14px; right:14px; width:34px; height:34px; border-radius:100px; background:rgba(15,23,41,0.6); display:flex; align-items:center; justify-content:center"><svg width="14" height="14" viewBox="0 0 16 16" fill="#fff"><path d="M4 3l9 5-9 5z"></path></svg></span>
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">In Contract: 49 East 126th Street, Harlem brownstone</p>
@@ -1251,7 +1392,8 @@ const HTML = `<style>
    <div data-reveal="" style="display:flex; flex-direction:column; justify-content:center">
     <div style="font-size:11.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#C98A2C">Free Download</div>
     <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:42px; line-height:1.22; letter-spacing:-0.008em; color:#F9F6E6; margin:16px 0 0; text-wrap:pretty">11 Costly Mistakes Made When Buying a Brownstone</h2>
-    <p style="font-size:17px; line-height:1.85; color:rgba(249,246,230,0.9); margin:18px 0 0; max-width:600px; text-wrap:pretty">
+    <p style="font-size:17px; line-height:1.7; color:rgba(249,246,230,0.78); margin:14px 0 0; max-width:600px; text-wrap:pretty">Educate yourself on these 11 costly mistakes, the difference between a successful purchase and a disastrous one.</p>
+    <p style="font-size:17px; line-height:1.85; color:rgba(249,246,230,0.9); margin:14px 0 0; max-width:600px; text-wrap:pretty">
      Are you in the market for a <a href="/featured-brownstones-for-sale/harlem-brownstones/" style="color:#C98A2C">brownstone</a>? Taking the time to educate yourself on these 11 costly mistakes can make all the difference between a successful purchase and a disastrous one.
     </p>
     <div style="display:flex; flex-direction:column; gap:12px; margin-top:32px; max-width:460px">
@@ -1307,7 +1449,7 @@ const HTML = `<style>
     <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:16px; letter-spacing:0.02em; color:#C98A2C">About</div>
     <div style="display:flex; flex-direction:column; gap:11px; margin-top:20px; padding-top:18px; border-top:1px solid rgba(201,138,44,0.35)">
      <a href="/stanley-montfort/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Stanley Montfort</a>
-     <a href="/contact/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
+     <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
      <a href="/success-stories/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Success Stories</a>
      <a href="/blog/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Resources</a>
     </div>
@@ -1350,6 +1492,7 @@ const HTML = `<style>
 
 export default function Home() {
   useStyleHover();
+  useCarousels();
   return (
     <>
       <Seo title={TITLE} metas={METAS} links={LINKS} jsonLd={JSON_LD} />

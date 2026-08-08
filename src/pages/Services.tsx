@@ -94,6 +94,7 @@ const HTML = `<style>
  @keyframes v4-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
  @keyframes v4-rise { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
  .mnav-item > .mnav-drop { opacity:0; visibility:hidden; transform:translateY(12px) scale(0.98); transform-origin:top left; pointer-events:none; transition:opacity .24s ease, transform .3s cubic-bezier(0.22,0.61,0.36,1), visibility .3s; }
+ .mnav-item > .mnav-drop::before { content:""; position:absolute; left:0; right:0; bottom:100%; height:22px; }
  .mnav-item:hover > .mnav-drop { opacity:1; visibility:visible; transform:translateY(0) scale(1); pointer-events:auto; }
  .mnav-item:hover > .mnav-top { color:#C98A2C; }
  .mnav-item:hover .mnav-chev { transform:rotate(180deg); color:#C98A2C; }
@@ -166,6 +167,45 @@ const HTML = `<style>
   [style*="flex-direction:column"][style*="align-items:flex-end"] { align-items:flex-start !important; }
   footer [style*="justify-self:center"], footer [style*="justify-self:end"] { justify-self:start !important; text-align:left !important; }
   [style*="left:24px; right:24px"] { left:12px !important; right:12px !important; }
+  /* Hero CTAs: Book Now + phone on one row */
+  [style*="flex-wrap:wrap; gap:14px; margin-top:34px"] {
+    flex-wrap:nowrap !important;
+    gap:8px !important;
+    width:100% !important;
+  }
+  [style*="flex-wrap:wrap; gap:14px; margin-top:34px"] > a {
+    flex:1 1 0 !important;
+    min-width:0 !important;
+    justify-content:center !important;
+    white-space:nowrap !important;
+    font-size:12px !important;
+    letter-spacing:0.03em !important;
+    padding:14px 10px !important;
+    min-height:48px !important;
+  }
+  /* Neighborhoods: 2 columns on mobile (override 1-col collapse) */
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"][style*="gap:14px 40px"] {
+    grid-template-columns:1fr 1fr !important;
+    gap:10px 14px !important;
+  }
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"][style*="gap:14px 40px"] > a {
+    font-size:13px !important;
+    line-height:1.35 !important;
+  }
+  /* Free Download card: stack icon above copy so text isn't cramped */
+  a[href*="11-costly-mistakes"] {
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:14px !important;
+    padding:18px 18px !important;
+    max-width:100% !important;
+  }
+  a[href*="11-costly-mistakes"] [style*="font-size:19px"] {
+    font-size:17px !important;
+  }
+  a[href*="11-costly-mistakes"] [style*="font-size:14px"] {
+    font-size:13.5px !important;
+  }
  }
  @media (max-width:480px) {
   [style*="font-size:62px"] { font-size:28px !important; }
@@ -230,18 +270,18 @@ const HTML = `<style>
       <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Customer Login</a>
      </div>
     </div>
-    <a href="/success-stories/" style="color:#0F1729; padding:8px 0">Success Stories</a>
-    <a href="/about-us/" style="color:#0F1729; padding:8px 0">About</a>
+        <a href="/success-stories/" style="color:#0F1729; padding:8px 0">Success Stories</a>
     <div class="mnav-item" style="position:relative">
-     <a href="/blog/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">Resources
+     <a href="/about-us/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">About
       <svg class="mnav-chev" width="11" height="11" viewBox="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
      </a>
      <div class="mnav-drop" style="position:absolute; top:calc(100% + 18px); left:-24px; width:240px; background:#fff; border:1px solid #EAE1BE; border-top:3px solid #C98A2C; box-shadow:0 30px 70px rgba(17,59,95,0.22); border-radius:16px; padding:14px; display:flex; flex-direction:column; gap:2px">
       <a href="/about-us/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">About Us</a>
       <a href="/stanley-montfort/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Stanley Montfort</a>
-      <a href="/contact/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Contact</a>
      </div>
     </div>
+    <a href="/blog/" style="color:#0F1729; padding:8px 0">Resources</a>
+    <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:#0F1729; padding:8px 0">Contact</a>
    </nav>
    <a href="tel:+1-646-970-1078" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:#0F1729; transition:color 0.2s ease" style-hover="color:#C98A2C">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -345,7 +385,7 @@ const HTML = `<style>
     </div>
     <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; margin-top:34px">
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-buying-a-condo-in-nyc.webp" alt="svc buying a condo in nyc" style="display:block; width:100%; height:100% object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-buying-a-condo-in-nyc.webp" alt="svc buying a condo in nyc" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/buying-a-condo-in-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">Buying a Condo in NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Expert guidance, market insights, and strategic representation for condo buyers.</p>
@@ -353,7 +393,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-buying-a-brownstone-in-nyc.webp" alt="svc buying a brownstone in nyc" style="display:block; width:100%; height:100% object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-buying-a-brownstone-in-nyc.webp" alt="svc buying a brownstone in nyc" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/buying-a-brownstone-in-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">Buying a Brownstone in NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Expert guidance for buying iconic NYC brownstones.</p>
@@ -369,7 +409,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-co-ownership-buying-in-nyc.webp" alt="svc co ownership buying in nyc" style="display:block; width:100%; height:100% object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-co-ownership-buying-in-nyc.webp" alt="svc co ownership buying in nyc" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/co-ownership-buying-in-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">Co-Ownership Buying in NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Shared ownership, lower costs, and greater buying power.</p>
@@ -391,7 +431,7 @@ const HTML = `<style>
     </div>
     <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; margin-top:34px">
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-selling-brownstones-in-nyc.webp" alt="svc selling brownstones in nyc" style="display:block; width:100%; height:100% object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-selling-brownstones-in-nyc.webp" alt="svc selling brownstones in nyc" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/selling-brownstones-in-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">Selling Brownstones in NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Historic value, expert marketing, and premium buyer demand.</p>
@@ -399,7 +439,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-selling-condos-in-nyc.webp" alt="svc selling condos in nyc" style="display:block; width:100%; height:100% object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-selling-condos-in-nyc.webp" alt="svc selling condos in nyc" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/selling-condos-in-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">Selling Condos in NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Strategic pricing, qualified buyers, and maximum market exposure.</p>
@@ -407,7 +447,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-selling-co-ops-in-nyc.webp" alt="svc selling co ops in nyc" style="display:block; width:100%; height:100% object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-selling-co-ops-in-nyc.webp" alt="svc selling co ops in nyc" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/selling-co-ops-in-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">Selling Co-ops in NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Board expertise, targeted marketing, and seamless transactions.</p>
@@ -423,7 +463,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-selling-probate-properties-in-nyc.webp" alt="svc selling probate properties in nyc" style="display:block; width:100%; height:100% object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-selling-probate-properties-in-nyc.webp" alt="svc selling probate properties in nyc" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/selling-probate-properties-in-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">Selling Probate Properties in NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Compassionate guidance, legal coordination, and stress-free sales.</p>
@@ -491,7 +531,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-nyc-co-op-free-home-valuation.webp" alt="svc nyc co op free home valuation" style="display:block; width:100%; height:100% object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-nyc-co-op-free-home-valuation.webp" alt="svc nyc co op free home valuation" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/nyc-co-op-free-home-valuation/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">NYC Co-op Free Home Valuation</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Board-aware pricing, market insights, and co-op valuation expertise.</p>
@@ -529,7 +569,7 @@ const HTML = `<style>
     </div>
     <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; margin-top:34px">
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-nyc-brownstone-mortgages.webp" alt="svc nyc brownstone mortgages" style="display:block; width:100%; height:100% object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/slots/svc-nyc-brownstone-mortgages.webp" alt="svc nyc brownstone mortgages" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/nyc-brownstone-mortgages/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">NYC Brownstone Mortgages</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Historic property financing, flexible loan options, and expert support.</p>
@@ -644,7 +684,7 @@ const HTML = `<style>
      <textarea placeholder="Comments, questions?" rows="4" style="background:rgba(249,246,230,0.1); border:1px solid rgba(201,138,44,0.45); border-radius:10px; padding:15px 16px; font-family:inherit; font-size:15.5px; color:#F9F6E6; resize:vertical"></textarea>
      <a href="https://calendly.com/montfort" style="display:flex; align-items:center; justify-content:center; background:#C98A2C; color:#0F1729; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; border-radius:100px; font-size:15px; padding:17px 24px; min-height:54px" style-hover="background:#F9F6E6; color:#113B5F">Submit</a>
     </div>
-    <a href="../redesign-assets/11-costly-mistakes-brownstone.pdf" download="" style="display:flex; align-items:center; gap:20px; margin-top:32px; max-width:520px; background:rgba(249,246,230,0.06); border:1px solid rgba(201,138,44,0.45); border-radius:16px; padding:22px 24px; text-decoration:none; transition:background .3s ease, border-color .3s ease" style-hover="background:rgba(249,246,230,0.1); border-color:#C98A2C">
+    <a href="/redesign-assets/11-costly-mistakes-brownstone.pdf" download="" style="display:flex; align-items:center; gap:20px; margin-top:32px; max-width:520px; background:rgba(249,246,230,0.06); border:1px solid rgba(201,138,44,0.45); border-radius:16px; padding:22px 24px; text-decoration:none; transition:background .3s ease, border-color .3s ease" style-hover="background:rgba(249,246,230,0.1); border-color:#C98A2C">
      <span style="flex:0 0 auto; width:52px; height:52px; border-radius:12px; background:#C98A2C; display:flex; align-items:center; justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F1729" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span>
      <span style="display:flex; flex-direction:column; gap:5px">
       <span style="font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C98A2C">Free Download</span>
@@ -700,7 +740,7 @@ const HTML = `<style>
     <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:16px; letter-spacing:0.02em; color:#C98A2C">About</div>
     <div style="display:flex; flex-direction:column; gap:11px; margin-top:20px; padding-top:18px; border-top:1px solid rgba(201,138,44,0.35)">
      <a href="/stanley-montfort/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Stanley Montfort</a>
-     <a href="/contact/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
+     <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
      <a href="/success-stories/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Success Stories</a>
      <a href="/blog/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Resources</a>
     </div>

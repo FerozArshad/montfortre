@@ -1,4 +1,5 @@
 import Seo from "../components/Seo";
+import HarlemSchools from "../components/HarlemSchools";
 import useStyleHover from "../hooks/useStyleHover";
 
 const TITLE = "Harlem | Montfort Real Estate";
@@ -109,6 +110,7 @@ const HTML = `<style>
  @keyframes v4-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
  @keyframes v4-rise { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
  .mnav-item > .mnav-drop { opacity:0; visibility:hidden; transform:translateY(12px) scale(0.98); transform-origin:top left; pointer-events:none; transition:opacity .24s ease, transform .3s cubic-bezier(0.22,0.61,0.36,1), visibility .3s; }
+ .mnav-item > .mnav-drop::before { content:""; position:absolute; left:0; right:0; bottom:100%; height:22px; }
  .mnav-item:hover > .mnav-drop { opacity:1; visibility:visible; transform:translateY(0) scale(1); pointer-events:auto; }
  .mnav-item:hover > .mnav-top { color:#C98A2C; }
  .mnav-item:hover .mnav-chev { transform:rotate(180deg); color:#C98A2C; }
@@ -181,6 +183,43 @@ const HTML = `<style>
   [style*="flex-direction:column"][style*="align-items:flex-end"] { align-items:flex-start !important; }
   footer [style*="justify-self:center"], footer [style*="justify-self:end"] { justify-self:start !important; text-align:left !important; }
   [style*="left:24px; right:24px"] { left:12px !important; right:12px !important; }
+  /* Hero CTAs: Book Now + phone on one row */
+  [style*="flex-wrap:wrap; gap:14px; margin-top:34px"] {
+    flex-wrap:nowrap !important;
+    gap:8px !important;
+    width:100% !important;
+  }
+  [style*="flex-wrap:wrap; gap:14px; margin-top:34px"] > a {
+    flex:1 1 0 !important;
+    min-width:0 !important;
+    justify-content:center !important;
+    white-space:nowrap !important;
+    font-size:12px !important;
+    letter-spacing:0.03em !important;
+    padding:14px 10px !important;
+    min-height:48px !important;
+  }
+  /* Stats strip: 2x2 instead of stacked 1-col */
+  div[style*="repeat(4,minmax(0,1fr))"][style*="gap:0"] {
+    grid-template-columns:1fr 1fr !important;
+    gap:28px 12px !important;
+  }
+  div[style*="repeat(4,minmax(0,1fr))"][style*="gap:0"] > div {
+    border-right:none !important;
+    padding:0 10px !important;
+    text-align:center !important;
+  }
+  div[style*="repeat(4,minmax(0,1fr))"][style*="gap:0"] > div:nth-child(odd) {
+    border-right:1px solid rgba(201,138,44,0.28) !important;
+    padding-right:14px !important;
+  }
+  div[style*="repeat(4,minmax(0,1fr))"][style*="gap:0"] [style*="font-size:40px"] {
+    font-size:28px !important;
+  }
+  div[style*="repeat(4,minmax(0,1fr))"][style*="gap:0"] [style*="font-size:14px"] {
+    font-size:12.5px !important;
+    margin-top:8px !important;
+  }
  }
  @media (max-width:480px) {
   [style*="font-size:62px"] { font-size:28px !important; }
@@ -245,18 +284,18 @@ const HTML = `<style>
       <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Customer Login</a>
      </div>
     </div>
-    <a href="/success-stories/" style="color:#0F1729; padding:8px 0">Success Stories</a>
-    <a href="/about-us/" style="color:#0F1729; padding:8px 0">About</a>
+        <a href="/success-stories/" style="color:#0F1729; padding:8px 0">Success Stories</a>
     <div class="mnav-item" style="position:relative">
-     <a href="/blog/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">Resources
+     <a href="/about-us/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">About
       <svg class="mnav-chev" width="11" height="11" viewBox="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
      </a>
      <div class="mnav-drop" style="position:absolute; top:calc(100% + 18px); left:-24px; width:240px; background:#fff; border:1px solid #EAE1BE; border-top:3px solid #C98A2C; box-shadow:0 30px 70px rgba(17,59,95,0.22); border-radius:16px; padding:14px; display:flex; flex-direction:column; gap:2px">
       <a href="/about-us/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">About Us</a>
       <a href="/stanley-montfort/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Stanley Montfort</a>
-      <a href="/contact/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Contact</a>
      </div>
     </div>
+    <a href="/blog/" style="color:#0F1729; padding:8px 0">Resources</a>
+    <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:#0F1729; padding:8px 0">Contact</a>
    </nav>
    <a href="tel:+1-646-970-1078" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:#0F1729; transition:color 0.2s ease" style-hover="color:#C98A2C">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -407,19 +446,7 @@ const HTML = `<style>
   </div>
  </section>
 
- <section data-screen-label="Schools" style="background:#F9F6E6; padding:90px 64px; border-bottom:1px solid #E0D9B8">
-  <div style="max-width:1440px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap">
-   <div data-reveal="">
-    <div style="font-size:11.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#3B4C5E">For families</div>
-    <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:38px; line-height:1.2; letter-spacing:-0.01em; color:#0F1729; margin:14px 0 0; text-wrap:pretty">Schools in the area</h2>
-    <p style="font-size:16px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; max-width:520px">Explore preschools, elementary, middle, and high schools near Harlem, complete with ratings and contact info.</p>
-    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:22px">
-     <span style="font-size:12.5px; font-weight:700; letter-spacing:0.04em; color:#113B5F; background:#F5EECB; border:1px solid #E0D9B8; border-radius:100px; padding:10px 18px">Preschool</span><span style="font-size:12.5px; font-weight:700; letter-spacing:0.04em; color:#113B5F; background:#F5EECB; border:1px solid #E0D9B8; border-radius:100px; padding:10px 18px">Elementary</span><span style="font-size:12.5px; font-weight:700; letter-spacing:0.04em; color:#113B5F; background:#F5EECB; border:1px solid #E0D9B8; border-radius:100px; padding:10px 18px">Middle school</span><span style="font-size:12.5px; font-weight:700; letter-spacing:0.04em; color:#113B5F; background:#F5EECB; border:1px solid #E0D9B8; border-radius:100px; padding:10px 18px">High school</span>
-    </div>
-   </div>
-   <a data-reveal="" href="/harlem/#top-schools" style="flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; border:2px solid #113B5F; color:#113B5F; font-size:14px; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; border-radius:100px; padding:16px 32px; min-height:54px" style-hover="background:#113B5F; color:#F9F6E6">Search schools</a>
-  </div>
- </section>
+<!--HARLEM_SCHOOLS-->
 
  <section data-screen-label="Around the area" style="background:#F5EECB; padding:110px 64px; border-bottom:1px solid #E0D9B8">
   <div style="max-width:1440px; margin:0 auto">
@@ -729,7 +756,7 @@ const HTML = `<style>
     <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:16px; letter-spacing:0.02em; color:#C98A2C">About</div>
     <div style="display:flex; flex-direction:column; gap:11px; margin-top:20px; padding-top:18px; border-top:1px solid rgba(201,138,44,0.35)">
      <a href="/stanley-montfort/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Stanley Montfort</a>
-     <a href="/contact/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
+     <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
      <a href="/success-stories/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Success Stories</a>
      <a href="/blog/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Resources</a>
     </div>
@@ -769,12 +796,16 @@ const HTML = `<style>
 
 `;
 
+const [HTML_BEFORE, HTML_AFTER] = HTML.split("<!--HARLEM_SCHOOLS-->");
+
 export default function Harlem() {
   useStyleHover();
   return (
     <>
       <Seo title={TITLE} metas={METAS} links={LINKS} jsonLd={JSON_LD} />
-      <div dangerouslySetInnerHTML={{ __html: HTML }} />
+      <div dangerouslySetInnerHTML={{ __html: HTML_BEFORE }} />
+      <HarlemSchools />
+      <div dangerouslySetInnerHTML={{ __html: HTML_AFTER }} />
     </>
   );
 }

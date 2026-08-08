@@ -98,6 +98,7 @@ const HTML = `<style>
  @keyframes v4-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
  @keyframes v4-rise { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
  .mnav-item > .mnav-drop { opacity:0; visibility:hidden; transform:translateY(12px) scale(0.98); transform-origin:top left; pointer-events:none; transition:opacity .24s ease, transform .3s cubic-bezier(0.22,0.61,0.36,1), visibility .3s; }
+ .mnav-item > .mnav-drop::before { content:""; position:absolute; left:0; right:0; bottom:100%; height:22px; }
  .mnav-item:hover > .mnav-drop { opacity:1; visibility:visible; transform:translateY(0) scale(1); pointer-events:auto; }
  .mnav-item:hover > .mnav-top { color:#C98A2C; }
  .mnav-item:hover .mnav-chev { transform:rotate(180deg); color:#C98A2C; }
@@ -170,6 +171,59 @@ const HTML = `<style>
   [style*="flex-direction:column"][style*="align-items:flex-end"] { align-items:flex-start !important; }
   footer [style*="justify-self:center"], footer [style*="justify-self:end"] { justify-self:start !important; text-align:left !important; }
   [style*="left:24px; right:24px"] { left:12px !important; right:12px !important; }
+  /* Hero CTAs: Book Now + phone on one row */
+  [style*="flex-wrap:wrap; gap:14px; margin-top:34px"] {
+    flex-wrap:nowrap !important;
+    gap:8px !important;
+    width:100% !important;
+  }
+  [style*="flex-wrap:wrap; gap:14px; margin-top:34px"] > a {
+    flex:1 1 0 !important;
+    min-width:0 !important;
+    justify-content:center !important;
+    white-space:nowrap !important;
+    font-size:12px !important;
+    letter-spacing:0.03em !important;
+    padding:14px 10px !important;
+    min-height:48px !important;
+  }
+  /* Locations: 2 columns on mobile (override 1-col collapse) */
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"][style*="gap:14px 40px"] {
+    grid-template-columns:1fr 1fr !important;
+    gap:10px 14px !important;
+  }
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"][style*="gap:14px 40px"] > a {
+    font-size:13.5px !important;
+    line-height:1.35 !important;
+  }
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"][style*="gap:14px 40px"] > a[href="/neighborhoods/"] {
+    grid-column:1 / -1 !important;
+  }
+  /* Bottom CTA card: tighter copy + full-width one-line buttons */
+  [style*="background:#113B5F"][style*="padding:44px 48px"] {
+    padding:28px 18px !important;
+  }
+  [style*="background:#113B5F"][style*="padding:44px 48px"] > [style*="font-size:26px"] {
+    font-size:18px !important;
+    line-height:1.3 !important;
+    text-wrap:balance !important;
+  }
+  [style*="background:#113B5F"][style*="padding:44px 48px"] > [style*="margin-top:28px"] {
+    flex-direction:column !important;
+    flex-wrap:nowrap !important;
+    align-items:stretch !important;
+    gap:10px !important;
+  }
+  [style*="background:#113B5F"][style*="padding:44px 48px"] > [style*="margin-top:28px"] > a {
+    width:100% !important;
+    box-sizing:border-box !important;
+    white-space:nowrap !important;
+    font-size:12px !important;
+    letter-spacing:0.04em !important;
+    padding:14px 16px !important;
+    min-height:48px !important;
+    justify-content:center !important;
+  }
  }
  @media (max-width:480px) {
   [style*="font-size:62px"] { font-size:28px !important; }
@@ -234,18 +288,18 @@ const HTML = `<style>
       <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Customer Login</a>
      </div>
     </div>
-    <a href="/success-stories/" style="color:#0F1729; padding:8px 0">Success Stories</a>
-    <a href="/about-us/" style="color:#0F1729; padding:8px 0">About</a>
+        <a href="/success-stories/" style="color:#0F1729; padding:8px 0">Success Stories</a>
     <div class="mnav-item" style="position:relative">
-     <a href="/blog/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">Resources
+     <a href="/about-us/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">About
       <svg class="mnav-chev" width="11" height="11" viewBox="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
      </a>
      <div class="mnav-drop" style="position:absolute; top:calc(100% + 18px); left:-24px; width:240px; background:#fff; border:1px solid #EAE1BE; border-top:3px solid #C98A2C; box-shadow:0 30px 70px rgba(17,59,95,0.22); border-radius:16px; padding:14px; display:flex; flex-direction:column; gap:2px">
       <a href="/about-us/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">About Us</a>
       <a href="/stanley-montfort/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Stanley Montfort</a>
-      <a href="/contact/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Contact</a>
      </div>
     </div>
+    <a href="/blog/" style="color:#0F1729; padding:8px 0">Resources</a>
+    <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:#0F1729; padding:8px 0">Contact</a>
    </nav>
    <a href="tel:+1-646-970-1078" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:#0F1729; transition:color 0.2s ease" style-hover="color:#C98A2C">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -322,7 +376,7 @@ const HTML = `<style>
     <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:32px; line-height:1.22; letter-spacing:-0.01em; color:#0F1729; margin:44px 0 0; text-wrap:pretty">Benefits of owning a 2 family property in NYC</h2>
     <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:21px; line-height:1.3; letter-spacing:-0.005em; color:#113B5F; margin:30px 0 0; text-wrap:pretty">Live in one unit while generating rental income</h3>
     <p style="font-size:17px; line-height:1.85; color:#3B4C5E; margin:16px 0 0; text-wrap:pretty">You occupy one unit and rent the other, using that <a href="/nyc-first-time-home-buyer-mortages/" style="color:#113B5F; border-bottom:1px solid #C98A2C" style-hover="color:#C98A2C">rental income to offset your mortgage</a>, taxes, and insurance. In Queens neighborhoods like Ozone Park and Richmond Hill, rents run roughly <strong style="font-weight:700; color:#0F1729">$2,000–$2,600/month</strong> per unit depending on size and condition.</p>
-    <div style="margin:34px 0 0; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; aspect-ratio:3/2; background:#E0D9B8"><div style="display:block; width:100%; height:100% background:#EAE1BE"></div></div>
+    <div style="margin:34px 0 0; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; box-shadow:0 26px 54px rgba(17,59,95,0.14)"><img src="/redesign-assets/services/2-family-investment.png" alt="Investment and appreciation for family house" loading="lazy" style="display:block; width:100%; height:auto"></div>
     <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:21px; line-height:1.3; letter-spacing:-0.005em; color:#113B5F; margin:30px 0 0; text-wrap:pretty">Long-term investment and appreciation</h3>
     <p style="font-size:17px; line-height:1.85; color:#3B4C5E; margin:16px 0 0; text-wrap:pretty">NYC real estate has historically appreciated over time, and two-family houses in emerging neighborhoods offer both current income and future value growth, you're building equity in two units rather than one.</p>
     <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:21px; line-height:1.3; letter-spacing:-0.005em; color:#113B5F; margin:30px 0 0; text-wrap:pretty">Tax advantages & equity building</h3>
@@ -467,7 +521,7 @@ const HTML = `<style>
     <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:16px; letter-spacing:0.02em; color:#C98A2C">About</div>
     <div style="display:flex; flex-direction:column; gap:11px; margin-top:20px; padding-top:18px; border-top:1px solid rgba(201,138,44,0.35)">
      <a href="/stanley-montfort/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Stanley Montfort</a>
-     <a href="/contact/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
+     <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
      <a href="/success-stories/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Success Stories</a>
      <a href="/blog/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Resources</a>
     </div>

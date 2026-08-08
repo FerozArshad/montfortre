@@ -9,6 +9,15 @@
 
 /* --- Desktop nav: touch support (used by useTouchDropdowns) ------------- */
 /* Mirrors the .mnav-item:hover > .mnav-drop rule in each page's <style>.   */
+/* Invisible hover bridge across the gap between trigger and panel */
+.mnav-item > .mnav-drop::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 22px;
+}
 .mnav-item.mnav-open > .mnav-drop {
   opacity: 1 !important;
   visibility: visible !important;
@@ -21,6 +30,26 @@
 .mnav-item.mnav-open .mnav-chev {
   transform: rotate(180deg);
   color: #c98a2c;
+}
+
+/*
+ * Desktop content rail alignment.
+ * Header uses max-width:1440px with 64px horizontal padding INSIDE the box.
+ * Sections historically used 64px padding on the SECTION and a full-bleed
+ * 1440 inner, so hero/copy sat 64px wider than the logo/phone. Mirror the
+ * header pattern above 1024 so every section lines up with the nav.
+ */
+@media (min-width: 1025px) {
+  section[style*="px 64px"],
+  footer[style*="px 64px"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  section > div[style*="max-width:1440px"],
+  footer > div[style*="max-width:1440px"] {
+    padding-left: 64px !important;
+    padding-right: 64px !important;
+  }
 }
 
 /* --- Below 1024px: swap headers, shared mobile baselines ---------------- */
@@ -49,7 +78,9 @@
   img {
     max-width: 100% !important;
   }
-  img:not([style*="position:absolute"]):not([style*="object-fit"]) {
+  /* Skip images that set their own inline height (logos, icons): forcing
+     height:auto would blow them up to their natural pixel size. */
+  img:not([style*="position:absolute"]):not([style*="object-fit"]):not([style*="height:"]) {
     height: auto !important;
   }
   iframe {
@@ -87,5 +118,57 @@
     font-size: 12px !important;
     padding: 0 12px !important;
     letter-spacing: 0.04em !important;
+  }
+}
+
+/* --- Footer: shared mobile layout on every page ------------------------- */
+@media (max-width: 768px) {
+  footer[style*="padding:88px"] {
+    padding-top: 56px !important;
+    padding-bottom: 28px !important;
+  }
+
+  /* Link columns + contact strip: single column, left-aligned */
+  footer [style*="grid-template-columns:1.2fr 1fr 0.9fr auto"],
+  footer [style*="grid-template-columns:1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  footer [style*="justify-self:center"],
+  footer [style*="justify-self:end"],
+  footer [style*="justify-self:start"] {
+    justify-self: start !important;
+    text-align: left !important;
+  }
+  footer [style*="flex-direction:column"][style*="align-items:flex-end"] {
+    align-items: flex-start !important;
+  }
+
+  /* Privacy / copyright bar: match left-aligned contact block above */
+  footer [style*="margin:40px auto 0"] {
+    text-align: left !important;
+  }
+
+  /* Keep logos proportional — never blow up to natural asset size */
+  footer img[style*="height:72px"] {
+    height: 48px !important;
+    width: auto !important;
+    max-width: 160px !important;
+  }
+  footer img[style*="height:52px"] {
+    height: 40px !important;
+    width: auto !important;
+  }
+}
+
+/* --- Desktop header: keep nav readable when Contact is in the bar ------- */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  header nav {
+    gap: 18px !important;
+    font-size: 12px !important;
+  }
+  header nav .mnav-drop {
+    /* keep panels usable on mid-width desktops */
+    z-index: 80;
   }
 }

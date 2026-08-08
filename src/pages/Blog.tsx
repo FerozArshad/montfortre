@@ -94,6 +94,7 @@ const HTML = `<style>
  @keyframes v4-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
  @keyframes v4-rise { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
  .mnav-item > .mnav-drop { opacity:0; visibility:hidden; transform:translateY(12px) scale(0.98); transform-origin:top left; pointer-events:none; transition:opacity .24s ease, transform .3s cubic-bezier(0.22,0.61,0.36,1), visibility .3s; }
+ .mnav-item > .mnav-drop::before { content:""; position:absolute; left:0; right:0; bottom:100%; height:22px; }
  .mnav-item:hover > .mnav-drop { opacity:1; visibility:visible; transform:translateY(0) scale(1); pointer-events:auto; }
  .mnav-item:hover > .mnav-top { color:#C98A2C; }
  .mnav-item:hover .mnav-chev { transform:rotate(180deg); color:#C98A2C; }
@@ -166,6 +167,48 @@ const HTML = `<style>
   [style*="flex-direction:column"][style*="align-items:flex-end"] { align-items:flex-start !important; }
   footer [style*="justify-self:center"], footer [style*="justify-self:end"] { justify-self:start !important; text-align:left !important; }
   [style*="left:24px; right:24px"] { left:12px !important; right:12px !important; }
+  /* Hero CTAs: full-width stack */
+  [style*="margin-top:36px"][style*="flex-wrap:wrap"] {
+    gap:10px !important;
+    width:100% !important;
+  }
+  [style*="margin-top:36px"][style*="flex-wrap:wrap"] > a {
+    width:100% !important;
+    box-sizing:border-box !important;
+    justify-content:center !important;
+  }
+  /* Articles header */
+  [style*="margin-bottom:44px"] {
+    margin-bottom:28px !important;
+    gap:10px !important;
+  }
+  /* Article cards: single column, tighter padding */
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"][style*="gap:26px"] {
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"][style*="gap:26px"] > a [style*="padding:24px 26px 26px"] {
+    padding:20px 18px 20px !important;
+  }
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"][style*="gap:26px"] [style*="font-size:19px"] {
+    font-size:17px !important;
+  }
+  /* Contact form: keep first/last name side by side */
+  [style*="grid-template-columns:1fr 1fr"][style*="gap:12px"] {
+    grid-template-columns:1fr 1fr !important;
+    gap:10px !important;
+  }
+  /* Map office chip: stack address + directions */
+  [style*="left:24px; right:24px; bottom:24px"] {
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:14px !important;
+    padding:18px 18px !important;
+  }
+  [style*="left:24px; right:24px; bottom:24px"] > a {
+    justify-content:center !important;
+  }
+  [style*="min-height:440px"] { min-height:320px !important; }
  }
  @media (max-width:480px) {
   [style*="font-size:62px"] { font-size:28px !important; }
@@ -230,18 +273,18 @@ const HTML = `<style>
       <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Customer Login</a>
      </div>
     </div>
-    <a href="/success-stories/" style="color:#0F1729; padding:8px 0">Success Stories</a>
-    <a href="/about-us/" style="color:#0F1729; padding:8px 0">About</a>
+        <a href="/success-stories/" style="color:#0F1729; padding:8px 0">Success Stories</a>
     <div class="mnav-item" style="position:relative">
-     <a href="/blog/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">Resources
+     <a href="/about-us/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">About
       <svg class="mnav-chev" width="11" height="11" viewBox="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
      </a>
      <div class="mnav-drop" style="position:absolute; top:calc(100% + 18px); left:-24px; width:240px; background:#fff; border:1px solid #EAE1BE; border-top:3px solid #C98A2C; box-shadow:0 30px 70px rgba(17,59,95,0.22); border-radius:16px; padding:14px; display:flex; flex-direction:column; gap:2px">
       <a href="/about-us/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">About Us</a>
       <a href="/stanley-montfort/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Stanley Montfort</a>
-      <a href="/contact/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Contact</a>
      </div>
     </div>
+    <a href="/blog/" style="color:#0F1729; padding:8px 0">Resources</a>
+    <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:#0F1729; padding:8px 0">Contact</a>
    </nav>
    <a href="tel:+1-646-970-1078" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:#0F1729; transition:color 0.2s ease" style-hover="color:#C98A2C">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -268,7 +311,7 @@ const HTML = `<style>
    <h1 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:56px; line-height:1.08; letter-spacing:-0.018em; color:#F9F6E6; margin:22px 0 0; text-wrap:pretty">News &amp; realtor advice</h1>
    <p style="font-size:19px; line-height:1.7; color:rgba(249,246,230,0.85); margin:20px auto 0; max-width:620px; text-wrap:pretty">Market reports, buyer and seller guides, and neighborhood insight from Stanley Montfort, stay in the loop on everything NYC real estate.</p>
    <div style="display:flex; align-items:center; justify-content:center; gap:16px; margin-top:36px; flex-wrap:wrap">
-    <a href="https://calendly.com/montfort" style="display:inline-flex; align-items:center; justify-content:center; gap:9px; background:#C98A2C; color:#0F1729; font-size:14px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; border-radius:100px; padding:16px 30px; min-height:52px" style-hover="background:#F9F6E6; color:#113B5F">Book a consultation <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M8 3.5L12.5 8 8 12.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+    <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; justify-content:center; gap:9px; background:#C98A2C; color:#0F1729; font-size:14px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; border-radius:100px; padding:16px 30px; min-height:52px" style-hover="background:#F9F6E6; color:#113B5F">Book a consultation <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M8 3.5L12.5 8 8 12.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
     <a href="tel:+1-646-970-1078" style="display:inline-flex; align-items:center; justify-content:center; gap:9px; background:transparent; color:#F9F6E6; font-size:14px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; border:1px solid rgba(201,138,44,0.6); border-radius:100px; padding:16px 30px; min-height:52px" style-hover="background:rgba(249,246,230,0.08); border-color:#C98A2C">Call (646) 970-1078</a>
    </div>
   </div>
@@ -840,7 +883,7 @@ const HTML = `<style>
     <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:16px; letter-spacing:0.02em; color:#C98A2C">About</div>
     <div style="display:flex; flex-direction:column; gap:11px; margin-top:20px; padding-top:18px; border-top:1px solid rgba(201,138,44,0.35)">
      <a href="/stanley-montfort/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Stanley Montfort</a>
-     <a href="/contact/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
+     <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
      <a href="/success-stories/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Success Stories</a>
      <a href="/blog/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Resources</a>
     </div>

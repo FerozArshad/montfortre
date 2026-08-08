@@ -9,6 +9,7 @@ Files to copy into the GHL AI Studio project:
 | src/components/MobileHeader.tsx | src/components/MobileHeader.tsx |
 | src/hooks/useStyleHover.ts | src/hooks/useStyleHover.ts |
 | src/hooks/useTouchDropdowns.ts | src/hooks/useTouchDropdowns.ts |
+| src/hooks/useCarousels.ts | src/hooks/useCarousels.ts |
 | src/responsive.css | src/responsive.css |
 | public/redesign-assets/** | public/redesign-assets/ |
 | public/instagram/** | public/instagram/ |

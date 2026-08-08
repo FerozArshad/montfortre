@@ -11,6 +11,7 @@ interface MenuSection {
   label: string;
   href: string;
   links?: MenuLink[];
+  external?: boolean;
 }
 
 /* Mirrors the desktop nav exactly (same labels and hrefs). */
@@ -53,16 +54,16 @@ const MENU: MenuSection[] = [
     ],
   },
   { label: "Success Stories", href: "/success-stories/" },
-  { label: "About", href: "/about-us/" },
   {
-    label: "Resources",
-    href: "/blog/",
+    label: "About",
+    href: "/about-us/",
     links: [
       { label: "About Us", href: "/about-us/" },
       { label: "Stanley Montfort", href: "/stanley-montfort/" },
-      { label: "Contact", href: "/contact/" },
     ],
   },
+  { label: "Resources", href: "/blog/" },
+  { label: "Contact", href: "https://calendly.com/montfort", external: true },
 ];
 
 const LOGO_URL =
@@ -143,17 +144,20 @@ export default function MobileHeader() {
         }}
       >
         <a href="/" aria-label="Montfort Real Estate — home" style={{ display: "flex", alignItems: "center" }}>
-          <div
-            role="img"
-            aria-label="Montfort Real Estate"
+          <img
+            src={LOGO_URL}
+            alt="Montfort Real Estate"
+            width="60"
+            height="42"
             style={{
+              width: 60,
               height: 42,
-              aspectRatio: "3813/2662",
-              background: "#113B5F",
-              WebkitMask: `url('${LOGO_URL}') center/contain no-repeat`,
-              mask: `url('${LOGO_URL}') center/contain no-repeat`,
+              display: "block",
+              // Tint the black PNG to the brand navy (#113B5F)
+              filter:
+                "brightness(0) saturate(100%) invert(16%) sepia(33%) saturate(2300%) hue-rotate(181deg) brightness(100%) contrast(92%)",
             }}
-          ></div>
+          />
         </a>
 
         <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
@@ -280,6 +284,7 @@ export default function MobileHeader() {
                   <a
                     href={section.href}
                     onClick={close}
+                    {...(section.external ? { target: "_blank", rel: "noopener" } : {})}
                     style={{
                       flex: "1 1 auto",
                       display: "flex",
