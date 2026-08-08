@@ -170,7 +170,7 @@ const HTML = `<style>
   [style*="font-size:24px"] { font-size:19px !important; }
   [style*="padding:72px 64px 40px"] { padding-top:36px !important; padding-bottom:32px !important; }
   [style*="padding:34px 38px 84px"] { padding:26px 20px 84px !important; }
-  [style*="translate(-50%,50%)"] { padding:12px 14px !important; gap:12px !important; max-width:calc(100% - 8px); }
+  [style*="translate(-50%,50%)"] { padding:14px 16px !important; gap:14px !important; width:calc(100% - 8px); max-width:calc(100% - 8px); justify-content:center; }
   [style*="translate(-50%,50%)"] > div:first-child { padding-right:12px !important; }
   div[style*="white-space:nowrap"] { white-space:normal !important; }
   div[style*="display:flex; gap:12px"] { flex-wrap:wrap !important; }
@@ -292,13 +292,22 @@ const HTML = `<style>
      <div style="display:flex; gap:12px">
       <a href="https://calendly.com/montfort" style="flex:1 1 auto; display:flex; align-items:center; justify-content:center; background:#113B5F; color:#F9F6E6; font-size:15.5px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; padding:16px 24px; border-radius:10px; min-height:54px; white-space:nowrap" style-hover="background:#C98A2C; color:#113B5F">Book Now</a>
       <a href="tel:646-970-1078" style="flex:0 0 auto; display:flex; align-items:center; justify-content:center; border:2px solid #113B5F; color:#113B5F; font-size:15.5px; font-weight:800; letter-spacing:0.02em; padding:14px 24px; border-radius:10px; min-height:54px; white-space:nowrap" style-hover="background:#F5EECB; color:#113B5F">646-970-1078</a>
-     </div><form class="lead-idx-form" onsubmit="event.preventDefault(); window.open('https://stanley.olridx.com/Search/'+this.searchtype.value,'_blank')" style="margin-top:22px; display:flex; gap:10px; flex-wrap:wrap; align-items:center">
-<select name="searchtype" aria-label="Listing type" style="height:46px; padding:0 14px; border:1px solid #C98A2C; border-radius:10px; background:#fff; color:#0F1729; font-family:'DM Sans',system-ui,sans-serif; font-size:14px; font-weight:600">
-<option value="Sales">For Sale</option>
-<option value="Rentals">For Rent</option>
-</select>
-<button type="submit" style="height:46px; padding:0 22px; background:#113B5F; color:#F9F6E6; border:0; border-radius:10px; font-weight:700; font-size:12.5px; letter-spacing:0.09em; text-transform:uppercase; cursor:pointer">Search MLS Listings</button>
-<a href="/whats-my-home-worth/" style="font-weight:700; font-size:13px; color:#113B5F; text-decoration:underline">What&#8217;s my home worth?</a>
+     </div><form class="lead-idx-form" onsubmit="event.preventDefault(); window.open('https://stanley.olridx.com/Search/'+this.searchtype.value,'_blank')" style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap; align-items:stretch">
+<div style="flex:1 1 auto; display:flex; min-height:54px; border:2px solid #113B5F; border-radius:10px; background:#fff">
+<div class="lif-dd" style="position:relative; display:flex; align-items:stretch">
+<input type="hidden" name="searchtype" value="Sales">
+<button type="button" class="lif-btn" aria-haspopup="listbox" onclick="var l=this.parentNode.querySelector('.lif-list'); l.style.display=l.style.display==='block'?'none':'block'" style="display:flex; align-items:center; gap:12px; border:0; outline:none; padding:0 18px; background:#fff; color:#0F1729; font-family:'DM Sans',system-ui,sans-serif; font-size:15px; font-weight:700; border-right:2px solid #113B5F; cursor:pointer; white-space:nowrap; border-radius:8px 0 0 8px">
+<span class="lif-label">For Sale</span>
+<svg width="12" height="8" viewBox="0 0 12 8" fill="none" style="flex:0 0 auto"><path d="M1 1.5l5 5 5-5" stroke="#C98A2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<div class="lif-list" role="listbox" style="display:none; position:absolute; top:calc(100% + 10px); left:0; min-width:170px; background:#fff; border:1px solid #EAE1BE; border-top:3px solid #C98A2C; border-radius:12px; box-shadow:0 24px 50px rgba(17,59,95,0.2); overflow:hidden; z-index:60">
+<div role="option" data-v="Sales" onclick="var w=this.parentNode.parentNode; w.querySelector('input').value=this.getAttribute('data-v'); w.querySelector('.lif-label').textContent=this.textContent; this.parentNode.style.display='none'" style="padding:14px 18px; font-size:14px; font-weight:700; color:#0F1729; cursor:pointer" style-hover="background:#F5EECB; color:#113B5F">For Sale</div>
+<div role="option" data-v="Rentals" onclick="var w=this.parentNode.parentNode; w.querySelector('input').value=this.getAttribute('data-v'); w.querySelector('.lif-label').textContent=this.textContent; this.parentNode.style.display='none'" style="padding:14px 18px; font-size:14px; font-weight:700; color:#0F1729; cursor:pointer" style-hover="background:#F5EECB; color:#113B5F">For Rent</div>
+</div>
+</div>
+<button type="submit" style="flex:1 1 auto; border:0; background:#113B5F; color:#F9F6E6; font-family:'DM Sans',system-ui,sans-serif; font-size:14px; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; padding:0 24px; cursor:pointer; white-space:nowrap; border-radius:0 8px 8px 0" style-hover="background:#C98A2C; color:#113B5F">Search MLS Listings</button>
+</div>
+<a href="/whats-my-home-worth/" style="flex:1 0 100%; text-align:center; font-weight:700; font-size:13.5px; color:#113B5F; padding-top:2px" style-hover="color:#C98A2C">What&#8217;s my home worth? &#8594;</a>
 </form>
 
      <div style="height:1px; background:#E0D9B8; margin:30px 0 20px"></div>

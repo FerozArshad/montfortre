@@ -70,3 +70,22 @@
     display: none !important;
   }
 }
+
+/* --- Hero MLS search dropdown panel: never squeezed by layout guards ----- */
+.lead-idx-form .lif-list {
+  min-width: 170px !important;
+}
+
+/* --- Hero MLS search bar: keep it comfortable on small phones ------------ */
+@media (max-width: 480px) {
+  .lead-idx-form .lif-btn {
+    font-size: 13.5px !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
+  }
+  .lead-idx-form button {
+    font-size: 12px !important;
+    padding: 0 12px !important;
+    letter-spacing: 0.04em !important;
+  }
+}
