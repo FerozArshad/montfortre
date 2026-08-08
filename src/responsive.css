@@ -34,6 +34,16 @@
     display: block !important;
   }
 
+  /* Grid/flex blowout guard: children with wide intrinsic content (e.g. the
+     hero marquee strip) must not force their track wider than the viewport. */
+  [style*="display:grid"] > * ,
+  [style*="display:flex"]:not([style*="overflow"]) > * {
+    min-width: 0 !important;
+  }
+  [style*="display:grid"] > * {
+    max-width: 100% !important;
+  }
+
   /* Fluid media everywhere. height:auto only where it can't break
      object-fit cover images or absolutely-positioned backgrounds. */
   img {
