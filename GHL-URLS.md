@@ -6,7 +6,10 @@ Fetch each file with download_to_repo into the same repo path (the part after /m
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/ROUTES.tsx.snippet
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/TRANSFER-GUIDE.md
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/Seo.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/MobileHeader.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useStyleHover.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useTouchDropdowns.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/responsive.css
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/AboutUs.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Blog.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BrownstoneBuyingGuide.tsx

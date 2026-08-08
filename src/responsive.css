@@ -1,0 +1,62 @@
+/*
+ * Shared responsive rules for all pages. Import once, e.g. in App.tsx:
+ *   import "./responsive.css";
+ *
+ * Page layout styles are inline (see HANDOFF.md), so overrides here need
+ * !important to win. Page-specific breakpoint rules live in each page's own
+ * <style> block; this file only holds rules shared by every route.
+ */
+
+/* --- Desktop nav: touch support (used by useTouchDropdowns) ------------- */
+/* Mirrors the .mnav-item:hover > .mnav-drop rule in each page's <style>.   */
+.mnav-item.mnav-open > .mnav-drop {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) scale(1) !important;
+  pointer-events: auto !important;
+}
+.mnav-item.mnav-open > .mnav-top {
+  color: #c98a2c !important;
+}
+.mnav-item.mnav-open .mnav-chev {
+  transform: rotate(180deg);
+  color: #c98a2c;
+}
+
+/* --- Below 1024px: swap headers, shared mobile baselines ---------------- */
+@media (max-width: 1023.98px) {
+  /* Hide the desktop header embedded in each page's HTML... */
+  header {
+    display: none !important;
+  }
+  /* ...and show the shared MobileHeader (inline style is display:none). */
+  .mfr-mobile-header {
+    display: block !important;
+  }
+
+  /* Fluid media everywhere. height:auto only where it can't break
+     object-fit cover images or absolutely-positioned backgrounds. */
+  img {
+    max-width: 100% !important;
+  }
+  img:not([style*="position:absolute"]):not([style*="object-fit"]) {
+    height: auto !important;
+  }
+  iframe {
+    max-width: 100% !important;
+  }
+}
+
+/* --- 1024px and up: desktop header only --------------------------------- */
+@media (min-width: 1024px) {
+  .mfr-mobile-header {
+    display: none !important;
+  }
+}
+
+/* --- Small phones: hide the phone number text in the mobile bar ---------- */
+@media (max-width: 379.98px) {
+  .mfr-phone-text {
+    display: none !important;
+  }
+}

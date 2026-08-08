@@ -1,4 +1,16 @@
-// Add inside your <Routes> in App.tsx (import each page from ./pages/...)
+// App.tsx wiring (import each page from ./pages/...)
+//
+// 1. Import the shared responsive stylesheet once:
+//      import "./responsive.css";
+// 2. Render <MobileHeader /> once, above <Routes>, so it appears on every
+//    route (it is only visible below 1024px; it also installs the touch
+//    enhancement for the desktop nav dropdowns):
+//      import MobileHeader from "./components/MobileHeader";
+//      ...
+//      <MobileHeader />
+//      <Routes>...</Routes>
+//
+// Routes:
 <Route path="/" element={<Home />} />
 <Route path="/services" element={<Services />} />
 <Route path="/about-us" element={<AboutUs />} />

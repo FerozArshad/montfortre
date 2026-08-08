@@ -17,7 +17,21 @@ interface SeoProps {
 export default function Seo({ title, metas, links, jsonLd }: SeoProps) {
   useEffect(() => {
     document.title = title;
+    document.documentElement.lang = "en-US";
+    // strip build-template branding that we don't explicitly replace
+    document.head
+      .querySelectorAll('meta[name="author"][content*="Vibe"], meta[name="twitter:site"][content*="Vibe"], meta[name="generator"][content*="Vibe"]')
+      .forEach((el) => el.remove());
     const added: Element[] = [];
+
+    // staging safety: never let the preview host get indexed
+    if (/\.vibepreview\.com$/i.test(window.location.hostname)) {
+      const robots = document.createElement("meta");
+      robots.name = "robots";
+      robots.content = "noindex, nofollow";
+      document.head.appendChild(robots);
+      added.push(robots);
+    }
 
     metas.forEach((attrs) => {
       const key = attrs.name
