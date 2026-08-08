@@ -5,24 +5,28 @@ Fetch each file with download_to_repo into the same repo path (the part after /m
 ## Source files
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/ROUTES.tsx.snippet
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/TRANSFER-GUIDE.md
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/HANDOFF.md
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/main.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/responsive.css
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/Seo.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/MobileHeader.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useStyleHover.ts
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useTouchDropdowns.ts
-- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/responsive.css
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/AboutUs.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Blog.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BrownstoneBuyingGuide.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Harlem.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Home.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Neighborhoods.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NotMigrated.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Services.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/StanleyMontfort.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SuccessStories.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useCarousels.ts
 
 ## Public assets
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/og-home.jpg
-- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/favicon.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/instagram/ig-1.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/instagram/ig-2.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/instagram/ig-3.jpg
@@ -31,6 +35,7 @@ Fetch each file with download_to_repo into the same repo path (the part after /m
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/instagram/ig-6.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/instagram/ig-7.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/instagram/ig-8.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/favicon.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hidden-cost.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hidden-cost.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/rebny.png
@@ -58,6 +63,7 @@ Fetch each file with download_to_repo into the same repo path (the part after /m
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/plan/step2.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/plan/step3.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/2-family-house-for-sale-nyc.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/2-family-investment.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/3-family-house-for-sale-nyc.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/4-family-house-for-sale-nyc.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/buyers-agent.png
