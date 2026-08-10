@@ -220,6 +220,7 @@ const HTML = `<style>/* latin-ext */
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+ /* ===== Responsive overrides (inline layout styles — desktop untouched) ===== */
  @media (max-width:1024px) {
   [style*="px 64px"] { padding-left:32px !important; padding-right:32px !important; }
   [style*="grid-template-columns:1.05fr 0.95fr"], [style*="grid-template-columns:0.95fr 1.05fr"],
@@ -230,18 +231,146 @@ const HTML = `<style>/* latin-ext */
   h1[style*="font-size:62px"] { font-size:44px !important; }
   h2[style*="font-size:44px"] { font-size:34px !important; }
   h2[style*="font-size:36px"] { font-size:29px !important; }
+  h2[style*="font-size:42px"] { font-size:32px !important; }
  }
  @media (max-width:768px) {
   [style*="px 64px"] { padding-left:20px !important; padding-right:20px !important; }
+  section[style*="padding:100px"], section[style*="padding:96px"],
+  section[style*="padding:80px"] { padding-top:56px !important; padding-bottom:56px !important; }
+  section[data-screen-label="Promises"] { padding-top:40px !important; padding-bottom:44px !important; }
+  section[data-screen-label="Not sure CTA"] { padding-bottom:56px !important; }
+  footer[style*="padding:88px"] { padding-top:56px !important; }
   [style*="grid-template-columns:1fr 1fr"], [style*="grid-template-columns:repeat(2,minmax(0,1fr))"],
-  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"], [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns:1fr !important; gap:24px !important; }
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"], [style*="grid-template-columns:1fr 1fr 1fr"],
+  [style*="grid-template-columns:1.2fr 1fr 0.9fr auto"] { grid-template-columns:1fr !important; gap:24px !important; }
   h1[style*="font-size:62px"] { font-size:32px !important; }
   h2[style*="font-size:44px"] { font-size:28px !important; }
+  h2[style*="font-size:42px"] { font-size:26px !important; }
   h2[style*="font-size:36px"] { font-size:25px !important; }
+  a[style*="font-size:36px"][style*="letter-spacing:-0.045em"] { font-size:24px !important; }
+  a[style*="font-size:26px"][style*="letter-spacing:-0.02em"] { font-size:20px !important; }
   [style*="font-size:19px"] { font-size:16.5px !important; }
+  div[style*="white-space:nowrap"]:not([style*="right:-14px"]) { white-space:normal !important; }
+  div[style*="display:flex; gap:12px"] { flex-wrap:wrap !important; }
+  div[style*="justify-content:space-between"] { flex-wrap:wrap !important; }
+  [style*="flex-direction:column"][style*="align-items:flex-end"] { align-items:flex-start !important; }
+  footer [style*="justify-self:center"], footer [style*="justify-self:end"] { justify-self:start !important; text-align:left !important; }
+  [style*="left:24px; right:24px"] { left:12px !important; right:12px !important; }
+  /* Hero CTAs: Book Now + phone on one row */
+  [style*="flex-wrap:wrap; gap:14px; margin-top:34px"] {
+    flex-wrap:nowrap !important;
+    gap:8px !important;
+    width:100% !important;
+  }
+  [style*="flex-wrap:wrap; gap:14px; margin-top:34px"] > a {
+    flex:1 1 0 !important;
+    min-width:0 !important;
+    justify-content:center !important;
+    white-space:nowrap !important;
+    font-size:12px !important;
+    letter-spacing:0.03em !important;
+    padding:14px 10px !important;
+    min-height:48px !important;
+  }
+  /* Hero Google badge: overlap bottom-right of image (match desktop) */
+  [style*="right:-14px; bottom:-22px"] {
+    right:10px !important;
+    bottom:-20px !important;
+    padding:14px 18px !important;
+    gap:14px !important;
+    white-space:nowrap !important;
+    max-width:calc(100% - 8px) !important;
+    box-sizing:border-box !important;
+  }
+  [style*="grid-template-columns:1.02fr 0.98fr"] > [style*="position:relative"] {
+    margin-bottom:36px !important;
+  }
+  /* Promises: stack aligned, no desktop column offsets */
+  [style*="repeat(3,minmax(0,1fr))"][style*="gap:0"] {
+    gap:28px !important;
+    margin-top:28px !important;
+  }
+  [style*="repeat(3,minmax(0,1fr))"][style*="gap:0"] > [data-reveal] {
+    padding:0 !important;
+    border-right:none !important;
+    border-bottom:1px solid rgba(201,138,44,0.24) !important;
+    padding-bottom:24px !important;
+  }
+  [style*="repeat(3,minmax(0,1fr))"][style*="gap:0"] > [data-reveal]:last-child {
+    border-bottom:none !important;
+    padding-bottom:0 !important;
+  }
+  /* Manhattan rows: image then data on mobile */
+  [style*="grid-template-columns:1.05fr 0.95fr"][data-reveal],
+  [style*="grid-template-columns:0.95fr 1.05fr"][data-reveal] {
+    display:flex !important;
+    flex-direction:column !important;
+    gap:28px !important;
+  }
+  [style*="grid-template-columns:1.05fr 0.95fr"] .hood-card,
+  [style*="grid-template-columns:0.95fr 1.05fr"] .hood-card {
+    order:-1 !important;
+  }
+  [style*="padding:64px 0 96px"] {
+    padding:40px 0 56px !important;
+    gap:48px !important;
+  }
+  [style*="align-items:baseline; gap:22px"] {
+    flex-wrap:wrap !important;
+    gap:12px !important;
+  }
+  [style*="align-items:baseline; gap:22px"] > span[style*="letter-spacing:0.16em"] {
+    font-size:10.5px !important;
+    line-height:1.4 !important;
+  }
+  /* Brooklyn cards + Park Slope wide card */
+  .hood-card [style*="padding:34px 34px"] { padding:22px 18px 20px !important; }
+  .hood-card[style*="grid-template-columns:1fr 1fr"] {
+    display:flex !important;
+    flex-direction:column !important;
+    grid-template-columns:1fr !important;
+  }
+  .hood-card[style*="grid-template-columns:1fr 1fr"] > div:first-child {
+    min-height:0 !important;
+    aspect-ratio:16/9 !important;
+  }
+  .hood-card[style*="grid-template-columns:1fr 1fr"] > div:last-child {
+    padding:24px 20px !important;
+  }
+  /* Not sure CTA card */
+  [data-reveal][style*="background:#0F1729"][style*="padding:56px 64px"] {
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    padding:28px 20px !important;
+    gap:24px !important;
+  }
+  [data-reveal][style*="background:#0F1729"][style*="padding:56px 64px"] h2[style*="font-size:36px"] {
+    font-size:22px !important;
+    line-height:1.3 !important;
+    text-wrap:balance !important;
+  }
+  [data-reveal][style*="background:#0F1729"][style*="padding:56px 64px"] > div[style*="display:flex; gap:14px"] {
+    flex-direction:column !important;
+    flex-wrap:nowrap !important;
+    align-items:stretch !important;
+    width:100% !important;
+    gap:10px !important;
+  }
+  [data-reveal][style*="background:#0F1729"][style*="padding:56px 64px"] > div[style*="display:flex; gap:14px"] > a {
+    width:100% !important;
+    box-sizing:border-box !important;
+    justify-content:center !important;
+    white-space:nowrap !important;
+    font-size:13px !important;
+    padding:14px 16px !important;
+    min-height:48px !important;
+  }
  }
  @media (max-width:480px) {
   h1[style*="font-size:62px"] { font-size:27px !important; }
+  [data-reveal][style*="background:#0F1729"][style*="padding:56px 64px"] h2[style*="font-size:36px"] {
+    font-size:20px !important;
+  }
  }
 </style>
 <style>
