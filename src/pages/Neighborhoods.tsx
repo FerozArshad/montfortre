@@ -480,7 +480,7 @@ const HTML = `<style>/* latin-ext */
    </div>
    <div data-reveal="" style="position:relative">
     <div style="position:relative; border-radius:16px; overflow:hidden; aspect-ratio:5/4; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 40px 90px rgba(17,59,95,0.28)">
-     <img src="/redesign-assets/nbhd/d86879d1.jpg" alt="New York City skyline from Brooklyn" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block">
+     <img src="/redesign-assets/nbhd/d86879d1.webp" alt="New York City skyline from Brooklyn" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block">
     </div>
     <div style="position:absolute; right:-14px; bottom:-22px; display:inline-flex; align-items:center; gap:18px; background:#FFFFFF; border:1px solid rgba(201,138,44,0.55); border-radius:16px; box-shadow:0 22px 48px rgba(17,59,95,0.28); padding:18px 26px; white-space:nowrap">
      <svg width="50" height="50" sc-camel-view-box="0 0 48 48" style="flex:0 0 auto; display:block" role="img" aria-label="Google"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.8-.4-4H24v7.3h12.1c-.2 2-1.6 5-4.5 7l-.1.3 6.5 5 .5.1c4.2-3.8 6.6-9.5 6.6-15.7"></path><path fill="#34A853" d="M24 46c5.9 0 10.9-1.9 14.5-5.3l-6.9-5.4c-1.8 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.8-12.5-9.1l-.3.1-6.7 5.2-.1.3C8 41.6 15.4 46 24 46"></path><path fill="#FBBC05" d="M11.5 28.4c-.5-1.4-.7-2.9-.7-4.4s.3-3 .7-4.4v-.3l-6.8-5.3-.2.1A22 22 0 0 0 2 24c0 3.5.9 6.9 2.5 9.9z"></path><path fill="#EA4335" d="M24 10.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 4.3 29.9 2 24 2 15.4 2 8 6.4 4.5 14.1l7 5.4c1.8-5.3 6.7-9 12.5-9"></path></svg>
@@ -656,7 +656,7 @@ const HTML = `<style>/* latin-ext */
      </div>
     </div>
     <div class="hood-card" style="border-radius:16px; overflow:hidden; aspect-ratio:16/11; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 26px 60px rgba(17,59,95,0.2)">
-     <img src="/redesign-assets/nbhd/90c53c45.jpg" alt="Chelsea" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
+     <img src="/redesign-assets/nbhd/90c53c45.webp" alt="Chelsea" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
     </div>
    </div>
 
@@ -673,7 +673,7 @@ const HTML = `<style>/* latin-ext */
   <div style="max-width:1440px; margin:0 auto; padding:56px 0 40px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:44px">
 
    <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
-    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/0dd93ed5.jpg" alt="Downtown Brooklyn" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/0dd93ed5.webp" alt="Downtown Brooklyn" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
     <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
      <a href="/downtown-brooklyn/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Downtown Brooklyn Realtor</a>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">High-rise living at the borough’s transit and business core.</p>
@@ -691,7 +691,7 @@ const HTML = `<style>/* latin-ext */
    </div>
 
    <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
-    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/d86879d1.jpg" alt="Dumbo" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/d86879d1.webp" alt="Dumbo" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
     <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
      <a href="/dumbo/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Dumbo Realtor</a>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">Converted warehouses, cobblestone streets, and the best skyline views in the city.</p>
@@ -709,7 +709,7 @@ const HTML = `<style>/* latin-ext */
    </div>
 
    <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
-    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/745851cc.jpg" alt="Brooklyn Heights" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/745851cc.webp" alt="Brooklyn Heights" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
     <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
      <a href="/brooklyn-heights/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Brooklyn Heights Realtor</a>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">The city’s first landmarked district — the Promenade, and blocks of 19th-century townhouses.</p>
@@ -731,7 +731,7 @@ const HTML = `<style>/* latin-ext */
    </div>
 
    <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
-    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/66fdf193.jpg" alt="Bedford-Stuyvesant" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/66fdf193.webp" alt="Bedford-Stuyvesant" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
     <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
      <a href="/bedford-stuyvesant/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Bedford-Stuyvesant Realtor</a>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">One of the largest concentrations of intact brownstones anywhere in New York.</p>
@@ -749,7 +749,7 @@ const HTML = `<style>/* latin-ext */
    </div>
 
    <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
-    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/f55c71f9.jpg" alt="Williamsburg" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/f55c71f9.webp" alt="Williamsburg" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
     <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
      <a href="/williamsburg/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Williamsburg Realtor</a>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">Waterfront towers, converted lofts, and Brooklyn’s most in-demand nightlife and dining.</p>
@@ -767,7 +767,7 @@ const HTML = `<style>/* latin-ext */
    </div>
 
    <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
-    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/b6c26a69.jpg" alt="Crown Heights" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/b6c26a69.webp" alt="Crown Heights" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
     <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
      <a href="/crown-heights/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Crown Heights Realtor</a>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">Limestone row houses beside the Botanic Garden — still one of Brooklyn’s best values.</p>
@@ -785,7 +785,7 @@ const HTML = `<style>/* latin-ext */
    </div>
 
    <div data-reveal="" class="hood-card" style="grid-column:1 / -1; background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:grid; grid-template-columns:1fr 1fr">
-    <div style="overflow:hidden; background:#E0D9B8; min-height:320px"><img src="/redesign-assets/nbhd/69cc59cd.jpg" alt="Park Slope" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="overflow:hidden; background:#E0D9B8; min-height:320px"><img src="/redesign-assets/nbhd/69cc59cd.webp" alt="Park Slope" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
     <div style="padding:44px 44px 40px; display:flex; flex-direction:column; justify-content:center">
      <a href="/park-slope/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.025em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Park Slope Realtor</a>
      <p style="font-size:16.5px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; max-width:520px; text-wrap:pretty">Prospect Park at the door, celebrated schools, and some of the most sought-after row houses in Brooklyn.</p>
@@ -891,12 +891,12 @@ const HTML = `<style>/* latin-ext */
      <a href="https://www.youtube.com/@montfortrealestate6984" target="_blank" rel="noopener" aria-label="YouTube" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="19" height="19" sc-camel-view-box="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.7 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.3.3-3.8.3-3.8s0-2.5-.3-3.8zM10 15V9l5.2 3z"></path></svg></a>
      <a href="https://www.instagram.com/stanleymontfort/" target="_blank" rel="noopener" aria-label="Instagram" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.9"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.9"></circle><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"></circle></svg></a>
     </div>
-    <img src="/redesign-assets/nbhd/7ed3b807.png" alt="REBNY, Real Estate Board of New York" style="height:52px; width:auto; display:block; opacity:0.9">
+    <img src="/redesign-assets/nbhd/7ed3b807.webp" alt="REBNY, Real Estate Board of New York" style="height:52px; width:auto; display:block; opacity:0.9">
    </div>
   </div>
   <div style="max-width:1440px; margin:64px auto 0; padding-top:44px; border-top:1px solid rgba(249,246,230,0.14); display:grid; grid-template-columns:1fr 1fr 1fr; gap:44px; align-items:center">
    <a href="/" style="display:block; justify-self:start">
-    <img src="/redesign-assets/nbhd/96e47300.png" alt="Montfort Real Estate" style="height:72px; width:auto; display:block; filter:invert(1) brightness(2.2)">
+    <img src="/redesign-assets/nbhd/96e47300.webp" alt="Montfort Real Estate" style="height:72px; width:auto; display:block; filter:invert(1) brightness(2.2)">
    </a>
    <div style="justify-self:center; text-align:center; font-size:15px; line-height:1.7; color:rgba(249,246,230,0.8)">
     <div><span style="font-weight:700; color:#F9F6E6">Phone:</span> <a href="tel:646-970-1078" style="color:#C98A2C">1-646-970-1078</a></div>

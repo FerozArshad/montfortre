@@ -666,7 +666,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/chelsea/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/chelsea.jpg" alt="Chelsea Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
+     <img src="/redesign-assets/hoods/chelsea.webp" alt="Chelsea Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Manhattan</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -676,7 +676,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/downtown-brooklyn/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/downtown-brooklyn.jpg" alt="Downtown Brooklyn Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
+     <img src="/redesign-assets/hoods/downtown-brooklyn.webp" alt="Downtown Brooklyn Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -686,7 +686,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/dumbo/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/dumbo.jpg" alt="Dumbo Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
+     <img src="/redesign-assets/hoods/dumbo.webp" alt="Dumbo Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -696,7 +696,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/brooklyn-heights/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/brooklyn-heights.jpg" alt="Brooklyn Heights Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
+     <img src="/redesign-assets/hoods/brooklyn-heights.webp" alt="Brooklyn Heights Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -706,7 +706,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/bedford-stuyvesant/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/bedford-stuyvesant.jpg" alt="Bedford stuyvesant Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
+     <img src="/redesign-assets/hoods/bedford-stuyvesant.webp" alt="Bedford stuyvesant Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -716,7 +716,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/williamsburg/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/williamsburg.jpg" alt="Williamsburg Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
+     <img src="/redesign-assets/hoods/williamsburg.webp" alt="Williamsburg Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -726,7 +726,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/crown-heights/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/crown-heights.jpg" alt="Crown Heights Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
+     <img src="/redesign-assets/hoods/crown-heights.webp" alt="Crown Heights Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -736,7 +736,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/park-slope/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/park-slope.jpg" alt="Park Slope Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
+     <img src="/redesign-assets/hoods/park-slope.webp" alt="Park Slope Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -769,7 +769,7 @@ const HTML = `<style>
    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; margin-top:66px; padding-top:52px; border-top:2px solid #0F1729">
     <div data-reveal="" style="display:grid; grid-template-rows:auto auto auto 1fr auto; padding:0 64px; padding-left:0">
      <div style="display:flex; align-items:center; gap:16px">
-      <img src="/redesign-assets/expect/offmarket.png" alt="On and off market real estate search" style="width: 220px; height: 220px; display: block; flex: 0 0 auto" width="250" height="250">
+      <img src="/redesign-assets/expect/offmarket.webp" alt="On and off market real estate search" style="width: 220px; height: 220px; display: block; flex: 0 0 auto" width="250" height="250">
      </div>
      <div style="height:1px; background:#D9CFA6; margin:26px 0 0"></div>
      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:25px; line-height:1.34; color:#0F1729; text-wrap:pretty; margin:24px 0 0">Identify On &amp; <strong style="font-weight:700; color:#0F1729">Off Market <a href="/advice-for-buyers-looking-to-purchase-brownstones/" style="color:#113B5F">Real Estate</a></strong></h3>
@@ -778,7 +778,7 @@ const HTML = `<style>
     </div>
     <div data-reveal="" style="display:grid; grid-template-rows:auto auto auto 1fr auto; padding:0 64px; border-left:1px solid #D9CFA6; border-right:1px solid #D9CFA6">
      <div style="display:flex; align-items:center; gap:16px">
-      <img src="/redesign-assets/expect/troublesome.png" alt="Troublesome brownstone interior" style="width: 231px; height: 220px; display: block; flex: 0 0 auto" width="250" height="250">
+      <img src="/redesign-assets/expect/troublesome.webp" alt="Troublesome brownstone interior" style="width: 231px; height: 220px; display: block; flex: 0 0 auto" width="250" height="250">
      </div>
      <div style="height:1px; background:#D9CFA6; margin:26px 0 0"></div>
      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:25px; line-height:1.34; color:#0F1729; text-wrap:pretty; margin:24px 0 0">Avoid a <strong style="font-weight:700; color:#0F1729">Troublesome <a href="/advice-for-buyers-looking-to-purchase-brownstones/" style="color:#113B5F">Real Estate</a></strong></h3>
@@ -788,7 +788,7 @@ const HTML = `<style>
     <div data-reveal="" style="display:grid; grid-template-rows:auto auto auto 1fr auto; padding:0 64px; padding-right:0">
      
      <div style="display:flex; align-items:center; gap:16px">
-      <img src="/redesign-assets/expect/team.png" alt="Attorneys, contractors and inspectors" style="width: 220px; height: 220px; display: block; flex: 0 0 auto" width="250" height="250">
+      <img src="/redesign-assets/expect/team.webp" alt="Attorneys, contractors and inspectors" style="width: 220px; height: 220px; display: block; flex: 0 0 auto" width="250" height="250">
      </div><div style="height:1px; background:#D9CFA6; margin:26px 0 0"></div>
      <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:25px; line-height:1.34; color:#0F1729; margin-top:24px; text-wrap:pretty">Get Access To The <strong style="font-weight:700; color:#0F1729">Best Attorneys</strong>, Contractors, and Inspectors <strong style="font-weight:700; color:#0F1729">In The Industry</strong></div>
      <p style="font-size:16px; line-height:1.8; color:#3B4C5E; margin:14px 0 0; text-wrap:pretty">With our <strong style="font-weight:700; color:#0F1729">experienced team</strong>, you'll move through the <strong style="font-weight:700; color:#0F1729">transaction efficiently</strong> and will not go through the real estate <strong style="font-weight:700; color:#0F1729">purchasing process</strong> blind</p>
@@ -928,7 +928,7 @@ const HTML = `<style>
       <img src="https://lh3.googleusercontent.com/a-/ALV-UjViSqMG3KN7oLq8R0QnIw-DaXDyjT90luYGecAIkSmU_hO3gSPc=s120-c-rp-mo" alt="Anika Nfr-Ka Ma’at Daniels" referrerpolicy="no-referrer" style="width:104px; height:104px; border-radius:100px; object-fit:cover; background:#E0D9B8">
       <div>
        <h4 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:21px; color:#0F1729; line-height:1.25; margin:0">Anika Nfr-Ka Ma’at Daniels</h4>
-       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
+       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Googleg Standard Color 128Dp" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
       </div>
       <span style="color:#C98A2C; font-size:17px; letter-spacing:0.18em; line-height:1">★★★★★</span>
      </div>
@@ -942,7 +942,7 @@ const HTML = `<style>
       <img src="https://lh3.googleusercontent.com/a-/ALV-UjW2GJgbKFCs8CWRPaU68LmyIpJoffj2f9xx_ErBW95J1KmjMk0q=s120-c-rp-mo" alt="Davon Snipes" referrerpolicy="no-referrer" style="width:104px; height:104px; border-radius:100px; object-fit:cover; background:#E0D9B8">
       <div>
        <h4 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:21px; color:#0F1729; line-height:1.25; margin:0">Davon Snipes</h4>
-       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
+       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Googleg Standard Color 128Dp" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
       </div>
       <span style="color:#C98A2C; font-size:17px; letter-spacing:0.18em; line-height:1">★★★★★</span>
      </div>
@@ -956,7 +956,7 @@ const HTML = `<style>
       <img src="https://lh3.googleusercontent.com/a/ACg8ocJF8BS2Xi87Fcaj122YKs-p4jY3uuigUkyo_LFIR4JEbnbvbg=s120-c-rp-mo" alt="Perry Witmer" referrerpolicy="no-referrer" style="width:104px; height:104px; border-radius:100px; object-fit:cover; background:#E0D9B8">
       <div>
        <h4 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:21px; color:#0F1729; line-height:1.25; margin:0">Perry Witmer</h4>
-       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
+       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Googleg Standard Color 128Dp" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
       </div>
       <span style="color:#C98A2C; font-size:17px; letter-spacing:0.18em; line-height:1">★★★★★</span>
      </div>
@@ -970,7 +970,7 @@ const HTML = `<style>
       <img src="https://lh3.googleusercontent.com/a/ACg8ocJ_u11llTjoHDxUSwbwBOVjPqAEEYxXctnGw2ipJT0OmPkN0KAd=s120-c-rp-mo-ba12" alt="Corey A. Witmer" referrerpolicy="no-referrer" style="width:104px; height:104px; border-radius:100px; object-fit:cover; background:#E0D9B8">
       <div>
        <h4 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:21px; color:#0F1729; line-height:1.25; margin:0">Corey A. Witmer</h4>
-       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
+       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Googleg Standard Color 128Dp" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
       </div>
       <span style="color:#C98A2C; font-size:17px; letter-spacing:0.18em; line-height:1">★★★★★</span>
      </div>
@@ -984,7 +984,7 @@ const HTML = `<style>
       <img src="https://lh3.googleusercontent.com/a-/ALV-UjVd25nW1zHtfxUwKZuHN2Z62I2M2518k9vbRgSFDL7raRgZLhc=s120-c-rp-mo" alt="Seth Rabinowitz" referrerpolicy="no-referrer" style="width:104px; height:104px; border-radius:100px; object-fit:cover; background:#E0D9B8">
       <div>
        <h4 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:21px; color:#0F1729; line-height:1.25; margin:0">Seth Rabinowitz</h4>
-       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
+       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Googleg Standard Color 128Dp" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
       </div>
       <span style="color:#C98A2C; font-size:17px; letter-spacing:0.18em; line-height:1">★★★★★</span>
      </div>
@@ -998,7 +998,7 @@ const HTML = `<style>
       <img src="https://lh3.googleusercontent.com/a-/ALV-UjX0xFjJe65Or_gH4pidKtMzlHLnwtjHpiu1DGAeEo9WZQTVlvKdzg=s120-c-rp-mo-ba12" alt="Angelina Darrisaw" referrerpolicy="no-referrer" style="width:104px; height:104px; border-radius:100px; object-fit:cover; background:#E0D9B8">
       <div>
        <h4 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:21px; color:#0F1729; line-height:1.25; margin:0">Angelina Darrisaw</h4>
-       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
+       <div style="display:flex; align-items:center; gap:7px; margin-top:8px; font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B4C5E"><img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Googleg Standard Color 128Dp" style="width:15px; height:15px; display:block; filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(2deg)"> Posted on Google</div>
       </div>
       <span style="color:#C98A2C; font-size:17px; letter-spacing:0.18em; line-height:1">★★★★★</span>
      </div>
@@ -1043,7 +1043,7 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; margin-top:52px">
     <a href="https://www.instagram.com/p/DbZFQBTD4hS/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-1.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="640" height="800">
+     <img src="/instagram/ig-1.webp" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="640" height="800">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">Just Listed: 904 Gates Avenue, Bedford-Stuyvesant</p>
@@ -1054,7 +1054,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DbWdWwVCUnb/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-2.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1439" height="959">
+     <img src="/instagram/ig-2.webp" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1439" height="959">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">A 4-unit Brooklyn property where the numbers really stand out</p>
@@ -1065,7 +1065,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DbHHdBzGiZ3/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-3.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1439" height="959">
+     <img src="/instagram/ig-3.webp" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1439" height="959">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">SOLD: 481 West 145th Street, last asking $2,550,000</p>
@@ -1076,7 +1076,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DalKzvTEWlq/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-4.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="720" height="900">
+     <img src="/instagram/ig-4.webp" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="720" height="900">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">What if owning a brownstone cost less each month than renting?</p>
@@ -1087,7 +1087,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DadYwSGFTy_/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-5.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="720" height="900">
+     <img src="/instagram/ig-5.webp" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="720" height="900">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">SOLD: 49 East 126th Street, last asking $2,250,000</p>
@@ -1098,7 +1098,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DaQ7iNZicGp/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-6.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1080" height="1350">
+     <img src="/instagram/ig-6.webp" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1080" height="1350">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">How to create $2,000,000+ in equity buying a brownstone</p>
@@ -1109,7 +1109,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/p/DaLXUDZkbRu/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-7.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1080" height="1350">
+     <img src="/instagram/ig-7.webp" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1080" height="1350">
      
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">SOLD: 265 West 139th Street, a Strivers’ Row landmark</p>
@@ -1120,7 +1120,7 @@ const HTML = `<style>
      </div>
     </a>
     <a href="https://www.instagram.com/reel/DY0PDihu1pt/" target="_blank" rel="noopener" style="position:relative; display:block; aspect-ratio:1/1; border-radius:16px; overflow:hidden; background:#0F1729; group">
-     <img src="/instagram/ig-8.jpg" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1080" height="1350">
+     <img src="/instagram/ig-8.webp" alt="Instagram post" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover" width="1080" height="1350">
      <span style="position:absolute; top:14px; right:14px; width:34px; height:34px; border-radius:100px; background:rgba(15,23,41,0.6); display:flex; align-items:center; justify-content:center"><svg width="14" height="14" viewBox="0 0 16 16" fill="#fff"><path d="M4 3l9 5-9 5z"></path></svg></span>
      <div class="ig-ov" style="position:absolute; inset:0; padding:20px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(180deg, rgba(15,23,41,0) 34%, rgba(15,23,41,0.9) 100%); opacity:0; transition:opacity .35s ease">
       <p style="font-size:13.5px; line-height:1.5; color:#F9F6E6; margin:0 0 12px; font-weight:500; text-wrap:pretty">In Contract: 49 East 126th Street, Harlem brownstone</p>
@@ -1383,7 +1383,7 @@ const HTML = `<style>
      <div style="display:flex; align-items:center; gap:9px; margin-top:18px; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#113B5F">Read article <span style="color:#C98A2C">→</span></div>
     </a>
     <a data-reveal="" href="/discover-your-dream-home-explore-apartments-for-sale-on-the-upper-west-side/" style="display:flex; flex-direction:column">
-     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.jpg" alt="Explore Apartments for Sale on the Upper West Side" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)" width="1000" height="700"></div>
+     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.webp" alt="Explore Apartments for Sale on the Upper West Side" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)" width="1000" height="700"></div>
      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C; margin-top:22px">Buyer Guide</div>
      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:23px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty; margin:0">Discover Your Dream Home: Apartments for Sale on the Upper West Side</h3>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">Searching for your dream home in one of New York City’s most sought-after neighborhoods?…</p>
@@ -1469,7 +1469,7 @@ const HTML = `<style>
     <a href="https://www.youtube.com/@montfortrealestate6984" target="_blank" rel="noopener" aria-label="YouTube" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.7 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.3.3-3.8.3-3.8s0-2.5-.3-3.8zM10 15V9l5.2 3z"></path></svg></a>
     <a href="https://www.instagram.com/stanleymontfort/" target="_blank" rel="noopener" aria-label="Instagram" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.9"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.9"></circle><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"></circle></svg></a>
     </div>
-    <img src="/redesign-assets/rebny.png" alt="REBNY, Real Estate Board of New York" style="height:52px; width:auto; display:block; opacity:0.9" width="130" height="49">
+    <img src="/redesign-assets/rebny.webp" alt="REBNY, Real Estate Board of New York" style="height:52px; width:auto; display:block; opacity:0.9" width="130" height="49">
    </div>
   </div>
   <div style="max-width:1440px; margin:64px auto 0; padding-top:44px; border-top:1px solid rgba(249,246,230,0.14); display:grid; grid-template-columns:1fr 1fr 1fr; gap:44px; align-items:center">

@@ -299,7 +299,7 @@ const HTML = `<style>
 
 
  <section data-screen-label="Blog hero" style="position:relative; background:#0F1729; overflow:hidden; padding:92px 64px 84px">
-  <img src="/redesign-assets/hoods/harlem.webp" alt="" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.14; display:block">
+  <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.14; display:block">
   <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(15,23,41,0.7) 0%, rgba(15,23,41,0.94) 62%)"></div>
   <div style="position:absolute; top:-140px; right:-160px; width:600px; height:600px; border-radius:50%; border:1px solid rgba(201,138,44,0.16)"></div>
   <div style="position:relative; z-index:2; max-width:900px; margin:0 auto; text-align:center">
@@ -351,7 +351,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/the-ultimate-guide-to-finding-the-perfect-upper-west-side-real-estate-agent/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.jpg" alt="The Ultimate Guide to Finding the Perfect Upper West Side Real Estate Agent" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.webp" alt="The Ultimate Guide to Finding the Perfect Upper West Side Real Estate Agent" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">The Ultimate Guide to Finding the Perfect Upper West Side Real Estate Agent</div>
@@ -360,7 +360,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/sell-my-house-fast-expert-tips-to-attract-buyers-and-get-the-best-deal/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/downtown-brooklyn.jpg" alt="Sell My House Fast: Expert Tips to Attract Buyers and Get the Best Deal" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/downtown-brooklyn.webp" alt="Sell My House Fast: Expert Tips to Attract Buyers and Get the Best Deal" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Seller Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Sell My House Fast: Expert Tips to Attract Buyers and Get the Best Deal</div>
@@ -369,7 +369,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/what-is-my-house-worth/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/dumbo.jpg" alt="What Is My House Worth? A Simple Guide" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/dumbo.webp" alt="What Is My House Worth? A Simple Guide" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Seller Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">What Is My House Worth? A Simple Guide</div>
@@ -378,7 +378,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/harlem-realtor/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/brooklyn-heights.jpg" alt="The Ultimate Guide to Finding the Best Harlem Realtor" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/brooklyn-heights.webp" alt="The Ultimate Guide to Finding the Best Harlem Realtor" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">The Ultimate Guide to Finding the Best Harlem Realtor</div>
@@ -387,7 +387,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/manhattan-brownstone-q1-2024-market-report/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/williamsburg.jpg" alt="Manhattan Brownstone Q1 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/williamsburg.webp" alt="Manhattan Brownstone Q1 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Report</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Manhattan Brownstone Q1 2024 Market Report</div>
@@ -396,7 +396,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/harlem-brownstone-q1-2024-market-report/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/bedford-stuyvesant.jpg" alt="Harlem Brownstone Q1 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/bedford-stuyvesant.webp" alt="Harlem Brownstone Q1 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Report</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Harlem Brownstone Q1 2024 Market Report</div>
@@ -405,7 +405,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/top-harlem-new-york-townhouses-with-elevators/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/crown-heights.jpg" alt="Top Harlem New York Townhouses With Elevators" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/crown-heights.webp" alt="Top Harlem New York Townhouses With Elevators" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Neighborhoods</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Top Harlem New York Townhouses With Elevators</div>
@@ -414,7 +414,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/manhattan-q3-2023-market-report/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/park-slope.jpg" alt="Manhattan Brownstone Q3 2023 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/park-slope.webp" alt="Manhattan Brownstone Q3 2023 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Report</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Manhattan Brownstone Q3 2023 Market Report</div>
@@ -450,7 +450,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/brownstones-in-new-york-city/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.jpg" alt="Brownstones in New York City: Complete Guide" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.webp" alt="Brownstones in New York City: Complete Guide" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Brownstones in New York City: Complete Guide</div>
@@ -459,7 +459,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/house-hacking-your-nyc-brownstone/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/downtown-brooklyn.jpg" alt="House Hacking Your NYC Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/downtown-brooklyn.webp" alt="House Hacking Your NYC Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Investing</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">House Hacking Your NYC Brownstone</div>
@@ -468,7 +468,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/how-are-high-interest-rates-affecting-the-value-of-your-brownstone/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/dumbo.jpg" alt="How High Interest Rates Are Affecting the Value of Your Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/dumbo.webp" alt="How High Interest Rates Are Affecting the Value of Your Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Insight</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">How High Interest Rates Are Affecting the Value of Your Brownstone</div>
@@ -477,7 +477,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/how-to-find-townhouse-with-garage/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/brooklyn-heights.jpg" alt="How to Find a Townhouse With Garage or Parking" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/brooklyn-heights.webp" alt="How to Find a Townhouse With Garage or Parking" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">How to Find a Townhouse With Garage or Parking</div>
@@ -486,7 +486,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/selling-your-brownstone-with-tenants-still-there/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/williamsburg.jpg" alt="Selling Your Brownstone with Tenants Still There" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/williamsburg.webp" alt="Selling Your Brownstone with Tenants Still There" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Seller Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Selling Your Brownstone with Tenants Still There</div>
@@ -495,7 +495,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/making-your-brownstone-energy-efficient/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/bedford-stuyvesant.jpg" alt="Making Your Brownstone Energy Efficient" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/bedford-stuyvesant.webp" alt="Making Your Brownstone Energy Efficient" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Ownership</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Making Your Brownstone Energy Efficient</div>
@@ -504,7 +504,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/a-timeline-for-renovating-your-brownstone/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/crown-heights.jpg" alt="A Timeline for Renovating Your Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/crown-heights.webp" alt="A Timeline for Renovating Your Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Ownership</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">A Timeline for Renovating Your Brownstone</div>
@@ -513,7 +513,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/why-you-should-buy-a-brownstone-instead-of-renting-in-nyc/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/park-slope.jpg" alt="Why You Should Buy a Brownstone Instead of Renting in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/park-slope.webp" alt="Why You Should Buy a Brownstone Instead of Renting in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Why You Should Buy a Brownstone Instead of Renting in NYC</div>
@@ -549,7 +549,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/inflation-and-multi-unit-brownstone-investments/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.jpg" alt="Inflation and Multi-Unit Brownstone Investments" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.webp" alt="Inflation and Multi-Unit Brownstone Investments" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Investing</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Inflation and Multi-Unit Brownstone Investments</div>
@@ -558,7 +558,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/what-to-do-with-inherited-property/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/downtown-brooklyn.jpg" alt="What to Do With Inherited Property" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/downtown-brooklyn.webp" alt="What to Do With Inherited Property" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Seller Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">What to Do With Inherited Property</div>
@@ -567,7 +567,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/rent-control-v-rent-stabilization/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/dumbo.jpg" alt="Rent Control v. Rent Stabilization" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/dumbo.webp" alt="Rent Control v. Rent Stabilization" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Ownership</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Rent Control v. Rent Stabilization</div>
@@ -576,7 +576,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/everything-you-need-to-know-about-buying-and-selling-probate-property-in-new-york-city/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/brooklyn-heights.jpg" alt="Everything You Need to Know About Buying and Selling Probate Property in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/brooklyn-heights.webp" alt="Everything You Need to Know About Buying and Selling Probate Property in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Seller Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Everything You Need to Know About Buying and Selling Probate Property in NYC</div>
@@ -585,7 +585,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/all-about-taxes-when-you-sell-your-new-york-home/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/williamsburg.jpg" alt="Taxes When Selling a Home in New York: A Guide" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/williamsburg.webp" alt="Taxes When Selling a Home in New York: A Guide" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Seller Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Taxes When Selling a Home in New York: A Guide</div>
@@ -594,7 +594,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/why-foreign-buyers-should-consider-buying-a-brownstone/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/bedford-stuyvesant.jpg" alt="Why Foreign Buyers Should Consider Buying a Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/bedford-stuyvesant.webp" alt="Why Foreign Buyers Should Consider Buying a Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Why Foreign Buyers Should Consider Buying a Brownstone</div>
@@ -603,7 +603,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/top-ways-to-purchase-a-brownstone-with-crypto-in-new-york-city/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/crown-heights.jpg" alt="Top Ways to Purchase a Brownstone with Crypto in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/crown-heights.webp" alt="Top Ways to Purchase a Brownstone with Crypto in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Financing</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Top Ways to Purchase a Brownstone with Crypto in NYC</div>
@@ -612,7 +612,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/the-benefit-of-townhouse-co-living-in-new-york-city/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/park-slope.jpg" alt="The Benefit of Townhouse Co-Living In New York City" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/park-slope.webp" alt="The Benefit of Townhouse Co-Living In New York City" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Co-Ownership</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">The Benefit of Townhouse Co-Living In New York City</div>
@@ -648,7 +648,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/new-york-says-goodbye-to-rental-discounts/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.jpg" alt="New York Says Goodbye to Rental Discounts" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.webp" alt="New York Says Goodbye to Rental Discounts" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Insight</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">New York Says Goodbye to Rental Discounts</div>
@@ -657,7 +657,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/the-case-for-buying-a-townhouse-over-a-condo-or-co-op-in-nyc/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/downtown-brooklyn.jpg" alt="The Case for Buying a Townhouse Over a Condo or Co-op in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/downtown-brooklyn.webp" alt="The Case for Buying a Townhouse Over a Condo or Co-op in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">The Case for Buying a Townhouse Over a Condo or Co-op in NYC</div>
@@ -666,7 +666,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/top-7-things-to-check-before-making-a-brownstone-purchase/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/dumbo.jpg" alt="Top 7 Things to Check Before Making a Brownstone Purchase" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/dumbo.webp" alt="Top 7 Things to Check Before Making a Brownstone Purchase" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Top 7 Things to Check Before Making a Brownstone Purchase</div>
@@ -675,7 +675,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/advice-for-buyers-looking-to-purchase-brownstones/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/brooklyn-heights.jpg" alt="Brownstone Buying Guide for Buyers" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/brooklyn-heights.webp" alt="Brownstone Buying Guide for Buyers" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Brownstone Buying Guide for Buyers</div>
@@ -684,7 +684,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/the-ins-and-out-of-using-co-ownership-to-purchase-a-new-york-city-brownstone/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/williamsburg.jpg" alt="The Ins and Outs of Using Co-Ownership to Purchase a NYC Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/williamsburg.webp" alt="The Ins and Outs of Using Co-Ownership to Purchase a NYC Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Co-Ownership</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">The Ins and Outs of Using Co-Ownership to Purchase a NYC Brownstone</div>
@@ -693,7 +693,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/guide-everything-you-need-to-know-about-purchasing-a-multi-family-townhouse-and-renting-it-out/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/bedford-stuyvesant.jpg" alt="Guide: Purchasing a Multi-Family Townhouse and Renting It Out" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/bedford-stuyvesant.webp" alt="Guide: Purchasing a Multi-Family Townhouse and Renting It Out" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Investing</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Guide: Purchasing a Multi-Family Townhouse and Renting It Out</div>
@@ -702,7 +702,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/5-reasons-people-are-purchasing-real-estate-in-this-current-market/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/crown-heights.jpg" alt="5 Reasons to Buy Real Estate in Today’s Market" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/crown-heights.webp" alt="5 Reasons to Buy Real Estate in Today’s Market" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Insight</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">5 Reasons to Buy Real Estate in Today’s Market</div>
@@ -711,7 +711,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/you-still-have-time-to-invest-in-qualified-opportunity-zones-in-nyc/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/park-slope.jpg" alt="You Still Have Time To Invest In Qualified Opportunity Zones in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/park-slope.webp" alt="You Still Have Time To Invest In Qualified Opportunity Zones in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Investing</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">You Still Have Time To Invest In Qualified Opportunity Zones in NYC</div>
@@ -747,7 +747,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/mortgage-rate-drops-to-historic-lows/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.jpg" alt="Mortgage Rate Drops to Historic Lows" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/chelsea.webp" alt="Mortgage Rate Drops to Historic Lows" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Financing</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Mortgage Rate Drops to Historic Lows</div>
@@ -756,7 +756,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/top-4-reasons-to-invest-in-multi-family-properties-amid-the-coronavirus-pandemic/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/downtown-brooklyn.jpg" alt="Top 4 Reasons to Invest in Multi-family Properties Amid the Pandemic" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/downtown-brooklyn.webp" alt="Top 4 Reasons to Invest in Multi-family Properties Amid the Pandemic" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Investing</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Top 4 Reasons to Invest in Multi-family Properties Amid the Pandemic</div>
@@ -765,7 +765,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/why-townhouses-make-sense-during-and-post-covid-19/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/dumbo.jpg" alt="Why Townhouses Make Sense During and Post COVID-19" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/dumbo.webp" alt="Why Townhouses Make Sense During and Post COVID-19" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Why Townhouses Make Sense During and Post COVID-19</div>
@@ -774,7 +774,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/understanding-nyc-sro-laws-how-to-convert-an-sro-townhouse-to-a-class-a-property/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/brooklyn-heights.jpg" alt="Understanding NYC SRO Laws: How to Convert an SRO Townhouse to Class A" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/brooklyn-heights.webp" alt="Understanding NYC SRO Laws: How to Convert an SRO Townhouse to Class A" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Investing</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Understanding NYC SRO Laws: How to Convert an SRO Townhouse to Class A</div>
@@ -783,7 +783,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/the-upside-of-a-down-market-why-now-is-the-time-to-upsize-to-a-harlem-townhouse/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/williamsburg.jpg" alt="The Upside of a Down Market: Why Now Is the Time to Upsize to a Harlem Townhouse" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/williamsburg.webp" alt="The Upside of a Down Market: Why Now Is the Time to Upsize to a Harlem Townhouse" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Insight</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">The Upside of a Down Market: Why Now Is the Time to Upsize to a Harlem Townhouse</div>
@@ -792,7 +792,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/is-co-living-the-new-sro-how-to-leverage-this-trend-for-a-greater-roi/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/bedford-stuyvesant.jpg" alt="Is Co-Living the New SRO? How to Leverage This Trend for a Greater ROI" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/bedford-stuyvesant.webp" alt="Is Co-Living the New SRO? How to Leverage This Trend for a Greater ROI" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Investing</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Is Co-Living the New SRO? How to Leverage This Trend for a Greater ROI</div>
@@ -801,7 +801,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/harlems-multi-family-townhouses-are-opportunity-zone-hidden-gem/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/crown-heights.jpg" alt="Harlem’s Multi-Family Townhouses Are an Opportunity Zone Hidden Gem" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/crown-heights.webp" alt="Harlem’s Multi-Family Townhouses Are an Opportunity Zone Hidden Gem" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Investing</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Harlem’s Multi-Family Townhouses Are an Opportunity Zone Hidden Gem</div>
@@ -810,7 +810,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/how-to-price-a-harlem-townhouse/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/park-slope.jpg" alt="How to Price a Harlem Townhouse" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/park-slope.webp" alt="How to Price a Harlem Townhouse" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Seller Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">How to Price a Harlem Townhouse</div>
@@ -894,7 +894,7 @@ const HTML = `<style>
     <a href="https://www.youtube.com/@montfortrealestate6984" target="_blank" rel="noopener" aria-label="YouTube" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.7 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.3.3-3.8.3-3.8s0-2.5-.3-3.8zM10 15V9l5.2 3z"/></svg></a>
     <a href="https://www.instagram.com/stanleymontfort/" target="_blank" rel="noopener" aria-label="Instagram" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.9"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg></a>
     </div>
-    <img src="/redesign-assets/rebny.png" alt="REBNY, Real Estate Board of New York" style="height:52px; width:auto; display:block; opacity:0.9">
+    <img src="/redesign-assets/rebny.webp" alt="REBNY, Real Estate Board of New York" style="height:52px; width:auto; display:block; opacity:0.9">
    </div>
   </div>
   <div style="max-width:1440px; margin:64px auto 0; padding-top:44px; border-top:1px solid rgba(249,246,230,0.14); display:grid; grid-template-columns:1fr 1fr 1fr; gap:44px; align-items:center">

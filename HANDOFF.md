@@ -89,3 +89,34 @@ Our repo is the source of truth for all SEO. The deployed build currently overri
 8. LANG: document must be lang="en-US" (Seo.tsx sets it at runtime; ensure the shell doesn't force "en"
    or add it server-side).
 9. HTTPS/HSTS at launch on the production domain.
+
+## Section handoffs (focused work streams)
+
+| File | Scope |
+|------|--------|
+| `HANDOFF-SECTION-neighborhoods-harlem-stanley.md` | Neighborhoods mobile CSS, Harlem schools component, Stanley hero image (2026-08-10) |
+
+## Round-2 SEO audit — repo fixes applied (2026-08-10)
+
+Applied here:
+- WebPage + WebSite schema added to Harlem, StanleyMontfort, BrownstoneBuyingGuide (now 5 blocks each,
+  consistent with the other pages).
+- All 9 empty alt="" attributes filled with descriptive text (0 remaining across all pages).
+- WebP conversion extended to every page-referenced raster (189 webp refs vs 63 remaining png refs;
+  the remainder are already-small icons/logos where webp was not smaller).
+- robots.txt + sitemap.xml shipped in public/ (see blocker 6).
+
+VERIFIED NOT A REPO ISSUE — every page in this repo already sets an absolute, per-page canonical and
+og:url (https://montfortre.com/services/, /harlem/, etc.) plus its own title/description/JSON-LD.
+The audit's "canonical and og:url are / on every page" and "identical 2KB shell on every route" are
+caused by the platform build not honoring the Seo component and not prerendering. See blockers 1-4.
+
+OPEN — needs a human/client decision (deliberately NOT changed):
+- FACT CONFLICT: /about-us/ H1 says "20+ years" while /stanley-montfort/ schema and homepage copy say
+  "nearly a decade". Both came from source content. Client must confirm which is correct, then update
+  copy AND the RealEstateAgent schema together.
+- THIN CONTENT vs crawl: /success-stories/ 774 words (crawl 950), /neighborhoods/ 796 (969),
+  /harlem/ 624 (774), /about-us/ 770 (932). The redesign intentionally tightened copy; restoring depth
+  requires client-approved content, not mechanical edits.
+- /success-stories/ has only 2 generic H2s — needs unique section headings if content is expanded.
+- FAQ / Service / Review schema absent sitewide (inherited gap: the live site lacks them too).
