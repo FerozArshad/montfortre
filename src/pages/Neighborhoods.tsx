@@ -562,7 +562,7 @@ const HTML = `<style>/* latin-ext */
 
    <div data-reveal="" style="display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:center">
     <div class="hood-card" style="border-radius:16px; overflow:hidden; aspect-ratio:16/11; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 26px 60px rgba(17,59,95,0.2)">
-     <img src="/redesign-assets/nbhd/65438018.png" alt="Harlem brownstones" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
+     <img src="/redesign-assets/nbhd/65438018.webp" alt="Harlem brownstones" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
     </div>
     <div>
      <a href="/harlem/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:36px; line-height:1.1; letter-spacing:-0.045em; text-transform:uppercase; color:#0F1729; display:inline-block" style-hover="color:#C98A2C">Harlem Realtor</a>
@@ -608,13 +608,13 @@ const HTML = `<style>/* latin-ext */
      </div>
     </div>
     <div class="hood-card" style="border-radius:16px; overflow:hidden; aspect-ratio:16/11; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 26px 60px rgba(17,59,95,0.2)">
-     <img src="/redesign-assets/nbhd/eadc74f3.png" alt="Upper West Side" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
+     <img src="/redesign-assets/nbhd/eadc74f3.webp" alt="Upper West Side" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
     </div>
    </div>
 
    <div data-reveal="" style="display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:center">
     <div class="hood-card" style="border-radius:16px; overflow:hidden; aspect-ratio:16/11; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 26px 60px rgba(17,59,95,0.2)">
-     <img src="/redesign-assets/nbhd/943207db.png" alt="Upper East Side" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
+     <img src="/redesign-assets/nbhd/943207db.webp" alt="Upper East Side" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
     </div>
     <div>
      <a href="/upper-east-side/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:36px; line-height:1.1; letter-spacing:-0.045em; text-transform:uppercase; color:#0F1729; display:inline-block" style-hover="color:#C98A2C">Upper East Side Realtor</a>

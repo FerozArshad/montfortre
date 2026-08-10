@@ -65,3 +65,27 @@ The previous agent (Claude, working with the site owner) will re-audit after you
 every route at 375 / 768 / 1440 px for horizontal overflow, working navigation, broken images or
 layout, and a field-by-field SEO re-check against the original site. Anything that changes SEO or
 content will be flagged as a regression.
+
+## LAUNCH BLOCKERS — must be fixed on the GHL/platform side (from the SEO validation audit)
+
+Our repo is the source of truth for all SEO. The deployed build currently overrides parts of it. Before DNS cutover:
+
+1. CANONICAL/OG:URL: must render absolute (https://montfortre.com/...) exactly as set in each page's
+   LINKS/METAS constants. The platform currently outputs a relative canonical (href="/") — remove any
+   platform-level canonical/meta injection and let src/components/Seo.tsx own the head.
+2. META DESCRIPTION: the platform replaced the homepage description. Restore the exact value from
+   Home.tsx METAS ("Our Realtors will help you find on and off market NYC real estate...").
+   Never rewrite page SEO constants.
+3. SHELL HEAD: the served index.html carries its own title/description ("Premier NYC & Harlem...").
+   Strip it to charset+viewport only, or set it to match the homepage constants.
+4. PRERENDER/SSR: raw HTML is a 2KB shell with no SEO. Enable prerendering/static generation so every
+   route serves its real title/meta/JSON-LD in the initial HTML (non-JS crawlers, social scrapers).
+5. REAL 404s: unknown URLs return HTTP 200. Serve 404 status for unmatched routes (the app's
+   NotMigrated fallback is noindexed, but the status code must come from the host).
+6. ROBOTS + SITEMAP: deploy public/robots.txt and public/sitemap.xml from this repo at the web root
+   (they restore the AI-crawler allowlist, scraper blocks, Disallow /?s=, and the Sitemap directive).
+7. TRAILING SLASHES: platform-generated nav links mix /about-us and /about-us/. Normalize to
+   trailing-slash everywhere (all links in this repo already are).
+8. LANG: document must be lang="en-US" (Seo.tsx sets it at runtime; ensure the shell doesn't force "en"
+   or add it server-side).
+9. HTTPS/HSTS at launch on the production domain.

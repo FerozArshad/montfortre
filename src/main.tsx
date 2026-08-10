@@ -14,6 +14,8 @@ import TwoFamilyHouseForSaleNyc from "./pages/TwoFamilyHouseForSaleNyc";
 import BrownstoneBuyingGuide from "./pages/BrownstoneBuyingGuide";
 import Neighborhoods from "./pages/Neighborhoods";
 import NotMigrated from "./pages/NotMigrated";
+import IdxSales from "./pages/IdxSales";
+import IdxRentals from "./pages/IdxRentals";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -30,6 +32,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/2-family-house-for-sale-nyc" element={<TwoFamilyHouseForSaleNyc />} />
         <Route path="/advice-for-buyers-looking-to-purchase-brownstones" element={<BrownstoneBuyingGuide />} />
         <Route path="/neighborhoods" element={<Neighborhoods />} />
+        <Route path="/idx-sales" element={<IdxSales />} />
+        <Route path="/idx-rentals" element={<IdxRentals />} />
         <Route path="*" element={<NotMigrated />} />
       </Routes>
     </BrowserRouter>

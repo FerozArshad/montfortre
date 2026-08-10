@@ -252,7 +252,7 @@ const HTML = `<style>
 
 
  <section data-screen-label="About hero" style="position:relative; background:#0F1729; overflow:hidden; padding:100px 64px 112px">
-  <img src="/redesign-assets/hoods/harlem.png" alt="" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.14; display:block">
+  <img src="/redesign-assets/hoods/harlem.webp" alt="" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.14; display:block">
   <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(15,23,41,0.72) 0%, rgba(15,23,41,0.95) 62%)"></div>
   <div style="position:absolute; top:-140px; right:-160px; width:620px; height:620px; border-radius:50%; border:1px solid rgba(201,138,44,0.16)"></div>
   <div style="position:relative; z-index:2; max-width:1440px; margin:0 auto; display:grid; grid-template-columns:1.05fr 0.95fr; gap:80px; align-items:center">
@@ -272,7 +272,7 @@ const HTML = `<style>
     <div style="position:absolute; inset:0 0 58px; border:1px solid rgba(201,138,44,0.5); border-radius:50%"></div>
     <div style="position:absolute; left:2px; top:18px; width:16px; height:16px; border-radius:50%; background:#C98A2C"></div>
     <div style="position:relative; overflow:hidden; border-radius:50%; aspect-ratio:1/1; background:#E0D9B8; border:6px solid rgba(249,246,230,0.9); box-shadow:0 40px 90px rgba(0,0,0,0.42)">
-     <img src="/redesign-assets/stanley-portrait.png" alt="Stanley Montfort" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 12%; display:block">
+     <img src="/redesign-assets/stanley-portrait.webp" alt="Stanley Montfort" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 12%; display:block">
     </div>
    </div>
   </div>
@@ -332,7 +332,7 @@ const HTML = `<style>
    </div>
    <div data-reveal="" style="position:sticky; top:110px">
     <div style="position:relative; border-radius:16px; overflow:hidden; background:#E0D9B8; box-shadow:0 30px 70px rgba(17,59,95,0.18); aspect-ratio:4/5">
-     <img src="/redesign-assets/stanley-portrait.png" alt="Stanley Montfort" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 10%; display:block">
+     <img src="/redesign-assets/stanley-portrait.webp" alt="Stanley Montfort" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 10%; display:block">
     </div>
    </div>
   </div>
@@ -348,7 +348,7 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:60px">
     <a data-reveal="" href="/harlem/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/harlem.png" alt="Harlem Realtor" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)">
+     <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem Realtor" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Manhattan</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -358,7 +358,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/upper-west-side/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/upper-west-side.png" alt="Upper West Side Realtor" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)">
+     <img src="/redesign-assets/hoods/upper-west-side.webp" alt="Upper West Side Realtor" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Manhattan</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -368,7 +368,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/upper-east-side/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/upper-east-side.png" alt="Upper East Side Realtor" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)">
+     <img src="/redesign-assets/hoods/upper-east-side.webp" alt="Upper East Side Realtor" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Manhattan</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -462,14 +462,14 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:44px; margin-top:56px; padding-top:52px; border-top:2px solid #0F1729">
     <a data-reveal="" href="/upper-west-side-townhouse-q2-2024-market-report/" style="display:flex; flex-direction:column; group">
-     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.png" alt="Upper West Side Townhouse Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.webp" alt="Upper West Side Townhouse Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C; margin-top:22px">Market Report</div>
      <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:23px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Upper West Side Townhouse Q2 2024 Market Report</div>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">On the Upper West Side, we observed a distinct trend that diverges from the citywide patterns…</p>
      <div style="display:flex; align-items:center; gap:9px; margin-top:18px; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#113B5F">Read article <span style="color:#C98A2C">→</span></div>
     </a>
     <a data-reveal="" href="/harlem-brownstone-q2-2024-market-report/" style="display:flex; flex-direction:column">
-     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.png" alt="Harlem Brownstone Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.webp" alt="Harlem Brownstone Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C; margin-top:22px">Market Report</div>
      <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:23px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Harlem Brownstone Q2 2024 Market Report</div>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">The Harlem brownstone market has seen an increase in sales activity since this time last year…</p>

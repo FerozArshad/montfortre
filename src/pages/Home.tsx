@@ -96,6 +96,12 @@ const LINKS = [
   {
     "href": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;display=swap",
     "rel": "stylesheet"
+  },
+  {
+    "rel": "alternate",
+    "type": "application/rss+xml",
+    "title": "Montfort Real Estate \u00bb Feed",
+    "href": "https://montfortre.com/feed/"
   }
 ];
 const JSON_LD = [
@@ -396,7 +402,7 @@ const HTML = `<style>
      </div>
     </div>
     <a href="/blog/" style="color:#0F1729; padding:8px 0">Resources</a>
-    <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:#0F1729; padding:8px 0">Contact</a>
+    <a href="/contact/" style="color:#0F1729; padding:8px 0">Contact</a>
    </nav>
    <a href="tel:+1-646-970-1078" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:#0F1729; transition:color 0.2s ease" style-hover="color:#C98A2C">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -527,7 +533,7 @@ const HTML = `<style>
   <div style="position:absolute; bottom:-220px; left:-180px; width:520px; height:520px; border-radius:50%; border:1px solid rgba(201,138,44,0.12)"></div>
   <div style="position:relative; max-width:1440px; margin:0 auto; display:grid; grid-template-columns:45fr 55fr; gap:72px; align-items:center">
    <div data-reveal="" style="position:relative; aspect-ratio:1000/715">
-    <img src="/redesign-assets/hidden-cost.webp" alt="Buyer overwhelmed at a desk" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 42%; display:block; -webkit-mask-image:url('/redesign-assets/hidden-cost.png'); mask-image:url('/redesign-assets/hidden-cost.png'); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:center; mask-position:center" width="1100" height="787">
+    <img src="/redesign-assets/hidden-cost.webp" alt="Buyer overwhelmed at a desk" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 42%; display:block; -webkit-mask-image:url('/redesign-assets/hidden-cost.webp'); mask-image:url('/redesign-assets/hidden-cost.webp'); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:center; mask-position:center" width="1100" height="787">
     <div style="position:absolute; left:50%; bottom:-6px; transform:translateX(-50%); background:#C98A2C; color:#0F1729; border-radius:100px; padding:13px 30px; font-size:12px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; white-space:nowrap; box-shadow:0 16px 34px rgba(0,0,0,0.4)">The cost of going alone</div>
    </div>
    <div>
@@ -603,7 +609,7 @@ const HTML = `<style>
     <div style="position:absolute; left:-6px; top:8px; width:16px; height:16px; border-radius:50%; background:#C98A2C"></div>
     <div style="position:absolute; right:6px; bottom:78px; width:9px; height:9px; border-radius:50%; background:#113B5F"></div>
     <div style="position:relative; overflow:hidden; border-radius:50%; background:#E0D9B8; box-shadow:0 40px 90px rgba(17,59,95,0.28); aspect-ratio:1/1; border:6px solid #F9F6E6">
-     <img src="/redesign-assets/stanley-portrait.png" alt="Portrait of Stanley Montfort" style="display:block; width:100%; height:100%; object-fit:cover; object-position:center 12%; border-radius:50%" width="3277" height="4096">
+     <img src="/redesign-assets/stanley-portrait.webp" alt="Portrait of Stanley Montfort" style="display:block; width:100%; height:100%; object-fit:cover; object-position:center 12%; border-radius:50%" width="3277" height="4096">
     </div>
     <div style="position:relative; margin:-34px auto 0; width:88%; background:#0F1729; border-radius:16px; box-shadow:0 26px 54px rgba(17,59,95,0.32); padding:22px 28px; display:grid; grid-template-columns:1fr 1px 1fr; align-items:center; gap:22px">
      <div>
@@ -630,7 +636,7 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:60px">
     <a data-reveal="" href="/harlem/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/harlem.png" alt="Harlem Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="500" height="350">
+     <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="500" height="350">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Manhattan</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -640,7 +646,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/upper-west-side/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/upper-west-side.png" alt="Upper West Side Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="500" height="350">
+     <img src="/redesign-assets/hoods/upper-west-side.webp" alt="Upper West Side Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="500" height="350">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Manhattan</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -650,7 +656,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/upper-east-side/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/upper-east-side.png" alt="Upper East Side Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="500" height="350">
+     <img src="/redesign-assets/hoods/upper-east-side.webp" alt="Upper East Side Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="500" height="350">
      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
      <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Manhattan</div>
      <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
@@ -810,7 +816,7 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px; margin-top:64px">
     <div data-reveal="">
-     <div style="position:relative; aspect-ratio:1/1; border-radius:50%; overflow:hidden; background:#EFE7C4; border:1px solid rgba(201,138,44,0.45); box-shadow:0 22px 48px rgba(17,59,95,0.14)"><img src="/redesign-assets/plan/step1.png" alt="Realtor on a consultation call" style="width:100%; height:100%; object-fit:cover; display:block" width="3000" height="2000"></div>
+     <div style="position:relative; aspect-ratio:1/1; border-radius:50%; overflow:hidden; background:#EFE7C4; border:1px solid rgba(201,138,44,0.45); box-shadow:0 22px 48px rgba(17,59,95,0.14)"><img src="/redesign-assets/plan/step1.webp" alt="Realtor on a consultation call" style="width:100%; height:100%; object-fit:cover; display:block" width="3000" height="2000"></div>
      <div style="display:flex; align-items:baseline; gap:16px; margin-top:8px">
       <span style="font-size:15px; font-weight:900; letter-spacing:0.16em; color:#C98A2C">01</span>
       <span style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:25px; line-height:1.35; color:#0F1729">Schedule Free Consultation w/ Realtor</span>
@@ -818,7 +824,7 @@ const HTML = `<style>
      <p style="font-size:16.5px; line-height:1.85; color:#3B4C5E; margin:14px 0 0; max-width:360px; text-wrap:pretty">We'll listen to your requirements, give you an overview of the market/process and you can decide if we're a good fit</p>
     </div>
     <div data-reveal="">
-     <div style="position:relative; aspect-ratio:1/1; border-radius:50%; overflow:hidden; background:#EFE7C4; border:1px solid rgba(201,138,44,0.45); box-shadow:0 22px 48px rgba(17,59,95,0.14)"><img src="/redesign-assets/plan/step2.png" alt="Realtor showing a couple a home" style="width:100%; height:100%; object-fit:cover; display:block" width="3000" height="2000"></div>
+     <div style="position:relative; aspect-ratio:1/1; border-radius:50%; overflow:hidden; background:#EFE7C4; border:1px solid rgba(201,138,44,0.45); box-shadow:0 22px 48px rgba(17,59,95,0.14)"><img src="/redesign-assets/plan/step2.webp" alt="Realtor showing a couple a home" style="width:100%; height:100%; object-fit:cover; display:block" width="3000" height="2000"></div>
      <div style="display:flex; align-items:baseline; gap:16px; margin-top:8px">
       <span style="font-size:15px; font-weight:900; letter-spacing:0.16em; color:#C98A2C">02</span>
       <span style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:25px; line-height:1.35; color:#0F1729">Realtor Will Get to Work</span>
@@ -826,7 +832,7 @@ const HTML = `<style>
      <p style="font-size:16.5px; line-height:1.85; color:#3B4C5E; margin:14px 0 0; max-width:360px; text-wrap:pretty">We'll curate on market and off market real estate showings for you that fit your criteria</p>
     </div>
     <div data-reveal="">
-     <div style="position:relative; aspect-ratio:1/1; border-radius:50%; overflow:hidden; background:#EFE7C4; border:1px solid rgba(201,138,44,0.45); box-shadow:0 22px 48px rgba(17,59,95,0.14)"><img src="/redesign-assets/plan/step3.png" alt="Couple celebrating their new home" style="width:100%; height:100%; object-fit:cover; display:block" width="3000" height="2000"></div>
+     <div style="position:relative; aspect-ratio:1/1; border-radius:50%; overflow:hidden; background:#EFE7C4; border:1px solid rgba(201,138,44,0.45); box-shadow:0 22px 48px rgba(17,59,95,0.14)"><img src="/redesign-assets/plan/step3.webp" alt="Couple celebrating their new home" style="width:100%; height:100%; object-fit:cover; display:block" width="3000" height="2000"></div>
      <div style="display:flex; align-items:baseline; gap:16px; margin-top:8px">
       <span style="font-size:15px; font-weight:900; letter-spacing:0.16em; color:#C98A2C">03</span>
       <span style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:25px; line-height:1.35; color:#0F1729">Enjoy your dream home</span>
@@ -845,7 +851,7 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; margin-top:56px">
     <a data-reveal="" href="/nyc-buyers-agent-service/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease" style-hover="transform:translateY(-7px); box-shadow:0 30px 60px rgba(17,59,95,0.16)">
-     <div style="aspect-ratio:11/9; overflow:hidden"><img src="/redesign-assets/services/buyers-agent.png" alt="NYC Buyer's Agent materials on a desk" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.06)" width="550" height="450"></div>
+     <div style="aspect-ratio:11/9; overflow:hidden"><img src="/redesign-assets/services/buyers-agent.webp" alt="NYC Buyer's Agent materials on a desk" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.06)" width="550" height="450"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:30px 30px 32px">
       <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:24px; line-height:1.3; color:#0F1729; text-wrap:pretty; margin:0">NYC Buyer’s Agent</h3>
       <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:14px 0 0; flex:1 1 auto; text-wrap:pretty">Expert representation to protect your interests, surface the right opportunities, and negotiate favorable terms in NYC’s most competitive market.</p>
@@ -853,7 +859,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/nyc-listing-agent-service/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease" style-hover="transform:translateY(-7px); box-shadow:0 30px 60px rgba(17,59,95,0.16)">
-     <div style="aspect-ratio:11/9; overflow:hidden"><img src="/redesign-assets/services/listing-agent.png" alt="NYC Listing Agent materials on a desk" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.06)" width="550" height="450"></div>
+     <div style="aspect-ratio:11/9; overflow:hidden"><img src="/redesign-assets/services/listing-agent.webp" alt="NYC Listing Agent materials on a desk" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.06)" width="550" height="450"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:30px 30px 32px">
       <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:24px; line-height:1.3; color:#0F1729; text-wrap:pretty; margin:0">NYC Listing Agent</h3>
       <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:14px 0 0; flex:1 1 auto; text-wrap:pretty">Strategic pricing, professional marketing, and skilled negotiation to maximize value across co-ops, condos, brownstones, and townhomes.</p>
@@ -861,7 +867,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/nyc-multifamily-real-estate-agent-service/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease" style-hover="transform:translateY(-7px); box-shadow:0 30px 60px rgba(17,59,95,0.16)">
-     <div style="aspect-ratio:11/9; overflow:hidden"><img src="/redesign-assets/services/multifamily.png" alt="NYC Multifamily Agent materials on a desk" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.06)" width="550" height="450"></div>
+     <div style="aspect-ratio:11/9; overflow:hidden"><img src="/redesign-assets/services/multifamily.webp" alt="NYC Multifamily Agent materials on a desk" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.06)" width="550" height="450"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:30px 30px 32px">
       <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:24px; line-height:1.3; color:#0F1729; text-wrap:pretty; margin:0">NYC Multifamily Agent</h3>
       <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:14px 0 0; flex:1 1 auto; text-wrap:pretty">Guidance on 2–4 unit buildings, brownstone conversions, and value-add investments to build long-term wealth across the boroughs.</p>
@@ -869,7 +875,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/home-valuation/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease" style-hover="transform:translateY(-7px); box-shadow:0 30px 60px rgba(17,59,95,0.16)">
-     <div style="aspect-ratio:11/9; overflow:hidden"><img src="/redesign-assets/services/home-valuation.png" alt="NYC Free Home Valuation flyer and tablet" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.06)" width="550" height="450"></div>
+     <div style="aspect-ratio:11/9; overflow:hidden"><img src="/redesign-assets/services/home-valuation.webp" alt="NYC Free Home Valuation flyer and tablet" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.06)" width="550" height="450"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:30px 30px 32px">
       <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:24px; line-height:1.3; color:#0F1729; text-wrap:pretty; margin:0">NYC Free Home Valuation</h3>
       <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:14px 0 0; flex:1 1 auto; text-wrap:pretty">Understand what your property is truly worth, beyond automated estimates, with expert, neighborhood-specific market insight.</p>
@@ -877,7 +883,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/mortgage-calculator/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease" style-hover="transform:translateY(-7px); box-shadow:0 30px 60px rgba(17,59,95,0.16)">
-     <div style="aspect-ratio:11/9; overflow:hidden"><img src="/redesign-assets/services/mortgage.png" alt="NYC Mortgage Calculator on a laptop" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.06)" width="550" height="450"></div>
+     <div style="aspect-ratio:11/9; overflow:hidden"><img src="/redesign-assets/services/mortgage.webp" alt="NYC Mortgage Calculator on a laptop" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.06)" width="550" height="450"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:30px 30px 32px">
       <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:24px; line-height:1.3; color:#0F1729; text-wrap:pretty; margin:0">NYC Mortgage Calculator</h3>
       <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:14px 0 0; flex:1 1 auto; text-wrap:pretty">See your full monthly cost, maintenance, common charges, taxes, and closing costs, before you make an offer.</p>
@@ -1363,14 +1369,14 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:44px; margin-top:56px; padding-top:52px; border-top:2px solid #0F1729">
     <a data-reveal="" href="/upper-west-side-townhouse-q2-2024-market-report/" style="display:flex; flex-direction:column; group">
-     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.png" alt="Upper West Side Townhouse Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)" width="500" height="350"></div>
+     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.webp" alt="Upper West Side Townhouse Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)" width="500" height="350"></div>
      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C; margin-top:22px">Market Report</div>
      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:23px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty; margin:0">Upper West Side Townhouse Q2 2024 Market Report</h3>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">On the Upper West Side, we observed a distinct trend that diverges from the citywide patterns…</p>
      <div style="display:flex; align-items:center; gap:9px; margin-top:18px; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#113B5F">Read article <span style="color:#C98A2C">→</span></div>
     </a>
     <a data-reveal="" href="/harlem-brownstone-q2-2024-market-report/" style="display:flex; flex-direction:column">
-     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.png" alt="Harlem Brownstone Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)" width="500" height="350"></div>
+     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.webp" alt="Harlem Brownstone Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)" width="500" height="350"></div>
      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C; margin-top:22px">Market Report</div>
      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:23px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty; margin:0">Harlem Brownstone Q2 2024 Market Report</h3>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">The Harlem brownstone market has seen an increase in sales activity since this time last year…</p>
@@ -1427,6 +1433,9 @@ const HTML = `<style>
      <a href="/nyc-multifamily-real-estate-agent-service/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">NYC Multifamily Real Estate Agent</a>
      <a href="/home-valuation/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Home Valuation</a>
      <a href="/mortgage-calculator/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Mortgage Calculator</a>
+     <a href="/brownstones-in-new-york-city/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Brownstones in NYC</a>
+     <a href="/house-hacking-your-nyc-brownstone/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">House Hacking Guide</a>
+     <a href="/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/harlem/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Featured Harlem Homes</a>
     </div>
    </div>
    <div>
@@ -1449,7 +1458,7 @@ const HTML = `<style>
     <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:16px; letter-spacing:0.02em; color:#C98A2C">About</div>
     <div style="display:flex; flex-direction:column; gap:11px; margin-top:20px; padding-top:18px; border-top:1px solid rgba(201,138,44,0.35)">
      <a href="/stanley-montfort/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Stanley Montfort</a>
-     <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
+     <a href="/contact/" target="_blank" rel="noopener" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
      <a href="/success-stories/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Success Stories</a>
      <a href="/blog/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Resources</a>
     </div>

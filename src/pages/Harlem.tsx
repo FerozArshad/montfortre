@@ -329,7 +329,7 @@ const HTML = `<style>
    </div>
    <div data-reveal="" style="position:relative">
     <div style="position:relative; border-radius:16px; overflow:hidden; aspect-ratio:5/4; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 40px 90px rgba(17,59,95,0.28)">
-     <img src="/redesign-assets/hoods/harlem.png" alt="Harlem brownstones" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block">
+     <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem brownstones" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block">
     </div>
     <div style="position:absolute; right:-14px; bottom:-22px; display:inline-flex; align-items:center; gap:18px; background:#FFFFFF; border:1px solid rgba(201,138,44,0.55); border-radius:16px; box-shadow:0 22px 48px rgba(17,59,95,0.28); padding:18px 26px; white-space:nowrap">
      <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google" style="flex:0 0 auto; width:50px; height:50px; display:block">
@@ -358,7 +358,7 @@ const HTML = `<style>
     <p style="font-size:17px; line-height:1.85; color:#3B4C5E; margin:16px 0 0; text-wrap:pretty">Home to world-renowned landmarks such as the Apollo Theater and Studio Museum, Harlem features an excellent selection of restaurants, cafes, and local shops. Residents enjoy convenient access to Central Park, Marcus Garvey Park, and multiple subway lines, a unique blend of tradition and opportunity.</p>
    </div>
    <div data-reveal="" style="position:relative; border-radius:16px; overflow:hidden; aspect-ratio:4/5; background:#E0D9B8; box-shadow:0 30px 70px rgba(17,59,95,0.18)">
-    <img src="/redesign-assets/hoods/harlem.png" alt="Harlem street" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block">
+    <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem street" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block">
    </div>
   </div>
  </section>
@@ -372,7 +372,7 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; margin-top:56px">
     <a data-reveal="" href="/featured-brownstones-for-sale/harlem-brownstones/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:7/5; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem-brownstones.png" alt="Harlem Brownstones" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+     <div style="aspect-ratio:7/5; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem-brownstones.webp" alt="Harlem Brownstones" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:26px 26px 24px">
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:21px; line-height:1.3; color:#0F1729; text-wrap:pretty">Harlem Brownstones</div>
       <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Historic architecture, timeless charm, and classic Harlem living.</p>
@@ -437,7 +437,7 @@ const HTML = `<style>
     </div>
    </div>
    <div data-reveal="" style="position:relative; border-radius:16px; overflow:hidden; aspect-ratio:4/3; background:#0B1220; border:1px solid rgba(201,138,44,0.4); box-shadow:0 30px 70px rgba(0,0,0,0.4)">
-    <img src="/redesign-assets/hoods/harlem.png" alt="Harlem market" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.5; display:block">
+    <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem market" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.5; display:block">
     <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:8px; background:linear-gradient(180deg, rgba(15,23,41,0.3), rgba(15,23,41,0.65))">
      <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:34px; letter-spacing:-0.01em; color:#F9F6E6">Harlem</div>
      <div style="font-size:12px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:#C98A2C">Market Report</div>
@@ -670,14 +670,14 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:44px; margin-top:56px; padding-top:52px; border-top:2px solid #0F1729">
     <a data-reveal="" href="/upper-west-side-townhouse-q2-2024-market-report/" style="display:flex; flex-direction:column; group">
-     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.png" alt="Upper West Side Townhouse Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.webp" alt="Upper West Side Townhouse Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C; margin-top:22px">Market Report</div>
      <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:23px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Upper West Side Townhouse Q2 2024 Market Report</div>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">On the Upper West Side, we observed a distinct trend that diverges from the citywide patterns…</p>
      <div style="display:flex; align-items:center; gap:9px; margin-top:18px; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#113B5F">Read article <span style="color:#C98A2C">→</span></div>
     </a>
     <a data-reveal="" href="/harlem-brownstone-q2-2024-market-report/" style="display:flex; flex-direction:column">
-     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.png" alt="Harlem Brownstone Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.webp" alt="Harlem Brownstone Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C; margin-top:22px">Market Report</div>
      <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:23px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Harlem Brownstone Q2 2024 Market Report</div>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">The Harlem brownstone market has seen an increase in sales activity since this time last year…</p>

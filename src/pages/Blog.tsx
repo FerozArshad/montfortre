@@ -299,7 +299,7 @@ const HTML = `<style>
 
 
  <section data-screen-label="Blog hero" style="position:relative; background:#0F1729; overflow:hidden; padding:92px 64px 84px">
-  <img src="/redesign-assets/hoods/harlem.png" alt="" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.14; display:block">
+  <img src="/redesign-assets/hoods/harlem.webp" alt="" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.14; display:block">
   <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(15,23,41,0.7) 0%, rgba(15,23,41,0.94) 62%)"></div>
   <div style="position:absolute; top:-140px; right:-160px; width:600px; height:600px; border-radius:50%; border:1px solid rgba(201,138,44,0.16)"></div>
   <div style="position:relative; z-index:2; max-width:900px; margin:0 auto; text-align:center">
@@ -324,7 +324,7 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:26px">
     <a data-reveal="" href="/upper-west-side-townhouse-q2-2024-market-report/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.png" alt="Upper West Side Townhouse Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.webp" alt="Upper West Side Townhouse Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Report</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Upper West Side Townhouse Q2 2024 Market Report</div>
@@ -333,7 +333,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/harlem-brownstone-q2-2024-market-report/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.png" alt="Harlem Brownstone Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.webp" alt="Harlem Brownstone Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Report</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Harlem Brownstone Q2 2024 Market Report</div>
@@ -342,7 +342,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/discover-your-dream-home-explore-apartments-for-sale-on-the-upper-west-side/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-east-side.png" alt="Discover Your Dream Home: Apartments for Sale on the Upper West Side" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-east-side.webp" alt="Discover Your Dream Home: Apartments for Sale on the Upper West Side" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Discover Your Dream Home: Apartments for Sale on the Upper West Side</div>
@@ -423,7 +423,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/top-10-most-expensive-sold-brownstones-in-harlem/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.png" alt="Top 10 Most Expensive Sold Brownstones in Harlem" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.webp" alt="Top 10 Most Expensive Sold Brownstones in Harlem" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Neighborhoods</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Top 10 Most Expensive Sold Brownstones in Harlem</div>
@@ -432,7 +432,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/harlem-q3-2023-brownstone-market-report/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.png" alt="Harlem Brownstone Q3 2023 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.webp" alt="Harlem Brownstone Q3 2023 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Report</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Harlem Brownstone Q3 2023 Market Report</div>
@@ -441,7 +441,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/brownstones-in-new-york-city-for-sale/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-east-side.png" alt="How to Find Brownstones in New York City for Sale" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-east-side.webp" alt="How to Find Brownstones in New York City for Sale" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Buyer Guide</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">How to Find Brownstones in New York City for Sale</div>
@@ -522,7 +522,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/are-nfts-about-to-go-mainstream-in-real-estate/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.png" alt="Are NFTs About to Go Mainstream in Real Estate?" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.webp" alt="Are NFTs About to Go Mainstream in Real Estate?" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Insight</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Are NFTs About to Go Mainstream in Real Estate?</div>
@@ -531,7 +531,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/why-brownstone-co-ownership-makes-sense-in-a-rising-interest-rate-environment/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.png" alt="Why Brownstone Co-Ownership Makes Sense in a Rising Interest Rate Environment" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.webp" alt="Why Brownstone Co-Ownership Makes Sense in a Rising Interest Rate Environment" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Co-Ownership</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Why Brownstone Co-Ownership Makes Sense in a Rising Interest Rate Environment</div>
@@ -540,7 +540,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/owner-financing-for-your-brownstone/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-east-side.png" alt="Owner Financing for Your Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-east-side.webp" alt="Owner Financing for Your Brownstone" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Financing</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Owner Financing for Your Brownstone</div>
@@ -621,7 +621,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/co-ownership-and-resolving-property-disputes-in-new-york-city/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.png" alt="Co-Ownership and Resolving Property Disputes in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.webp" alt="Co-Ownership and Resolving Property Disputes in NYC" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Co-Ownership</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Co-Ownership and Resolving Property Disputes in NYC</div>
@@ -630,7 +630,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/co-ownership-advantages-and-disadvantages-in-nyc/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.png" alt="Co-Ownership in NYC: Pros and Cons" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.webp" alt="Co-Ownership in NYC: Pros and Cons" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Co-Ownership</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Co-Ownership in NYC: Pros and Cons</div>
@@ -639,7 +639,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/nycs-hot-real-estate-market-after-covid-19/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-east-side.png" alt="NYC’s Hot Real Estate Market After Covid-19" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-east-side.webp" alt="NYC’s Hot Real Estate Market After Covid-19" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Insight</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">NYC’s Hot Real Estate Market After Covid-19</div>
@@ -720,7 +720,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/what-awaits-the-nyc-real-estate-market-post-pandemic/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.png" alt="What Awaits the NYC Real Estate Market Post-Pandemic?" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.webp" alt="What Awaits the NYC Real Estate Market Post-Pandemic?" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Insight</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">What Awaits the NYC Real Estate Market Post-Pandemic?</div>
@@ -729,7 +729,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/5-signals-that-the-housing-market-is-on-the-road-to-recovery-post-covid-19/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.png" alt="5 Signs the Housing Market Is Recovering After COVID-19" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.webp" alt="5 Signs the Housing Market Is Recovering After COVID-19" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Insight</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">5 Signs the Housing Market Is Recovering After COVID-19</div>
@@ -738,7 +738,7 @@ const HTML = `<style>
      </div>
     </a>
     <a data-reveal="" href="/demystifying-the-reopening-of-nyc-and-what-it-means-for-real-estate/" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-east-side.png" alt="Demystifying the Reopening of NYC and What it Means for Real Estate" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-east-side.webp" alt="Demystifying the Reopening of NYC and What it Means for Real Estate" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
       <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C">Market Insight</div>
       <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Demystifying the Reopening of NYC and What it Means for Real Estate</div>

@@ -370,7 +370,7 @@ const HTML = `<style>
    <div data-reveal="" style="position:relative">
     <div style="position:absolute; top:-18px; left:-18px; width:16px; height:16px; border-radius:50%; background:#C98A2C"></div>
     <div style="position:relative; border-radius:16px; overflow:hidden; aspect-ratio:3/2; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 40px 90px rgba(17,59,95,0.28)">
-     <img src="/redesign-assets/blog/brownstone-buying-guide.png" alt="Brownstone Buying Guide" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block">
+     <img src="/redesign-assets/blog/brownstone-buying-guide.webp" alt="Brownstone Buying Guide" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block">
     </div>
    </div>
   </div>
@@ -462,7 +462,7 @@ const HTML = `<style>
     <div style="margin-top:44px; background:#F9F6E6; border:1px solid #E0D9B8; border-top:3px solid #C98A2C; border-radius:16px; padding:34px 36px">
      <div style="font-size:11.5px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8A7B4E">About the Author</div>
      <div style="display:grid; grid-template-columns:120px 1fr; gap:28px; margin-top:22px; align-items:start">
-      <div style="width:120px; height:120px; border-radius:50%; overflow:hidden; background:#E0D9B8; border:4px solid #FFFFFF; box-shadow:0 16px 34px rgba(17,59,95,0.18)"><img src="/redesign-assets/stanley-portrait.png" alt="Stanley Montfort" style="width:100%; height:100%; object-fit:cover; object-position:center 12%; display:block"></div>
+      <div style="width:120px; height:120px; border-radius:50%; overflow:hidden; background:#E0D9B8; border:4px solid #FFFFFF; box-shadow:0 16px 34px rgba(17,59,95,0.18)"><img src="/redesign-assets/stanley-portrait.webp" alt="Stanley Montfort" style="width:100%; height:100%; object-fit:cover; object-position:center 12%; display:block"></div>
       <div>
        <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:22px; letter-spacing:-0.01em; color:#0F1729">Stanley Montfort<span style="font-weight:500; color:#C98A2C">, Real Estate Advisor®</span></div>
        <div style="display:flex; flex-direction:column; gap:14px; margin-top:16px">

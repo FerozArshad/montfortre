@@ -318,7 +318,7 @@ const HTML = `<style>
    </div>
    <div data-reveal="" style="position:relative">
     <div style="position:relative; border-radius:16px; overflow:hidden; aspect-ratio:5/4; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 40px 90px rgba(17,59,95,0.28)">
-     <img src="/redesign-assets/hoods/upper-west-side.png" alt="NYC brownstone real estate" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block">
+     <img src="/redesign-assets/hoods/upper-west-side.webp" alt="NYC brownstone real estate" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block">
     </div>
     <div style="position:absolute; right:-14px; bottom:-22px; display:inline-flex; align-items:center; gap:18px; background:#FFFFFF; border:1px solid rgba(201,138,44,0.55); border-radius:16px; box-shadow:0 22px 48px rgba(17,59,95,0.28); padding:18px 26px; white-space:nowrap">
      <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google" style="flex:0 0 auto; width:50px; height:50px; display:block">
@@ -375,7 +375,7 @@ const HTML = `<style>
    <div data-reveal="" style="">
     <div style="display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap">
      <div style="display:flex; align-items:center; gap:24px">
-      <div style="flex:0 0 auto; width:96px; height:96px; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; box-shadow:0 16px 34px rgba(17,59,95,0.12)"><img src="/redesign-assets/services/buyers-agent.png" alt="NYC Buyer’s Agent" style="width:100%; height:100%; object-fit:cover; display:block"></div>
+      <div style="flex:0 0 auto; width:96px; height:96px; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; box-shadow:0 16px 34px rgba(17,59,95,0.12)"><img src="/redesign-assets/services/buyers-agent.webp" alt="NYC Buyer’s Agent" style="width:100%; height:100%; object-fit:cover; display:block"></div>
       <div>
        <div style="font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C98A2C">Buy</div>
        <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:34px; line-height:1.16; letter-spacing:-0.01em; color:#0F1729; margin:10px 0 0; text-wrap:pretty">NYC Buyer’s Agent</h2>
@@ -401,7 +401,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/buying-sro-in-nyc.png" alt="Buying an SRO in NYC" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/buying-sro-in-nyc.webp" alt="Buying an SRO in NYC" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/buying-sro-in-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">Buying an SRO in NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Affordable housing, investment value, and specialized NYC expertise.</p>
@@ -421,7 +421,7 @@ const HTML = `<style>
    <div data-reveal="" style="margin-top:72px; padding-top:60px; border-top:1px solid #E0D9B8">
     <div style="display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap">
      <div style="display:flex; align-items:center; gap:24px">
-      <div style="flex:0 0 auto; width:96px; height:96px; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; box-shadow:0 16px 34px rgba(17,59,95,0.12)"><img src="/redesign-assets/services/listing-agent.png" alt="NYC Listing Agent" style="width:100%; height:100%; object-fit:cover; display:block"></div>
+      <div style="flex:0 0 auto; width:96px; height:96px; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; box-shadow:0 16px 34px rgba(17,59,95,0.12)"><img src="/redesign-assets/services/listing-agent.webp" alt="NYC Listing Agent" style="width:100%; height:100%; object-fit:cover; display:block"></div>
       <div>
        <div style="font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C98A2C">Sell</div>
        <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:34px; line-height:1.16; letter-spacing:-0.01em; color:#0F1729; margin:10px 0 0; text-wrap:pretty">NYC Listing Agent</h2>
@@ -455,7 +455,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/selling-sros-in-nyc.png" alt="Selling SROs in NYC" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/selling-sros-in-nyc.webp" alt="Selling SROs in NYC" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/selling-sros-in-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">Selling SROs in NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Regulatory expertise, investor connections, and maximum property value.</p>
@@ -475,7 +475,7 @@ const HTML = `<style>
    <div data-reveal="" style="margin-top:72px; padding-top:60px; border-top:1px solid #E0D9B8">
     <div style="display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap">
      <div style="display:flex; align-items:center; gap:24px">
-      <div style="flex:0 0 auto; width:96px; height:96px; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; box-shadow:0 16px 34px rgba(17,59,95,0.12)"><img src="/redesign-assets/services/multifamily.png" alt="NYC Multifamily Real Estate Agent" style="width:100%; height:100%; object-fit:cover; display:block"></div>
+      <div style="flex:0 0 auto; width:96px; height:96px; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; box-shadow:0 16px 34px rgba(17,59,95,0.12)"><img src="/redesign-assets/services/multifamily.webp" alt="NYC Multifamily Real Estate Agent" style="width:100%; height:100%; object-fit:cover; display:block"></div>
       <div>
        <div style="font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C98A2C">Invest</div>
        <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:34px; line-height:1.16; letter-spacing:-0.01em; color:#0F1729; margin:10px 0 0; text-wrap:pretty">NYC Multifamily Real Estate Agent</h2>
@@ -485,7 +485,7 @@ const HTML = `<style>
     </div>
     <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; margin-top:34px">
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/2-family-house-for-sale-nyc.png" alt="2-Family House for Sale NYC" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/2-family-house-for-sale-nyc.webp" alt="2-Family House for Sale NYC" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/2-family-house-for-sale-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">2-Family House for Sale NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Rental income potential, flexible living, and smart investing.</p>
@@ -493,7 +493,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/3-family-house-for-sale-nyc.png" alt="3-Family House for Sale NYC" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/3-family-house-for-sale-nyc.webp" alt="3-Family House for Sale NYC" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/3-family-house-for-sale-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">3-Family House for Sale NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Multiple income streams, long-term growth, and NYC opportunity.</p>
@@ -501,7 +501,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/4-family-house-for-sale-nyc.png" alt="4-Family House for Sale NYC" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/4-family-house-for-sale-nyc.webp" alt="4-Family House for Sale NYC" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/4-family-house-for-sale-nyc/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">4-Family House for Sale NYC</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Maximum cash flow, strong returns, and multifamily ownership.</p>
@@ -513,7 +513,7 @@ const HTML = `<style>
    <div data-reveal="" style="margin-top:72px; padding-top:60px; border-top:1px solid #E0D9B8">
     <div style="display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap">
      <div style="display:flex; align-items:center; gap:24px">
-      <div style="flex:0 0 auto; width:96px; height:96px; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; box-shadow:0 16px 34px rgba(17,59,95,0.12)"><img src="/redesign-assets/services/home-valuation.png" alt="NYC Free Home Valuation" style="width:100%; height:100%; object-fit:cover; display:block"></div>
+      <div style="flex:0 0 auto; width:96px; height:96px; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; box-shadow:0 16px 34px rgba(17,59,95,0.12)"><img src="/redesign-assets/services/home-valuation.webp" alt="NYC Free Home Valuation" style="width:100%; height:100%; object-fit:cover; display:block"></div>
       <div>
        <div style="font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C98A2C">Value</div>
        <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:34px; line-height:1.16; letter-spacing:-0.01em; color:#0F1729; margin:10px 0 0; text-wrap:pretty">NYC Free Home Valuation</h2>
@@ -523,7 +523,7 @@ const HTML = `<style>
     </div>
     <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; margin-top:34px">
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/nyc-condo-free-home-valuation.png" alt="NYC Condo Free Home Valuation" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/nyc-condo-free-home-valuation.webp" alt="NYC Condo Free Home Valuation" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/nyc-condo-free-home-valuation/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">NYC Condo Free Home Valuation</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Accurate pricing insights, market expertise, and condo valuation guidance.</p>
@@ -539,7 +539,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/nyc-brownstone-free-home-valuation.png" alt="NYC Brownstone Free Home Valuation" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/nyc-brownstone-free-home-valuation.webp" alt="NYC Brownstone Free Home Valuation" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/nyc-brownstone-free-home-valuation/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">NYC Brownstone Free Home Valuation</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Historic property expertise, market analysis, and accurate valuation.</p>
@@ -547,7 +547,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/nyc-sro-free-home-valuation.png" alt="NYC SRO Free Home Valuation" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/nyc-sro-free-home-valuation.webp" alt="NYC SRO Free Home Valuation" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/nyc-sro-free-home-valuation/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">NYC SRO Free Home Valuation</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Regulatory expertise, investment analysis, and accurate property valuation.</p>
@@ -559,7 +559,7 @@ const HTML = `<style>
    <div data-reveal="" style="margin-top:72px; padding-top:60px; border-top:1px solid #E0D9B8">
     <div style="display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap">
      <div style="display:flex; align-items:center; gap:24px">
-      <div style="flex:0 0 auto; width:96px; height:96px; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; box-shadow:0 16px 34px rgba(17,59,95,0.12)"><img src="/redesign-assets/services/mortgage.png" alt="NYC Mortgage Calculator" style="width:100%; height:100%; object-fit:cover; display:block"></div>
+      <div style="flex:0 0 auto; width:96px; height:96px; border-radius:16px; overflow:hidden; border:1px solid #E0D9B8; box-shadow:0 16px 34px rgba(17,59,95,0.12)"><img src="/redesign-assets/services/mortgage.webp" alt="NYC Mortgage Calculator" style="width:100%; height:100%; object-fit:cover; display:block"></div>
       <div>
        <div style="font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C98A2C">Finance</div>
        <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:34px; line-height:1.16; letter-spacing:-0.01em; color:#0F1729; margin:10px 0 0; text-wrap:pretty">NYC Mortgage Calculator</h2>
@@ -577,7 +577,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/nyc-sro-mortgages.png" alt="NYC SRO Mortgages" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/nyc-sro-mortgages.webp" alt="NYC SRO Mortgages" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/nyc-sro-mortgages/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">NYC SRO Mortgages</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Specialized financing, investment opportunities, and expert guidance.</p>
@@ -585,7 +585,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/nyc-first-time-home-buyer-mortages.png" alt="NYC First-Time Home Buyer Mortgages" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/nyc-first-time-home-buyer-mortages.webp" alt="NYC First-Time Home Buyer Mortgages" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="/nyc-first-time-home-buyer-mortages/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">NYC First-Time Home Buyer Mortgages</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Flexible financing, lower down payments, and homeownership opportunities.</p>
@@ -607,7 +607,7 @@ const HTML = `<style>
     </div>
     <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; margin-top:34px">
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/mortgage.png" alt="NYC Brownstone Buyer Closing Cost Calculator" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/mortgage.webp" alt="NYC Brownstone Buyer Closing Cost Calculator" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="https://montfortre.com/nyc-brownstone-buyer-closing-cost-calculator/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">NYC Brownstone Buyer Closing Cost Calculator</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Estimate your total closing costs as a buyer, from taxes to attorney fees.</p>
@@ -615,7 +615,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/buyers-agent.png" alt="NYC Rent vs Buy Brownstone Calculator" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/buyers-agent.webp" alt="NYC Rent vs Buy Brownstone Calculator" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="https://montfortre.com/nyc-rent-vs-buy-brownstone-calculator/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">NYC Rent vs Buy Brownstone Calculator</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Compare the long-term cost of renting versus owning a Brownstone.</p>
@@ -623,7 +623,7 @@ const HTML = `<style>
       </div>
      </div>
      <div data-reveal="" style="display:flex; flex-direction:column; background:#F9F6E6; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease" style-hover="transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C">
-      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/home-valuation.png" alt="NYC Brownstone Seller Closing Cost Calculator" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
+      <div style="aspect-ratio:16/10; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/services/home-valuation.webp" alt="NYC Brownstone Seller Closing Cost Calculator" loading="lazy" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       <div style="display:flex; flex-direction:column; flex:1 1 auto; padding:24px 26px 26px">
        <a href="https://montfortre.com/nyc-brownstone-seller-closing-cost-calculator/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.3; color:#0F1729; text-wrap:pretty" style-hover="color:#C98A2C">NYC Brownstone Seller Closing Cost Calculator</a>
        <p style="font-size:15px; line-height:1.7; color:#3B4C5E; margin:12px 0 0; flex:1 1 auto; text-wrap:pretty">Project your net proceeds after commissions, transfer taxes, and fees.</p>
@@ -646,14 +646,14 @@ const HTML = `<style>
    </div>
    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:44px; margin-top:56px; padding-top:52px; border-top:2px solid #0F1729">
     <a data-reveal="" href="/upper-west-side-townhouse-q2-2024-market-report/" style="display:flex; flex-direction:column; group">
-     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.png" alt="Upper West Side Townhouse Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/upper-west-side.webp" alt="Upper West Side Townhouse Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C; margin-top:22px">Market Report</div>
      <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:23px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Upper West Side Townhouse Q2 2024 Market Report</div>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">On the Upper West Side, we observed a distinct trend that diverges from the citywide patterns…</p>
      <div style="display:flex; align-items:center; gap:9px; margin-top:18px; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#113B5F">Read article <span style="color:#C98A2C">→</span></div>
     </a>
     <a data-reveal="" href="/harlem-brownstone-q2-2024-market-report/" style="display:flex; flex-direction:column">
-     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.png" alt="Harlem Brownstone Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
+     <div style="aspect-ratio:5/3; border-radius:16px; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/hoods/harlem.webp" alt="Harlem Brownstone Q2 2024 Market Report" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.05)"></div>
      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#C98A2C; margin-top:22px">Market Report</div>
      <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:23px; line-height:1.32; color:#0F1729; margin-top:12px; text-wrap:pretty">Harlem Brownstone Q2 2024 Market Report</div>
      <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">The Harlem brownstone market has seen an increase in sales activity since this time last year…</p>
