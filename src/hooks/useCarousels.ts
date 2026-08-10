@@ -13,6 +13,9 @@ export default function useCarousels() {
     const cleanups: Array<() => void> = [];
     const onClick = (el: Element | null, fn: () => void) => {
       if (!el) return;
+      // Controls now carry self-contained inline onclick handlers (so they work
+      // even when this hook isn't wired by the host app). Don't double-bind.
+      if (el.hasAttribute("onclick")) return;
       const h = (e: Event) => {
         e.preventDefault();
         fn();
