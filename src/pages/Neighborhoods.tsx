@@ -57,17 +57,201 @@ const JSON_LD = [
   "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"name\":\"Neighborhoods\",\"description\":\"NYC Neighborhoods \\u2014 Expert Local Insights for Buyers, Sellers &amp; Investors We&#039;ll help you find the right NYC neighborhood based on your lifestyle, budget, and long-term goals\\u2014so you can buy with confidence and avoid costly mistakes Call 1-(646)-970-1078 Schedule A Constulation \\u2713SMOOTH TRANSACTIONWith limited risk throughout the buying process.\\u2713NO PRESSURENo pressure to overpay or purchase within a specific timeframe.\\u2713ONGOING SUPPORTA\",\"inLanguage\":\"en-US\",\"datePublished\":\"2026-05-06T06:25:53+00:00\",\"dateModified\":\"2026-08-05T20:43:34+00:00\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"Montfort Real Estate\",\"url\":\"https://montfortre.com/\"}}"
 ];
 
-const HTML = `<style>
+const HTML = `<style>/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("28e47ed6-a0aa-421c-b883-15ab64bc3f18") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("e1f75b36-4702-4d40-aef2-3ff4c92e5a5d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("28e47ed6-a0aa-421c-b883-15ab64bc3f18") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("e1f75b36-4702-4d40-aef2-3ff4c92e5a5d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("28e47ed6-a0aa-421c-b883-15ab64bc3f18") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("e1f75b36-4702-4d40-aef2-3ff4c92e5a5d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("bb98095e-e754-46b5-a1b1-bc44d59f9f20") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("92695c0e-caf7-4c52-bdc3-f12161af4b2f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("66c1fa1b-128c-4f3f-a112-cbad724db48c") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("bb98095e-e754-46b5-a1b1-bc44d59f9f20") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("92695c0e-caf7-4c52-bdc3-f12161af4b2f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("66c1fa1b-128c-4f3f-a112-cbad724db48c") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("bb98095e-e754-46b5-a1b1-bc44d59f9f20") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("92695c0e-caf7-4c52-bdc3-f12161af4b2f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("66c1fa1b-128c-4f3f-a112-cbad724db48c") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("bb98095e-e754-46b5-a1b1-bc44d59f9f20") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("92695c0e-caf7-4c52-bdc3-f12161af4b2f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("66c1fa1b-128c-4f3f-a112-cbad724db48c") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+ @media (max-width:1024px) {
+  [style*="px 64px"] { padding-left:32px !important; padding-right:32px !important; }
+  [style*="grid-template-columns:1.05fr 0.95fr"], [style*="grid-template-columns:0.95fr 1.05fr"],
+  [style*="grid-template-columns:1.02fr 0.98fr"], [style*="grid-template-columns:0.85fr 1.15fr"],
+  [style*="grid-template-columns:1.2fr 1fr 0.9fr auto"] { grid-template-columns:1fr !important; gap:40px !important; }
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"],
+  [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  h1[style*="font-size:62px"] { font-size:44px !important; }
+  h2[style*="font-size:44px"] { font-size:34px !important; }
+  h2[style*="font-size:36px"] { font-size:29px !important; }
+ }
+ @media (max-width:768px) {
+  [style*="px 64px"] { padding-left:20px !important; padding-right:20px !important; }
+  [style*="grid-template-columns:1fr 1fr"], [style*="grid-template-columns:repeat(2,minmax(0,1fr))"],
+  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"], [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns:1fr !important; gap:24px !important; }
+  h1[style*="font-size:62px"] { font-size:32px !important; }
+  h2[style*="font-size:44px"] { font-size:28px !important; }
+  h2[style*="font-size:36px"] { font-size:25px !important; }
+  [style*="font-size:19px"] { font-size:16.5px !important; }
+ }
+ @media (max-width:480px) {
+  h1[style*="font-size:62px"] { font-size:27px !important; }
+ }
+</style>
+<style>
  body { margin:0; background:#F9F6E6; font-family:'DM Sans',system-ui,sans-serif; color:#0F1729; -webkit-font-smoothing:antialiased; }
  * { box-sizing:border-box; }
  a { color:#113B5F; text-decoration:none; }
  a:hover { color:#C98A2C; }
- input::placeholder { color: rgba(249,246,230,0.62); }
- @keyframes v4-in { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
- @keyframes v4-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+ input::placeholder, textarea::placeholder { color: rgba(249,246,230,0.62); }
  @keyframes v4-rise { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
  .mnav-item > .mnav-drop { opacity:0; visibility:hidden; transform:translateY(12px) scale(0.98); transform-origin:top left; pointer-events:none; transition:opacity .24s ease, transform .3s cubic-bezier(0.22,0.61,0.36,1), visibility .3s; }
- .mnav-item > .mnav-drop::before { content:""; position:absolute; left:0; right:0; bottom:100%; height:22px; }
  .mnav-item:hover > .mnav-drop { opacity:1; visibility:visible; transform:translateY(0) scale(1); pointer-events:auto; }
  .mnav-item:hover > .mnav-top { color:#C98A2C; }
  .mnav-item:hover .mnav-chev { transform:rotate(180deg); color:#C98A2C; }
@@ -76,215 +260,27 @@ const HTML = `<style>
  .mnav-link .mnav-arrow { opacity:0; transform:translateX(-4px); transition:opacity .2s ease, transform .2s ease; }
  .mnav-link:hover { color:#C98A2C !important; background:rgba(201,138,44,0.08); }
  .mnav-link:hover .mnav-arrow { opacity:1; transform:translateX(0); }
- .no-sb { -ms-overflow-style:none; scrollbar-width:none; }
- .no-sb::-webkit-scrollbar { display:none; }
- a:hover > .ig-ov { opacity:1; }
-
- /* ===== Responsive overrides (layout styles are inline, hence !important).
-        Desktop >=1440px is untouched: every rule below sits in a max-width query. ===== */
- @media (max-width:1024px) {
-  [style*="px 64px"] { padding-left:32px !important; padding-right:32px !important; }
-  [style*="grid-template-columns:620px 1fr"] { grid-template-columns:1fr !important; min-height:0 !important; gap:32px !important; }
-  [style*="grid-template-columns:45fr 55fr"] { grid-template-columns:1fr !important; gap:48px !important; }
-  [style*="grid-template-columns:1fr 520px"] { grid-template-columns:1fr !important; gap:56px !important; }
-  [style*="grid-template-columns:1fr 520px"] > [data-reveal]:last-child { max-width:520px; margin:0 auto; width:100%; }
-  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"],
-  [style*="grid-template-columns:repeat(4,minmax(0,1fr))"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
-  [style*="grid-template-columns:1.2fr 1fr 0.9fr auto"] { grid-template-columns:1fr 1fr !important; }
-  h1[style*="font-size:38px"] { font-size:30px !important; }
-  h2[style*="font-size:54px"] { font-size:42px !important; }
-  h2[style*="font-size:46px"] { font-size:36px !important; }
-  h2[style*="font-size:44px"] { font-size:35px !important; }
-  h2[style*="font-size:42px"] { font-size:34px !important; }
- }
- @media (max-width:768px) {
-  [style*="px 64px"] { padding-left:20px !important; padding-right:20px !important; }
-  section[style*="padding:130px"], section[style*="padding:120px"],
-  section[style*="padding:110px"], section[style*="padding:100px"] { padding-top:64px !important; padding-bottom:64px !important; }
-  footer[style*="padding:88px"] { padding-top:56px !important; }
-  [style*="grid-template-columns:repeat(3,minmax(0,1fr))"],
-  [style*="grid-template-columns:repeat(4,minmax(0,1fr))"] { grid-template-columns:1fr !important; gap:24px !important; }
-  [style*="grid-template-columns:auto auto auto"],
-  [style*="grid-template-columns:1.2fr 1fr 0.9fr auto"],
-  [style*="grid-template-columns:1fr 1fr"],
-  [style*="grid-template-columns:300px 1fr"],
-  [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns:1fr !important; }
-  /* Services intro: desktop side-gap was 80px — collapse it when stacked */
-  [style*="grid-template-columns:1fr 1fr"][style*="gap:80px"] { gap:14px !important; align-items:start !important; }
-  [style*="grid-template-columns:620px 1fr"] { gap:24px !important; }
-  h1[style*="font-size:38px"] { font-size:24px !important; margin-top:12px !important; }
-  h2[style*="font-size:54px"] { font-size:32px !important; }
-  h2[style*="font-size:46px"] { font-size:29px !important; }
-  h2[style*="font-size:44px"] { font-size:28px !important; }
-  h2[style*="font-size:42px"] { font-size:27px !important; }
-  [style*="font-size:40px"] { font-size:30px !important; }
-  [style*="font-size:32px"] { font-size:24px !important; }
-  [style*="font-size:30px"] { font-size:24px !important; }
-  [style*="font-size:27px"] { font-size:19px !important; }
-  [style*="font-size:26px"] { font-size:21px !important; }
-  [style*="font-size:24px"] { font-size:19px !important; }
- [style*="padding:72px 64px 40px"] { padding-top:24px !important; padding-bottom:24px !important; }
- [style*="padding:34px 38px 84px"] { padding:22px 18px 70px !important; }
- [style*="animation:v4-in"] { padding-bottom:36px !important; }
- [style*="font-size:16.5px"] { font-size:15px !important; }
- [style*="margin:26px 0 22px"] { margin:16px 0 14px !important; }
- [style*="margin:30px 0 20px"] { margin:18px 0 14px !important; }
- a[style*="min-height:54px"] { min-height:46px !important; padding-top:12px !important; padding-bottom:12px !important; }
- a[style*="border:2px solid #113B5F"][style*="min-height:54px"] { display:none !important; }
- [style*="mask-image"] { margin-top:12px !important; }
-  div[style*="white-space:nowrap"] { white-space:normal !important; }
-  /* Google reviews badge: compact two-column card (keep after nowrap reset) */
-  a[aria-label="Read verified Google reviews"] {
-    padding:12px 12px !important;
-    gap:10px !important;
-    width:calc(100% - 24px) !important;
-    max-width:360px !important;
-    justify-content:center !important;
-    white-space:nowrap !important;
-    box-sizing:border-box !important;
-  }
-  a[aria-label="Read verified Google reviews"] > div {
-    white-space:nowrap !important;
-    flex-shrink:0 !important;
-  }
-  a[aria-label="Read verified Google reviews"] > div:first-child {
-    padding-right:10px !important;
-    gap:4px !important;
-  }
-  a[aria-label="Read verified Google reviews"] > div:last-child {
-    gap:4px !important;
-  }
-  a[aria-label="Read verified Google reviews"] img {
-    width:24px !important;
-    height:24px !important;
-  }
-  a[aria-label="Read verified Google reviews"] [style*="font-size:30px"] { font-size:22px !important; }
-  a[aria-label="Read verified Google reviews"] [style*="letter-spacing:0.16em"] {
-    font-size:8.5px !important;
-    letter-spacing:0.06em !important;
-  }
-  a[aria-label="Read verified Google reviews"] [style*="font-size:19px"] { font-size:14px !important; letter-spacing:0.08em !important; }
-  a[aria-label="Read verified Google reviews"] [style*="font-size:15px"] { font-size:12.5px !important; white-space:nowrap !important; }
-  div[style*="display:flex; gap:12px"] { flex-wrap:wrap !important; }
-  div[style*="justify-content:space-between"] { flex-wrap:wrap !important; }
-  a[style*="height:480px"] { height:400px !important; }
-  #listings-track { padding-left:20px !important; padding-right:20px !important; }
-  [style*="flex:0 0 380px"] { flex:0 0 290px !important; }
-  [style*="padding:56px 60px"] { padding:28px 20px !important; gap:24px !important; }
-  [style*="border-left:1px solid #D9CFA6"] { border-left:none !important; }
- [style*="border-right:1px solid #D9CFA6"] { border-right:none !important; }
- /* Dark-section gold CTA: keep label on one line */
- a[style*="background:#C98A2C"][style*="min-height:56px"] {
-  white-space:nowrap !important;
-  font-size:12.5px !important;
-  letter-spacing:0.04em !important;
-  padding:16px 18px !important;
-  width:100% !important;
-  max-width:100% !important;
-  box-sizing:border-box !important;
-  justify-content:center !important;
-  text-align:center !important;
- }
- /* Credential / affiliation card under Stanley portrait: wider + single-line labels */
- [style*="width:88%"][style*="grid-template-columns:1fr 1px 1fr"] {
-  width:100% !important;
-  padding:16px 14px !important;
-  gap:12px !important;
- }
- [style*="width:88%"][style*="grid-template-columns:1fr 1px 1fr"] [style*="font-size:15px"] {
-  font-size:12.5px !important;
-  white-space:nowrap !important;
-  letter-spacing:-0.02em !important;
- }
- [style*="padding:34px 34px 0"] {
-  padding-left:0 !important;
-  padding-right:0 !important;
- }
- /* Founder: portrait first, then copy; More about Stanley sits under the portrait */
- [style*="grid-template-columns:1fr 520px"] { gap:28px !important; }
- [style*="grid-template-columns:1fr 520px"] > [data-reveal]:first-child { order:2; }
- [style*="grid-template-columns:1fr 520px"] > [data-reveal]:last-child {
-  order:1;
-  max-width:none !important;
-  width:100% !important;
-  margin:0 !important;
- }
- a.founder-more-m {
-  display:block !important;
-  text-align:center !important;
- }
- [style*="align-items:center; gap:16px; margin-top:40px"] > a[href="/stanley-montfort/"] {
-  display:none !important;
- }
- /* Founder CTAs: Schedule button full-width alone */
- [style*="align-items:center; gap:16px; margin-top:40px"] {
-  flex-direction:column !important;
-  align-items:stretch !important;
-  gap:18px !important;
- }
- [style*="align-items:center; gap:16px; margin-top:40px"] > a[style*="border-radius:100px"] {
-  width:100% !important;
-  box-sizing:border-box !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  font-size:13px !important;
-  padding:16px 22px !important;
- }
- /* Expect cards: kill the desktop 64px column padding so all three align */
- [style*="grid-template-rows:auto auto auto 1fr auto"] {
-  padding:0 !important;
-  grid-template-rows:auto auto auto auto auto !important;
-  row-gap:0 !important;
- }
- /* Match card 3 density: tighter divider → title → body on mobile */
- [style*="grid-template-rows:auto auto auto 1fr auto"] > [style*="height:1px"][style*="background:#D9CFA6"] {
-  margin-top:16px !important;
- }
- [style*="grid-template-rows:auto auto auto 1fr auto"] > h3[style*="font-size:25px"],
- [style*="grid-template-rows:auto auto auto 1fr auto"] > [style*="font-size:25px"][style*="margin-top:24px"] {
-  margin-top:12px !important;
-  font-size:22px !important;
-  line-height:1.3 !important;
- }
- [style*="grid-template-rows:auto auto auto 1fr auto"] > p {
-  margin-top:10px !important;
- }
- /* Review quote mark: smaller and tighter above the text */
- [style*="font-size:82px"] { font-size:48px !important; height:26px !important; }
- [style*="font-size:82px"] + p { margin-top:10px !important; }
- /* Reviews: swipe + dots on mobile; the side arrows overlap the card text */
- #review-prev, #review-next { display:none !important; }
- /* Footer bottom bar: match the left-aligned footer content */
- footer [style*="margin:40px auto 0"] { text-align:left !important; }
- /* Founder stats: compact 3-across strip instead of a tall stack */
- div[style*="repeat(3,minmax(0,1fr))"][style*="border-top:1px solid #D9CFA6"] { grid-template-columns:repeat(3,1fr) !important; gap:0 !important; margin-top:30px !important; padding-top:26px !important; }
- div[style*="repeat(3,minmax(0,1fr))"][style*="border-top:1px solid #D9CFA6"] > div { padding:0 8px !important; text-align:center !important; }
- div[style*="repeat(3,minmax(0,1fr))"][style*="border-top:1px solid #D9CFA6"] > div:not(:first-child) { border-left:1px solid #D9CFA6 !important; }
- div[style*="repeat(3,minmax(0,1fr))"][style*="border-top:1px solid #D9CFA6"] [style*="font-size:40px"] { font-size:24px !important; }
- div[style*="repeat(3,minmax(0,1fr))"][style*="border-top:1px solid #D9CFA6"] [style*="max-width:190px"] { max-width:none !important; margin-top:8px !important; font-size:12px !important; line-height:1.45 !important; }
-  [style*="padding:0 32px"] { padding:0 !important; }
-  [style*="flex-direction:column"][style*="align-items:flex-end"] { align-items:flex-start !important; }
-  footer [style*="justify-self:center"], footer [style*="justify-self:end"] { justify-self:start !important; text-align:left !important; }
-  [style*="left:24px; right:24px"] { left:12px !important; right:12px !important; }
- }
- @media (max-width:480px) {
-  h2[style*="font-size:54px"] { font-size:28px !important; }
-  h2[style*="font-size:46px"] { font-size:26px !important; }
-  [style*="padding:56px 60px"] { padding:24px 16px !important; }
-  a[style*="height:480px"] { height:340px !important; }
-  [style*="flex:0 0 380px"] { flex:0 0 260px !important; }
- }
+ .hood-card { transition:transform .5s cubic-bezier(0.22,0.61,0.36,1), box-shadow .5s ease; }
+ .hood-card:hover { transform:translateY(-4px); box-shadow:0 34px 70px rgba(17,59,95,0.22); }
+ .hood-card:hover img { transform:scale(1.05); }
+ .pt-row { transition:background .22s ease, padding-left .22s ease; }
+ .pt-row:hover { background:rgba(201,138,44,0.1); padding-left:18px; }
+ .pt-row:hover .pt-arrow { opacity:1; transform:translateX(0); }
+ .pt-arrow { opacity:0; transform:translateX(-6px); transition:opacity .22s ease, transform .22s ease; }
 </style>
+
+
 <div style="width:100%; max-width:100%; background:#F9F6E6; overflow-x:hidden">
-<header style="position:sticky; top:0; z-index:90; background:#fff; box-shadow:0 1px 0 rgba(18,16,14,0.1)">
+
+ <header style="position:sticky; top:0; z-index:90; background:#fff; box-shadow:0 1px 0 rgba(18,16,14,0.1)">
   <div style="max-width:1440px; margin:0 auto; padding:26px 64px; display:flex; align-items:center; gap:40px">
    <a href="/" style="display:flex; align-items:center; padding-right:32px; border-right:1px solid rgba(201,138,44,0.5)">
-    <div role="img" aria-label="Montfort Real Estate" style="height:52px; aspect-ratio:3813/2662; background:#113B5F; -webkit-mask:url('https://assets.agentfire3.com/uploads/sites/312/2026/07/Logo-Transparency-black.png') center/contain no-repeat; mask:url('https://assets.agentfire3.com/uploads/sites/312/2026/07/Logo-Transparency-black.png') center/contain no-repeat"></div>
+    <div role="img" aria-label="Montfort Real Estate" style="height:52px; aspect-ratio:3813/2662; background:#113B5F; -webkit-mask:url(&quot;96e47300-5509-46bc-8c4a-89c3dc587ebf&quot;) center/contain no-repeat; mask:url(&quot;96e47300-5509-46bc-8c4a-89c3dc587ebf&quot;) center/contain no-repeat"></div>
    </a>
    <nav style="display:flex; align-items:center; gap:30px; margin-left:auto; font-size:13px; font-weight:700; letter-spacing:0.11em; text-transform:uppercase">
     <div class="mnav-item" style="position:relative">
      <a href="/services/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">Services
-      <svg class="mnav-chev" width="11" height="11" viewBox="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <svg class="mnav-chev" width="11" height="11" sc-camel-view-box="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
      </a>
      <div class="mnav-drop" style="position:absolute; top:calc(100% + 18px); left:-24px; width:520px; background:#fff; border:1px solid #EAE1BE; border-top:3px solid #C98A2C; box-shadow:0 30px 70px rgba(17,59,95,0.22); border-radius:16px; padding:14px; display:grid; grid-template-columns:1fr 1fr; gap:2px">
       <a href="/nyc-buyers-agent-service/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">NYC Buyer’s Agent</a>
@@ -295,8 +291,8 @@ const HTML = `<style>
      </div>
     </div>
     <div class="mnav-item" style="position:relative">
-     <a href="/neighborhoods/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">Neighborhoods
-      <svg class="mnav-chev" width="11" height="11" viewBox="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+     <a href="/neighborhoods/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#C98A2C; padding:8px 0">Neighborhoods
+      <svg class="mnav-chev" width="11" height="11" sc-camel-view-box="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
      </a>
      <div class="mnav-drop" style="position:absolute; top:calc(100% + 18px); left:-24px; width:520px; background:#fff; border:1px solid #EAE1BE; border-top:3px solid #C98A2C; box-shadow:0 30px 70px rgba(17,59,95,0.22); border-radius:16px; padding:14px; display:grid; grid-template-columns:1fr 1fr; gap:2px">
       <a href="/harlem/" class="mnav-link" style="padding:14px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Harlem</a>
@@ -309,34 +305,24 @@ const HTML = `<style>
       <a href="/bedford-stuyvesant/" class="mnav-link" style="padding:14px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Bedford-Stuyvesant</a>
       <a href="/williamsburg/" class="mnav-link" style="padding:14px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Williamsburg</a>
       <a href="/crown-heights/" class="mnav-link" style="padding:14px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Crown Heights</a>
-      <a href="/neighborhoods/" class="mnav-link" style="grid-column:1 / -1; padding:15px 22px; margin-top:6px; border-top:1px solid #EAE1BE; color:#113B5F; font-size:11.5px; font-weight:800; letter-spacing:0.14em; display:flex; align-items:center; gap:9px">View all neighborhoods <svg class="mnav-arrow" width="16" height="12" viewBox="0 0 16 12" fill="none" style="display:block"><path d="M1 6h13M9.5 1.5L14 6l-4.5 4.5" stroke="#C98A2C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
-     </div>
-    </div>
-    <div class="mnav-item" style="position:relative">
-     <a href="/idx-sales/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">Listings
-      <svg class="mnav-chev" width="11" height="11" viewBox="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-     </a>
-     <div class="mnav-drop" style="position:absolute; top:calc(100% + 18px); left:-24px; width:260px; background:#fff; border:1px solid #EAE1BE; border-top:3px solid #C98A2C; box-shadow:0 30px 70px rgba(17,59,95,0.22); border-radius:16px; padding:14px; display:flex; flex-direction:column; gap:2px">
-      <a href="/idx-sales/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Homes For Sale</a>
-      <a href="/idx-rentals/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Rentals</a>
-      <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Customer Login</a>
+      <a href="/neighborhoods/" class="mnav-link" style="grid-column:1 / -1; padding:15px 22px; margin-top:6px; border-top:1px solid #EAE1BE; color:#113B5F; font-size:11.5px; font-weight:800; letter-spacing:0.14em; display:flex; align-items:center; gap:9px">View all neighborhoods <svg class="mnav-arrow" width="16" height="12" sc-camel-view-box="0 0 16 12" fill="none" style="display:block"><path d="M1 6h13M9.5 1.5L14 6l-4.5 4.5" stroke="#C98A2C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
      </div>
     </div>
     <a href="/success-stories/" style="color:#0F1729; padding:8px 0">Success Stories</a>
+    <a href="/about-us/" style="color:#0F1729; padding:8px 0">About</a>
     <div class="mnav-item" style="position:relative">
-     <a href="/about-us/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">About
-      <svg class="mnav-chev" width="11" height="11" viewBox="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+     <a href="/blog/" class="mnav-top" style="display:flex; align-items:center; gap:7px; color:#0F1729; padding:8px 0">Resources
+      <svg class="mnav-chev" width="11" height="11" sc-camel-view-box="0 0 12 12" fill="none" style="display:block"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
      </a>
      <div class="mnav-drop" style="position:absolute; top:calc(100% + 18px); left:-24px; width:240px; background:#fff; border:1px solid #EAE1BE; border-top:3px solid #C98A2C; box-shadow:0 30px 70px rgba(17,59,95,0.22); border-radius:16px; padding:14px; display:flex; flex-direction:column; gap:2px">
       <a href="/about-us/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">About Us</a>
       <a href="/stanley-montfort/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Stanley Montfort</a>
+      <a href="/contact/" class="mnav-link" style="padding:15px 22px; color:#0F1729; font-size:12.5px; letter-spacing:0.09em">Contact</a>
      </div>
     </div>
-    <a href="/blog/" style="color:#0F1729; padding:8px 0">Resources</a>
-    <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:#0F1729; padding:8px 0">Contact</a>
    </nav>
    <a href="tel:+1-646-970-1078" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:#0F1729; transition:color 0.2s ease" style-hover="color:#C98A2C">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    <svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
     <span style="display:flex; flex-direction:column; align-items:center; line-height:1.15">
      <span style="font-family:'Space Grotesk',system-ui,sans-serif; font-size:22px; font-weight:700; letter-spacing:-0.01em">(646) 970-1078</span>
      <span style="font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3B4C5E; margin-top:2px">Mon-Sat 8AM-7PM</span>
@@ -344,143 +330,396 @@ const HTML = `<style>
    </a>
   </div>
  </header>
-<section style="background:#0F1729; padding:64px 64px 56px">
- <div style="max-width:1440px; margin:0 auto">
-  <div style="font-size:11.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C98A2C">Featured realtor service areas</div>
-  <h1 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:44px; color:#F9F6E6; margin:14px 0 10px">NYC Neighborhoods — Expert Local Insights for Buyers, Sellers & Investors</h1>
-  <p style="color:rgba(249,246,230,0.75); font-size:16.5px; margin:0; max-width:680px">Explore the Manhattan and Brooklyn neighborhoods where we help buyers and sellers every day.</p>
- </div>
-</section>
-<section data-screen-label="Service areas" style="background:#F9F6E6; padding:130px 64px; border-top:1px solid #E0D9B8">
-  <div style="max-width:1440px; margin:0 auto">
-   <div data-reveal="" style="text-align:center">
-    <div style="font-size:11.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#3B4C5E">Manhattan &amp; Brooklyn</div>
-    <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:46px; line-height:1.2; letter-spacing:-0.008em; color:#0F1729; margin:16px 0 0; text-wrap:pretty">Featured Realtor Service Areas</h2>
-    <span style="display:block; width:76px; height:3px; background:#C98A2C; margin:22px auto 0"></span>
+
+ <section data-screen-label="Neighborhoods hero" style="position:relative; background:#F5EECB; border-bottom:1px solid #E0D9B8; overflow:hidden; padding:80px 64px 90px">
+  <div style="position:absolute; top:-150px; right:-160px; width:560px; height:560px; border-radius:50%; border:1px solid rgba(201,138,44,0.2)"></div>
+  <div style="position:relative; z-index:2; max-width:1440px; margin:0 auto; display:grid; grid-template-columns:1.02fr 0.98fr; gap:72px; align-items:center">
+   <div data-reveal="">
+    <div style="display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8A7B4E"><a href="/" style="color:#8A7B4E">Home</a> <span style="opacity:.5">/</span> <span style="color:#C98A2C">Neighborhoods</span></div>
+    <h1 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:62px; line-height:1.04; letter-spacing:-0.02em; color:#0F1729; margin:18px 0 0; text-wrap:pretty">NYC Neighborhoods</h1>
+    <p style="font-size:19px; line-height:1.7; color:#3B4C5E; margin:22px 0 0; max-width:560px; text-wrap:pretty">Expert local insight for buyers, sellers and investors. We’ll help you find the <strong style="font-weight:700; color:#0F1729">right NYC neighborhood</strong> based on your lifestyle, budget and long-term goals — so you can buy with confidence and avoid costly mistakes.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:34px">
+     <a href="https://calendly.com/montfort" style="display:inline-flex; align-items:center; justify-content:center; background:#113B5F; color:#F9F6E6; font-size:15px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; border-radius:100px; padding:18px 34px; min-height:56px" style-hover="background:#C98A2C; color:#0F1729">Book Now</a>
+     <a href="tel:646-970-1078" style="display:inline-flex; align-items:center; justify-content:center; border:2px solid #113B5F; color:#113B5F; font-size:15px; font-weight:800; letter-spacing:0.03em; border-radius:100px; padding:16px 30px; min-height:56px" style-hover="background:#113B5F; color:#F9F6E6">(646) 970-1078</a>
+    </div>
+    <div style="margin-top:38px; padding-top:26px; border-top:1px solid #D9CFA6">
+     <div style="font-size:11.5px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8A7B4E">Explore by borough</div>
+     <div style="display:flex; flex-wrap:wrap; gap:14px 32px; margin-top:16px">
+      <a href="#manhattan" style="font-size:15.5px; font-weight:600; color:#0F1729" style-hover="color:#C98A2C">Manhattan · 4 neighborhoods</a><a href="#brooklyn" style="font-size:15.5px; font-weight:600; color:#0F1729" style-hover="color:#C98A2C">Brooklyn · 7 neighborhoods</a>
+     </div>
+    </div>
    </div>
-   <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:60px">
-    <a data-reveal="" href="/harlem/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/harlem.png" alt="Harlem Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="500" height="350">
-     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
-     <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Manhattan</div>
-     <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:27px; line-height:1.25; color:#fff; text-wrap:pretty; margin:0">Harlem Realtor</h3>
-      <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); margin-top:11px; max-width:330px">Historic brownstones, rich culture, and timeless Manhattan charm.</div>
-      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:15px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Explore <span>→</span></div>
+   <div data-reveal="" style="position:relative">
+    <div style="position:relative; border-radius:16px; overflow:hidden; aspect-ratio:5/4; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 40px 90px rgba(17,59,95,0.28)">
+     <img src="/redesign-assets/nbhd/d86879d1.jpg" alt="New York City skyline from Brooklyn" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block">
+    </div>
+    <div style="position:absolute; right:-14px; bottom:-22px; display:inline-flex; align-items:center; gap:18px; background:#FFFFFF; border:1px solid rgba(201,138,44,0.55); border-radius:16px; box-shadow:0 22px 48px rgba(17,59,95,0.28); padding:18px 26px; white-space:nowrap">
+     <svg width="50" height="50" sc-camel-view-box="0 0 48 48" style="flex:0 0 auto; display:block" role="img" aria-label="Google"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.8-.4-4H24v7.3h12.1c-.2 2-1.6 5-4.5 7l-.1.3 6.5 5 .5.1c4.2-3.8 6.6-9.5 6.6-15.7"></path><path fill="#34A853" d="M24 46c5.9 0 10.9-1.9 14.5-5.3l-6.9-5.4c-1.8 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.8-12.5-9.1l-.3.1-6.7 5.2-.1.3C8 41.6 15.4 46 24 46"></path><path fill="#FBBC05" d="M11.5 28.4c-.5-1.4-.7-2.9-.7-4.4s.3-3 .7-4.4v-.3l-6.8-5.3-.2.1A22 22 0 0 0 2 24c0 3.5.9 6.9 2.5 9.9z"></path><path fill="#EA4335" d="M24 10.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 4.3 29.9 2 24 2 15.4 2 8 6.4 4.5 14.1l7 5.4c1.8-5.3 6.7-9 12.5-9"></path></svg>
+     <div style="display:flex; flex-direction:column; gap:4px">
+      <span style="font-size:19px; font-weight:700; line-height:1; letter-spacing:-0.01em; color:#0F1729">Google Rating</span>
+      <div style="display:flex; align-items:center; gap:9px"><span style="font-size:23px; font-weight:700; line-height:1; color:#C98A2C">5.0</span><span style="color:#F5A623; font-size:19px; letter-spacing:0.08em; line-height:1">★★★★★</span></div>
+      <span style="font-size:14px; line-height:1.3; color:#0F1729">Over <strong style="font-weight:700">57 Reviews</strong></span>
      </div>
-    </a>
-    <a data-reveal="" href="/upper-west-side/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/upper-west-side.png" alt="Upper West Side Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="500" height="350">
-     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
-     <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Manhattan</div>
-     <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:27px; line-height:1.25; color:#fff; text-wrap:pretty; margin:0">Upper West Side Realtor</h3>
-      <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); margin-top:11px; max-width:330px">Elegant brownstones, cultural landmarks, and classic Manhattan living.</div>
-      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:15px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Explore <span>→</span></div>
-     </div>
-    </a>
-    <a data-reveal="" href="/upper-east-side/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/upper-east-side.png" alt="Upper East Side Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="500" height="350">
-     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
-     <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Manhattan</div>
-     <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:27px; line-height:1.25; color:#fff; text-wrap:pretty; margin:0">Upper East Side Realtor</h3>
-      <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); margin-top:11px; max-width:330px">Luxury residences, world-class culture, and timeless Upper Manhattan elegance.</div>
-      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:15px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Explore <span>→</span></div>
-     </div>
-    </a>
-    <a data-reveal="" href="/chelsea/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/chelsea.jpg" alt="Chelsea Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
-     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
-     <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Manhattan</div>
-     <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:27px; line-height:1.25; color:#fff; text-wrap:pretty; margin:0">Chelsea Realtor</h3>
-      <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); margin-top:11px; max-width:330px">Modern luxury, world-class art, and vibrant Manhattan living.</div>
-      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:15px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Explore <span>→</span></div>
-     </div>
-    </a>
-    <a data-reveal="" href="/downtown-brooklyn/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/downtown-brooklyn.jpg" alt="Downtown Brooklyn Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
-     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
-     <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
-     <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:27px; line-height:1.25; color:#fff; text-wrap:pretty; margin:0">Downtown Brooklyn Realtor</h3>
-      <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); margin-top:11px; max-width:330px">Modern high-rises, unmatched transit access, and vibrant Brooklyn living.</div>
-      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:15px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Explore <span>→</span></div>
-     </div>
-    </a>
-    <a data-reveal="" href="/dumbo/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/dumbo.jpg" alt="Dumbo Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
-     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
-     <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
-     <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:27px; line-height:1.25; color:#fff; text-wrap:pretty; margin:0">Dumbo Realtor</h3>
-      <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); margin-top:11px; max-width:330px">Waterfront views, luxury lofts, and iconic Brooklyn living.</div>
-      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:15px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Explore <span>→</span></div>
-     </div>
-    </a>
-    <a data-reveal="" href="/brooklyn-heights/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/brooklyn-heights.jpg" alt="Brooklyn Heights Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
-     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
-     <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
-     <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:27px; line-height:1.25; color:#fff; text-wrap:pretty; margin:0">Brooklyn Heights Realtor</h3>
-      <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); margin-top:11px; max-width:330px">Historic brownstones, skyline views, and timeless Brooklyn charm</div>
-      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:15px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Explore <span>→</span></div>
-     </div>
-    </a>
-    <a data-reveal="" href="/bedford-stuyvesant/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/bedford-stuyvesant.jpg" alt="Bedford stuyvesant Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
-     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
-     <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
-     <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:27px; line-height:1.25; color:#fff; text-wrap:pretty; margin:0">Bedford stuyvesant Realtor</h3>
-      <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); margin-top:11px; max-width:330px">Historic brownstones, rich culture, and authentic Brooklyn living.</div>
-      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:15px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Explore <span>→</span></div>
-     </div>
-    </a>
-    <a data-reveal="" href="/williamsburg/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/williamsburg.jpg" alt="Williamsburg Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
-     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
-     <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
-     <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:27px; line-height:1.25; color:#fff; text-wrap:pretty; margin:0">Williamsburg Realtor</h3>
-      <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); margin-top:11px; max-width:330px">Waterfront living, creative energy, and modern Brooklyn luxury</div>
-      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:15px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Explore <span>→</span></div>
-     </div>
-    </a>
-    <a data-reveal="" href="/crown-heights/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/crown-heights.jpg" alt="Crown Heights Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
-     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
-     <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
-     <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:27px; line-height:1.25; color:#fff; text-wrap:pretty; margin:0">Crown Heights Realtor</h3>
-      <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); margin-top:11px; max-width:330px">Historic brownstones, cultural diversity, and vibrant Brooklyn living</div>
-      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:15px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Explore <span>→</span></div>
-     </div>
-    </a>
-    <a data-reveal="" href="/park-slope/" style="position:relative; display:block; height:480px; overflow:hidden; border-radius:16px; background:#0F1729; transition:transform 0.4s ease, box-shadow 0.4s ease" style-hover="transform:translateY(-8px); box-shadow:0 34px 70px rgba(15,23,41,0.32)">
-     <img src="/redesign-assets/hoods/park-slope.jpg" alt="Park Slope Realtor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.1s cubic-bezier(0.22,0.61,0.36,1)" style-hover="transform:scale(1.07)" width="1000" height="700">
-     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(15,23,41,0.34) 0%, rgba(15,23,41,0) 26%, rgba(15,23,41,0.62) 62%, rgba(15,23,41,0.95) 100%)"></div>
-     <div style="position:absolute; top:20px; left:20px; font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8; background:rgba(15,23,41,0.8); padding:7px 13px; border-radius:100px">Brooklyn</div>
-     <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px 26px">
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:27px; line-height:1.25; color:#fff; text-wrap:pretty; margin:0">Park Slope Realtor</h3>
-      <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); margin-top:11px; max-width:330px">Historic brownstones, tree-lined streets, and timeless Brooklyn living</div>
-      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:15px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Explore <span>→</span></div>
-     </div>
-    </a>
-    <a data-reveal="" href="/neighborhoods/" style="display:flex; flex-direction:column; justify-content:space-between; height:480px; background:#113B5F; border-radius:16px; padding:40px 34px; transition:background 0.4s ease, transform 0.4s ease" style-hover="background:#0F1729; transform:translateY(-8px)">
-     <div>
-      <div style="font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#F0D9A8">All eleven areas</div>
-      <h3 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:32px; line-height:1.28; color:#F9F6E6; margin-top:22px; text-wrap:pretty; margin:0">Not sure which neighborhood fits you?</h3>
-      <div style="font-size:15.5px; line-height:1.7; color:rgba(249,246,230,0.85); margin-top:16px">Compare every area we cover with local market data, or ask on a twenty-minute call.</div>
-     </div>
-     <div style="padding-top:16px; border-top:1px solid rgba(201,138,44,0.6); font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F0D9A8">Browse all →</div>
-    </a>
+    </div>
    </div>
   </div>
  </section>
-<footer style="background:#0B1220; padding:88px 64px 36px; border-top:3px solid #C98A2C">
+
+ <section data-screen-label="Promises" style="position:relative; background:#0F1729; padding:52px 64px 56px; overflow:hidden">
+  <div style="position:absolute; top:-220px; left:50%; transform:translateX(-50%); width:900px; height:900px; border-radius:50%; border:1px solid rgba(201,138,44,0.13)"></div>
+  <div style="position:relative; z-index:2; max-width:1440px; margin:0 auto">
+   <div style="display:flex; align-items:center; justify-content:center; gap:16px">
+    <span style="width:40px; height:1px; background:rgba(201,138,44,0.6); display:block"></span>
+    <span style="font-size:11.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C98A2C">What working with us means</span>
+    <span style="width:40px; height:1px; background:rgba(201,138,44,0.6); display:block"></span>
+   </div>
+   <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; margin-top:34px">
+    <div data-reveal="" style="padding:0 48px 0 0; border-right:1px solid rgba(201,138,44,0.24)">
+     <div style="display:flex; align-items:center; gap:18px">
+      <span style="flex:0 0 auto; width:54px; height:54px; border-radius:100px; border:1px solid rgba(201,138,44,0.55); background:rgba(201,138,44,0.12); display:flex; align-items:center; justify-content:center">
+       <svg width="24" height="24" sc-camel-view-box="0 0 24 24" fill="none" stroke="#C98A2C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="display:block"><path d="M20 6L9 17l-5-5"></path></svg>
+      </span>
+      <span style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0.06em; text-transform:uppercase; color:#F9F6E6">Smooth<br>Transaction</span>
+     </div>
+     <p style="font-size:16.5px; line-height:1.7; color:rgba(249,246,230,0.76); margin:16px 0 0; text-wrap:pretty">With limited risk throughout the buying process.</p>
+    </div>
+    <div data-reveal="" style="padding:0 48px; border-right:1px solid rgba(201,138,44,0.24)">
+     <div style="display:flex; align-items:center; gap:18px">
+      <span style="flex:0 0 auto; width:54px; height:54px; border-radius:100px; border:1px solid rgba(201,138,44,0.55); background:rgba(201,138,44,0.12); display:flex; align-items:center; justify-content:center">
+       <svg width="24" height="24" sc-camel-view-box="0 0 24 24" fill="none" stroke="#C98A2C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="display:block"><path d="M20 6L9 17l-5-5"></path></svg>
+      </span>
+      <span style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0.06em; text-transform:uppercase; color:#F9F6E6">No<br>Pressure</span>
+     </div>
+     <p style="font-size:16.5px; line-height:1.7; color:rgba(249,246,230,0.76); margin:16px 0 0; text-wrap:pretty">No pressure to overpay or purchase within a specific timeframe.</p>
+    </div>
+    <div data-reveal="" style="padding:0 0 0 48px">
+     <div style="display:flex; align-items:center; gap:18px">
+      <span style="flex:0 0 auto; width:54px; height:54px; border-radius:100px; border:1px solid rgba(201,138,44,0.55); background:rgba(201,138,44,0.12); display:flex; align-items:center; justify-content:center">
+       <svg width="24" height="24" sc-camel-view-box="0 0 24 24" fill="none" stroke="#C98A2C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="display:block"><path d="M20 6L9 17l-5-5"></path></svg>
+      </span>
+      <span style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0.06em; text-transform:uppercase; color:#F9F6E6">Ongoing<br>Support</span>
+     </div>
+     <p style="font-size:16.5px; line-height:1.7; color:rgba(249,246,230,0.76); margin:16px 0 0; text-wrap:pretty">A dedicated team that remains available even after the transaction is complete.</p>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section data-screen-label="Intro" style="background:#F9F6E6; padding:96px 64px; border-bottom:1px solid #E0D9B8">
+  <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:0.85fr 1.15fr; gap:80px; align-items:start">
+   <div data-reveal="">
+    <div style="display:flex; align-items:center; gap:14px"><span style="width:34px; height:1px; background:#C98A2C; display:block"></span><span style="font-size:11.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#3B4C5E">Neighborhood guides</span></div>
+    <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:44px; line-height:1.16; letter-spacing:-0.014em; color:#0F1729; margin:18px 0 0; text-wrap:pretty">Explore NYC Neighborhoods with Confidence</h2>
+   </div>
+   <div data-reveal="">
+    <p style="font-size:18px; line-height:1.85; color:#3B4C5E; margin:0; text-wrap:pretty">Finding the right neighborhood is just as important as finding the right property. Whether you’re searching for a historic Harlem brownstone, a luxury Upper East Side condo, or an investment opportunity in Brooklyn, our neighborhood guides provide local market insights, lifestyle information, pricing trends, and community highlights to help you make an informed decision.</p>
+    <p style="font-size:18px; line-height:1.85; color:#3B4C5E; margin:18px 0 0; text-wrap:pretty">Browse NYC neighborhoods below, or call us at <a href="tel:646-970-1078" style="font-weight:700; color:#113B5F">1-646-970-1078</a> for personalized guidance from a local real estate expert.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:30px">
+     <a href="#manhattan" style="display:inline-flex; align-items:center; gap:9px; background:#113B5F; color:#F9F6E6; font-size:12px; font-weight:800; letter-spacing:0.13em; text-transform:uppercase; border-radius:100px; padding:14px 24px" style-hover="background:#C98A2C; color:#0F1729">Manhattan · 4 neighborhoods</a>
+     <a href="#brooklyn" style="display:inline-flex; align-items:center; gap:9px; border:1.5px solid #113B5F; color:#113B5F; font-size:12px; font-weight:800; letter-spacing:0.13em; text-transform:uppercase; border-radius:100px; padding:12.5px 24px" style-hover="background:#113B5F; color:#F9F6E6">Brooklyn · 7 neighborhoods</a>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section id="manhattan" data-screen-label="Manhattan" style="background:#F5EECB; padding:80px 64px 0; border-bottom:1px solid #E0D9B8">
+  <div style="max-width:1440px; margin:0 auto; display:flex; align-items:baseline; gap:22px">
+   <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:36px; letter-spacing:-0.045em; text-transform:uppercase; color:#0F1729; margin:0">Manhattan</h2>
+   <span style="flex:1 1 auto; height:1px; background:#D9CFA6; display:block"></span>
+   <span style="font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8A7B4E">Harlem · UWS · UES · Chelsea</span>
+  </div>
+
+  <div style="max-width:1440px; margin:0 auto; padding:64px 0 96px; display:flex; flex-direction:column; gap:72px">
+
+   <div data-reveal="" style="display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:center">
+    <div class="hood-card" style="border-radius:16px; overflow:hidden; aspect-ratio:16/11; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 26px 60px rgba(17,59,95,0.2)">
+     <img src="/redesign-assets/nbhd/65438018.png" alt="Harlem brownstones" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
+    </div>
+    <div>
+     <a href="/harlem/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:36px; line-height:1.1; letter-spacing:-0.045em; text-transform:uppercase; color:#0F1729; display:inline-block" style-hover="color:#C98A2C">Harlem Realtor</a>
+     <p style="font-size:17px; line-height:1.8; color:#3B4C5E; margin:16px 0 0; max-width:520px; text-wrap:pretty">Historic architecture, world-famous culture, and one of Manhattan’s deepest brownstone markets.</p>
+     <div style="display:flex; flex-direction:column; margin-top:28px; border-top:1px solid #D9CFA6">
+      <a href="/harlem-brownstones/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Harlem Brownstones</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Historic architecture, timeless charm, and classic Harlem living</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/harlem-condos/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Harlem Condos</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Modern amenities, urban convenience, and vibrant Harlem living</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/harlem-sros/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Harlem SROs</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Affordable housing, investment potential, and unique opportunities</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/harlem-co-ownership/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Harlem Co-Ownership</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Shared ownership, lower costs, and greater buying power</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+     </div>
+    </div>
+   </div>
+
+   <div data-reveal="" style="display:grid; grid-template-columns:0.95fr 1.05fr; gap:64px; align-items:center">
+    <div>
+     <a href="/upper-west-side/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:36px; line-height:1.1; letter-spacing:-0.045em; text-transform:uppercase; color:#0F1729; display:inline-block" style-hover="color:#C98A2C">Upper West Side Realtor</a>
+     <p style="font-size:17px; line-height:1.8; color:#3B4C5E; margin:16px 0 0; max-width:520px; text-wrap:pretty">Pre-war grandeur between Central Park and Riverside, with townhouses, condos, and classic co-ops.</p>
+     <div style="display:flex; flex-direction:column; margin-top:28px; border-top:1px solid #D9CFA6">
+      <a href="/upper-west-side-townhouses/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Upper West Side Townhouses</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Elegant townhomes, historic charm, and classic Manhattan living</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/upper-west-side-condos/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Upper West Side Condos</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Modern luxury, premium amenities, and sophisticated city living</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/upper-west-side-co-ops-2/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Upper West Side Co-Ops</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Classic residences, strong communities, and timeless Manhattan appeal</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+     </div>
+    </div>
+    <div class="hood-card" style="border-radius:16px; overflow:hidden; aspect-ratio:16/11; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 26px 60px rgba(17,59,95,0.2)">
+     <img src="/redesign-assets/nbhd/eadc74f3.png" alt="Upper West Side" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
+    </div>
+   </div>
+
+   <div data-reveal="" style="display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:center">
+    <div class="hood-card" style="border-radius:16px; overflow:hidden; aspect-ratio:16/11; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 26px 60px rgba(17,59,95,0.2)">
+     <img src="/redesign-assets/nbhd/943207db.png" alt="Upper East Side" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
+    </div>
+    <div>
+     <a href="/upper-east-side/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:36px; line-height:1.1; letter-spacing:-0.045em; text-transform:uppercase; color:#0F1729; display:inline-block" style-hover="color:#C98A2C">Upper East Side Realtor</a>
+     <p style="font-size:17px; line-height:1.8; color:#3B4C5E; margin:16px 0 0; max-width:520px; text-wrap:pretty">Museum Mile, Carnegie Hill, and Lenox Hill — Manhattan’s most prestigious addresses.</p>
+     <div style="display:flex; flex-direction:column; margin-top:28px; border-top:1px solid #D9CFA6">
+      <a href="/upper-east-side-townhouses/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Upper East Side Townhouses</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Elegant townhomes, timeless charm, and prestigious Manhattan living</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/upper-east-side-condos/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Upper East Side Condos</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Luxury residences, premium amenities, and sophisticated city living</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/upper-east-side-co-ops/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Upper East Side Co-Ops</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Classic residences, refined communities, and timeless Upper East Side appeal</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+     </div>
+    </div>
+   </div>
+
+   <div data-reveal="" style="display:grid; grid-template-columns:0.95fr 1.05fr; gap:64px; align-items:center">
+    <div>
+     <a href="/chelsea/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:36px; line-height:1.1; letter-spacing:-0.045em; text-transform:uppercase; color:#0F1729; display:inline-block" style-hover="color:#C98A2C">Chelsea Realtor</a>
+     <p style="font-size:17px; line-height:1.8; color:#3B4C5E; margin:16px 0 0; max-width:520px; text-wrap:pretty">Galleries, the High Line, and a mix of landmarked townhouses and new-development condos.</p>
+     <div style="display:flex; flex-direction:column; margin-top:28px; border-top:1px solid #D9CFA6">
+      <a href="/chelsea-townhouses/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Chelsea Townhouses</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Historic townhomes, architectural charm, and stylish city living</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/chelsea-condos/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Chelsea Condos</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Modern luxury, premium amenities, and vibrant Manhattan living</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/chelsea-co-ops-2/" class="pt-row" style="display:flex; align-items:center; gap:18px; padding:18px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">Chelsea Co-Ops</span><span style="display:block; font-size:15px; color:#3B4C5E; margin-top:4px">Classic residences, strong communities, and timeless Chelsea appeal</span></span>
+       <svg class="pt-arrow" width="20" height="14" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+     </div>
+    </div>
+    <div class="hood-card" style="border-radius:16px; overflow:hidden; aspect-ratio:16/11; background:#E0D9B8; border:6px solid #FFFFFF; box-shadow:0 26px 60px rgba(17,59,95,0.2)">
+     <img src="/redesign-assets/nbhd/90c53c45.jpg" alt="Chelsea" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)">
+    </div>
+   </div>
+
+  </div>
+ </section>
+
+ <section id="brooklyn" data-screen-label="Brooklyn" style="background:#F9F6E6; padding:80px 64px 0">
+  <div style="max-width:1440px; margin:0 auto; display:flex; align-items:baseline; gap:22px">
+   <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:36px; letter-spacing:-0.045em; text-transform:uppercase; color:#0F1729; margin:0">Brooklyn</h2>
+   <span style="flex:1 1 auto; height:1px; background:#E0D9B8; display:block"></span>
+   <span style="font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8A7B4E">Seven neighborhoods</span>
+  </div>
+
+  <div style="max-width:1440px; margin:0 auto; padding:56px 0 40px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:44px">
+
+   <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/0dd93ed5.jpg" alt="Downtown Brooklyn" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
+     <a href="/downtown-brooklyn/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Downtown Brooklyn Realtor</a>
+     <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">High-rise living at the borough’s transit and business core.</p>
+     <div style="display:flex; flex-direction:column; margin-top:22px; border-top:1px solid #D9CFA6">
+      <a href="/downtown-brooklyn-condos-2/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Downtown Brooklyn Condos</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Modern high-rises, premium amenities, and convenient city living</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/downstone-brooklyn-co-ops/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Downtown Brooklyn Co-Ops</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Established communities, great value, and classic Brooklyn living</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+     </div>
+    </div>
+   </div>
+
+   <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/d86879d1.jpg" alt="Dumbo" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
+     <a href="/dumbo/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Dumbo Realtor</a>
+     <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">Converted warehouses, cobblestone streets, and the best skyline views in the city.</p>
+     <div style="display:flex; flex-direction:column; margin-top:22px; border-top:1px solid #D9CFA6">
+      <a href="/dumbo-condos/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Dumbo Condos</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Waterfront views, modern luxury, and iconic Brooklyn living</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/dumbo-co-ops-2/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Dumbo Co-Ops</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Historic character, vibrant communities, and lasting Brooklyn appeal</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+     </div>
+    </div>
+   </div>
+
+   <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/745851cc.jpg" alt="Brooklyn Heights" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
+     <a href="/brooklyn-heights/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Brooklyn Heights Realtor</a>
+     <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">The city’s first landmarked district — the Promenade, and blocks of 19th-century townhouses.</p>
+     <div style="display:flex; flex-direction:column; margin-top:22px; border-top:1px solid #D9CFA6">
+      <a href="/brooklyn-heights-townhouses-2/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Brooklyn Heights Townhouses</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Historic brownstones, skyline views, and timeless Brooklyn charm</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/brooklyn-heights-condos-3/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Brooklyn Heights Condos</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Luxury residences, waterfront views, and sophisticated city living</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/brooklyn-heights-co-ops-3/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Brooklyn Heights Co-Ops</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Classic residences, strong communities, and enduring Brooklyn appeal</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+     </div>
+    </div>
+   </div>
+
+   <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/66fdf193.jpg" alt="Bedford-Stuyvesant" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
+     <a href="/bedford-stuyvesant/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Bedford-Stuyvesant Realtor</a>
+     <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">One of the largest concentrations of intact brownstones anywhere in New York.</p>
+     <div style="display:flex; flex-direction:column; margin-top:22px; border-top:1px solid #D9CFA6">
+      <a href="/bedford-stuyvesant-brownstones-2/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Bedford-Stuyvesant Brownstones</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Historic brownstones, rich culture, and authentic Brooklyn living</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/bedford-stuyvesant/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Bedford-Stuyvesant Multifamily</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Two-, three-, and four-family houses with strong rental income</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+     </div>
+    </div>
+   </div>
+
+   <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/f55c71f9.jpg" alt="Williamsburg" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
+     <a href="/williamsburg/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Williamsburg Realtor</a>
+     <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">Waterfront towers, converted lofts, and Brooklyn’s most in-demand nightlife and dining.</p>
+     <div style="display:flex; flex-direction:column; margin-top:22px; border-top:1px solid #D9CFA6">
+      <a href="/williamsburg/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Williamsburg Condos</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">New development, waterfront amenities, and strong resale demand</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/williamsburg/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Williamsburg Townhouses</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Row houses and conversions with rental upside</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+     </div>
+    </div>
+   </div>
+
+   <div data-reveal="" class="hood-card" style="background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:flex; flex-direction:column">
+    <div style="aspect-ratio:16/9; overflow:hidden; background:#E0D9B8"><img src="/redesign-assets/nbhd/b6c26a69.jpg" alt="Crown Heights" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="padding:34px 34px 30px; display:flex; flex-direction:column; flex:1 1 auto">
+     <a href="/crown-heights/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.02em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Crown Heights Realtor</a>
+     <p style="font-size:16px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; text-wrap:pretty">Limestone row houses beside the Botanic Garden — still one of Brooklyn’s best values.</p>
+     <div style="display:flex; flex-direction:column; margin-top:22px; border-top:1px solid #D9CFA6">
+      <a href="/crown-heights/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Crown Heights Brownstones</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Limestone and brownstone row houses with original detail</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/crown-heights/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Crown Heights Multifamily</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Investment buildings with room to reposition</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+     </div>
+    </div>
+   </div>
+
+   <div data-reveal="" class="hood-card" style="grid-column:1 / -1; background:#F5EECB; border:1px solid #E0D9B8; border-radius:16px; overflow:hidden; display:grid; grid-template-columns:1fr 1fr">
+    <div style="overflow:hidden; background:#E0D9B8; min-height:320px"><img src="/redesign-assets/nbhd/69cc59cd.jpg" alt="Park Slope" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s cubic-bezier(0.22,0.61,0.36,1)"></div>
+    <div style="padding:44px 44px 40px; display:flex; flex-direction:column; justify-content:center">
+     <a href="/park-slope/" style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.025em; text-transform:uppercase; color:#0F1729" style-hover="color:#C98A2C">Park Slope Realtor</a>
+     <p style="font-size:16.5px; line-height:1.75; color:#3B4C5E; margin:12px 0 0; max-width:520px; text-wrap:pretty">Prospect Park at the door, celebrated schools, and some of the most sought-after row houses in Brooklyn.</p>
+     <div style="display:flex; flex-direction:column; margin-top:24px; border-top:1px solid #D9CFA6; max-width:560px">
+      <a href="/park-slope/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Park Slope Brownstones</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Landmarked row houses steps from Prospect Park</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="/park-slope/" class="pt-row" style="display:flex; align-items:center; gap:16px; padding:16px 10px; border-bottom:1px solid #D9CFA6; border-radius:10px; color:#0F1729">
+       <span style="flex:1 1 auto"><span style="display:block; font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:17px">Park Slope Co-Ops</span><span style="display:block; font-size:14.5px; color:#3B4C5E; margin-top:3px">Pre-war apartments with strong communities and steady value</span></span>
+       <svg class="pt-arrow" width="18" height="13" sc-camel-view-box="0 0 20 14" fill="none" style="flex:0 0 auto"><path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+     </div>
+    </div>
+   </div>
+
+  </div>
+ </section>
+
+ <section data-screen-label="Not sure CTA" style="background:#F9F6E6; padding:40px 64px 96px">
+  <div data-reveal="" style="max-width:1440px; margin:0 auto; background:#0F1729; border-radius:16px; padding:56px 64px; display:flex; align-items:center; justify-content:space-between; gap:48px; flex-wrap:wrap">
+   <div style="max-width:720px">
+    <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:36px; line-height:1.2; letter-spacing:-0.02em; color:#F9F6E6; margin:0; text-wrap:pretty">Not sure which neighborhood fits?</h2>
+    <p style="font-size:17.5px; line-height:1.7; color:rgba(249,246,230,0.82); margin:14px 0 0; text-wrap:pretty">Tell us your budget, commute, and long-term plan. We’ll shortlist the blocks worth your weekends — and the ones worth skipping.</p>
+   </div>
+   <div style="display:flex; gap:14px; flex-wrap:wrap">
+    <a href="https://calendly.com/montfort" style="display:inline-flex; align-items:center; justify-content:center; background:#C98A2C; color:#0F1729; font-size:15px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; border-radius:100px; padding:18px 34px; min-height:56px" style-hover="background:#F9F6E6; color:#113B5F">Book Now</a>
+    <a href="tel:646-970-1078" style="display:inline-flex; align-items:center; justify-content:center; border:2px solid rgba(249,246,230,0.7); color:#F9F6E6; font-size:15px; font-weight:800; letter-spacing:0.03em; border-radius:100px; padding:16px 32px; min-height:56px" style-hover="background:#F9F6E6; color:#113B5F; border-color:#F9F6E6">(646) 970-1078</a>
+   </div>
+  </div>
+ </section>
+
+ <section data-screen-label="Contact" style="background:#113B5F; padding:100px 64px">
+  <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:stretch">
+   <div data-reveal="" style="display:flex; flex-direction:column; justify-content:center">
+    <div style="font-size:11.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#C98A2C">Get in touch</div>
+    <h2 style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:42px; line-height:1.22; letter-spacing:-0.008em; color:#F9F6E6; margin:16px 0 0; text-wrap:pretty">Contact Montfort Real Estate</h2>
+    <div style="display:flex; flex-direction:column; gap:12px; margin-top:32px; max-width:520px">
+     <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px">
+      <input type="text" placeholder="First name" style="background:rgba(249,246,230,0.1); border:1px solid rgba(201,138,44,0.45); border-radius:10px; padding:15px 16px; font-family:inherit; font-size:15.5px; color:#F9F6E6; min-height:52px">
+      <input type="text" placeholder="Last name" style="background:rgba(249,246,230,0.1); border:1px solid rgba(201,138,44,0.45); border-radius:10px; padding:15px 16px; font-family:inherit; font-size:15.5px; color:#F9F6E6; min-height:52px">
+     </div>
+     <input type="email" placeholder="Email address" style="background:rgba(249,246,230,0.1); border:1px solid rgba(201,138,44,0.45); border-radius:10px; padding:15px 16px; font-family:inherit; font-size:15.5px; color:#F9F6E6; min-height:52px">
+     <textarea placeholder="Which neighborhoods are you considering?" rows="4" style="background:rgba(249,246,230,0.1); border:1px solid rgba(201,138,44,0.45); border-radius:10px; padding:15px 16px; font-family:inherit; font-size:15.5px; color:#F9F6E6; resize:vertical"></textarea>
+     <a href="https://calendly.com/montfort" style="display:flex; align-items:center; justify-content:center; background:#C98A2C; color:#0F1729; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; border-radius:100px; font-size:15px; padding:17px 24px; min-height:54px" style-hover="background:#F9F6E6; color:#113B5F">Submit</a>
+    </div>
+   </div>
+   <div data-reveal="" style="position:relative; border-radius:16px; overflow:hidden; border:1px solid rgba(201,138,44,0.55); box-shadow:0 30px 70px rgba(11,18,32,0.4); min-height:440px; background:#0B1220">
+    <iframe title="Montfort Real Estate on Google Maps" src="https://www.google.com/maps?q=8+West+126th+Street,+New+York,+NY+10027&amp;output=embed" style="position:absolute; inset:0; width:100%; height:100%; border:0; filter:grayscale(1) contrast(0.92) brightness(0.92)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(120deg, rgba(17,59,95,0.34) 0%, rgba(17,59,95,0) 46%), linear-gradient(0deg, rgba(11,18,32,0.55) 0%, rgba(11,18,32,0) 34%); mix-blend-mode:multiply"></div>
+    <div style="position:absolute; left:24px; right:24px; bottom:24px; background:#F9F6E6; border-radius:16px; border-top:3px solid #C98A2C; padding:24px 26px; display:flex; align-items:center; justify-content:space-between; gap:24px; box-shadow:0 20px 44px rgba(11,18,32,0.35)">
+     <div>
+      <div style="font-size:10.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C98A2C">Visit our office</div>
+      <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:20px; color:#0F1729; margin-top:8px; line-height:1.3">8 West 126th Street</div>
+      <div style="font-size:14.5px; color:#3B4C5E; margin-top:3px">New York, NY 10027</div>
+     </div>
+     <a href="https://maps.google.com/?cid=11378470238102062088" target="_blank" rel="noopener" style="flex:0 0 auto; display:inline-flex; align-items:center; gap:9px; background:#113B5F; color:#F9F6E6; font-size:12px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; border-radius:100px; padding:14px 22px" style-hover="background:#C98A2C; color:#0F1729">Directions <svg width="15" height="15" sc-camel-view-box="0 0 16 16" fill="none"><path d="M3 8h9M8 3.5L12.5 8 8 12.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <footer style="background:#0B1220; padding:88px 64px 36px; border-top:3px solid #C98A2C">
   <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:1.2fr 1fr 0.9fr auto; gap:56px; align-items:start">
    <div>
     <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:16px; letter-spacing:0.02em; color:#C98A2C">Realtor Services</div>
@@ -512,23 +751,23 @@ const HTML = `<style>
     <div style="font-family:'Space Grotesk',system-ui,sans-serif; font-weight:700; font-size:16px; letter-spacing:0.02em; color:#C98A2C">About</div>
     <div style="display:flex; flex-direction:column; gap:11px; margin-top:20px; padding-top:18px; border-top:1px solid rgba(201,138,44,0.35)">
      <a href="/stanley-montfort/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Stanley Montfort</a>
-     <a href="https://calendly.com/montfort" target="_blank" rel="noopener" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
+     <a href="/contact/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Contact</a>
      <a href="/success-stories/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Success Stories</a>
      <a href="/blog/" style="color:rgba(249,246,230,0.78); font-size:15px; line-height:1.5" style-hover="color:#C98A2C">Resources</a>
     </div>
    </div>
    <div style="display:flex; flex-direction:column; align-items:flex-end; gap:26px">
     <div style="display:flex; gap:12px">
-    <a href="https://www.facebook.com/montfortrealestate" target="_blank" rel="noopener" aria-label="Facebook" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5.5h-3c-2.2 0-3.8 1.7-3.8 3.9V11H7.5v3.5h2.7V22h3.6v-7.5h2.7l.5-3.5h-3.2V9.6c0-.4.3-.6.7-.6z"></path></svg></a>
-    <a href="https://www.youtube.com/@montfortrealestate6984" target="_blank" rel="noopener" aria-label="YouTube" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.7 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.3.3-3.8.3-3.8s0-2.5-.3-3.8zM10 15V9l5.2 3z"></path></svg></a>
-    <a href="https://www.instagram.com/stanleymontfort/" target="_blank" rel="noopener" aria-label="Instagram" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.9"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.9"></circle><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"></circle></svg></a>
+     <a href="https://www.facebook.com/montfortrealestate" target="_blank" rel="noopener" aria-label="Facebook" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="currentColor"><path d="M14 9h3V5.5h-3c-2.2 0-3.8 1.7-3.8 3.9V11H7.5v3.5h2.7V22h3.6v-7.5h2.7l.5-3.5h-3.2V9.6c0-.4.3-.6.7-.6z"></path></svg></a>
+     <a href="https://www.youtube.com/@montfortrealestate6984" target="_blank" rel="noopener" aria-label="YouTube" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="19" height="19" sc-camel-view-box="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.7 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.3.3-3.8.3-3.8s0-2.5-.3-3.8zM10 15V9l5.2 3z"></path></svg></a>
+     <a href="https://www.instagram.com/stanleymontfort/" target="_blank" rel="noopener" aria-label="Instagram" style="width:44px; height:44px; border-radius:100px; background:#C98A2C; color:#0F1729; display:flex; align-items:center; justify-content:center; transition:background .25s ease, color .25s ease" style-hover="background:#F9F6E6; color:#113B5F"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.9"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.9"></circle><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"></circle></svg></a>
     </div>
-    <img src="/redesign-assets/rebny.png" alt="REBNY, Real Estate Board of New York" style="height:52px; width:auto; display:block; opacity:0.9" width="130" height="49">
+    <img src="/redesign-assets/nbhd/7ed3b807.png" alt="REBNY, Real Estate Board of New York" style="height:52px; width:auto; display:block; opacity:0.9">
    </div>
   </div>
   <div style="max-width:1440px; margin:64px auto 0; padding-top:44px; border-top:1px solid rgba(249,246,230,0.14); display:grid; grid-template-columns:1fr 1fr 1fr; gap:44px; align-items:center">
    <a href="/" style="display:block; justify-self:start">
-    <img src="https://assets.agentfire3.com/uploads/sites/312/2026/07/Logo-Transparency-black.png" alt="Montfort Real Estate" style="height:72px; width:auto; display:block; filter:invert(1) brightness(2.2)">
+    <img src="/redesign-assets/nbhd/96e47300.png" alt="Montfort Real Estate" style="height:72px; width:auto; display:block; filter:invert(1) brightness(2.2)">
    </a>
    <div style="justify-self:center; text-align:center; font-size:15px; line-height:1.7; color:rgba(249,246,230,0.8)">
     <div><span style="font-weight:700; color:#F9F6E6">Phone:</span> <a href="tel:646-970-1078" style="color:#C98A2C">1-646-970-1078</a></div>
@@ -547,7 +786,9 @@ const HTML = `<style>
    <div style="margin-top:12px; color:rgba(249,246,230,0.4)">© 2026 Montfort Real Estate LLC. All rights reserved.</div>
   </div>
  </footer>
-</div>`;
+</div>
+
+`;
 
 export default function Neighborhoods() {
   useStyleHover();

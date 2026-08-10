@@ -87,3 +87,16 @@ Fetch each file with download_to_repo into the same repo path (the part after /m
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-selling-co-ops-in-nyc.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-selling-condos-in-nyc.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/slots/svc-selling-probate-properties-in-nyc.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/0dd93ed5.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/65438018.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/66fdf193.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/69cc59cd.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/745851cc.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/7ed3b807.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/90c53c45.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/943207db.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/96e47300.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/b6c26a69.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/d86879d1.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/eadc74f3.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/f55c71f9.jpg
