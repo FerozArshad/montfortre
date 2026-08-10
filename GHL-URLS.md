@@ -6,6 +6,7 @@ Fetch each file with download_to_repo into the same repo path (the part after /m
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/ROUTES.tsx.snippet
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/TRANSFER-GUIDE.md
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/HANDOFF.md
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/HANDOFF-SECTION-seo-launch-readiness.md
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/main.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/responsive.css
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/HarlemSchools.tsx

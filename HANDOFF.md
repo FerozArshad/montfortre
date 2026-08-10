@@ -95,6 +95,7 @@ Our repo is the source of truth for all SEO. The deployed build currently overri
 | File | Scope |
 |------|--------|
 | `HANDOFF-SECTION-neighborhoods-harlem-stanley.md` | Neighborhoods mobile CSS, Harlem schools component, Stanley hero image (2026-08-10) |
+| `HANDOFF-SECTION-seo-launch-readiness.md` | SEO/launch readiness: platform blockers, applied fixes, open client decisions (2026-08-10) |
 
 ## Round-2 SEO audit — repo fixes applied (2026-08-10)
 
