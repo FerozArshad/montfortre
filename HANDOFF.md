@@ -1,5 +1,7 @@
 # HANDOFF — Montfort Real Estate site (context for the next agent)
 
+> **New agents:** start with `AGENT-ONBOARDING.md` for repo layout, commands, architecture, routes, and constraints. This file adds launch blockers and audit history.
+
 ## What this project is
 This repo is the approved redesign of https://montfortre.com/ (NYC realtor), being rebuilt as a
 React/Vite SPA in GHL AI Studio. 9 pages are complete and deployed to the preview at
