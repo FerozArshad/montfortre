@@ -33,26 +33,8 @@ export default function IdxSearchLayout({
       </section>
 
       <div className="idx-wrap">
-        <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 14 }}>
-          <a
-            href={externalSearchUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 9,
-              background: "#113B5F",
-              color: "#F9F6E6",
-              fontWeight: 700,
-              fontSize: 12.5,
-              letterSpacing: "0.09em",
-              textTransform: "uppercase",
-              padding: "13px 22px",
-              borderRadius: 10,
-            }}
-            {...{ "style-hover": "background:#C98A2C; color:#0F1729" }}
-          >
+        <div className="idx-ext-row">
+          <a href={externalSearchUrl} target="_blank" rel="noopener noreferrer" className="idx-ext-btn">
             {externalButtonLabel}
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
               <path

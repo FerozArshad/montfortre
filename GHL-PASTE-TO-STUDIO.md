@@ -63,6 +63,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/about-p
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/two-family-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/not-migrated.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
 ---
@@ -147,6 +148,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/idxS
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/idxRentals.ts
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NotMigrated.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/not-migrated.css
 
 ---
 
