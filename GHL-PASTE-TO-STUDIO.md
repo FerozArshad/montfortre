@@ -60,6 +60,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/success
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/brownstone-guide.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/neighborhoods-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/about-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
@@ -114,19 +115,22 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/abo
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/about-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/aboutUs.ts
 
+## 8. Harlem
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Harlem.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem/HarlemContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlem.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/HarlemSchools.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/harlemSchools.json
+
 ---
 
-## 8. Remaining migrated pages (full site)
+## 9. Remaining migrated pages (full site)
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Home.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/home/HomeContent.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/home.ts
-
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Harlem.tsx
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem/HarlemContent.tsx
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlem.ts
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/HarlemSchools.tsx
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/harlemSchools.json
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/two-family/TwoFamilyContent.tsx
