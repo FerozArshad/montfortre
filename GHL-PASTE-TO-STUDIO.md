@@ -57,6 +57,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/service
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/blog-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/stanley-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/success-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/brownstone-guide.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
@@ -94,6 +95,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/succ
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BrownstoneBuyingGuide.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/brownstone/BrownstoneGuideContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/brownstone-guide.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/brownstoneGuide.ts
 
 ## 6. Neighborhoods
