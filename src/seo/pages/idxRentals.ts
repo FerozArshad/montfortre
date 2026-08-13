@@ -1,5 +1,7 @@
 /** Frozen SEO for /idx-rentals/ — do not edit values. */
 
+import type { PageSeo } from "../types";
+
 export const IDX_RENTALS_TITLE = "NYC Rentals | Montfort Real Estate";
 
 export const IDX_RENTALS_METAS = [
@@ -26,3 +28,10 @@ export const IDX_RENTALS_LINKS = [
 ] as const;
 
 export const IDX_RENTALS_JSON_LD: string[] = [];
+
+export const IDX_RENTALS_SEO: PageSeo = {
+  title: IDX_RENTALS_TITLE,
+  metas: IDX_RENTALS_METAS,
+  links: IDX_RENTALS_LINKS,
+  jsonLd: IDX_RENTALS_JSON_LD,
+};

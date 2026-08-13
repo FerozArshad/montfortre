@@ -105,9 +105,9 @@ export default function Example() {
 }
 ```
 
-**IDX pages** use `IdxSearchLayout` directly (no `SiteFooter`; own hero + iframe).
+**IDX pages** use `PageShell` (`showFooter={false}`, `showDesktopHeader={false}`) plus `IdxSearchLayout` (desktop header + MLS iframe, no site footer).
 
-**Legacy pages** still use `dangerouslySetInnerHTML` until converted — they embed their own header/footer HTML.
+`NotMigrated.tsx` is a TSX noindex fallback for URLs that exist on the live site but are not in this build.
 
 ## GHL wiring checklist
 

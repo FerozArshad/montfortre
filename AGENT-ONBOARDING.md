@@ -56,27 +56,11 @@ export default function Example() {
 - Shared sections: `ResourcesSection`, `ContactSection` in `src/components/shared/`
 - See `GHL-STUDIO-STRUCTURE.md` for the full directory map
 
-**Legacy pages** (pending conversion) still use this pattern:
+**IDX pages** (`IdxSales`, `IdxRentals`) use `PageShell` with `showFooter={false}` and `showDesktopHeader={false}`; `IdxSearchLayout` renders the desktop header and MLS iframe.
 
-```tsx
-const TITLE = "...";
-const HTML = `<style>...</style><div>...</div>`;
+**Catch-all** `NotMigrated.tsx` is already TSX (noindex fallback for URLs not in this build).
 
-export default function Home() {
-  useStyleHover();
-  return (
-    <>
-      <Seo title={TITLE} metas={METAS} links={LINKS} jsonLd={JSON_LD} />
-      <div dangerouslySetInnerHTML={{ __html: HTML }} />
-    </>
-  );
-}
-```
-
-- **SEO constants** at top of each page — frozen (see constraints below).
-- **Layout** is inline styles inside the HTML string, not Tailwind/component CSS.
-- **Per-page `<style>` blocks** inside `HTML` hold desktop rules and `@media` overrides.
-- **`Harlem.tsx`** splits HTML at `<!--HARLEM_SCHOOLS-->` and injects `<HarlemSchools />` for the live school list.
+There are **no remaining HTML-string pages**. Frozen SEO lives in `src/seo/pages/*.ts`. Harlem injects `<HarlemSchools />` from `HarlemContent`.
 
 ### Shared runtime (`src/App.tsx` + `src/main.tsx`)
 
@@ -131,8 +115,8 @@ Listing photos on many pages load from live CDN (`https://assets.agentfire3.com`
 | `/2-family-house-for-sale-nyc` | `TwoFamilyHouseForSaleNyc.tsx` | ✅ TSX via PageShell |
 | `/advice-for-buyers-looking-to-purchase-brownstones` | `BrownstoneBuyingGuide.tsx` | ✅ TSX via PageShell |
 | `/neighborhoods` | `Neighborhoods.tsx` | ✅ TSX via PageShell |
-| `/idx-sales` | `IdxSales.tsx` | ✅ TSX via IdxSearchLayout |
-| `/idx-rentals` | `IdxRentals.tsx` | ✅ TSX via IdxSearchLayout |
+| `/idx-sales` | `IdxSales.tsx` | ✅ TSX via PageShell + IdxSearchLayout |
+| `/idx-rentals` | `IdxRentals.tsx` | ✅ TSX via PageShell + IdxSearchLayout |
 | `*` | `NotMigrated.tsx` | Fallback for unmigrated URLs |
 
 Internal links in HTML use root-relative paths with trailing slashes (`/harlem/`).

@@ -1,5 +1,7 @@
 # Section handoff — Neighborhoods responsiveness, Harlem schools, Stanley hero
 
+> **Status (2026-08-13):** Neighborhoods, Harlem, and Stanley are converted TSX pages (`PageShell` + content components). Harlem schools still render via `<HarlemSchools />` inside `HarlemContent`. The patterns below describe the earlier HTML-string era and are kept for history.
+
 **Date:** 2026-08-10  
 **Local dev:** `npm run dev` → http://localhost:5173/  
 **Prior chat transcript:** `C:\Users\feroz\.cursor\projects\d-Montfortr\agent-transcripts\ae837346-cdf1-4dd4-88d5-f1f4050703e1\ae837346-cdf1-4dd4-88d5-f1f4050703e1.jsonl`  

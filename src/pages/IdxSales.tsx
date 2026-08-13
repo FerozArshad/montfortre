@@ -1,24 +1,10 @@
 import IdxSearchLayout from "../components/idx/IdxSearchLayout";
-import Seo from "../components/Seo";
-import useStyleHover from "../hooks/useStyleHover";
-import {
-  IDX_SALES_JSON_LD,
-  IDX_SALES_LINKS,
-  IDX_SALES_METAS,
-  IDX_SALES_TITLE,
-} from "../seo/pages/idxSales";
+import PageShell from "../layouts/PageShell";
+import { IDX_SALES_SEO } from "../seo/pages/idxSales";
 
 export default function IdxSales() {
-  useStyleHover();
-
   return (
-    <>
-      <Seo
-        title={IDX_SALES_TITLE}
-        metas={[...IDX_SALES_METAS]}
-        links={[...IDX_SALES_LINKS]}
-        jsonLd={IDX_SALES_JSON_LD}
-      />
+    <PageShell seo={IDX_SALES_SEO} pageClassName="idx-sales-page" showFooter={false} showDesktopHeader={false}>
       <IdxSearchLayout
         eyebrow="MLS-powered IDX search"
         title="Homes For Sale"
@@ -28,6 +14,6 @@ export default function IdxSales() {
         externalSearchUrl="https://stanley.olridx.com/Search/Sales"
         externalButtonLabel="Open full search in new tab"
       />
-    </>
+    </PageShell>
   );
 }

@@ -3,10 +3,9 @@ import { useEffect } from "react";
 /**
  * Wires up the Home page carousels (reviews slider + listings scroller).
  *
- * The page markup is static HTML injected via dangerouslySetInnerHTML, so the
- * carousel buttons (#review-prev/next, .rev-dot, #listings-prev/next) render
- * without any behavior. This hook attaches the click handlers after mount.
- * Safe to call on pages without carousels (it no-ops when ids are missing).
+ * Home is real TSX; carousel buttons (#review-prev/next, .rev-dot, #listings-prev/next)
+ * also keep self-contained inline onclick handlers so they work even if this hook
+ * is not wired by the host app. Safe to call on pages without carousels (no-ops when ids are missing).
  */
 export default function useCarousels() {
   useEffect(() => {

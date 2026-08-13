@@ -181,8 +181,8 @@ wants authoritative external references — needs an editorial decision on which
    wrong SEO, the bug is in the platform (Part A), not the constant.
 2. **Content is frozen** (headings, copy, phone `(646) 970-1078`, link targets) unless the client
    approves the change — see Part C.
-3. Page HTML lives in a template literal rendered via `dangerouslySetInnerHTML`; layout styling is
-   **inline**, so stylesheet overrides need `!important`. Desktop ≥1440px must stay pixel-identical.
+3. Pages are real TSX with **inline** layout styles; stylesheet overrides in `page-shell.css` use
+   `!important` inside max-width queries. Desktop ≥1440px must stay pixel-identical.
 4. Keep `style-hover` attributes and the `useStyleHover()` / `useCarousels()` hooks. Carousel arrows and
    dots also carry **self-contained inline onclick handlers** (commit `a0a71b5`) so they work even when
    the host app doesn't run the hooks — don't strip them.

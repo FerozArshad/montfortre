@@ -1,5 +1,7 @@
 /** Frozen SEO for /idx-sales/ — do not edit values. */
 
+import type { PageSeo } from "../types";
+
 export const IDX_SALES_TITLE = "NYC Homes For Sale | Montfort Real Estate";
 
 export const IDX_SALES_METAS = [
@@ -26,3 +28,10 @@ export const IDX_SALES_LINKS = [
 ] as const;
 
 export const IDX_SALES_JSON_LD: string[] = [];
+
+export const IDX_SALES_SEO: PageSeo = {
+  title: IDX_SALES_TITLE,
+  metas: IDX_SALES_METAS,
+  links: IDX_SALES_LINKS,
+  jsonLd: IDX_SALES_JSON_LD,
+};

@@ -29,9 +29,10 @@ from a design tool; each page's SEO was copied byte-exact from the original live
 | GHL-URLS.md | Raw-URL manifest of every file |
 
 ## How pages are built (important)
-Each page component holds its full HTML in a template literal (`const HTML = ...`) rendered via
-`dangerouslySetInnerHTML`, with `<style>` blocks at the top of that HTML string. All layout styling
-is INLINE STYLES inside that HTML. Constants at the top hold SEO (TITLE / METAS / LINKS / JSON_LD).
+Every migrated route is real TSX: `PageShell` (Seo + DesktopHeader + footer) wrapping a content
+component. Frozen SEO lives in `src/seo/pages/*.ts` — do not edit those values. Layout styling is
+mostly **inline styles** on TSX elements; responsive overrides live in `src/styles/page-shell.css`
+(desktop ≥1440px must stay pixel-identical). IDX pages use `IdxSearchLayout` (header + iframe, no footer).
 
 ## Hard constraints — do not break these
 1. SEO IS FROZEN. Never edit TITLE, METAS, LINKS, JSON_LD, or the Seo/canonical logic. Titles,
