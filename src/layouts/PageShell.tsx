@@ -6,6 +6,7 @@ import useCarousels from "../hooks/useCarousels";
 import useStyleHover from "../hooks/useStyleHover";
 import type { PageSeo } from "../seo/types";
 import "../styles/page-shell.css";
+import "../styles/mobile-layout.css";
 
 export interface PageShellProps {
   seo: PageSeo;

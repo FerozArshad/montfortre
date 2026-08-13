@@ -258,7 +258,7 @@ const HOOD_IMG = {
 
 function ManhattanCopy({ hood }: { hood: ManhattanHood }) {
   return (
-    <div>
+    <div className="nbhd-copy">
       <a
         href={hood.href}
         style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 36, lineHeight: 1.1, letterSpacing: "-0.045em", textTransform: "uppercase", color: "#0F1729", display: "inline-block" }}
@@ -354,10 +354,11 @@ export default function NeighborhoodsContent() {
             <span style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C98A2C" }}>What working with us means</span>
             <span style={{ width: 40, height: 1, background: "rgba(201,138,44,0.6)", display: "block" }} />
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: 0, marginTop: 34 }}>
+          <div className="nbhd-promises" style={{ display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: 0, marginTop: 34 }}>
             {PROMISES.map((item) => (
               <div
                 key={item.text}
+                className="nbhd-promise"
                 data-reveal=""
                 style={{ padding: item.pad, borderRight: item.border ? "1px solid rgba(201,138,44,0.24)" : undefined }}
               >
@@ -416,10 +417,11 @@ export default function NeighborhoodsContent() {
           <span style={{ flex: "1 1 auto", height: 1, background: "#D9CFA6", display: "block" }} />
           <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#8A7B4E" }}>Harlem · UWS · UES · Chelsea</span>
         </div>
-        <div style={{ maxWidth: 1440, margin: "0 auto", padding: "64px 0 96px", display: "flex", flexDirection: "column", gap: 72 }}>
+        <div className="nbhd-hood-list" style={{ maxWidth: 1440, margin: "0 auto", padding: "64px 0 96px", display: "flex", flexDirection: "column", gap: 72 }}>
           {MANHATTAN.map((hood) => (
             <div
               key={hood.href}
+              className="nbhd-hood"
               data-reveal=""
               style={{ display: "grid", gridTemplateColumns: hood.imageFirst ? "1.05fr 0.95fr" : "0.95fr 1.05fr", gap: 64, alignItems: "center" }}
             >
@@ -449,7 +451,7 @@ export default function NeighborhoodsContent() {
           <span style={{ flex: "1 1 auto", height: 1, background: "#E0D9B8", display: "block" }} />
           <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#8A7B4E" }}>Seven neighborhoods</span>
         </div>
-        <div style={{ maxWidth: 1440, margin: "0 auto", padding: "56px 0 40px", display: "grid", gridTemplateColumns: "repeat(2,minmax(0,1fr))", gap: 44 }}>
+        <div className="nbhd-hood-list" style={{ maxWidth: 1440, margin: "0 auto", padding: "56px 0 40px", display: "grid", gridTemplateColumns: "repeat(2,minmax(0,1fr))", gap: 44 }}>
           {BROOKLYN.map((hood) =>
             hood.wide ? (
               <div key={hood.href} data-reveal="" className="hood-card" style={{ gridColumn: "1 / -1", background: "#F5EECB", border: "1px solid #E0D9B8", borderRadius: 16, overflow: "hidden", display: "grid", gridTemplateColumns: "1fr 1fr" }}>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useStickyHeader from "../hooks/useStickyHeader";
 import useTouchDropdowns from "../hooks/useTouchDropdowns";
 
 interface MenuLink {
@@ -102,6 +103,7 @@ export default function MobileHeader() {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
 
+  useStickyHeader();
   // Touch enhancement for the desktop nav dropdowns (tablets without hover).
   useTouchDropdowns();
 
@@ -122,6 +124,7 @@ export default function MobileHeader() {
   return (
     <div
       className="mfr-mobile-header"
+      data-menu-open={open ? "true" : undefined}
       style={{
         display: "none",
         position: "sticky",

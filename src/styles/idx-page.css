@@ -71,6 +71,23 @@
   font-weight: 700;
 }
 
+@media (max-width: 1023.98px) {
+  .idx-hero {
+    padding: 40px 20px 32px;
+  }
+  .idx-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  .idx-wrap {
+    padding: 20px 16px 40px;
+  }
+  .idx-frame {
+    height: 70vh;
+    min-height: 480px;
+  }
+}
+
 @media (max-width: 900px) {
   .idx-wrap {
     padding: 20px 16px 40px;

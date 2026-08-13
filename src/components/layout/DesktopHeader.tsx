@@ -37,7 +37,7 @@ export default function DesktopHeader() {
       style={{
         position: "sticky",
         top: 0,
-        zIndex: 90,
+        zIndex: 200,
         background: "#fff",
         boxShadow: "0 1px 0 rgba(18,16,14,0.1)",
       }}

@@ -45,6 +45,10 @@ Studio **cannot clone GitHub**. Owner pastes raw URLs; GHL writes files.
 
 As of this write-up: lists are **PREPARED + SENT to the owner**. Studio **FETCHED/VERIFIED is not confirmed**. Use the prompt at the bottom of the tracking file.
 
+## Site origin (multi-domain)
+
+Frozen SEO still stores `https://montfortre.com`. At inject time `src/lib/siteOrigin.ts` + `Seo.tsx` rewrite that origin to `window.location.origin`, or to `VITE_PUBLIC_SITE_URL` if set. Leave the env unset while hopping GHL/preview domains. Hosts other than `montfortre.com` / `www.montfortre.com` get `noindex,nofollow`. Do not rewrite `sm@montfortre.com`, Calendly, IDX, or AgentFire CDN URLs. Internal links stay root-relative (`/services/`).
+
 ## Dev commands
 
 ```bash

@@ -2,16 +2,16 @@
 
 **Purpose:** Record what we asked GHL to fetch vs what Studio actually wrote. Next agents update this file — do not guess.
 
-**Studio cannot** git clone, browse the repo tree, unzip archives, or SSH. The only reliable ingest is **public raw URLs** → write to the same path after `/main/`.
+**Studio cannot** git clone, browse the repo tree, unzip archives, or SSH. GitHub raw fetch often truncates. **Current ingest:** owner pastes **one full file per GHL chat message** using `GHL-PASTE-ORDER.md`. Reply `next` in Cursor after each write.
 
 | Item | Value |
 |---|---|
 | Git remote | https://github.com/FerozArshad/montfortre (`main`) |
 | Local repo | `d:\montfortre\ghl-react\` |
 | GHL preview | https://montfortre-live.vibepreview.com/ |
-| Paste lists | `GHL-PASTE-TO-STUDIO.md` (shared + first 6 pages) · `GHL-FULL-FETCH.md` (rest + assets) |
+| Paste lists | `GHL-PASTE-ORDER.md` (one-file-at-a-time) · `GHL-PASTE-TO-STUDIO.md` · `GHL-FULL-FETCH.md` |
 | URL dump | `GHL-URLS.md` |
-| Last local HEAD when this file was created | `f473185` (update after later commits) |
+| Last local HEAD | update after commits |
 
 **Status legend**
 

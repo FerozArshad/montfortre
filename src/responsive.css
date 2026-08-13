@@ -7,6 +7,36 @@
  * <style> block; this file only holds rules shared by every route.
  */
 
+/* Sticky headers: fade/slide away on scroll down, return on scroll up */
+header,
+.mfr-mobile-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  transition:
+    transform 0.38s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 0.32s ease,
+    box-shadow 0.32s ease;
+}
+
+html.mfr-header-hidden header,
+html.mfr-header-hidden .mfr-mobile-header:not([data-menu-open="true"]) {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+html.mfr-header-scrolled header,
+html.mfr-header-scrolled .mfr-mobile-header {
+  box-shadow: 0 10px 28px rgba(17, 59, 95, 0.12);
+}
+
+.mfr-mobile-header[data-menu-open="true"] {
+  transform: none !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
 /* --- Desktop nav: touch support (used by useTouchDropdowns) ------------- */
 /* Mirrors the .mnav-item:hover > .mnav-drop rule in each page's <style>.   */
 /* Invisible hover bridge across the gap between trigger and panel */
@@ -122,42 +152,57 @@
 }
 
 /* --- Footer: shared mobile layout on every page ------------------------- */
-@media (max-width: 768px) {
-  footer[style*="padding:88px"] {
-    padding-top: 56px !important;
-    padding-bottom: 28px !important;
+@media (max-width: 1023.98px) {
+  .site-footer {
+    padding: 40px 20px 20px !important;
   }
 
-  /* Link columns + contact strip: single column, left-aligned */
-  footer [style*="grid-template-columns:1.2fr 1fr 0.9fr auto"],
-  footer [style*="grid-template-columns:1fr 1fr 1fr"] {
+  .site-footer-cols {
     grid-template-columns: 1fr !important;
-    gap: 28px !important;
-  }
-  footer [style*="justify-self:center"],
-  footer [style*="justify-self:end"],
-  footer [style*="justify-self:start"] {
-    justify-self: start !important;
-    text-align: left !important;
-  }
-  footer [style*="flex-direction:column"][style*="align-items:flex-end"] {
-    align-items: flex-start !important;
+    gap: 22px !important;
   }
 
-  /* Privacy / copyright bar: match left-aligned contact block above */
-  footer [style*="margin:40px auto 0"] {
-    text-align: left !important;
+  .site-footer-brand {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    width: 100% !important;
   }
 
-  /* Keep logos proportional — never blow up to natural asset size */
-  footer img[style*="height:72px"] {
-    height: 48px !important;
+  .site-footer-brand img {
+    height: 36px !important;
     width: auto !important;
-    max-width: 160px !important;
+    margin: 0 !important;
   }
-  footer img[style*="height:52px"] {
-    height: 40px !important;
-    width: auto !important;
+
+  .site-footer-contact {
+    margin-top: 24px !important;
+    padding-top: 22px !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+
+  .site-footer-logo,
+  .site-footer-email {
+    justify-self: center !important;
+    text-align: center !important;
+  }
+
+  .site-footer-logo img {
+    margin: 0 auto !important;
+  }
+
+  .site-footer-legal {
+    margin-top: 18px !important;
+    text-align: center !important;
+  }
+
+  .site-footer-legal > div {
+    margin-top: 8px !important;
   }
 }
 

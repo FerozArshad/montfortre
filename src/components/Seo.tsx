@@ -1,3 +1,4 @@
+import { adaptSiteUrls, getSiteOrigin, isProductionHostname } from "../lib/siteOrigin";
 import { useEffect } from "react";
 
 type MetaAttrs = { [key: string]: string | undefined };
@@ -9,23 +10,30 @@ interface SeoProps {
   jsonLd: string[];
 }
 
+function adaptAttrs(attrs: MetaAttrs, origin: string): MetaAttrs {
+  const next: MetaAttrs = {};
+  Object.entries(attrs).forEach(([k, v]) => {
+    next[k] = typeof v === "string" ? adaptSiteUrls(v, origin) : v;
+  });
+  return next;
+}
+
 /**
  * Injects exact SEO tags (title, meta, canonical/icon links, JSON-LD) into <head>.
- * Removes any pre-existing tag with the same name/property/rel first, so template
- * defaults (e.g. a build tool's own description or og:title) never shadow these.
+ * Frozen modules still store https://montfortre.com/; this rewrites that origin to the
+ * current host (or VITE_PUBLIC_SITE_URL) so GHL preview / staging domains work.
  */
 export default function Seo({ title, metas, links, jsonLd }: SeoProps) {
   useEffect(() => {
+    const origin = getSiteOrigin();
     document.title = title;
     document.documentElement.lang = "en-US";
-    // strip build-template branding that we don't explicitly replace
     document.head
       .querySelectorAll('meta[name="author"][content*="Vibe"], meta[name="twitter:site"][content*="Vibe"], meta[name="generator"][content*="Vibe"]')
       .forEach((el) => el.remove());
     const added: Element[] = [];
 
-    // staging safety: never let the preview host get indexed
-    if (/\.vibepreview\.com$/i.test(window.location.hostname)) {
+    if (!isProductionHostname(window.location.hostname)) {
       const robots = document.createElement("meta");
       robots.name = "robots";
       robots.content = "noindex, nofollow";
@@ -34,14 +42,15 @@ export default function Seo({ title, metas, links, jsonLd }: SeoProps) {
     }
 
     metas.forEach((attrs) => {
-      const key = attrs.name
-        ? `meta[name="${attrs.name}"]`
-        : attrs.property
-          ? `meta[property="${attrs.property}"]`
+      const adapted = adaptAttrs(attrs, origin);
+      const key = adapted.name
+        ? `meta[name="${adapted.name}"]`
+        : adapted.property
+          ? `meta[property="${adapted.property}"]`
           : null;
       if (key) document.head.querySelectorAll(key).forEach((el) => el.remove());
       const el = document.createElement("meta");
-      Object.entries(attrs).forEach(([k, v]) => {
+      Object.entries(adapted).forEach(([k, v]) => {
         if (v !== undefined) el.setAttribute(k, v);
       });
       document.head.appendChild(el);
@@ -49,11 +58,12 @@ export default function Seo({ title, metas, links, jsonLd }: SeoProps) {
     });
 
     links.forEach((attrs) => {
-      if (attrs.rel === "canonical") {
+      const adapted = adaptAttrs(attrs, origin);
+      if (adapted.rel === "canonical") {
         document.head.querySelectorAll('link[rel="canonical"]').forEach((el) => el.remove());
       }
       const el = document.createElement("link");
-      Object.entries(attrs).forEach(([k, v]) => {
+      Object.entries(adapted).forEach(([k, v]) => {
         if (v !== undefined) el.setAttribute(k, v);
       });
       document.head.appendChild(el);
@@ -63,7 +73,7 @@ export default function Seo({ title, metas, links, jsonLd }: SeoProps) {
     jsonLd.forEach((raw) => {
       const el = document.createElement("script");
       el.type = "application/ld+json";
-      el.textContent = raw;
+      el.textContent = adaptSiteUrls(raw, origin);
       document.head.appendChild(el);
       added.push(el);
     });

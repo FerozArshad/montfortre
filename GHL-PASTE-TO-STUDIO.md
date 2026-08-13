@@ -30,8 +30,11 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/sha
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useStyleHover.ts
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useTouchDropdowns.ts
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useCarousels.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useStickyHeader.ts
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/lib/utils.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/lib/siteOrigin.ts
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/page-shell.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/mobile-layout.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/desktop-nav.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg

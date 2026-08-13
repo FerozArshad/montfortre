@@ -11,7 +11,7 @@ Read `AGENT-ONBOARDING.md` first. Session state: `PROJECT-CONTEXT.md`. Launch bl
 
 ## Frozen
 
-- SEO modules in `src/seo/pages/*.ts` — never edit values
+- SEO modules in `src/seo/pages/*.ts` — never edit values. `Seo.tsx` rewrites `https://montfortre.com` to the current origin (`src/lib/siteOrigin.ts`) so preview/staging domains work.
 - Copy, phone `(646) 970-1078`, link targets, H1 counts
 - Desktop ≥1440px pixel-identical; responsive only in `max-width` queries
 - Keep `style-hover` and `useStyleHover()`

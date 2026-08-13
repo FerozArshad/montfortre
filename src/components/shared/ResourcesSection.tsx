@@ -29,13 +29,14 @@ export default function ResourcesSection() {
   return (
     <section data-screen-label="Resources" style={{ background: "#F5EECB", padding: "120px 64px", borderTop: "1px solid #E0D9B8" }}>
       <div style={{ maxWidth: 1440, margin: "0 auto" }}>
-        <div data-reveal="" style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 56 }}>
+        <div data-reveal="" className="resources-head" style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 56 }}>
           <div style={{ maxWidth: 760 }}>
             <h2 style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 46, lineHeight: 1.2, letterSpacing: "-0.008em", color: "#0F1729", margin: 0, textWrap: "pretty" }}>Recent News &amp; Realtor Advice</h2>
             <p style={{ fontSize: 17, lineHeight: 1.85, color: "#3B4C5E", margin: "16px 0 0" }}>Stay in the loop on the latest events, news, &amp; happenings in and around our community!</p>
           </div>
           <a
             href="/blog/"
+            className="resources-cta"
             style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", color: "#113B5F", whiteSpace: "nowrap", borderBottom: "2px solid #C98A2C", paddingBottom: 5 }}
             {...{ "style-hover": "border-bottom-color:#0F1729" }}
           >

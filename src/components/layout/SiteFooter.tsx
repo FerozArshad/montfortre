@@ -18,8 +18,9 @@ const socialBtn = {
 
 export default function SiteFooter() {
   return (
-    <footer style={{ background: "#0B1220", padding: "88px 64px 36px", borderTop: "3px solid #C98A2C" }}>
+    <footer className="site-footer" style={{ background: "#0B1220", padding: "88px 64px 36px", borderTop: "3px solid #C98A2C" }}>
       <div
+        className="site-footer-cols"
         style={{
           maxWidth: 1440,
           margin: "0 auto",
@@ -85,7 +86,7 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 26 }}>
+        <div className="site-footer-brand" style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 26 }}>
           <div style={{ display: "flex", gap: 12 }}>
             <a href="https://www.facebook.com/montfortrealestate" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={socialBtn} {...{ "style-hover": "background:#F9F6E6; color:#113B5F" }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden><path d="M14 9h3V5.5h-3c-2.2 0-3.8 1.7-3.8 3.9V11H7.5v3.5h2.7V22h3.6v-7.5h2.7l.5-3.5h-3.2V9.6c0-.4.3-.6.7-.6z" /></svg>
@@ -102,6 +103,7 @@ export default function SiteFooter() {
       </div>
 
       <div
+        className="site-footer-contact"
         style={{
           maxWidth: 1440,
           margin: "64px auto 0",
@@ -113,7 +115,7 @@ export default function SiteFooter() {
           alignItems: "center",
         }}
       >
-        <a href="/" style={{ display: "block", justifySelf: "start" }}>
+        <a href="/" className="site-footer-logo" style={{ display: "block", justifySelf: "start" }}>
           <img
             src="https://assets.agentfire3.com/uploads/sites/312/2026/07/Logo-Transparency-black.png"
             alt="Montfort Real Estate"
@@ -124,13 +126,13 @@ export default function SiteFooter() {
           <div><span style={{ fontWeight: 700, color: "#F9F6E6" }}>Phone:</span> <a href="tel:646-970-1078" style={{ color: "#C98A2C" }}>1-646-970-1078</a></div>
           <div style={{ marginTop: 8 }}><span style={{ fontWeight: 700, color: "#F9F6E6" }}>Address:</span><br />8 West 126th Street, New York, NY 10027</div>
         </div>
-        <div style={{ justifySelf: "end", textAlign: "right", fontSize: 15, lineHeight: 1.7 }}>
+        <div className="site-footer-email" style={{ justifySelf: "end", textAlign: "right", fontSize: 15, lineHeight: 1.7 }}>
           <span style={{ fontWeight: 700, color: "#F9F6E6" }}>Email:</span><br />
           <a href="mailto:sm@montfortre.com" style={{ color: "#C98A2C" }}>sm@montfortre.com</a>
         </div>
       </div>
 
-      <div style={{ maxWidth: 1440, margin: "40px auto 0", textAlign: "center", fontSize: 13, color: "rgba(249,246,230,0.55)" }}>
+      <div className="site-footer-legal" style={{ maxWidth: 1440, margin: "40px auto 0", textAlign: "center", fontSize: 13, color: "rgba(249,246,230,0.55)" }}>
         <span style={{ display: "inline-flex", alignItems: "center", gap: 14 }}>
           <a href="/privacy-policy/" style={{ color: "rgba(249,246,230,0.55)" }}>Privacy Policy</a>
           <span style={{ color: "rgba(249,246,230,0.3)" }}>|</span>

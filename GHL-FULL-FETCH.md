@@ -72,11 +72,12 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/index.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/App.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/responsive.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/page-shell.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/mobile-layout.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/desktop-nav.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/about-page.css
 
-`main.tsx` must import `index.css`, `App.css`, `responsive.css`. `PageShell.tsx` imports `page-shell.css`. `DesktopHeader.tsx` imports `desktop-nav.css`.
+`main.tsx` must import `index.css`, `App.css`, `responsive.css`. `PageShell.tsx` imports `page-shell.css` then `mobile-layout.css`. `DesktopHeader.tsx` imports `desktop-nav.css`.
 
 ## Remaining pages (Home, About, Harlem, Two Family, IDX, catch-all)
 
@@ -118,6 +119,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/lay
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/layout/SiteFooter.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/MobileHeader.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/Seo.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/lib/siteOrigin.ts
 
 ## Branding + public assets (fetch every URL)
 
