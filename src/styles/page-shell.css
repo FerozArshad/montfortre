@@ -1012,3 +1012,152 @@
     flex: 0 0 260px !important;
   }
 }
+
+@media (max-width: 1024px) {
+  .two-family-page [style*="grid-template-columns:1.02fr 0.98fr"],
+  .two-family-page [style*="grid-template-columns: 1.02fr 0.98fr"],
+  .brownstone-guide-page [style*="grid-template-columns:1.02fr 0.98fr"],
+  .brownstone-guide-page [style*="grid-template-columns: 1.02fr 0.98fr"],
+  .brownstone-guide-page [style*="grid-template-columns:240px minmax(0,1fr)"],
+  .brownstone-guide-page [style*="grid-template-columns: 240px minmax(0, 1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .two-family-page [style*="font-size:58px"],
+  .two-family-page h1[style*="font-size: 58px"] {
+    font-size: 42px !important;
+  }
+  .brownstone-guide-page [style*="font-size:52px"],
+  .brownstone-guide-page h1[style*="font-size: 52px"] {
+    font-size: 38px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .two-family-page [style*="flex-wrap:wrap; gap:14px; margin-top:34px"],
+  .two-family-page [style*="flex-wrap: wrap"][style*="gap: 14px"][style*="margin-top: 34px"] {
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .two-family-page [style*="flex-wrap:wrap; gap:14px; margin-top:34px"] > a,
+  .two-family-page [style*="flex-wrap: wrap"][style*="gap: 14px"][style*="margin-top: 34px"] > a {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    font-size: 12px !important;
+    letter-spacing: 0.03em !important;
+    padding: 14px 10px !important;
+    min-height: 48px !important;
+  }
+  .two-family-page [style*="repeat(3,minmax(0,1fr))"][style*="gap:14px 40px"],
+  .two-family-page [style*="repeat(3, minmax(0, 1fr))"][style*="gap: 14px 40px"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px 14px !important;
+  }
+  .two-family-page [style*="repeat(3,minmax(0,1fr))"][style*="gap:14px 40px"] > a[href="/neighborhoods/"],
+  .two-family-page [style*="repeat(3, minmax(0, 1fr))"][style*="gap: 14px 40px"] > a[href="/neighborhoods/"] {
+    grid-column: 1 / -1 !important;
+  }
+  .two-family-page [style*="background:#113B5F"][style*="padding:44px 48px"],
+  .two-family-page [style*="background: rgb(17, 59, 95)"][style*="padding: 44px 48px"] {
+    padding: 28px 18px !important;
+  }
+  .two-family-page [style*="background:#113B5F"][style*="padding:44px 48px"] > [style*="margin-top:28px"],
+  .two-family-page [style*="padding: 44px 48px"] > [style*="margin-top: 28px"] {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+  .two-family-page [style*="background:#113B5F"][style*="padding:44px 48px"] > [style*="margin-top:28px"] > a,
+  .two-family-page [style*="padding: 44px 48px"] > [style*="margin-top: 28px"] > a {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    font-size: 12px !important;
+    justify-content: center !important;
+  }
+  .two-family-page [style*="font-size:58px"],
+  .two-family-page h1[style*="font-size: 58px"] {
+    font-size: 31px !important;
+  }
+  .brownstone-guide-page [style*="grid-template-columns:1.02fr 0.98fr"] > [data-reveal]:first-child,
+  .brownstone-guide-page [style*="grid-template-columns: 1.02fr 0.98fr"] > [data-reveal]:first-child {
+    order: 2 !important;
+  }
+  .brownstone-guide-page [style*="grid-template-columns:1.02fr 0.98fr"] > [data-reveal]:last-child,
+  .brownstone-guide-page [style*="grid-template-columns: 1.02fr 0.98fr"] > [data-reveal]:last-child {
+    order: 1 !important;
+  }
+  .brownstone-guide-page [style*="flex-wrap:wrap; gap:14px; margin-top:32px"],
+  .brownstone-guide-page [style*="flex-wrap: wrap"][style*="gap: 14px"][style*="margin-top: 32px"] {
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .brownstone-guide-page [style*="flex-wrap:wrap; gap:14px; margin-top:32px"] > a,
+  .brownstone-guide-page [style*="flex-wrap: wrap"][style*="gap: 14px"][style*="margin-top: 32px"] > a {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    font-size: 12px !important;
+    padding: 14px 10px !important;
+    min-height: 48px !important;
+  }
+  .brownstone-guide-page aside[style*="position:sticky"],
+  .brownstone-guide-page aside[style*="position: sticky"] {
+    position: static !important;
+    margin-bottom: 8px !important;
+  }
+  .brownstone-guide-page aside nav[style*="border-left"] {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    border-left: none !important;
+    gap: 8px !important;
+  }
+  .brownstone-guide-page aside nav a {
+    border-left: none !important;
+    margin-left: 0 !important;
+    border: 1px solid #e0d9b8 !important;
+    border-radius: 100px !important;
+    padding: 8px 12px !important;
+    font-size: 12.5px !important;
+    background: #f9f6e6 !important;
+  }
+  .brownstone-guide-page [style*="border-left:4px solid #C98A2C"],
+  .brownstone-guide-page [style*="border-left: 4px solid #C98A2C"] {
+    padding: 22px 18px !important;
+    gap: 16px !important;
+  }
+  .brownstone-guide-page [style*="border-left:4px solid #C98A2C"] > a,
+  .brownstone-guide-page [style*="border-left: 4px solid #C98A2C"] > a {
+    width: 100% !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+  .brownstone-guide-page [style*="grid-template-columns:120px 1fr"],
+  .brownstone-guide-page [style*="grid-template-columns: 120px 1fr"] {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+    gap: 18px !important;
+  }
+  .brownstone-guide-page [style*="font-size:52px"],
+  .brownstone-guide-page h1[style*="font-size: 52px"] {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .two-family-page [style*="font-size:58px"],
+  .two-family-page h1[style*="font-size: 58px"] {
+    font-size: 27px !important;
+  }
+  .brownstone-guide-page [style*="font-size:52px"],
+  .brownstone-guide-page h1[style*="font-size: 52px"] {
+    font-size: 26px !important;
+  }
+}

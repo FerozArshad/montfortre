@@ -14,6 +14,8 @@ Fetch each file with download_to_repo into the same repo path (the part after /m
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlem.ts
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/neighborhoods.ts
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/home.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/twoFamily.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/brownstoneGuide.ts
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/idxSales.ts
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/idxRentals.ts
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/layout/DesktopHeader.tsx
@@ -26,6 +28,8 @@ Fetch each file with download_to_repo into the same repo path (the part after /m
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem/HarlemContent.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/neighborhoods/NeighborhoodsContent.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/home/HomeContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/two-family/TwoFamilyContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/brownstone/BrownstoneGuideContent.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/shared/ResourcesSection.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/shared/ContactSection.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/idx/IdxSearchLayout.tsx

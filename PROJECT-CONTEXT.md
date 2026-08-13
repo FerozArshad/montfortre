@@ -29,8 +29,7 @@ Neighborhoods/Harlem session: `ae837346-cdf1-4dd4-88d5-f1f4050703e1.jsonl`
 ## Migration status
 
 - **12 / 268** pages migrated
-- **All 12 migrated routes converted to TSX** except TwoFamily + Brownstone guide (still HTML strings)
-- Remaining HTML-string pages: `TwoFamilyHouseForSaleNyc.tsx`, `BrownstoneBuyingGuide.tsx`
+- **All 12 migrated routes converted to TSX** (no page-level `dangerouslySetInnerHTML`)
 
 ## Dev commands
 

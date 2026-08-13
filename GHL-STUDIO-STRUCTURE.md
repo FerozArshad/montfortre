@@ -24,7 +24,8 @@ src/
 │   ├── Neighborhoods.tsx   # ✅ converted TSX
 │   ├── IdxSales.tsx        # ✅ converted TSX
 │   ├── IdxRentals.tsx      # ✅ converted TSX
-│   └── TwoFamily + Brownstone still HTML-string pending
+│   ├── TwoFamilyHouseForSaleNyc.tsx
+│   └── BrownstoneBuyingGuide.tsx
 │
 ├── layouts/
 │   ├── SiteLayout.tsx      # Optional Outlet shell (MobileHeader only)
@@ -46,6 +47,10 @@ src/
 │   │   └── StanleyMontfortContent.tsx
 │   ├── success/
 │   │   └── SuccessStoriesContent.tsx
+│   ├── two-family/
+│   │   └── TwoFamilyContent.tsx
+│   ├── brownstone/
+│   │   └── BrownstoneGuideContent.tsx
 │   ├── shared/
 │   │   ├── ResourcesSection.tsx
 │   │   └── ContactSection.tsx
@@ -58,7 +63,9 @@ src/
 │       ├── stanleyMontfort.ts
 │       ├── successStories.ts
 │       ├── idxSales.ts
-│       └── idxRentals.ts
+│       ├── idxRentals.ts
+│       ├── twoFamily.ts
+│       └── brownstoneGuide.ts
 │
 ├── styles/
 │   ├── page-shell.css      # Shared responsive rules for converted pages

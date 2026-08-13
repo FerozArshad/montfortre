@@ -53,6 +53,8 @@ Copy these files from this repo into the GHL AI Studio project. Paths are identi
 | `src/seo/pages/blog.ts` | `/blog/` |
 | `src/seo/pages/harlem.ts` | `/harlem/` |
 | `src/seo/pages/neighborhoods.ts` | `/neighborhoods/` |
+| `src/seo/pages/twoFamily.ts` | `/2-family-house-for-sale-nyc/` |
+| `src/seo/pages/brownstoneGuide.ts` | `/advice-for-buyers-looking-to-purchase-brownstones/` |
 
 ## 4. Page components (all routes)
 
@@ -84,6 +86,8 @@ Copy these files from this repo into the GHL AI Studio project. Paths are identi
 | `src/components/harlem/HarlemContent.tsx` | `Harlem.tsx` |
 | `src/components/neighborhoods/NeighborhoodsContent.tsx` | `Neighborhoods.tsx` |
 | `src/components/home/HomeContent.tsx` | `Home.tsx` |
+| `src/components/two-family/TwoFamilyContent.tsx` | `TwoFamilyHouseForSaleNyc.tsx` |
+| `src/components/brownstone/BrownstoneGuideContent.tsx` | `BrownstoneBuyingGuide.tsx` |
 
 ## 6. Public assets
 

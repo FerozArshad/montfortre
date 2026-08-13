@@ -128,8 +128,8 @@ Listing photos on many pages load from live CDN (`https://assets.agentfire3.com`
 | `/harlem` | `Harlem.tsx` | ✅ TSX + HarlemSchools |
 | `/stanley-montfort` | `StanleyMontfort.tsx` | ✅ TSX via PageShell |
 | `/success-stories` | `SuccessStories.tsx` | ✅ TSX via PageShell |
-| `/2-family-house-for-sale-nyc` | `TwoFamilyHouseForSaleNyc.tsx` | |
-| `/advice-for-buyers-looking-to-purchase-brownstones` | `BrownstoneBuyingGuide.tsx` | |
+| `/2-family-house-for-sale-nyc` | `TwoFamilyHouseForSaleNyc.tsx` | ✅ TSX via PageShell |
+| `/advice-for-buyers-looking-to-purchase-brownstones` | `BrownstoneBuyingGuide.tsx` | ✅ TSX via PageShell |
 | `/neighborhoods` | `Neighborhoods.tsx` | ✅ TSX via PageShell |
 | `/idx-sales` | `IdxSales.tsx` | ✅ TSX via IdxSearchLayout |
 | `/idx-rentals` | `IdxRentals.tsx` | ✅ TSX via IdxSearchLayout |
