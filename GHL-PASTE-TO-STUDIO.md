@@ -61,6 +61,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/brownst
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/neighborhoods-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/about-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/two-family-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
@@ -124,17 +125,20 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harl
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/HarlemSchools.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/harlemSchools.json
 
+## 9. TwoFamilyHouseForSaleNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/two-family/TwoFamilyContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/two-family-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/twoFamily.ts
+
 ---
 
-## 9. Remaining migrated pages (full site)
+## 10. Remaining migrated pages (full site)
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Home.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/home/HomeContent.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/home.ts
-
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/two-family/TwoFamilyContent.tsx
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/twoFamily.ts
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/IdxSales.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/IdxRentals.tsx
