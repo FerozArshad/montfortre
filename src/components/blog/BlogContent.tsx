@@ -1,4 +1,5 @@
 import ContactSection from "../shared/ContactSection";
+import "../../styles/blog-page.css";
 
 const ARTICLES = [
   {
@@ -443,92 +444,54 @@ const ARTICLES = [
   },
 ] as const;
 
-const CARD_LINK = {
-  display: "flex",
-  flexDirection: "column",
-  background: "#F9F6E6",
-  border: "1px solid #E0D9B8",
-  borderRadius: 16,
-  overflow: "hidden",
-  transition: "transform .4s ease, box-shadow .4s ease, border-color .4s ease",
-} as const;
-
-const CARD_IMAGE = {
-  width: "100%",
-  height: "100%",
-  objectFit: "cover",
-  display: "block",
-  transition: "transform 1s cubic-bezier(0.22,0.61,0.36,1)",
-} as const;
-
 export default function BlogContent() {
   return (
     <>
-      <section data-screen-label="Blog hero" style={{ position: "relative", background: "#0F1729", overflow: "hidden", padding: "92px 64px 84px" }}>
-        <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.14, display: "block" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(15,23,41,0.7) 0%, rgba(15,23,41,0.94) 62%)" }} />
-        <div style={{ position: "absolute", top: -140, right: -160, width: 600, height: 600, borderRadius: "50%", border: "1px solid rgba(201,138,44,0.16)" }} />
-        <div style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14 }}>
-            <span style={{ width: 34, height: 1, background: "#C98A2C", display: "block" }} />
-            <span style={{ fontSize: 11.5, fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#F0D9A8" }}>Resources</span>
-            <span style={{ width: 34, height: 1, background: "#C98A2C", display: "block" }} />
+      <section className="blog-hero" data-screen-label="Blog hero">
+        <img className="blog-hero-photo" src="/redesign-assets/hoods/harlem.webp" alt="Harlem" aria-hidden="true" />
+        <div className="blog-hero-shade" />
+        <div className="blog-hero-ring" />
+        <div className="blog-hero-inner">
+          <div className="blog-hero-kicker">
+            <span className="blog-hero-kicker-line" />
+            <span className="blog-hero-kicker-label">Resources</span>
+            <span className="blog-hero-kicker-line" />
           </div>
-          <h1 style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 56, lineHeight: 1.08, letterSpacing: "-0.018em", color: "#F9F6E6", margin: "22px 0 0", textWrap: "pretty" }}>News & realtor advice</h1>
-          <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(249,246,230,0.85)", margin: "20px auto 0", maxWidth: 620, textWrap: "pretty" }}>Market reports, buyer and seller guides, and neighborhood insight from Stanley Montfort, stay in the loop on everything NYC real estate.</p>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, marginTop: 36, flexWrap: "wrap" }}>
-            <a
-              href="https://calendly.com/montfort"
-              target="_blank"
-              rel="noopener"
-              style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 9, background: "#C98A2C", color: "#0F1729", fontSize: 14, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", borderRadius: 100, padding: "16px 30px", minHeight: 52 }}
-              {...{ "style-hover": "background:#F9F6E6; color:#113B5F" }}
-            >
+          <h1>News & realtor advice</h1>
+          <p className="blog-hero-lead">
+            Market reports, buyer and seller guides, and neighborhood insight from Stanley Montfort, stay in the loop on everything NYC real estate.
+          </p>
+          <div className="blog-hero-ctas">
+            <a href="https://calendly.com/montfort" target="_blank" rel="noopener" className="blog-hero-book">
               Book a consultation{" "}
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
                 <path d="M3 8h9M8 3.5L12.5 8 8 12.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
-            <a
-              href="tel:+1-646-970-1078"
-              style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 9, background: "transparent", color: "#F9F6E6", fontSize: 14, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", border: "1px solid rgba(201,138,44,0.6)", borderRadius: 100, padding: "16px 30px", minHeight: 52 }}
-              {...{ "style-hover": "background:rgba(249,246,230,0.08); border-color:#C98A2C" }}
-            >
+            <a href="tel:+1-646-970-1078" className="blog-hero-tel">
               Call (646) 970-1078
             </a>
           </div>
         </div>
       </section>
-      <section data-screen-label="Articles" style={{ background: "#F5EECB", padding: "90px 64px", borderBottom: "1px solid #E0D9B8" }}>
-        <div style={{ maxWidth: 1440, margin: "0 auto" }}>
-          <div data-reveal="" style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 44 }}>
-            <div style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 22, color: "#0F1729" }}>55 articles</div>
-            <div style={{ fontSize: 14, color: "#3B4C5E" }}>Market Reports · Buyer & Seller Guides · Co-Ownership · Investing</div>
+      <section className="blog-articles" data-screen-label="Articles">
+        <div className="blog-articles-inner">
+          <div data-reveal="" className="blog-articles-head">
+            <div className="blog-articles-count">55 articles</div>
+            <div className="blog-articles-topics">Market Reports · Buyer & Seller Guides · Co-Ownership · Investing</div>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: 26 }}>
+          <div className="blog-articles-grid">
             {ARTICLES.map((article) => (
-              <a
-                key={article.href}
-                data-reveal=""
-                href={article.href}
-                style={CARD_LINK}
-                {...{ "style-hover": "transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C" }}
-              >
-                <div style={{ aspectRatio: "5/3", overflow: "hidden", background: "#E0D9B8" }}>
-                  <img
-                    src={article.image}
-                    alt={article.alt}
-                    loading="lazy"
-                    style={CARD_IMAGE}
-                    {...{ "style-hover": "transform:scale(1.05)" }}
-                  />
+              <a key={article.href} data-reveal="" href={article.href} className="blog-card">
+                <div className="blog-card-media">
+                  <img src={article.image} alt={article.alt} loading="lazy" />
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", flex: "1 1 auto", padding: "24px 26px 26px" }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#C98A2C" }}>{article.category}</div>
-                  <div style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 19, lineHeight: 1.32, color: "#0F1729", marginTop: 12, textWrap: "pretty" }}>{article.title}</div>
-                  <p style={{ fontSize: 15, lineHeight: 1.7, color: "#3B4C5E", margin: "12px 0 0", flex: "1 1 auto", textWrap: "pretty" }}>{article.excerpt}</p>
-                  <div style={{ display: "flex", alignItems: "center", gap: 9, marginTop: 20, fontSize: 11.5, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#113B5F" }}>
-                    Read article <span style={{ color: "#C98A2C" }}>→</span>
+                <div className="blog-card-body">
+                  <div className="blog-card-cat">{article.category}</div>
+                  <div className="blog-card-title">{article.title}</div>
+                  <p>{article.excerpt}</p>
+                  <div className="blog-card-more">
+                    Read article <span className="blog-card-more-arrow">→</span>
                   </div>
                 </div>
               </a>

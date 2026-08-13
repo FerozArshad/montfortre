@@ -54,6 +54,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-in
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-listings.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-download.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/services-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/blog-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
@@ -70,6 +71,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/serv
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Blog.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/blog/BlogContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/blog-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/blog.ts
 
 ## 3. StanleyMontfort
