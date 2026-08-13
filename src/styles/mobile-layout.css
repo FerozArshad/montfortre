@@ -13,13 +13,13 @@
   body,
   #root {
     max-width: 100%;
+    overflow-x: clip;
   }
 
   .site-page,
   footer {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
   }
 
   .site-page section,
@@ -87,9 +87,9 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
   }
 
-  /* School cards: 2×3, not a 5-col desktop table. */
+  /* School cards stay one row so the 4-row carousel does not become a nested scroller. */
   .site-page .harlem-schools__item {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.9fr) auto !important;
   }
 
   /* Horizontal padding: section/footer rails that use 64px side gutters.
@@ -147,7 +147,7 @@
   }
 
   .site-page .harlem-schools__item {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.9fr) auto !important;
   }
 }
 
@@ -243,7 +243,7 @@
   }
 
   .site-page .harlem-schools__item {
-    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
   }
 }
 

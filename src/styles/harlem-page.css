@@ -1200,41 +1200,40 @@
   }
 
   .harlem-schools__item {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 8px 16px;
-    padding: 16px 18px;
-    height: auto;
-    min-height: 100%;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.9fr) auto;
+    grid-template-rows: none;
+    gap: 8px 12px;
+    padding: 0 14px;
+    height: 100%;
   }
 
   .harlem-schools__name {
-    grid-column: 1 / -1;
-    font-size: 15px;
+    grid-column: auto;
+    font-size: 14px;
+  }
+
+  .harlem-schools__type,
+  .harlem-schools__grades {
+    display: none;
   }
 
   .harlem-schools__rating {
-    grid-column: 1 / -1;
-    justify-self: start;
-    padding-top: 4px;
+    grid-column: auto;
+    justify-self: end;
+    padding-top: 0;
   }
 
   .harlem-schools__viewport {
-    height: min(70vh, 520px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .harlem-schools__track {
-    transform: none !important;
+    height: 368px;
+    overflow: hidden;
   }
 
   .harlem-schools__row {
-    height: auto;
+    height: 92px;
   }
 
   .harlem-schools__nav-desktop {
-    display: none;
+    display: flex;
   }
 }
 
@@ -1310,6 +1309,12 @@
 
   .hlm-form-row {
     gap: 12px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .harlem-schools__phone {
+    display: none;
   }
 }
 

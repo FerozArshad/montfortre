@@ -211,6 +211,15 @@
   .contact-visit {
     left: 12px;
     right: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .contact-section a.contact-directions {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
   }
 }
 
