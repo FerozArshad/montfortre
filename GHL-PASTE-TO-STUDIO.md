@@ -56,6 +56,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-do
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/services-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/blog-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/stanley-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/success-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
@@ -86,6 +87,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/stan
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SuccessStories.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/success/SuccessStoriesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/success-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/successStories.ts
 
 ## 5. BrownstoneBuyingGuide

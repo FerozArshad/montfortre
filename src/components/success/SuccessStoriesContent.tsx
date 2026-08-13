@@ -1,5 +1,6 @@
 import ContactSection from "../shared/ContactSection";
 import ResourcesSection from "../shared/ResourcesSection";
+import "../../styles/success-page.css";
 
 const GOOGLE_MARK =
   "https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png";
@@ -77,40 +78,21 @@ const TESTIMONIALS = [
   },
 ] as const;
 
-const CARD_STYLE = {
-  breakInside: "avoid",
-  display: "inline-block",
-  width: "100%",
-  marginBottom: 24,
-  background: "#F9F6E6",
-  border: "1px solid #E0D9B8",
-  borderRadius: 16,
-  padding: "30px 30px 26px",
-  verticalAlign: "top",
-} as const;
-
 export default function SuccessStoriesContent() {
   return (
     <div>
-      <section data-screen-label="Success hero" style={{ position: "relative", background: "#0F1729", overflow: "hidden", padding: "96px 64px 90px" }}>
-        <img
-          src="/redesign-assets/hoods/harlem.webp"
-          alt="Harlem"
-          aria-hidden="true"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.14, display: "block" }}
-        />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(15,23,41,0.7) 0%, rgba(15,23,41,0.94) 62%)" }} />
-        <div style={{ position: "absolute", top: -140, right: -160, width: 600, height: 600, borderRadius: "50%", border: "1px solid rgba(201,138,44,0.16)" }} />
-        <div style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14 }}>
-            <span style={{ width: 34, height: 1, background: "#C98A2C", display: "block" }} />
-            <span style={{ fontSize: 11.5, fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#F0D9A8" }}>Client Reviews</span>
-            <span style={{ width: 34, height: 1, background: "#C98A2C", display: "block" }} />
+      <section className="succ-hero" data-screen-label="Success hero">
+        <img className="succ-hero-photo" src="/redesign-assets/hoods/harlem.webp" alt="Harlem" aria-hidden="true" />
+        <div className="succ-hero-shade" />
+        <div className="succ-hero-ring" />
+        <div className="succ-hero-inner">
+          <div className="succ-hero-kicker">
+            <span className="succ-hero-kicker-line" />
+            <span className="succ-hero-kicker-label">Client Reviews</span>
+            <span className="succ-hero-kicker-line" />
           </div>
-          <h1 style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 56, lineHeight: 1.08, letterSpacing: "-0.018em", color: "#F9F6E6", margin: "22px 0 0", textWrap: "pretty" }}>
-            Success stories
-          </h1>
-          <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(249,246,230,0.85)", margin: "20px auto 0", maxWidth: 640, textWrap: "pretty" }}>
+          <h1>Success stories</h1>
+          <p className="succ-hero-lead">
             Real reviews from New York buyers and sellers who trusted Stanley Montfort with one of the biggest decisions of their lives.
           </p>
           <a
@@ -118,123 +100,52 @@ export default function SuccessStoriesContent() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Read verified Google reviews"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 24,
-              marginTop: 38,
-              background: "#FFFFFF",
-              border: "1px solid rgba(201,138,44,0.6)",
-              borderRadius: 16,
-              boxShadow: "0 22px 48px rgba(0,0,0,0.35)",
-              padding: "18px 30px",
-              whiteSpace: "nowrap",
-              textDecoration: "none",
-              color: "inherit",
-            }}
+            className="succ-google"
           >
-            <div style={{ display: "flex", flexDirection: "column", gap: 8, paddingRight: 24, borderRight: "1px solid #E0D9B8", textAlign: "left" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
-                <img src={GOOGLE_MARK} alt="Google" style={{ width: 30, height: 30, display: "block" }} />
-                <span style={{ fontSize: 30, fontWeight: 900, lineHeight: 1, letterSpacing: "-0.02em", color: "#0F1729" }}>5.0</span>
+            <div className="succ-google-score">
+              <div className="succ-google-score-row">
+                <img src={GOOGLE_MARK} alt="Google" />
+                <span className="succ-google-num">5.0</span>
               </div>
-              <span style={{ fontSize: 11, fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase", color: "#52677A" }}>Verified Google reviews</span>
+              <span className="succ-google-label">Verified Google reviews</span>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 9, textAlign: "left" }}>
-              <span style={{ color: "#F5A623", fontSize: 19, letterSpacing: "0.14em", lineHeight: 1 }}>★★★★★</span>
-              <span style={{ fontSize: 15, lineHeight: 1.4, color: "#0F1729" }}>
-                Over <strong style={{ fontWeight: 700 }}>57 reviews</strong>
+            <div className="succ-google-meta">
+              <span className="succ-google-stars">★★★★★</span>
+              <span className="succ-google-count">
+                Over <strong>57 reviews</strong>
               </span>
             </div>
           </a>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, marginTop: 36, flexWrap: "wrap" }}>
-            <a
-              href="https://calendly.com/montfort"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 9,
-                background: "#C98A2C",
-                color: "#0F1729",
-                fontSize: 14,
-                fontWeight: 700,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                borderRadius: 100,
-                padding: "16px 30px",
-                minHeight: 52,
-              }}
-              {...{ "style-hover": "background:#F9F6E6; color:#113B5F" }}
-            >
+          <div className="succ-hero-ctas">
+            <a href="https://calendly.com/montfort" target="_blank" rel="noopener noreferrer" className="succ-hero-book">
               Book a consultation{" "}
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
                 <path d="M3 8h9M8 3.5L12.5 8 8 12.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
-            <a
-              href="tel:+1-646-970-1078"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 9,
-                background: "transparent",
-                color: "#F9F6E6",
-                fontSize: 14,
-                fontWeight: 700,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                border: "1px solid rgba(201,138,44,0.6)",
-                borderRadius: 100,
-                padding: "16px 30px",
-                minHeight: 52,
-              }}
-              {...{ "style-hover": "background:rgba(249,246,230,0.08); border-color:#C98A2C" }}
-            >
+            <a href="tel:+1-646-970-1078" className="succ-hero-tel">
               Call (646) 970-1078
             </a>
           </div>
         </div>
       </section>
 
-      <section data-screen-label="Testimonials" style={{ background: "#F5EECB", padding: "100px 64px", borderBottom: "1px solid #E0D9B8" }}>
-        <div className="success-masonry" style={{ maxWidth: 1280, margin: "0 auto", columnCount: 3, columnGap: 24 }}>
+      <section className="succ-list" data-screen-label="Testimonials">
+        <div className="success-masonry">
           {TESTIMONIALS.map((item) => (
-            <div key={item.href} data-reveal="" style={CARD_STYLE}>
-              <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16 }}>
-                <span style={{ fontFamily: "Georgia,'Times New Roman',serif", fontSize: 56, lineHeight: 0.7, color: "#C98A2C" }}>{'\u201C'}</span>
-                <span style={{ color: "#F5A623", fontSize: 16, letterSpacing: "0.1em", lineHeight: 1, marginTop: 8 }}>★★★★★</span>
+            <div key={item.href} data-reveal="" className="succ-card">
+              <div className="succ-card-head">
+                <span className="succ-card-quote">{'\u201C'}</span>
+                <span className="succ-card-stars">★★★★★</span>
               </div>
-              <p style={{ fontSize: 16, lineHeight: 1.7, color: "#3B4C5E", margin: "6px 0 0", textWrap: "pretty" }}>{item.quote}</p>
-              <div style={{ display: "flex", alignItems: "center", gap: 14, marginTop: 22, paddingTop: 20, borderTop: "1px solid #E0D9B8" }}>
-                <div
-                  style={{
-                    position: "relative",
-                    flex: "0 0 auto",
-                    width: 52,
-                    height: 52,
-                    borderRadius: "50%",
-                    overflow: "hidden",
-                    background: "#113B5F",
-                    color: "#F9F6E6",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "'Space Grotesk',system-ui,sans-serif",
-                    fontWeight: 700,
-                    fontSize: 17,
-                  }}
-                >
-                  {item.initials}
-                </div>
-                <div style={{ flex: "1 1 auto", minWidth: 0 }}>
-                  <div style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 15.5, color: "#0F1729", textWrap: "pretty" }}>{item.name}</div>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 3 }}>
-                    <img src={GOOGLE_MARK} alt="Google" style={{ width: 15, height: 15, display: "block" }} />
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12.5, color: "#52677A" }} {...{ "style-hover": "color:#C98A2C" }}>
+              <p>{item.quote}</p>
+              <div className="succ-card-author">
+                <div className="succ-card-initials">{item.initials}</div>
+                <div className="succ-card-who">
+                  <div className="succ-card-name">{item.name}</div>
+                  <div className="succ-card-google">
+                    <img src={GOOGLE_MARK} alt="Google" />
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="succ-card-date">
                       {item.date}
                     </a>
                   </div>
