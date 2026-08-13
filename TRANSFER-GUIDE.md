@@ -108,5 +108,7 @@ Copy these files from this repo into the GHL AI Studio project. Paths are identi
 
 ## Quick sync
 
-Full raw-URL manifest: `GHL-URLS.md`  
-Directory reference: `GHL-STUDIO-STRUCTURE.md`
+1. Paste `GHL-PASTE-TO-STUDIO.md` into GHL, then `GHL-FULL-FETCH.md`.
+2. Mark FETCHED/VERIFIED in `GHL-TRANSFER-TRACKING.md` after Studio confirms.
+3. Flat URL dump: `GHL-URLS.md`  
+4. Directory reference: `GHL-STUDIO-STRUCTURE.md`

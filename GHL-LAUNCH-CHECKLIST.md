@@ -36,12 +36,13 @@ This checklist covers **Part A** from `HANDOFF-SECTION-seo-launch-readiness.md`.
 
 ## Redeploy steps (GHL AI Studio)
 
-1. Pull all files listed in `GHL-URLS.md`.
-2. Wire `src/App.tsx` routes + `MobileHeader` + global CSS imports.
-3. Confirm platform does **not** inject its own title, description, or canonical.
-4. Serve `public/robots.txt` and `public/sitemap.xml` at the web root (not inside `/assets/`).
-5. Work blockers A1–A8 above.
-6. Re-verify with curl + browser at 375 / 768 / 1440 px on every route.
+1. Studio cannot clone. Fetch raw URLs from `GHL-PASTE-TO-STUDIO.md` then `GHL-FULL-FETCH.md`.
+2. Update `GHL-TRANSFER-TRACKING.md` when Studio confirms each batch.
+3. Wire `src/App.tsx` routes + `MobileHeader` + global CSS imports (`main.tsx`).
+4. Confirm platform does **not** inject its own title, description, or canonical.
+5. Serve `public/robots.txt` and `public/sitemap.xml` at the web root (not inside `/assets/`).
+6. Work blockers A1–A8 above.
+7. Re-verify with curl + browser at 375 / 768 / 1440 px on every route.
 
 ---
 

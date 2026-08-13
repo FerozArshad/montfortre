@@ -1,6 +1,6 @@
 # HANDOFF — Montfort Real Estate site (context for the next agent)
 
-> **New agents:** start with `AGENT-ONBOARDING.md` for repo layout, commands, architecture, routes, and constraints. This file adds launch blockers and audit history.
+> **New agents:** start with `AGENTS.md` and `AGENT-ONBOARDING.md`. GHL transfer status is `GHL-TRANSFER-TRACKING.md`. This file adds launch blockers and audit history.
 
 ## What this project is
 This repo is the approved redesign of https://montfortre.com/ (NYC realtor), being rebuilt as a
@@ -26,7 +26,10 @@ from a design tool; each page's SEO was copied byte-exact from the original live
 | ROUTES.tsx.snippet | The <Route> lines used in App.tsx |
 | public/redesign-assets/** | Design artwork (incl. slots/ service images) |
 | public/instagram/** | Instagram grid photos |
-| GHL-URLS.md | Raw-URL manifest of every file |
+| GHL-URLS.md | Flat raw-URL manifest |
+| GHL-PASTE-TO-STUDIO.md | Paste list for Studio (shared + first six pages) |
+| GHL-FULL-FETCH.md | Paste list (remaining pages, styles, all public assets) |
+| GHL-TRANSFER-TRACKING.md | Sent / fetched / verified checklist |
 
 ## How pages are built (important)
 Every migrated route is real TSX: `PageShell` (Seo + DesktopHeader + footer) wrapping a content
@@ -43,25 +46,11 @@ mostly **inline styles** on TSX elements; responsive overrides live in `src/styl
 4. Do not remove the `style-hover` attributes or the useStyleHover hook.
 5. Do not rename routes or files; internal links are root-relative (`/services/` etc.).
 
-## The current task: RESPONSIVENESS
-The design is desktop-only today. Verified issues at 375px mobile viewport:
-- Every page wraps content in `<div style="min-width:1440px; ...">` → phones render a zoomed-out
-  1440px desktop layout with tiny text.
-- No mobile menu: the header nav (5 items + dropdowns, 28 links) has no hamburger; dropdowns open
-  on hover only, which does not work on touch.
-- Fixed desktop measurements throughout: 64px section padding, multi-column grids with fixed px
-  track widths (e.g. `grid-template-columns:620px 1fr`), fixed font sizes, a 1200px-tall IDX iframe.
+## The current task: GHL Studio ingest + launch blockers
 
-Because all styling is inline, media queries in a stylesheet need `!important` or class hooks to win.
-The recommended approach per page:
-- Change the outer wrapper `min-width:1440px` to `max-width:100%` (keep desktop layout via a
-  max-width container instead of min-width).
-- Add a `<style>` block with mobile/tablet media queries (breakpoints: 1024px, 768px, 480px) using
-  structural selectors + `!important` where needed to: collapse grids to 1 column, reduce padding
-  (64px -> 20px), scale type, make images fluid.
-- Build ONE shared mobile header (hamburger + slide-in menu with tap-to-expand submenu) and use it
-  on all 9 pages; hide the desktop nav under 1024px.
-- Keep the desktop layout pixel-identical at >=1440px. Verify no horizontal scrolling at 375px.
+Local conversion is done. The owner is copying files into GHL AI Studio via **raw GitHub URLs** (Studio cannot clone). Track progress in `GHL-TRANSFER-TRACKING.md`. After Studio has the files, remaining work is **platform** (prerender, canonical injection, 404 status, robots/sitemap at web root) — see launch blockers below.
+
+Responsive CSS already lives in `src/styles/page-shell.css` and per-page classes. Do not revert pages to HTML strings.
 
 ## Verification after your changes
 The previous agent (Claude, working with the site owner) will re-audit after you finish:

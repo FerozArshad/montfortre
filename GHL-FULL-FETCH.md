@@ -1,6 +1,6 @@
 # Full GHL fetch — directories, routes, branding, styles, remaining pages
 
-Paste this to GHL AI Studio after the first six pages (or in one go if paste limit allows).
+Paste this to GHL AI Studio after the first six pages (or in one go if paste limit allows). Track results in `GHL-TRANSFER-TRACKING.md`.
 
 **Rule:** Fetch each URL. Write to the **same path after `/main/`**. Do not invent files. Do not edit SEO. Logo/nav branding is already inside `DesktopHeader.tsx` / `SiteFooter.tsx` (CDN + `/redesign-assets/rebny.webp`).
 

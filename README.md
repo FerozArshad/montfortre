@@ -38,9 +38,13 @@ public/
 
 | File | Purpose |
 |---|---|
+| `AGENTS.md` | Short agent contract |
 | `AGENT-ONBOARDING.md` | Start here |
+| `PROJECT-CONTEXT.md` | Session continuity |
+| `GHL-TRANSFER-TRACKING.md` | What GHL was sent vs fetched |
 | `HANDOFF.md` | Launch blockers and constraints |
 | `TRANSFER-GUIDE.md` | Copy files into GHL AI Studio |
+| `GHL-PASTE-TO-STUDIO.md` / `GHL-FULL-FETCH.md` | Raw URLs for Studio |
 | `ROUTES.tsx.snippet` | Route reference (mirrors `App.tsx`) |
 
 ## Routes

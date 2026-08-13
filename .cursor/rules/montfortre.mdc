@@ -1,0 +1,30 @@
+---
+description: Montfort RE constraints, GHL transfer, and handoff docs for every session
+alwaysApply: true
+---
+
+# Montfort Real Estate (GHL React SPA)
+
+Git repo is `d:\montfortre\ghl-react` (remote `https://github.com/FerozArshad/montfortre`). Parent `d:\montfortre\reference\` is not in git.
+
+Read `AGENT-ONBOARDING.md` first. Session state: `PROJECT-CONTEXT.md`. Launch blockers: `HANDOFF.md`.
+
+## Frozen
+
+- SEO modules in `src/seo/pages/*.ts` — never edit values
+- Copy, phone `(646) 970-1078`, link targets, H1 counts
+- Desktop ≥1440px pixel-identical; responsive only in `max-width` queries
+- Keep `style-hover` and `useStyleHover()`
+
+## Architecture
+
+- React 18 + Vite + TypeScript. Not Next.js.
+- `src/App.tsx`: `MobileHeader` once above `Routes`
+- Converted pages: `PageShell` + `src/components/<area>/*Content.tsx`
+- No page-level `dangerouslySetInnerHTML`
+
+## GHL AI Studio
+
+Studio cannot clone, unzip, or SSH. Give **raw URLs** (`GHL-PASTE-TO-STUDIO.md`, `GHL-FULL-FETCH.md`). Track sent vs fetched in **`GHL-TRANSFER-TRACKING.md`**. After GHL confirms files, mark FETCHED/VERIFIED and commit.
+
+Do not add routes for unmigrated live URLs; they use `NotMigrated`.

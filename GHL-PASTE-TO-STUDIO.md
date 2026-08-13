@@ -1,5 +1,7 @@
 # Paste this message to GHL AI Studio
 
+After GHL writes files, update `GHL-TRANSFER-TRACKING.md` (FETCHED column). Full remaining pages + images: `GHL-FULL-FETCH.md`.
+
 Fetch each URL and **write the file to the same path after `/main/`**. Do not invent pages. Do not edit SEO values. Do not wrap content in `dangerouslySetInnerHTML`.
 
 Each migrated page is three files: `src/pages/<Page>.tsx` (thin shell) + `src/components/<folder>/<Content>.tsx` (real TSX) + `src/seo/pages/<seo>.ts` (frozen head tags).

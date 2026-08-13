@@ -128,4 +128,4 @@ export default function Example() {
 | `npm run lint` | ESLint |
 | `npm run test` | Vitest |
 
-See `TRANSFER-GUIDE.md` for the full file copy list and `GHL-LAUNCH-CHECKLIST.md` for platform blockers.
+See `TRANSFER-GUIDE.md` for the file copy list, `GHL-TRANSFER-TRACKING.md` for Studio ingest status, and `GHL-LAUNCH-CHECKLIST.md` for platform blockers.

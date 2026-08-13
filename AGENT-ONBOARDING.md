@@ -1,7 +1,9 @@
 # Agent onboarding — Montfort Real Estate (`montfortre`)
 
 This document is the entry point for AI agents and developers working on the site.
-Read this first, then `HANDOFF.md` for constraints and launch blockers.
+Read this first, then `PROJECT-CONTEXT.md` and `HANDOFF.md`.
+
+Also read `AGENTS.md` (short) and `.cursor/rules/montfortre.mdc` (always-on Cursor rule).
 
 ## Repository ↔ local workspace
 
@@ -99,6 +101,8 @@ Listing photos on many pages load from live CDN (`https://assets.agentfire3.com`
 |---|---|
 | `src/data/harlemSchools.json` | 104 Harlem schools (extracted from live site) |
 | `scripts/extract-harlem-schools.mjs` | Regenerate schools JSON from source markup |
+| `scripts/extract-page-seo.mjs` | Pull TITLE/METAS/LINKS/JSON_LD from a page into `src/seo/pages/` |
+| `scripts/convert-html-pages.mjs` | One-off HTML-string → TSX converter (already run for Two Family + Brownstone) |
 | `scripts/update-neighborhood-nav-labels.mjs` | Bulk-update `{Neighborhood} Realtor` nav labels |
 
 ## Routes (`src/App.tsx`)
@@ -149,27 +153,37 @@ Header dropdowns, footer neighborhood column, and `MobileHeader` use **"{Neighbo
 
 | File | When to read |
 |---|---|
+| `AGENTS.md` | One-page agent contract |
 | `HANDOFF.md` | Master context, launch blockers, SEO audit items |
-| `HANDOFF-SECTION-neighborhoods-harlem-stanley.md` | Recent neighborhoods / Harlem schools / Stanley hero work |
+| `PROJECT-CONTEXT.md` | Session continuity (paths, conversion status, GHL transfer) |
+| `GHL-TRANSFER-TRACKING.md` | What was sent to GHL vs fetched vs verified |
+| `GHL-PASTE-TO-STUDIO.md` | Raw URLs: shared runtime + first six pages |
+| `GHL-FULL-FETCH.md` | Raw URLs: remaining pages, styles, branding, all `public/` images |
+| `HANDOFF-SECTION-neighborhoods-harlem-stanley.md` | Historical neighborhoods / Harlem schools / Stanley hero work |
 | `HANDOFF-SECTION-seo-launch-readiness.md` | SEO validation and cutover checklist |
 | `GHL-STUDIO-STRUCTURE.md` | GHL AI Studio directory standard + converted page pattern |
 | `GHL-LAUNCH-CHECKLIST.md` | Platform blockers checklist for GHL deploy (Part A) |
 | `RESPONSIVE-PROMPTS.md` | Prompt templates for responsive tasks |
 | `TRANSFER-GUIDE.md` | Copying files into GHL AI Studio |
-| `GHL-URLS.md` | Raw URL manifest |
+| `GHL-URLS.md` | Flat raw-URL manifest |
 | `ROUTES.tsx.snippet` | Route lines for GHL `App.tsx` wiring |
 
 ## GHL deployment notes
 
-- Copy page files + shared components/hooks/CSS into the GHL AI Studio project per `TRANSFER-GUIDE.md`.
-- Platform must **not** inject its own canonical/meta — `Seo.tsx` owns the head.
-- `index.html` shell should only have charset + viewport (or match homepage SEO).
+GHL AI Studio **cannot git clone, unzip, or browse the repo**. Ingest is public raw URLs only.
+
+1. Paste lists in `GHL-PASTE-TO-STUDIO.md` then `GHL-FULL-FETCH.md`.
+2. Track Studio writes in `GHL-TRANSFER-TRACKING.md` (SENT vs FETCHED vs VERIFIED).
+3. Platform must **not** inject its own canonical/meta — `Seo.tsx` owns the head.
+4. `index.html` shell: charset + viewport + favicon only.
+5. Verification prompt for later is at the bottom of `GHL-TRANSFER-TRACKING.md`.
 
 ## Git workflow
 
-- Repo tracks **all project files** including `node_modules/` (no `.gitignore` exclusions).
+- Repo root is `ghl-react/` with `.gitignore` excluding `node_modules/`, `dist/`, `*.tsbuildinfo`, `reference/`.
 - Branch: `main`
-- After local changes: `git add -A`, commit, `git push origin main`
+- Commit only when the owner asks. Push when they want GitHub updated.
+- After GHL confirms fetches, update `GHL-TRANSFER-TRACKING.md` and commit.
 
 ## Verification checklist (after edits)
 
