@@ -55,6 +55,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-li
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-download.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/services-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/blog-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/stanley-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
@@ -78,6 +79,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/blog
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/StanleyMontfort.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/stanley/StanleyMontfortContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/stanley-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/stanleyMontfort.ts
 
 ## 4. SuccessStories
