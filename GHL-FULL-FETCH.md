@@ -60,7 +60,7 @@ public/instagram/
 ## Branding (do not recreate)
 
 - Header/footer **logo** is a CSS mask from CDN (already in DesktopHeader / SiteFooter):
-  `https://assets.agentfire3.com/uploads/sites/312/2026/07/Logo-Transparency-black.png`
+  `/redesign-assets/logo-transparency-black.png`
 - Colors: navy `#113B5F`, gold `#C98A2C`, cream `#F9F6E6`, ink `#0F1729`
 - Fonts: Space Grotesk + DM Sans (loaded via frozen SEO `LINKS` in each `src/seo/pages/*.ts`)
 - Favicon: `public/favicon.svg` and `public/redesign-assets/favicon.png`

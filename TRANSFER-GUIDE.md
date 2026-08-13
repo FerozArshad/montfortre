@@ -104,7 +104,7 @@ Copy these files from this repo into the GHL AI Studio project. Paths are identi
 - **Do not** let GHL inject its own title, description, or canonical — `Seo.tsx` owns the head.
 - **Do** enable prerendering/SSR so crawlers see per-route SEO (see `GHL-LAUNCH-CHECKLIST.md`).
 - Internal links use trailing slashes (`/harlem/`).
-- Listing photos load from `https://assets.agentfire3.com` (live CDN).
+- Listing photos, logo, and favicons load from `/redesign-assets/` in this repo.
 
 ## Quick sync
 

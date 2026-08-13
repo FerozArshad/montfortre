@@ -93,7 +93,7 @@ export default function SiteFooter() {
       <div className="site-footer-contact">
         <a href="/" className="site-footer-logo">
           <img
-            src="https://assets.agentfire3.com/uploads/sites/312/2026/07/Logo-Transparency-black.png"
+            src="/redesign-assets/logo-transparency-black.png"
             alt="Montfort Real Estate"
           />
         </a>

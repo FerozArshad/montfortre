@@ -158,4 +158,4 @@ Public images are listed in:
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/GHL-URLS.md
 
-Fetch every `public/` URL in that file to the same path. Logo/branding also uses CDN URLs already inside the TSX (AgentFire). REBNY badge: `/redesign-assets/rebny.webp`.
+Fetch every `public/` URL in that file to the same path, including `public/redesign-assets/**` (logo, favicons, listings, OG). REBNY badge: `/redesign-assets/rebny.webp`. Do not use AgentFire CDN URLs.

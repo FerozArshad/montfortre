@@ -108,7 +108,7 @@ Paste source: `GHL-FULL-FETCH.md`. SENT to owner 2026-08-13. FETCHED unknown.
 ## Batch 3 — branding + `public/` images
 
 Logo in header/footer is **CDN** (not a local file):  
-`https://assets.agentfire3.com/uploads/sites/312/2026/07/Logo-Transparency-black.png`
+`/redesign-assets/logo-transparency-black.png`
 
 Must-have local branding (SENT 2026-08-13):
 

@@ -69,7 +69,7 @@ const MENU: MenuSection[] = [
 ];
 
 const LOGO_URL =
-  "https://assets.agentfire3.com/uploads/sites/312/2026/07/Logo-Transparency-black.png";
+  "/redesign-assets/logo-transparency-black.png";
 
 function Chevron() {
   return (

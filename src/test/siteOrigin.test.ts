@@ -12,7 +12,6 @@ describe("siteOrigin", () => {
   it("does not rewrite email or third-party URLs", () => {
     const origin = "https://preview.example.com";
     expect(adaptSiteUrls("sm@montfortre.com", origin)).toBe("sm@montfortre.com");
-    expect(adaptSiteUrls("https://assets.agentfire3.com/logo.png", origin)).toBe("https://assets.agentfire3.com/logo.png");
     expect(adaptSiteUrls("https://calendly.com/montfort", origin)).toBe("https://calendly.com/montfort");
   });
 

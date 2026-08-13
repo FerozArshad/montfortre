@@ -93,7 +93,7 @@ There are **no remaining HTML-string pages**. Frozen SEO lives in `src/seo/pages
 | `public/instagram/**` | Instagram grid photos |
 | `public/robots.txt`, `sitemap.xml` | SEO crawl files |
 
-Listing photos on many pages load from live CDN (`https://assets.agentfire3.com`).
+Brand, listing, OG, and favicon files live in `public/redesign-assets/` (no AgentFire CDN).
 
 ### Data & scripts
 

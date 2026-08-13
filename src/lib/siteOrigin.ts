@@ -29,7 +29,7 @@ export function isProductionHostname(hostname: string): boolean {
   return /^(www\.)?montfortre\.com$/i.test(hostname);
 }
 
-/** Rewrite frozen https://montfortre.com URLs to the current origin. Leaves emails and third-party URLs alone. */
+/** Rewrite frozen https://montfortre.com URLs to the current origin. Leaves emails, Calendly, and IDX URLs alone. */
 export function adaptSiteUrls(value: string, origin = getSiteOrigin()): string {
   return value.replace(PRODUCTION_ORIGIN_RE, origin);
 }

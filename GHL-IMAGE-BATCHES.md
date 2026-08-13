@@ -4,7 +4,7 @@
 
 > Create these folders. Fetch each URL as binary. Save at the path after `/main/`. Do not rename. Prefer `.webp` in pages; keep `.jpg`/`.png` fallbacks too. Logo is CDN, not in this list.
 
-`https://assets.agentfire3.com/uploads/sites/312/2026/07/Logo-Transparency-black.png`
+`/redesign-assets/logo-transparency-black.png`
 
 Total image files: **140**. Batches: **1–50**, **51–100**, **101–140**.
 

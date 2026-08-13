@@ -47,7 +47,7 @@ As of this write-up: lists are **PREPARED + SENT to the owner**. Studio **FETCHE
 
 ## Site origin (multi-domain)
 
-Frozen SEO still stores `https://montfortre.com`. At inject time `src/lib/siteOrigin.ts` + `Seo.tsx` rewrite that origin to `window.location.origin`, or to `VITE_PUBLIC_SITE_URL` if set. Leave the env unset while hopping GHL/preview domains. Hosts other than `montfortre.com` / `www.montfortre.com` get `noindex,nofollow`. Do not rewrite `sm@montfortre.com`, Calendly, IDX, or AgentFire CDN URLs. Internal links stay root-relative (`/services/`).
+Frozen SEO still stores `https://montfortre.com`. At inject time `src/lib/siteOrigin.ts` + `Seo.tsx` rewrite that origin to `window.location.origin`, or to `VITE_PUBLIC_SITE_URL` if set. Leave the env unset while hopping GHL/preview domains. Hosts other than `montfortre.com` / `www.montfortre.com` get `noindex,nofollow`. Do not rewrite `sm@montfortre.com`, Calendly, or IDX URLs. Brand, listing, and OG images live under `public/redesign-assets/` — never AgentFire CDN. Internal links stay root-relative (`/services/`).
 
 ## Dev commands
 

@@ -320,25 +320,25 @@ const IG_POSTS = [
 
 const INCLUDED = [
   {
-    image: "https://assets.agentfire3.com/uploads/templates/home-2-2/5-200xAUTO.fit.png",
+    image: "/redesign-assets/included/closing-costs.png",
     alt: "Closing Costs Savings",
     title: "Closing Costs Savings",
     copy: "We’ll assess each house to see if it qualifies to save you thousands of dollars at closing.",
   },
   {
-    image: "https://assets.agentfire3.com/uploads/templates/home-2-2/4-200xAUTO.fit.png",
+    image: "/redesign-assets/included/zero-cost.png",
     alt: "Zero Cost Service",
     title: "Zero Cost Service",
     copy: "You’ll have an experienced team to rely on without any additional expenses.",
   },
   {
-    image: "https://assets.agentfire3.com/uploads/templates/home-2-2/7-200xAUTO.fit.png",
+    image: "/redesign-assets/included/pricing-analysis.png",
     alt: "Pricing Analysis",
     title: "Pricing Analysis",
     copy: "We’ll pull historical data and conduct a pricing analysis so you never overpay for real estate.",
   },
   {
-    image: "https://assets.agentfire3.com/uploads/templates/home-2-2/6-200xAUTO.fit.png",
+    image: "/redesign-assets/included/inspection.png",
     alt: "Off Market Properties",
     title: "Off Market Properties",
     copy: "A dedicated team regularly engages owners to find off-market opportunities that fit your needs.",
@@ -348,7 +348,7 @@ const INCLUDED = [
 const LISTINGS = [
   {
     href: "/523-west-121st-street-2/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2026/06/1a-Living-room-700x560.fit.jpg",
+    image: "/redesign-assets/listings/1a-living-room.jpg",
     alt: "523 West 121st Street #2",
     w: 700,
     h: 467,
@@ -358,7 +358,7 @@ const LISTINGS = [
   },
   {
     href: "/26-west-95th-street/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2026/04/26-West-95th-Street-700x560.fit.png",
+    image: "/redesign-assets/listings/26-west-95th.png",
     alt: "26 West 95th Street",
     w: 700,
     h: 465,
@@ -368,7 +368,7 @@ const LISTINGS = [
   },
   {
     href: "/124-west-131st-street-2/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2025/10/1-6-700x560.fit.png",
+    image: "/redesign-assets/listings/listing-1-6.png",
     alt: "124 West 131st Street",
     w: 700,
     h: 472,
@@ -378,7 +378,7 @@ const LISTINGS = [
   },
   {
     href: "/14-west-121st-street/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2025/10/Listing-Photo-9h-14-West-121st-St-1-1-700x560.fit.jpg",
+    image: "/redesign-assets/listings/14-west-121st.jpg",
     alt: "14 West 121st Street",
     w: 373,
     h: 560,
@@ -388,7 +388,7 @@ const LISTINGS = [
   },
   {
     href: "/475-west-144th-street/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2026/04/475-West-144th-Street-700x560.fit.png",
+    image: "/redesign-assets/listings/475-west-144th.png",
     alt: "475 West 144th Street",
     w: 700,
     h: 464,
@@ -398,7 +398,7 @@ const LISTINGS = [
   },
   {
     href: "/313-west-143rd-street-2a/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2025/10/Photo-1-Livingroom-313-West-143rd-St-2A-700x560.fit.jpg",
+    image: "/redesign-assets/listings/313-west-143rd-2a.jpg",
     alt: "313 West 143rd Street #2A",
     w: 700,
     h: 467,
@@ -408,7 +408,7 @@ const LISTINGS = [
   },
   {
     href: "/542-cathedral-parkway/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2024/09/1-542-Catherdral-Parkway-700x560.fit.jpg",
+    image: "/redesign-assets/listings/542-cathedral-parkway.jpg",
     alt: "542 Cathedral Parkway",
     w: 700,
     h: 467,
@@ -418,7 +418,7 @@ const LISTINGS = [
   },
   {
     href: "/544-west-148th-street/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2024/09/1-544-West-148th-Street-700x560.fit.jpg",
+    image: "/redesign-assets/listings/544-west-148th.jpg",
     alt: "544 West 148th Street",
     w: 700,
     h: 467,
@@ -428,7 +428,7 @@ const LISTINGS = [
   },
   {
     href: "/76-west-105th-street-thn/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2024/09/1-700x560.fit.png",
+    image: "/redesign-assets/listings/listing-1.png",
     alt: "76 West 105th Street #THN",
     w: 700,
     h: 467,
@@ -438,7 +438,7 @@ const LISTINGS = [
   },
   {
     href: "/76-west-105th-street-ph/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2024/09/1-2-700x560.fit.jpg",
+    image: "/redesign-assets/listings/listing-1-2.jpg",
     alt: "76 West 105th Street #PH",
     w: 700,
     h: 467,
@@ -448,7 +448,7 @@ const LISTINGS = [
   },
   {
     href: "/2040-madison-avenue-4/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2024/09/1-2040-Madison-Ave-700x560.fit.jpg",
+    image: "/redesign-assets/listings/2040-madison.jpg",
     alt: "2040 Madison Avenue",
     w: 700,
     h: 467,
@@ -458,7 +458,7 @@ const LISTINGS = [
   },
   {
     href: "/420-west-144th-street/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2024/09/1-420-W-144th-St-700x560.fit.jpg",
+    image: "/redesign-assets/listings/420-west-144th.jpg",
     alt: "420 West 144th Street",
     w: 700,
     h: 467,
@@ -468,7 +468,7 @@ const LISTINGS = [
   },
   {
     href: "/481-west-145th-street/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2025/03/1481w145-700x560.fit.jpg",
+    image: "/redesign-assets/listings/1481-west-145th.jpg",
     alt: "481 West 145th Street",
     w: 700,
     h: 467,
@@ -478,7 +478,7 @@ const LISTINGS = [
   },
   {
     href: "/108-west-114th-street-4b/",
-    image: "https://assets.agentfire3.com/uploads/sites/312/2024/09/108-West-114th-Street-4B-700x560.fit.png",
+    image: "/redesign-assets/listings/108-west-114th-4b.png",
     alt: "108 West 114th Street #4B",
     w: 700,
     h: 467,
@@ -506,7 +506,7 @@ export default function HomeContent() {
       <section className="home-hero" data-screen-label="Hero">
         <img
           className="home-hero-photo"
-          src="https://assets.agentfire3.com/uploads/sites/312/2026/06/Brooklyn-Heights-Real-Estate.png"
+          src="/redesign-assets/hoods/brooklyn-heights-real-estate.png"
           alt="Brooklyn Heights brownstone street"
           width="1536"
           height="1024"
@@ -1187,7 +1187,7 @@ export default function HomeContent() {
               <div className="home-ig-avatar-ring">
                 <div className="home-ig-avatar">
                   <img
-                    src="https://assets.agentfire3.com/uploads/sites/312/2021/11/Icon-Favicon-black.png"
+                    src="/redesign-assets/favicon-icon.png"
                     alt="Montfort"
                   />
                 </div>

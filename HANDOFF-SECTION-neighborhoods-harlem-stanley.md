@@ -76,7 +76,7 @@ Marker in template literal: line ~449 `<!--HARLEM_SCHOOLS-->`.
 
 | Path | Role |
 |------|------|
-| `public/redesign-assets/stanley-montfort-bio.jpg` | Bio headshot (from AgentFire CDN `bio-pic-2.jpg`, 500×500) |
+| `public/redesign-assets/stanley-montfort-bio.jpg` | Bio headshot (500×500) |
 | `src/pages/StanleyMontfort.tsx` | Hero `img` → `/redesign-assets/stanley-montfort-bio.jpg`; story section → `/redesign-assets/stanley-portrait.webp` |
 
 ### Verify
