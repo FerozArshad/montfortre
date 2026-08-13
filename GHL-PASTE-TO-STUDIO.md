@@ -58,6 +58,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/blog-pa
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/stanley-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/success-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/brownstone-guide.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/neighborhoods-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
@@ -102,6 +103,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/brow
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Neighborhoods.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/neighborhoods/NeighborhoodsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/neighborhoods-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/neighborhoods.ts
 
 ---

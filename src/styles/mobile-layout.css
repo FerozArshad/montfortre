@@ -325,6 +325,7 @@
 
 /* Neighborhoods — phone + tablet: one left edge, no desktop column offsets */
 @media (max-width: 1023.98px) {
+  .neighborhoods-page .nbhd-hero-rating,
   .neighborhoods-page [style*="right: -14px"],
   .neighborhoods-page [style*="right:-14px"],
   .neighborhoods-page [style*="right: -14"] {
