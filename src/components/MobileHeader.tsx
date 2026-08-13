@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useStickyHeader from "../hooks/useStickyHeader";
 import useTouchDropdowns from "../hooks/useTouchDropdowns";
+import "../styles/mobile-header.css";
 
 interface MenuLink {
   label: string;
@@ -15,7 +16,6 @@ interface MenuSection {
   external?: boolean;
 }
 
-/* Mirrors the desktop nav exactly (same labels and hrefs). */
 const MENU: MenuSection[] = [
   {
     label: "Services",
@@ -71,40 +71,25 @@ const MENU: MenuSection[] = [
 const LOGO_URL =
   "https://assets.agentfire3.com/uploads/sites/312/2026/07/Logo-Transparency-black.png";
 
-const chev = (open: boolean) => (
-  <svg
-    width="13"
-    height="13"
-    viewBox="0 0 12 12"
-    fill="none"
-    style={{
-      display: "block",
-      transition: "transform .28s cubic-bezier(0.22,0.61,0.36,1)",
-      transform: open ? "rotate(180deg)" : "none",
-    }}
-  >
-    <path
-      d="M2.5 4.5L6 8l3.5-3.5"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    ></path>
-  </svg>
-);
+function Chevron() {
+  return (
+    <svg className="mfr-chev" width="13" height="13" viewBox="0 0 12 12" fill="none">
+      <path
+        d="M2.5 4.5L6 8l3.5-3.5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
-/**
- * Mobile header + full-screen slide-in menu, shown only below 1024px
- * (visibility is controlled by src/responsive.css). Rendered once in the
- * shared layout so it appears on every route. The desktop header inside
- * each page's HTML is hidden below 1024px by the same stylesheet.
- */
 export default function MobileHeader() {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
 
   useStickyHeader();
-  // Touch enhancement for the desktop nav dropdowns (tablets without hover).
   useTouchDropdowns();
 
   useEffect(() => {
@@ -122,238 +107,75 @@ export default function MobileHeader() {
   };
 
   return (
-    <div
-      className="mfr-mobile-header"
-      data-menu-open={open ? "true" : undefined}
-      style={{
-        display: "none",
-        position: "sticky",
-        top: 0,
-        zIndex: 200,
-        fontFamily: "'DM Sans',system-ui,sans-serif",
-      }}
-    >
-      {/* Top bar (kept above the slide-in menu so the close button stays reachable) */}
-      <div
-        style={{
-          position: "relative",
-          zIndex: 210,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 12,
-          background: "#fff",
-          boxShadow: "0 1px 0 rgba(18,16,14,0.1)",
-          padding: "12px 16px",
-        }}
-      >
-        <a href="/" aria-label="Montfort Real Estate — home" style={{ display: "flex", alignItems: "center" }}>
-          <img
-            src={LOGO_URL}
-            alt="Montfort Real Estate"
-            width="60"
-            height="42"
-            style={{
-              width: 60,
-              height: 42,
-              display: "block",
-              // Tint the black PNG to the brand navy (#113B5F)
-              filter:
-                "brightness(0) saturate(100%) invert(16%) sepia(33%) saturate(2300%) hue-rotate(181deg) brightness(100%) contrast(92%)",
-            }}
-          />
+    <div className="mfr-mobile-header" data-menu-open={open ? "true" : undefined}>
+      <div className="mfr-bar">
+        <a href="/" className="mfr-bar-logo" aria-label="Montfort Real Estate — home">
+          <img src={LOGO_URL} alt="Montfort Real Estate" width="60" height="42" />
         </a>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <a
-            href="tel:+1-646-970-1078"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 8,
-              color: "#0F1729",
-              textDecoration: "none",
-              padding: "10px 8px",
-            }}
-          >
-            <svg
-              width="19"
-              height="19"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              style={{ flex: "0 0 auto", color: "#C98A2C" }}
-            >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <div className="mfr-bar-actions">
+          <a href="tel:+1-646-970-1078" className="mfr-bar-phone">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
-            <span
-              className="mfr-phone-text"
-              style={{
-                fontFamily: "'Space Grotesk',system-ui,sans-serif",
-                fontSize: 16,
-                fontWeight: 700,
-                letterSpacing: "-0.01em",
-                whiteSpace: "nowrap",
-              }}
-            >
-              (646) 970-1078
-            </span>
+            <span className="mfr-phone-text">(646) 970-1078</span>
           </a>
 
           <button
             type="button"
+            className="mfr-burger"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => (open ? close() : setOpen(true))}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 5,
-              width: 44,
-              height: 44,
-              background: "transparent",
-              border: "1px solid #EAE1BE",
-              borderRadius: 10,
-              cursor: "pointer",
-              padding: 0,
-            }}
           >
-            <span
-              style={{
-                display: "block",
-                width: 20,
-                height: 2,
-                background: "#0F1729",
-                borderRadius: 2,
-                transition: "transform .25s ease, opacity .2s ease",
-                transform: open ? "translateY(7px) rotate(45deg)" : "none",
-              }}
-            ></span>
-            <span
-              style={{
-                display: "block",
-                width: 20,
-                height: 2,
-                background: "#0F1729",
-                borderRadius: 2,
-                transition: "opacity .2s ease",
-                opacity: open ? 0 : 1,
-              }}
-            ></span>
-            <span
-              style={{
-                display: "block",
-                width: 20,
-                height: 2,
-                background: "#0F1729",
-                borderRadius: 2,
-                transition: "transform .25s ease, opacity .2s ease",
-                transform: open ? "translateY(-7px) rotate(-45deg)" : "none",
-              }}
-            ></span>
+            <span className="mfr-burger-bar" />
+            <span className="mfr-burger-bar" />
+            <span className="mfr-burger-bar" />
           </button>
         </div>
       </div>
 
-      {/* Full-screen slide-in menu */}
-      <div
-        aria-hidden={!open}
-        style={{
-          position: "fixed",
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0,
-          zIndex: 190,
-          background: "#F9F6E6",
-          paddingTop: 68,
-          transform: open ? "translateX(0)" : "translateX(100%)",
-          transition: "transform .32s cubic-bezier(0.22,0.61,0.36,1)",
-          visibility: open ? "visible" : "hidden",
-          overflowY: "auto",
-          WebkitOverflowScrolling: "touch",
-        }}
-      >
-        <nav style={{ padding: "8px 16px 40px" }} aria-label="Mobile">
+      <div className="mfr-menu-panel" aria-hidden={!open}>
+        <nav className="mfr-menu-nav" aria-label="Mobile">
           {MENU.map((section) => {
             const isOpen = expanded === section.label;
             return (
-              <div key={section.label} style={{ borderBottom: "1px solid #EAE1BE" }}>
-                <div style={{ display: "flex", alignItems: "stretch" }}>
+              <div key={section.label} className={["mfr-acc-item", isOpen ? "is-open" : ""].filter(Boolean).join(" ")}>
+                <div className="mfr-acc-row">
                   <a
                     href={section.href}
+                    className="mfr-acc-link"
                     onClick={close}
                     {...(section.external ? { target: "_blank", rel: "noopener" } : {})}
-                    style={{
-                      flex: "1 1 auto",
-                      display: "flex",
-                      alignItems: "center",
-                      padding: "17px 4px",
-                      color: "#0F1729",
-                      textDecoration: "none",
-                      fontFamily: "'Space Grotesk',system-ui,sans-serif",
-                      fontSize: 15,
-                      fontWeight: 700,
-                      letterSpacing: "0.11em",
-                      textTransform: "uppercase",
-                    }}
                   >
                     {section.label}
                   </a>
                   {section.links && (
                     <button
                       type="button"
+                      className="mfr-acc-toggle"
                       aria-label={`${isOpen ? "Collapse" : "Expand"} ${section.label}`}
                       aria-expanded={isOpen}
                       onClick={() => setExpanded(isOpen ? null : section.label)}
-                      style={{
-                        flex: "0 0 auto",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        width: 52,
-                        background: "transparent",
-                        border: "none",
-                        borderLeft: "1px solid #EAE1BE",
-                        color: isOpen ? "#C98A2C" : "#0F1729",
-                        cursor: "pointer",
-                        padding: 0,
-                      }}
                     >
-                      {chev(isOpen)}
+                      <Chevron />
                     </button>
                   )}
                 </div>
 
                 {section.links && (
                   <div
-                    style={{
-                      overflow: "hidden",
-                      maxHeight: isOpen ? section.links.length * 56 + 16 : 0,
-                      transition: "max-height .3s cubic-bezier(0.22,0.61,0.36,1)",
-                    }}
+                    className="mfr-acc-panel"
+                    style={isOpen ? { maxHeight: section.links.length * 56 + 16 } : undefined}
                   >
-                    <div style={{ padding: "2px 0 14px" }}>
+                    <div className="mfr-acc-panel-inner">
                       {section.links.map((link) => (
                         <a
                           key={link.label + link.href}
                           href={link.href}
+                          className="mfr-acc-sub"
                           onClick={close}
                           {...(link.external ? { target: "_blank", rel: "noopener" } : {})}
-                          style={{
-                            display: "block",
-                            padding: "13px 16px",
-                            color: "#113B5F",
-                            textDecoration: "none",
-                            fontSize: 14.5,
-                            fontWeight: 600,
-                            borderRadius: 10,
-                          }}
                         >
                           {link.label}
                         </a>
@@ -365,53 +187,13 @@ export default function MobileHeader() {
             );
           })}
 
-          <a
-            href="tel:+1-646-970-1078"
-            onClick={close}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 10,
-              margin: "24px 0 0",
-              background: "#113B5F",
-              color: "#F9F6E6",
-              textDecoration: "none",
-              fontFamily: "'Space Grotesk',system-ui,sans-serif",
-              fontSize: 16,
-              fontWeight: 700,
-              letterSpacing: "0.05em",
-              padding: "16px 24px",
-              borderRadius: 10,
-            }}
-          >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <a href="tel:+1-646-970-1078" className="mfr-menu-call" onClick={close}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
             (646) 970-1078
           </a>
-          <div
-            style={{
-              textAlign: "center",
-              marginTop: 10,
-              fontSize: 11,
-              fontWeight: 700,
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              color: "#3B4C5E",
-            }}
-          >
-            Mon-Sat 8AM-7PM
-          </div>
+          <div className="mfr-menu-hours">Mon-Sat 8AM-7PM</div>
         </nav>
       </div>
     </div>

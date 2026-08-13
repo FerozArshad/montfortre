@@ -36,8 +36,23 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/lib/siteOrigin
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/page-shell.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/mobile-layout.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/desktop-nav.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/mobile-header.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/site-footer.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/resources-section.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/contact-section.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-hero.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-promises.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-hidden-cost.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-founder.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-areas.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-expect.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-plan.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-services.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-reviews.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-instagram.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-included.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-listings.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-download.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
