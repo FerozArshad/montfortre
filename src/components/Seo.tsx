@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-type MetaAttrs = Record<string, string>;
+type MetaAttrs = { [key: string]: string | undefined };
 
 interface SeoProps {
   title: string;
@@ -41,7 +41,9 @@ export default function Seo({ title, metas, links, jsonLd }: SeoProps) {
           : null;
       if (key) document.head.querySelectorAll(key).forEach((el) => el.remove());
       const el = document.createElement("meta");
-      Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+      Object.entries(attrs).forEach(([k, v]) => {
+        if (v !== undefined) el.setAttribute(k, v);
+      });
       document.head.appendChild(el);
       added.push(el);
     });
@@ -51,7 +53,9 @@ export default function Seo({ title, metas, links, jsonLd }: SeoProps) {
         document.head.querySelectorAll('link[rel="canonical"]').forEach((el) => el.remove());
       }
       const el = document.createElement("link");
-      Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+      Object.entries(attrs).forEach(([k, v]) => {
+        if (v !== undefined) el.setAttribute(k, v);
+      });
       document.head.appendChild(el);
       added.push(el);
     });

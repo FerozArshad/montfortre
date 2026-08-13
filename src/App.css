@@ -1,0 +1,5 @@
+/* App-level overrides. Page layout styles live in page components. */
+
+#root {
+  isolation: isolate;
+}

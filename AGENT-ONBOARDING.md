@@ -8,10 +8,11 @@ Read this first, then `HANDOFF.md` for constraints and launch blockers.
 | Location | Role |
 |---|---|
 | **Git remote** | https://github.com/FerozArshad/montfortre |
-| **Git repo root (local)** | `d:\Montfortr\ghl-react` — everything in this folder is what ships to GitHub |
-| **Parent workspace** | `d:\Montfortr` — HTTrack mirrors, GHL exports, CDN captures, design exports. **Not** in this git repo unless copied here intentionally |
+| **Git repo root (local)** | `d:\montfortre\ghl-react` — everything in this folder ships to GitHub |
+| **Parent workspace** | `d:\montfortre` — `reference/` holds HTTrack mirrors, GHL exports, CDN captures, design exports. **Not** in this git repo |
+| **Session continuity** | `PROJECT-CONTEXT.md` in this folder |
 
-The GitHub repo root matches `ghl-react` (not the parent `Montfortr` folder). Deployable app files live at repo root: `package.json`, `src/`, `public/`, etc.
+The GitHub repo root matches `montfortre/` (not the parent `Montfortr` folder). Deployable app files live at repo root: `package.json`, `src/`, `public/`, etc.
 
 ## What this project is
 
@@ -22,7 +23,7 @@ Approved redesign of https://montfortre.com/ (NYC realtor Stanley Montfort). Bui
 ## Quick start
 
 ```bash
-cd ghl-react          # or repo root after clone
+cd montfortre          # or repo root after clone
 npm install           # only if node_modules missing
 npm run dev           # http://localhost:5173
 npm run build         # outputs dist/ (production bundle)
@@ -34,13 +35,31 @@ Routes use trailing-slash-style paths in markup (`/services/`) but React Router 
 
 ### Page components (`src/pages/*.tsx`)
 
-Each page is mostly a giant template literal:
+**Converted pages** (Phase 3 — real TSX, no `dangerouslySetInnerHTML`):
+
+```tsx
+import PageContent from "../components/example/ExampleContent";
+import PageShell from "../layouts/PageShell";
+import { EXAMPLE_SEO } from "../seo/pages/example";
+
+export default function Example() {
+  return (
+    <PageShell seo={EXAMPLE_SEO} pageClassName="example-page">
+      <PageContent />
+    </PageShell>
+  );
+}
+```
+
+- SEO lives in `src/seo/pages/<route>.ts` (frozen constants)
+- `PageShell` renders `Seo` + `DesktopHeader` + children + `SiteFooter`
+- Shared sections: `ResourcesSection`, `ContactSection` in `src/components/shared/`
+- See `GHL-STUDIO-STRUCTURE.md` for the full directory map
+
+**Legacy pages** (pending conversion) still use this pattern:
 
 ```tsx
 const TITLE = "...";
-const METAS = "...";
-const LINKS = "...";
-const JSON_LD = "...";
 const HTML = `<style>...</style><div>...</div>`;
 
 export default function Home() {
@@ -59,10 +78,10 @@ export default function Home() {
 - **Per-page `<style>` blocks** inside `HTML` hold desktop rules and `@media` overrides.
 - **`Harlem.tsx`** splits HTML at `<!--HARLEM_SCHOOLS-->` and injects `<HarlemSchools />` for the live school list.
 
-### Shared runtime (`src/main.tsx`)
+### Shared runtime (`src/App.tsx` + `src/main.tsx`)
 
-- Imports `responsive.css` globally.
-- Renders `<MobileHeader />` once above all routes (hamburger menu &lt; 1024px).
+- `main.tsx` bootstraps Vite and imports global CSS (`index.css`, `App.css`, `responsive.css`).
+- `App.tsx` owns `BrowserRouter`, `<MobileHeader />`, and all `<Route>` definitions (GHL AI Studio standard).
 - **14 routes** — see route table below.
 
 ### Shared components & hooks
@@ -71,6 +90,9 @@ export default function Home() {
 |---|---|
 | `src/components/Seo.tsx` | Injects exact per-page `<head>` SEO; strips platform defaults |
 | `src/components/MobileHeader.tsx` | Mobile nav + neighborhood submenu labels (`{Name} Realtor`) |
+| `src/components/layout/DesktopHeader.tsx` | Desktop nav (converted pages) |
+| `src/components/layout/SiteFooter.tsx` | Site footer (converted pages) |
+| `src/layouts/PageShell.tsx` | Seo + header + footer wrapper for converted pages |
 | `src/components/HarlemSchools.tsx` | Filterable Harlem schools list (data from JSON) |
 | `src/hooks/useStyleHover.ts` | Applies hover styles from `style-hover` attributes |
 | `src/hooks/useTouchDropdowns.ts` | Touch-friendly desktop nav dropdowns |
@@ -95,22 +117,22 @@ Listing photos on many pages load from live CDN (`https://assets.agentfire3.com`
 | `scripts/extract-harlem-schools.mjs` | Regenerate schools JSON from source markup |
 | `scripts/update-neighborhood-nav-labels.mjs` | Bulk-update `{Neighborhood} Realtor` nav labels |
 
-## Routes (`src/main.tsx`)
+## Routes (`src/App.tsx`)
 
 | Route | Page file | Notes |
 |---|---|---|
-| `/` | `Home.tsx` | Homepage |
-| `/services` | `Services.tsx` | |
-| `/about-us` | `AboutUs.tsx` | |
-| `/blog` | `Blog.tsx` | |
-| `/harlem` | `Harlem.tsx` | Schools section = React component |
-| `/stanley-montfort` | `StanleyMontfort.tsx` | Hero = `stanley-montfort-bio.jpg`; story = `stanley-portrait.webp` |
-| `/success-stories` | `SuccessStories.tsx` | |
+| `/` | `Home.tsx` | ✅ TSX via PageShell |
+| `/services` | `Services.tsx` | ✅ TSX via PageShell |
+| `/about-us` | `AboutUs.tsx` | ✅ TSX via PageShell |
+| `/blog` | `Blog.tsx` | ✅ TSX via PageShell |
+| `/harlem` | `Harlem.tsx` | ✅ TSX + HarlemSchools |
+| `/stanley-montfort` | `StanleyMontfort.tsx` | ✅ TSX via PageShell |
+| `/success-stories` | `SuccessStories.tsx` | ✅ TSX via PageShell |
 | `/2-family-house-for-sale-nyc` | `TwoFamilyHouseForSaleNyc.tsx` | |
 | `/advice-for-buyers-looking-to-purchase-brownstones` | `BrownstoneBuyingGuide.tsx` | |
-| `/neighborhoods` | `Neighborhoods.tsx` | Mobile-polished hood cards + Google badge overlap |
-| `/idx-sales` | `IdxSales.tsx` | IDX iframe |
-| `/idx-rentals` | `IdxRentals.tsx` | IDX iframe |
+| `/neighborhoods` | `Neighborhoods.tsx` | ✅ TSX via PageShell |
+| `/idx-sales` | `IdxSales.tsx` | ✅ TSX via IdxSearchLayout |
+| `/idx-rentals` | `IdxRentals.tsx` | ✅ TSX via IdxSearchLayout |
 | `*` | `NotMigrated.tsx` | Fallback for unmigrated URLs |
 
 Internal links in HTML use root-relative paths with trailing slashes (`/harlem/`).
@@ -146,6 +168,8 @@ Header dropdowns, footer neighborhood column, and `MobileHeader` use **"{Neighbo
 | `HANDOFF.md` | Master context, launch blockers, SEO audit items |
 | `HANDOFF-SECTION-neighborhoods-harlem-stanley.md` | Recent neighborhoods / Harlem schools / Stanley hero work |
 | `HANDOFF-SECTION-seo-launch-readiness.md` | SEO validation and cutover checklist |
+| `GHL-STUDIO-STRUCTURE.md` | GHL AI Studio directory standard + converted page pattern |
+| `GHL-LAUNCH-CHECKLIST.md` | Platform blockers checklist for GHL deploy (Part A) |
 | `RESPONSIVE-PROMPTS.md` | Prompt templates for responsive tasks |
 | `TRANSFER-GUIDE.md` | Copying files into GHL AI Studio |
 | `GHL-URLS.md` | Raw URL manifest |

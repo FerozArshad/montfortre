@@ -55,12 +55,12 @@ const LINKS = [
   },
   {
     "rel": "icon",
-    "href": "../../assets.agentfire3.com/uploads/sites/312/2021/11/Icon-Favicon-black-32x32.max.png",
+    "href": "https://assets.agentfire3.com/uploads/sites/312/2021/11/Icon-Favicon-black-32x32.max.png",
     "sizes": "32x32"
   },
   {
     "rel": "icon",
-    "href": "../../assets.agentfire3.com/uploads/sites/312/2021/11/Icon-Favicon-black-192x192.max.png",
+    "href": "https://assets.agentfire3.com/uploads/sites/312/2021/11/Icon-Favicon-black-192x192.max.png",
     "sizes": "192x192"
   },
   {

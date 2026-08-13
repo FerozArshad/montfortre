@@ -59,6 +59,8 @@ export default function HarlemSchools() {
   const maxIndex = Math.max(0, filtered.length - VISIBLE);
 
   useEffect(() => {
+    // Reset carousel position when the filter changes.
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional sync with filter
     setIndex(0);
   }, [filter]);
 

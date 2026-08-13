@@ -3,6 +3,35 @@
 Fetch each file with download_to_repo into the same repo path (the part after /main/).
 
 ## Source files
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/App.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/layouts/PageShell.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/types.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/aboutUs.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/stanleyMontfort.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/successStories.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/services.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/blog.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlem.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/neighborhoods.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/home.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/idxSales.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/idxRentals.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/layout/DesktopHeader.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/layout/SiteFooter.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/about/AboutUsContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/stanley/StanleyMontfortContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/success/SuccessStoriesContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/services/ServicesContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/blog/BlogContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem/HarlemContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/neighborhoods/NeighborhoodsContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/home/HomeContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/shared/ResourcesSection.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/shared/ContactSection.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/idx/IdxSearchLayout.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/page-shell.css
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/desktop-nav.css
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/ROUTES.tsx.snippet
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/TRANSFER-GUIDE.md
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/HANDOFF.md

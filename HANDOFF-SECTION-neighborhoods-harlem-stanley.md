@@ -3,7 +3,7 @@
 **Date:** 2026-08-10  
 **Local dev:** `npm run dev` → http://localhost:5173/  
 **Prior chat transcript:** `C:\Users\feroz\.cursor\projects\d-Montfortr\agent-transcripts\ae837346-cdf1-4dd4-88d5-f1f4050703e1\ae837346-cdf1-4dd4-88d5-f1f4050703e1.jsonl`  
-**Parent handoff:** `ghl-react/HANDOFF.md` (repo-wide constraints, launch blockers, responsiveness strategy)
+**Parent handoff:** `montfortre/HANDOFF.md` (repo-wide constraints, launch blockers, responsiveness strategy)
 
 ---
 

@@ -2,11 +2,11 @@
 
 **Date:** 2026-08-10
 **Owner of this stream:** whoever runs the GHL AI Studio deployment + a content/client contact
-**Parent handoff:** `ghl-react/HANDOFF.md` (repo-wide constraints, file map, responsiveness strategy)
+**Parent handoff:** `montfortre/HANDOFF.md` (repo-wide constraints, file map, responsiveness strategy)
 **Sibling handoff:** `HANDOFF-SECTION-neighborhoods-harlem-stanley.md` (page-level design work)
 **Repo:** https://github.com/FerozArshad/montfortre — branch `main`, head `cadb0b7`
 **Preview:** https://montfortre-live.vibepreview.com/ · **Production target:** https://montfortre.com/
-**Local dev:** `npm run dev` (this repo also runs on port 5199 via `.claude/launch.json` → `ghl-react-dev`)
+**Local dev:** `npm run dev` (this repo also runs on port 5199 via `.claude/launch.json` → `montfortre-dev`)
 
 ---
 

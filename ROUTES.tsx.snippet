@@ -1,14 +1,11 @@
-// App.tsx wiring (import each page from ./pages/...)
+// Route reference — canonical wiring lives in src/App.tsx.
+// main.tsx imports index.css, App.css, responsive.css and renders <App />.
 //
-// 1. Import the shared responsive stylesheet once:
-//      import "./responsive.css";
-// 2. Render <MobileHeader /> once, above <Routes>, so it appears on every
-//    route (it is only visible below 1024px; it also installs the touch
-//    enhancement for the desktop nav dropdowns):
-//      import MobileHeader from "./components/MobileHeader";
-//      ...
-//      <MobileHeader />
-//      <Routes>...</Routes>
+// App.tsx pattern:
+//   <BrowserRouter>
+//     <MobileHeader />
+//     <Routes>...</Routes>
+//   </BrowserRouter>
 //
 // Routes:
 <Route path="/" element={<Home />} />
@@ -21,4 +18,6 @@
 <Route path="/2-family-house-for-sale-nyc" element={<TwoFamilyHouseForSaleNyc />} />
 <Route path="/advice-for-buyers-looking-to-purchase-brownstones" element={<BrownstoneBuyingGuide />} />
 <Route path="/neighborhoods" element={<Neighborhoods />} />
+<Route path="/idx-sales" element={<IdxSales />} />
+<Route path="/idx-rentals" element={<IdxRentals />} />
 <Route path="*" element={<NotMigrated />} />

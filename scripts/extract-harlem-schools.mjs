@@ -13,7 +13,7 @@ const text = obj.message.content.find((c) => c.type === "text").text;
 const start = text.indexOf('<section id="top-schools"');
 const end = text.indexOf("</section>", start) + "</section>".length;
 const html = text.slice(start, end);
-fs.writeFileSync("d:/Montfortr/ghl-react/scripts/_harlem-schools-raw.html", html);
+fs.writeFileSync("d:/Montfortr/montfortre/scripts/_harlem-schools-raw.html", html);
 
 function decode(s) {
   return s
@@ -89,9 +89,9 @@ for (const [cat, list] of Object.entries(byCat)) {
 // Preserve "all" order
 const schools = byCat.all.map((s) => map.get(s.name.toLowerCase()));
 
-fs.mkdirSync("d:/Montfortr/ghl-react/src/data", { recursive: true });
+fs.mkdirSync("d:/Montfortr/montfortre/src/data", { recursive: true });
 fs.writeFileSync(
-  "d:/Montfortr/ghl-react/src/data/harlemSchools.json",
+  "d:/Montfortr/montfortre/src/data/harlemSchools.json",
   JSON.stringify(schools, null, 2)
 );
 console.log("unique", schools.length);

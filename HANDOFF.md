@@ -4,7 +4,7 @@
 
 ## What this project is
 This repo is the approved redesign of https://montfortre.com/ (NYC realtor), being rebuilt as a
-React/Vite SPA in GHL AI Studio. 9 pages are complete and deployed to the preview at
+React/Vite SPA in GHL AI Studio. 12 pages are complete and deployed to the preview at
 https://montfortre-live.vibepreview.com/. The markup is a pixel-faithful desktop design transferred
 from a design tool; each page's SEO was copied byte-exact from the original live site.
 
