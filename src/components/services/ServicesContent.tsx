@@ -1,24 +1,13 @@
-import type { CSSProperties, ReactNode } from "react";
+import type { ReactNode } from "react";
 import ContactSection from "../shared/ContactSection";
 import ResourcesSection from "../shared/ResourcesSection";
+import "../../styles/services-page.css";
 
 const CHECK_ICON = (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
     <path d="M6 12.5l3.5 3.5L18 7.5" stroke="#0F1729" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
-
-const CARD_HOVER = "transform:translateY(-6px); box-shadow:0 26px 54px rgba(17,59,95,0.14); border-color:#C98A2C";
-
-const CARD_STYLE = {
-  display: "flex",
-  flexDirection: "column",
-  background: "#F9F6E6",
-  border: "1px solid #E0D9B8",
-  borderRadius: 16,
-  overflow: "hidden",
-  transition: "transform .4s ease, box-shadow .4s ease, border-color .4s ease",
-} as const;
 
 const HERO_NEIGHBORHOODS = [
   { href: "/park-slope/", label: "Park Slope Realtor" },
@@ -45,25 +34,17 @@ type CatalogCardData = {
 
 function CatalogCard({ href, image, alt, title, description, lazy }: CatalogCardData) {
   return (
-    <div data-reveal="" style={CARD_STYLE} {...{ "style-hover": CARD_HOVER }}>
-      <div style={{ aspectRatio: "16/10", overflow: "hidden", background: "#E0D9B8" }}>
-        <img src={image} alt={alt} {...(lazy ? { loading: "lazy" as const } : {})} style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }} />
+    <div data-reveal="" className="svc-card">
+      <div className="svc-card-media">
+        <img src={image} alt={alt} {...(lazy ? { loading: "lazy" as const } : {})} />
       </div>
-      <div style={{ display: "flex", flexDirection: "column", flex: "1 1 auto", padding: "24px 26px 26px" }}>
-        <a
-          href={href}
-          style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 20, lineHeight: 1.3, color: "#0F1729", textWrap: "pretty" }}
-          {...{ "style-hover": "color:#C98A2C" }}
-        >
+      <div className="svc-card-body">
+        <a href={href} className="svc-card-title">
           {title}
         </a>
-        <p style={{ fontSize: 15, lineHeight: 1.7, color: "#3B4C5E", margin: "12px 0 0", flex: "1 1 auto", textWrap: "pretty" }}>{description}</p>
-        <a
-          href={href}
-          style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 22, fontSize: 11.5, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#113B5F" }}
-          {...{ "style-hover": "color:#C98A2C" }}
-        >
-          Learn more <span style={{ color: "#C98A2C" }}>→</span>
+        <p>{description}</p>
+        <a href={href} className="svc-card-more">
+          Learn more <span className="svc-card-more-arrow">→</span>
         </a>
       </div>
     </div>
@@ -87,31 +68,21 @@ function CatalogGroup({
   columns?: 3 | 4;
   first?: boolean;
 }) {
-  const wrapStyle: CSSProperties | undefined = first
-    ? undefined
-    : { marginTop: 72, paddingTop: 60, borderTop: "1px solid #E0D9B8" };
-
   return (
-    <div data-reveal="" style={wrapStyle}>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 40, flexWrap: "wrap" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
+    <div data-reveal="" className={first ? "svc-catalog-group" : "svc-catalog-group svc-catalog-group--next"}>
+      <div className="svc-catalog-head">
+        <div className="svc-catalog-head-main">
           {thumb}
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C98A2C" }}>{eyebrow}</div>
-            <h2 style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 34, lineHeight: 1.16, letterSpacing: "-0.01em", color: "#0F1729", margin: "10px 0 0", textWrap: "pretty" }}>
-              {title}
-            </h2>
+            <div className="svc-catalog-eyebrow">{eyebrow}</div>
+            <h2>{title}</h2>
           </div>
         </div>
-        <a
-          href={overviewHref}
-          style={{ fontSize: 12.5, fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", color: "#113B5F", whiteSpace: "nowrap", borderBottom: "2px solid #C98A2C", paddingBottom: 5 }}
-          {...{ "style-hover": "border-bottom-color:#0F1729" }}
-        >
+        <a href={overviewHref} className="svc-catalog-overview">
           View overview →
         </a>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: `repeat(${columns},minmax(0,1fr))`, gap: 22, marginTop: 34 }}>
+      <div className={columns === 3 ? "svc-catalog-grid svc-catalog-grid--3" : "svc-catalog-grid"}>
         {cards.map((card) => (
           <CatalogCard key={card.href} {...card} />
         ))}
@@ -122,8 +93,8 @@ function CatalogGroup({
 
 function ThumbImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <div style={{ flex: "0 0 auto", width: 96, height: 96, borderRadius: 16, overflow: "hidden", border: "1px solid #E0D9B8", boxShadow: "0 16px 34px rgba(17,59,95,0.12)" }}>
-      <img src={src} alt={alt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+    <div className="svc-thumb">
+      <img src={src} alt={alt} />
     </div>
   );
 }
@@ -131,61 +102,51 @@ function ThumbImage({ src, alt }: { src: string; alt: string }) {
 export default function ServicesContent() {
   return (
     <div>
-      <section data-screen-label="Services hero" style={{ position: "relative", background: "#F5EECB", borderBottom: "1px solid #E0D9B8", overflow: "hidden", padding: "88px 64px 96px" }}>
-        <div style={{ position: "absolute", top: -150, right: -160, width: 560, height: 560, borderRadius: "50%", border: "1px solid rgba(201,138,44,0.2)" }} />
-        <div style={{ position: "relative", zIndex: 2, maxWidth: 1440, margin: "0 auto", display: "grid", gridTemplateColumns: "1.02fr 0.98fr", gap: 72, alignItems: "center" }}>
+      <section className="svc-hero" data-screen-label="Services hero">
+        <div className="svc-hero-ring" />
+        <div className="svc-hero-inner">
           <div data-reveal="">
-            <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-              <span style={{ width: 34, height: 1, background: "#C98A2C", display: "block" }} />
-              <span style={{ fontSize: 11.5, fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#3B4C5E" }}>Montfort Real Estate</span>
+            <div className="svc-hero-kicker">
+              <span className="svc-hero-kicker-line" />
+              <span className="svc-hero-kicker-label">Montfort Real Estate</span>
             </div>
-            <h1 style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 62, lineHeight: 1.06, letterSpacing: "-0.02em", color: "#0F1729", margin: "20px 0 0", textWrap: "pretty" }}>
-              NYC Realtor Services
-            </h1>
-            <p style={{ fontSize: 19, lineHeight: 1.7, color: "#3B4C5E", margin: "22px 0 0", maxWidth: 560, textWrap: "pretty" }}>
-              Whether you&apos;re <strong style={{ fontWeight: 700, color: "#0F1729" }}>buying</strong> or <strong style={{ fontWeight: 700, color: "#0F1729" }}>selling</strong>, our team helps you avoid costly mistakes, negotiate with confidence, and achieve the best possible outcome for your real estate goals.
+            <h1>NYC Realtor Services</h1>
+            <p className="svc-hero-lead">
+              Whether you&apos;re <strong>buying</strong> or <strong>selling</strong>, our team helps you avoid costly mistakes, negotiate with confidence, and achieve the best possible outcome for your real estate goals.
             </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 34 }}>
-              <a
-                href="https://calendly.com/montfort"
-                style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#113B5F", color: "#F9F6E6", fontSize: 15, fontWeight: 800, letterSpacing: "0.05em", textTransform: "uppercase", borderRadius: 100, padding: "18px 34px", minHeight: 56 }}
-                {...{ "style-hover": "background:#C98A2C; color:#0F1729" }}
-              >
+            <div className="svc-hero-ctas">
+              <a href="https://calendly.com/montfort" className="svc-hero-book">
                 Book Now
               </a>
-              <a
-                href="tel:646-970-1078"
-                style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", border: "2px solid #113B5F", color: "#113B5F", fontSize: 15, fontWeight: 800, letterSpacing: "0.03em", borderRadius: 100, padding: "16px 30px", minHeight: 56 }}
-                {...{ "style-hover": "background:#113B5F; color:#F9F6E6" }}
-              >
+              <a href="tel:646-970-1078" className="svc-hero-tel">
                 (646) 970-1078
               </a>
             </div>
-            <div style={{ marginTop: 38, paddingTop: 26, borderTop: "1px solid #D9CFA6" }}>
-              <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A7B4E" }}>Serving NYC&apos;s top neighborhoods</div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: "14px 40px", marginTop: 18 }}>
+            <div className="svc-hero-hoods">
+              <div className="svc-hero-hoods-label">Serving NYC&apos;s top neighborhoods</div>
+              <div className="svc-hero-hoods-grid">
                 {HERO_NEIGHBORHOODS.map((hood) => (
-                  <a key={hood.href} href={hood.href} style={{ fontSize: 15.5, fontWeight: 600, color: "#0F1729", textWrap: "pretty" }} {...{ "style-hover": "color:#C98A2C" }}>
+                  <a key={hood.href} href={hood.href} className="svc-hero-hood">
                     {hood.label}
                   </a>
                 ))}
               </div>
             </div>
           </div>
-          <div data-reveal="" style={{ position: "relative" }}>
-            <div style={{ position: "relative", borderRadius: 16, overflow: "hidden", aspectRatio: "5/4", background: "#E0D9B8", border: "6px solid #FFFFFF", boxShadow: "0 40px 90px rgba(17,59,95,0.28)" }}>
-              <img src="/redesign-assets/hoods/upper-west-side.webp" alt="NYC brownstone real estate" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          <div data-reveal="" className="svc-hero-media">
+            <div className="svc-hero-frame">
+              <img src="/redesign-assets/hoods/upper-west-side.webp" alt="NYC brownstone real estate" />
             </div>
-            <div style={{ position: "absolute", right: -14, bottom: -22, display: "inline-flex", alignItems: "center", gap: 18, background: "#FFFFFF", border: "1px solid rgba(201,138,44,0.55)", borderRadius: 16, boxShadow: "0 22px 48px rgba(17,59,95,0.28)", padding: "18px 26px", whiteSpace: "nowrap" }}>
-              <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google" style={{ flex: "0 0 auto", width: 50, height: 50, display: "block" }} />
-              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                <span style={{ fontSize: 19, fontWeight: 700, lineHeight: 1, letterSpacing: "-0.01em", color: "#0F1729" }}>Google Rating</span>
-                <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
-                  <span style={{ fontSize: 23, fontWeight: 700, lineHeight: 1, color: "#C98A2C" }}>5.0</span>
-                  <span style={{ color: "#F5A623", fontSize: 19, letterSpacing: "0.08em", lineHeight: 1 }}>★★★★★</span>
+            <div className="svc-hero-rating">
+              <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google" />
+              <div className="svc-hero-rating-copy">
+                <span className="svc-hero-rating-title">Google Rating</span>
+                <div className="svc-hero-rating-row">
+                  <span className="svc-hero-rating-score">5.0</span>
+                  <span className="svc-hero-rating-stars">★★★★★</span>
                 </div>
-                <span style={{ fontSize: 14, lineHeight: 1.3, color: "#0F1729" }}>
-                  Over <strong style={{ fontWeight: 700 }}>57 Reviews</strong>
+                <span className="svc-hero-rating-count">
+                  Over <strong>57 Reviews</strong>
                 </span>
               </div>
             </div>
@@ -193,47 +154,45 @@ export default function ServicesContent() {
         </div>
       </section>
 
-      <section data-screen-label="Client promises" style={{ background: "#F9F6E6", borderBottom: "1px solid #E0D9B8", padding: "36px 64px" }}>
-        <div style={{ maxWidth: 1440, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: 48 }}>
-          <div data-reveal="" style={{ display: "flex", alignItems: "flex-start", gap: 18 }}>
-            <span style={{ flex: "0 0 auto", width: 46, height: 46, borderRadius: 100, background: "#C98A2C", display: "flex", alignItems: "center", justifyContent: "center" }}>{CHECK_ICON}</span>
+      <section className="svc-promises" data-screen-label="Client promises">
+        <div className="svc-promises-inner">
+          <div data-reveal="" className="svc-promises-item">
+            <span className="svc-promises-icon">{CHECK_ICON}</span>
             <div>
-              <div style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 18, letterSpacing: "0.02em", textTransform: "uppercase", color: "#0F1729" }}>Smooth Transaction</div>
-              <p style={{ fontSize: 16, lineHeight: 1.65, color: "#3B4C5E", margin: "8px 0 0", textWrap: "pretty" }}>With limited risk throughout the buying process.</p>
+              <div className="svc-promises-title">Smooth Transaction</div>
+              <p>With limited risk throughout the buying process.</p>
             </div>
           </div>
-          <div data-reveal="" style={{ display: "flex", alignItems: "flex-start", gap: 18 }}>
-            <span style={{ flex: "0 0 auto", width: 46, height: 46, borderRadius: 100, background: "#C98A2C", display: "flex", alignItems: "center", justifyContent: "center" }}>{CHECK_ICON}</span>
+          <div data-reveal="" className="svc-promises-item">
+            <span className="svc-promises-icon">{CHECK_ICON}</span>
             <div>
-              <div style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 18, letterSpacing: "0.02em", textTransform: "uppercase", color: "#0F1729" }}>No Pressure</div>
-              <p style={{ fontSize: 16, lineHeight: 1.65, color: "#3B4C5E", margin: "8px 0 0", textWrap: "pretty" }}>No pressure to overpay or purchase within a specific timeframe.</p>
+              <div className="svc-promises-title">No Pressure</div>
+              <p>No pressure to overpay or purchase within a specific timeframe.</p>
             </div>
           </div>
-          <div data-reveal="" style={{ display: "flex", alignItems: "flex-start", gap: 18 }}>
-            <span style={{ flex: "0 0 auto", width: 46, height: 46, borderRadius: 100, background: "#C98A2C", display: "flex", alignItems: "center", justifyContent: "center" }}>{CHECK_ICON}</span>
+          <div data-reveal="" className="svc-promises-item">
+            <span className="svc-promises-icon">{CHECK_ICON}</span>
             <div>
-              <div style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 18, letterSpacing: "0.02em", textTransform: "uppercase", color: "#0F1729" }}>Ongoing Support</div>
-              <p style={{ fontSize: 16, lineHeight: 1.65, color: "#3B4C5E", margin: "8px 0 0", textWrap: "pretty" }}>A dedicated team that stays available even after the deal closes.</p>
+              <div className="svc-promises-title">Ongoing Support</div>
+              <p>A dedicated team that stays available even after the deal closes.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section data-screen-label="Services" style={{ background: "#fff", padding: "120px 64px", borderBottom: "1px solid #E0D9B8" }}>
-        <div style={{ maxWidth: 1440, margin: "0 auto" }}>
-          <div data-reveal="" style={{ maxWidth: 860 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-              <span style={{ width: 34, height: 1, background: "#C98A2C", display: "block" }} />
-              <span style={{ fontSize: 11.5, fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#3B4C5E" }}>What we offer</span>
+      <section className="svc-catalog" data-screen-label="Services">
+        <div className="svc-catalog-inner">
+          <div data-reveal="" className="svc-catalog-intro">
+            <div className="svc-catalog-kicker">
+              <span className="svc-catalog-kicker-line" />
+              <span className="svc-catalog-kicker-label">What we offer</span>
             </div>
-            <h2 style={{ fontFamily: "'Space Grotesk',system-ui,sans-serif", fontWeight: 700, fontSize: 44, lineHeight: 1.18, letterSpacing: "-0.01em", color: "#0F1729", margin: "16px 0 0", textWrap: "pretty" }}>
-              Expertise across every NYC transaction
-            </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.85, color: "#3B4C5E", margin: "18px 0 0", textWrap: "pretty" }}>
-              From buyer and listing representation to investment advisory and valuation, we help clients make confident real estate decisions throughout New York City. Browse our specialized services below or call <strong style={{ fontWeight: 700, color: "#0F1729" }}>1-646-970-1078</strong> to discuss your goals.
+            <h2>Expertise across every NYC transaction</h2>
+            <p>
+              From buyer and listing representation to investment advisory and valuation, we help clients make confident real estate decisions throughout New York City. Browse our specialized services below or call <strong>1-646-970-1078</strong> to discuss your goals.
             </p>
           </div>
-          <div style={{ marginTop: 60 }}>
+          <div className="svc-catalog-groups">
             <CatalogGroup
               first
               eyebrow="Buy"
@@ -424,7 +383,7 @@ export default function ServicesContent() {
               overviewHref="https://montfortre.com/calculators/"
               columns={3}
               thumb={
-                <div style={{ flex: "0 0 auto", width: 96, height: 96, borderRadius: 16, overflow: "hidden", border: "1px solid #E0D9B8", boxShadow: "0 16px 34px rgba(17,59,95,0.12)", background: "#113B5F", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <div className="svc-thumb svc-thumb--calc">
                   <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#F0D9A8" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="4" y="2" width="16" height="20" rx="2" />
                     <line x1="8" y1="6" x2="16" y2="6" />

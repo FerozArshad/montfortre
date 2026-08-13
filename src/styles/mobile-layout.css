@@ -41,6 +41,7 @@
   }
 
   /* Hero Google rating cards (Services, Harlem, Neighborhoods, Two Family) */
+  .services-page .svc-hero-rating,
   .services-page [style*="right: -14px"],
   .services-page [style*="right:-14px"],
   .services-page [style*="right: -14"],

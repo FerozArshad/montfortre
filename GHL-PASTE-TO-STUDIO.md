@@ -53,6 +53,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-in
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-included.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-listings.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-download.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/services-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
@@ -62,6 +63,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Services.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/services/ServicesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/services-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/services.ts
 
 ## 2. Blog
