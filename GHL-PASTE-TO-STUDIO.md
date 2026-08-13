@@ -59,6 +59,7 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/stanley
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/success-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/brownstone-guide.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/neighborhoods-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/about-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
@@ -106,17 +107,20 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nei
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/neighborhoods-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/neighborhoods.ts
 
+## 7. AboutUs
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/AboutUs.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/about/AboutUsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/about-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/aboutUs.ts
+
 ---
 
-## 7. Remaining migrated pages (full site)
+## 8. Remaining migrated pages (full site)
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Home.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/home/HomeContent.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/home.ts
-
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/AboutUs.tsx
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/about/AboutUsContent.tsx
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/aboutUs.ts
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Harlem.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem/HarlemContent.tsx
