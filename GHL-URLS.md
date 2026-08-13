@@ -1,9 +1,17 @@
 # Raw URLs for GHL AI Studio
 
-Fetch each file with download_to_repo into the same repo path (the part after /main/).
+Fetch each file and write it to the **same path after `/main/`**.
+
+Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 
 ## Source files
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/index.html
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/App.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/index.css
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/App.css
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/NavLink.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/lib/utils.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/layouts/PageShell.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/layouts/PageShell.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/types.ts
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/aboutUs.ts
