@@ -152,59 +152,7 @@ html.mfr-header-scrolled .mfr-mobile-header {
 }
 
 /* --- Footer: shared mobile layout on every page ------------------------- */
-@media (max-width: 1023.98px) {
-  .site-footer {
-    padding: 40px 20px 20px !important;
-  }
-
-  .site-footer-cols {
-    grid-template-columns: 1fr !important;
-    gap: 22px !important;
-  }
-
-  .site-footer-brand {
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 12px !important;
-    width: 100% !important;
-  }
-
-  .site-footer-brand img {
-    height: 36px !important;
-    width: auto !important;
-    margin: 0 !important;
-  }
-
-  .site-footer-contact {
-    margin-top: 24px !important;
-    padding-top: 22px !important;
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
-    justify-items: center !important;
-    text-align: center !important;
-  }
-
-  .site-footer-logo,
-  .site-footer-email {
-    justify-self: center !important;
-    text-align: center !important;
-  }
-
-  .site-footer-logo img {
-    margin: 0 auto !important;
-  }
-
-  .site-footer-legal {
-    margin-top: 18px !important;
-    text-align: center !important;
-  }
-
-  .site-footer-legal > div {
-    margin-top: 8px !important;
-  }
-}
+/* Footer chrome now lives in src/styles/site-footer.css */
 
 /* --- Desktop header: keep nav readable when Contact is in the bar ------- */
 @media (min-width: 1024px) and (max-width: 1280px) {

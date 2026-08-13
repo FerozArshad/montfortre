@@ -36,6 +36,8 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/lib/siteOrigin
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/page-shell.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/mobile-layout.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/desktop-nav.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/site-footer.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/resources-section.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/idx-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/favicon.svg
 
