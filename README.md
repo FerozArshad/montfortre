@@ -2,11 +2,13 @@
 
 React 18 + Vite + TypeScript SPA for [montfortre.com](https://montfortre.com/), deployed via GHL AI Studio.
 
+**Agents:** read **`DOCUMENTATION.md`** first (file tree, how to write TSX/CSS, pages done/left, SEO, branding, GHL).
+
 ## Quick start
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173
+npm run dev      # Vite; port may be 5173+
 npm run build    # outputs dist/
 npm run typecheck
 npm run lint
@@ -17,42 +19,43 @@ npm run test
 
 ```
 src/
-├── App.tsx              # Router shell (GHL standard entry)
-├── main.tsx             # Vite bootstrap
-├── pages/               # One component per route
-├── components/          # Seo, MobileHeader, HarlemSchools, NavLink
-├── hooks/               # useStyleHover, useCarousels, useTouchDropdowns
-├── layouts/             # SiteLayout (optional shared shell)
-├── lib/                 # Shared utilities (cn)
-├── data/                # Static JSON
-└── test/                # Vitest setup
+├── App.tsx              # MobileHeader + 12 routes + NotMigrated
+├── pages/               # Thin PageShell wrappers
+├── components/          # *Content.tsx, layout, Seo, MobileHeader
+├── layouts/PageShell.tsx
+├── seo/pages/           # Frozen per-page head tags
+├── styles/              # 31 CSS files (desktop + mobile)
+├── hooks/
+├── lib/siteOrigin.ts
+└── data/harlemSchools.json
 
 public/
-├── redesign-assets/     # Design images
-├── instagram/           # Instagram grid
+├── redesign-assets/     # Logo, listings, OG, favicons
+├── instagram/
 ├── robots.txt
-└── sitemap.xml
+└── sitemap.xml          # 12 migrated URLs
 ```
 
 ## Agent documentation
 
 | File | Purpose |
 |---|---|
+| `DOCUMENTATION.md` | Source of truth |
 | `AGENTS.md` | Short agent contract |
-| `AGENT-ONBOARDING.md` | Start here |
-| `PROJECT-CONTEXT.md` | Session continuity |
-| `GHL-TRANSFER-TRACKING.md` | What GHL was sent vs fetched |
-| `HANDOFF.md` | Launch blockers and constraints |
-| `TRANSFER-GUIDE.md` | Copy files into GHL AI Studio |
-| `GHL-PASTE-TO-STUDIO.md` / `GHL-FULL-FETCH.md` | Raw URLs for Studio |
-| `ROUTES.tsx.snippet` | Route reference (mirrors `App.tsx`) |
+| `AGENT-ONBOARDING.md` | Onboarding |
+| `PROJECT-CONTEXT.md` | Session notes |
+| `GHL-PASTE-TO-STUDIO.md` | Current GHL fetch URLs |
+| `GHL-TRANSFER-TRACKING.md` | Sent vs fetched |
+| `HANDOFF.md` | Platform launch blockers |
+| `TRANSFER-GUIDE.md` | Copy path tables |
 
 ## Routes
 
-12 migrated pages + `NotMigrated` catch-all. See `src/App.tsx` for the canonical route list.
+12 migrated pages + `NotMigrated` catch-all. Canonical list: `src/App.tsx` and `public/sitemap.xml`.
 
 ## Constraints
 
-- SEO constants (`TITLE`, `METAS`, `LINKS`, `JSON_LD`) are frozen per page
-- Desktop layout at ≥1440px must stay pixel-identical
-- Do not serve HTTrack/scraped HTML — reference material lives outside this repo
+- SEO constants in `src/seo/pages/*.ts` are frozen
+- Desktop ≥1440px pixel-identical
+- Copy lives in content TSX; branding in `public/redesign-assets/`
+- Do not serve HTTrack/scraped HTML — `d:\montfortre\reference\` is outside this repo

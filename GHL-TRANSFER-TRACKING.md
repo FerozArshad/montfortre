@@ -1,15 +1,17 @@
 # GHL AI Studio transfer tracking
 
+> Architecture / which files exist: **`DOCUMENTATION.md`**. Current fetch URLs: **`GHL-PASTE-TO-STUDIO.md`**.
+
 **Purpose:** Record what we asked GHL to fetch vs what Studio actually wrote. Next agents update this file — do not guess.
 
-**Studio cannot** git clone, browse the repo tree, unzip archives, or SSH. GitHub raw fetch often truncates. **Current ingest:** owner pastes **one full file per GHL chat message** using `GHL-PASTE-ORDER.md`. Reply `next` in Cursor after each write.
+**Studio cannot** git clone, browse the repo tree, unzip archives, or SSH. GitHub raw fetch often truncates. **Current ingest:** `GHL-PASTE-TO-STUDIO.md` (raw URLs). If fetch truncates, paste one full file per GHL message using those same paths. Reply `next` in Cursor after each write.
 
 | Item | Value |
 |---|---|
 | Git remote | https://github.com/FerozArshad/montfortre (`main`) |
 | Local repo | `d:\montfortre\ghl-react\` |
 | GHL preview | https://montfortre-live.vibepreview.com/ |
-| Paste lists | `GHL-PASTE-ORDER.md` (one-file-at-a-time) · `GHL-PASTE-TO-STUDIO.md` · `GHL-FULL-FETCH.md` |
+| Paste lists | `GHL-PASTE-TO-STUDIO.md` |
 | URL dump | `GHL-URLS.md` |
 | Last local HEAD | update after commits |
 
@@ -85,7 +87,7 @@ Each row is three files (shell + content + frozen SEO). SENT with Batch 0 on 202
 
 ## Batch 2 — remaining migrated pages + extra CSS
 
-Paste source: `GHL-FULL-FETCH.md`. SENT to owner 2026-08-13. FETCHED unknown.
+Paste source: `GHL-PASTE-TO-STUDIO.md`. SENT to owner 2026-08-13. FETCHED unknown.
 
 | Route | Shell | Content / extra | SEO | FETCHED | VERIFIED |
 |---|---|---|---|---|---|
@@ -107,8 +109,7 @@ Paste source: `GHL-FULL-FETCH.md`. SENT to owner 2026-08-13. FETCHED unknown.
 
 ## Batch 3 — branding + `public/` images
 
-Logo in header/footer is **CDN** (not a local file):  
-`/redesign-assets/logo-transparency-black.png`
+Logo: `/redesign-assets/logo-transparency-black.png` (local, not CDN).
 
 Must-have local branding (SENT 2026-08-13):
 
@@ -122,7 +123,7 @@ Must-have local branding (SENT 2026-08-13):
 | `public/robots.txt` | | |
 | `public/sitemap.xml` | | |
 
-Full image set (hoods, services, slots, blog, Instagram, plan, nbhd): every `public/` URL in `GHL-FULL-FETCH.md` / `GHL-URLS.md`.
+Full image set (hoods, services, slots, blog, Instagram, plan, nbhd): every `public/` URL in `GHL-URLS.md`.
 
 | Image group | SENT | FETCHED | VERIFIED |
 |---|---|---|---|
@@ -152,7 +153,7 @@ Full image set (hoods, services, slots, blog, Instagram, plan, nbhd): every `pub
 | When | What |
 |---|---|
 | 2026-08-13 | Local TSX conversion complete for all 12 migrated routes + IDX on PageShell. Pushed `main`. |
-| 2026-08-13 | Owner told GHL cannot clone. Created paste lists `GHL-PASTE-TO-STUDIO.md` + `GHL-FULL-FETCH.md`. **SENT to owner to paste into GHL.** Fetch confirmation from Studio is still pending. |
+| 2026-08-13 | Owner told GHL cannot clone. Created paste list `GHL-PASTE-TO-STUDIO.md`. **SENT to owner to paste into GHL.** Fetch confirmation from Studio is still pending. |
 
 ---
 

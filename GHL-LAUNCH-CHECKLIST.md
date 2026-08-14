@@ -1,5 +1,7 @@
 # GHL launch checklist — platform blockers
 
+> Architecture and fetch lists: **`DOCUMENTATION.md`**, **`GHL-PASTE-TO-STUDIO.md`**. This file is GHL/platform blockers only.
+
 **Repo:** https://github.com/FerozArshad/montfortre  
 **Preview:** https://montfortre-live.vibepreview.com/  
 **Production:** https://montfortre.com/
@@ -14,7 +16,7 @@ This checklist covers **Part A** from `HANDOFF-SECTION-seo-launch-readiness.md`.
 |---|---------|----------|-----|--------|
 | A1 | Client-side rendering — no per-route SEO in raw HTML | 🔴 | Enable prerendering / static generation per route | `curl -s https://montfortre.com/services/ \| grep -E '<title>\|canonical\|ld\+json'` shows Services values, not homepage shell |
 | A2 | Relative canonical + og:url (`href="/"`) | 🔴 | Remove platform canonical/meta injection; let `src/components/Seo.tsx` own `<head>` | Every route canonical = `https://montfortre.com/<slug>/` |
-| A3 | Shell `<head>` overrides page SEO | 🔴 | Strip shell to charset + viewport only (see `index.html` in repo) | Homepage description matches `Home.tsx` METAS exactly |
+| A3 | Shell `<head>` overrides page SEO | 🔴 | Strip shell to charset + viewport only (see `index.html` in repo) | Homepage description matches `src/seo/pages/home.ts` METAS exactly |
 | A4 | Soft 404s (HTTP 200 on unknown URLs) | 🟠 | Host returns HTTP 404 for unmatched routes | `curl -I https://montfortre.com/this-does-not-exist/` → 404 |
 | A5 | robots.txt + sitemap.xml not served at web root | 🟠 | Deploy `public/robots.txt` and `public/sitemap.xml` from this repo | `/robots.txt` has AI-crawler allowlist + Sitemap directive |
 | A6 | Trailing-slash duplication | 🟠 | 301 non-slash → trailing-slash | `/about-us` redirects to `/about-us/` |
@@ -36,7 +38,7 @@ This checklist covers **Part A** from `HANDOFF-SECTION-seo-launch-readiness.md`.
 
 ## Redeploy steps (GHL AI Studio)
 
-1. Studio cannot clone. Fetch raw URLs from `GHL-PASTE-TO-STUDIO.md` then `GHL-FULL-FETCH.md`.
+1. Studio cannot clone. Fetch raw URLs from `GHL-PASTE-TO-STUDIO.md` (current). Images: `GHL-URLS.md`.
 2. Update `GHL-TRANSFER-TRACKING.md` when Studio confirms each batch.
 3. Wire `src/App.tsx` routes + `MobileHeader` + global CSS imports (`main.tsx`).
 4. Confirm platform does **not** inject its own title, description, or canonical.

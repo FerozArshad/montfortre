@@ -1,6 +1,6 @@
 # HANDOFF — Montfort Real Estate site (context for the next agent)
 
-> **New agents:** start with `AGENTS.md` and `AGENT-ONBOARDING.md`. GHL transfer status is `GHL-TRANSFER-TRACKING.md`. This file adds launch blockers and audit history.
+> **New agents:** start with **`DOCUMENTATION.md`**, then `AGENTS.md` and `AGENT-ONBOARDING.md`. GHL transfer status is `GHL-TRANSFER-TRACKING.md`. This file is **platform launch blockers** and SEO audit history — not the live file tree.
 
 ## What this project is
 This repo is the approved redesign of https://montfortre.com/ (NYC realtor), being rebuilt as a
@@ -10,40 +10,32 @@ from a design tool; each page's SEO was copied byte-exact from the original live
 
 ## What exists and where
 
+Full map (pages, content TSX, CSS, SEO modules): **`DOCUMENTATION.md`**.
+
 | Path | What it is |
 |---|---|
-| src/pages/Home.tsx | Homepage, route `/` |
-| src/pages/Services.tsx | `/services/` |
-| src/pages/AboutUs.tsx | `/about-us/` |
-| src/pages/Blog.tsx | `/blog/` |
-| src/pages/Harlem.tsx | `/harlem/` |
-| src/pages/StanleyMontfort.tsx | `/stanley-montfort/` |
-| src/pages/SuccessStories.tsx | `/success-stories/` |
-| src/pages/TwoFamilyHouseForSaleNyc.tsx | `/2-family-house-for-sale-nyc/` |
-| src/pages/BrownstoneBuyingGuide.tsx | `/advice-for-buyers-looking-to-purchase-brownstones/` |
-| src/components/Seo.tsx | Injects each page's exact SEO into <head>; strips template defaults |
-| src/hooks/useStyleHover.ts | Powers `style-hover` attributes (hover styles on inline-styled elements) |
-| ROUTES.tsx.snippet | The <Route> lines used in App.tsx |
-| public/redesign-assets/** | Design artwork (incl. slots/ service images) |
-| public/instagram/** | Instagram grid photos |
-| GHL-URLS.md | Flat raw-URL manifest |
-| GHL-PASTE-TO-STUDIO.md | Paste list for Studio (shared + first six pages) |
-| GHL-FULL-FETCH.md | Paste list (remaining pages, styles, all public assets) |
-| GHL-TRANSFER-TRACKING.md | Sent / fetched / verified checklist |
+| `src/pages/*.tsx` | Thin `PageShell` wrappers (12 routes + NotMigrated) |
+| `src/components/<area>/*Content.tsx` | Page copy and markup |
+| `src/styles/*.css` | Desktop + `@media` layout (not inline HTML) |
+| `src/seo/pages/*.ts` | Frozen head tags — how to check SEO per page |
+| `src/components/Seo.tsx` | Injects those tags; origin rewrite via `siteOrigin.ts` |
+| `public/redesign-assets/**` | Logo, listings, OG, favicons (no AgentFire) |
+| `public/sitemap.xml` | The 12 migrated URLs only |
+| `GHL-PASTE-TO-STUDIO.md` | Current Studio fetch list |
+| `GHL-TRANSFER-TRACKING.md` | Sent / fetched / verified |
 
 ## How pages are built (important)
 Every migrated route is real TSX: `PageShell` (Seo + DesktopHeader + footer) wrapping a content
-component. Frozen SEO lives in `src/seo/pages/*.ts` — do not edit those values. Layout styling is
-mostly **inline styles** on TSX elements; responsive overrides live in `src/styles/page-shell.css`
-(desktop ≥1440px must stay pixel-identical). IDX pages use `IdxSearchLayout` (header + iframe, no footer).
+component. Frozen SEO lives in `src/seo/pages/*.ts` — do not edit those values. Layout lives in
+`src/styles/*.css` (desktop ≥1440px must stay pixel-identical). IDX pages use `IdxSearchLayout`
+(header + iframe, no site footer). Hover is CSS `:hover`.
 
 ## Hard constraints — do not break these
-1. SEO IS FROZEN. Never edit TITLE, METAS, LINKS, JSON_LD, or the Seo/canonical logic. Titles,
-   descriptions, og/twitter tags, canonicals (they point to https://montfortre.com/ on purpose)
-   and JSON-LD must stay byte-identical to the original site.
+1. SEO IS FROZEN. Never edit TITLE, METAS, LINKS, JSON_LD values. Canonicals in source still use
+   `https://montfortre.com`; `Seo.tsx` rewrites origin at inject time.
 2. Content is frozen: headings, copy, phone number (646) 970-1078, images. Design polish only.
 3. H1 count per page must not change (one H1; the 2-family page has 2 by original design).
-4. Do not remove the `style-hover` attributes or the useStyleHover hook.
+4. Do not reintroduce `style-hover` attributes. Leave `useStyleHover()` in PageShell as a safety net.
 5. Do not rename routes or files; internal links are root-relative (`/services/` etc.).
 
 ## The current task: GHL Studio ingest + launch blockers
@@ -66,7 +58,7 @@ Our repo is the source of truth for all SEO. The deployed build currently overri
    LINKS/METAS constants. The platform currently outputs a relative canonical (href="/") — remove any
    platform-level canonical/meta injection and let src/components/Seo.tsx own the head.
 2. META DESCRIPTION: the platform replaced the homepage description. Restore the exact value from
-   Home.tsx METAS ("Our Realtors will help you find on and off market NYC real estate...").
+   `src/seo/pages/home.ts` METAS ("Our Realtors will help you find on and off market NYC real estate...").
    Never rewrite page SEO constants.
 3. SHELL HEAD: the served index.html carries its own title/description ("Premier NYC & Harlem...").
    Strip it to charset+viewport only, or set it to match the homepage constants.
@@ -86,8 +78,8 @@ Our repo is the source of truth for all SEO. The deployed build currently overri
 
 | File | Scope |
 |------|--------|
-| `HANDOFF-SECTION-neighborhoods-harlem-stanley.md` | Neighborhoods mobile CSS, Harlem schools component, Stanley hero image (2026-08-10) |
-| `HANDOFF-SECTION-seo-launch-readiness.md` | SEO/launch readiness: platform blockers, applied fixes, open client decisions (2026-08-10) |
+| `DOCUMENTATION.md` | Architecture, how to write code, directories |
+| `HANDOFF-SECTION-seo-launch-readiness.md` | SEO/launch readiness: platform blockers, applied fixes, open client decisions |
 
 ## Round-2 SEO audit — repo fixes applied (2026-08-10)
 

@@ -1,6 +1,6 @@
 # Paste this message to GHL AI Studio
 
-After GHL writes files, update `GHL-TRANSFER-TRACKING.md` (FETCHED column). Full remaining pages + images: `GHL-FULL-FETCH.md`.
+> Current architecture: **`DOCUMENTATION.md`**. After GHL writes files, update `GHL-TRANSFER-TRACKING.md` (FETCHED column). Images / remaining public files: `GHL-URLS.md`.
 
 Fetch each URL and **write the file to the same path after `/main/`**. Do not invent pages. Do not edit SEO values. Do not wrap content in `dangerouslySetInnerHTML`.
 

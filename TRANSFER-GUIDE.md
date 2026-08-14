@@ -1,5 +1,8 @@
 # GHL AI Studio transfer guide
 
+**Current architecture and complete CSS/SEO map:** `DOCUMENTATION.md`.  
+**Current fetch URLs:** `GHL-PASTE-TO-STUDIO.md`.
+
 Copy these files from this repo into the GHL AI Studio project. Paths are identical (`src/...` → `src/...`).
 
 ## 1. Entry + router (required)
@@ -13,7 +16,7 @@ Copy these files from this repo into the GHL AI Studio project. Paths are identi
 | `src/responsive.css` | `src/responsive.css` |
 | `index.html` | `index.html` (minimal shell — charset, viewport, favicon only) |
 
-`App.tsx` must render `<MobileHeader />` once above `<Routes>`. See `ROUTES.tsx.snippet`.
+`App.tsx` must render `<MobileHeader />` once above `<Routes>`. Canonical routes: `src/App.tsx`.
 
 ## 2. Shared runtime (required on every deploy)
 
@@ -28,14 +31,14 @@ Copy these files from this repo into the GHL AI Studio project. Paths are identi
 | `src/components/shared/ResourcesSection.tsx` | Blog teaser block |
 | `src/components/shared/ContactSection.tsx` | Contact form + map |
 | `src/components/idx/IdxSearchLayout.tsx` | IDX page template |
-| `src/hooks/useStyleHover.ts` | `style-hover` attributes |
+| `src/hooks/useStyleHover.ts` | Safety net (hover is CSS `:hover`) |
 | `src/hooks/useTouchDropdowns.ts` | Touch nav dropdowns |
 | `src/hooks/useCarousels.ts` | Carousel behavior |
+| `src/hooks/useStickyHeader.ts` | Sticky header |
 | `src/layouts/PageShell.tsx` | Converted-page wrapper |
 | `src/lib/utils.ts` | `cn()` helper |
-| `src/styles/page-shell.css` | Responsive rules for converted pages |
-| `src/styles/desktop-nav.css` | Desktop header nav |
-| `src/styles/idx-page.css` | IDX page styles |
+| `src/lib/siteOrigin.ts` | Production origin rewrite |
+| `src/styles/*.css` | All 31 files — list in `DOCUMENTATION.md` §1 / `GHL-PASTE-TO-STUDIO.md` §0 |
 | `src/seo/types.ts` | SEO TypeScript types |
 | `src/data/harlemSchools.json` | Schools data |
 
@@ -108,7 +111,7 @@ Copy these files from this repo into the GHL AI Studio project. Paths are identi
 
 ## Quick sync
 
-1. Paste `GHL-PASTE-TO-STUDIO.md` into GHL, then `GHL-FULL-FETCH.md`.
+1. Paste `GHL-PASTE-TO-STUDIO.md` into GHL. Images: `GHL-URLS.md`.
 2. Mark FETCHED/VERIFIED in `GHL-TRANSFER-TRACKING.md` after Studio confirms.
 3. Flat URL dump: `GHL-URLS.md`  
 4. Directory reference: `GHL-STUDIO-STRUCTURE.md`

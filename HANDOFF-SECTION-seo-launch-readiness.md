@@ -1,9 +1,10 @@
 # Section handoff — SEO & launch readiness
 
+> **Keep for platform blockers.** Per-page SEO files and how to check them: **`DOCUMENTATION.md`**. HEAD/date below may be stale. Repo architecture is PageShell + CSS + `src/seo/pages/*.ts`, not HTML-string pages.
+
 **Date:** 2026-08-10
 **Owner of this stream:** whoever runs the GHL AI Studio deployment + a content/client contact
-**Parent handoff:** `montfortre/HANDOFF.md` (repo-wide constraints, file map, responsiveness strategy)
-**Sibling handoff:** `HANDOFF-SECTION-neighborhoods-harlem-stanley.md` (page-level design work)
+**Parent handoff:** `HANDOFF.md` / `DOCUMENTATION.md`
 **Repo:** https://github.com/FerozArshad/montfortre — branch `main`, head `cadb0b7`
 **Preview:** https://montfortre-live.vibepreview.com/ · **Production target:** https://montfortre.com/
 **Local dev:** `npm run dev` (this repo also runs on port 5199 via `.claude/launch.json` → `montfortre-dev`)
@@ -176,18 +177,16 @@ wants authoritative external references — needs an editorial decision on which
 
 ## Working rules for anyone picking this up
 
-1. **SEO constants are frozen.** Never edit `TITLE`, `METAS`, `LINKS`, `JSON_LD`, or `Seo.tsx` logic to
-   "make the audit pass" — they are byte-exact from the live site by design. If a deployed page shows
-   wrong SEO, the bug is in the platform (Part A), not the constant.
+1. **SEO constants are frozen.** Never edit `TITLE`, `METAS`, `LINKS`, `JSON_LD` values to
+   "make the audit pass". If a deployed page shows wrong SEO, the bug is in the platform (Part A).
+   Check values in `src/seo/pages/*.ts` — see `DOCUMENTATION.md`.
 2. **Content is frozen** (headings, copy, phone `(646) 970-1078`, link targets) unless the client
    approves the change — see Part C.
-3. Pages are real TSX with **inline** layout styles; stylesheet overrides in `page-shell.css` use
-   `!important` inside max-width queries. Desktop ≥1440px must stay pixel-identical.
-4. Keep `style-hover` attributes and the `useStyleHover()` / `useCarousels()` hooks. Carousel arrows and
-   dots also carry **self-contained inline onclick handlers** (commit `a0a71b5`) so they work even when
-   the host app doesn't run the hooks — don't strip them.
-5. After any change: `npx esbuild src/pages/*.tsx src/components/*.tsx --loader:.tsx=tsx --outdir=/tmp/x`
-   to compile-check, then verify at 375 / 768 / 1024 / 1440 px.
+3. Pages are `PageShell` + content TSX + CSS in `src/styles/*.css`. Desktop ≥1440px must stay
+   pixel-identical. Do not put `overflow-x: hidden` on `.site-page`.
+4. Hover is CSS `:hover`. Leave `useStyleHover()` / `useCarousels()` in place. Do not strip
+   carousel handlers.
+5. After any change: `npm run typecheck` and `npm run test`, then verify at 375 / 768 / 1024 / 1440 px.
 
 ## Redeploy checklist (GHL)
 

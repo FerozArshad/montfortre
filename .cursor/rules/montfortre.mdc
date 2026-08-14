@@ -7,24 +7,29 @@ alwaysApply: true
 
 Git repo is `d:\montfortre\ghl-react` (remote `https://github.com/FerozArshad/montfortre`). Parent `d:\montfortre\reference\` is not in git.
 
-Read `AGENT-ONBOARDING.md` first. Session state: `PROJECT-CONTEXT.md`. Launch blockers: `HANDOFF.md`.
+**Read `DOCUMENTATION.md` first.** Then `AGENT-ONBOARDING.md`. Session notes: `PROJECT-CONTEXT.md`. Launch blockers: `HANDOFF.md`.
 
 ## Frozen
 
-- SEO modules in `src/seo/pages/*.ts` — never edit values. `Seo.tsx` rewrites `https://montfortre.com` to the current origin (`src/lib/siteOrigin.ts`) so preview/staging domains work.
-- Copy, phone `(646) 970-1078`, link targets, H1 counts
+- SEO modules in `src/seo/pages/*.ts` — never edit values. `Seo.tsx` rewrites `https://montfortre.com` via `src/lib/siteOrigin.ts`.
+- Copy, phone `(646) 970-1078`, link targets, H1 counts (Two Family has two H1s)
 - Desktop ≥1440px pixel-identical; responsive only in `max-width` queries
-- Keep `style-hover` and `useStyleHover()`
+- Hover is CSS `:hover`. Do not reintroduce `style-hover` attributes. Leave `useStyleHover()` in PageShell as a no-op safety net.
 
 ## Architecture
 
 - React 18 + Vite + TypeScript. Not Next.js.
-- `src/App.tsx`: `MobileHeader` once above `Routes`
-- Converted pages: `PageShell` + `src/components/<area>/*Content.tsx`
-- No page-level `dangerouslySetInnerHTML`
+- `src/App.tsx`: `MobileHeader` once above `Routes` — 12 migrated routes + `NotMigrated`
+- Each page: `PageShell` + `src/components/<area>/*Content.tsx` + `src/styles/*.css` + `src/seo/pages/*.ts`
+- No page-level `dangerouslySetInnerHTML`. No AgentFire CDN.
+- Do not put `overflow-x: hidden` on `.site-page`
+
+## Content / branding / SEO
+
+- Copy: content TSX files. Branding: `public/redesign-assets/`. SEO check: matching `src/seo/pages/*.ts`. Sitemap: `public/sitemap.xml`.
 
 ## GHL AI Studio
 
-Studio cannot clone, unzip, or SSH. Give **raw URLs** (`GHL-PASTE-TO-STUDIO.md`, `GHL-FULL-FETCH.md`). Track sent vs fetched in **`GHL-TRANSFER-TRACKING.md`**. After GHL confirms files, mark FETCHED/VERIFIED and commit.
+Studio cannot clone. Give **raw URLs** from `GHL-PASTE-TO-STUDIO.md`. Track `GHL-TRANSFER-TRACKING.md`.
 
 Do not add routes for unmigrated live URLs; they use `NotMigrated`.
