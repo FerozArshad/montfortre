@@ -4,7 +4,7 @@
 
 Then `AGENT-ONBOARDING.md` and `PROJECT-CONTEXT.md`. Launch blockers: `HANDOFF.md`.
 
-**Git:** branch **`main`** = this app at GitHub root (GHL). Branch **`local-root`** = full disk (`ghl-react/` + `reference/`). Clone `local-root` to match folders. Never merge those branches. Details: `BRANCHES.md`.
+**Git:** https://github.com/FerozArshad/montfortre branch **`main`** only (app at repo root). Do not push `local-root` or `reference/`. Details: `BRANCHES.md`.
 
 **Do not** edit frozen SEO values in `src/seo/pages/*.ts`. **Do not** change copy, phone `(646) 970-1078`, H1 counts, or desktop ≥1440px layout. Hover is CSS `:hover`; `useStyleHover()` stays as a no-op safety net — do not reintroduce `style-hover` attributes.
 

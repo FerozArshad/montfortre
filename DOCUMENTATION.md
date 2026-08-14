@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | App | React 18 + Vite 5 + TypeScript SPA. **Not Next.js.** |
-| Git | `d:\montfortre\ghl-react` is the app. GitHub **`main`** = these files at repo root. GitHub **`local-root`** = full disk (`ghl-react/` + `reference/`). See `BRANCHES.md`. |
+| Git | `d:\montfortre\ghl-react` → GitHub **`main`** (app at repo root). Full laptop folder + `reference/` stay local. See `BRANCHES.md`. |
 | Production (live WordPress until cutover) | https://montfortre.com/ |
 | Live robots | https://montfortre.com/robots.txt |
 | Live sitemap index | https://montfortre.com/sitemap_index.xml |
@@ -351,7 +351,7 @@ If raw fetch truncates, paste **one full file per GHL message** using the paths 
 3. Do not rewrite Calendly, IDX, email, or social profile URLs.
 4. Google review badges stay overlapping the photo (bottom-right), not a full-width bar under it.
 5. Neighborhood nav labels: `{Neighborhood} Realtor`.
-6. Commit/push **`main`** when the owner wants GitHub (GHL) updated. Do not commit `node_modules`. Workspace snapshot branch is **`local-root`** (`BRANCHES.md`). Never merge `local-root` into `main`.
+6. Commit/push **`main`** when the owner wants GitHub (GHL) updated. Do not commit `node_modules`. Do not push `reference/` or recreate `local-root` on GitHub.
 
 ### Reference material (not in git)
 
@@ -365,7 +365,7 @@ If raw fetch truncates, paste **one full file per GHL message** using the paths 
 
 | File | Role |
 |---|---|
-| `BRANCHES.md` | `local-root` vs `main` — clone, pull, push, PR |
+| `BRANCHES.md` | Clone `main` only; laptop `reference/` stays off GitHub |
 | **`DOCUMENTATION.md`** | Source of truth — structure, how to write code, pages, SEO, GHL |
 | `TODO.md` | Open tasks — do not implement until asked |
 | `seo-audit/` | Screaming Frog xlsx + live page-sitemap URLs |
@@ -400,8 +400,7 @@ npm run build
 
 ---
 
-## 8. GitHub branches (short)
+## 8. GitHub (`main` only)
 
-- **`main`** — this directory’s files at GitHub root. GHL fetch URLs use `/main/src/...`.
-- **`local-root`** — `ghl-react/` + `reference/` matching `d:\montfortre`. Other developers clone this branch to get the same folders.
-- How to pull/push/PR: **`BRANCHES.md`**. Do not merge the two branches.
+- Clone and PR **`main`**. GHL fetch URLs use `/main/src/...`.
+- Do **not** push `local-root` or `reference/`. Those stay on the owner laptop. See `BRANCHES.md`.

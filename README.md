@@ -41,7 +41,7 @@ public/
 | File | Purpose |
 |---|---|
 | `DOCUMENTATION.md` | Source of truth |
-| `BRANCHES.md` | `local-root` vs `main` — pull, push, PR |
+| `BRANCHES.md` | Clone `main` only; do not push `reference/` |
 | `AGENTS.md` | Short agent contract |
 | `AGENT-ONBOARDING.md` | Onboarding |
 | `PROJECT-CONTEXT.md` | Session notes |

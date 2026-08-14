@@ -1,25 +1,46 @@
-# Git branches
+# Git — `main` only on GitHub
 
-This folder (`ghl-react/`) on disk is the **app**. On GitHub it appears two ways:
+GitHub has **`main` only**. Do not recreate or push `local-root`. That snapshot included `reference/` (HTTrack / design) and was **removed from GitHub**. The full laptop folder `d:\montfortre\` (`ghl-react/` + `reference/`) stays **local only**.
 
-| Branch | Your path on disk | Path on GitHub |
-|---|---|---|
-| **`local-root`** | `montfortre/ghl-react/src/...` | `ghl-react/src/...` |
-| **`main`** | same files if you cloned `main` into this folder | `src/...` (no `ghl-react/` prefix) |
+Remote: https://github.com/FerozArshad/montfortre  
+App on `main` is at **repo root**: `src/`, `public/`, `DOCUMENTATION.md`.
 
-Full instructions: parent **`BRANCHES.md`** (on `local-root`) or the copy below.
+---
 
-**Send finished app work to `main` as a PR. Never merge `local-root` into `main`.**
+## Other developer — clone and work
+
+Delete any clone of `local-root`, then:
 
 ```bash
-# Match Feroz’s folders
-git clone -b local-root https://github.com/FerozArshad/montfortre.git montfortre
-cd montfortre/ghl-react && npm install && npm run dev
-
-# Ship changes to GHL / production tree
-git clone -b main https://github.com/FerozArshad/montfortre.git montfortre-main
-# copy changed files from montfortre/ghl-react/ → montfortre-main/ (same relative paths under ghl-react)
-# commit on a feature branch, PR into main
+git clone -b main https://github.com/FerozArshad/montfortre.git montfortre
+cd montfortre
+npm install
+npm run dev
 ```
 
-Read `DOCUMENTATION.md` first. Open tasks: `TODO.md`.
+Read `DOCUMENTATION.md`. Send changes to `main`:
+
+```bash
+git checkout main
+git pull origin main
+git checkout -b feature/your-change
+# edit files
+git add -A
+git commit -m "Explain why."
+git push -u origin feature/your-change
+```
+
+Open a pull request **into `main`**.
+
+---
+
+## Owner laptop (this machine)
+
+Keep working in `d:\montfortre\ghl-react` on `main`. Do not `git push` `reference/` or a `local-root` branch.
+
+If you still have a local clone of `local-root`:
+
+```bash
+git fetch origin --prune
+git branch -D local-root
+```
