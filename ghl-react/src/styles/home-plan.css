@@ -1,0 +1,188 @@
+.home-plan {
+  position: relative;
+  background: #fff;
+  padding: 120px 64px;
+  border-top: 1px solid #e0d9b8;
+  border-bottom: 1px solid #e0d9b8;
+  overflow: hidden;
+}
+
+.home-plan-inner {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.home-plan-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 56px;
+}
+
+.home-plan-kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.home-plan-kicker-line {
+  width: 34px;
+  height: 1px;
+  background: #c98a2c;
+  display: block;
+}
+
+.home-plan-kicker-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #3b4c5e;
+}
+
+.home-plan-head h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1.2;
+  letter-spacing: -0.008em;
+  color: #0f1729;
+  margin: 16px 0 0;
+  max-width: 760px;
+  text-wrap: pretty;
+}
+
+.home-plan a.home-plan-cta {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #113b5f;
+  white-space: nowrap;
+  border-bottom: 2px solid #c98a2c;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+.home-plan a.home-plan-cta:hover {
+  border-bottom-color: #0f1729;
+}
+
+.home-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  margin-top: 64px;
+}
+
+.home-plan-photo {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #efe7c4;
+  border: 1px solid rgba(201, 138, 44, 0.45);
+  box-shadow: 0 22px 48px rgba(17, 59, 95, 0.14);
+}
+
+.home-plan-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-plan-title {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.home-plan-num {
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  color: #c98a2c;
+}
+
+.home-plan-name {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1.35;
+  color: #0f1729;
+}
+
+.home-plan-step p {
+  font-size: 16.5px;
+  line-height: 1.85;
+  color: #3b4c5e;
+  margin: 14px 0 0;
+  max-width: 360px;
+  text-wrap: pretty;
+}
+
+@media (min-width: 1025px) {
+  .home-plan {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .home-plan-inner {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .home-plan {
+    padding: 56px 20px;
+  }
+
+  .home-plan-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .home-plan-head h2 {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  .home-plan a.home-plan-cta {
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: flex-start;
+    display: inline-block;
+  }
+
+  .home-plan-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023.98px) {
+  .home-plan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .home-plan-name {
+    font-size: 22px;
+  }
+
+  .home-plan-step p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .home-plan {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

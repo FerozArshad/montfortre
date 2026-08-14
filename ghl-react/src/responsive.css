@@ -1,0 +1,167 @@
+/*
+ * Shared responsive rules for all pages. Import once, e.g. in App.tsx:
+ *   import "./responsive.css";
+ *
+ * Page layout styles are inline (see HANDOFF.md), so overrides here need
+ * !important to win. Page-specific breakpoint rules live in each page's own
+ * <style> block; this file only holds rules shared by every route.
+ */
+
+/* Sticky headers: fade/slide away on scroll down, return on scroll up */
+header,
+.mfr-mobile-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  transition:
+    transform 0.38s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 0.32s ease,
+    box-shadow 0.32s ease;
+}
+
+html.mfr-header-hidden header,
+html.mfr-header-hidden .mfr-mobile-header:not([data-menu-open="true"]) {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+html.mfr-header-scrolled header,
+html.mfr-header-scrolled .mfr-mobile-header {
+  box-shadow: 0 10px 28px rgba(17, 59, 95, 0.12);
+}
+
+.mfr-mobile-header[data-menu-open="true"] {
+  transform: none !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* --- Desktop nav: touch support (used by useTouchDropdowns) ------------- */
+/* Mirrors the .mnav-item:hover > .mnav-drop rule in each page's <style>.   */
+/* Invisible hover bridge across the gap between trigger and panel */
+.mnav-item > .mnav-drop::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 22px;
+}
+.mnav-item.mnav-open > .mnav-drop {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) scale(1) !important;
+  pointer-events: auto !important;
+}
+.mnav-item.mnav-open > .mnav-top {
+  color: #c98a2c !important;
+}
+.mnav-item.mnav-open .mnav-chev {
+  transform: rotate(180deg);
+  color: #c98a2c;
+}
+
+/*
+ * Desktop content rail alignment.
+ * Header uses max-width:1440px with 64px horizontal padding INSIDE the box.
+ * Sections historically used 64px padding on the SECTION and a full-bleed
+ * 1440 inner, so hero/copy sat 64px wider than the logo/phone. Mirror the
+ * header pattern above 1024 so every section lines up with the nav.
+ */
+@media (min-width: 1025px) {
+  section[style*="px 64px"],
+  footer[style*="px 64px"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  section > div[style*="max-width:1440px"],
+  footer > div[style*="max-width:1440px"] {
+    padding-left: 64px !important;
+    padding-right: 64px !important;
+  }
+}
+
+/* --- Below 1024px: swap headers, shared mobile baselines ---------------- */
+@media (max-width: 1023.98px) {
+  /* Hide the desktop header embedded in each page's HTML... */
+  header {
+    display: none !important;
+  }
+  /* ...and show the shared MobileHeader (inline style is display:none). */
+  .mfr-mobile-header {
+    display: block !important;
+  }
+
+  /* Grid/flex blowout guard: children with wide intrinsic content (e.g. the
+     hero marquee strip) must not force their track wider than the viewport. */
+  [style*="display:grid"] > * ,
+  [style*="display:flex"]:not([style*="overflow"]) > * {
+    min-width: 0 !important;
+  }
+  [style*="display:grid"] > * {
+    max-width: 100% !important;
+  }
+
+  /* Fluid media everywhere. height:auto only where it can't break
+     object-fit cover images or absolutely-positioned backgrounds. */
+  img {
+    max-width: 100% !important;
+  }
+  /* Skip images that set their own inline height (logos, icons): forcing
+     height:auto would blow them up to their natural pixel size. */
+  img:not([style*="position:absolute"]):not([style*="object-fit"]):not([style*="height:"]) {
+    height: auto !important;
+  }
+  iframe {
+    max-width: 100% !important;
+  }
+}
+
+/* --- 1024px and up: desktop header only --------------------------------- */
+@media (min-width: 1024px) {
+  .mfr-mobile-header {
+    display: none !important;
+  }
+}
+
+/* --- Small phones: hide the phone number text in the mobile bar ---------- */
+@media (max-width: 379.98px) {
+  .mfr-phone-text {
+    display: none !important;
+  }
+}
+
+/* --- Hero MLS search dropdown panel: never squeezed by layout guards ----- */
+.lead-idx-form .lif-list {
+  min-width: 170px !important;
+}
+
+/* --- Hero MLS search bar: keep it comfortable on small phones ------------ */
+@media (max-width: 480px) {
+  .lead-idx-form .lif-btn {
+    font-size: 13.5px !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
+  }
+  .lead-idx-form button {
+    font-size: 12px !important;
+    padding: 0 12px !important;
+    letter-spacing: 0.04em !important;
+  }
+}
+
+/* --- Footer: shared mobile layout on every page ------------------------- */
+/* Footer chrome now lives in src/styles/site-footer.css */
+
+/* --- Desktop header: keep nav readable when Contact is in the bar ------- */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  header nav {
+    gap: 18px !important;
+    font-size: 12px !important;
+  }
+  header nav .mnav-drop {
+    /* keep panels usable on mid-width desktops */
+    z-index: 80;
+  }
+}

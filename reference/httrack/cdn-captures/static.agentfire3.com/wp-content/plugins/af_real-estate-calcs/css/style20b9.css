@@ -1,0 +1,271 @@
+.afc_table,
+.afc_table tbody,
+.afc_table tr,
+.afc_table td {
+	vertical-align: middle;
+}
+
+div.afc_tooltip {
+	width: 16px;
+	height: 100%;
+	background: url("../img/tooltip.png") no-repeat scroll center center;
+	vertical-align: middle;
+}
+
+input.afc_pre_input {
+	width: 30px;
+	margin-right: -10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+input.afc_input {
+	width: 126px;
+}
+
+.afc_submit {
+	text-align: right;
+}
+
+.afc_reset {
+	text-align: left;
+}
+
+.afc_label {
+	text-align: right;
+}
+
+#afc_home_calc_form .afc_result_row {
+	display: none;
+}
+
+.afm_head_row td {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.afm_add_first_row {
+	border-top: 2px dotted #cccccc;
+}
+
+@media (max-width: 767px) {
+	.afc_label,
+	.afc_hint,
+	.afc_input_td,
+	.afc_result {
+		display: block;
+	}
+
+	.afc_hint,
+	.afc_input_td {
+		float: left;
+	}
+
+	.afc_label {
+		text-align: left;
+	}
+
+	.afc_buttons td {
+		display: block;
+		text-align: left;
+	}
+
+	.afc_buttons td input {
+		width: 100%;
+	}
+
+	.afc_buttons .afc_hint {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.afc_input[type="text"] {
+		width: 100px;
+	}
+}
+
+/* Widgets */
+.widget .afc_result {
+	font-weight: bold;
+}
+
+.widget .afc_label,
+.widget .afc_hint,
+.widget .afc_input_td,
+.widget .afc_result {
+	display: block;
+}
+
+.widget .afc_hint,
+.widget .afc_input_td {
+	float: left;
+}
+
+.widget .afc_label {
+	text-align: left;
+}
+
+.widget .afc_input[type="text"] {
+	width: 100px;
+}
+
+.widget input.afc_input:not([disabled]) {
+	background-color: #fff;
+}
+
+.widget .afc_table {
+	width: 100%;
+	border: 0;
+}
+
+.widget .afc_table td {
+	padding: 8px 8px 8px 0;
+	border: 0;
+}
+
+.widget_afc_mort_rates_widget iframe {
+	height: 105px;
+}
+
+.afc_rates_widget_form {
+	width: 100%;
+	text-align: center;
+}
+
+.afc_rates_widget_button {
+	width: 90%;
+}
+
+#afm_start {
+	width: 150px;
+}
+
+.afc_input_td .dashicons {
+	vertical-align: middle;
+	margin-left: -30px;
+}
+
+.afm_term label {
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+.afm_term input.afc_input {
+	display: block;
+	width: 70px;
+}
+
+#ui-datepicker-div {
+	display: none;
+}
+
+#afm_mort_result td {
+	text-align: right;
+}
+
+#afm_mort_result th {
+	text-align: center;
+}
+
+#afm_mort_result td:nth-of-type(1) {
+	text-align: left;
+}
+
+.afc_buttons input {
+	width: 100%;
+}
+
+.afc_buttons .afc_submit {
+	padding-left: 10%;
+}
+
+.afc_buttons .afc_reset {
+	padding-right: 10%;
+}
+
+#afm_add_payment_buttons .afc_hint {
+	display: none;
+}
+
+#afh_reset_btn {
+	width: 100%;
+}
+
+@media (max-width: 767px) {
+	.afm_ref_thead {
+		display: none;
+	}
+
+	#afm_mort_result td {
+		display: block;
+		padding-left: 50%;
+		position: relative;
+	}
+
+	#afm_mort_result td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		text-align: right;
+	}
+
+	#afm_mort_result td:nth-of-type(2):before {
+		content: "Payment";
+	}
+
+	#afm_mort_result td:nth-of-type(3):before {
+		content: "Principal Paid";
+	}
+
+	#afm_mort_result td:nth-of-type(4):before {
+		content: "Interest Paid";
+	}
+
+	#afm_mort_result td:nth-of-type(5):before {
+		content: "Total Interest";
+	}
+
+	#afm_mort_result td:nth-of-type(6):before {
+		content: "Balance";
+	}
+
+	#afm_mort_result td:nth-of-type(1) {
+		text-align: center;
+		font-weight: bold;
+		padding: 6px 10px;
+	}
+
+	#afc_mortgage_calc_form .afc_buttons .afc_submit {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	#afc_mortgage_calc_form .afc_buttons .afc_reset {
+		padding-right: 0;
+	}
+}
+
+/*
+ Temporary workaround.
+ TODO: DELETE ME
+*/
+#afc_mortgage_calc_form input.afc_pre_input {
+	width: 30px;
+	margin-right: -10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#afc_mortgage_calc_form input.afc_input {
+	width: 126px;
+}
+
+.af-calc-datepicker {
+	width: auto !important;
+}

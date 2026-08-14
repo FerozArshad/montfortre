@@ -1,0 +1,231 @@
+.contact-section {
+  background: #113b5f;
+  padding: 100px 64px;
+}
+
+.contact-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: stretch;
+}
+
+.contact-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-kicker {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c98a2c;
+}
+
+.contact-copy h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.22;
+  letter-spacing: -0.008em;
+  color: #f9f6e6;
+  margin: 16px 0 0;
+  text-wrap: pretty;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+  max-width: 520px;
+}
+
+.contact-names {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.contact-field {
+  background: rgba(249, 246, 230, 0.1);
+  border: 1px solid rgba(201, 138, 44, 0.45);
+  border-radius: 10px;
+  padding: 15px 16px;
+  font-family: inherit;
+  font-size: 15.5px;
+  color: #f9f6e6;
+  min-height: 52px;
+}
+
+.contact-field--area {
+  resize: vertical;
+}
+
+.contact-section a.contact-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c98a2c;
+  color: #0f1729;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  font-size: 15px;
+  padding: 17px 24px;
+  min-height: 54px;
+  text-decoration: none;
+}
+
+.contact-section a.contact-submit:hover {
+  background: #f9f6e6;
+  color: #113b5f;
+}
+
+.contact-map {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 138, 44, 0.55);
+  box-shadow: 0 30px 70px rgba(11, 18, 32, 0.4);
+  min-height: 440px;
+  background: #0b1220;
+}
+
+.contact-map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(1) contrast(0.92) brightness(0.92);
+}
+
+.contact-map-veil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(17, 59, 95, 0.34) 0%, rgba(17, 59, 95, 0) 46%),
+    linear-gradient(0deg, rgba(11, 18, 32, 0.55) 0%, rgba(11, 18, 32, 0) 34%);
+  mix-blend-mode: multiply;
+}
+
+.contact-visit {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  background: #f9f6e6;
+  border-radius: 16px;
+  border-top: 3px solid #c98a2c;
+  padding: 24px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 20px 44px rgba(11, 18, 32, 0.35);
+}
+
+.contact-visit-kicker {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c98a2c;
+}
+
+.contact-visit-street {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0f1729;
+  margin-top: 8px;
+  line-height: 1.3;
+}
+
+.contact-visit-city {
+  font-size: 14.5px;
+  color: #3b4c5e;
+  margin-top: 3px;
+}
+
+.contact-section a.contact-directions {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #113b5f;
+  color: #f9f6e6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 14px 22px;
+  text-decoration: none;
+}
+
+.contact-section a.contact-directions:hover {
+  background: #c98a2c;
+  color: #0f1729;
+}
+
+@media (min-width: 1025px) {
+  .contact-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .contact-inner {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .contact-section {
+    padding: 56px 20px;
+  }
+
+  .contact-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .contact-copy h2 {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-names {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-visit {
+    left: 12px;
+    right: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .contact-section a.contact-directions {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .contact-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

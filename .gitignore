@@ -1,0 +1,12 @@
+# Parent workspace gitignore (`local-root` branch)
+
+ghl-react/node_modules/
+ghl-react/dist/
+ghl-react/.env
+ghl-react/.env.*
+!ghl-react/.env.example
+ghl-react/*.local
+ghl-react/*.tsbuildinfo
+ghl-react/.DS_Store
+.DS_Store
+Thumbs.db

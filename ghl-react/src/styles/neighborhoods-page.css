@@ -1,0 +1,1183 @@
+.neighborhoods-page .hood-card {
+  transition:
+    transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.5s ease;
+}
+
+.neighborhoods-page .hood-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 34px 70px rgba(17, 59, 95, 0.22);
+}
+
+.neighborhoods-page .hood-card:hover img {
+  transform: scale(1.05);
+}
+
+.neighborhoods-page .pt-row {
+  display: flex;
+  align-items: center;
+  color: #0f1729;
+  text-decoration: none;
+  transition:
+    background 0.22s ease,
+    padding-left 0.22s ease;
+}
+
+.neighborhoods-page a.pt-row:hover {
+  background: rgba(201, 138, 44, 0.1);
+  padding-left: 18px;
+  color: #0f1729;
+}
+
+.neighborhoods-page .pt-row:hover .pt-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.neighborhoods-page .pt-arrow {
+  flex: 0 0 auto;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+.nbhd-hero {
+  position: relative;
+  background: #f5eecb;
+  border-bottom: 1px solid #e0d9b8;
+  overflow: hidden;
+  padding: 80px 64px 90px;
+}
+
+.nbhd-hero-ring {
+  position: absolute;
+  top: -150px;
+  right: -160px;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 138, 44, 0.2);
+}
+
+.nbhd-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.nbhd-crumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8a7b4e;
+}
+
+.neighborhoods-page a.nbhd-crumb-link {
+  color: #8a7b4e;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-crumb-link:hover {
+  color: #c98a2c;
+}
+
+.nbhd-crumb-sep {
+  opacity: 0.5;
+}
+
+.nbhd-crumb-here {
+  color: #c98a2c;
+}
+
+.nbhd-hero h1 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: #0f1729;
+  margin: 18px 0 0;
+  text-wrap: pretty;
+}
+
+.nbhd-hero-lead {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #3b4c5e;
+  margin: 22px 0 0;
+  max-width: 560px;
+  text-wrap: pretty;
+}
+
+.nbhd-hero-lead strong {
+  font-weight: 700;
+  color: #0f1729;
+}
+
+.nbhd-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.neighborhoods-page a.nbhd-hero-book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #113b5f;
+  color: #f9f6e6;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 18px 34px;
+  min-height: 56px;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-hero-book:hover {
+  background: #c98a2c;
+  color: #0f1729;
+}
+
+.neighborhoods-page a.nbhd-hero-tel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #113b5f;
+  color: #113b5f;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  border-radius: 100px;
+  padding: 16px 30px;
+  min-height: 56px;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-hero-tel:hover {
+  background: #113b5f;
+  color: #f9f6e6;
+}
+
+.nbhd-hero-boro {
+  margin-top: 38px;
+  padding-top: 26px;
+  border-top: 1px solid #d9cfa6;
+}
+
+.nbhd-hero-boro-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8a7b4e;
+}
+
+.nbhd-hero-boro-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 32px;
+  margin-top: 16px;
+}
+
+.neighborhoods-page a.nbhd-hero-boro-link {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #0f1729;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-hero-boro-link:hover {
+  color: #c98a2c;
+}
+
+.nbhd-hero-media {
+  position: relative;
+}
+
+.nbhd-hero-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 5 / 4;
+  background: #e0d9b8;
+  border: 6px solid #ffffff;
+  box-shadow: 0 40px 90px rgba(17, 59, 95, 0.28);
+}
+
+.nbhd-hero-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.nbhd-hero-rating {
+  position: absolute;
+  right: -14px;
+  bottom: -22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(201, 138, 44, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 22px 48px rgba(17, 59, 95, 0.28);
+  padding: 18px 26px;
+  white-space: nowrap;
+}
+
+.nbhd-hero-rating svg {
+  flex: 0 0 auto;
+  display: block;
+}
+
+.nbhd-hero-rating-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nbhd-hero-rating-title {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #0f1729;
+}
+
+.nbhd-hero-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.nbhd-hero-rating-score {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1;
+  color: #c98a2c;
+}
+
+.nbhd-hero-rating-stars {
+  color: #f5a623;
+  font-size: 19px;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.nbhd-hero-rating-count {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #0f1729;
+}
+
+.nbhd-hero-rating-count strong {
+  font-weight: 700;
+}
+
+.nbhd-promises-sec {
+  position: relative;
+  background: #0f1729;
+  padding: 52px 64px 56px;
+  overflow: hidden;
+}
+
+.nbhd-promises-ring {
+  position: absolute;
+  top: -220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 138, 44, 0.13);
+}
+
+.nbhd-promises-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.nbhd-promises-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.nbhd-promises-kicker-line {
+  width: 40px;
+  height: 1px;
+  background: rgba(201, 138, 44, 0.6);
+  display: block;
+}
+
+.nbhd-promises-kicker-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c98a2c;
+}
+
+.nbhd-promises {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 34px;
+}
+
+.nbhd-promise:nth-child(1) {
+  padding: 0 48px 0 0;
+  border-right: 1px solid rgba(201, 138, 44, 0.24);
+}
+
+.nbhd-promise:nth-child(2) {
+  padding: 0 48px;
+  border-right: 1px solid rgba(201, 138, 44, 0.24);
+}
+
+.nbhd-promise:nth-child(3) {
+  padding: 0 0 0 48px;
+}
+
+.nbhd-promise-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nbhd-promise-icon {
+  flex: 0 0 auto;
+  width: 54px;
+  height: 54px;
+  border-radius: 100px;
+  border: 1px solid rgba(201, 138, 44, 0.55);
+  background: rgba(201, 138, 44, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nbhd-promise-icon svg {
+  display: block;
+}
+
+.nbhd-promise-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #f9f6e6;
+}
+
+.nbhd-promise p {
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: rgba(249, 246, 230, 0.76);
+  margin: 16px 0 0;
+  text-wrap: pretty;
+}
+
+.nbhd-intro {
+  background: #f9f6e6;
+  padding: 96px 64px;
+  border-bottom: 1px solid #e0d9b8;
+}
+
+.nbhd-intro-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.nbhd-intro-kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nbhd-intro-kicker-line {
+  width: 34px;
+  height: 1px;
+  background: #c98a2c;
+  display: block;
+}
+
+.nbhd-intro-kicker-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #3b4c5e;
+}
+
+.nbhd-intro h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.16;
+  letter-spacing: -0.014em;
+  color: #0f1729;
+  margin: 18px 0 0;
+  text-wrap: pretty;
+}
+
+.nbhd-intro-copy p {
+  font-size: 18px;
+  line-height: 1.85;
+  color: #3b4c5e;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.nbhd-intro-copy p + p {
+  margin-top: 18px;
+}
+
+.neighborhoods-page a.nbhd-intro-phone {
+  font-weight: 700;
+  color: #113b5f;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-intro-phone:hover {
+  color: #c98a2c;
+}
+
+.nbhd-intro-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.neighborhoods-page a.nbhd-pill-fill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #113b5f;
+  color: #f9f6e6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 14px 24px;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-pill-fill:hover {
+  background: #c98a2c;
+  color: #0f1729;
+}
+
+.neighborhoods-page a.nbhd-pill-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1.5px solid #113b5f;
+  color: #113b5f;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 12.5px 24px;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-pill-line:hover {
+  background: #113b5f;
+  color: #f9f6e6;
+}
+
+.nbhd-boro {
+  padding: 80px 64px 0;
+}
+
+.nbhd-boro--mh {
+  background: #f5eecb;
+  border-bottom: 1px solid #e0d9b8;
+}
+
+.nbhd-boro--bk {
+  background: #f9f6e6;
+}
+
+.nbhd-boro-head {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 22px;
+}
+
+.nbhd-boro-head h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: #0f1729;
+  margin: 0;
+}
+
+.nbhd-boro-rule {
+  flex: 1 1 auto;
+  height: 1px;
+  background: #d9cfa6;
+  display: block;
+}
+
+.nbhd-boro--bk .nbhd-boro-rule {
+  background: #e0d9b8;
+}
+
+.nbhd-boro-meta {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8a7b4e;
+}
+
+.nbhd-hood-list--mh {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px 0 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.nbhd-hood-list--bk {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 56px 0 40px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 44px;
+}
+
+.nbhd-hood {
+  display: grid;
+  gap: 64px;
+  align-items: center;
+}
+
+.nbhd-hood--img-first {
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.nbhd-hood--copy-first {
+  grid-template-columns: 0.95fr 1.05fr;
+}
+
+.hood-card--mh-photo {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16 / 11;
+  background: #e0d9b8;
+  border: 6px solid #ffffff;
+  box-shadow: 0 26px 60px rgba(17, 59, 95, 0.2);
+}
+
+.hood-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.neighborhoods-page a.nbhd-copy-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: #0f1729;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-copy-title:hover {
+  color: #c98a2c;
+}
+
+.nbhd-copy p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #3b4c5e;
+  margin: 16px 0 0;
+  max-width: 520px;
+  text-wrap: pretty;
+}
+
+.nbhd-types {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+  border-top: 1px solid #d9cfa6;
+}
+
+.pt-row--mh {
+  gap: 18px;
+  padding: 18px 10px;
+  border-bottom: 1px solid #d9cfa6;
+  border-radius: 10px;
+}
+
+.pt-row--bk {
+  gap: 16px;
+  padding: 16px 10px;
+  border-bottom: 1px solid #d9cfa6;
+  border-radius: 10px;
+}
+
+.pt-row-copy {
+  flex: 1 1 auto;
+}
+
+.pt-row-title {
+  display: block;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+}
+
+.pt-row-title--mh {
+  font-size: 19px;
+  letter-spacing: -0.01em;
+}
+
+.pt-row-title--bk {
+  font-size: 17px;
+}
+
+.pt-row-sub {
+  display: block;
+  color: #3b4c5e;
+}
+
+.pt-row-sub--mh {
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.pt-row-sub--bk {
+  font-size: 14.5px;
+  margin-top: 3px;
+}
+
+.hood-card--bk {
+  background: #f5eecb;
+  border: 1px solid #e0d9b8;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.hood-card--bk-media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #e0d9b8;
+}
+
+.hood-card--bk-body {
+  padding: 34px 34px 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.neighborhoods-page a.nbhd-bk-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #0f1729;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-bk-title:hover {
+  color: #c98a2c;
+}
+
+.nbhd-bk-title--card {
+  font-size: 26px;
+  letter-spacing: -0.02em;
+}
+
+.nbhd-bk-title--wide {
+  font-size: 30px;
+  letter-spacing: -0.025em;
+}
+
+.hood-card--bk-body p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #3b4c5e;
+  margin: 12px 0 0;
+  text-wrap: pretty;
+}
+
+.hood-card--bk-types {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  border-top: 1px solid #d9cfa6;
+}
+
+.hood-card--wide {
+  grid-column: 1 / -1;
+  background: #f5eecb;
+  border: 1px solid #e0d9b8;
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hood-card--wide-media {
+  overflow: hidden;
+  background: #e0d9b8;
+  min-height: 320px;
+}
+
+.hood-card--wide-body {
+  padding: 44px 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hood-card--wide-body p {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: #3b4c5e;
+  margin: 12px 0 0;
+  max-width: 520px;
+  text-wrap: pretty;
+}
+
+.hood-card--wide-types {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  border-top: 1px solid #d9cfa6;
+  max-width: 560px;
+}
+
+.nbhd-cta {
+  background: #f9f6e6;
+  padding: 40px 64px 96px;
+}
+
+.nbhd-cta-card {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #0f1729;
+  border-radius: 16px;
+  padding: 56px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.nbhd-cta-copy {
+  max-width: 720px;
+}
+
+.nbhd-cta-copy h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #f9f6e6;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.nbhd-cta-copy p {
+  font-size: 17.5px;
+  line-height: 1.7;
+  color: rgba(249, 246, 230, 0.82);
+  margin: 14px 0 0;
+  text-wrap: pretty;
+}
+
+.nbhd-cta-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.neighborhoods-page a.nbhd-cta-book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #c98a2c;
+  color: #0f1729;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 18px 34px;
+  min-height: 56px;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-cta-book:hover {
+  background: #f9f6e6;
+  color: #113b5f;
+}
+
+.neighborhoods-page a.nbhd-cta-tel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(249, 246, 230, 0.7);
+  color: #f9f6e6;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  border-radius: 100px;
+  padding: 16px 32px;
+  min-height: 56px;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-cta-tel:hover {
+  background: #f9f6e6;
+  color: #113b5f;
+  border-color: #f9f6e6;
+}
+
+@media (max-width: 1024px) {
+  .nbhd-hero,
+  .nbhd-promises-sec,
+  .nbhd-intro,
+  .nbhd-boro,
+  .nbhd-cta {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .nbhd-hero-inner,
+  .nbhd-intro-inner,
+  .nbhd-hood--img-first,
+  .nbhd-hood--copy-first {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .nbhd-hero h1 {
+    font-size: 44px;
+  }
+
+  .nbhd-intro h2 {
+    font-size: 34px;
+  }
+
+  .nbhd-boro-head h2,
+  .nbhd-cta-copy h2 {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .nbhd-hero,
+  .nbhd-promises-sec,
+  .nbhd-intro,
+  .nbhd-boro,
+  .nbhd-cta {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .nbhd-hero-rating {
+    right: 12px;
+    max-width: calc(100% - 24px);
+    box-sizing: border-box;
+  }
+
+  .nbhd-promises {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    margin-top: 28px;
+    width: 100%;
+  }
+
+  .nbhd-promise:nth-child(1),
+  .nbhd-promise:nth-child(2),
+  .nbhd-promise:nth-child(3) {
+    padding: 0 0 28px;
+    border-right: none;
+    border-bottom: 1px solid rgba(201, 138, 44, 0.24);
+    text-align: left;
+    justify-self: stretch;
+  }
+
+  .nbhd-promise:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .nbhd-intro-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .nbhd-boro-head {
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    align-items: flex-start;
+  }
+
+  .hood-card--wide {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .nbhd-hood-list--mh,
+  .nbhd-hood-list--bk {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    max-width: 100%;
+    gap: 40px;
+  }
+
+  .nbhd-hood {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-items: stretch;
+  }
+
+  .nbhd-hood .hood-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .nbhd-copy {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .nbhd-copy p {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nbhd-hero,
+  .nbhd-intro,
+  .nbhd-boro {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .nbhd-promises-sec {
+    padding-top: 40px;
+    padding-bottom: 44px;
+  }
+
+  .nbhd-cta {
+    padding-bottom: 56px;
+  }
+
+  .nbhd-hood-list--bk,
+  .hood-card--wide {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .nbhd-hero h1 {
+    font-size: 32px;
+  }
+
+  .nbhd-intro h2 {
+    font-size: 28px;
+  }
+
+  .nbhd-boro-head h2 {
+    font-size: 25px;
+  }
+
+  .neighborhoods-page a.nbhd-copy-title {
+    font-size: 24px;
+  }
+
+  .neighborhoods-page a.nbhd-bk-title--card {
+    font-size: 20px;
+  }
+
+  .nbhd-hero-lead,
+  .nbhd-hero-rating-title,
+  .nbhd-hero-rating-stars,
+  .pt-row-title--mh {
+    font-size: 16.5px;
+  }
+
+  .nbhd-hero-ctas {
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .neighborhoods-page a.nbhd-hero-book,
+  .neighborhoods-page a.nbhd-hero-tel {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    padding: 14px 10px;
+    min-height: 48px;
+  }
+
+  .nbhd-hero-rating {
+    right: 10px;
+    bottom: -20px;
+    padding: 14px 18px;
+    gap: 14px;
+    white-space: nowrap;
+    max-width: calc(100% - 8px);
+    box-sizing: border-box;
+  }
+
+  .nbhd-hero-media {
+    margin-bottom: 36px;
+  }
+
+  .nbhd-hood {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .nbhd-hood .hood-card--mh-photo {
+    order: -1;
+  }
+
+  .nbhd-hood-list--mh {
+    padding: 40px 0 56px;
+    gap: 48px;
+  }
+
+  .nbhd-boro-head {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nbhd-boro-meta {
+    font-size: 10.5px;
+    line-height: 1.4;
+  }
+
+  .hood-card--bk-body {
+    padding: 22px 18px 20px;
+  }
+
+  .hood-card--wide {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hood-card--wide-media {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .hood-card--wide-body {
+    padding: 24px 20px;
+  }
+
+  .nbhd-cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 20px;
+    gap: 24px;
+  }
+
+  .nbhd-cta-copy h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+
+  .nbhd-cta-actions {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .neighborhoods-page a.nbhd-cta-book,
+  .neighborhoods-page a.nbhd-cta-tel {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 13px;
+    padding: 14px 16px;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nbhd-hero h1 {
+    font-size: 27px;
+  }
+
+  .nbhd-cta-copy h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .nbhd-hero,
+  .nbhd-promises-sec,
+  .nbhd-intro,
+  .nbhd-boro,
+  .nbhd-cta {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

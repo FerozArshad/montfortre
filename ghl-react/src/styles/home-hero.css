@@ -1,0 +1,463 @@
+.home-hero {
+  position: relative;
+  background: #0f1729;
+  overflow: hidden;
+}
+
+.home-hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  display: block;
+}
+
+.home-hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    96deg,
+    rgba(10, 9, 8, 0.68) 0%,
+    rgba(10, 9, 8, 0.4) 42%,
+    rgba(10, 9, 8, 0.1) 68%,
+    rgba(10, 9, 8, 0.34) 100%
+  );
+}
+
+.home-hero-shade--top {
+  background: linear-gradient(180deg, rgba(10, 9, 8, 0.42) 0%, rgba(10, 9, 8, 0) 22%);
+}
+
+.home-hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 72px 64px 40px;
+  display: grid;
+  grid-template-columns: 620px 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: calc(100vh - 80px);
+}
+
+.home-hero-col {
+  animation: v4-in 0.65s ease both;
+  padding-bottom: 64px;
+}
+
+.home-hero-card {
+  position: relative;
+  background: #f9f6e6;
+  border: 1px solid rgba(201, 138, 44, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 40px 90px rgba(17, 59, 95, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  padding: 34px 38px 84px;
+}
+
+.home-hero-eyebrow {
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #52677a;
+}
+
+.home-hero-card h1 {
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 1.26;
+  letter-spacing: 0.004em;
+  word-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #0f1729;
+  margin: 16px 0 0;
+  text-wrap: pretty;
+}
+
+.home-hero-mark {
+  background: #c98a2c;
+  color: #0f1729;
+  padding: 0 6px;
+}
+
+.home-hero-lead {
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: #52677a;
+  margin: 18px 0 0;
+  text-wrap: pretty;
+}
+
+.home-hero-rule {
+  height: 1px;
+  background: #e0d9b8;
+  margin: 26px 0 22px;
+}
+
+.home-hero-rule--hoods {
+  margin: 30px 0 20px;
+}
+
+.home-hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.home-hero a.home-hero-book {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #113b5f;
+  color: #f9f6e6;
+  font-size: 15.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 16px 24px;
+  border-radius: 10px;
+  min-height: 54px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.home-hero a.home-hero-book:hover {
+  background: #c98a2c;
+  color: #113b5f;
+}
+
+.home-hero a.home-hero-call {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #113b5f;
+  color: #113b5f;
+  font-size: 15.5px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  padding: 14px 24px;
+  border-radius: 10px;
+  min-height: 54px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.home-hero a.home-hero-call:hover {
+  background: #f5eecb;
+  color: #113b5f;
+}
+
+.home-hero .lead-idx-form {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.home-hero-mls {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 54px;
+  border: 2px solid #113b5f;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.home-hero .lif-dd {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.home-hero .lif-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  outline: none;
+  padding: 0 18px;
+  background: #fff;
+  color: #0f1729;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  border-right: 2px solid #113b5f;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 8px 0 0 8px;
+}
+
+.home-hero .lif-btn svg {
+  flex: 0 0 auto;
+}
+
+.home-hero .lif-list {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 170px;
+  background: #fff;
+  border: 1px solid #eae1be;
+  border-top: 3px solid #c98a2c;
+  border-radius: 12px;
+  box-shadow: 0 24px 50px rgba(17, 59, 95, 0.2);
+  overflow: hidden;
+  z-index: 60;
+}
+
+.home-hero .lif-option {
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f1729;
+  cursor: pointer;
+}
+
+.home-hero .lif-option:hover {
+  background: #f5eecb;
+  color: #113b5f;
+}
+
+.home-hero-mls-go {
+  flex: 1 1 auto;
+  border: 0;
+  background: #113b5f;
+  color: #f9f6e6;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0 24px;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 0 8px 8px 0;
+}
+
+.home-hero-mls-go:hover {
+  background: #c98a2c;
+  color: #113b5f;
+}
+
+.home-hero a.home-hero-worth {
+  flex: 1 0 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #113b5f;
+  padding-top: 2px;
+  text-decoration: none;
+}
+
+.home-hero a.home-hero-worth:hover {
+  color: #c98a2c;
+}
+
+.home-hero-hoods-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.home-hero-hoods-label {
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #52677a;
+}
+
+.home-hero a.home-hero-hoods-all {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f1729;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.home-hero-marquee-wrap {
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+
+.home-hero-marquee {
+  display: flex;
+  width: max-content;
+  animation: v4-marquee 26s linear infinite;
+}
+
+.home-hero a.home-hero-hood {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #0f1729;
+  white-space: nowrap;
+  padding: 0 16px;
+  text-decoration: none;
+}
+
+.home-hero a.home-hero-hood:hover {
+  color: #f29d4c;
+}
+
+.home-hero-dot {
+  color: #e0d9b8;
+  font-size: 14.5px;
+}
+
+.home-hero a.home-hero-badge {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(201, 138, 44, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(17, 59, 95, 0.3);
+  padding: 18px 30px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-hero-badge-score {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 24px;
+  border-right: 1px solid #e0d9b8;
+}
+
+.home-hero-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.home-hero-badge-row img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.home-hero-badge-num {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #0f1729;
+}
+
+.home-hero-badge-caption {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #52677a;
+}
+
+.home-hero-badge-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.home-hero-stars {
+  color: #f5a623;
+  font-size: 19px;
+  letter-spacing: 0.14em;
+  line-height: 1;
+}
+
+.home-hero-reviews-copy {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #0f1729;
+}
+
+.home-hero-reviews-copy strong {
+  font-weight: 700;
+}
+
+@media (max-width: 1023.98px) {
+  .home-hero-inner {
+    padding: 72px 20px 40px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    min-height: 0;
+  }
+
+  .home-hero-card {
+    padding: 28px 20px 112px;
+  }
+
+  .home-hero a.home-hero-book,
+  .home-hero a.home-hero-call {
+    white-space: normal;
+  }
+
+  .home-hero a.home-hero-badge {
+    left: 50%;
+    right: auto;
+    width: 95%;
+    max-width: 95%;
+    transform: translate(-50%, 50%);
+    justify-content: space-between;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero a.home-hero-call {
+    display: none;
+  }
+
+  .home-hero a.home-hero-book {
+    min-height: 46px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .home-hero-card {
+    padding: 22px 16px 108px;
+  }
+
+  .home-hero-card h1 {
+    font-size: clamp(26px, 7.2vw, 32px);
+    line-height: 1.22;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .home-hero-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero .lif-btn {
+    font-size: 13.5px;
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  .home-hero-mls-go {
+    font-size: 12px;
+    padding: 0 12px;
+    letter-spacing: 0.04em;
+  }
+}

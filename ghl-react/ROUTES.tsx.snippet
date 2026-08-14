@@ -1,0 +1,23 @@
+// Route reference — canonical wiring lives in src/App.tsx.
+// main.tsx imports index.css, App.css, responsive.css and renders <App />.
+//
+// App.tsx pattern:
+//   <BrowserRouter>
+//     <MobileHeader />
+//     <Routes>...</Routes>
+//   </BrowserRouter>
+//
+// Routes:
+<Route path="/" element={<Home />} />
+<Route path="/services" element={<Services />} />
+<Route path="/about-us" element={<AboutUs />} />
+<Route path="/blog" element={<Blog />} />
+<Route path="/harlem" element={<Harlem />} />
+<Route path="/stanley-montfort" element={<StanleyMontfort />} />
+<Route path="/success-stories" element={<SuccessStories />} />
+<Route path="/2-family-house-for-sale-nyc" element={<TwoFamilyHouseForSaleNyc />} />
+<Route path="/advice-for-buyers-looking-to-purchase-brownstones" element={<BrownstoneBuyingGuide />} />
+<Route path="/neighborhoods" element={<Neighborhoods />} />
+<Route path="/idx-sales" element={<IdxSales />} />
+<Route path="/idx-rentals" element={<IdxRentals />} />
+<Route path="*" element={<NotMigrated />} />

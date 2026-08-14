@@ -1,0 +1,35 @@
+---
+description: Montfort RE constraints, GHL transfer, and handoff docs for every session
+alwaysApply: true
+---
+
+# Montfort Real Estate (GHL React SPA)
+
+Git repo is `d:\montfortre\ghl-react` (remote `https://github.com/FerozArshad/montfortre`). Parent `d:\montfortre\reference\` is not in git.
+
+**Read `DOCUMENTATION.md` first.** Then `AGENT-ONBOARDING.md`. Session notes: `PROJECT-CONTEXT.md`. Launch blockers: `HANDOFF.md`.
+
+## Frozen
+
+- SEO modules in `src/seo/pages/*.ts` — never edit values. `Seo.tsx` rewrites `https://montfortre.com` via `src/lib/siteOrigin.ts`.
+- Copy, phone `(646) 970-1078`, link targets, H1 counts (Two Family has two H1s)
+- Desktop ≥1440px pixel-identical; responsive only in `max-width` queries
+- Hover is CSS `:hover`. Do not reintroduce `style-hover` attributes. Leave `useStyleHover()` in PageShell as a no-op safety net.
+
+## Architecture
+
+- React 18 + Vite + TypeScript. Not Next.js.
+- `src/App.tsx`: `MobileHeader` once above `Routes` — 12 migrated routes + `NotMigrated`
+- Each page: `PageShell` + `src/components/<area>/*Content.tsx` + `src/styles/*.css` + `src/seo/pages/*.ts`
+- No page-level `dangerouslySetInnerHTML`. No AgentFire CDN.
+- Do not put `overflow-x: hidden` on `.site-page`
+
+## Content / branding / SEO
+
+- Copy: content TSX files. Branding: `public/redesign-assets/`. SEO check: matching `src/seo/pages/*.ts`. Sitemap: `public/sitemap.xml`.
+
+## GHL AI Studio
+
+Studio cannot clone. Give **raw URLs** from `GHL-PASTE-TO-STUDIO.md`. Track `GHL-TRANSFER-TRACKING.md`.
+
+Do not add routes for unmigrated live URLs; they use `NotMigrated`.

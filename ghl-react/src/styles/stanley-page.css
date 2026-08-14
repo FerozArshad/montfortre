@@ -1,0 +1,662 @@
+.stan-hero {
+  position: relative;
+  background: #0f1729;
+  overflow: hidden;
+  padding: 100px 64px 112px;
+}
+
+.stan-hero-ring {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.stan-hero-ring--tr {
+  top: -140px;
+  right: -160px;
+  width: 620px;
+  height: 620px;
+  border: 1px solid rgba(201, 138, 44, 0.16);
+}
+
+.stan-hero-ring--bl {
+  bottom: -180px;
+  left: -140px;
+  width: 520px;
+  height: 520px;
+  border: 1px solid rgba(201, 138, 44, 0.1);
+}
+
+.stan-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.stan-hero-portrait {
+  position: relative;
+  justify-self: center;
+  padding: 34px 34px 0;
+  width: 100%;
+  max-width: 440px;
+  order: 0;
+}
+
+.stan-hero-halo {
+  position: absolute;
+  inset: 0 0 60px;
+  border: 1px solid rgba(201, 138, 44, 0.5);
+  border-radius: 50%;
+}
+
+.stan-hero-dot {
+  position: absolute;
+  right: 8px;
+  top: 26px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #c98a2c;
+}
+
+.stan-hero-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  background: #e0d9b8;
+  border: 6px solid rgba(249, 246, 230, 0.9);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.42);
+}
+
+.stan-hero-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.stan-hero-sales {
+  position: absolute;
+  left: -6px;
+  bottom: 12px;
+  background: #f9f6e6;
+  border-radius: 14px;
+  border-top: 3px solid #c98a2c;
+  padding: 16px 22px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
+}
+
+.stan-hero-sales-num {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1;
+  color: #0f1729;
+}
+
+.stan-hero-sales-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a7b4e;
+  margin-top: 5px;
+}
+
+.stan-hero-kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stan-kicker-line {
+  width: 34px;
+  height: 1px;
+  background: #c98a2c;
+  display: block;
+}
+
+.stan-hero-kicker-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f0d9a8;
+}
+
+.stan-hero h1 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.06;
+  letter-spacing: -0.018em;
+  color: #f9f6e6;
+  margin: 22px 0 0;
+  text-wrap: pretty;
+}
+
+.stan-hero-lead {
+  font-size: 19px;
+  line-height: 1.75;
+  color: rgba(249, 246, 230, 0.85);
+  margin: 24px 0 0;
+  max-width: 560px;
+  text-wrap: pretty;
+}
+
+.stan-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.stanley-page a.stan-hero-book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #c98a2c;
+  color: #0f1729;
+  font-size: 14.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 18px 32px;
+  min-height: 56px;
+  text-decoration: none;
+}
+
+.stanley-page a.stan-hero-book:hover {
+  background: #f9f6e6;
+  color: #113b5f;
+}
+
+.stanley-page a.stan-hero-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid rgba(240, 217, 168, 0.55);
+  color: #f9f6e6;
+  font-size: 14.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 16px 32px;
+  min-height: 56px;
+  text-decoration: none;
+}
+
+.stanley-page a.stan-hero-email:hover {
+  background: #f9f6e6;
+  color: #113b5f;
+  border-color: #f9f6e6;
+}
+
+.stan-hero-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(201, 138, 44, 0.28);
+}
+
+.stanley-page a.stan-hero-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #f9f6e6;
+  text-decoration: none;
+}
+
+.stanley-page a.stan-hero-link:hover {
+  color: #c98a2c;
+}
+
+.stan-hero-link span {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.stan-stats {
+  background: #f5eecb;
+  border-top: 1px solid #e0d9b8;
+  border-bottom: 1px solid #e0d9b8;
+  padding: 56px 64px;
+}
+
+.stan-stats-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.stan-stats-item--rule {
+  border-left: 1px solid #d9cfa6;
+  padding-left: 40px;
+}
+
+.stan-stats-num {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #0f1729;
+}
+
+.stan-stats-item p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3b4c5e;
+  margin: 10px 0 0;
+  text-wrap: pretty;
+}
+
+.stan-about {
+  background: #f9f6e6;
+  padding: 120px 64px;
+}
+
+.stan-about-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stan-about-kicker {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #3b4c5e;
+}
+
+.stan-about h2,
+.stan-story h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #0f1729;
+  margin: 16px 0 0;
+  text-wrap: pretty;
+}
+
+.stan-about-rule {
+  display: block;
+  width: 76px;
+  height: 3px;
+  background: #c98a2c;
+  margin: 24px auto 0;
+}
+
+.stan-about-inner p {
+  font-size: 19px;
+  line-height: 1.8;
+  color: #3b4c5e;
+  margin: 28px 0 0;
+  text-wrap: pretty;
+}
+
+.stan-about-inner p + p {
+  margin-top: 22px;
+}
+
+.stan-story {
+  background: #fff;
+  padding: 120px 64px;
+  border-top: 1px solid #e0d9b8;
+  border-bottom: 1px solid #e0d9b8;
+}
+
+.stan-story-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.stan-story-kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stan-story-kicker-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #3b4c5e;
+}
+
+.stan-story-copy {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 680px;
+}
+
+.stan-story-copy p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #3b4c5e;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.stan-story-copy strong {
+  font-weight: 700;
+  color: #0f1729;
+}
+
+.stan-story-photo {
+  position: sticky;
+  top: 110px;
+}
+
+.stan-story-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e0d9b8;
+  box-shadow: 0 30px 70px rgba(17, 59, 95, 0.18);
+  aspect-ratio: 4 / 5;
+}
+
+.stan-story-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  display: block;
+}
+
+.stan-connect {
+  background: #0f1729;
+  padding: 120px 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stan-connect-ring {
+  position: absolute;
+  top: -160px;
+  left: -140px;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 138, 44, 0.12);
+}
+
+.stan-connect-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.stan-connect-kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stan-connect-kicker-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f0d9a8;
+}
+
+.stan-connect h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  color: #f9f6e6;
+  margin: 18px 0 0;
+  text-wrap: pretty;
+}
+
+.stan-connect-lead {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(249, 246, 230, 0.82);
+  margin: 22px 0 0;
+  max-width: 460px;
+  text-wrap: pretty;
+}
+
+.stan-connect-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.stanley-page a.stan-connect-book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #c98a2c;
+  color: #0f1729;
+  font-size: 14.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 18px 32px;
+  min-height: 56px;
+  text-decoration: none;
+}
+
+.stanley-page a.stan-connect-book:hover {
+  background: #f9f6e6;
+  color: #113b5f;
+}
+
+.stan-connect-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.stanley-page a.stan-connect-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(249, 246, 230, 0.05);
+  border: 1px solid rgba(201, 138, 44, 0.3);
+  border-radius: 16px;
+  padding: 26px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.stanley-page a.stan-connect-card:hover {
+  border-color: #c98a2c;
+  background: rgba(249, 246, 230, 0.09);
+  color: inherit;
+}
+
+.stan-connect-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #c98a2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stan-connect-card-kicker {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #f0d9a8;
+}
+
+.stan-connect-card-value {
+  display: block;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #f9f6e6;
+  margin-top: 6px;
+}
+
+@media (max-width: 1024px) {
+  .stan-hero,
+  .stan-stats,
+  .stan-about,
+  .stan-story,
+  .stan-connect {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .stan-hero-inner,
+  .stan-story-inner,
+  .stan-connect-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .stan-stats-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stan-story-photo {
+    position: relative;
+    top: auto;
+  }
+
+  .stan-hero h1 {
+    font-size: 43px;
+  }
+
+  .stan-about h2,
+  .stan-story h2,
+  .stan-connect h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .stan-hero,
+  .stan-stats,
+  .stan-about,
+  .stan-story,
+  .stan-connect {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .stan-connect-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023.98px) {
+  .stan-stats-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .stan-hero,
+  .stan-about,
+  .stan-story,
+  .stan-connect {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .stan-stats-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .stan-stats-item--rule {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .stan-connect-inner,
+  .stan-connect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stanley-page .stan-hero-ctas > a {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    padding: 12px 8px;
+    min-height: 46px;
+  }
+
+  .stan-hero h1 {
+    font-size: 31px;
+  }
+
+  .stan-about h2,
+  .stan-story h2,
+  .stan-connect h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .stan-hero,
+  .stan-stats,
+  .stan-about,
+  .stan-story,
+  .stan-connect {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .stan-hero h1 {
+    font-size: 28px;
+  }
+
+  .stan-about h2,
+  .stan-story h2,
+  .stan-connect h2 {
+    font-size: 26px;
+  }
+}

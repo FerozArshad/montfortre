@@ -1,0 +1,764 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 07 Aug 2026 14:51:35 at https://montfortre.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+("C:\Program Files\WinHTTrack\httrack.exe" -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%l "en, *" https://montfortre.com/ -O1 D:\Montfortr +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:53:17	Error: 	"Bad Request" (400) at link https://www.googletagmanager.com/gtm.js?id= (from https://montfortre.com/)
+15:04:32	Warning: 	Moved Permanently for https://montfortre.com/featured-brownstones-for-sale/
+15:04:32	Warning: 	File has moved from https://montfortre.com/featured-brownstones-for-sale/ to /harlem-brownstones-for-sale/
+15:06:18	Error: 	"Not Found" (404) at link https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/harlem/ (from https://montfortre.com/)
+15:06:54	Warning: 	Moved Permanently for https://montfortre.com/featured-brownstones-for-sale/manhattan/west-harlem/
+15:06:54	Warning: 	File has moved from https://montfortre.com/featured-brownstones-for-sale/manhattan/west-harlem/ to /harlem-brownstones-for-sale/
+15:12:00	Warning: 	Moved Permanently for https://montfortre.com/featured-brownstones-for-sale/harlem-brownstones/
+15:12:00	Warning: 	File has moved from https://montfortre.com/featured-brownstones-for-sale/harlem-brownstones/ to https://montfortre.com/harlem-brownstones/
+15:12:00	Error: 	"Unknown error" (451) at link https://seal-newyork.bbb.org/seals/blue-seal-200-42-whitetxt-bbb-87168455.png (from https://montfortre.com/)
+15:12:00	Error: 	"Not Found" (404) at link https://montfortre.com/cdn-cgi/l/email-protection (from https://montfortre.com/)
+15:12:06	Error: 	"Not Found" (404) at link https://montfortre.com/wp-content/plugins/dsidxpress/ (from https://montfortre.com/)
+15:12:25	Warning: 	Retry after error -5 (Unable to get server's address: This is usually a temporary error during hostnam) at link https://api-idx.diversesolutions.com/Images/dsIDXpress/Icons/icon_facebook.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/css/client.css?ver=4.9.29)
+15:12:29	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://api-idx.diversesolutions.com/Images/dsIDXpress/Icons/icon_google.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/css/client.css?ver=4.9.29)
+15:12:31	Warning: 	Retry after error -5 (Unable to get server's address: No such host is known. ) at link https://widgets.diverse-cdn.com/Content/Images/widgets/widgets-sprite.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+15:12:33	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://widgets.diverse-cdn.com/Content/Images/widgets/missing-widget_notext.jpg (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+15:12:35	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://widgets.diverse-cdn.com/content/images/widgets/button_left_tall.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+15:12:37	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://widgets.diverse-cdn.com/content/images/widgets/button_right_tall.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+15:12:39	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://widgets.diverse-cdn.com/Content/Images/widgets/transp_overlay.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+15:12:42	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://api-idx.diversesolutions.com/images/dsidxpress/map-hover-divet.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+15:12:48	Warning: 	Moved Permanently for https://montfortre.com/?p=39912
+15:12:48	Warning: 	File has moved from https://montfortre.com/?p=39912 to https://montfortre.com/services/
+15:15:03	Warning: 	Moved Permanently for https://montfortre.com/?p=39938
+15:15:03	Warning: 	File has moved from https://montfortre.com/?p=39938 to https://montfortre.com/nyc-buyers-agent-service/
+15:21:55	Warning: 	Moved Permanently for https://montfortre.com/?p=39939
+15:21:55	Warning: 	File has moved from https://montfortre.com/?p=39939 to https://montfortre.com/nyc-listing-agent-service/
+15:21:55	Warning: 	Moved Permanently for https://montfortre.com/?p=39940
+15:21:55	Warning: 	File has moved from https://montfortre.com/?p=39940 to https://montfortre.com/nyc-multifamily-real-estate-agent-service/
+15:21:55	Error: 	"Not Found" (404) at link https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/upper-west-side/ (from https://montfortre.com/nyc-multifamily-real-estate-agent-service/)
+15:21:55	Warning: 	Moved Permanently for https://montfortre.com/?p=1848
+15:21:55	Warning: 	File has moved from https://montfortre.com/?p=1848 to https://montfortre.com/home-valuation/
+15:21:56	Warning: 	Moved Permanently for https://montfortre.com/?p=302
+15:21:56	Warning: 	File has moved from https://montfortre.com/?p=302 to https://montfortre.com/mortgage-calculator/
+15:21:56	Warning: 	Moved Permanently for https://montfortre.com/?p=39937
+15:21:56	Warning: 	File has moved from https://montfortre.com/?p=39937 to https://montfortre.com/neighborhoods/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1713
+15:23:30	Warning: 	File has moved from https://montfortre.com/?p=1713 to https://montfortre.com/harlem/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/ to /current-listings/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/harlem/
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/listings/harlem/ to /current-listings/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1717
+15:23:30	Warning: 	File has moved from https://montfortre.com/?p=1717 to https://montfortre.com/upper-west-side/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/upper-west-side/
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/listings/upper-west-side/ to /current-listings/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1720
+15:23:30	Warning: 	File has moved from https://montfortre.com/?p=1720 to https://montfortre.com/upper-east-side/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/upper-east-side/
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/listings/upper-east-side/ to /current-listings/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1726
+15:23:30	Warning: 	File has moved from https://montfortre.com/?p=1726 to https://montfortre.com/chelsea/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/chelsea/
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/listings/chelsea/ to /current-listings/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1753
+15:23:30	Warning: 	File has moved from https://montfortre.com/?p=1753 to https://montfortre.com/downtown-brooklyn/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/downtown-brooklyn/
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/listings/downtown-brooklyn/ to /current-listings/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1886
+15:23:30	Warning: 	File has moved from https://montfortre.com/?p=1886 to https://montfortre.com/dumbo/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/dumbo/
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/listings/dumbo/ to /current-listings/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1744
+15:23:30	Warning: 	File has moved from https://montfortre.com/?p=1744 to https://montfortre.com/brooklyn-heights/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/brooklyn-heights/
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/listings/brooklyn-heights/ to /current-listings/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1747
+15:23:30	Warning: 	File has moved from https://montfortre.com/?p=1747 to https://montfortre.com/bedford-stuyvesant/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/bedford-stuyvesant/
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/listings/bedford-stuyvesant/ to /current-listings/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1907
+15:23:30	Warning: 	File has moved from https://montfortre.com/?p=1907 to https://montfortre.com/williamsburg/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/williamsburg/
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/listings/williamsburg/ to /current-listings/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1750
+15:23:30	Warning: 	File has moved from https://montfortre.com/?p=1750 to https://montfortre.com/crown-heights/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/crown-heights/
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/listings/crown-heights/ to /current-listings/
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/?p=40192
+15:23:30	Warning: 	File has moved from https://montfortre.com/?p=40192 to https://montfortre.com/park-slope/
+15:23:30	Error: 	"Not Found" (404) at link https://montfortre.com/properties/ (from https://montfortre.com/park-slope/)
+15:23:30	Warning: 	Moved Permanently for https://montfortre.com/idx/?idx-q-Locations%3C0%3E=Park+Slope&idx-q-ListingStatuses=1&idx-d-SortOrders%3C0%3E-Column=Price&idx-d-SortOrders%3C0%3E-Direction=DESC
+15:23:30	Warning: 	File has moved from https://montfortre.com/idx/?idx-q-Locations%3C0%3E=Park+Slope&idx-q-ListingStatuses=1&idx-d-SortOrders%3C0%3E-Column=Price&idx-d-SortOrders%3C0%3E-Direction=DESC to /current-listings/
+15:23:31	Warning: 	Moved Permanently for https://montfortre.com/?p=325
+15:23:31	Warning: 	File has moved from https://montfortre.com/?p=325 to https://montfortre.com/success-stories/
+15:23:31	Warning: 	Moved Permanently for https://montfortre.com/?p=39956
+15:23:31	Warning: 	File has moved from https://montfortre.com/?p=39956 to https://montfortre.com/about-us/
+15:23:31	Warning: 	Moved Permanently for https://montfortre.com/?p=1549
+15:23:31	Warning: 	File has moved from https://montfortre.com/?p=1549 to https://montfortre.com/blog/
+15:25:46	Warning: 	Moved Permanently for https://montfortre.com/?p=1697
+15:25:46	Warning: 	File has moved from https://montfortre.com/?p=1697 to https://montfortre.com/stanley-montfort/
+15:25:46	Warning: 	Moved Permanently for https://montfortre.com/?p=327
+15:25:46	Warning: 	File has moved from https://montfortre.com/?p=327 to https://montfortre.com/contact/
+15:25:46	Warning: 	Moved Permanently for https://montfortre.com/?p=300
+15:25:46	Warning: 	File has moved from https://montfortre.com/?p=300 to https://montfortre.com/perfect-home-finder/
+15:25:46	Warning: 	Moved Permanently for https://montfortre.com/?p=1601
+15:25:46	Warning: 	File has moved from https://montfortre.com/?p=1601 to https://montfortre.com/whats-my-home-worth/
+15:25:46	Warning: 	Moved Permanently for https://montfortre.com/?p=19764
+15:25:46	Warning: 	File has moved from https://montfortre.com/?p=19764 to https://montfortre.com/house-hacking-your-nyc-brownstone/
+15:25:51	Warning: 	Moved Permanently for https://montfortre.com/featured-brownstones-for-sale/manhattan-brownstones/
+15:25:51	Warning: 	File has moved from https://montfortre.com/featured-brownstones-for-sale/manhattan-brownstones/ to /harlem-brownstones-for-sale/
+15:25:51	Warning: 	Moved Permanently for https://montfortre.com/manhattan-brownstones/
+15:25:51	Warning: 	File has moved from https://montfortre.com/manhattan-brownstones/ to /current-listings/
+15:25:51	Warning: 	Moved Permanently for https://montfortre.com/bedford-stuyvesant-brownstones/
+15:25:51	Warning: 	File has moved from https://montfortre.com/bedford-stuyvesant-brownstones/ to /current-listings/
+15:25:51	Warning: 	Moved Permanently for https://montfortre.com/crown-heights-brownstones/
+15:25:51	Warning: 	File has moved from https://montfortre.com/crown-heights-brownstones/ to https://montfortre.com/crown-heights-brownstones-2/
+15:25:52	Warning: 	Moved Permanently for https://montfortre.com/?p=20584
+15:25:52	Warning: 	File has moved from https://montfortre.com/?p=20584 to https://montfortre.com/brownstones-in-new-york-city/
+15:25:53	Warning: 	Moved Permanently for https://montfortre.com/featured-brownstones-for-sale/bedford-stuyvesant-brownstones/
+15:25:53	Warning: 	File has moved from https://montfortre.com/featured-brownstones-for-sale/bedford-stuyvesant-brownstones/ to /harlem-brownstones-for-sale/
+15:25:53	Warning: 	Moved Permanently for https://montfortre.com/featured-brownstones-for-sale/crown-heights-brownstones/
+15:25:53	Warning: 	File has moved from https://montfortre.com/featured-brownstones-for-sale/crown-heights-brownstones/ to /harlem-brownstones-for-sale/
+15:25:53	Warning: 	Moved Permanently for https://montfortre.com/?p=2301
+15:25:53	Warning: 	File has moved from https://montfortre.com/?p=2301 to https://montfortre.com/advice-for-buyers-looking-to-purchase-brownstones/
+15:25:53	Warning: 	Moved Permanently for https://montfortre.com/?p=2524
+15:25:53	Warning: 	File has moved from https://montfortre.com/?p=2524 to https://montfortre.com/co-ownership-advantages-and-disadvantages-in-nyc/
+15:25:58	Warning: 	Moved Permanently for https://montfortre.com/?p=40083
+15:25:58	Warning: 	File has moved from https://montfortre.com/?p=40083 to https://montfortre.com/523-west-121st-street-2/
+15:25:59	Warning: 	Moved Permanently for https://montfortre.com/?p=39881
+15:25:59	Warning: 	File has moved from https://montfortre.com/?p=39881 to https://montfortre.com/475-west-144th-street/
+15:25:59	Warning: 	Moved Permanently for https://montfortre.com/?p=39860
+15:25:59	Warning: 	File has moved from https://montfortre.com/?p=39860 to https://montfortre.com/26-west-95th-street/
+15:26:00	Warning: 	Moved Permanently for https://montfortre.com/?p=39794
+15:26:00	Warning: 	File has moved from https://montfortre.com/?p=39794 to https://montfortre.com/124-west-131st-street-2/
+15:26:01	Warning: 	Moved Permanently for https://montfortre.com/?p=39785
+15:26:01	Warning: 	File has moved from https://montfortre.com/?p=39785 to https://montfortre.com/313-west-143rd-street-2a/
+15:26:01	Warning: 	Moved Permanently for https://montfortre.com/?p=39739
+15:26:01	Warning: 	File has moved from https://montfortre.com/?p=39739 to https://montfortre.com/14-west-121st-street/
+15:26:02	Warning: 	Moved Permanently for https://montfortre.com/?p=39704
+15:26:02	Warning: 	File has moved from https://montfortre.com/?p=39704 to https://montfortre.com/481-west-145th-street/
+15:26:03	Warning: 	Moved Permanently for https://montfortre.com/?p=39658
+15:26:03	Warning: 	File has moved from https://montfortre.com/?p=39658 to https://montfortre.com/542-cathedral-parkway/
+15:26:03	Warning: 	Moved Permanently for https://montfortre.com/?p=39620
+15:26:03	Warning: 	File has moved from https://montfortre.com/?p=39620 to https://montfortre.com/544-west-148th-street/
+15:26:04	Warning: 	Moved Permanently for https://montfortre.com/?p=39603
+15:26:04	Warning: 	File has moved from https://montfortre.com/?p=39603 to https://montfortre.com/76-west-105th-street-thn/
+15:26:04	Error: 	"Not Found" (404) at link https://i.ytimg.com/vi/unD2NIAPbqQ/mqdefault.jpg (from https://montfortre.com/76-west-105th-street-thn/)
+15:26:05	Warning: 	Moved Permanently for https://montfortre.com/?p=39584
+15:26:05	Warning: 	File has moved from https://montfortre.com/?p=39584 to https://montfortre.com/76-west-105th-street-ph/
+15:26:05	Error: 	"Not Found" (404) at link https://i.ytimg.com/vi/vHcwJ2Q5LSc/mqdefault.jpg (from https://montfortre.com/76-west-105th-street-ph/)
+15:26:05	Warning: 	Moved Permanently for https://montfortre.com/?p=39566
+15:26:05	Warning: 	File has moved from https://montfortre.com/?p=39566 to https://montfortre.com/2040-madison-avenue-4/
+15:26:06	Warning: 	Moved Permanently for https://montfortre.com/?p=39543
+15:26:06	Warning: 	File has moved from https://montfortre.com/?p=39543 to https://montfortre.com/420-west-144th-street/
+15:26:07	Warning: 	Moved Permanently for https://montfortre.com/?p=39532
+15:26:07	Warning: 	File has moved from https://montfortre.com/?p=39532 to https://montfortre.com/108-west-114th-street-4b/
+15:26:07	Warning: 	Moved Permanently for https://montfortre.com/?p=2163
+15:26:07	Warning: 	File has moved from https://montfortre.com/?p=2163 to https://montfortre.com/current-listings/
+15:26:07	Warning: 	Moved Permanently for https://montfortre.com/?p=39367
+15:26:07	Warning: 	File has moved from https://montfortre.com/?p=39367 to https://montfortre.com/upper-west-side-townhouse-q2-2024-market-report/
+15:26:07	Warning: 	Moved Permanently for https://montfortre.com/?p=39364
+15:26:07	Warning: 	File has moved from https://montfortre.com/?p=39364 to https://montfortre.com/harlem-brownstone-q2-2024-market-report/
+15:26:07	Warning: 	Moved Permanently for https://montfortre.com/?p=39329
+15:26:07	Warning: 	File has moved from https://montfortre.com/?p=39329 to https://montfortre.com/discover-your-dream-home-explore-apartments-for-sale-on-the-upper-west-side/
+15:26:07	Warning: 	Moved Permanently for https://montfortre.com/?p=1582
+15:26:07	Warning: 	File has moved from https://montfortre.com/?p=1582 to https://montfortre.com/privacy-policy/
+15:26:07	Warning: 	Moved Permanently for https://montfortre.com/?p=2059
+15:26:07	Warning: 	File has moved from https://montfortre.com/?p=2059 to https://montfortre.com/sitemap/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/harlem-homes-for-sale/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/harlem-homes-for-sale/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/midtown/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/midtown/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/hells-kitchen/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/hells-kitchen/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/gramercy/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/gramercy/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/flatbush/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/flatbush/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/east-harlem/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/east-harlem/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/lincoln-square/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/lincoln-square/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/midtown-west/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/midtown-west/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/noho/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/noho/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/nolita/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/nolita/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/west-harlem/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/west-harlem/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/boerum-hill/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/boerum-hill/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/cobble-hill/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/cobble-hill/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/gowanus/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/gowanus/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/red-hook/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/red-hook/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/green-point/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/green-point/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/midtown-east/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/midtown-east/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/murray-hill/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/murray-hill/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/kips-bay/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/kips-bay/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/nomad/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/nomad/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/flatiron/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/flatiron/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/gramercy-park/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/gramercy-park/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/east-village/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/east-village/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/west-village/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/west-village/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/soho/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/soho/ to /current-listings/
+16:05:13	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/tribeca/
+16:05:13	Warning: 	File has moved from https://montfortre.com/idx/listings/tribeca/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/battery-park-city/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/battery-park-city/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/morningside-heights/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/morningside-heights/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/sugar-hill/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/sugar-hill/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/ditmars-steinway/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/ditmars-steinway/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/long-island-city/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/long-island-city/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/astoria/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/astoria/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/mott-haven/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/mott-haven/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/melrose/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/melrose/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/morrisania/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/morrisania/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/concourse/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/concourse/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/east-new-york/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/east-new-york/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/park-slope/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/park-slope/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/bushwick/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/bushwick/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/carrol-gardens/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/carrol-gardens/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/clinton-hill/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/clinton-hill/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/fort-greene/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/fort-greene/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/prospect-heights/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/prospect-heights/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/prospect-lefferts-gardens/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/prospect-lefferts-gardens/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/prospect-park-south/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/prospect-park-south/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/windsor-terrace/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/windsor-terrace/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/washington-heights/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/washington-heights/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/financial-district/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/financial-district/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/lower-east-side/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/lower-east-side/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/manhattanville/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/manhattanville/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/hudson-yards/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/hudson-yards/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/alphabet-city/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/alphabet-city/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/hamilton-heights/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/hamilton-heights/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/luxury-listings/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/luxury-listings/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/west-harlem-property-type-1/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/west-harlem-property-type-1/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/multi-family-listings/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/multi-family-listings/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/chinatown/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/chinatown/ to /current-listings/
+16:05:14	Warning: 	Moved Permanently for https://montfortre.com/idx/listings/featured-listings/
+16:05:14	Warning: 	File has moved from https://montfortre.com/idx/listings/featured-listings/ to /current-listings/
+16:05:14	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://api-idx.diversesolutions.com/Images/dsIDXpress/Icons/icon_facebook.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/css/client.css?ver=4.9.29)
+16:05:15	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://api-idx.diversesolutions.com/Images/dsIDXpress/Icons/icon_google.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/css/client.css?ver=4.9.29)
+16:05:15	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://widgets.diverse-cdn.com/Content/Images/widgets/widgets-sprite.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:16	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://widgets.diverse-cdn.com/Content/Images/widgets/missing-widget_notext.jpg (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:16	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://widgets.diverse-cdn.com/content/images/widgets/button_left_tall.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:16	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://widgets.diverse-cdn.com/content/images/widgets/button_right_tall.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:16	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://widgets.diverse-cdn.com/Content/Images/widgets/transp_overlay.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:16	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://api-idx.diversesolutions.com/images/dsidxpress/map-hover-divet.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39917
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39917 to https://montfortre.com/buying-a-condo-in-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39918
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39918 to https://montfortre.com/buying-a-brownstone-in-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39919
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39919 to https://montfortre.com/buying-sro-in-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39920
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39920 to https://montfortre.com/co-ownership-buying-in-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39921
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39921 to https://montfortre.com/selling-brownstones-in-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39922
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39922 to https://montfortre.com/selling-condos-in-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39923
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39923 to https://montfortre.com/selling-co-ops-in-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39924
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39924 to https://montfortre.com/selling-sros-in-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39925
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39925 to https://montfortre.com/selling-probate-properties-in-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39926
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39926 to https://montfortre.com/2-family-house-for-sale-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39927
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39927 to https://montfortre.com/3-family-house-for-sale-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39928
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39928 to https://montfortre.com/4-family-house-for-sale-nyc/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39929
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39929 to https://montfortre.com/nyc-condo-free-home-valuation/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39930
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39930 to https://montfortre.com/nyc-co-op-free-home-valuation/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39931
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39931 to https://montfortre.com/nyc-brownstone-free-home-valuation/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39932
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39932 to https://montfortre.com/nyc-sro-free-home-valuation/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39933
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39933 to https://montfortre.com/nyc-brownstone-mortgages/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39934
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39934 to https://montfortre.com/nyc-sro-mortgages/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39935
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39935 to https://montfortre.com/nyc-first-time-home-buyer-mortages/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=39325
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=39325 to https://montfortre.com/the-ultimate-guide-to-finding-the-perfect-upper-west-side-real-estate-agent/
+16:05:16	Warning: 	Moved Permanently for https://montfortre.com/?p=37447
+16:05:16	Warning: 	File has moved from https://montfortre.com/?p=37447 to https://montfortre.com/harlem-realtor/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=2545
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=2545 to https://montfortre.com/harlem-brownstones-for-sale/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40022
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40022 to https://montfortre.com/harlem-brownstones/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40023
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40023 to https://montfortre.com/harlem-condos/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40024
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40024 to https://montfortre.com/harlem-sros/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40025
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40025 to https://montfortre.com/harlem-co-ownership/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40026
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40026 to https://montfortre.com/upper-west-side-townhouses/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40027
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40027 to https://montfortre.com/upper-west-side-condos/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40028
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40028 to https://montfortre.com/upper-west-side-co-ops-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40029
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40029 to https://montfortre.com/upper-east-side-townhouses/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40030
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40030 to https://montfortre.com/upper-east-side-condos/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40031
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40031 to https://montfortre.com/upper-east-side-co-ops/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40032
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40032 to https://montfortre.com/chelsea-townhouses/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40033
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40033 to https://montfortre.com/chelsea-condos/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40034
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40034 to https://montfortre.com/chelsea-co-ops-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40035
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40035 to https://montfortre.com/downtown-brooklyn-condos-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40036
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40036 to https://montfortre.com/downstone-brooklyn-co-ops/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40037
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40037 to https://montfortre.com/dumbo-condos/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40038
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40038 to https://montfortre.com/dumbo-co-ops-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40039
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40039 to https://montfortre.com/brooklyn-heights-townhouses-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40040
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40040 to https://montfortre.com/brooklyn-heights-condos-3/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40041
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40041 to https://montfortre.com/brooklyn-heights-co-ops-3/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40042
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40042 to https://montfortre.com/bedford-stuyvesant-brownstones-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40043
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40043 to https://montfortre.com/bedford-stuyvesant-condos-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40044
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40044 to https://montfortre.com/bedford-stuyvesant-co-ops-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40045
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40045 to https://montfortre.com/bedford-stuyvesant-sros-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40046
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40046 to https://montfortre.com/bedford-stuyvesant-co-ownership/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40047
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40047 to https://montfortre.com/williamsburg-brownstones-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40048
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40048 to https://montfortre.com/williamsburg-condos/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40049
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40049 to https://montfortre.com/williamsburg-co-ops/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40050
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40050 to https://montfortre.com/williamsburg-co-ownership/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40051
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40051 to https://montfortre.com/crown-heights-brownstones-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40052
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40052 to https://montfortre.com/crown-heights-condos-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40053
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40053 to https://montfortre.com/crown-heights-co-ops-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40054
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40054 to https://montfortre.com/crown-heights-sros-3/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40055
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40055 to https://montfortre.com/crown-heights-co-ownership-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=40202
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=40202 to https://montfortre.com/park-slope-brownstone-2/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=38856
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=38856 to https://montfortre.com/sell-my-house-fast-expert-tips-to-attract-buyers-and-get-the-best-deal/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=38851
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=38851 to https://montfortre.com/what-is-my-house-worth/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=36734
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=36734 to https://montfortre.com/manhattan-brownstone-q1-2024-market-report/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=36732
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=36732 to https://montfortre.com/harlem-brownstone-q1-2024-market-report/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=25152
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=25152 to https://montfortre.com/top-harlem-new-york-townhouses-with-elevators/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/850-saint-nicholas-avenue-3/
+16:05:17	Warning: 	File has moved from https://montfortre.com/850-saint-nicholas-avenue-3/ to /current-listings/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/2001-fifth-avenue/
+16:05:17	Warning: 	File has moved from https://montfortre.com/2001-fifth-avenue/ to /current-listings/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/360-west-123rd-street/
+16:05:17	Warning: 	File has moved from https://montfortre.com/360-west-123rd-street/ to /current-listings/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/?p=24991
+16:05:17	Warning: 	File has moved from https://montfortre.com/?p=24991 to https://montfortre.com/manhattan-q3-2023-market-report/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/featured-brownstones-for-sale/manhattan/hudson-yards/
+16:05:17	Warning: 	File has moved from https://montfortre.com/featured-brownstones-for-sale/manhattan/hudson-yards/ to /current-listings/
+16:05:17	Warning: 	Moved Permanently for https://montfortre.com/featured-brownstones-for-sale/manhattan/lower-east-side/
+16:05:17	Warning: 	File has moved from https://montfortre.com/featured-brownstones-for-sale/manhattan/lower-east-side/ to /harlem-brownstones-for-sale/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=24998
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=24998 to https://montfortre.com/top-10-most-expensive-sold-brownstones-in-harlem/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=21656
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=21656 to https://montfortre.com/harlem-q3-2023-brownstone-market-report/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=20603
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=20603 to https://montfortre.com/brownstones-in-new-york-city-for-sale/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=19758
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=19758 to https://montfortre.com/how-are-high-interest-rates-affecting-the-value-of-your-brownstone/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=16736
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=16736 to https://montfortre.com/how-to-find-townhouse-with-garage/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/263-west-139th-street-2/
+16:05:18	Warning: 	File has moved from https://montfortre.com/263-west-139th-street-2/ to /current-listings/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/54-east-66th-street/
+16:05:18	Warning: 	File has moved from https://montfortre.com/54-east-66th-street/ to /current-listings/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/179-east-71st-street-2/
+16:05:18	Warning: 	File has moved from https://montfortre.com/179-east-71st-street-2/ to /current-listings/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/455-franklin-avenue-2/
+16:05:18	Warning: 	File has moved from https://montfortre.com/455-franklin-avenue-2/ to /current-listings/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/235-west-138th-street/
+16:05:18	Warning: 	File has moved from https://montfortre.com/235-west-138th-street/ to /current-listings/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/218-west-139th-street-2/
+16:05:18	Warning: 	File has moved from https://montfortre.com/218-west-139th-street-2/ to /current-listings/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/730-saint-nicholas-ave/
+16:05:18	Warning: 	File has moved from https://montfortre.com/730-saint-nicholas-ave/ to /current-listings/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=15007
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=15007 to https://montfortre.com/selling-your-brownstone-with-tenants-still-there/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=12205
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=12205 to https://montfortre.com/making-your-brownstone-energy-efficient/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=12179
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=12179 to https://montfortre.com/a-timeline-for-renovating-your-brownstone/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=11857
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=11857 to https://montfortre.com/why-you-should-buy-a-brownstone-instead-of-renting-in-nyc/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=11091
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=11091 to https://montfortre.com/are-nfts-about-to-go-mainstream-in-real-estate/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=11088
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=11088 to https://montfortre.com/why-brownstone-co-ownership-makes-sense-in-a-rising-interest-rate-environment/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=11085
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=11085 to https://montfortre.com/owner-financing-for-your-brownstone/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=11082
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=11082 to https://montfortre.com/inflation-and-multi-unit-brownstone-investments/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=3717
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=3717 to https://montfortre.com/what-to-do-with-inherited-property/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=3714
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=3714 to https://montfortre.com/rent-control-v-rent-stabilization/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=3681
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=3681 to https://montfortre.com/everything-you-need-to-know-about-buying-and-selling-probate-property-in-new-york-city/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=3672
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=3672 to https://montfortre.com/all-about-taxes-when-you-sell-your-new-york-home/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2540
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2540 to https://montfortre.com/why-foreign-buyers-should-consider-buying-a-brownstone/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2537
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2537 to https://montfortre.com/top-ways-to-purchase-a-brownstone-with-crypto-in-new-york-city/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2532
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2532 to https://montfortre.com/the-benefit-of-townhouse-co-living-in-new-york-city/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2527
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2527 to https://montfortre.com/co-ownership-and-resolving-property-disputes-in-new-york-city/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2473
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2473 to https://montfortre.com/nycs-hot-real-estate-market-after-covid-19/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2470
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2470 to https://montfortre.com/new-york-says-goodbye-to-rental-discounts/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2250
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2250 to https://montfortre.com/the-case-for-buying-a-townhouse-over-a-condo-or-co-op-in-nyc/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2304
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2304 to https://montfortre.com/top-7-things-to-check-before-making-a-brownstone-purchase/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2295
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2295 to https://montfortre.com/the-ins-and-out-of-using-co-ownership-to-purchase-a-new-york-city-brownstone/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2292
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2292 to https://montfortre.com/guide-everything-you-need-to-know-about-purchasing-a-multi-family-townhouse-and-renting-it-out/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2235
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2235 to https://montfortre.com/5-reasons-people-are-purchasing-real-estate-in-this-current-market/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2289
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2289 to https://montfortre.com/you-still-have-time-to-invest-in-qualified-opportunity-zones-in-nyc/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2286
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2286 to https://montfortre.com/what-awaits-the-nyc-real-estate-market-post-pandemic/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2283
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2283 to https://montfortre.com/5-signals-that-the-housing-market-is-on-the-road-to-recovery-post-covid-19/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2280
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2280 to https://montfortre.com/demystifying-the-reopening-of-nyc-and-what-it-means-for-real-estate/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2277
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2277 to https://montfortre.com/mortgage-rate-drops-to-historic-lows/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2274
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2274 to https://montfortre.com/top-4-reasons-to-invest-in-multi-family-properties-amid-the-coronavirus-pandemic/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2246
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2246 to https://montfortre.com/why-townhouses-make-sense-during-and-post-covid-19/
+16:05:18	Warning: 	Moved Permanently for https://montfortre.com/?p=2271
+16:05:18	Warning: 	File has moved from https://montfortre.com/?p=2271 to https://montfortre.com/understanding-nyc-sro-laws-how-to-convert-an-sro-townhouse-to-a-class-a-property/
+16:05:19	Warning: 	Moved Permanently for https://montfortre.com/?p=2268
+16:05:19	Warning: 	File has moved from https://montfortre.com/?p=2268 to https://montfortre.com/the-upside-of-a-down-market-why-now-is-the-time-to-upsize-to-a-harlem-townhouse/
+16:05:19	Warning: 	Moved Permanently for https://montfortre.com/?p=2265
+16:05:19	Warning: 	File has moved from https://montfortre.com/?p=2265 to https://montfortre.com/is-co-living-the-new-sro-how-to-leverage-this-trend-for-a-greater-roi/
+16:05:19	Warning: 	Moved Permanently for https://montfortre.com/?p=2261
+16:05:19	Warning: 	File has moved from https://montfortre.com/?p=2261 to https://montfortre.com/harlems-multi-family-townhouses-are-opportunity-zone-hidden-gem/
+16:05:19	Warning: 	Moved Permanently for https://montfortre.com/?p=2258
+16:05:19	Warning: 	File has moved from https://montfortre.com/?p=2258 to https://montfortre.com/how-to-price-a-harlem-townhouse/
+16:05:23	Warning: 	Moved Permanently for https://montfortre.com/?p=15294
+16:05:23	Warning: 	File has moved from https://montfortre.com/?p=15294 to https://montfortre.com/nyc-brownstones-parking/
+16:05:26	Warning: 	Moved Permanently for https://montfortre.com/author/stanley-montfort/page/1/
+16:05:26	Warning: 	File has moved from https://montfortre.com/author/stanley-montfort/page/1/ to https://montfortre.com/author/stanley-montfort/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=2042
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=2042 to https://montfortre.com/bronx-neighborhoods/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/featured-neighborhoods/bronx/
+16:05:30	Warning: 	File has moved from https://montfortre.com/featured-neighborhoods/bronx/ to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/bronx/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=2033
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=2033 to https://montfortre.com/brooklyn-neighborhoods/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/featured-neighborhoods/brooklyn/
+16:05:30	Warning: 	File has moved from https://montfortre.com/featured-neighborhoods/brooklyn/ to https://montfortre.com/brooklyn-heights/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=39342
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=39342 to https://montfortre.com/harlem-condos-for-sale/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1618
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=1618 to https://montfortre.com/home-team/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/our-areas/
+16:05:30	Warning: 	File has moved from https://montfortre.com/our-areas/ to /current-listings/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=2047
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=2047 to https://montfortre.com/investment-criteria/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=2031
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=2031 to https://montfortre.com/manhattan-neighborhoods/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/featured-neighborhoods/manhattan/
+16:05:30	Warning: 	File has moved from https://montfortre.com/featured-neighborhoods/manhattan/ to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=39936
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=39936 to https://montfortre.com/neighborhood-page-template/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=39911
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=39911 to https://montfortre.com/neighborhoods-staging/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=1633
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=1633 to https://montfortre.com/newsletter/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/7-home-renos-will-increase-resale-value-big-time/
+16:05:30	Warning: 	File has moved from https://montfortre.com/7-home-renos-will-increase-resale-value-big-time/ to /current-listings/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/things-shouldnt-buying-home/
+16:05:30	Warning: 	File has moved from https://montfortre.com/things-shouldnt-buying-home/ to /current-listings/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/get-holiday-rental/
+16:05:30	Warning: 	File has moved from https://montfortre.com/get-holiday-rental/ to /current-listings/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=19339
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=19339 to https://montfortre.com/nyc-brownstones-with-roof-deck/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=39941
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=39941 to https://montfortre.com/nyc-free-home-valuation-service/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=39942
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=39942 to https://montfortre.com/nyc-mortgage-calculator-service/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=40207
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=40207 to https://montfortre.com/park-slope-condo-2/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=40208
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=40208 to https://montfortre.com/park-slope-coops/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=2038
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=2038 to https://montfortre.com/queens-neighborhoods/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/featured-neighborhoods/queens/
+16:05:30	Warning: 	File has moved from https://montfortre.com/featured-neighborhoods/queens/ to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/queens/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=39916
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=39916 to https://montfortre.com/service-page-template/
+16:05:30	Warning: 	Moved Permanently for https://montfortre.com/?p=3712
+16:05:30	Warning: 	File has moved from https://montfortre.com/?p=3712 to https://montfortre.com/thank-you/
+16:05:31	Warning: 	Moved Permanently for https://montfortre.com/?p=1628
+16:05:31	Warning: 	File has moved from https://montfortre.com/?p=1628 to https://montfortre.com/the-definitive-guide-on-how-to-upsize-into-a-new-home/
+16:05:31	Error: 	"Not Found" (404) at link https://montfortre.com/the-definitive-guide-on-how-to-upsize-into-a-new-home/The Definitive Guide On How To Upsize Into A New Home.pdf (from https://montfortre.com/the-definitive-guide-on-how-to-upsize-into-a-new-home/)
+16:05:31	Warning: 	Moved Permanently for https://montfortre.com/?p=1627
+16:05:31	Warning: 	File has moved from https://montfortre.com/?p=1627 to https://montfortre.com/the-essential-guide-on-how-to-buy-like-a-pro/
+16:05:31	Error: 	"Not Found" (404) at link https://montfortre.com/the-essential-guide-on-how-to-buy-like-a-pro/The Essential Guide On How To Buy Like A Pro.pdf (from https://montfortre.com/the-essential-guide-on-how-to-buy-like-a-pro/)
+16:05:31	Warning: 	Moved Permanently for https://montfortre.com/?p=39343
+16:05:31	Warning: 	File has moved from https://montfortre.com/?p=39343 to https://montfortre.com/upper-west-side-apartments-for-sale/
+16:05:31	Warning: 	Moved Permanently for https://montfortre.com/?p=39344
+16:05:31	Warning: 	File has moved from https://montfortre.com/?p=39344 to https://montfortre.com/upper-west-side-townhouses-for-sale/
+16:05:31	Warning: 	Moved Permanently for https://montfortre.com/?p=301
+16:05:31	Warning: 	File has moved from https://montfortre.com/?p=301 to https://montfortre.com/helpful-guides/
+16:05:31	Warning: 	Moved Permanently for https://montfortre.com/?p=310
+16:05:31	Warning: 	File has moved from https://montfortre.com/?p=310 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/
+16:05:31	Warning: 	Moved Permanently for https://montfortre.com/featured-neighborhoods/harlem-brownstones/
+16:05:31	Warning: 	File has moved from https://montfortre.com/featured-neighborhoods/harlem-brownstones/ to https://montfortre.com/harlem-brownstones/
+16:05:32	Warning: 	Moved Permanently for https://montfortre.com/?p=322
+16:05:32	Warning: 	File has moved from https://montfortre.com/?p=322 to https://montfortre.com/why-choose-us/
+16:05:32	Warning: 	Moved Permanently for https://montfortre.com/?p=323
+16:05:32	Warning: 	File has moved from https://montfortre.com/?p=323 to https://montfortre.com/meet-the-team/
+16:05:32	Warning: 	Moved Permanently for https://montfortre.com/?p=39842
+16:05:32	Warning: 	File has moved from https://montfortre.com/?p=39842 to https://montfortre.com/64-east-111th-street-806/
+16:05:32	Warning: 	Moved Permanently for https://montfortre.com/?p=39731
+16:05:32	Warning: 	File has moved from https://montfortre.com/?p=39731 to https://montfortre.com/109-west-122nd-street/
+16:05:33	Warning: 	Moved Permanently for https://montfortre.com/?p=39690
+16:05:33	Warning: 	File has moved from https://montfortre.com/?p=39690 to https://montfortre.com/607-west-146th-street-2/
+16:05:34	Warning: 	Moved Permanently for https://montfortre.com/?p=39680
+16:05:34	Warning: 	File has moved from https://montfortre.com/?p=39680 to https://montfortre.com/100-west-88th-street-4a/
+16:05:35	Warning: 	Moved Permanently for https://montfortre.com/?p=39520
+16:05:35	Warning: 	File has moved from https://montfortre.com/?p=39520 to https://montfortre.com/111-central-park-north-17abc/
+16:05:35	Warning: 	Moved Permanently for https://montfortre.com/?p=39501
+16:05:35	Warning: 	File has moved from https://montfortre.com/?p=39501 to https://montfortre.com/301-west-118th-street-10g/
+16:05:36	Warning: 	Moved Permanently for https://montfortre.com/?p=39486
+16:05:36	Warning: 	File has moved from https://montfortre.com/?p=39486 to https://montfortre.com/2150-broadway-8d/
+16:05:37	Warning: 	Moved Permanently for https://montfortre.com/?p=39470
+16:05:37	Warning: 	File has moved from https://montfortre.com/?p=39470 to https://montfortre.com/111-west-67th-street-26a/
+16:05:38	Warning: 	Moved Permanently for https://montfortre.com/?p=39448
+16:05:38	Warning: 	File has moved from https://montfortre.com/?p=39448 to https://montfortre.com/470-columbus-avenue-garden/
+16:05:38	Warning: 	Moved Permanently for https://montfortre.com/?p=39423
+16:05:38	Warning: 	File has moved from https://montfortre.com/?p=39423 to https://montfortre.com/470-columbus-avenue-ph2/
+16:05:39	Warning: 	Moved Permanently for https://montfortre.com/?p=2598
+16:05:39	Warning: 	File has moved from https://montfortre.com/?p=2598 to https://montfortre.com/36-hamilton-terrace/
+16:05:40	Warning: 	Moved Permanently for https://montfortre.com/?p=2453
+16:05:40	Warning: 	File has moved from https://montfortre.com/?p=2453 to https://montfortre.com/1831-madison-avenue-4g/
+16:05:41	Warning: 	Moved Permanently for https://montfortre.com/?p=2406
+16:05:41	Warning: 	File has moved from https://montfortre.com/?p=2406 to https://montfortre.com/554-west-142nd-street/
+16:05:41	Warning: 	Moved Permanently for https://montfortre.com/?p=1741
+16:05:41	Warning: 	File has moved from https://montfortre.com/?p=1741 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/battery-park/
+16:05:41	Warning: 	Moved Permanently for https://montfortre.com/?p=1729
+16:05:41	Warning: 	File has moved from https://montfortre.com/?p=1729 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/gramercy/
+16:05:41	Warning: 	Moved Permanently for https://montfortre.com/?p=1732
+16:05:41	Warning: 	File has moved from https://montfortre.com/?p=1732 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/hells-kitchen/
+16:05:41	Warning: 	Moved Permanently for https://montfortre.com/?p=1871
+16:05:41	Warning: 	File has moved from https://montfortre.com/?p=1871 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/bronx/
+16:05:41	Warning: 	Moved Permanently for https://montfortre.com/idx/?idx-q-Counties%3C0%3E=Bronx&idx-q-Locations%3C0%3E=Bronx&idx-q-ListingStatuses=1&idx-d-SortOrders%3C0%3E-Column=Price&idx-d-SortOrders%3C0%3E-Direction=DESC
+16:05:41	Warning: 	File has moved from https://montfortre.com/idx/?idx-q-Counties%3C0%3E=Bronx&idx-q-Locations%3C0%3E=Bronx&idx-q-ListingStatuses=1&idx-d-SortOrders%3C0%3E-Column=Price&idx-d-SortOrders%3C0%3E-Direction=DESC to /current-listings/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1883
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1883 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/idx/?idx-q-Locations%3C0%3E=Brooklyn&idx-q-ListingStatuses=1&idx-d-SortOrders%3C0%3E-Column=Price&idx-d-SortOrders%3C0%3E-Direction=DESC
+16:05:42	Warning: 	File has moved from https://montfortre.com/idx/?idx-q-Locations%3C0%3E=Brooklyn&idx-q-ListingStatuses=1&idx-d-SortOrders%3C0%3E-Column=Price&idx-d-SortOrders%3C0%3E-Direction=DESC to /current-listings/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1926
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1926 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/idx/?idx-q-Locations%3C0%3E=Manhattan&idx-q-ListingStatuses=1&idx-d-SortOrders%3C0%3E-Column=Price&idx-d-SortOrders%3C0%3E-Direction=DESC
+16:05:42	Warning: 	File has moved from https://montfortre.com/idx/?idx-q-Locations%3C0%3E=Manhattan&idx-q-ListingStatuses=1&idx-d-SortOrders%3C0%3E-Column=Price&idx-d-SortOrders%3C0%3E-Direction=DESC to /current-listings/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1995
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1995 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/queens/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/idx/?idx-q-Counties%3C0%3E=Queens&idx-q-Locations%3C0%3E=Queens&idx-q-ListingStatuses=1&idx-d-SortOrders%3C0%3E-Column=Price&idx-d-SortOrders%3C0%3E-Direction=DESC
+16:05:42	Warning: 	File has moved from https://montfortre.com/idx/?idx-q-Counties%3C0%3E=Queens&idx-q-Locations%3C0%3E=Queens&idx-q-ListingStatuses=1&idx-d-SortOrders%3C0%3E-Column=Price&idx-d-SortOrders%3C0%3E-Direction=DESC to /current-listings/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1880
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1880 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/bronx/concourse/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1874
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1874 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/bronx/melrose/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1877
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1877 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/bronx/morrisania/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1777
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1777 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/bronx/mott-haven-homes/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1895
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1895 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/boerum-hill/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1762
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1762 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/bushwick/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1759
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1759 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/carroll-gardens/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1756
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1756 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/clinton-hill/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1898
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1898 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/cobble-hill/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1910
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1910 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/east-new-york/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1913
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1913 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/flatbush/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1889
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1889 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/fort-greene/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1901
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1901 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/gowanus/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=2011
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=2011 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/green-point/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1765
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1765 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/park-slope/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1892
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1892 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/prospect-heights/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1916
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1916 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/prospect-lefferts-gardens/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1919
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1919 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/prospect-park-south/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1904
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1904 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/red-hook/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1922
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1922 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/brooklyn-homes/windsor-terrace/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1968
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1968 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/alphabet-city/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1992
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1992 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/battery-park-city/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1986
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1986 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/chinatown/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1929
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1929 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/east-harlem/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1971
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1971 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/east-village/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1738
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1738 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/financial-district/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1962
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1962 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/flatiron/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1965
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1965 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/gramercy-park/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1938
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1938 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/hamilton-heights/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1953
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1953 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/hudson-yards/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1956
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1956 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/kips-bay/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1941
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1941 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/lincoln-square/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1735
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1735 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/lower-east-side/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1932
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1932 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/manhattanville/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1723
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1723 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/midtown/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1947
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1947 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/midtown-east/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1944
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1944 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/midtown-west/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1935
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1935 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/morningside-heights/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1950
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1950 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/murray-hill/
+16:05:42	Warning: 	Moved Permanently for https://montfortre.com/?p=1977
+16:05:42	Warning: 	File has moved from https://montfortre.com/?p=1977 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/noho/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/?p=1983
+16:05:43	Warning: 	File has moved from https://montfortre.com/?p=1983 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/nolita/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/?p=1959
+16:05:43	Warning: 	File has moved from https://montfortre.com/?p=1959 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/nomad/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/?p=1980
+16:05:43	Warning: 	File has moved from https://montfortre.com/?p=1980 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/soho/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/?p=1989
+16:05:43	Warning: 	File has moved from https://montfortre.com/?p=1989 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/tribeca/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/?p=1780
+16:05:43	Warning: 	File has moved from https://montfortre.com/?p=1780 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/washington-heights/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/?p=2014
+16:05:43	Warning: 	File has moved from https://montfortre.com/?p=2014 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/west-harlem/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/2074-fifth-avenue/
+16:05:43	Warning: 	File has moved from https://montfortre.com/2074-fifth-avenue/ to /current-listings/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/131-west-118th-street/
+16:05:43	Warning: 	File has moved from https://montfortre.com/131-west-118th-street/ to /124-west-131st-street-2/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/68-east-127th-street/
+16:05:43	Warning: 	File has moved from https://montfortre.com/68-east-127th-street/ to /current-listings/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/?p=1974
+16:05:43	Warning: 	File has moved from https://montfortre.com/?p=1974 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/west-village/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/?p=1774
+16:05:43	Warning: 	File has moved from https://montfortre.com/?p=1774 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/queens/astoria/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/?p=2107
+16:05:43	Warning: 	File has moved from https://montfortre.com/?p=2107 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/queens/ditmars-steinway/
+16:05:43	Warning: 	Moved Permanently for https://montfortre.com/?p=1771
+16:05:43	Warning: 	File has moved from https://montfortre.com/?p=1771 to https://montfortre.com/featured-upper-west-side-and-harlem-homes-for-sale/queens/long-island-city/
+16:05:50	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://api-idx.diversesolutions.com/Images/dsIDXpress/Icons/icon_facebook.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/css/client.css?ver=4.9.29)
+16:05:50	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://api-idx.diversesolutions.com/Images/dsIDXpress/Icons/icon_google.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/css/client.css?ver=4.9.29)
+16:05:50	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://widgets.diverse-cdn.com/Content/Images/widgets/widgets-sprite.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:50	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://widgets.diverse-cdn.com/Content/Images/widgets/missing-widget_notext.jpg (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:50	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://widgets.diverse-cdn.com/content/images/widgets/button_left_tall.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:50	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://widgets.diverse-cdn.com/content/images/widgets/button_right_tall.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:50	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://widgets.diverse-cdn.com/Content/Images/widgets/transp_overlay.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:50	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://api-idx.diversesolutions.com/images/dsidxpress/map-hover-divet.png (from https://static.agentfire3.com/wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=4.9.29)
+16:05:50	Warning: 	Moved Permanently for https://montfortre.com/category/buying/page/1/
+16:05:50	Warning: 	File has moved from https://montfortre.com/category/buying/page/1/ to https://montfortre.com/category/buying/
+16:05:50	Warning: 	Moved Permanently for https://montfortre.com/category/market-opinion/page/1/
+16:05:50	Warning: 	File has moved from https://montfortre.com/category/market-opinion/page/1/ to https://montfortre.com/category/market-opinion/
+16:05:51	Warning: 	Moved Permanently for https://montfortre.com/category/uncategorized/page/1/
+16:05:51	Warning: 	File has moved from https://montfortre.com/category/uncategorized/page/1/ to https://montfortre.com/category/uncategorized/
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 hours 14 minutes 16 seconds : 2241 links scanned, 1845 files written (769263119 bytes overall) [739012699 bytes received at 165846 bytes/sec], 43413446 bytes transferred using HTTP compression in 408 files, ratio 24%, 5.3 requests per connection
+(19 errors, 734 warnings, 0 messages)

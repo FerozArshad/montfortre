@@ -1,0 +1,244 @@
+.home-dl {
+  background: #113b5f;
+  padding: 100px 64px;
+}
+
+.home-dl-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: stretch;
+}
+
+.home-dl-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-dl-kicker {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c98a2c;
+}
+
+.home-dl-copy h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.22;
+  letter-spacing: -0.008em;
+  color: #f9f6e6;
+  margin: 16px 0 0;
+  text-wrap: pretty;
+}
+
+.home-dl-lead {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(249, 246, 230, 0.78);
+  margin: 14px 0 0;
+  max-width: 600px;
+  text-wrap: pretty;
+}
+
+.home-dl-body {
+  font-size: 17px;
+  line-height: 1.85;
+  color: rgba(249, 246, 230, 0.9);
+  margin: 14px 0 0;
+  max-width: 600px;
+  text-wrap: pretty;
+}
+
+.home-dl a.home-dl-link {
+  color: #c98a2c;
+  text-decoration: none;
+}
+
+.home-dl-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+  max-width: 460px;
+}
+
+.home-dl-field {
+  background: rgba(249, 246, 230, 0.1);
+  border: 1px solid rgba(201, 138, 44, 0.45);
+  border-radius: 10px;
+  padding: 15px 16px;
+  font-family: inherit;
+  font-size: 15.5px;
+  color: #f9f6e6;
+  min-height: 52px;
+}
+
+.home-dl a.home-dl-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c98a2c;
+  color: #0f1729;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  font-size: 15px;
+  padding: 17px 24px;
+  min-height: 54px;
+  text-decoration: none;
+}
+
+.home-dl a.home-dl-submit:hover {
+  background: #f9f6e6;
+  color: #113b5f;
+}
+
+.home-dl-map {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 138, 44, 0.55);
+  box-shadow: 0 30px 70px rgba(11, 18, 32, 0.4);
+  min-height: 440px;
+  background: #0b1220;
+}
+
+.home-dl-map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(1) contrast(0.92) brightness(0.92);
+}
+
+.home-dl-veil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(17, 59, 95, 0.34) 0%, rgba(17, 59, 95, 0) 46%),
+    linear-gradient(0deg, rgba(11, 18, 32, 0.55) 0%, rgba(11, 18, 32, 0) 34%);
+  mix-blend-mode: multiply;
+}
+
+.home-dl-visit {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  background: #f9f6e6;
+  border-radius: 16px;
+  border-top: 3px solid #c98a2c;
+  padding: 24px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 20px 44px rgba(11, 18, 32, 0.35);
+}
+
+.home-dl-visit-kicker {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c98a2c;
+}
+
+.home-dl-visit h3 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0f1729;
+  margin: 8px 0 0;
+  line-height: 1.3;
+}
+
+.home-dl-visit-city {
+  font-size: 14.5px;
+  color: #3b4c5e;
+  margin-top: 3px;
+}
+
+.home-dl a.home-dl-directions {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #113b5f;
+  color: #f9f6e6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 14px 22px;
+  text-decoration: none;
+}
+
+.home-dl a.home-dl-directions:hover {
+  background: #c98a2c;
+  color: #0f1729;
+}
+
+@media (min-width: 1025px) {
+  .home-dl {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .home-dl-inner {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .home-dl {
+    padding: 56px 20px;
+  }
+
+  .home-dl-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .home-dl-copy h2 {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-dl a.home-dl-submit {
+    white-space: nowrap;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    padding: 16px 18px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home-dl-visit {
+    left: 12px;
+    right: 12px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .home-dl {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
