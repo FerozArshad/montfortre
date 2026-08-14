@@ -4,7 +4,7 @@
 
 Then `AGENT-ONBOARDING.md` and `PROJECT-CONTEXT.md`. Launch blockers: `HANDOFF.md`.
 
-This is a React 18 + Vite + TypeScript SPA (`d:\montfortre\ghl-react`, remote `FerozArshad/montfortre`). Not Next.js.
+**Git:** branch **`main`** = this app at GitHub root (GHL). Branch **`local-root`** = full disk (`ghl-react/` + `reference/`). Clone `local-root` to match folders. Never merge those branches. Details: `BRANCHES.md`.
 
 **Do not** edit frozen SEO values in `src/seo/pages/*.ts`. **Do not** change copy, phone `(646) 970-1078`, H1 counts, or desktop ≥1440px layout. Hover is CSS `:hover`; `useStyleHover()` stays as a no-op safety net — do not reintroduce `style-hover` attributes.
 
