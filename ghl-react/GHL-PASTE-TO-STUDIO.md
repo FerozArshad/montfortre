@@ -270,6 +270,13 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/nyc-buyers-agent-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycBuyersAgent.ts
 
+## 9c. NycListingAgentService
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycListingAgentService.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-listing-agent/NycListingAgentContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/nyc-listing-agent-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycListingAgent.ts
+
 ---
 
 ## 10. Remaining migrated pages (full site)

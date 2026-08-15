@@ -246,6 +246,15 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-buyers-agent-article-1.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-buyers-agent-article-2.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-buyers-agent-article-3.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-listing-agent.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-listing-agent-article-1.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-listing-agent-article-2.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-listing-agent-article-3.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/selling-brownstones-nyc.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/selling-condos-nyc.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/selling-co-ops-in-nyc.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/selling-probate-properties-in-nyc.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/selling-sros-in-nyc-card.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/2-family-investment.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/2-family-investment.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/3-family-house-for-sale-nyc.png

@@ -16,6 +16,7 @@ import IdxSales from "./pages/IdxSales";
 import Neighborhoods from "./pages/Neighborhoods";
 import NotMigrated from "./pages/NotMigrated";
 import NycBuyersAgentService from "./pages/NycBuyersAgentService";
+import NycListingAgentService from "./pages/NycListingAgentService";
 import ParkSlope from "./pages/ParkSlope";
 import Services from "./pages/Services";
 import StanleyMontfort from "./pages/StanleyMontfort";
@@ -49,6 +50,7 @@ export default function App() {
         <Route path="/success-stories" element={<SuccessStories />} />
         <Route path="/2-family-house-for-sale-nyc" element={<TwoFamilyHouseForSaleNyc />} />
         <Route path="/nyc-buyers-agent-service" element={<NycBuyersAgentService />} />
+        <Route path="/nyc-listing-agent-service" element={<NycListingAgentService />} />
         <Route
           path="/advice-for-buyers-looking-to-purchase-brownstones"
           element={<BrownstoneBuyingGuide />}

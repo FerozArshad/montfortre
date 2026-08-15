@@ -34,7 +34,7 @@ Until GHL replies that it wrote files, **FETCHED and VERIFIED stay empty**.
 2. Save as `<path>` in the Studio project (example: `src/pages/Services.tsx`)
 3. Do not invent routes. Do not edit `src/seo/pages/*.ts`. Do not use page-level `dangerouslySetInnerHTML`.
 
-`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 23 migrated routes in `src/App.tsx` plus `NotMigrated`.
+`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 24 migrated routes in `src/App.tsx` plus `NotMigrated`.
 
 ---
 
@@ -96,6 +96,7 @@ Paste source: `GHL-PASTE-TO-STUDIO.md`. SENT to owner 2026-08-13. FETCHED unknow
 | `/harlem` | `src/pages/Harlem.tsx` | `HarlemContent.tsx` + `HarlemSchools.tsx` + `src/data/harlemSchools.json` | `src/seo/pages/harlem.ts` | | |
 | `/2-family-house-for-sale-nyc` | `src/pages/TwoFamilyHouseForSaleNyc.tsx` | `src/components/two-family/TwoFamilyContent.tsx` | `src/seo/pages/twoFamily.ts` | | |
 | `/nyc-buyers-agent-service` | `src/pages/NycBuyersAgentService.tsx` | `src/components/nyc-buyers-agent/NycBuyersAgentContent.tsx` | `src/seo/pages/nycBuyersAgent.ts` | | |
+| `/nyc-listing-agent-service` | `src/pages/NycListingAgentService.tsx` | `src/components/nyc-listing-agent/NycListingAgentContent.tsx` | `src/seo/pages/nycListingAgent.ts` | | |
 | `/idx-sales` | `src/pages/IdxSales.tsx` | `src/components/idx/IdxSearchLayout.tsx` | `src/seo/pages/idxSales.ts` | | |
 | `/idx-rentals` | `src/pages/IdxRentals.tsx` | same IdxSearchLayout | `src/seo/pages/idxRentals.ts` | | |
 | `*` | `src/pages/NotMigrated.tsx` | — | inline noindex in page | | |
