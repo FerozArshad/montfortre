@@ -6,6 +6,7 @@ import Blog from "./pages/Blog";
 import BrooklynHeights from "./pages/BrooklynHeights";
 import BrownstoneBuyingGuide from "./pages/BrownstoneBuyingGuide";
 import Chelsea from "./pages/Chelsea";
+import CrownHeights from "./pages/CrownHeights";
 import DowntownBrooklyn from "./pages/DowntownBrooklyn";
 import Dumbo from "./pages/Dumbo";
 import Harlem from "./pages/Harlem";
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/bedford-stuyvesant" element={<BedfordStuyvesant />} />
         <Route path="/brooklyn-heights" element={<BrooklynHeights />} />
         <Route path="/chelsea" element={<Chelsea />} />
+        <Route path="/crown-heights" element={<CrownHeights />} />
         <Route path="/downtown-brooklyn" element={<DowntownBrooklyn />} />
         <Route path="/dumbo" element={<Dumbo />} />
         <Route path="/harlem" element={<Harlem />} />
