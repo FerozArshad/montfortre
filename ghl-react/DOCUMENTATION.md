@@ -11,7 +11,7 @@
 | Live sitemap index | https://montfortre.com/sitemap_index.xml |
 | Live **page** sitemap | https://montfortre.com/page-sitemap.xml |
 | Live post sitemap | https://montfortre.com/post-sitemap.xml |
-| SPA sitemap (this repo) | `public/sitemap.xml` — 19 migrated URLs only |
+| SPA sitemap (this repo) | `public/sitemap.xml` — 20 migrated URLs only |
 | Preview | https://montfortre-live.vibepreview.com/ |
 | Local | `npm run dev` (Vite; port may be 5173+) |
 | Phone | `(646) 970-1078` |
@@ -106,7 +106,7 @@ ghl-react/
 ├── DOCUMENTATION.md           # this file
 ├── src/
 │   ├── main.tsx               # createRoot; imports index.css, App.css, responsive.css
-│   ├── App.tsx                # MobileHeader ONCE, then <Routes> (19 + *)
+│   ├── App.tsx                # MobileHeader ONCE, then <Routes> (20 + *)
 │   ├── index.css              # html overflow-x: clip — do not hide overflow on .site-page
 │   ├── App.css
 │   ├── responsive.css         # global mobile overflow / min-width overrides
@@ -123,6 +123,7 @@ ghl-react/
 │   │   ├── Harlem.tsx
 │   │   ├── UpperEastSide.tsx
 │   │   ├── UpperWestSide.tsx
+│   │   ├── Williamsburg.tsx
 │   │   ├── StanleyMontfort.tsx
 │   │   ├── SuccessStories.tsx
 │   │   ├── TwoFamilyHouseForSaleNyc.tsx
@@ -152,6 +153,7 @@ ghl-react/
 │   │   ├── harlem/HarlemContent.tsx
 │   │   ├── upper-east-side/UpperEastSideContent.tsx
 │   │   ├── upper-west-side/UpperWestSideContent.tsx
+│   │   ├── williamsburg/WilliamsburgContent.tsx
 │   │   ├── stanley/StanleyMontfortContent.tsx
 │   │   ├── success/SuccessStoriesContent.tsx
 │   │   ├── two-family/TwoFamilyContent.tsx
@@ -175,7 +177,7 @@ ghl-react/
     ├── instagram/
     ├── favicon.svg
     ├── robots.txt
-    └── sitemap.xml            # 19 migrated URLs only
+    └── sitemap.xml            # 20 migrated URLs only
 ```
 
 `App.tsx` must keep `<MobileHeader />` above `<Routes>`. Canonical routes live in `App.tsx` (ignore `ROUTES.tsx.snippet` if it exists). Do not add neighborhood/service/blog-article routes.
@@ -264,7 +266,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 
 ## 3. Pages done vs left (sitemap)
 
-**Migrated (19)** — also listed in `public/sitemap.xml` and `src/App.tsx`:
+**Migrated (20)** — also listed in `public/sitemap.xml` and `src/App.tsx`:
 
 | URL (trailing slash in links) | Router path | Page | Content | CSS | SEO module |
 |---|---|---|---|---|---|
@@ -280,6 +282,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/harlem/` | `/harlem` | `Harlem.tsx` | `harlem/HarlemContent.tsx` + `HarlemSchools.tsx` | `harlem-page.css` | `harlem.ts` |
 | `/upper-east-side/` | `/upper-east-side` | `UpperEastSide.tsx` | `upper-east-side/UpperEastSideContent.tsx` | `harlem-page.css` + `ues-page.css` | `upperEastSide.ts` |
 | `/upper-west-side/` | `/upper-west-side` | `UpperWestSide.tsx` | `upper-west-side/UpperWestSideContent.tsx` | `harlem-page.css` + `uws-page.css` | `upperWestSide.ts` |
+| `/williamsburg/` | `/williamsburg` | `Williamsburg.tsx` | `williamsburg/WilliamsburgContent.tsx` | `harlem-page.css` + `williamsburg-page.css` | `williamsburg.ts` |
 | `/stanley-montfort/` | `/stanley-montfort` | `StanleyMontfort.tsx` | `stanley/StanleyMontfortContent.tsx` | `stanley-page.css` | `stanleyMontfort.ts` |
 | `/success-stories/` | `/success-stories` | `SuccessStories.tsx` | `success/SuccessStoriesContent.tsx` | `success-page.css` | `successStories.ts` |
 | `/2-family-house-for-sale-nyc/` | `/2-family-house-for-sale-nyc` | `TwoFamilyHouseForSaleNyc.tsx` | `two-family/TwoFamilyContent.tsx` | `two-family-page.css` | `twoFamily.ts` |
@@ -288,7 +291,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/idx-sales/` | `/idx-sales` | `IdxSales.tsx` | `idx/IdxSearchLayout.tsx` | `idx-page.css` | `idxSales.ts` |
 | `/idx-rentals/` | `/idx-rentals` | `IdxRentals.tsx` | `IdxSearchLayout.tsx` | `idx-page.css` | `idxRentals.ts` |
 
-**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships **19**. Examples still live: `/williamsburg/`, `/nyc-buyers-agent-service/`, listing addresses, service subpages, blog posts (`post-sitemap.xml`). **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`).
+**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships **20**. Examples still live: `/crown-heights/`, `/nyc-buyers-agent-service/`, listing addresses, service subpages, blog posts (`post-sitemap.xml`). **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`).
 
 Internal `<a href>` uses trailing slashes (`/harlem/`). React Router `path` does not.
 
@@ -312,7 +315,7 @@ Keep these **four** `Disallow: /` user-agents (scrapers, not Google/AI):
 
 Path disallows under `User-agent: *` (WordPress leftovers; keep so cutover matches live): `/wp-admin/` (except `admin-ajax.php`), `/wp-json/agentfire/v1/core/cron/`, `/?s=`, `/cgi-bin/`.
 
-**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 19 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
+**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 20 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
 
 ---
 

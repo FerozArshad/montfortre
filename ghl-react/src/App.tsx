@@ -20,6 +20,7 @@ import SuccessStories from "./pages/SuccessStories";
 import TwoFamilyHouseForSaleNyc from "./pages/TwoFamilyHouseForSaleNyc";
 import UpperEastSide from "./pages/UpperEastSide";
 import UpperWestSide from "./pages/UpperWestSide";
+import Williamsburg from "./pages/Williamsburg";
 
 export default function App() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/harlem" element={<Harlem />} />
         <Route path="/upper-east-side" element={<UpperEastSide />} />
         <Route path="/upper-west-side" element={<UpperWestSide />} />
+        <Route path="/williamsburg" element={<Williamsburg />} />
         <Route path="/stanley-montfort" element={<StanleyMontfort />} />
         <Route path="/success-stories" element={<SuccessStories />} />
         <Route path="/2-family-house-for-sale-nyc" element={<TwoFamilyHouseForSaleNyc />} />
