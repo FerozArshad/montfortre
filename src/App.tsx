@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MobileHeader from "./components/MobileHeader";
 import AboutUs from "./pages/AboutUs";
 import Blog from "./pages/Blog";
+import BrooklynHeights from "./pages/BrooklynHeights";
 import BrownstoneBuyingGuide from "./pages/BrownstoneBuyingGuide";
 import Chelsea from "./pages/Chelsea";
 import DowntownBrooklyn from "./pages/DowntownBrooklyn";
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/brooklyn-heights" element={<BrooklynHeights />} />
         <Route path="/chelsea" element={<Chelsea />} />
         <Route path="/downtown-brooklyn" element={<DowntownBrooklyn />} />
         <Route path="/dumbo" element={<Dumbo />} />

@@ -1,0 +1,75 @@
+[
+  {
+    "name": "P.S. 8 Robert Fulton School",
+    "phone": "718-834-6740",
+    "type": "public",
+    "grades": "K-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "St Ann's School",
+    "phone": "718-522-1660",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": "https://www.saintannsny.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Mary McDowell Friends School - Upper School",
+    "phone": "718-625-3939",
+    "type": "private",
+    "grades": "9-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Plymouth Church School",
+    "phone": "718-624-9385",
+    "type": "private",
+    "grades": "PK-K",
+    "rating": null,
+    "website": "https://www.plymouthchurch.org/",
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Guide Post Montessori School",
+    "phone": "929-524-3588",
+    "type": "private",
+    "grades": "PK-5",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Packer Collegiate Institute Early Learning Center",
+    "phone": "718-250-0290",
+    "type": "private",
+    "grades": "PK-K",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  }
+]
