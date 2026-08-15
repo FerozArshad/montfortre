@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MobileHeader from "./components/MobileHeader";
 import AboutUs from "./pages/AboutUs";
+import BedfordStuyvesant from "./pages/BedfordStuyvesant";
 import Blog from "./pages/Blog";
 import BrooklynHeights from "./pages/BrooklynHeights";
 import BrownstoneBuyingGuide from "./pages/BrownstoneBuyingGuide";
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/bedford-stuyvesant" element={<BedfordStuyvesant />} />
         <Route path="/brooklyn-heights" element={<BrooklynHeights />} />
         <Route path="/chelsea" element={<Chelsea />} />
         <Route path="/downtown-brooklyn" element={<DowntownBrooklyn />} />

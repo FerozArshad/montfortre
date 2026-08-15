@@ -1,0 +1,275 @@
+[
+  {
+    "name": "Success Academy Charter School - Bed Stuy 1",
+    "phone": "718-635-3294",
+    "type": "public",
+    "grades": "KG-11",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 297 Abraham Stockton School",
+    "phone": "718-388-4581",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Charter School (The)",
+    "phone": "718-302-2085",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": "http://www.brooklyncharter.org",
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Uncommon Bed-Stuy West Charter School Nyc",
+    "phone": "718-636-0360",
+    "type": "public",
+    "grades": "KG-12",
+    "rating": 4,
+    "website": "http://leadershipprepbedstuy.uncommonschools.org",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 54 Samuel C. Barnes School",
+    "phone": "718-834-6752",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Academy of Arts and Letters",
+    "phone": "718-789-3962",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 4,
+    "website": "http://www.artsandlettersbklyn.org",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 23 Carter G. Woodson School",
+    "phone": "718-387-0375",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S./I.S. 157 The Benjamin Franklin Health Science Academy",
+    "phone": "718-622-9285",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 93 William H. Prescott School",
+    "phone": "718-604-7363",
+    "type": "public",
+    "grades": "KG-6",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 256 Benjamin Banneker School",
+    "phone": "718-857-9820",
+    "type": "public",
+    "grades": "KG-6",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 3 The Bedford VillageSchool",
+    "phone": "718-622-2960",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 305 Dr. Peter Ray School",
+    "phone": "",
+    "type": "public",
+    "grades": "KG-6",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Waldorf School",
+    "phone": "646-331-3773",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Mt Pleasant Christian Academy",
+    "phone": "718-789-0034",
+    "type": "private",
+    "grades": "KG-10",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "PS 140",
+    "phone": "718-783-4842",
+    "type": "public",
+    "grades": "KG-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "PS 368",
+    "phone": "718-388-9494",
+    "type": "public",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Bais Ruchel Dsatmar Girls School",
+    "phone": "718-798-2888",
+    "type": "private",
+    "grades": "KG-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Restoration Academy",
+    "phone": "718-245-8766",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Bedford Academy High School",
+    "phone": "718-398-3061",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Brooklyn High School for Leadership and Community Service",
+    "phone": "718-638-3062",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Community Arts & Media High School",
+    "phone": "718-230-5748",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Academy High School",
+    "phone": "718-638-4237",
+    "type": "public",
+    "grades": "10-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  }
+]
