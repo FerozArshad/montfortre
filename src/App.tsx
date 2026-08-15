@@ -3,6 +3,7 @@ import MobileHeader from "./components/MobileHeader";
 import AboutUs from "./pages/AboutUs";
 import Blog from "./pages/Blog";
 import BrownstoneBuyingGuide from "./pages/BrownstoneBuyingGuide";
+import Chelsea from "./pages/Chelsea";
 import Harlem from "./pages/Harlem";
 import Home from "./pages/Home";
 import IdxRentals from "./pages/IdxRentals";
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/chelsea" element={<Chelsea />} />
         <Route path="/harlem" element={<Harlem />} />
         <Route path="/upper-east-side" element={<UpperEastSide />} />
         <Route path="/upper-west-side" element={<UpperWestSide />} />

@@ -1,0 +1,197 @@
+[
+  {
+    "name": "NYC Lab High School for Collaborative Studies",
+    "phone": "212-691-6119",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": "https://www.nyclabschool.org/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Guardian Angel School",
+    "phone": "212-989-8280",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "NYC Museum School",
+    "phone": "212-675-6206",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": "https://www.nycmuseumschool.net/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Liberty High School Academy for Newcomers",
+    "phone": "212-691-0934",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 33 Chelsea Prep School",
+    "phone": "212-244-6426",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "High School of Fashion Industries (the)",
+    "phone": "212-255-1235",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Quest to Learn",
+    "phone": "212-488-3645",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Satellite Academy High School",
+    "phone": "646-674-2800",
+    "type": "public",
+    "grades": "9-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Corlears School",
+    "phone": "212-741-2800",
+    "type": "private",
+    "grades": "PK-4",
+    "rating": null,
+    "website": "https://www.corlearsschool.org/",
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Landmark High School",
+    "phone": "212-647-7410",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 1,
+    "website": "https://www.landmarkhs.org/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 11 William T. Harris School",
+    "phone": "212-929-1743",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "James Baldwin School a School for Expeditionary Learning",
+    "phone": "212-627-2812",
+    "type": "public",
+    "grades": "9-12",
+    "rating": null,
+    "website": "https://www.thejamesbaldwinschool.org/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Hudson High School of Learning Technologies",
+    "phone": "212-488-3330",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "NYC Lab Middle School for Collaborative Studies",
+    "phone": "212-691-6119",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": "https://www.nyclabschool.org/",
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Manhattan Business Academy",
+    "phone": "212-647-1983",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Avenues the World School",
+    "phone": "212-524-9000",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Humanities Preparatory Academy",
+    "phone": "212-929-4433",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": "https://www.humanitiesprep.org/",
+    "categories": [
+      "high-school"
+    ]
+  }
+]

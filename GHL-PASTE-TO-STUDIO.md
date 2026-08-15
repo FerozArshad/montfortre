@@ -152,6 +152,19 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperEast
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperEastSideYelp.json
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperEastSideSchools.json
 
+## 8d. Chelsea
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Chelsea.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/chelsea/ChelseaContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/chelsea/ChelseaPoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/chelsea/ChelseaAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/chelsea/ChelseaRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/chelsea-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/chelsea.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/chelseaGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/chelseaYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/chelseaSchools.json
+
 ## 9. TwoFamilyHouseForSaleNyc
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
