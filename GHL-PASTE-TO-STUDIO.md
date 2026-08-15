@@ -301,6 +301,13 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/lib/mortgageMa
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/mortgage-calculator-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/mortgageCalculator.ts
 
+## 9g. HarlemBrownstones
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/HarlemBrownstones.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem-brownstones/HarlemBrownstonesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-brownstones-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlemBrownstones.ts
+
 ---
 
 ## 10. Remaining migrated pages (full site)

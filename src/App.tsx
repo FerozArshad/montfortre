@@ -10,6 +10,7 @@ import CrownHeights from "./pages/CrownHeights";
 import DowntownBrooklyn from "./pages/DowntownBrooklyn";
 import Dumbo from "./pages/Dumbo";
 import Harlem from "./pages/Harlem";
+import HarlemBrownstones from "./pages/HarlemBrownstones";
 import Home from "./pages/Home";
 import HomeValuation from "./pages/HomeValuation";
 import MortgageCalculator from "./pages/MortgageCalculator";
@@ -45,6 +46,7 @@ export default function App() {
         <Route path="/downtown-brooklyn" element={<DowntownBrooklyn />} />
         <Route path="/dumbo" element={<Dumbo />} />
         <Route path="/harlem" element={<Harlem />} />
+        <Route path="/harlem-brownstones" element={<HarlemBrownstones />} />
         <Route path="/park-slope" element={<ParkSlope />} />
         <Route path="/upper-east-side" element={<UpperEastSide />} />
         <Route path="/upper-west-side" element={<UpperWestSide />} />
