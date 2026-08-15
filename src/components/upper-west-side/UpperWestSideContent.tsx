@@ -1,45 +1,40 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import HarlemSchools from "../HarlemSchools";
 import ResourcesSection from "../shared/ResourcesSection";
-import HarlemAreaNav from "./HarlemAreaNav";
-import HarlemPoiMap from "./HarlemPoiMap";
-import HarlemRealtorArticle from "./HarlemRealtorArticle";
-import { HARLEM_ABOUT_PARAS, HARLEM_YELP_CATS } from "../../data/harlemGuide";
-import HARLEM_YELP from "../../data/harlemYelp.json";
+import UpperWestSideAreaNav from "./UpperWestSideAreaNav";
+import UpperWestSidePoiMap from "./UpperWestSidePoiMap";
+import UpperWestSideRealtorArticle from "./UpperWestSideRealtorArticle";
+import { UWS_YELP_CATS } from "../../data/upperWestSideGuide";
+import UWS_SCHOOLS from "../../data/upperWestSideSchools.json";
+import UWS_YELP from "../../data/upperWestSideYelp.json";
 import "../../styles/harlem-page.css";
+import "../../styles/uws-page.css";
 
 const PROPERTY_TYPES = [
   {
-    href: "/harlem-brownstones/",
-    image: "/redesign-assets/hoods/harlem-brownstones.webp",
-    alt: "Harlem Brownstones",
-    title: "Harlem Brownstones",
-    copy: "Historic architecture, timeless charm, and classic Harlem living",
+    href: "/upper-west-side-townhouses/",
+    image: "/redesign-assets/hoods/uws-townhouse.jpg",
+    alt: "Uper West Side Townhouse",
+    title: "Upper West Side Townhouses",
+    copy: "Elegant townhomes, historic charm, and classic Manhattan living",
   },
   {
-    href: "/harlem-condos/",
-    image: "/redesign-assets/hoods/harlem-condos.webp",
-    alt: "Harlem Condos",
-    title: "Harlem Condos",
-    copy: "Modern amenities, urban convenience, and vibrant Harlem living",
+    href: "/upper-west-side-condos/",
+    image: "/redesign-assets/hoods/uws-condo.png",
+    alt: "West Side Condo",
+    title: "Upper West Side Condos",
+    copy: "Modern luxury, premium amenities, and sophisticated city living",
   },
   {
-    href: "/harlem-sros/",
-    image: "/redesign-assets/hoods/harlem-sros.webp",
-    alt: "Harlem SROs",
-    title: "Harlem sros",
-    copy: "Affordable housing, investment potential, and unique opportunities",
-  },
-  {
-    href: "/harlem-co-ownership/",
-    image: "/redesign-assets/hoods/harlem-coownership.webp",
-    alt: "Harlem Co-Ownership",
-    title: "Harlem Co-Ownership",
-    copy: "Shared ownership, lower costs, and greater buying power",
+    href: "/upper-west-side-co-ops-2/",
+    image: "/redesign-assets/hoods/uws-coops.png",
+    alt: "Upper West Side Co-ops",
+    title: "Upper East Side Co-Ops",
+    copy: "Classic residences, strong communities, and timeless Manhattan appeal",
   },
 ] as const;
 
-type YelpCat = (typeof HARLEM_YELP_CATS)[number]["id"];
+type YelpCat = (typeof UWS_YELP_CATS)[number]["id"];
 
 type AreaPlace = {
   href: string;
@@ -49,10 +44,26 @@ type AreaPlace = {
   image?: string;
 };
 
+type School = {
+  name: string;
+  phone: string;
+  type: string;
+  grades: string;
+  rating: number | null;
+  website: string | null;
+  categories: string[];
+};
+
 function ShareIcon() {
   return (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-      <path d="M12 3v12M12 3l-4 4M12 3l4 4M5 12v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M12 3v12M12 3l-4 4M12 3l4 4M5 12v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -62,7 +73,9 @@ function StarRating({ rating }: { rating: number }) {
   return (
     <span className="hlm-stars">
       ★★★★★
-      <span className="hlm-stars-fill" style={{ width }}>★★★★★</span>
+      <span className="hlm-stars-fill" style={{ width }}>
+        ★★★★★
+      </span>
     </span>
   );
 }
@@ -113,27 +126,23 @@ function AreaCard({ place }: { place: AreaPlace }) {
 
 const OLR_SALES_URL = "https://stanley.olridx.com/Search/Sales";
 
-function HarlemListingsIdx() {
-  const [embed, setEmbed] = useState(false);
-
-  useEffect(() => {
-    setEmbed(window.location.hostname === "montfortre.com");
-  }, []);
+function UwsListingsIdx() {
+  const embed = window.location.hostname === "montfortre.com";
 
   if (!embed) {
     return (
       <div className="hlm-listings-idx">
         <div className="hlm-listings-fallback">
           <p>
-            This box is the live OLR IDX sales search. OLR only allows it to embed on montfortre.com, so it stays blank on localhost and preview. Open the search to see Harlem listings now.
+            This box is the live OLR IDX sales search. OLR only allows it to embed on montfortre.com, so it stays blank
+            on localhost and preview. Open the search to see Upper West Side listings now.
           </p>
           <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-btn">
             Open live listings
           </a>
         </div>
         <p className="hlm-listings-footnote">
-          Live listing data provided by OLR IDX. Need help?{" "}
-          <a href="/contact/">Contact us</a> or{" "}
+          Live listing data provided by OLR IDX. Need help? <a href="/contact/">Contact us</a> or{" "}
           <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener noreferrer">
             log in to your customer account
           </a>
@@ -149,12 +158,11 @@ function HarlemListingsIdx() {
         className="hlm-listings-frame"
         src={OLR_SALES_URL}
         scrolling="yes"
-        title="Harlem homes for sale"
+        title="Upper West Side homes for sale"
         loading="lazy"
       />
       <p className="hlm-listings-footnote">
-        Live listing data provided by OLR IDX. Need help?{" "}
-        <a href="/contact/">Contact us</a> or{" "}
+        Live listing data provided by OLR IDX. Need help? <a href="/contact/">Contact us</a> or{" "}
         <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener noreferrer">
           log in to your customer account
         </a>
@@ -164,7 +172,7 @@ function HarlemListingsIdx() {
   );
 }
 
-const HARLEM_ARTICLES = [
+const UWS_ARTICLES = [
   {
     href: "/upper-west-side-townhouse-q2-2024-market-report/",
     image: "/redesign-assets/hoods/upper-west-side.webp",
@@ -188,12 +196,12 @@ const HARLEM_ARTICLES = [
   },
 ] as const;
 
-export default function HarlemContent() {
+export default function UpperWestSideContent() {
   const [areaCat, setAreaCat] = useState<YelpCat>("dine");
   const [marketEmail, setMarketEmail] = useState(false);
   const areaTrackRef = useRef<HTMLDivElement>(null);
 
-  const areaPlaces = (HARLEM_YELP[areaCat] ?? []) as AreaPlace[];
+  const areaPlaces = (UWS_YELP[areaCat] ?? []) as AreaPlace[];
 
   const scrollArea = (dir: -1 | 1) => {
     const track = areaTrackRef.current;
@@ -210,17 +218,20 @@ export default function HarlemContent() {
 
   return (
     <>
-      <HarlemPoiMap />
-      <HarlemAreaNav />
+      <UpperWestSidePoiMap />
+      <UpperWestSideAreaNav />
 
       <section id="featured-listings" className="hlm-listings" data-screen-label="Featured listings">
         <div className="hlm-listings-inner">
           <div data-reveal="">
             <p>
-              In the beautiful area of Harlem resides 338,411 people where 18% are homeowners. With an average age of 39, the residents of Harlem are well established, with many growing families of all ages. Over the past 30 days roughly 17 homes have been sold with an average sold price of 659,263. That is a decrease of $49,637 from the previous period.
+              In the beautiful area of Upper West Side resides 219,184 people where 37% are homeowners. With an average
+              age of 43, the residents of Upper West Side are well established, with many growing families of all ages.
+              Over the past 30 days roughly 53 homes have been sold with an average sold price of 2,732,813. That is a
+              decrease of $404,178 from the previous period.
             </p>
             <div className="hlm-listings-cta">
-              <a href="/idx-sales/" className="hlm-listings-btn">
+              <a href="/idx/listings/upper-west-side/" className="hlm-listings-btn">
                 View More Listings
               </a>
               <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">
@@ -228,26 +239,13 @@ export default function HarlemContent() {
               </a>
             </div>
           </div>
-          <HarlemListingsIdx />
+          <UwsListingsIdx />
         </div>
       </section>
 
-      <HarlemRealtorArticle />
+      <UpperWestSideRealtorArticle />
 
-      <section className="hlm-about" data-screen-label="About Harlem">
-        <div className="hlm-about-inner">
-          <div data-reveal="">
-            {HARLEM_ABOUT_PARAS.map((para) => (
-              <p key={para.slice(0, 40)}>{para}</p>
-            ))}
-          </div>
-          <div className="hlm-about-photo" data-reveal="">
-            <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem street" />
-          </div>
-        </div>
-      </section>
-
-      <section className="hlm-reviews" data-screen-label="Harlem reviews">
+      <section className="hlm-reviews" data-screen-label="Upper West Side reviews">
         <div className="hlm-reviews-inner">
           <iframe
             className="hlm-reviews-frame"
@@ -258,7 +256,7 @@ export default function HarlemContent() {
         </div>
       </section>
 
-      <section className="hlm-types" data-screen-label="Harlem property types">
+      <section className="hlm-types" data-screen-label="Upper West Side property types">
         <div className="hlm-types-inner">
           <div className="hlm-types-grid">
             {PROPERTY_TYPES.map((item) => (
@@ -280,9 +278,11 @@ export default function HarlemContent() {
       <section id="market-report" className="hlm-market" data-screen-label="Market report">
         <div className="hlm-market-inner">
           <div data-reveal="">
-            <h2>Want the full market report for Harlem?</h2>
+            <h2>Want the full market report for Upper West Side?</h2>
             <p className="hlm-market-lead">
-              We want to ensure that you have all the information needed to make the best decisions when it comes to your home goals. When you enter your info below you will get instant access to the area&apos;s latest market report, complete with sales and demographic trends.
+              We want to ensure that you have all the information needed to make the best decisions when it comes to
+              your home goals. When you enter your info below you will get instant access to the area&apos;s latest
+              market report, complete with sales and demographic trends.
             </p>
             {!marketEmail ? (
               <div className="hlm-market-social">
@@ -314,23 +314,23 @@ export default function HarlemContent() {
             )}
           </div>
           <div className="hlm-market-card" data-reveal="">
-            <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem market" />
+            <img src="/redesign-assets/hoods/upper-west-side.webp" alt="Upper West Side market" />
             <div className="hlm-market-card-copy">
-              <div className="hlm-market-card-title">Harlem</div>
+              <div className="hlm-market-card-title">Upper West Side</div>
               <div className="hlm-market-card-sub">Market Report</div>
             </div>
           </div>
         </div>
       </section>
 
-      <HarlemSchools />
+      <HarlemSchools schools={UWS_SCHOOLS as School[]} nearLabel="Upper West Side" />
 
       <section id="the-area" className="hlm-area" data-screen-label="Around the area">
         <div className="hlm-area-inner">
           <div className="hlm-area-head" data-reveal="">
             <div className="hlm-area-head-copy">
               <h2>Around The Area</h2>
-              <p>Browse through the top rated businesses that Harlem has to offer!</p>
+              <p>Browse through the top rated businesses that Upper West Side has to offer!</p>
             </div>
             {areaPlaces.length ? (
               <div className="hlm-area-nav">
@@ -348,7 +348,7 @@ export default function HarlemContent() {
             ) : null}
           </div>
           <div className="hlm-area-chips">
-            {HARLEM_YELP_CATS.map((cat) => (
+            {UWS_YELP_CATS.map((cat) => (
               <button
                 key={cat.id}
                 type="button"
@@ -375,7 +375,7 @@ export default function HarlemContent() {
           ctaLabel="View More Articles"
           moreLabel="Read More"
           showCategory={false}
-          articles={HARLEM_ARTICLES}
+          articles={UWS_ARTICLES}
         />
       </div>
     </>

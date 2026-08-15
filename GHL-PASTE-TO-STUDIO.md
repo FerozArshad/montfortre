@@ -126,6 +126,32 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harl
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/HarlemSchools.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/harlemSchools.json
 
+## 8b. Upper West Side
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/UpperWestSide.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-west-side/UpperWestSideContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-west-side/UpperWestSidePoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-west-side/UpperWestSideAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-west-side/UpperWestSideRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/uws-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperWestSide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperWestSideGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperWestSideYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperWestSideSchools.json
+
+## 8c. Upper East Side
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/UpperEastSide.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-east-side/UpperEastSideContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-east-side/UpperEastSidePoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-east-side/UpperEastSideAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-east-side/UpperEastSideRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/ues-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperEastSide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperEastSideGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperEastSideYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperEastSideSchools.json
+
 ## 9. TwoFamilyHouseForSaleNyc
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx

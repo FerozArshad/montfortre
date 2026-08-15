@@ -13,6 +13,8 @@ import Services from "./pages/Services";
 import StanleyMontfort from "./pages/StanleyMontfort";
 import SuccessStories from "./pages/SuccessStories";
 import TwoFamilyHouseForSaleNyc from "./pages/TwoFamilyHouseForSaleNyc";
+import UpperEastSide from "./pages/UpperEastSide";
+import UpperWestSide from "./pages/UpperWestSide";
 
 export default function App() {
   return (
@@ -24,6 +26,8 @@ export default function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/harlem" element={<Harlem />} />
+        <Route path="/upper-east-side" element={<UpperEastSide />} />
+        <Route path="/upper-west-side" element={<UpperWestSide />} />
         <Route path="/stanley-montfort" element={<StanleyMontfort />} />
         <Route path="/success-stories" element={<SuccessStories />} />
         <Route path="/2-family-house-for-sale-nyc" element={<TwoFamilyHouseForSaleNyc />} />
