@@ -263,6 +263,13 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/two
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/two-family-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/twoFamily.ts
 
+## 9b. NycBuyersAgentService
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycBuyersAgentService.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-buyers-agent/NycBuyersAgentContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/nyc-buyers-agent-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycBuyersAgent.ts
+
 ---
 
 ## 10. Remaining migrated pages (full site)

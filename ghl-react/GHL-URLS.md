@@ -238,6 +238,14 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/plan/step3.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/2-family-house-for-sale-nyc.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/2-family-house-for-sale-nyc.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/buying-a-brownstone-nyc.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/buying-a-condo-nyc.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/buying-sro-nyc.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/co-ownership-buying-nyc.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-buyers-agent.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-buyers-agent-article-1.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-buyers-agent-article-2.jpg
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-buyers-agent-article-3.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/2-family-investment.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/2-family-investment.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/3-family-house-for-sale-nyc.png

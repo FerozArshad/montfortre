@@ -42,6 +42,7 @@ type ResourcesSectionProps = {
   ctaLabel?: string;
   moreLabel?: string;
   showCategory?: boolean;
+  showCta?: boolean;
   articles?: readonly ResourceArticle[];
 };
 
@@ -51,6 +52,7 @@ export default function ResourcesSection({
   ctaLabel = "All resources",
   moreLabel = "Read article",
   showCategory = true,
+  showCta = true,
   articles = BLOG_ARTICLES,
 }: ResourcesSectionProps) {
   return (
@@ -61,9 +63,11 @@ export default function ResourcesSection({
             <h2>{title}</h2>
             <p>{subtitle}</p>
           </div>
-          <a href="/blog/" className="resources-cta">
-            {ctaLabel}
-          </a>
+          {showCta ? (
+            <a href="/blog/" className="resources-cta">
+              {ctaLabel}
+            </a>
+          ) : null}
         </div>
         <div className="resources-grid">
           {articles.map((article) => (
