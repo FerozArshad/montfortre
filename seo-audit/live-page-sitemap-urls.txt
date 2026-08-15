@@ -123,7 +123,7 @@
 [MIGRATED] https://montfortre.com/home-valuation/
 [LEFT] https://montfortre.com/bedford-stuyvesant/
 [MIGRATED] https://montfortre.com/about-us/
-[LEFT] https://montfortre.com/mortgage-calculator/
+[MIGRATED] https://montfortre.com/mortgage-calculator/
 [LEFT] https://montfortre.com/buying-a-brownstone-in-nyc/
 [LEFT] https://montfortre.com/buying-sro-in-nyc/
 [LEFT] https://montfortre.com/co-ownership-buying-in-nyc/
