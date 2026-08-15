@@ -1,0 +1,48 @@
+[
+  {
+    "name": "P.S. 307 Daniel Hale Williams School",
+    "phone": "718-834-4748",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Edmund W Gordon Brooklyn Laboratory Charter School",
+    "phone": "347-429-8439",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Dock Street School for Steam Studies",
+    "phone": "718-780-7660",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Laboratory Charter School",
+    "phone": "347-429-8439",
+    "type": "public",
+    "grades": "7-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  }
+]

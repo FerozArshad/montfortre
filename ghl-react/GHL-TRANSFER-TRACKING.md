@@ -34,7 +34,7 @@ Until GHL replies that it wrote files, **FETCHED and VERIFIED stay empty**.
 2. Save as `<path>` in the Studio project (example: `src/pages/Services.tsx`)
 3. Do not invent routes. Do not edit `src/seo/pages/*.ts`. Do not use page-level `dangerouslySetInnerHTML`.
 
-`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 16 migrated routes in `src/App.tsx` plus `NotMigrated`.
+`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 17 migrated routes in `src/App.tsx` plus `NotMigrated`.
 
 ---
 
@@ -143,7 +143,7 @@ Full image set (hoods, services, slots, blog, Instagram, plan, nbhd): every `pub
 ## Not in Studio (do not send)
 
 - `node_modules/`, `dist/`, `reference/` (parent folder)
-- Unmigrated live URLs (`/dumbo/` etc.) — stay `NotMigrated`
+- Unmigrated live URLs (`/brooklyn-heights/` etc.) — stay `NotMigrated`
 - Test files (`src/test/*`) unless Studio needs them
 
 ---
