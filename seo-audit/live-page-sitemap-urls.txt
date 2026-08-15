@@ -179,7 +179,7 @@
 [LEFT] https://montfortre.com/nyc-first-time-home-buyer-mortages/
 [MIGRATED] https://montfortre.com/services/
 [LEFT] https://montfortre.com/crown-heights/
-[LEFT] https://montfortre.com/nyc-buyers-agent-service/
+[MIGRATED] https://montfortre.com/nyc-buyers-agent-service/
 [LEFT] https://montfortre.com/nyc-listing-agent-service/
 [MIGRATED] https://montfortre.com/neighborhoods/
 [LEFT] https://montfortre.com/nyc-multifamily-real-estate-agent-service/
