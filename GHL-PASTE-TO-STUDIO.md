@@ -284,6 +284,14 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/nyc-multifamily-agent-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycMultifamily.ts
 
+## 9e. HomeValuation
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/HomeValuation.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/home-valuation/HomeValuationContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/home-valuation/HomeValuationTool.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-valuation-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/homeValuation.ts
+
 ---
 
 ## 10. Remaining migrated pages (full site)

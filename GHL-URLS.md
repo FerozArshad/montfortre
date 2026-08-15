@@ -271,6 +271,10 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/buying-sro-in-nyc.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/home-valuation.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/home-valuation.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/home-valuation-process.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/home-valuation-checklist.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/home-valuation-appraisal.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/ljg7105-min.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/listing-agent.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/listing-agent.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/mortgage.png
@@ -281,6 +285,8 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-brownstone-free-home-valuation.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-condo-free-home-valuation.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-condo-free-home-valuation.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-co-op-free-home-valuation.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-co-op-free-home-valuation.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-first-time-home-buyer-mortages.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-first-time-home-buyer-mortages.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/nyc-sro-free-home-valuation.png
