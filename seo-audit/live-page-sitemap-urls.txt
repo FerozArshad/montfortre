@@ -180,9 +180,9 @@
 [MIGRATED] https://montfortre.com/services/
 [LEFT] https://montfortre.com/crown-heights/
 [MIGRATED] https://montfortre.com/nyc-buyers-agent-service/
-[LEFT] https://montfortre.com/nyc-listing-agent-service/
+[MIGRATED] https://montfortre.com/nyc-listing-agent-service/
 [MIGRATED] https://montfortre.com/neighborhoods/
-[LEFT] https://montfortre.com/nyc-multifamily-real-estate-agent-service/
+[MIGRATED] https://montfortre.com/nyc-multifamily-real-estate-agent-service/
 [LEFT] https://montfortre.com/park-slope-brownstone-2/
 [LEFT] https://montfortre.com/park-slope-condo-2/
 [LEFT] https://montfortre.com/park-slope-coops/
