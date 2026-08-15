@@ -308,6 +308,13 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/har
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-brownstones-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlemBrownstones.ts
 
+## 9h. HarlemCondos
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/HarlemCondos.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem-condos/HarlemCondosContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-condos-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlemCondos.ts
+
 ---
 
 ## 10. Remaining migrated pages (full site)
