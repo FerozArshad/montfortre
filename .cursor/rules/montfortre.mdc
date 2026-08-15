@@ -5,9 +5,21 @@ alwaysApply: true
 
 # Montfort Real Estate (GHL React SPA)
 
-Git repo is `d:\montfortre\ghl-react` (remote `https://github.com/FerozArshad/montfortre`). Parent `d:\montfortre\reference\` is not in git.
-
 **Read `DOCUMENTATION.md` first.** Then `AGENT-ONBOARDING.md`. Session notes: `PROJECT-CONTEXT.md`. Launch blockers: `HANDOFF.md`.
+
+## Git — `local-root` vs `main` (hard rule)
+
+This workspace stays on **`local-root` forever**. That branch is only a clone/snapshot of the full disk (`ghl-react/` + `reference/`). It is **not** GHL, not production, not the fetch tree.
+
+- **Daily work:** stay on `local-root`. Commit snapshots there only if the owner asks.
+- **GHL / GitHub app:** copy **only updated/new app files** from `ghl-react/` onto **`main`**, dropping the `ghl-react/` prefix (`ghl-react/src/App.tsx` → `src/App.tsx`).
+- **Never** merge `local-root` into `main` or `main` into `local-root`.
+- **Never** push `reference/`, `node_modules/`, `dist/`, `.env`, or the parent workspace layout to `main`.
+- **Never** tell the owner “push this checkout to `local-root`” as the way to update GHL. GHL raw URLs are `.../montfortre/main/<path>`.
+- Ship `main` via a **feature branch + PR into `main`**, or copy into a separate `main` clone. Do not force-push `main`.
+- Do not create a third long-lived branch as a substitute for this split.
+
+When asked what to push to `main`, list **only** changed/new files under `ghl-react/` that belong to the SPA (TS/TSX, CSS, `src/data`, `public/` assets, `App.tsx`, sitemap, GHL paste/URL/tracking docs).
 
 ## Frozen
 

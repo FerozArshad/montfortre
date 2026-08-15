@@ -1,0 +1,548 @@
+[
+  {
+    "name": "Manhattan International High School",
+    "phone": "212-517-6728",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 1,
+    "website": "https://www.mihsnyc.org/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 290 Manhattan New School",
+    "phone": "212-734-7127",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Marymount School of NY",
+    "phone": "212-744-4486",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": "https://www.marymountnyc.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "The Browning School",
+    "phone": "212-838-6280",
+    "type": "private",
+    "grades": "KG-12",
+    "rating": null,
+    "website": "https://www.browning.edu/",
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "The Hewitt School",
+    "phone": "212-288-1919",
+    "type": "private",
+    "grades": "KG-12",
+    "rating": null,
+    "website": "https://www.hewittschool.org/",
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Eleanor Roosevelt High School",
+    "phone": "212-772-1220",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": "https://www.erhsnyc.org/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "La Scuola d'Italia",
+    "phone": "212-369-3290",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": "https://www.lascuoladitalia.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "East Side Middle School",
+    "phone": "212-360-0114",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": "https://www.esms.org/",
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Vanguard High School",
+    "phone": "212-517-5175",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 1,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 158 Bayard Taylor School",
+    "phone": "212-744-6562",
+    "type": "public",
+    "grades": "KG-6",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "The Allen-Stevenson School",
+    "phone": "212-606-0889",
+    "type": "private",
+    "grades": "KG-8",
+    "rating": null,
+    "website": "https://www.allen-stevenson.org/",
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "International Academy of New York",
+    "phone": "212-641-0260",
+    "type": "private",
+    "grades": "PK-2",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "High School for Climate Justice (the)",
+    "phone": "212-348-1694",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 183 Robert L. Stevenson School",
+    "phone": "212-734-7719",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": "https://www.ps183.org/",
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "St Jean Baptiste High School",
+    "phone": "212-288-1645",
+    "type": "private",
+    "grades": "9-12",
+    "rating": null,
+    "website": "https://www.stjean.org/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Spence School",
+    "phone": "646-943-6837",
+    "type": "private",
+    "grades": "KG-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "The Brearley School",
+    "phone": "212-570-8514",
+    "type": "private",
+    "grades": "KG-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Regis High School",
+    "phone": "212-288-1100",
+    "type": "private",
+    "grades": "9-12",
+    "rating": null,
+    "website": "https://www.regis-nyc.org/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Urban Academy Laboratory High School",
+    "phone": "212-570-5284",
+    "type": "public",
+    "grades": "9-12",
+    "rating": null,
+    "website": "https://www.urbanacademy.com/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Rudolf Steiner School",
+    "phone": "347-334-5795",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Manhattan High School for Girls",
+    "phone": "212-737-6800",
+    "type": "private",
+    "grades": "9-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Ella Baker School",
+    "phone": "212-717-8809",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 4,
+    "website": "https://www.ellabakerschool.net/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Rabbi Arthur Schneier Park East Day School",
+    "phone": "212-737-7330",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": "https://raspeds.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Lycee Francais de New York",
+    "phone": "212-369-1400",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": "https://lfny.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "St Vincent Ferrer High School",
+    "phone": "212-535-4680",
+    "type": "private",
+    "grades": "9-12",
+    "rating": null,
+    "website": "https://www.saintvincentferrer.com/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Lascuola Ditalia",
+    "phone": "212-369-3290",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "The Town School",
+    "phone": "212-288-4383",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": "https://www.thetownschool.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "PS 169 Robert F Kennedy",
+    "phone": "212-348-6140",
+    "type": "public",
+    "grades": "KG-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "The Cathedral School",
+    "phone": "212-240-2840",
+    "type": "private",
+    "grades": "KG-4",
+    "rating": null,
+    "website": "https://www.cathedralnyc.org/",
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Windward School the - NYC",
+    "phone": "212-222-8628",
+    "type": "private",
+    "grades": "2-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 6 Lillie D. Blake School",
+    "phone": "212-452-6650",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Yorkville East Middle School",
+    "phone": "917-432-5413",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Temple Israel",
+    "phone": "212-249-5000",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Ramaz Upper School",
+    "phone": "212-774-8070",
+    "type": "private",
+    "grades": "9-12",
+    "rating": null,
+    "website": "https://www.ramaz.org/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "J.H.S. 167 Robert F. Wagner School",
+    "phone": "212-535-8610",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 527 East Side School for Social Action",
+    "phone": "212-828-2710",
+    "type": "public",
+    "grades": "KG-2",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "St Ignatius Loyola School",
+    "phone": "212-861-3820",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": "https://www.saintignatiusloyolaschool.com/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Yorkville Community School",
+    "phone": "212-722-5240",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "The Birch Wathen Lenox School",
+    "phone": "212-861-0404",
+    "type": "private",
+    "grades": "KG-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Nightingale-Bamford School",
+    "phone": "212-289-5020",
+    "type": "private",
+    "grades": "KG-12",
+    "rating": null,
+    "website": "https://www.nightingale.org/",
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "The Caedmon School",
+    "phone": "212-879-2296",
+    "type": "private",
+    "grades": "PK-5",
+    "rating": null,
+    "website": "https://www.caedmonschool.org/",
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Horace Mann School Nursery-Kindergarten Division",
+    "phone": "718-432-4114",
+    "type": "private",
+    "grades": "PK-KG",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Dalton School",
+    "phone": "212-423-5200",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "The Brearley School",
+    "phone": "212-570-8514",
+    "type": "private",
+    "grades": "KG-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Talent Unlimited High School",
+    "phone": "212-737-1530",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  }
+]

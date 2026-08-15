@@ -35,17 +35,25 @@ function Stars({ rating }: { rating: number }) {
   );
 }
 
-export default function HarlemSchools() {
+type HarlemSchoolsProps = {
+  schools?: School[];
+  nearLabel?: string;
+};
+
+export default function HarlemSchools({
+  schools: schoolsProp,
+  nearLabel = "Harlem",
+}: HarlemSchoolsProps) {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]["id"]>("all");
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
   const menuRef = useRef<HTMLDivElement>(null);
+  const schoolList = schoolsProp ?? (schools as School[]);
 
   const filtered = useMemo(() => {
-    const list = schools as School[];
-    if (filter === "all") return list;
-    return list.filter((s) => s.categories.includes(filter));
-  }, [filter]);
+    if (filter === "all") return schoolList;
+    return schoolList.filter((s) => s.categories.includes(filter));
+  }, [filter, schoolList]);
 
   const maxIndex = Math.max(0, filtered.length - VISIBLE);
 
@@ -72,7 +80,7 @@ export default function HarlemSchools() {
         <div className="harlem-schools__header">
           <div className="harlem-schools__intro">
             <h2>Schools In The Area</h2>
-            <p>Check our schools near Harlem complete with ratings and contact info.</p>
+            <p>Check our schools near {nearLabel} complete with ratings and contact info.</p>
           </div>
 
           <div ref={menuRef} className="harlem-schools__menu">

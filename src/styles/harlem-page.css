@@ -1,3 +1,308 @@
+.harlem-page .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hlm-map,
+.hlm-guide-nav,
+.hlm-listings,
+.hlm-article,
+.hlm-about,
+.hlm-types,
+.hlm-market,
+.hlm-area,
+.harlem-schools,
+#advice {
+  scroll-margin-top: 110px;
+}
+
+.hlm-map {
+  position: relative;
+  background: #0f1729;
+}
+
+.hlm-map-frame {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.hlm-map-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.35) contrast(0.96) saturate(0.85);
+}
+
+.hlm-map-badge {
+  position: absolute;
+  left: 64px;
+  top: auto;
+  bottom: 28px;
+  z-index: 2;
+  background: #f9f6e6;
+  border: 1px solid #e0d9b8;
+  border-top: 3px solid #c98a2c;
+  border-radius: 16px;
+  padding: 22px 28px 20px;
+  box-shadow: 0 24px 50px rgba(15, 23, 41, 0.28);
+  max-width: min(420px, calc(100% - 48px));
+  pointer-events: none;
+}
+
+.hlm-map-subtitle {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8a7b4e;
+}
+
+.hlm-map-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #0f1729;
+  margin: 8px 0 0;
+}
+
+.hlm-map-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 64px 22px;
+  background: #113b5f;
+  border-bottom: 1px solid rgba(201, 138, 44, 0.35);
+}
+
+.hlm-map-poi {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(201, 138, 44, 0.45);
+  background: transparent;
+  color: #f9f6e6;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.hlm-map-poi:hover,
+.hlm-map-poi.is-active {
+  background: #c98a2c;
+  border-color: #c98a2c;
+  color: #0f1729;
+}
+
+.hlm-map-poi-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.hlm-map-poi-label {
+  white-space: nowrap;
+}
+
+.harlem-page a.hlm-map-open {
+  margin-left: 8px;
+  color: #c98a2c;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.harlem-page a.hlm-map-open:hover {
+  color: #f9f6e6;
+}
+
+.hlm-guide-nav {
+  background: #fff;
+  border-bottom: 1px solid #e0d9b8;
+}
+
+.hlm-guide-nav-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 64px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hlm-guide-agent {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hlm-guide-agent-btn {
+  display: block;
+  padding: 0;
+  border: 2px solid #c98a2c;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 56px;
+  height: 56px;
+  background: #f5eecb;
+  cursor: pointer;
+}
+
+.hlm-guide-agent-btn img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hlm-guide-agent-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 20;
+  min-width: 260px;
+  background: #fff;
+  border: 1px solid #eae1be;
+  border-top: 3px solid #c98a2c;
+  border-radius: 12px;
+  box-shadow: 0 24px 50px rgba(17, 59, 95, 0.18);
+  padding: 10px 0;
+}
+
+.hlm-guide-agent-row {
+  display: block;
+  padding: 8px 16px;
+  color: #0f1729;
+  font-size: 13.5px;
+  text-decoration: none;
+}
+
+.harlem-page a.hlm-guide-agent-row:hover {
+  background: rgba(201, 138, 44, 0.08);
+  color: #113b5f;
+}
+
+.hlm-guide-agent-div {
+  height: 1px;
+  background: #e0d9b8;
+  margin: 8px 0;
+}
+
+.hlm-guide-hood {
+  flex: 0 0 220px;
+}
+
+.hlm-guide-hood-select {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #e0d9b8;
+  border-radius: 10px;
+  background: #f9f6e6;
+  color: #0f1729;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 14px;
+}
+
+.hlm-guide-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  flex: 1 1 auto;
+}
+
+.harlem-page a.hlm-guide-tab {
+  color: #0f1729;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 8px 0;
+}
+
+.harlem-page a.hlm-guide-tab:hover {
+  color: #c98a2c;
+}
+
+.harlem-page a.hlm-guide-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  background: #113b5f;
+  color: #f9f6e6;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 100px;
+  padding: 14px 20px;
+  min-height: 48px;
+}
+
+.harlem-page a.hlm-guide-search:hover {
+  background: #c98a2c;
+  color: #0f1729;
+}
+
+.hlm-reviews {
+  background: #f9f6e6;
+  padding: 40px 64px;
+  border-bottom: 1px solid #e0d9b8;
+}
+
+.hlm-reviews-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hlm-reviews-frame {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+  background: #fff;
+  border-radius: 16px;
+}
+
+.hlm-area-yelp-empty {
+  margin-top: 34px;
+  padding: 36px 32px;
+  background: #f9f6e6;
+  border: 1px solid #e0d9b8;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.hlm-area-yelp-empty p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #3b4c5e;
+  margin: 0 0 22px;
+}
+
 .hlm-hero {
   position: relative;
   background: #f5eecb;
@@ -352,7 +657,7 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 5 / 4;
   background: #e0d9b8;
   box-shadow: 0 30px 70px rgba(17, 59, 95, 0.18);
 }
@@ -362,7 +667,9 @@
   inset: 0;
   width: 100%;
   height: 100%;
+  max-width: none;
   object-fit: cover;
+  object-position: center 35%;
   display: block;
 }
 
@@ -482,7 +789,7 @@
 }
 
 .hlm-listings-inner {
-  max-width: 1000px;
+  max-width: 1440px;
   margin: 0 auto;
   text-align: center;
 }
@@ -491,7 +798,8 @@
   font-size: 18px;
   line-height: 1.8;
   color: #3b4c5e;
-  margin: 22px 0 0;
+  margin: 22px auto 0;
+  max-width: 1000px;
   text-wrap: pretty;
 }
 
@@ -502,8 +810,62 @@
 
 .hlm-listings-cta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 14px;
   margin-top: 34px;
+}
+
+.hlm-listings-idx {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.hlm-listings-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  min-height: 280px;
+  padding: 40px 32px;
+  border: 1px solid #eae1be;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 30px 60px rgba(17, 59, 95, 0.1);
+  text-align: center;
+}
+
+.hlm-listings-fallback p {
+  margin: 0;
+  max-width: 640px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #3b4c5e;
+}
+
+.hlm-listings-frame {
+  width: 100%;
+  height: 1200px;
+  border: 1px solid #eae1be;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 30px 60px rgba(17, 59, 95, 0.1);
+}
+
+.hlm-listings p.hlm-listings-footnote {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #52677a;
+  margin-top: 14px;
+  max-width: none;
+  text-align: left;
+}
+
+.hlm-listings-footnote a {
+  color: #113b5f;
+  font-weight: 700;
 }
 
 .harlem-page a.hlm-listings-btn {
@@ -525,6 +887,192 @@
 .harlem-page a.hlm-listings-btn:hover {
   background: #c98a2c;
   color: #0f1729;
+}
+
+.harlem-page a.hlm-listings-ext {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #113b5f;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid #c98a2c;
+  border-radius: 100px;
+  padding: 16px 28px;
+  min-height: 54px;
+  text-decoration: none;
+}
+
+.harlem-page a.hlm-listings-ext:hover {
+  background: #c98a2c;
+  color: #0f1729;
+}
+
+.hlm-article {
+  background: #f9f6e6;
+  padding: 100px 64px;
+  border-bottom: 1px solid #e0d9b8;
+}
+
+.hlm-article-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hlm-article h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #0f1729;
+  margin: 0 0 24px;
+}
+
+.hlm-article h3 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.25;
+  color: #113b5f;
+  margin: 44px 0 16px;
+}
+
+.hlm-article h4 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+  color: #0f1729;
+  margin: 28px 0 12px;
+}
+
+.hlm-article p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #3b4c5e;
+  margin: 0 0 16px;
+  text-wrap: pretty;
+}
+
+.hlm-article a {
+  color: #113b5f;
+  font-weight: 700;
+}
+
+.hlm-article ul {
+  margin: 0 0 20px;
+  padding: 0 0 0 22px;
+}
+
+.hlm-article li {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #3b4c5e;
+  margin: 0 0 10px;
+}
+
+.hlm-article li strong {
+  color: #0f1729;
+}
+
+.hlm-article-table-wrap {
+  overflow-x: auto;
+  margin: 20px 0 24px;
+  border: 1px solid #e0d9b8;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.hlm-article-figure {
+  margin: 28px 0 32px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e0d9b8;
+  background: #e0d9b8;
+}
+
+.hlm-article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.hlm-article table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+}
+
+.hlm-article th,
+.hlm-article td {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  border-bottom: 1px solid #eae1be;
+  vertical-align: top;
+}
+
+.hlm-article th {
+  background: #113b5f;
+  color: #f9f6e6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hlm-article tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.hlm-article tbody tr:nth-child(even) td {
+  background: #fbf8ec;
+}
+
+.hlm-article-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.harlem-page a.hlm-article-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 16px 28px;
+  min-height: 52px;
+  text-decoration: none;
+}
+
+.harlem-page a.hlm-article-cta--ghost {
+  background: transparent;
+  color: #113b5f;
+  border: 1px solid #c98a2c;
+}
+
+.harlem-page a.hlm-article-cta--ghost:hover,
+.harlem-page a.hlm-article-cta--solid:hover {
+  background: #c98a2c;
+  color: #0f1729;
+  border-color: #c98a2c;
+}
+
+.harlem-page a.hlm-article-cta--solid {
+  background: #113b5f;
+  color: #f9f6e6;
+  border: 1px solid #113b5f;
 }
 
 .hlm-market {
@@ -567,6 +1115,45 @@
   margin: 18px 0 0;
   max-width: 560px;
   text-wrap: pretty;
+}
+
+.hlm-market-social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+  max-width: 520px;
+}
+
+.hlm-market-social-btn {
+  min-height: 52px;
+  border: 1px solid rgba(201, 138, 44, 0.45);
+  border-radius: 10px;
+  background: rgba(249, 246, 230, 0.1);
+  color: #f9f6e6;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hlm-market-email-link,
+.hlm-market-back {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  color: #f9f6e6;
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hlm-market-back {
+  text-align: left;
+  margin-bottom: 4px;
 }
 
 .hlm-form {
@@ -779,6 +1366,7 @@
   box-shadow: 0 20px 44px rgba(0, 0, 0, 0.35);
   color: #fff;
   text-decoration: none;
+  background: #0b1220;
 }
 
 .harlem-page a.hlm-area-media:hover {
@@ -1139,9 +1727,23 @@
   .hlm-about,
   .hlm-types,
   .hlm-listings,
+  .hlm-article,
   .hlm-market,
   .hlm-area,
+  .hlm-reviews,
   .harlem-schools {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .hlm-map-badge {
+    left: 32px;
+    top: auto;
+    bottom: 20px;
+  }
+
+  .hlm-map-filters,
+  .hlm-guide-nav-inner {
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -1168,11 +1770,78 @@
   .hlm-about,
   .hlm-types,
   .hlm-listings,
+  .hlm-article,
   .hlm-market,
   .hlm-area,
+  .hlm-reviews,
   .harlem-schools {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .hlm-listings-frame {
+    height: 70vh;
+    min-height: 480px;
+  }
+
+  .hlm-about-photo img,
+  .hlm-type-media img,
+  .hlm-market-card img {
+    max-width: none !important;
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover;
+  }
+
+  .hlm-article h2 {
+    font-size: 28px;
+  }
+
+  .hlm-article h3 {
+    font-size: 22px;
+  }
+
+  .hlm-map-frame {
+    height: 70vh;
+    min-height: 420px;
+  }
+
+  .hlm-map-title {
+    font-size: 32px;
+  }
+
+  .hlm-map-filters,
+  .hlm-guide-nav-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hlm-guide-nav-inner {
+    flex-wrap: wrap;
+  }
+
+  .hlm-guide-hood {
+    flex: 1 1 180px;
+  }
+
+  .hlm-guide-tabs {
+    flex: 1 1 100%;
+    order: 5;
+  }
+
+  .hlm-map-poi-label {
+    display: none;
+  }
+
+  .hlm-map-poi.is-active .hlm-map-poi-label,
+  .hlm-map-poi:first-child .hlm-map-poi-label {
+    display: inline;
+  }
+
+  .harlem-page a.hlm-map-open {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-left: 0;
   }
 
   .hlm-hero-rating {
@@ -1243,6 +1912,7 @@
   .hlm-about,
   .hlm-types,
   .hlm-listings,
+  .hlm-article,
   .hlm-market,
   .hlm-area {
     padding-top: 56px;
@@ -1330,9 +2000,26 @@
   .hlm-about,
   .hlm-types,
   .hlm-listings,
+  .hlm-article,
   .hlm-market,
   .hlm-area,
+  .hlm-reviews,
   .harlem-schools {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hlm-map-badge {
+    left: 16px;
+    right: 16px;
+    top: auto;
+    bottom: 16px;
+    max-width: none;
+    padding: 16px 18px;
+  }
+
+  .hlm-map-filters,
+  .hlm-guide-nav-inner {
     padding-left: 16px;
     padding-right: 16px;
   }
