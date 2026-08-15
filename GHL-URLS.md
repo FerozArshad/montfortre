@@ -171,6 +171,14 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/harlem.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/park-slope.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/park-slope.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/park-slope-brownstones.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/park-slope-condos.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/park-slope-coops.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/park-slope-coownership.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/park-slope-sros.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/park-slope-article-1.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/park-slope-article-2.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/park-slope-article-3.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/upper-east-side.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/upper-east-side.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/ues-townhouse.png
@@ -290,6 +298,7 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/bedford-stuyvesant.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/williamsburg.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/crown-heights.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/park-slope.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/brownstone-guide.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/brownstone-guide-1024.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/listings/1a-living-room.jpg
