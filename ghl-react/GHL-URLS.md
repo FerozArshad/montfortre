@@ -113,6 +113,12 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/bedford-stuyvesant.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/brooklyn-heights.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/brooklyn-heights.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/brooklyn-heights-townhouses.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/brooklyn-heights-condos.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/brooklyn-heights-coops.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/brooklyn-heights-article-1.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/brooklyn-heights-article-2.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/brooklyn-heights-article-3.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/chelsea.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/chelsea.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/chelsea-townhouse.png
@@ -257,6 +263,7 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/chelsea.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/downtown-brooklyn.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/dumbo.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/brooklyn-heights.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/brownstone-guide.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/brownstone-guide-1024.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/listings/1a-living-room.jpg

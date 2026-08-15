@@ -191,6 +191,19 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/dumboGuid
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/dumboYelp.json
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/dumboSchools.json
 
+## 8g. Brooklyn Heights
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BrooklynHeights.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/brooklyn-heights/BrooklynHeightsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/brooklyn-heights/BrooklynHeightsPoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/brooklyn-heights/BrooklynHeightsAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/brooklyn-heights/BrooklynHeightsRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/brooklyn-heights-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/brooklynHeights.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/brooklynHeightsGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/brooklynHeightsYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/brooklynHeightsSchools.json
+
 ## 9. TwoFamilyHouseForSaleNyc
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
