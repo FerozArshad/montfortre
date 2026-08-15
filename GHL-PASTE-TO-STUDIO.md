@@ -165,6 +165,19 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/chelseaGu
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/chelseaYelp.json
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/chelseaSchools.json
 
+## 8e. Downtown Brooklyn
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/DowntownBrooklyn.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/downtown-brooklyn/DowntownBrooklynContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/downtown-brooklyn/DowntownBrooklynPoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/downtown-brooklyn/DowntownBrooklynAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/downtown-brooklyn/DowntownBrooklynRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/downtown-brooklyn-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/downtownBrooklyn.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/downtownBrooklynGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/downtownBrooklynYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/downtownBrooklynSchools.json
+
 ## 9. TwoFamilyHouseForSaleNyc
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
