@@ -1,0 +1,343 @@
+[
+  {
+    "name": "P.S. 16 Leonard Dunkly School",
+    "phone": "718-782-5352",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Beginning with Children Charter School II",
+    "phone": "718-302-7700",
+    "type": "public",
+    "grades": "KG-11",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Yeshiva Beth Hillel of Williamsburg",
+    "phone": "718-802-9567",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 380 John Wayne Elementary School",
+    "phone": "718-388-0607",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 84 Jose de Diego School",
+    "phone": "718-384-8063",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Intermediate School 318 Eugenio Maria de Hostos",
+    "phone": "718-782-0589",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Williamsburg Northside School",
+    "phone": "718-599-9600",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Beth Chana School",
+    "phone": "718-935-1845",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Arbor Elementary School",
+    "phone": "718-963-0393",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "El Puente Academy for Peace and Justice",
+    "phone": "718-387-1125",
+    "type": "public",
+    "grades": "9-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Williamsburg Preparatory School",
+    "phone": "718-302-2306",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": "https://www.williamsburgprep.com/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Yeshiva Tzemach Tzadik Viznitz",
+    "phone": "718-782-6383",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Mosdos Chasidei Square",
+    "phone": "718-852-0502",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Uncommon Williamsburg Charter School NYC",
+    "phone": "718-302-4018",
+    "type": "public",
+    "grades": "5-8",
+    "rating": 5,
+    "website": "https://nyc.uncommonschools.org/williamsburg-collegiate",
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Jr High School 50 John D Wells",
+    "phone": "718-387-4184",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Talmud Torah of Kasho",
+    "phone": "718-475-1177",
+    "type": "private",
+    "grades": "PK-11",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Yeshiva Jesode Hatorah Wilson",
+    "phone": "718-302-7500",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Talmud Torah Tzemach Tzadik Viznitz",
+    "phone": "718-782-7383",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 17 Henry D. Woodworth School",
+    "phone": "718-387-2929",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Yeshiva Yesode Hatorah",
+    "phone": "718-802-1613",
+    "type": "private",
+    "grades": "PK-9",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Success Academy Charter School-Williamsburg",
+    "phone": "718-704-1419",
+    "type": "public",
+    "grades": "KG-4",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Preparatory High School",
+    "phone": "718-486-2550",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": "https://www.brooklynprephs.org/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Williams Burg Northside School",
+    "phone": "718-599-9600",
+    "type": "private",
+    "grades": "KG-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 319 Brooklyn",
+    "phone": "718-388-1588",
+    "type": "public",
+    "grades": "PK-1",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Williamsburg High School for Architecture and Design",
+    "phone": "718-388-1260",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Talmud Torah Tiferes Yisroel Inc",
+    "phone": "718-450-9701",
+    "type": "private",
+    "grades": "KG-2",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Bnos Yaakov Educational Center",
+    "phone": "718-387-7905",
+    "type": "private",
+    "grades": "1-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Juan Morel Campos Secondary School",
+    "phone": "718-302-7900",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  }
+]

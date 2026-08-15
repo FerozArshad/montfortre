@@ -181,6 +181,13 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/uws-article-manhattan-valley.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/williamsburg.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/williamsburg.webp
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/williamsburg-brownstones.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/williamsburg-condos.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/williamsburg-coops.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/williamsburg-coownership.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/williamsburg-article-1.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/williamsburg-article-2.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/hoods/williamsburg-article-3.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/0dd93ed5.jpg
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/0dd93ed5.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/nbhd/65438018.png
@@ -273,6 +280,7 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/dumbo.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/brooklyn-heights.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/bedford-stuyvesant.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/williamsburg.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/brownstone-guide.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/og/brownstone-guide-1024.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/listings/1a-living-room.jpg

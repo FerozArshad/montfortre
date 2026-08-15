@@ -217,6 +217,19 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/bedfordSt
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/bedfordStuyvesantYelp.json
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/bedfordStuyvesantSchools.json
 
+## 8i. Williamsburg
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Williamsburg.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/williamsburg/WilliamsburgContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/williamsburg/WilliamsburgPoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/williamsburg/WilliamsburgAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/williamsburg/WilliamsburgRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/williamsburg-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/williamsburg.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/williamsburgGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/williamsburgYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/williamsburgSchools.json
+
 ## 9. TwoFamilyHouseForSaleNyc
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
