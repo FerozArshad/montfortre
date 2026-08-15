@@ -292,6 +292,15 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/hom
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-valuation-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/homeValuation.ts
 
+## 9f. MortgageCalculator
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/MortgageCalculator.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/mortgage-calculator/MortgageCalculatorContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/mortgage-calculator/MortgageCalculator.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/lib/mortgageMath.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/mortgage-calculator-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/mortgageCalculator.ts
+
 ---
 
 ## 10. Remaining migrated pages (full site)

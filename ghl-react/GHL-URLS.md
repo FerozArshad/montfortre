@@ -275,6 +275,9 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/home-valuation-checklist.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/home-valuation-appraisal.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/ljg7105-min.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/specialized-mortgage-calculator.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/mortgage-calculations.png
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/coops-charges-vs-condos-common-charges.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/listing-agent.png
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/listing-agent.webp
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/services/mortgage.png
