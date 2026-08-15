@@ -11,6 +11,7 @@ import DowntownBrooklyn from "./pages/DowntownBrooklyn";
 import Dumbo from "./pages/Dumbo";
 import Harlem from "./pages/Harlem";
 import Home from "./pages/Home";
+import HomeValuation from "./pages/HomeValuation";
 import IdxRentals from "./pages/IdxRentals";
 import IdxSales from "./pages/IdxSales";
 import Neighborhoods from "./pages/Neighborhoods";
@@ -56,6 +57,7 @@ export default function App() {
           path="/nyc-multifamily-real-estate-agent-service"
           element={<NycMultifamilyRealEstateAgentService />}
         />
+        <Route path="/home-valuation" element={<HomeValuation />} />
         <Route
           path="/advice-for-buyers-looking-to-purchase-brownstones"
           element={<BrownstoneBuyingGuide />}

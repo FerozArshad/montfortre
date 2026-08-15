@@ -120,7 +120,7 @@
 [LEFT] https://montfortre.com/brooklyn-heights/
 [LEFT] https://montfortre.com/williamsburg/
 [LEFT] https://montfortre.com/475-west-144th-street/
-[LEFT] https://montfortre.com/home-valuation/
+[MIGRATED] https://montfortre.com/home-valuation/
 [LEFT] https://montfortre.com/bedford-stuyvesant/
 [MIGRATED] https://montfortre.com/about-us/
 [LEFT] https://montfortre.com/mortgage-calculator/
