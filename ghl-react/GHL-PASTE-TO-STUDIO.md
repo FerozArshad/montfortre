@@ -243,6 +243,19 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/crownHeig
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/crownHeightsYelp.json
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/crownHeightsSchools.json
 
+## 8k. Park Slope
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ParkSlope.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope/ParkSlopeContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope/ParkSlopePoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope/ParkSlopeAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope/ParkSlopeRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/park-slope-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/parkSlope.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/parkSlopeGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/parkSlopeYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/parkSlopeSchools.json
+
 ## 9. TwoFamilyHouseForSaleNyc
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx

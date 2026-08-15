@@ -15,6 +15,7 @@ import IdxRentals from "./pages/IdxRentals";
 import IdxSales from "./pages/IdxSales";
 import Neighborhoods from "./pages/Neighborhoods";
 import NotMigrated from "./pages/NotMigrated";
+import ParkSlope from "./pages/ParkSlope";
 import Services from "./pages/Services";
 import StanleyMontfort from "./pages/StanleyMontfort";
 import SuccessStories from "./pages/SuccessStories";
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/downtown-brooklyn" element={<DowntownBrooklyn />} />
         <Route path="/dumbo" element={<Dumbo />} />
         <Route path="/harlem" element={<Harlem />} />
+        <Route path="/park-slope" element={<ParkSlope />} />
         <Route path="/upper-east-side" element={<UpperEastSide />} />
         <Route path="/upper-west-side" element={<UpperWestSide />} />
         <Route path="/williamsburg" element={<Williamsburg />} />

@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Middle School 51 William Alexander",
+    "phone": "718-369-7603",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": "https://www.ms51.org/",
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "The Maurice Sendak Community School",
+    "phone": "718-840-5660",
+    "type": "public",
+    "grades": "PK-4",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "PS 77",
+    "phone": "718-789-1191",
+    "type": "public",
+    "grades": "KG-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "PS 133 William a Butler",
+    "phone": "718-398-5320",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "John Jay School for Law",
+    "phone": "718-832-4250",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Park Slope Collegiate",
+    "phone": "718-832-4300",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 282 Park Slope School",
+    "phone": "718-622-1626",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 39 Henry Bristow School",
+    "phone": "718-330-9310",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "St Saviour High School",
+    "phone": "718-768-4406",
+    "type": "private",
+    "grades": "9-12",
+    "rating": null,
+    "website": "https://www.stsaviour.org/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Cyberarts Studio Academy",
+    "phone": "718-832-4201",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Middle School 266 Park Place Community Middle School",
+    "phone": "718-230-1216",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 321 William Penn School",
+    "phone": "718-499-2412",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": "https://www.ps321.org/",
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Millennium Brooklyn High School",
+    "phone": "718-832-4333",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  }
+]

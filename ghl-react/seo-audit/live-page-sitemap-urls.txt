@@ -192,7 +192,7 @@
 [MIGRATED] https://montfortre.com/harlem/
 [LEFT] https://montfortre.com/buying-a-condo-in-nyc/
 [MIGRATED] https://montfortre.com/stanley-montfort/
-[LEFT] https://montfortre.com/park-slope/
+[MIGRATED] https://montfortre.com/park-slope/
 [LEFT] https://montfortre.com/upper-west-side/
 [LEFT] https://montfortre.com/upper-east-side/
 [LEFT] https://montfortre.com/chelsea/
