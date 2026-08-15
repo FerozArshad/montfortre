@@ -204,6 +204,19 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/brooklynH
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/brooklynHeightsYelp.json
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/brooklynHeightsSchools.json
 
+## 8h. Bedford-Stuyvesant
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BedfordStuyvesant.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/bedford-stuyvesant/BedfordStuyvesantContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/bedford-stuyvesant/BedfordStuyvesantPoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/bedford-stuyvesant/BedfordStuyvesantAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/bedford-stuyvesant/BedfordStuyvesantRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/bedford-stuyvesant-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/bedfordStuyvesant.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/bedfordStuyvesantGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/bedfordStuyvesantYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/bedfordStuyvesantSchools.json
+
 ## 9. TwoFamilyHouseForSaleNyc
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
