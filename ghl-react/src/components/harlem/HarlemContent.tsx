@@ -1,82 +1,53 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HarlemSchools from "../HarlemSchools";
-import ContactSection from "../shared/ContactSection";
 import ResourcesSection from "../shared/ResourcesSection";
+import HarlemAreaNav from "./HarlemAreaNav";
+import HarlemPoiMap from "./HarlemPoiMap";
+import HarlemRealtorArticle from "./HarlemRealtorArticle";
+import { HARLEM_ABOUT_PARAS, HARLEM_YELP_CATS } from "../../data/harlemGuide";
+import HARLEM_YELP from "../../data/harlemYelp.json";
 import "../../styles/harlem-page.css";
 
 const PROPERTY_TYPES = [
   {
-    href: "/featured-brownstones-for-sale/harlem-brownstones/",
+    href: "/harlem-brownstones/",
     image: "/redesign-assets/hoods/harlem-brownstones.webp",
     alt: "Harlem Brownstones",
     title: "Harlem Brownstones",
-    copy: "Historic architecture, timeless charm, and classic Harlem living.",
+    copy: "Historic architecture, timeless charm, and classic Harlem living",
   },
   {
-    href: "/buying-a-condo-in-nyc/",
+    href: "/harlem-condos/",
     image: "/redesign-assets/hoods/harlem-condos.webp",
     alt: "Harlem Condos",
     title: "Harlem Condos",
-    copy: "Modern amenities, urban convenience, and vibrant Harlem living.",
+    copy: "Modern amenities, urban convenience, and vibrant Harlem living",
   },
   {
-    href: "/buying-sro-in-nyc/",
+    href: "/harlem-sros/",
     image: "/redesign-assets/hoods/harlem-sros.webp",
     alt: "Harlem SROs",
-    title: "Harlem SROs",
-    copy: "Affordable housing, investment potential, and unique opportunities.",
+    title: "Harlem sros",
+    copy: "Affordable housing, investment potential, and unique opportunities",
   },
   {
-    href: "/co-ownership-buying-in-nyc/",
+    href: "/harlem-co-ownership/",
     image: "/redesign-assets/hoods/harlem-coownership.webp",
     alt: "Harlem Co-Ownership",
     title: "Harlem Co-Ownership",
-    copy: "Shared ownership, lower costs, and greater buying power.",
+    copy: "Shared ownership, lower costs, and greater buying power",
   },
 ] as const;
 
-const STATS = [
-  { value: "338,411", label: "Residents" },
-  { value: "18%", label: "Homeowners" },
-  { value: "39", label: "Average age" },
-  { value: "$659K", label: "Avg. sold price · 30 days" },
-] as const;
-
-const EXPLORE_LINKS = ["Featured listings", "Market report", "Around the area", "Local advice"] as const;
+type YelpCat = (typeof HARLEM_YELP_CATS)[number]["id"];
 
 type AreaPlace = {
   href: string;
   name: string;
   reviews: string;
-  starWidth: string;
+  rating: number;
   image?: string;
 };
-
-const SHOP_PLACES: AreaPlace[] = [
-  { href: "https://www.yelp.com/biz/tj-maxx-columbus-village", name: "TJ Maxx", reviews: "78 reviews", starWidth: "60.0%", image: "https://s3-media0.fl.yelpcdn.com/bphoto/mkNZJbYk0NkpVlJztaob4Q/l.jpg" },
-  { href: "https://www.yelp.com/biz/ridge-hill-yonkers", name: "Ridge Hill", reviews: "224 reviews", starWidth: "50.0%", image: "https://s3-media0.fl.yelpcdn.com/bphoto/nfTVuNBiQcK6y51LjpkjHQ/l.jpg" },
-  { href: "https://www.yelp.com/biz/unique-boutique-third-avenue-new-york", name: "Unique Boutique Third Avenue", reviews: "44 reviews", starWidth: "90.0%", image: "https://s3-media0.fl.yelpcdn.com/bphoto/TWcqcVMgkWermK6tTvGyBQ/l.jpg" },
-  { href: "https://www.yelp.com/biz/the-westchester-white-plains", name: "The Westchester", reviews: "192 reviews", starWidth: "70.0%", image: "https://s3-media0.fl.yelpcdn.com/bphoto/J6okgYAWaGyqQX2Am813eQ/l.jpg" },
-  { href: "https://www.yelp.com/biz/chelsea-flea-market-new-york-2", name: "Chelsea Flea Market", reviews: "55 reviews", starWidth: "60.0%", image: "https://s3-media0.fl.yelpcdn.com/bphoto/F784pclJAsG96PxQoDgs9Q/l.jpg" },
-  { href: "https://www.yelp.com/biz/homegoods-new-york-2", name: "HomeGoods", reviews: "111 reviews", starWidth: "70.0%", image: "https://s3-media0.fl.yelpcdn.com/bphoto/XzK9nvaCUoiGGKW0BIKrgg/l.jpg" },
-  { href: "https://www.yelp.com/biz/pinstripe-collectible-bronx", name: "Pinstripe Collectible", reviews: "4 reviews", starWidth: "100.0%", image: "https://s3-media0.fl.yelpcdn.com/bphoto/DRO77kIGK-x47UxqyFDIkQ/l.jpg" },
-  { href: "https://www.yelp.com/biz/city-place-edgewater", name: "City Place", reviews: "10 reviews", starWidth: "80.0%", image: "https://s3-media0.fl.yelpcdn.com/bphoto/YjzB1-Ph-dcSdGCtRD4siQ/l.jpg" },
-  { href: "https://www.yelp.com/biz/eglance-bookstore-flushing", name: "Eglance Bookstore", reviews: "10 reviews", starWidth: "90.0%", image: "https://s3-media0.fl.yelpcdn.com/bphoto/DBkjvkItdfi84gObNnatxg/l.jpg" },
-  { href: "https://www.yelp.com/biz/pier-village-long-branch", name: "Pier Village", reviews: "82 reviews", starWidth: "60.0%", image: "https://s3-media0.fl.yelpcdn.com/bphoto/E5cGGCi9mmmVVChTT8ggGw/l.jpg" },
-];
-
-const DINE_PLACES: AreaPlace[] = [
-  { href: "https://www.yelp.com/biz/greedy-pot-new-york", name: "Greedy Pot", reviews: "79 reviews", starWidth: "90.0%" },
-  { href: "https://www.yelp.com/biz/indomable-coffee-new-york-2", name: "Indomable Coffee", reviews: "40 reviews", starWidth: "100.0%" },
-  { href: "https://www.yelp.com/biz/lechonera-la-isla-new-york-2", name: "Lechonera La Isla", reviews: "125 reviews", starWidth: "90.0%" },
-  { href: "https://www.yelp.com/biz/harlemite-peruvian-cuisine-new-york-2", name: "Harlemite Peruvian Cuisine", reviews: "161 reviews", starWidth: "90.0%" },
-  { href: "https://www.yelp.com/biz/piccola-cucina-uptown-new-york", name: "Piccola Cucina Uptown", reviews: "628 reviews", starWidth: "90.0%" },
-  { href: "https://www.yelp.com/biz/maisonetta-bronx", name: "Maisonetta", reviews: "111 reviews", starWidth: "90.0%" },
-  { href: "https://www.yelp.com/biz/cocotazo-new-york", name: "Cocotazo", reviews: "92 reviews", starWidth: "90.0%" },
-  { href: "https://www.yelp.com/biz/el-patio-de-fela-new-york", name: "El Patio de Fela", reviews: "17 reviews", starWidth: "90.0%" },
-  { href: "https://www.yelp.com/biz/nobody-told-me-new-york", name: "Nobody Told Me", reviews: "311 reviews", starWidth: "90.0%" },
-  { href: "https://www.yelp.com/biz/the-eighty-six-new-york", name: "The Eighty Six", reviews: "24 reviews", starWidth: "100.0%" },
-];
 
 function ShareIcon() {
   return (
@@ -86,15 +57,8 @@ function ShareIcon() {
   );
 }
 
-function UtensilIcon() {
-  return (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-      <path d="M7 3v7a2 2 0 0 0 2 2v9M7 3v4M9.5 3v4M4.5 3v4a2 2 0 0 0 2 2M17 3c-1.5 0-2.5 2-2.5 5s1 4 2.5 4v9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function StarRating({ width }: { width: string }) {
+function StarRating({ rating }: { rating: number }) {
+  const width = `${Math.max(0, Math.min(100, (rating / 5) * 100))}%`;
   return (
     <span className="hlm-stars">
       ★★★★★
@@ -119,41 +83,19 @@ async function sharePlace(url: string, name: string) {
   }
 }
 
-function AreaCard({ place, variant }: { place: AreaPlace; variant: "shop" | "dine" }) {
+function AreaCard({ place }: { place: AreaPlace }) {
   return (
     <div className="hlm-area-card">
-      <a
-        href={place.href}
-        target="_blank"
-        rel="noopener nofollow"
-        className={`hlm-area-media hlm-area-media--${variant}`}
-      >
-        {place.image ? (
-          <>
-            <img src={place.image} alt={place.name} loading="lazy" />
-            <div className="hlm-area-shade" />
-            <div className="hlm-area-caption">
-              <div className="hlm-area-name hlm-area-name--shop">{place.name}</div>
-              <div className="hlm-area-meta">
-                <StarRating width={place.starWidth} />
-                <span className="hlm-area-reviews">{place.reviews}</span>
-              </div>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="hlm-area-utensil">
-              <UtensilIcon />
-            </div>
-            <div className="hlm-area-caption hlm-area-caption--dine">
-              <div className="hlm-area-name hlm-area-name--dine">{place.name}</div>
-              <div className="hlm-area-meta hlm-area-meta--dine">
-                <StarRating width={place.starWidth} />
-                <span className="hlm-area-reviews">{place.reviews}</span>
-              </div>
-            </div>
-          </>
-        )}
+      <a href={place.href} target="_blank" rel="noopener nofollow" className="hlm-area-media">
+        {place.image ? <img src={place.image} alt={place.name} loading="lazy" /> : null}
+        <div className="hlm-area-shade" />
+        <div className="hlm-area-caption">
+          <div className="hlm-area-name">{place.name}</div>
+          <div className="hlm-area-meta">
+            <StarRating rating={place.rating} />
+            <span className="hlm-area-reviews">{place.reviews}</span>
+          </div>
+        </div>
       </a>
       <button
         type="button"
@@ -169,97 +111,135 @@ function AreaCard({ place, variant }: { place: AreaPlace; variant: "shop" | "din
   );
 }
 
+const OLR_SALES_URL = "https://stanley.olridx.com/Search/Sales";
+
+function HarlemListingsIdx() {
+  const [embed, setEmbed] = useState(false);
+
+  useEffect(() => {
+    setEmbed(window.location.hostname === "montfortre.com");
+  }, []);
+
+  if (!embed) {
+    return (
+      <div className="hlm-listings-idx">
+        <div className="hlm-listings-fallback">
+          <p>
+            This box is the live OLR IDX sales search. OLR only allows it to embed on montfortre.com, so it stays blank on localhost and preview. Open the search to see Harlem listings now.
+          </p>
+          <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-btn">
+            Open live listings
+          </a>
+        </div>
+        <p className="hlm-listings-footnote">
+          Live listing data provided by OLR IDX. Need help?{" "}
+          <a href="/contact/">Contact us</a> or{" "}
+          <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener noreferrer">
+            log in to your customer account
+          </a>
+          .
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="hlm-listings-idx">
+      <iframe
+        className="hlm-listings-frame"
+        src={OLR_SALES_URL}
+        scrolling="yes"
+        title="Harlem homes for sale"
+        loading="lazy"
+      />
+      <p className="hlm-listings-footnote">
+        Live listing data provided by OLR IDX. Need help?{" "}
+        <a href="/contact/">Contact us</a> or{" "}
+        <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener noreferrer">
+          log in to your customer account
+        </a>
+        .
+      </p>
+    </div>
+  );
+}
+
+const HARLEM_ARTICLES = [
+  {
+    href: "/upper-west-side-townhouse-q2-2024-market-report/",
+    image: "/redesign-assets/hoods/upper-west-side.webp",
+    alt: "Upper West Side Townhouse Q2 2024 Market Report",
+    title: "Upper West Side Townhouse Q2 2024 Market Report",
+    excerpt: "On the Upper West Side, we observed a distinct trend that diverges from the citywide patterns. Specifically, the…",
+  },
+  {
+    href: "/harlem-brownstone-q2-2024-market-report/",
+    image: "/redesign-assets/hoods/harlem.webp",
+    alt: "Harlem Brownstone Q2 2024 Market Report",
+    title: "Harlem Brownstone Q2 2024 Market Report",
+    excerpt: "The Harlem brownstone market has seen an increase in sales activity since this time last year. In Q2…",
+  },
+  {
+    href: "/discover-your-dream-home-explore-apartments-for-sale-on-the-upper-west-side/",
+    image: "/redesign-assets/hoods/chelsea.webp",
+    alt: "Discover Your Dream Home: Explore Apartments for Sale on the …",
+    title: "Discover Your Dream Home: Explore Apartments for Sale on the …",
+    excerpt: "Are you searching for your dream home in one of New York City’s most sought-after neighborhoods? Look no…",
+  },
+] as const;
+
 export default function HarlemContent() {
-  const [areaCat, setAreaCat] = useState<"shop" | "dine">("shop");
-  const shopTrackRef = useRef<HTMLDivElement>(null);
-  const dineTrackRef = useRef<HTMLDivElement>(null);
+  const [areaCat, setAreaCat] = useState<YelpCat>("dine");
+  const [marketEmail, setMarketEmail] = useState(false);
+  const areaTrackRef = useRef<HTMLDivElement>(null);
+
+  const areaPlaces = (HARLEM_YELP[areaCat] ?? []) as AreaPlace[];
 
   const scrollArea = (dir: -1 | 1) => {
-    const track = areaCat === "shop" ? shopTrackRef.current : dineTrackRef.current;
+    const track = areaTrackRef.current;
     if (!track) return;
     const card = track.firstElementChild as HTMLElement | null;
     const step = card ? card.getBoundingClientRect().width + 22 : 322;
     track.scrollBy({ left: dir * step, behavior: "smooth" });
   };
 
+  const selectAreaCat = (id: YelpCat) => {
+    setAreaCat(id);
+    areaTrackRef.current?.scrollTo({ left: 0 });
+  };
+
   return (
     <>
-      <section className="hlm-hero" data-screen-label="Harlem hero">
-        <div className="hlm-hero-ring" />
-        <div className="hlm-hero-inner">
+      <HarlemPoiMap />
+      <HarlemAreaNav />
+
+      <section id="featured-listings" className="hlm-listings" data-screen-label="Featured listings">
+        <div className="hlm-listings-inner">
           <div data-reveal="">
-            <div className="hlm-crumb">
-              <a href="/neighborhoods/" className="hlm-crumb-link">Neighborhoods</a> <span className="hlm-crumb-sep">/</span> <span className="hlm-crumb-here">Manhattan</span>
-            </div>
-            <h1>Harlem Realtor</h1>
-            <p className="hlm-hero-lead">
-              One of New York City&apos;s most vibrant, historically rich neighborhoods, where classic brownstones, pre-war buildings, and new developments meet a world-famous arts and culture scene.
+            <p>
+              In the beautiful area of Harlem resides 338,411 people where 18% are homeowners. With an average age of 39, the residents of Harlem are well established, with many growing families of all ages. Over the past 30 days roughly 17 homes have been sold with an average sold price of 659,263. That is a decrease of $49,637 from the previous period.
             </p>
-            <div className="hlm-hero-ctas">
-              <a href="https://calendly.com/montfort" className="hlm-hero-book">
-                Book Now
+            <div className="hlm-listings-cta">
+              <a href="/idx-sales/" className="hlm-listings-btn">
+                View More Listings
               </a>
-              <a href="tel:646-970-1078" className="hlm-hero-tel">
-                (646) 970-1078
+              <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">
+                Open full search in new tab
               </a>
-            </div>
-            <div className="hlm-hero-explore">
-              <div className="hlm-hero-explore-label">Explore Harlem</div>
-              <div className="hlm-hero-explore-links">
-                {EXPLORE_LINKS.map((label) => (
-                  <a key={label} href="/harlem/" className="hlm-hero-explore-link">
-                    {label}
-                  </a>
-                ))}
-              </div>
             </div>
           </div>
-          <div className="hlm-hero-media" data-reveal="">
-            <div className="hlm-hero-frame">
-              <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem brownstones" />
-            </div>
-            <div className="hlm-hero-rating">
-              <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google" />
-              <div className="hlm-hero-rating-copy">
-                <span className="hlm-hero-rating-title">Google Rating</span>
-                <div className="hlm-hero-rating-row">
-                  <span className="hlm-hero-rating-score">5.0</span>
-                  <span className="hlm-hero-rating-stars">★★★★★</span>
-                </div>
-                <span className="hlm-hero-rating-count">
-                  Over <strong>57 Reviews</strong>
-                </span>
-              </div>
-            </div>
-          </div>
+          <HarlemListingsIdx />
         </div>
       </section>
 
-      <section className="hlm-stats" data-screen-label="Harlem stats">
-        <div className="hlm-stats-inner">
-          {STATS.map((stat) => (
-            <div key={stat.label} className="hlm-stat" data-reveal="">
-              <div className="hlm-stat-value">{stat.value}</div>
-              <div className="hlm-stat-label">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <HarlemRealtorArticle />
 
       <section className="hlm-about" data-screen-label="About Harlem">
         <div className="hlm-about-inner">
           <div data-reveal="">
-            <div className="hlm-kicker">
-              <span className="hlm-kicker-line" />
-              <span className="hlm-kicker-label">The neighborhood</span>
-            </div>
-            <h2>Living in Harlem</h2>
-            <p>
-              Located in Upper Manhattan and known for its deep cultural roots and iconic role in the Harlem Renaissance, the area blends historic charm with modern energy. Tree-lined streets are filled with classic brownstones, pre-war buildings, and a growing number of new developments.
-            </p>
-            <p>
-              Home to world-renowned landmarks such as the Apollo Theater and Studio Museum, Harlem features an excellent selection of restaurants, cafes, and local shops. Residents enjoy convenient access to Central Park, Marcus Garvey Park, and multiple subway lines, a unique blend of tradition and opportunity.
-            </p>
+            {HARLEM_ABOUT_PARAS.map((para) => (
+              <p key={para.slice(0, 40)}>{para}</p>
+            ))}
           </div>
           <div className="hlm-about-photo" data-reveal="">
             <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem street" />
@@ -267,13 +247,19 @@ export default function HarlemContent() {
         </div>
       </section>
 
+      <section className="hlm-reviews" data-screen-label="Harlem reviews">
+        <div className="hlm-reviews-inner">
+          <iframe
+            className="hlm-reviews-frame"
+            title="Montfort Real Estate reviews"
+            src="https://reputationhub.site/reputation/widgets/review_widget/J3cYmGK3p1ja7wTS63Dn"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
       <section className="hlm-types" data-screen-label="Harlem property types">
         <div className="hlm-types-inner">
-          <div className="hlm-types-head" data-reveal="">
-            <div className="hlm-section-kicker">What we help you buy</div>
-            <h2>Harlem property types</h2>
-            <span className="hlm-rule" />
-          </div>
           <div className="hlm-types-grid">
             {PROPERTY_TYPES.map((item) => (
               <a key={item.href} data-reveal="" href={item.href} className="hlm-type-card">
@@ -283,9 +269,7 @@ export default function HarlemContent() {
                 <div className="hlm-type-body">
                   <div className="hlm-type-title">{item.title}</div>
                   <p>{item.copy}</p>
-                  <div className="hlm-type-explore">
-                    Explore <span>→</span>
-                  </div>
+                  <div className="hlm-type-explore">Learn More</div>
                 </div>
               </a>
             ))}
@@ -293,42 +277,41 @@ export default function HarlemContent() {
         </div>
       </section>
 
-      <section className="hlm-listings" data-screen-label="Featured listings">
-        <div className="hlm-listings-inner">
-          <div data-reveal="">
-            <div className="hlm-section-kicker">On the market</div>
-            <h2>Featured Harlem listings</h2>
-            <p>
-              In the beautiful area of Harlem reside <strong>338,411 people</strong>, where 18% are homeowners. With an average age of 39, residents are well established, with many growing families. Over the past 30 days roughly <strong>17 homes</strong> have sold at an average price of <strong>$659,263</strong>, down $49,637 from the previous period.
-            </p>
-            <div className="hlm-listings-cta">
-              <a href="/idx/listings/harlem/" className="hlm-listings-btn">
-                View Harlem listings
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="hlm-market" data-screen-label="Market report">
+      <section id="market-report" className="hlm-market" data-screen-label="Market report">
         <div className="hlm-market-inner">
           <div data-reveal="">
-            <div className="hlm-market-kicker">Harlem market report</div>
             <h2>Want the full market report for Harlem?</h2>
             <p className="hlm-market-lead">
-              Enter your info below for instant access to the area&apos;s latest market report, complete with sales and demographic trends, so you have everything you need to make the best decisions for your home goals.
+              We want to ensure that you have all the information needed to make the best decisions when it comes to your home goals. When you enter your info below you will get instant access to the area&apos;s latest market report, complete with sales and demographic trends.
             </p>
-            <div className="hlm-form">
-              <div className="hlm-form-row">
-                <input type="text" placeholder="First name" className="hlm-field" />
-                <input type="text" placeholder="Last name" className="hlm-field" />
+            {!marketEmail ? (
+              <div className="hlm-market-social">
+                <button type="button" className="hlm-market-social-btn">
+                  Continue with Facebook
+                </button>
+                <button type="button" className="hlm-market-social-btn">
+                  Continue with Google
+                </button>
+                <button type="button" className="hlm-market-email-link" onClick={() => setMarketEmail(true)}>
+                  or click here to continue with your email address
+                </button>
               </div>
-              <input type="email" placeholder="Email address" className="hlm-field" />
-              <input type="text" placeholder="City" className="hlm-field" />
-              <a href="https://calendly.com/montfort" className="hlm-form-submit">
-                Submit
-              </a>
-            </div>
+            ) : (
+              <div className="hlm-form">
+                <button type="button" className="hlm-market-back" onClick={() => setMarketEmail(false)}>
+                  ← Back
+                </button>
+                <div className="hlm-form-row">
+                  <input type="text" placeholder="First Name *" className="hlm-field" required />
+                  <input type="text" placeholder="Last Name *" className="hlm-field" required />
+                </div>
+                <input type="email" placeholder="Email *" className="hlm-field" required />
+                <input type="text" placeholder="City" className="hlm-field" />
+                <a href="https://calendly.com/montfort" className="hlm-form-submit">
+                  Submit
+                </a>
+              </div>
+            )}
           </div>
           <div className="hlm-market-card" data-reveal="">
             <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem market" />
@@ -342,60 +325,59 @@ export default function HarlemContent() {
 
       <HarlemSchools />
 
-      <section className="hlm-area" data-screen-label="Around the area">
+      <section id="the-area" className="hlm-area" data-screen-label="Around the area">
         <div className="hlm-area-inner">
           <div className="hlm-area-head" data-reveal="">
             <div className="hlm-area-head-copy">
-              <div className="hlm-section-kicker">Around the area</div>
-              <h2>Top-rated spots in &amp; near Harlem</h2>
-              <p>Browse the top-rated businesses Harlem has to offer, pulled from Yelp.</p>
+              <h2>Around The Area</h2>
+              <p>Browse through the top rated businesses that Harlem has to offer!</p>
             </div>
-            <div className="hlm-area-nav">
-              <button id="area-prev" className="hlm-area-arrow" type="button" aria-label="Previous" onClick={() => scrollArea(-1)}>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-              <button id="area-next" className="hlm-area-arrow" type="button" aria-label="Next" onClick={() => scrollArea(1)}>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </div>
+            {areaPlaces.length ? (
+              <div className="hlm-area-nav">
+                <button id="area-prev" className="hlm-area-arrow" type="button" aria-label="Previous" onClick={() => scrollArea(-1)}>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                <button id="area-next" className="hlm-area-arrow" type="button" aria-label="Next" onClick={() => scrollArea(1)}>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            ) : null}
           </div>
           <div className="hlm-area-chips">
-            <button
-              type="button"
-              className={`area-chip${areaCat === "dine" ? " is-active" : ""}`}
-              data-cat="dine"
-              onClick={() => setAreaCat("dine")}
-            >
-              Dine
-            </button>
-            <button
-              type="button"
-              className={`area-chip${areaCat === "shop" ? " is-active" : ""}`}
-              data-cat="shop"
-              onClick={() => setAreaCat("shop")}
-            >
-              Shop
-            </button>
-          </div>
-          <div id="area-track-shop" ref={shopTrackRef} className="area-track no-sb" hidden={areaCat !== "shop"}>
-            {SHOP_PLACES.map((place) => (
-              <AreaCard key={place.href} place={place} variant="shop" />
+            {HARLEM_YELP_CATS.map((cat) => (
+              <button
+                key={cat.id}
+                type="button"
+                className={`area-chip${areaCat === cat.id ? " is-active" : ""}`}
+                data-cat={cat.id}
+                onClick={() => selectAreaCat(cat.id)}
+              >
+                {cat.label}
+              </button>
             ))}
           </div>
-          <div id="area-track-dine" ref={dineTrackRef} className="area-track no-sb" hidden={areaCat !== "dine"}>
-            {DINE_PLACES.map((place) => (
-              <AreaCard key={place.href} place={place} variant="dine" />
+          <div id="area-track" ref={areaTrackRef} className="area-track no-sb">
+            {areaPlaces.map((place) => (
+              <AreaCard key={`${areaCat}-${place.href}`} place={place} />
             ))}
           </div>
         </div>
       </section>
 
-      <ResourcesSection />
-      <ContactSection />
+      <div id="advice">
+        <ResourcesSection
+          title="Local News & Advice"
+          subtitle="Read helpful resources and articles related to the area."
+          ctaLabel="View More Articles"
+          moreLabel="Read More"
+          showCategory={false}
+          articles={HARLEM_ARTICLES}
+        />
+      </div>
     </>
   );
 }

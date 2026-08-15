@@ -27,31 +27,54 @@ const BLOG_ARTICLES = [
   },
 ] as const;
 
-export default function ResourcesSection() {
+type ResourceArticle = {
+  href: string;
+  image: string;
+  alt: string;
+  title: string;
+  excerpt: string;
+  category?: string;
+};
+
+type ResourcesSectionProps = {
+  title?: string;
+  subtitle?: string;
+  ctaLabel?: string;
+  moreLabel?: string;
+  showCategory?: boolean;
+  articles?: readonly ResourceArticle[];
+};
+
+export default function ResourcesSection({
+  title = "Recent News & Realtor Advice",
+  subtitle = "Stay in the loop on the latest events, news, & happenings in and around our community!",
+  ctaLabel = "All resources",
+  moreLabel = "Read article",
+  showCategory = true,
+  articles = BLOG_ARTICLES,
+}: ResourcesSectionProps) {
   return (
     <section className="resources-section" data-screen-label="Resources">
       <div className="resources-inner">
         <div data-reveal="" className="resources-head">
           <div className="resources-copy">
-            <h2>Recent News &amp; Realtor Advice</h2>
-            <p>Stay in the loop on the latest events, news, &amp; happenings in and around our community!</p>
+            <h2>{title}</h2>
+            <p>{subtitle}</p>
           </div>
           <a href="/blog/" className="resources-cta">
-            All resources
+            {ctaLabel}
           </a>
         </div>
         <div className="resources-grid">
-          {BLOG_ARTICLES.map((article) => (
+          {articles.map((article) => (
             <a key={article.href} data-reveal="" href={article.href} className="resources-card">
               <div className="resources-card-media">
                 <img src={article.image} alt={article.alt} loading="lazy" />
               </div>
-              <div className="resources-card-cat">{article.category}</div>
+              {showCategory && article.category ? <div className="resources-card-cat">{article.category}</div> : null}
               <div className="resources-card-title">{article.title}</div>
               <p className="resources-card-excerpt">{article.excerpt}</p>
-              <div className="resources-card-more">
-                Read article <span>→</span>
-              </div>
+              <div className="resources-card-more">{moreLabel}</div>
             </a>
           ))}
         </div>

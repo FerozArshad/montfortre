@@ -1,0 +1,163 @@
+[
+  {
+    "name": "Brooklyn Friends School",
+    "phone": "718-852-1029",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": "https://brooklynfriends.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Albee Square Montessori Public School",
+    "phone": "718-636-3284",
+    "type": "public",
+    "grades": "PK-KG",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Prospect Charter School-CSD 13",
+    "phone": "347-889-7041",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 287 Bailey K. Ashford School",
+    "phone": "718-834-4745",
+    "type": "public",
+    "grades": "KG-6",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Rise Charter School",
+    "phone": "347-470-9833",
+    "type": "public",
+    "grades": "KG-6",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "German School Brooklyn",
+    "phone": "646-869-1152",
+    "type": "private",
+    "grades": "KG-3",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Urban Assembly Institute of Math and Science for Young Women",
+    "phone": "718-260-2300",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Fusion Academy Brk: Brooklyn",
+    "phone": "718-522-3286",
+    "type": "private",
+    "grades": "6-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "George Westinghouse Career and Technical Education High School",
+    "phone": "718-625-6130",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "City Polytechnic High School of Engineering, Architecture and Technology",
+    "phone": "718-875-1473",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Urban Assembly School for Law and Justice (the)",
+    "phone": "718-858-1160",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 4,
+    "website": "https://www.urbanassembly.org/slj",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Science Skills Center High School for Science, Technology and the Creative Arts",
+    "phone": "718-243-9413",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "The Urban Assembly School of Music and Art at Waters Edge",
+    "phone": "718-858-0249",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Brooklyn International High School",
+    "phone": "718-643-9315",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 1,
+    "website": "https://www.brooklyninternational.org/",
+    "categories": [
+      "high-school"
+    ]
+  }
+]

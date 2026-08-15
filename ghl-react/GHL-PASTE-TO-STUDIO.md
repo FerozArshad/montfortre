@@ -126,6 +126,58 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harl
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/HarlemSchools.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/harlemSchools.json
 
+## 8b. Upper West Side
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/UpperWestSide.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-west-side/UpperWestSideContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-west-side/UpperWestSidePoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-west-side/UpperWestSideAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-west-side/UpperWestSideRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/uws-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperWestSide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperWestSideGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperWestSideYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperWestSideSchools.json
+
+## 8c. Upper East Side
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/UpperEastSide.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-east-side/UpperEastSideContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-east-side/UpperEastSidePoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-east-side/UpperEastSideAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-east-side/UpperEastSideRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/ues-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperEastSide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperEastSideGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperEastSideYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/upperEastSideSchools.json
+
+## 8d. Chelsea
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Chelsea.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/chelsea/ChelseaContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/chelsea/ChelseaPoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/chelsea/ChelseaAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/chelsea/ChelseaRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/chelsea-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/chelsea.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/chelseaGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/chelseaYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/chelseaSchools.json
+
+## 8e. Downtown Brooklyn
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/DowntownBrooklyn.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/downtown-brooklyn/DowntownBrooklynContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/downtown-brooklyn/DowntownBrooklynPoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/downtown-brooklyn/DowntownBrooklynAreaNav.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/downtown-brooklyn/DowntownBrooklynRealtorArticle.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/downtown-brooklyn-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/downtownBrooklyn.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/downtownBrooklynGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/downtownBrooklynYelp.json
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/downtownBrooklynSchools.json
+
 ## 9. TwoFamilyHouseForSaleNyc
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx
