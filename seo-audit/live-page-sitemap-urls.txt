@@ -124,9 +124,9 @@
 [LEFT] https://montfortre.com/bedford-stuyvesant/
 [MIGRATED] https://montfortre.com/about-us/
 [MIGRATED] https://montfortre.com/mortgage-calculator/
-[LEFT] https://montfortre.com/buying-a-brownstone-in-nyc/
-[LEFT] https://montfortre.com/buying-sro-in-nyc/
-[LEFT] https://montfortre.com/co-ownership-buying-in-nyc/
+[MIGRATED] https://montfortre.com/buying-a-brownstone-in-nyc/
+[MIGRATED] https://montfortre.com/buying-sro-in-nyc/
+[MIGRATED] https://montfortre.com/co-ownership-buying-in-nyc/
 [LEFT] https://montfortre.com/selling-condos-in-nyc/
 [LEFT] https://montfortre.com/selling-brownstones-in-nyc/
 [LEFT] https://montfortre.com/selling-sros-in-nyc/
@@ -190,7 +190,7 @@
 [LEFT] https://montfortre.com/test/
 [MIGRATED] https://montfortre.com/park-slope-coownership-2/
 [MIGRATED] https://montfortre.com/harlem/
-[LEFT] https://montfortre.com/buying-a-condo-in-nyc/
+[MIGRATED] https://montfortre.com/buying-a-condo-in-nyc/
 [MIGRATED] https://montfortre.com/stanley-montfort/
 [MIGRATED] https://montfortre.com/park-slope/
 [LEFT] https://montfortre.com/upper-west-side/

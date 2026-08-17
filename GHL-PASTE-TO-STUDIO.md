@@ -604,6 +604,33 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/park
 
 ---
 
+## 9as. BuyingACondoInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BuyingACondoInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/buying-a-condo-in-nyc/BuyingACondoInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/buying-guides-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/buyingACondoInNyc.ts
+
+## 9at. BuyingABrownstoneInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BuyingABrownstoneInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/buying-a-brownstone-in-nyc/BuyingABrownstoneInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/buyingABrownstoneInNyc.ts
+
+## 9au. BuyingSroInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BuyingSroInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/buying-sro-in-nyc/BuyingSroInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/buyingSroInNyc.ts
+
+## 9av. CoOwnershipBuyingInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/CoOwnershipBuyingInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/co-ownership-buying-in-nyc/CoOwnershipBuyingInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/coOwnershipBuyingInNyc.ts
+
+---
+
 ## 9ar. Privacy Policy + HTML Sitemap
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/PrivacyPolicy.tsx
