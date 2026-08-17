@@ -559,6 +559,92 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/crow
 
 ---
 
+## 9am. ParkSlopeSro
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ParkSlopeSro.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope-sro-2/ParkSlopeSroContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/park-slope-sro-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/parkSlopeSro.ts
+
+---
+
+## 9an. ParkSlopeCoOwnership
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ParkSlopeCoOwnership.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope-coownership-2/ParkSlopeCoOwnershipContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/park-slope-co-ownership-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/parkSlopeCoOwnership.ts
+
+---
+
+## 9ao. ParkSlopeCoOps
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ParkSlopeCoOps.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope-coops/ParkSlopeCoOpsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/park-slope-co-ops-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/parkSlopeCoOps.ts
+
+---
+
+## 9ap. ParkSlopeCondo
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ParkSlopeCondo.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope-condo-2/ParkSlopeCondoContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/park-slope-condo-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/parkSlopeCondo.ts
+
+---
+
+## 9aq. ParkSlopeBrownstone
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ParkSlopeBrownstone.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope-brownstone-2/ParkSlopeBrownstoneContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/park-slope-brownstone-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/parkSlopeBrownstone.ts
+
+---
+
+## 9as. BuyingACondoInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BuyingACondoInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/buying-a-condo-in-nyc/BuyingACondoInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/buying-guides-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/buyingACondoInNyc.ts
+
+## 9at. BuyingABrownstoneInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BuyingABrownstoneInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/buying-a-brownstone-in-nyc/BuyingABrownstoneInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/buyingABrownstoneInNyc.ts
+
+## 9au. BuyingSroInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BuyingSroInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/buying-sro-in-nyc/BuyingSroInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/buyingSroInNyc.ts
+
+## 9av. CoOwnershipBuyingInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/CoOwnershipBuyingInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/co-ownership-buying-in-nyc/CoOwnershipBuyingInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/coOwnershipBuyingInNyc.ts
+
+---
+
+## 9ar. Privacy Policy + HTML Sitemap
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/PrivacyPolicy.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/legal/PrivacyPolicyContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/privacyPolicy.ts
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SiteMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/legal/SiteMapContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/siteMap.ts
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/legal-pages.css
+
+---
+
 ## 10. Remaining migrated pages (full site)
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Home.tsx

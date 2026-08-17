@@ -12,7 +12,11 @@ alwaysApply: true
 | `d:\GHL_Montfort` (this Cursor workspace) | **always `local-root`** | Clone/layout only: full app + `reference/` + HTTrack + docs. **Not** GHL. **Not** production. |
 | GitHub `main` | **`main` only** | What GHL AI Studio fetches via raw URLs. App paths at **repo root** (`src/`, `public/`, …). |
 
-**`local-root` exists so we can clone the full tree.** Working here does **not** mean shipping to GHL. Shipping = copy **rewritten** app files into a **separate** `main` worktree and push that — **never** merge `local-root` ↔ `main`.
+**`local-root` exists so we can clone the full tree — nothing else.** It is not a deploy branch. Working here does **not** ship to GHL. Shipping = copy **rewritten** app files into a **separate** `main` worktree and push that — **never** merge `local-root` ↔ `main`.
+
+## One-sentence rule
+
+Work on `local-root`. Push **only updated/new React/TS/CSS/public/app-doc files** to GitHub `main`. Never push the full local-root tree.
 
 ## This workspace is NEVER `main`
 
@@ -20,6 +24,8 @@ alwaysApply: true
 - Do **not** merge `local-root` into `main` or `main` into `local-root`.
 - Do **not** force-push `main`.
 - When the user says “push / commit for GHL”, they mean **GitHub `main` with rewritten paths** — not dumping the whole local-root tree onto `main`.
+- The local working tree layout (`ghl-react/` under `local-root`) will **always** differ from GitHub `main` layout (app at repo root). That difference is intentional and permanent.
+- **`local-root` is for cloning and local work only.** Commit on `local-root` = backup of the clone layout. GHL ship = separate rewritten copy to `main`.
 
 ## What goes to GitHub `main` (GHL only)
 
@@ -37,17 +43,20 @@ Push **only** new/updated files under `ghl-react/`, paths **rewritten to repo ro
 | `ghl-react/GHL-PASTE-TO-STUDIO.md` | `GHL-PASTE-TO-STUDIO.md` |
 | `ghl-react/GHL-TRANSFER-TRACKING.md` | `GHL-TRANSFER-TRACKING.md` |
 | `ghl-react/GHL-URLS.md` | `GHL-URLS.md` |
+| `ghl-react/HANDOFF.md` | `HANDOFF.md` |
+| `ghl-react/HANDOFF-SECTION-*.md` | `HANDOFF-SECTION-*.md` |
 | `ghl-react/seo-audit/...` | `seo-audit/...` |
 
 When listing files for the user / GHL paste, use **main paths only** (e.g. `src/pages/Foo.tsx`), never `ghl-react/src/...`.
 
 ## Never push to `main`
 
-- `reference/` (HTTrack, CDN captures)
-- `.cursor/`
+- `reference/` (HTTrack, CDN captures, blog notes)
+- `.cursor/` (including this rule file — local only)
 - Anything that exists only on the local-root parent layout
 - `ghl-react/package-lock.json` unless the user explicitly asks
 - The `ghl-react/` folder prefix itself
+- Temp audit dumps (`_tmp_*`, live HTML captures, scratch scripts)
 
 ## Required ship workflow
 
@@ -55,8 +64,8 @@ When listing files for the user / GHL paste, use **main paths only** (e.g. `src/
 2. Optionally commit + `git push origin local-root` (backup of the clone layout).
 3. `git fetch origin main` (fetch refspec tracks `local-root` only).
 4. Add a **separate** worktree from `FETCH_HEAD`, e.g. `D:\GHL_Montfort_main_pushN`.
-5. Copy rewritten files into that worktree; commit on `feature/<name>-ghl`.
+5. Copy **only** the new/updated rewritten app files into that worktree; commit on `feature/<name>-ghl`.
 6. `git push -u origin HEAD` then **fast-forward** `git push origin HEAD:main` (not force).
 7. Do **not** merge branches between `local-root` and `main`.
 
-Next unused main worktree after `push12`: **`D:\GHL_Montfort_main_push13`**.
+Next unused main worktree after `push16`: **`D:\GHL_Montfort_main_push17`**.

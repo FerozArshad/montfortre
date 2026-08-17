@@ -8,11 +8,17 @@ import BedfordStuyvesantCoOwnership from "./pages/BedfordStuyvesantCoOwnership";
 import BedfordStuyvesantCondos from "./pages/BedfordStuyvesantCondos";
 import BedfordStuyvesantSros from "./pages/BedfordStuyvesantSros";
 import Blog from "./pages/Blog";
+import BlogArticlePage from "./pages/BlogArticlePage";
+import { BLOG_ARTICLE_REGISTRY } from "./blog/registry";
 import BrooklynHeights from "./pages/BrooklynHeights";
 import BrooklynHeightsCoOps from "./pages/BrooklynHeightsCoOps";
 import BrooklynHeightsCondos from "./pages/BrooklynHeightsCondos";
 import BrooklynHeightsTownhouses from "./pages/BrooklynHeightsTownhouses";
 import BrownstoneBuyingGuide from "./pages/BrownstoneBuyingGuide";
+import BuyingABrownstoneInNyc from "./pages/BuyingABrownstoneInNyc";
+import BuyingACondoInNyc from "./pages/BuyingACondoInNyc";
+import BuyingSroInNyc from "./pages/BuyingSroInNyc";
+import CoOwnershipBuyingInNyc from "./pages/CoOwnershipBuyingInNyc";
 import Chelsea from "./pages/Chelsea";
 import ChelseaCoOps from "./pages/ChelseaCoOps";
 import ChelseaTownhouses from "./pages/ChelseaTownhouses";
@@ -44,7 +50,14 @@ import NycBuyersAgentService from "./pages/NycBuyersAgentService";
 import NycListingAgentService from "./pages/NycListingAgentService";
 import NycMultifamilyRealEstateAgentService from "./pages/NycMultifamilyRealEstateAgentService";
 import ParkSlope from "./pages/ParkSlope";
+import ParkSlopeBrownstone from "./pages/ParkSlopeBrownstone";
+import ParkSlopeCoOps from "./pages/ParkSlopeCoOps";
+import ParkSlopeCoOwnership from "./pages/ParkSlopeCoOwnership";
+import ParkSlopeCondo from "./pages/ParkSlopeCondo";
+import ParkSlopeSro from "./pages/ParkSlopeSro";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Services from "./pages/Services";
+import SiteMap from "./pages/SiteMap";
 import StanleyMontfort from "./pages/StanleyMontfort";
 import SuccessStories from "./pages/SuccessStories";
 import TwoFamilyHouseForSaleNyc from "./pages/TwoFamilyHouseForSaleNyc";
@@ -101,6 +114,11 @@ export default function App() {
         <Route path="/harlem-sros" element={<HarlemSros />} />
         <Route path="/harlem-co-ownership" element={<HarlemCoOwnership />} />
         <Route path="/park-slope" element={<ParkSlope />} />
+        <Route path="/park-slope-brownstone-2" element={<ParkSlopeBrownstone />} />
+        <Route path="/park-slope-coops" element={<ParkSlopeCoOps />} />
+        <Route path="/park-slope-coownership-2" element={<ParkSlopeCoOwnership />} />
+        <Route path="/park-slope-condo-2" element={<ParkSlopeCondo />} />
+        <Route path="/park-slope-sro-2" element={<ParkSlopeSro />} />
         <Route path="/upper-east-side" element={<UpperEastSide />} />
         <Route path="/upper-east-side-co-ops" element={<UpperEastSideCoOps />} />
         <Route path="/upper-east-side-condos" element={<UpperEastSideCondos />} />
@@ -116,6 +134,10 @@ export default function App() {
         <Route path="/stanley-montfort" element={<StanleyMontfort />} />
         <Route path="/success-stories" element={<SuccessStories />} />
         <Route path="/2-family-house-for-sale-nyc" element={<TwoFamilyHouseForSaleNyc />} />
+        <Route path="/buying-a-condo-in-nyc" element={<BuyingACondoInNyc />} />
+        <Route path="/buying-a-brownstone-in-nyc" element={<BuyingABrownstoneInNyc />} />
+        <Route path="/buying-sro-in-nyc" element={<BuyingSroInNyc />} />
+        <Route path="/co-ownership-buying-in-nyc" element={<CoOwnershipBuyingInNyc />} />
         <Route path="/nyc-buyers-agent-service" element={<NycBuyersAgentService />} />
         <Route path="/nyc-listing-agent-service" element={<NycListingAgentService />} />
         <Route
@@ -128,9 +150,14 @@ export default function App() {
           path="/advice-for-buyers-looking-to-purchase-brownstones"
           element={<BrownstoneBuyingGuide />}
         />
+        {Object.entries(BLOG_ARTICLE_REGISTRY).map(([slug, article]) => (
+          <Route key={slug} path={`/${slug}`} element={<BlogArticlePage article={article} />} />
+        ))}
         <Route path="/neighborhoods" element={<Neighborhoods />} />
         <Route path="/idx-sales" element={<IdxSales />} />
         <Route path="/idx-rentals" element={<IdxRentals />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/sitemap" element={<SiteMap />} />
         <Route path="*" element={<NotMigrated />} />
       </Routes>
     </BrowserRouter>
