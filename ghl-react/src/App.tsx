@@ -17,6 +17,11 @@ import Chelsea from "./pages/Chelsea";
 import ChelseaCoOps from "./pages/ChelseaCoOps";
 import ChelseaTownhouses from "./pages/ChelseaTownhouses";
 import CrownHeights from "./pages/CrownHeights";
+import CrownHeightsBrownstones from "./pages/CrownHeightsBrownstones";
+import CrownHeightsCoOps from "./pages/CrownHeightsCoOps";
+import CrownHeightsCoOwnership from "./pages/CrownHeightsCoOwnership";
+import CrownHeightsCondos from "./pages/CrownHeightsCondos";
+import CrownHeightsSros from "./pages/CrownHeightsSros";
 import DowntownBrooklyn from "./pages/DowntownBrooklyn";
 import DowntownBrooklynCondos from "./pages/DowntownBrooklynCondos";
 import DownstoneBrooklynCoOps from "./pages/DownstoneBrooklynCoOps";
@@ -52,6 +57,9 @@ import UpperWestSideCoOps from "./pages/UpperWestSideCoOps";
 import UpperWestSideCondos from "./pages/UpperWestSideCondos";
 import UpperWestSideTownhouses from "./pages/UpperWestSideTownhouses";
 import Williamsburg from "./pages/Williamsburg";
+import WilliamsburgBrownstones from "./pages/WilliamsburgBrownstones";
+import WilliamsburgCondos from "./pages/WilliamsburgCondos";
+import WilliamsburgCoOwnership from "./pages/WilliamsburgCoOwnership";
 
 export default function App() {
   return (
@@ -76,6 +84,11 @@ export default function App() {
         <Route path="/chelsea-co-ops-2" element={<ChelseaCoOps />} />
         <Route path="/chelsea-townhouses" element={<ChelseaTownhouses />} />
         <Route path="/crown-heights" element={<CrownHeights />} />
+        <Route path="/crown-heights-brownstones-2" element={<CrownHeightsBrownstones />} />
+        <Route path="/crown-heights-co-ops-2" element={<CrownHeightsCoOps />} />
+        <Route path="/crown-heights-co-ownership-2" element={<CrownHeightsCoOwnership />} />
+        <Route path="/crown-heights-condos-2" element={<CrownHeightsCondos />} />
+        <Route path="/crown-heights-sros-3" element={<CrownHeightsSros />} />
         <Route path="/downtown-brooklyn" element={<DowntownBrooklyn />} />
         <Route path="/downtown-brooklyn-condos-2" element={<DowntownBrooklynCondos />} />
         <Route path="/downstone-brooklyn-co-ops" element={<DownstoneBrooklynCoOps />} />
@@ -97,6 +110,9 @@ export default function App() {
         <Route path="/upper-west-side-condos" element={<UpperWestSideCondos />} />
         <Route path="/upper-west-side-townhouses" element={<UpperWestSideTownhouses />} />
         <Route path="/williamsburg" element={<Williamsburg />} />
+        <Route path="/williamsburg-brownstones-2" element={<WilliamsburgBrownstones />} />
+        <Route path="/williamsburg-condos" element={<WilliamsburgCondos />} />
+        <Route path="/williamsburg-co-ownership" element={<WilliamsburgCoOwnership />} />
         <Route path="/stanley-montfort" element={<StanleyMontfort />} />
         <Route path="/success-stories" element={<SuccessStories />} />
         <Route path="/2-family-house-for-sale-nyc" element={<TwoFamilyHouseForSaleNyc />} />

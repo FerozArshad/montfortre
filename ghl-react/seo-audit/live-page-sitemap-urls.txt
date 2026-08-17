@@ -1,4 +1,4 @@
-# Unique loc URLs from https://montfortre.com/page-sitemap.xml (fetched 2026-08-14)
+﻿# Unique loc URLs from https://montfortre.com/page-sitemap.xml (fetched 2026-08-14)
 # SPA migrated routes are marked [MIGRATED]. All others stay NotMigrated until owner asks.
 
 [MIGRATED] https://montfortre.com/
@@ -162,15 +162,15 @@
 [MIGRATED] https://montfortre.com/bedford-stuyvesant-co-ops-2/
 [MIGRATED] https://montfortre.com/bedford-stuyvesant-sros-2/
 [MIGRATED] https://montfortre.com/bedford-stuyvesant-co-ownership/
-[LEFT] https://montfortre.com/williamsburg-brownstones-2/
-[LEFT] https://montfortre.com/williamsburg-condos/
+[MIGRATED] https://montfortre.com/williamsburg-brownstones-2/
+[MIGRATED] https://montfortre.com/williamsburg-condos/
 [LEFT] https://montfortre.com/williamsburg-co-ops/
-[LEFT] https://montfortre.com/williamsburg-co-ownership/
-[LEFT] https://montfortre.com/crown-heights-brownstones-2/
-[LEFT] https://montfortre.com/crown-heights-condos-2/
-[LEFT] https://montfortre.com/crown-heights-co-ops-2/
-[LEFT] https://montfortre.com/crown-heights-sros-3/
-[LEFT] https://montfortre.com/crown-heights-co-ownership-2/
+[MIGRATED] https://montfortre.com/williamsburg-co-ownership/
+[MIGRATED] https://montfortre.com/crown-heights-brownstones-2/
+[MIGRATED] https://montfortre.com/crown-heights-condos-2/
+[MIGRATED] https://montfortre.com/crown-heights-co-ops-2/
+[MIGRATED] https://montfortre.com/crown-heights-sros-3/
+[MIGRATED] https://montfortre.com/crown-heights-co-ownership-2/
 [LEFT] https://montfortre.com/nyc-co-op-free-home-valuation/
 [LEFT] https://montfortre.com/nyc-brownstone-free-home-valuation/
 [LEFT] https://montfortre.com/nyc-sro-free-home-valuation/

@@ -1,0 +1,177 @@
+/* CrownHeightsCoOwnership reuses /neighborhoods tokens. Extra layout only for live sections neighborhoods does not have. */
+
+.crown-heights-co-ownership-page .nbhd-hero-inner {
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+.crown-heights-co-ownership-page .nbhd-hero-lead {
+  max-width: none;
+}
+
+.crown-heights-co-ownership-page .nbhd-promises {
+  margin-top: 0;
+}
+
+.crown-heights-co-ownership-page h3.nbhd-promise-title {
+  margin: 0;
+}
+
+.crown-heights-co-ownership-page .nbhd-intro-inner {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.crown-heights-co-ownership-page .nbhd-intro-copy h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.16;
+  letter-spacing: -0.014em;
+  color: #0f1729;
+  margin: 48px 0 18px;
+  text-wrap: pretty;
+}
+
+.crown-heights-co-ownership-page .nbhd-intro-copy h2:first-child {
+  margin-top: 0;
+}
+
+.crown-heights-co-ownership-page .nbhd-reviews {
+  background: #f9f6e6;
+  padding: 36px 64px;
+  border-bottom: 1px solid #e0d9b8;
+}
+
+.crown-heights-co-ownership-page .nbhd-reviews-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.crown-heights-co-ownership-page .nbhd-reviews-frame {
+  display: block;
+  width: 100%;
+  min-height: 440px;
+  border: 0;
+  background: #fff;
+  border-radius: 16px;
+}
+
+.crown-heights-co-ownership-page .contact-form {
+  margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+  .crown-heights-co-ownership-page .nbhd-reviews {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .crown-heights-co-ownership-page .nbhd-intro-copy h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .crown-heights-co-ownership-page .nbhd-reviews {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .crown-heights-co-ownership-page .nbhd-reviews {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .crown-heights-co-ownership-page .nbhd-intro-copy h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .crown-heights-co-ownership-page .nbhd-reviews {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+
+.crown-heights-co-ownership-page .nbhd-intro-copy h3 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #0f1729;
+  margin: 32px 0 14px;
+}
+
+.crown-heights-co-ownership-page .nbhd-intro-copy .nbhd-guide-list {
+  margin: 0 0 18px;
+  padding-left: 1.25rem;
+  color: #334155;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.crown-heights-co-ownership-page .nbhd-intro-copy .nbhd-guide-list li {
+  margin: 0 0 10px;
+}
+
+.crown-heights-co-ownership-page .nbhd-intro-copy .nbhd-guide-quote {
+  margin: 24px 0;
+  padding: 18px 22px;
+  border-left: 3px solid #c98a2c;
+  background: #f9f6e6;
+  color: #0f1729;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.crown-heights-co-ownership-page .nbhd-intro-copy .nbhd-guide-rule {
+  border: 0;
+  border-top: 1px solid #e0d9b8;
+  margin: 36px 0;
+}
+
+.crown-heights-co-ownership-page .nbhd-intro-copy .nbhd-guide-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 24px 0;
+}
+
+.crown-heights-co-ownership-page .nbhd-intro-copy .nbhd-guide-link {
+  color: #c98a2c;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.crown-heights-co-ownership-page .nbhd-intro-copy .nbhd-reviews-frame {
+  display: block;
+  width: 100%;
+  min-height: 440px;
+  border: 0;
+  background: #fff;
+  border-radius: 16px;
+  margin: 24px 0;
+}
+
+@media (max-width: 1024px) {
+  .crown-heights-co-ownership-page .nbhd-intro-copy h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .crown-heights-co-ownership-page .nbhd-intro-copy h3 {
+    font-size: 22px;
+  }
+
+  .crown-heights-co-ownership-page .nbhd-intro-copy .nbhd-guide-list {
+    font-size: 16px;
+  }
+}
