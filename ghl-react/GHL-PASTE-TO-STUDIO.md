@@ -415,6 +415,78 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/down
 
 ---
 
+## 9w. BedfordStuyvesantCoOwnership
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BedfordStuyvesantCoOwnership.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/bedford-stuyvesant-co-ownership/BedfordStuyvesantCoOwnershipContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/bedford-stuyvesant-co-ownership-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/bedfordStuyvesantCoOwnership.ts
+
+---
+
+## 9x. BedfordStuyvesantSros
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BedfordStuyvesantSros.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/bedford-stuyvesant-sros-2/BedfordStuyvesantSrosContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/bedford-stuyvesant-sros-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/bedfordStuyvesantSros.ts
+
+---
+
+## 9y. BedfordStuyvesantCoOps
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BedfordStuyvesantCoOps.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/bedford-stuyvesant-co-ops-2/BedfordStuyvesantCoOpsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/bedford-stuyvesant-co-ops-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/bedfordStuyvesantCoOps.ts
+
+---
+
+## 9z. BedfordStuyvesantCondos
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BedfordStuyvesantCondos.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/bedford-stuyvesant-condos-2/BedfordStuyvesantCondosContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/bedford-stuyvesant-condos-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/bedfordStuyvesantCondos.ts
+
+---
+
+## 9aa. BedfordStuyvesantBrownstones
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BedfordStuyvesantBrownstones.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/bedford-stuyvesant-brownstones-2/BedfordStuyvesantBrownstonesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/bedford-stuyvesant-brownstones-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/bedfordStuyvesantBrownstones.ts
+
+---
+
+## 9ab. BrooklynHeightsCoOps
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BrooklynHeightsCoOps.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/brooklyn-heights-co-ops-3/BrooklynHeightsCoOpsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/brooklyn-heights-co-ops-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/brooklynHeightsCoOps.ts
+
+---
+
+## 9ac. BrooklynHeightsCondos
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BrooklynHeightsCondos.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/brooklyn-heights-condos-3/BrooklynHeightsCondosContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/brooklyn-heights-condos-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/brooklynHeightsCondos.ts
+
+---
+
+## 9ad. BrooklynHeightsTownhouses
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/BrooklynHeightsTownhouses.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/brooklyn-heights-townhouses-2/BrooklynHeightsTownhousesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/brooklyn-heights-townhouses-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/brooklynHeightsTownhouses.ts
+
+---
+
 ## 10. Remaining migrated pages (full site)
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Home.tsx

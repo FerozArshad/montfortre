@@ -34,7 +34,7 @@ Until GHL replies that it wrote files, **FETCHED and VERIFIED stay empty**.
 2. Save as `<path>` in the Studio project (example: `src/pages/Services.tsx`)
 3. Do not invent routes. Do not edit `src/seo/pages/*.ts`. Do not use page-level `dangerouslySetInnerHTML`.
 
-`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 43 migrated routes in `src/App.tsx` plus `NotMigrated`.
+`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 51 migrated routes in `src/App.tsx` plus `NotMigrated`.
 
 ---
 
@@ -164,6 +164,7 @@ Full image set (hoods, services, slots, blog, Instagram, plan, nbhd): every `pub
 | 2026-08-15 | Added `/park-slope/` (Harlem design system). |
 | 2026-08-17 | Added `/chelsea-co-ops-2/` and `/chelsea-townhouses/` (neighborhoods design system). |
 | 2026-08-17 | Added `/dumbo-co-ops-2/`, `/dumbo-condos/`, `/downstone-brooklyn-co-ops/`, and `/downtown-brooklyn-condos-2/` (neighborhoods design system). |
+| 2026-08-17 | Added five Bedford-Stuyvesant property pages and three Brooklyn Heights property pages (neighborhoods design system). |
 
 ---
 
