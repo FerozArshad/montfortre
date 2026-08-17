@@ -139,7 +139,7 @@
 [LEFT] https://montfortre.com/nyc-free-home-valuation-service/
 [MIGRATED] https://montfortre.com/harlem-brownstones/
 [MIGRATED] https://montfortre.com/harlem-condos/
-[LEFT] https://montfortre.com/harlem-sros/
+[MIGRATED] https://montfortre.com/harlem-sros/
 [LEFT] https://montfortre.com/harlem-co-ownership/
 [LEFT] https://montfortre.com/upper-west-side-townhouses/
 [LEFT] https://montfortre.com/upper-west-side-condos/
