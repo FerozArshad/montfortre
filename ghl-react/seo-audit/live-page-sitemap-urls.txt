@@ -147,9 +147,9 @@
 [MIGRATED] https://montfortre.com/upper-east-side-townhouses/
 [MIGRATED] https://montfortre.com/upper-east-side-condos/
 [MIGRATED] https://montfortre.com/upper-east-side-co-ops/
-[LEFT] https://montfortre.com/chelsea-townhouses/
+[MIGRATED] https://montfortre.com/chelsea-townhouses/
 [LEFT] https://montfortre.com/chelsea-condos/
-[LEFT] https://montfortre.com/chelsea-co-ops-2/
+[MIGRATED] https://montfortre.com/chelsea-co-ops-2/
 [LEFT] https://montfortre.com/downtown-brooklyn-condos-2/
 [LEFT] https://montfortre.com/downstone-brooklyn-co-ops/
 [LEFT] https://montfortre.com/dumbo-condos/
