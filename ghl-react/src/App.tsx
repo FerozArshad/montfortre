@@ -31,6 +31,9 @@ import SuccessStories from "./pages/SuccessStories";
 import TwoFamilyHouseForSaleNyc from "./pages/TwoFamilyHouseForSaleNyc";
 import UpperEastSide from "./pages/UpperEastSide";
 import UpperWestSide from "./pages/UpperWestSide";
+import UpperWestSideCoOps from "./pages/UpperWestSideCoOps";
+import UpperWestSideCondos from "./pages/UpperWestSideCondos";
+import UpperWestSideTownhouses from "./pages/UpperWestSideTownhouses";
 import Williamsburg from "./pages/Williamsburg";
 
 export default function App() {
@@ -56,6 +59,9 @@ export default function App() {
         <Route path="/park-slope" element={<ParkSlope />} />
         <Route path="/upper-east-side" element={<UpperEastSide />} />
         <Route path="/upper-west-side" element={<UpperWestSide />} />
+        <Route path="/upper-west-side-co-ops-2" element={<UpperWestSideCoOps />} />
+        <Route path="/upper-west-side-condos" element={<UpperWestSideCondos />} />
+        <Route path="/upper-west-side-townhouses" element={<UpperWestSideTownhouses />} />
         <Route path="/williamsburg" element={<Williamsburg />} />
         <Route path="/stanley-montfort" element={<StanleyMontfort />} />
         <Route path="/success-stories" element={<SuccessStories />} />

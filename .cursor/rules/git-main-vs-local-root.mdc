@@ -1,0 +1,40 @@
+---
+description: HARD — this workspace is always local-root; GitHub main gets only rewritten ghl-react app files for GHL
+alwaysApply: true
+---
+
+# Git: local-root vs main (do not confuse)
+
+## This workspace is NEVER `main`
+
+- Folder `d:\GHL_Montfort` is **always branch `local-root`**.
+- `local-root` exists only so developers can **clone the full layout** (app + `reference/` + docs + HTTrack). It is **not** GHL and **not** production.
+- Stay on `local-root`. Do **not** checkout `main` here. Do **not** merge `local-root` into `main` or `main` into `local-root`. Do **not** force-push `main`.
+
+## What goes to GitHub `main`
+
+GHL fetches `https://raw.githubusercontent.com/FerozArshad/montfortre/main/<path>`.
+
+Push **only** new/updated **React/Vite app files** under `ghl-react/`, with paths **rewritten to repo root**:
+
+- `ghl-react/src/...` → `src/...`
+- `ghl-react/public/...` → `public/...`
+- `ghl-react/index.html` → `index.html`
+- `ghl-react/package.json` → `package.json` (only if the app actually needed a package change)
+- App docs GHL uses: `DOCUMENTATION.md`, `GHL-PASTE-TO-STUDIO.md`, `GHL-TRANSFER-TRACKING.md`, `seo-audit/...` when those files changed for the migration
+
+Copy into a **separate** `main` worktree/clone, commit on `feature/<name>-ghl`, push, then **fast-forward** `git push origin HEAD:main`.
+
+## Never push to `main`
+
+- `reference/`
+- `.cursor/`
+- parent-tree files that only exist on `local-root`
+- `ghl-react/package-lock.json` unless the user explicitly asks
+- the whole `ghl-react/` folder prefix (GHL paths have **no** `ghl-react/` prefix)
+
+## Workflow reminder
+
+1. Implement on `local-root`.
+2. Optionally commit/push `origin local-root` so the clone layout is backed up.
+3. Ship GHL by copying **rewritten** app files onto `main` — not by merging branches.
