@@ -10,7 +10,11 @@ import ChelseaCoOps from "./pages/ChelseaCoOps";
 import ChelseaTownhouses from "./pages/ChelseaTownhouses";
 import CrownHeights from "./pages/CrownHeights";
 import DowntownBrooklyn from "./pages/DowntownBrooklyn";
+import DowntownBrooklynCondos from "./pages/DowntownBrooklynCondos";
+import DownstoneBrooklynCoOps from "./pages/DownstoneBrooklynCoOps";
 import Dumbo from "./pages/Dumbo";
+import DumboCoOps from "./pages/DumboCoOps";
+import DumboCondos from "./pages/DumboCondos";
 import Harlem from "./pages/Harlem";
 import HarlemBrownstones from "./pages/HarlemBrownstones";
 import HarlemCondos from "./pages/HarlemCondos";
@@ -57,7 +61,11 @@ export default function App() {
         <Route path="/chelsea-townhouses" element={<ChelseaTownhouses />} />
         <Route path="/crown-heights" element={<CrownHeights />} />
         <Route path="/downtown-brooklyn" element={<DowntownBrooklyn />} />
+        <Route path="/downtown-brooklyn-condos-2" element={<DowntownBrooklynCondos />} />
+        <Route path="/downstone-brooklyn-co-ops" element={<DownstoneBrooklynCoOps />} />
         <Route path="/dumbo" element={<Dumbo />} />
+        <Route path="/dumbo-co-ops-2" element={<DumboCoOps />} />
+        <Route path="/dumbo-condos" element={<DumboCondos />} />
         <Route path="/harlem" element={<Harlem />} />
         <Route path="/harlem-brownstones" element={<HarlemBrownstones />} />
         <Route path="/harlem-condos" element={<HarlemCondos />} />

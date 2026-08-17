@@ -150,10 +150,10 @@
 [MIGRATED] https://montfortre.com/chelsea-townhouses/
 [LEFT] https://montfortre.com/chelsea-condos/
 [MIGRATED] https://montfortre.com/chelsea-co-ops-2/
-[LEFT] https://montfortre.com/downtown-brooklyn-condos-2/
-[LEFT] https://montfortre.com/downstone-brooklyn-co-ops/
-[LEFT] https://montfortre.com/dumbo-condos/
-[LEFT] https://montfortre.com/dumbo-co-ops-2/
+[MIGRATED] https://montfortre.com/downtown-brooklyn-condos-2/
+[MIGRATED] https://montfortre.com/downstone-brooklyn-co-ops/
+[MIGRATED] https://montfortre.com/dumbo-condos/
+[MIGRATED] https://montfortre.com/dumbo-co-ops-2/
 [LEFT] https://montfortre.com/brooklyn-heights-townhouses-2/
 [LEFT] https://montfortre.com/brooklyn-heights-condos-3/
 [LEFT] https://montfortre.com/brooklyn-heights-co-ops-3/

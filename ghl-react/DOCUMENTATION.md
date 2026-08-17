@@ -11,7 +11,7 @@
 | Live sitemap index | https://montfortre.com/sitemap_index.xml |
 | Live **page** sitemap | https://montfortre.com/page-sitemap.xml |
 | Live post sitemap | https://montfortre.com/post-sitemap.xml |
-| SPA sitemap (this repo) | `public/sitemap.xml` — 39 migrated URLs only |
+| SPA sitemap (this repo) | `public/sitemap.xml` — 43 migrated URLs only |
 | Preview | https://montfortre-live.vibepreview.com/ |
 | Local | `npm run dev` (Vite; port may be 5173+) |
 | Phone | `(646) 970-1078` |
@@ -106,7 +106,7 @@ ghl-react/
 ├── DOCUMENTATION.md           # this file
 ├── src/
 │   ├── main.tsx               # createRoot; imports index.css, App.css, responsive.css
-│   ├── App.tsx                # MobileHeader ONCE, then <Routes> (39 + *)
+│   ├── App.tsx                # MobileHeader ONCE, then <Routes> (43 + *)
 │   ├── index.css              # html overflow-x: clip — do not hide overflow on .site-page
 │   ├── App.css
 │   ├── responsive.css         # global mobile overflow / min-width overrides
@@ -122,7 +122,11 @@ ghl-react/
 │   │   ├── ChelseaTownhouses.tsx
 │   │   ├── CrownHeights.tsx
 │   │   ├── DowntownBrooklyn.tsx
+│   │   ├── DowntownBrooklynCondos.tsx
+│   │   ├── DownstoneBrooklynCoOps.tsx
 │   │   ├── Dumbo.tsx
+│   │   ├── DumboCoOps.tsx
+│   │   ├── DumboCondos.tsx
 │   │   ├── Harlem.tsx
 │   │   ├── HarlemBrownstones.tsx
 │   │   ├── HarlemCondos.tsx
@@ -170,7 +174,11 @@ ghl-react/
 │   │   ├── chelsea-townhouses/ChelseaTownhousesContent.tsx
 │   │   ├── crown-heights/CrownHeightsContent.tsx
 │   │   ├── downtown-brooklyn/DowntownBrooklynContent.tsx
+│   │   ├── downtown-brooklyn-condos-2/DowntownBrooklynCondosContent.tsx
+│   │   ├── downstone-brooklyn-co-ops/DownstoneBrooklynCoOpsContent.tsx
 │   │   ├── dumbo/DumboContent.tsx
+│   │   ├── dumbo-co-ops-2/DumboCoOpsContent.tsx
+│   │   ├── dumbo-condos/DumboCondosContent.tsx
 │   │   ├── harlem/HarlemContent.tsx
 │   │   ├── harlem-brownstones/HarlemBrownstonesContent.tsx
 │   │   ├── harlem-condos/HarlemCondosContent.tsx
@@ -203,7 +211,7 @@ ghl-react/
 │   ├── seo/
 │   │   ├── types.ts
 │   │   └── pages/*.ts         # frozen TITLE / METAS / LINKS / JSON_LD
-│   ├── styles/                # 58 CSS files — desktop + @media in the SAME file
+│   ├── styles/                # 62 CSS files — desktop + @media in the SAME file
 │   ├── hooks/
 │   ├── lib/utils.ts
 │   ├── lib/mortgageMath.ts
@@ -215,7 +223,7 @@ ghl-react/
     ├── instagram/
     ├── favicon.svg
     ├── robots.txt
-    └── sitemap.xml            # 39 migrated URLs only
+    └── sitemap.xml            # 43 migrated URLs only
 ```
 
 `App.tsx` must keep `<MobileHeader />` above `<Routes>`. Canonical routes live in `App.tsx` (ignore `ROUTES.tsx.snippet` if it exists). Do not add neighborhood/service/blog-article routes.
@@ -304,7 +312,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 
 ## 3. Pages done vs left (sitemap)
 
-**Migrated (39)** — also listed in `public/sitemap.xml` and `src/App.tsx`:
+**Migrated (43)** — also listed in `public/sitemap.xml` and `src/App.tsx`:
 
 | URL (trailing slash in links) | Router path | Page | Content | CSS | SEO module |
 |---|---|---|---|---|---|
@@ -319,7 +327,11 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/chelsea-townhouses/` | `/chelsea-townhouses` | `ChelseaTownhouses.tsx` | `chelsea-townhouses/ChelseaTownhousesContent.tsx` | `neighborhoods-page.css` + `chelsea-townhouses-page.css` | `chelseaTownhouses.ts` |
 | `/crown-heights/` | `/crown-heights` | `CrownHeights.tsx` | `crown-heights/CrownHeightsContent.tsx` | `harlem-page.css` + `crown-heights-page.css` | `crownHeights.ts` |
 | `/downtown-brooklyn/` | `/downtown-brooklyn` | `DowntownBrooklyn.tsx` | `downtown-brooklyn/DowntownBrooklynContent.tsx` | `harlem-page.css` + `downtown-brooklyn-page.css` | `downtownBrooklyn.ts` |
+| `/downtown-brooklyn-condos-2/` | `/downtown-brooklyn-condos-2` | `DowntownBrooklynCondos.tsx` | `downtown-brooklyn-condos-2/DowntownBrooklynCondosContent.tsx` | `neighborhoods-page.css` + `downtown-brooklyn-condos-page.css` | `downtownBrooklynCondos.ts` |
+| `/downstone-brooklyn-co-ops/` | `/downstone-brooklyn-co-ops` | `DownstoneBrooklynCoOps.tsx` | `downstone-brooklyn-co-ops/DownstoneBrooklynCoOpsContent.tsx` | `neighborhoods-page.css` + `downstone-brooklyn-co-ops-page.css` | `downstoneBrooklynCoOps.ts` |
 | `/dumbo/` | `/dumbo` | `Dumbo.tsx` | `dumbo/DumboContent.tsx` | `harlem-page.css` + `dumbo-page.css` | `dumbo.ts` |
+| `/dumbo-co-ops-2/` | `/dumbo-co-ops-2` | `DumboCoOps.tsx` | `dumbo-co-ops-2/DumboCoOpsContent.tsx` | `neighborhoods-page.css` + `dumbo-co-ops-page.css` | `dumboCoOps.ts` |
+| `/dumbo-condos/` | `/dumbo-condos` | `DumboCondos.tsx` | `dumbo-condos/DumboCondosContent.tsx` | `neighborhoods-page.css` + `dumbo-condos-page.css` | `dumboCondos.ts` |
 | `/harlem/` | `/harlem` | `Harlem.tsx` | `harlem/HarlemContent.tsx` + `HarlemSchools.tsx` | `harlem-page.css` | `harlem.ts` |
 | `/harlem-brownstones/` | `/harlem-brownstones` | `HarlemBrownstones.tsx` | `harlem-brownstones/HarlemBrownstonesContent.tsx` | `neighborhoods-page.css` + `harlem-brownstones-page.css` | `harlemBrownstones.ts` |
 | `/harlem-condos/` | `/harlem-condos` | `HarlemCondos.tsx` | `harlem-condos/HarlemCondosContent.tsx` | `neighborhoods-page.css` + `harlem-condos-page.css` | `harlemCondos.ts` |
@@ -348,7 +360,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/idx-sales/` | `/idx-sales` | `IdxSales.tsx` | `idx/IdxSearchLayout.tsx` | `idx-page.css` | `idxSales.ts` |
 | `/idx-rentals/` | `/idx-rentals` | `IdxRentals.tsx` | `IdxSearchLayout.tsx` | `idx-page.css` | `idxRentals.ts` |
 
-**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships **39**. Examples still live: `/prospect-heights/`, `/3-family-house-for-sale-nyc/`, listing addresses, service subpages, blog posts (`post-sitemap.xml`). **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`).
+**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships **43**. Examples still live: `/prospect-heights/`, `/3-family-house-for-sale-nyc/`, listing addresses, service subpages, blog posts (`post-sitemap.xml`). **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`).
 
 Internal `<a href>` uses trailing slashes (`/harlem/`). React Router `path` does not.
 
@@ -372,7 +384,7 @@ Keep these **four** `Disallow: /` user-agents (scrapers, not Google/AI):
 
 Path disallows under `User-agent: *` (WordPress leftovers; keep so cutover matches live): `/wp-admin/` (except `admin-ajax.php`), `/wp-json/agentfire/v1/core/cron/`, `/?s=`, `/cgi-bin/`.
 
-**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 39 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
+**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 43 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
 
 ---
 
