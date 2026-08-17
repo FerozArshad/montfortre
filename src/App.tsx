@@ -66,6 +66,12 @@ import SiteMap from "./pages/SiteMap";
 import StanleyMontfort from "./pages/StanleyMontfort";
 import SuccessStories from "./pages/SuccessStories";
 import TwoFamilyHouseForSaleNyc from "./pages/TwoFamilyHouseForSaleNyc";
+import ThreeFamilyHouseForSaleNyc from "./pages/ThreeFamilyHouseForSaleNyc";
+import FourFamilyHouseForSaleNyc from "./pages/FourFamilyHouseForSaleNyc";
+import NycBrownstoneFreeHomeValuation from "./pages/NycBrownstoneFreeHomeValuation";
+import NycSroFreeHomeValuation from "./pages/NycSroFreeHomeValuation";
+import NycCoOpFreeHomeValuation from "./pages/NycCoOpFreeHomeValuation";
+import NycCondoFreeHomeValuation from "./pages/NycCondoFreeHomeValuation";
 import UpperEastSide from "./pages/UpperEastSide";
 import UpperEastSideCoOps from "./pages/UpperEastSideCoOps";
 import UpperEastSideCondos from "./pages/UpperEastSideCondos";
@@ -139,6 +145,12 @@ export default function App() {
         <Route path="/stanley-montfort" element={<StanleyMontfort />} />
         <Route path="/success-stories" element={<SuccessStories />} />
         <Route path="/2-family-house-for-sale-nyc" element={<TwoFamilyHouseForSaleNyc />} />
+        <Route path="/3-family-house-for-sale-nyc" element={<ThreeFamilyHouseForSaleNyc />} />
+        <Route path="/4-family-house-for-sale-nyc" element={<FourFamilyHouseForSaleNyc />} />
+        <Route path="/nyc-brownstone-free-home-valuation" element={<NycBrownstoneFreeHomeValuation />} />
+        <Route path="/nyc-sro-free-home-valuation" element={<NycSroFreeHomeValuation />} />
+        <Route path="/nyc-co-op-free-home-valuation" element={<NycCoOpFreeHomeValuation />} />
+        <Route path="/nyc-condo-free-home-valuation" element={<NycCondoFreeHomeValuation />} />
         <Route path="/buying-a-condo-in-nyc" element={<BuyingACondoInNyc />} />
         <Route path="/buying-a-brownstone-in-nyc" element={<BuyingABrownstoneInNyc />} />
         <Route path="/buying-sro-in-nyc" element={<BuyingSroInNyc />} />

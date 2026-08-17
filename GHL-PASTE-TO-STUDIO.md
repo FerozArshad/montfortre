@@ -659,6 +659,42 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SellingB
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/selling-brownstones-in-nyc/SellingBrownstonesInNycContent.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/sellingBrownstonesInNyc.ts
 
+## 9bb. ThreeFamilyHouseForSaleNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ThreeFamilyHouseForSaleNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/three-family/ThreeFamilyContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/threeFamily.ts
+
+## 9bc. FourFamilyHouseForSaleNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/FourFamilyHouseForSaleNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/four-family/FourFamilyContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/fourFamily.ts
+
+## 9bd. NycBrownstoneFreeHomeValuation
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycBrownstoneFreeHomeValuation.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-brownstone-free-home-valuation/NycBrownstoneFreeHomeValuationContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycBrownstoneFreeHomeValuation.ts
+
+## 9be. NycSroFreeHomeValuation
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycSroFreeHomeValuation.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-sro-free-home-valuation/NycSroFreeHomeValuationContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycSroFreeHomeValuation.ts
+
+## 9bf. NycCoOpFreeHomeValuation
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycCoOpFreeHomeValuation.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-co-op-free-home-valuation/NycCoOpFreeHomeValuationContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycCoOpFreeHomeValuation.ts
+
+## 9bg. NycCondoFreeHomeValuation
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycCondoFreeHomeValuation.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-condo-free-home-valuation/NycCondoFreeHomeValuationContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycCondoFreeHomeValuation.ts
+
 ---
 
 ## 9ar. Privacy Policy + HTML Sitemap

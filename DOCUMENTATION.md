@@ -11,7 +11,7 @@
 | Live sitemap index | https://montfortre.com/sitemap_index.xml |
 | Live **page** sitemap | https://montfortre.com/page-sitemap.xml |
 | Live post sitemap | https://montfortre.com/post-sitemap.xml |
-| SPA sitemap (this repo) | `public/sitemap.xml` — 129 migrated URLs only |
+| SPA sitemap (this repo) | `public/sitemap.xml` — 135 migrated URLs only |
 | Preview | https://montfortre-live.vibepreview.com/ |
 | Local | `npm run dev` (Vite; port may be 5173+) |
 | Phone | `(646) 970-1078` |
@@ -233,6 +233,8 @@ ghl-react/
 │   │   ├── stanley/StanleyMontfortContent.tsx
 │   │   ├── success/SuccessStoriesContent.tsx
 │   │   ├── two-family/TwoFamilyContent.tsx
+│   │   ├── three-family/ThreeFamilyContent.tsx
+│   │   ├── four-family/FourFamilyContent.tsx
 │   │   ├── buying-a-condo-in-nyc/BuyingACondoInNycContent.tsx
 │   │   ├── buying-a-brownstone-in-nyc/BuyingABrownstoneInNycContent.tsx
 │   │   ├── buying-sro-in-nyc/BuyingSroInNycContent.tsx
@@ -246,6 +248,10 @@ ghl-react/
 │   │   ├── nyc-listing-agent/NycListingAgentContent.tsx
 │   │   ├── nyc-multifamily-agent/NycMultifamilyContent.tsx
 │   │   ├── home-valuation/HomeValuationContent.tsx
+│   │   ├── nyc-brownstone-free-home-valuation/NycBrownstoneFreeHomeValuationContent.tsx
+│   │   ├── nyc-sro-free-home-valuation/NycSroFreeHomeValuationContent.tsx
+│   │   ├── nyc-co-op-free-home-valuation/NycCoOpFreeHomeValuationContent.tsx
+│   │   ├── nyc-condo-free-home-valuation/NycCondoFreeHomeValuationContent.tsx
 │   │   ├── mortgage-calculator/MortgageCalculatorContent.tsx
 │   │   ├── brownstone/BrownstoneGuideContent.tsx
 │   │   ├── neighborhoods/NeighborhoodsContent.tsx
@@ -268,7 +274,7 @@ ghl-react/
     ├── instagram/
     ├── favicon.svg
     ├── robots.txt
-    └── sitemap.xml            # 129 migrated URLs only
+    └── sitemap.xml            # 135 migrated URLs only
 ```
 
 `App.tsx` must keep `<MobileHeader />` above `<Routes>`. Canonical routes live in `App.tsx` (ignore `ROUTES.tsx.snippet` if it exists). Do not add neighborhood/service/blog-article routes.
@@ -357,7 +363,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 
 ## 3. Pages done vs left (sitemap)
 
-**Migrated (129 URLs)** — also listed in `public/sitemap.xml` and `src/App.tsx`:
+**Migrated (135 URLs)** — also listed in `public/sitemap.xml` and `src/App.tsx`:
 
 | URL (trailing slash in links) | Router path | Page | Content | CSS | SEO module |
 |---|---|---|---|---|---|
@@ -416,6 +422,12 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/stanley-montfort/` | `/stanley-montfort` | `StanleyMontfort.tsx` | `stanley/StanleyMontfortContent.tsx` | `stanley-page.css` | `stanleyMontfort.ts` |
 | `/success-stories/` | `/success-stories` | `SuccessStories.tsx` | `success/SuccessStoriesContent.tsx` | `success-page.css` | `successStories.ts` |
 | `/2-family-house-for-sale-nyc/` | `/2-family-house-for-sale-nyc` | `TwoFamilyHouseForSaleNyc.tsx` | `two-family/TwoFamilyContent.tsx` | `two-family-page.css` | `twoFamily.ts` |
+| `/3-family-house-for-sale-nyc/` | `/3-family-house-for-sale-nyc` | `ThreeFamilyHouseForSaleNyc.tsx` | `three-family/ThreeFamilyContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `threeFamily.ts` |
+| `/4-family-house-for-sale-nyc/` | `/4-family-house-for-sale-nyc` | `FourFamilyHouseForSaleNyc.tsx` | `four-family/FourFamilyContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `fourFamily.ts` |
+| `/nyc-brownstone-free-home-valuation/` | `/nyc-brownstone-free-home-valuation` | `NycBrownstoneFreeHomeValuation.tsx` | `nyc-brownstone-free-home-valuation/NycBrownstoneFreeHomeValuationContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `nycBrownstoneFreeHomeValuation.ts` |
+| `/nyc-sro-free-home-valuation/` | `/nyc-sro-free-home-valuation` | `NycSroFreeHomeValuation.tsx` | `nyc-sro-free-home-valuation/NycSroFreeHomeValuationContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `nycSroFreeHomeValuation.ts` |
+| `/nyc-co-op-free-home-valuation/` | `/nyc-co-op-free-home-valuation` | `NycCoOpFreeHomeValuation.tsx` | `nyc-co-op-free-home-valuation/NycCoOpFreeHomeValuationContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `nycCoOpFreeHomeValuation.ts` |
+| `/nyc-condo-free-home-valuation/` | `/nyc-condo-free-home-valuation` | `NycCondoFreeHomeValuation.tsx` | `nyc-condo-free-home-valuation/NycCondoFreeHomeValuationContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `nycCondoFreeHomeValuation.ts` |
 | `/buying-a-condo-in-nyc/` | `/buying-a-condo-in-nyc` | `BuyingACondoInNyc.tsx` | `buying-a-condo-in-nyc/BuyingACondoInNycContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `buyingACondoInNyc.ts` |
 | `/buying-a-brownstone-in-nyc/` | `/buying-a-brownstone-in-nyc` | `BuyingABrownstoneInNyc.tsx` | `buying-a-brownstone-in-nyc/BuyingABrownstoneInNycContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `buyingABrownstoneInNyc.ts` |
 | `/buying-sro-in-nyc/` | `/buying-sro-in-nyc` | `BuyingSroInNyc.tsx` | `buying-sro-in-nyc/BuyingSroInNycContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `buyingSroInNyc.ts` |
@@ -438,7 +450,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/privacy-policy/` | `/privacy-policy` | `PrivacyPolicy.tsx` | `legal/PrivacyPolicyContent.tsx` | `legal-pages.css` | `privacyPolicy.ts` |
 | `/sitemap/` | `/sitemap` | `SiteMap.tsx` | `legal/SiteMapContent.tsx` | `legal-pages.css` | `siteMap.ts` |
 
-**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships **129 URLs** including 55 blog posts. Examples still live: `/prospect-heights/`, `/3-family-house-for-sale-nyc/`, listing addresses, and service subpages. **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`).
+**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships **135 URLs** including 55 blog posts. Examples still live: `/prospect-heights/`, listing addresses, and remaining service subpages. **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`).
 
 Internal `<a href>` uses trailing slashes (`/harlem/`). React Router `path` does not.
 
@@ -462,7 +474,7 @@ Keep these **four** `Disallow: /` user-agents (scrapers, not Google/AI):
 
 Path disallows under `User-agent: *` (WordPress leftovers; keep so cutover matches live): `/wp-admin/` (except `admin-ajax.php`), `/wp-json/agentfire/v1/core/cron/`, `/?s=`, `/cgi-bin/`.
 
-**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 129 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
+**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 135 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
 
 ---
 
