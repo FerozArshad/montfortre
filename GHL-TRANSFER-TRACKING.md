@@ -34,7 +34,7 @@ Until GHL replies that it wrote files, **FETCHED and VERIFIED stay empty**.
 2. Save as `<path>` in the Studio project (example: `src/pages/Services.tsx`)
 3. Do not invent routes. Do not edit `src/seo/pages/*.ts`. Do not use page-level `dangerouslySetInnerHTML`.
 
-`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 30 migrated routes in `src/App.tsx` plus `NotMigrated`.
+`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 31 migrated routes in `src/App.tsx` plus `NotMigrated`.
 
 ---
 

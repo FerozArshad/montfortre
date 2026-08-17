@@ -140,7 +140,7 @@
 [MIGRATED] https://montfortre.com/harlem-brownstones/
 [MIGRATED] https://montfortre.com/harlem-condos/
 [MIGRATED] https://montfortre.com/harlem-sros/
-[LEFT] https://montfortre.com/harlem-co-ownership/
+[MIGRATED] https://montfortre.com/harlem-co-ownership/
 [LEFT] https://montfortre.com/upper-west-side-townhouses/
 [LEFT] https://montfortre.com/upper-west-side-condos/
 [LEFT] https://montfortre.com/upper-west-side-co-ops-2/
