@@ -44,6 +44,11 @@ import NycBuyersAgentService from "./pages/NycBuyersAgentService";
 import NycListingAgentService from "./pages/NycListingAgentService";
 import NycMultifamilyRealEstateAgentService from "./pages/NycMultifamilyRealEstateAgentService";
 import ParkSlope from "./pages/ParkSlope";
+import ParkSlopeBrownstone from "./pages/ParkSlopeBrownstone";
+import ParkSlopeCoOps from "./pages/ParkSlopeCoOps";
+import ParkSlopeCoOwnership from "./pages/ParkSlopeCoOwnership";
+import ParkSlopeCondo from "./pages/ParkSlopeCondo";
+import ParkSlopeSro from "./pages/ParkSlopeSro";
 import Services from "./pages/Services";
 import StanleyMontfort from "./pages/StanleyMontfort";
 import SuccessStories from "./pages/SuccessStories";
@@ -101,6 +106,11 @@ export default function App() {
         <Route path="/harlem-sros" element={<HarlemSros />} />
         <Route path="/harlem-co-ownership" element={<HarlemCoOwnership />} />
         <Route path="/park-slope" element={<ParkSlope />} />
+        <Route path="/park-slope-brownstone-2" element={<ParkSlopeBrownstone />} />
+        <Route path="/park-slope-coops" element={<ParkSlopeCoOps />} />
+        <Route path="/park-slope-coownership-2" element={<ParkSlopeCoOwnership />} />
+        <Route path="/park-slope-condo-2" element={<ParkSlopeCondo />} />
+        <Route path="/park-slope-sro-2" element={<ParkSlopeSro />} />
         <Route path="/upper-east-side" element={<UpperEastSide />} />
         <Route path="/upper-east-side-co-ops" element={<UpperEastSideCoOps />} />
         <Route path="/upper-east-side-condos" element={<UpperEastSideCondos />} />

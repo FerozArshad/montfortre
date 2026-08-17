@@ -183,12 +183,12 @@
 [MIGRATED] https://montfortre.com/nyc-listing-agent-service/
 [MIGRATED] https://montfortre.com/neighborhoods/
 [MIGRATED] https://montfortre.com/nyc-multifamily-real-estate-agent-service/
-[LEFT] https://montfortre.com/park-slope-brownstone-2/
-[LEFT] https://montfortre.com/park-slope-condo-2/
-[LEFT] https://montfortre.com/park-slope-coops/
-[LEFT] https://montfortre.com/park-slope-sro-2/
+[MIGRATED] https://montfortre.com/park-slope-brownstone-2/
+[MIGRATED] https://montfortre.com/park-slope-condo-2/
+[MIGRATED] https://montfortre.com/park-slope-coops/
+[MIGRATED] https://montfortre.com/park-slope-sro-2/
 [LEFT] https://montfortre.com/test/
-[LEFT] https://montfortre.com/park-slope-coownership-2/
+[MIGRATED] https://montfortre.com/park-slope-coownership-2/
 [MIGRATED] https://montfortre.com/harlem/
 [LEFT] https://montfortre.com/buying-a-condo-in-nyc/
 [MIGRATED] https://montfortre.com/stanley-montfort/

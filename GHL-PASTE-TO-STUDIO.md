@@ -559,6 +559,51 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/crow
 
 ---
 
+## 9am. ParkSlopeSro
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ParkSlopeSro.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope-sro-2/ParkSlopeSroContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/park-slope-sro-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/parkSlopeSro.ts
+
+---
+
+## 9an. ParkSlopeCoOwnership
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ParkSlopeCoOwnership.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope-coownership-2/ParkSlopeCoOwnershipContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/park-slope-co-ownership-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/parkSlopeCoOwnership.ts
+
+---
+
+## 9ao. ParkSlopeCoOps
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ParkSlopeCoOps.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope-coops/ParkSlopeCoOpsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/park-slope-co-ops-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/parkSlopeCoOps.ts
+
+---
+
+## 9ap. ParkSlopeCondo
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ParkSlopeCondo.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope-condo-2/ParkSlopeCondoContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/park-slope-condo-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/parkSlopeCondo.ts
+
+---
+
+## 9aq. ParkSlopeBrownstone
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ParkSlopeBrownstone.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/park-slope-brownstone-2/ParkSlopeBrownstoneContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/park-slope-brownstone-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/parkSlopeBrownstone.ts
+
+---
+
 ## 10. Remaining migrated pages (full site)
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Home.tsx
