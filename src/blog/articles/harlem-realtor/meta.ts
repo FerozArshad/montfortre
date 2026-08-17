@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2024/05/Montfort-Real-Estate-10-1024x683.fit.png",
+  featuredImageSrc: "/redesign-assets/blog/harlem-realtor/featured-Montfort-Real-Estate-10.png",
   featuredImageAlt: "The Ultimate Guide to Finding the Best Harlem Realtor for Your Dream Home",
   shareUrl: "https://montfortre.com/harlem-realtor/",
   toc: [
