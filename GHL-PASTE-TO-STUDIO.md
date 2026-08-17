@@ -371,6 +371,20 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upp
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/upper-east-side-townhouses-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperEastSideTownhouses.ts
 
+## 9q. ChelseaCoOps
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ChelseaCoOps.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/chelsea-co-ops-2/ChelseaCoOpsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/chelsea-co-ops-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/chelseaCoOps.ts
+
+## 9r. ChelseaTownhouses
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ChelseaTownhouses.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/chelsea-townhouses/ChelseaTownhousesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/chelsea-townhouses-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/chelseaTownhouses.ts
+
 ---
 
 ## 10. Remaining migrated pages (full site)

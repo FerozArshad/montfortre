@@ -1,0 +1,98 @@
+/* Chelsea Townhouses reuses /neighborhoods tokens. Extra layout only for live sections neighborhoods does not have. */
+
+.chelsea-townhouses-page .nbhd-hero-inner {
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+.chelsea-townhouses-page .nbhd-hero-lead {
+  max-width: none;
+}
+
+.chelsea-townhouses-page .nbhd-promises {
+  margin-top: 0;
+}
+
+.chelsea-townhouses-page h3.nbhd-promise-title {
+  margin: 0;
+}
+
+.chelsea-townhouses-page .nbhd-intro-inner {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.chelsea-townhouses-page .nbhd-intro-copy h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.16;
+  letter-spacing: -0.014em;
+  color: #0f1729;
+  margin: 48px 0 18px;
+  text-wrap: pretty;
+}
+
+.chelsea-townhouses-page .nbhd-intro-copy h2:first-child {
+  margin-top: 0;
+}
+
+.chelsea-townhouses-page .nbhd-reviews {
+  background: #f9f6e6;
+  padding: 36px 64px;
+  border-bottom: 1px solid #e0d9b8;
+}
+
+.chelsea-townhouses-page .nbhd-reviews-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.chelsea-townhouses-page .nbhd-reviews-frame {
+  display: block;
+  width: 100%;
+  min-height: 440px;
+  border: 0;
+  background: #fff;
+  border-radius: 16px;
+}
+
+.chelsea-townhouses-page .contact-form {
+  margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+  .chelsea-townhouses-page .nbhd-reviews {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .chelsea-townhouses-page .nbhd-intro-copy h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .chelsea-townhouses-page .nbhd-reviews {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chelsea-townhouses-page .nbhd-reviews {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .chelsea-townhouses-page .nbhd-intro-copy h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .chelsea-townhouses-page .nbhd-reviews {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

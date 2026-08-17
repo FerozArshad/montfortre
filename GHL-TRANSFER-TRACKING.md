@@ -34,7 +34,7 @@ Until GHL replies that it wrote files, **FETCHED and VERIFIED stay empty**.
 2. Save as `<path>` in the Studio project (example: `src/pages/Services.tsx`)
 3. Do not invent routes. Do not edit `src/seo/pages/*.ts`. Do not use page-level `dangerouslySetInnerHTML`.
 
-`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 37 migrated routes in `src/App.tsx` plus `NotMigrated`.
+`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 39 migrated routes in `src/App.tsx` plus `NotMigrated`.
 
 ---
 
@@ -162,6 +162,7 @@ Full image set (hoods, services, slots, blog, Instagram, plan, nbhd): every `pub
 | 2026-08-15 | Added `/williamsburg/` (Harlem design system). App files ready for GHL raw fetch after push to `main`. |
 | 2026-08-15 | Added `/crown-heights/` (Harlem design system). |
 | 2026-08-15 | Added `/park-slope/` (Harlem design system). |
+| 2026-08-17 | Added `/chelsea-co-ops-2/` and `/chelsea-townhouses/` (neighborhoods design system). |
 
 ---
 
