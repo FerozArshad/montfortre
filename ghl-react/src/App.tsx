@@ -30,6 +30,9 @@ import StanleyMontfort from "./pages/StanleyMontfort";
 import SuccessStories from "./pages/SuccessStories";
 import TwoFamilyHouseForSaleNyc from "./pages/TwoFamilyHouseForSaleNyc";
 import UpperEastSide from "./pages/UpperEastSide";
+import UpperEastSideCoOps from "./pages/UpperEastSideCoOps";
+import UpperEastSideCondos from "./pages/UpperEastSideCondos";
+import UpperEastSideTownhouses from "./pages/UpperEastSideTownhouses";
 import UpperWestSide from "./pages/UpperWestSide";
 import UpperWestSideCoOps from "./pages/UpperWestSideCoOps";
 import UpperWestSideCondos from "./pages/UpperWestSideCondos";
@@ -58,6 +61,9 @@ export default function App() {
         <Route path="/harlem-co-ownership" element={<HarlemCoOwnership />} />
         <Route path="/park-slope" element={<ParkSlope />} />
         <Route path="/upper-east-side" element={<UpperEastSide />} />
+        <Route path="/upper-east-side-co-ops" element={<UpperEastSideCoOps />} />
+        <Route path="/upper-east-side-condos" element={<UpperEastSideCondos />} />
+        <Route path="/upper-east-side-townhouses" element={<UpperEastSideTownhouses />} />
         <Route path="/upper-west-side" element={<UpperWestSide />} />
         <Route path="/upper-west-side-co-ops-2" element={<UpperWestSideCoOps />} />
         <Route path="/upper-west-side-condos" element={<UpperWestSideCondos />} />

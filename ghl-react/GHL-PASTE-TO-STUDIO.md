@@ -350,6 +350,27 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upp
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/upper-west-side-townhouses-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperWestSideTownhouses.ts
 
+## 9n. UpperEastSideCoOps
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/UpperEastSideCoOps.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-east-side-co-ops/UpperEastSideCoOpsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/upper-east-side-co-ops-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperEastSideCoOps.ts
+
+## 9o. UpperEastSideCondos
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/UpperEastSideCondos.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-east-side-condos/UpperEastSideCondosContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/upper-east-side-condos-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperEastSideCondos.ts
+
+## 9p. UpperEastSideTownhouses
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/UpperEastSideTownhouses.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-east-side-townhouses/UpperEastSideTownhousesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/upper-east-side-townhouses-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperEastSideTownhouses.ts
+
 ---
 
 ## 10. Remaining migrated pages (full site)
