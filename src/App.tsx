@@ -2,8 +2,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MobileHeader from "./components/MobileHeader";
 import AboutUs from "./pages/AboutUs";
 import BedfordStuyvesant from "./pages/BedfordStuyvesant";
+import BedfordStuyvesantBrownstones from "./pages/BedfordStuyvesantBrownstones";
+import BedfordStuyvesantCoOps from "./pages/BedfordStuyvesantCoOps";
+import BedfordStuyvesantCoOwnership from "./pages/BedfordStuyvesantCoOwnership";
+import BedfordStuyvesantCondos from "./pages/BedfordStuyvesantCondos";
+import BedfordStuyvesantSros from "./pages/BedfordStuyvesantSros";
 import Blog from "./pages/Blog";
 import BrooklynHeights from "./pages/BrooklynHeights";
+import BrooklynHeightsCoOps from "./pages/BrooklynHeightsCoOps";
+import BrooklynHeightsCondos from "./pages/BrooklynHeightsCondos";
+import BrooklynHeightsTownhouses from "./pages/BrooklynHeightsTownhouses";
 import BrownstoneBuyingGuide from "./pages/BrownstoneBuyingGuide";
 import Chelsea from "./pages/Chelsea";
 import ChelseaCoOps from "./pages/ChelseaCoOps";
@@ -55,7 +63,15 @@ export default function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/bedford-stuyvesant" element={<BedfordStuyvesant />} />
+        <Route path="/bedford-stuyvesant-brownstones-2" element={<BedfordStuyvesantBrownstones />} />
+        <Route path="/bedford-stuyvesant-co-ops-2" element={<BedfordStuyvesantCoOps />} />
+        <Route path="/bedford-stuyvesant-co-ownership" element={<BedfordStuyvesantCoOwnership />} />
+        <Route path="/bedford-stuyvesant-condos-2" element={<BedfordStuyvesantCondos />} />
+        <Route path="/bedford-stuyvesant-sros-2" element={<BedfordStuyvesantSros />} />
         <Route path="/brooklyn-heights" element={<BrooklynHeights />} />
+        <Route path="/brooklyn-heights-co-ops-3" element={<BrooklynHeightsCoOps />} />
+        <Route path="/brooklyn-heights-condos-3" element={<BrooklynHeightsCondos />} />
+        <Route path="/brooklyn-heights-townhouses-2" element={<BrooklynHeightsTownhouses />} />
         <Route path="/chelsea" element={<Chelsea />} />
         <Route path="/chelsea-co-ops-2" element={<ChelseaCoOps />} />
         <Route path="/chelsea-townhouses" element={<ChelseaTownhouses />} />
