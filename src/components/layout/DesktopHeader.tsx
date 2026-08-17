@@ -110,13 +110,9 @@ export default function DesktopHeader() {
           <a href="/success-stories/" className="dnav-plain">
             Success Stories
           </a>
-          <a href="/about-us/" className="dnav-plain">
-            About
-          </a>
-
           <div className="mnav-item">
-            <a href="/blog/" className="mnav-top">
-              Resources <ChevronIcon />
+            <a href="/about-us/" className="mnav-top">
+              About <ChevronIcon />
             </a>
             <div className="mnav-drop mnav-drop--resources">
               <a href="/about-us/" className="mnav-link">
@@ -125,11 +121,14 @@ export default function DesktopHeader() {
               <a href="/stanley-montfort/" className="mnav-link">
                 Stanley Montfort
               </a>
-              <a href="/contact/" className="mnav-link">
-                Contact
-              </a>
             </div>
           </div>
+          <a href="/blog/" className="dnav-plain">
+            Resources
+          </a>
+          <a href="https://calendly.com/montfort" target="_blank" rel="noopener noreferrer" className="dnav-plain">
+            Contact
+          </a>
         </nav>
 
         <a href="tel:+1-646-970-1078" className="dnav-phone">

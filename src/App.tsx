@@ -8,6 +8,8 @@ import BedfordStuyvesantCoOwnership from "./pages/BedfordStuyvesantCoOwnership";
 import BedfordStuyvesantCondos from "./pages/BedfordStuyvesantCondos";
 import BedfordStuyvesantSros from "./pages/BedfordStuyvesantSros";
 import Blog from "./pages/Blog";
+import BlogArticlePage from "./pages/BlogArticlePage";
+import { BLOG_ARTICLE_REGISTRY } from "./blog/registry";
 import BrooklynHeights from "./pages/BrooklynHeights";
 import BrooklynHeightsCoOps from "./pages/BrooklynHeightsCoOps";
 import BrooklynHeightsCondos from "./pages/BrooklynHeightsCondos";
@@ -138,6 +140,9 @@ export default function App() {
           path="/advice-for-buyers-looking-to-purchase-brownstones"
           element={<BrownstoneBuyingGuide />}
         />
+        {Object.entries(BLOG_ARTICLE_REGISTRY).map(([slug, article]) => (
+          <Route key={slug} path={`/${slug}`} element={<BlogArticlePage article={article} />} />
+        ))}
         <Route path="/neighborhoods" element={<Neighborhoods />} />
         <Route path="/idx-sales" element={<IdxSales />} />
         <Route path="/idx-rentals" element={<IdxRentals />} />

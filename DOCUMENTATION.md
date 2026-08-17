@@ -11,7 +11,7 @@
 | Live sitemap index | https://montfortre.com/sitemap_index.xml |
 | Live **page** sitemap | https://montfortre.com/page-sitemap.xml |
 | Live post sitemap | https://montfortre.com/post-sitemap.xml |
-| SPA sitemap (this repo) | `public/sitemap.xml` — 64 migrated URLs only |
+| SPA sitemap (this repo) | `public/sitemap.xml` — 118 migrated URLs only |
 | Preview | https://montfortre-live.vibepreview.com/ |
 | Local | `npm run dev` (Vite; port may be 5173+) |
 | Phone | `(646) 970-1078` |
@@ -255,7 +255,7 @@ ghl-react/
     ├── instagram/
     ├── favicon.svg
     ├── robots.txt
-    └── sitemap.xml            # 64 migrated URLs only
+    └── sitemap.xml            # 118 migrated URLs only
 ```
 
 `App.tsx` must keep `<MobileHeader />` above `<Routes>`. Canonical routes live in `App.tsx` (ignore `ROUTES.tsx.snippet` if it exists). Do not add neighborhood/service/blog-article routes.
@@ -409,6 +409,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/home-valuation/` | `/home-valuation` | `HomeValuation.tsx` | `home-valuation/HomeValuationContent.tsx` | `two-family-page.css` + `home-valuation-page.css` | `homeValuation.ts` |
 | `/mortgage-calculator/` | `/mortgage-calculator` | `MortgageCalculator.tsx` | `mortgage-calculator/MortgageCalculatorContent.tsx` | `two-family-page.css` + `mortgage-calculator-page.css` | `mortgageCalculator.ts` |
 | `/advice-for-buyers-looking-to-purchase-brownstones/` | same path | `BrownstoneBuyingGuide.tsx` | `brownstone/BrownstoneGuideContent.tsx` | `brownstone-guide.css` | `brownstoneGuide.ts` |
+| `/<blog-slug>/` (54 posts) | same path | `BlogArticlePage.tsx` + `blog/registry.ts` | `blog/articles/<slug>/` | `brownstone-guide.css` (shared) | `blog/articles/<slug>/seo.ts` |
 | `/neighborhoods/` | `/neighborhoods` | `Neighborhoods.tsx` | `neighborhoods/NeighborhoodsContent.tsx` | `neighborhoods-page.css` | `neighborhoods.ts` |
 | `/idx-sales/` | `/idx-sales` | `IdxSales.tsx` | `idx/IdxSearchLayout.tsx` | `idx-page.css` | `idxSales.ts` |
 | `/idx-rentals/` | `/idx-rentals` | `IdxRentals.tsx` | `IdxSearchLayout.tsx` | `idx-page.css` | `idxRentals.ts` |
@@ -437,7 +438,7 @@ Keep these **four** `Disallow: /` user-agents (scrapers, not Google/AI):
 
 Path disallows under `User-agent: *` (WordPress leftovers; keep so cutover matches live): `/wp-admin/` (except `admin-ajax.php`), `/wp-json/agentfire/v1/core/cron/`, `/?s=`, `/cgi-bin/`.
 
-**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 64 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
+**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 118 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
 
 ---
 

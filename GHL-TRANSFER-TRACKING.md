@@ -34,7 +34,9 @@ Until GHL replies that it wrote files, **FETCHED and VERIFIED stay empty**.
 2. Save as `<path>` in the Studio project (example: `src/pages/Services.tsx`)
 3. Do not invent routes. Do not edit `src/seo/pages/*.ts`. Do not use page-level `dangerouslySetInnerHTML`.
 
-`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 64 migrated routes in `src/App.tsx` plus `NotMigrated`.
+`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 118 migrated routes in `src/App.tsx` plus `NotMigrated`.
+
+**Note:** Migrated blog articles use `BlogArticleLayout` with article-isolated HTTrack HTML bodies (`dangerouslySetInnerHTML` only inside `.bsg-html`). Do not invent article copy or SEO.
 
 ---
 
@@ -167,6 +169,7 @@ Full image set (hoods, services, slots, blog, Instagram, plan, nbhd): every `pub
 | 2026-08-17 | Added five Bedford-Stuyvesant property pages and three Brooklyn Heights property pages (neighborhoods design system). |
 | 2026-08-17 | Added three Williamsburg property pages and five Crown Heights property/guide pages (neighborhoods design system). |
 | 2026-08-17 | Added five Park Slope property/guide pages (neighborhoods design system), preserving the owner-approved live-source anomalies. |
+| 2026-08-17 | Migrated all 54 remaining blog/article posts onto the Brownstones guide shared layout (`BlogArticleLayout` + per-slug modules under `src/blog/articles/`). Handcrafted Brownstones guide unchanged. Pushed to `main` for GHL raw fetch. |
 
 ---
 
