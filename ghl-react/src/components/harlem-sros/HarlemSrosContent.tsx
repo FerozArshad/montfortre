@@ -224,7 +224,7 @@ export default function HarlemSrosContent() {
           <div data-reveal="" className="contact-map">
             <iframe
               title="Montfort Real Estate on Google Maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93358.50379184153!2d-74.06243581712867!3d40.702571982722695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f60c99d447af%3A0x9de87265556d8408!2s8%20W%20126th%20St%2C%20New%20York%2C%20NY%2010027%2C%20USA!5e0!3m2!1sen!2ses!4v1777298389461!5m2!1sen!2ses"
+              src="https://www.google.com/maps?q=8+West+126th+Street,+New+York,+NY+10027&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />

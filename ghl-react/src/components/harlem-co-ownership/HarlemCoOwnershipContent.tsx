@@ -1,6 +1,6 @@
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
-import "../../styles/harlem-condos-page.css";
+import "../../styles/harlem-co-ownership-page.css";
 import "../../styles/contact-section.css";
 
 const CHECK_ICON = (
@@ -35,17 +35,17 @@ const NEWS_ARTICLES = [
   },
 ] as const;
 
-export default function HarlemCondosContent() {
+export default function HarlemCoOwnershipContent() {
   return (
     <>
       <section className="nbhd-hero" data-screen-label="Service hero">
         <div className="nbhd-hero-ring" />
         <div className="nbhd-hero-inner">
           <div data-reveal="">
-            <h1>Harlem Condos — Expert Guidance for Buyers, Sellers & Investors</h1>
+            <h1>Harlem Co-Ownership — Expert Guidance for Buyers, Sellers & Investors</h1>
             <p className="nbhd-hero-lead">
-              We’ll help you find the right <b>Harlem condo</b> while avoiding overpaying, excessive fees, and properties
-              that don't fit your long-term goals
+              We’ll help you navigate Harlem co-ownership opportunities with confidence, avoiding partnership conflicts,
+              hidden obligations, and costly mistakes
             </p>
             <div className="nbhd-hero-ctas">
               <a href="tel:646-970-1078" className="nbhd-hero-tel">
@@ -91,88 +91,91 @@ export default function HarlemCondosContent() {
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
           <div className="nbhd-intro-copy" data-reveal="">
-            <h2>WHY ARE HARLEM CONDOS IN HIGH DEMAND?</h2>
+            <h2>WHY ARE HARLEM CO-OWNERSHIP PROPERTIES GAINING ATTENTION?</h2>
             <p>
-              Harlem condos continue to attract buyers looking for modern convenience, strong long term value, and access
-              to one of Manhattan’s most vibrant neighborhoods. From boutique developments to luxury high rise
-              residences, Harlem offers a wide range of condominium options for buyers seeking ownership flexibility and
-              contemporary amenities.
+              Co ownership properties in Harlem are becoming an increasingly attractive option for buyers looking for
+              flexibility, affordability, and shared investment opportunities in the Manhattan real estate market.
+              Whether structured as tenant in common arrangements, fractional ownership opportunities, or shared
+              townhouse investments, Harlem co ownership properties provide an alternative path to owning property in
+              New York City.
             </p>
             <p>
-              Many buyers are drawn to Harlem condos because they often provide more space and value compared to other
-              Manhattan neighborhoods. Features such as private balconies, fitness centers, rooftop terraces, doormen,
-              and updated interiors make condo living especially appealing for professionals, first time buyers, and
-              investors alike.
+              Many buyers are drawn to Harlem co ownership opportunities because they can offer access to larger homes,
+              historic properties, and desirable neighborhoods at a lower individual cost compared to traditional
+              ownership. Co ownership can also create opportunities for friends, family members, investors, or multiple
+              buyers to purchase property together while sharing expenses and long term value appreciation.
             </p>
             <p>
-              At the same time, buying a condo in Harlem comes with important considerations. Inventory can move quickly,
-              pricing varies block by block, and building financials, common charges, and future resale potential all
-              play a major role in the decision making process.
+              However, buying into a co ownership property requires careful planning and a strong understanding of legal,
+              financial, and operational responsibilities. Ownership agreements, financing structures, shared maintenance
+              obligations, and exit strategies all need to be clearly defined before moving forward.
             </p>
             <p>
-              Without local expertise, buyers may miss opportunities or overlook details that affect long term value.
-              Understanding the Harlem condo market requires knowledge of new developments, established buildings,
-              neighborhood growth, and investment trends across the area.
+              Without experienced guidance, buyers may face unexpected complications related to decision making,
+              financing approval, or future resale considerations. Understanding the structure of the agreement and the
+              long term goals of all parties involved is essential for a successful co ownership arrangement.
             </p>
-            <h2>OUR HARLEM CONDO SERVICES</h2>
+            <h2>OUR HARLEM CO-OWNERSHIP SERVICES</h2>
             <p>
-              We guide buyers through every stage of the Harlem condo buying process with a strategy tailored to their
-              goals, budget, and lifestyle needs.
-            </p>
-            <p>
-              Our property search services help identify condos that match your priorities, whether you are looking for a
-              luxury penthouse, a modern starter home, or an investment property with strong appreciation potential. We
-              provide access to available listings, upcoming opportunities, and valuable market insights throughout
-              Harlem.
+              We help buyers navigate Harlem co ownership opportunities with a clear and strategic approach tailored to
+              their goals and ownership structure.
             </p>
             <p>
-              When you find the right condo, we assist with offer strategy, pricing analysis, and negotiations to help
-              you secure the best possible terms. In competitive Manhattan markets, strong representation can make a
-              significant difference.
+              Our services include identifying suitable properties for shared ownership, evaluating investment potential,
+              and helping buyers understand the legal and financial considerations associated with co ownership
+              arrangements. Whether you are purchasing with family, friends, or investment partners, we help simplify
+              the process from start to finish.
             </p>
             <p>
-              We also help buyers review important building information including financial health, common charges, tax
-              considerations, reserve funds, and building rules. Understanding these details is essential before moving
-              forward with a purchase.
+              We assist with property analysis, pricing strategy, negotiations, and coordination with experienced real
+              estate attorneys and lenders familiar with co ownership transactions in New York City.
             </p>
             <p>
-              From inspections and attorney coordination to contract review and closing preparation, we help keep every
-              step organized and stress free.
-            </p>
-            <h2>BUYING A CONDO IN HARLEM</h2>
-            <p>
-              Harlem offers a diverse condo market with options ranging from historic conversions to sleek new
-              construction developments. Buyers can find residences that combine modern finishes with the neighborhood’s
-              rich architectural and cultural history.
+              Understanding shared responsibilities is critical in any co ownership structure. We help buyers evaluate
+              maintenance obligations, occupancy rights, future sale considerations, and ownership agreements to ensure
+              expectations are aligned before closing.
             </p>
             <p>
-              Many Harlem condo buildings are located near restaurants, parks, subway lines, and shopping, making the
-              neighborhood attractive for both homeowners and investors. Areas such as Central Harlem, South Harlem, and
-              West Harlem continue to see strong buyer demand and ongoing development.
+              From property search to contract negotiations and transaction management, we provide support throughout
+              every stage of the process.
+            </p>
+            <h2>BUYING A CO-OWNERSHIP PROPERTY IN HARLEM</h2>
+            <p>
+              Harlem offers a unique mix of historic townhouses, multi unit buildings, and spacious residences that can
+              be ideal for co ownership arrangements. Buyers often explore co ownership opportunities as a way to secure
+              larger properties or enter the Manhattan market more affordably.
             </p>
             <p>
-              For buyers seeking flexibility, condos often provide a simpler ownership structure compared to co ops, with
-              fewer restrictions and more financing options. This makes Harlem condos especially appealing for
-              international buyers, investors, and those planning future rental opportunities.
+              Many Harlem properties offer strong long term value potential while providing access to cultural landmarks,
+              restaurants, transportation, and vibrant residential communities. Co ownership can be especially appealing
+              for buyers looking to combine lifestyle goals with investment opportunities.
             </p>
             <p>
-              Whether you are purchasing your first Manhattan property or expanding your real estate portfolio,
-              understanding market trends and building quality is essential for making a confident investment.
-            </p>
-            <h2>WHY WORK WITH US FOR HARLEM CONDOS</h2>
-            <p>
-              We understand the Harlem condo market and the factors that influence property value, buyer demand, and long
-              term appreciation. Our focus is on helping buyers find the right property while protecting their interests
-              throughout the transaction.
+              At the same time, each co ownership property comes with unique considerations depending on the building
+              structure, financing options, and ownership agreement. Buyers should fully understand how decisions will be
+              managed, how expenses will be divided, and what happens if one owner decides to sell in the future.
             </p>
             <p>
-              You receive clear communication, local expertise, and personalized support from the first showing to
-              closing day. We help simplify complex decisions and provide honest guidance at every stage of the process.
+              With local market expertise and knowledge of Harlem property trends, we help buyers evaluate opportunities
+              carefully and move forward with confidence.
             </p>
-            <p>Our goal is to make your Harlem condo purchase as smooth, informed, and successful as possible.</p>
+            <h2>WHY WORK WITH US FOR HARLEM CO-OWNERSHIP PROPERTIES</h2>
             <p>
-              If you are considering buying a condo in Harlem, we are ready to help you explore the market and find the
-              right fit for your lifestyle and investment goals.
+              We understand the complexities involved in co ownership real estate transactions and the importance of
+              creating a structure that works for all parties involved.
+            </p>
+            <p>
+              You receive personalized guidance, transparent communication, and support throughout the entire process. We
+              help buyers navigate legal considerations, evaluate property value, and make informed decisions that align
+              with both short term and long term goals.
+            </p>
+            <p>
+              Our goal is to make Harlem co ownership purchases clear, organized, and successful from the initial search
+              through closing day.
+            </p>
+            <p>
+              If you are considering a Harlem co ownership property, we are ready to help you explore available
+              opportunities and navigate the process with confidence.
             </p>
           </div>
         </div>
