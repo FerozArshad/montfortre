@@ -19,6 +19,11 @@ import BuyingABrownstoneInNyc from "./pages/BuyingABrownstoneInNyc";
 import BuyingACondoInNyc from "./pages/BuyingACondoInNyc";
 import BuyingSroInNyc from "./pages/BuyingSroInNyc";
 import CoOwnershipBuyingInNyc from "./pages/CoOwnershipBuyingInNyc";
+import SellingBrownstonesInNyc from "./pages/SellingBrownstonesInNyc";
+import SellingCondosInNyc from "./pages/SellingCondosInNyc";
+import SellingCoOpsInNyc from "./pages/SellingCoOpsInNyc";
+import SellingProbatePropertiesInNyc from "./pages/SellingProbatePropertiesInNyc";
+import SellingSrosInNyc from "./pages/SellingSrosInNyc";
 import Chelsea from "./pages/Chelsea";
 import ChelseaCoOps from "./pages/ChelseaCoOps";
 import ChelseaTownhouses from "./pages/ChelseaTownhouses";
@@ -138,6 +143,11 @@ export default function App() {
         <Route path="/buying-a-brownstone-in-nyc" element={<BuyingABrownstoneInNyc />} />
         <Route path="/buying-sro-in-nyc" element={<BuyingSroInNyc />} />
         <Route path="/co-ownership-buying-in-nyc" element={<CoOwnershipBuyingInNyc />} />
+        <Route path="/selling-probate-properties-in-nyc" element={<SellingProbatePropertiesInNyc />} />
+        <Route path="/selling-sros-in-nyc" element={<SellingSrosInNyc />} />
+        <Route path="/selling-co-ops-in-nyc" element={<SellingCoOpsInNyc />} />
+        <Route path="/selling-condos-in-nyc" element={<SellingCondosInNyc />} />
+        <Route path="/selling-brownstones-in-nyc" element={<SellingBrownstonesInNyc />} />
         <Route path="/nyc-buyers-agent-service" element={<NycBuyersAgentService />} />
         <Route path="/nyc-listing-agent-service" element={<NycListingAgentService />} />
         <Route

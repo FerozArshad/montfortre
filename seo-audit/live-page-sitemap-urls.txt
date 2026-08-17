@@ -127,11 +127,11 @@
 [MIGRATED] https://montfortre.com/buying-a-brownstone-in-nyc/
 [MIGRATED] https://montfortre.com/buying-sro-in-nyc/
 [MIGRATED] https://montfortre.com/co-ownership-buying-in-nyc/
-[LEFT] https://montfortre.com/selling-condos-in-nyc/
-[LEFT] https://montfortre.com/selling-brownstones-in-nyc/
-[LEFT] https://montfortre.com/selling-sros-in-nyc/
-[LEFT] https://montfortre.com/selling-co-ops-in-nyc/
-[LEFT] https://montfortre.com/selling-probate-properties-in-nyc/
+[MIGRATED] https://montfortre.com/selling-condos-in-nyc/
+[MIGRATED] https://montfortre.com/selling-brownstones-in-nyc/
+[MIGRATED] https://montfortre.com/selling-sros-in-nyc/
+[MIGRATED] https://montfortre.com/selling-co-ops-in-nyc/
+[MIGRATED] https://montfortre.com/selling-probate-properties-in-nyc/
 [MIGRATED] https://montfortre.com/2-family-house-for-sale-nyc/
 [LEFT] https://montfortre.com/3-family-house-for-sale-nyc/
 [LEFT] https://montfortre.com/4-family-house-for-sale-nyc/

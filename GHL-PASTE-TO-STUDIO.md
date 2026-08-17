@@ -629,6 +629,36 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/CoOwners
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/co-ownership-buying-in-nyc/CoOwnershipBuyingInNycContent.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/coOwnershipBuyingInNyc.ts
 
+## 9aw. SellingProbatePropertiesInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SellingProbatePropertiesInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/selling-probate-properties-in-nyc/SellingProbatePropertiesInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/sellingProbatePropertiesInNyc.ts
+
+## 9ax. SellingSrosInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SellingSrosInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/selling-sros-in-nyc/SellingSrosInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/sellingSrosInNyc.ts
+
+## 9ay. SellingCoOpsInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SellingCoOpsInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/selling-co-ops-in-nyc/SellingCoOpsInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/sellingCoOpsInNyc.ts
+
+## 9az. SellingCondosInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SellingCondosInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/selling-condos-in-nyc/SellingCondosInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/sellingCondosInNyc.ts
+
+## 9ba. SellingBrownstonesInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SellingBrownstonesInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/selling-brownstones-in-nyc/SellingBrownstonesInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/sellingBrownstonesInNyc.ts
+
 ---
 
 ## 9ar. Privacy Policy + HTML Sitemap

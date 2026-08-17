@@ -34,7 +34,7 @@ Until GHL replies that it wrote files, **FETCHED and VERIFIED stay empty**.
 2. Save as `<path>` in the Studio project (example: `src/pages/Services.tsx`)
 3. Do not invent routes. Do not edit `src/seo/pages/*.ts`. Do not use page-level `dangerouslySetInnerHTML`.
 
-`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 124 migrated URLs in `src/App.tsx` plus `NotMigrated`.
+`App.tsx` must keep `<MobileHeader />` above `<Routes>` with the 129 migrated URLs in `src/App.tsx` plus `NotMigrated`.
 
 **Note:** Migrated blog articles use `BlogArticleLayout` with article-isolated HTTrack HTML bodies (`dangerouslySetInnerHTML` only inside `.bsg-html`). Do not invent article copy or SEO.
 
@@ -173,6 +173,7 @@ Full image set (hoods, services, slots, blog, Instagram, plan, nbhd): every `pub
 | 2026-08-17 | Added five Park Slope property/guide pages (neighborhoods design system), preserving the owner-approved live-source anomalies. |
 | 2026-08-17 | Migrated all 54 remaining blog/article posts onto the Brownstones guide shared layout (`BlogArticleLayout` + per-slug modules under `src/blog/articles/`). Handcrafted Brownstones guide unchanged. Pushed to `main` for GHL raw fetch. |
 | 2026-08-17 | Added `/buying-a-condo-in-nyc/`, `/buying-a-brownstone-in-nyc/`, `/buying-sro-in-nyc/`, and `/co-ownership-buying-in-nyc/` (2-family buyer-guide system). |
+| 2026-08-17 | Added `/selling-probate-properties-in-nyc/`, `/selling-sros-in-nyc/`, `/selling-co-ops-in-nyc/`, `/selling-condos-in-nyc/`, and `/selling-brownstones-in-nyc/` (2-family seller-guide system; shared `buying-guides-page.css`). |
 
 ---
 
