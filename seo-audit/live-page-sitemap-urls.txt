@@ -141,9 +141,9 @@
 [MIGRATED] https://montfortre.com/harlem-condos/
 [MIGRATED] https://montfortre.com/harlem-sros/
 [MIGRATED] https://montfortre.com/harlem-co-ownership/
-[LEFT] https://montfortre.com/upper-west-side-townhouses/
-[LEFT] https://montfortre.com/upper-west-side-condos/
-[LEFT] https://montfortre.com/upper-west-side-co-ops-2/
+[MIGRATED] https://montfortre.com/upper-west-side-townhouses/
+[MIGRATED] https://montfortre.com/upper-west-side-condos/
+[MIGRATED] https://montfortre.com/upper-west-side-co-ops-2/
 [LEFT] https://montfortre.com/upper-east-side-townhouses/
 [LEFT] https://montfortre.com/upper-east-side-condos/
 [LEFT] https://montfortre.com/upper-east-side-co-ops/

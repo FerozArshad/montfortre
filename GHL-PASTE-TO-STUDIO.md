@@ -329,6 +329,27 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/har
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-co-ownership-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlemCoOwnership.ts
 
+## 9k. UpperWestSideCoOps
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/UpperWestSideCoOps.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-west-side-co-ops-2/UpperWestSideCoOpsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/upper-west-side-co-ops-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperWestSideCoOps.ts
+
+## 9l. UpperWestSideCondos
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/UpperWestSideCondos.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-west-side-condos/UpperWestSideCondosContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/upper-west-side-condos-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperWestSideCondos.ts
+
+## 9m. UpperWestSideTownhouses
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/UpperWestSideTownhouses.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/upper-west-side-townhouses/UpperWestSideTownhousesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/upper-west-side-townhouses-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/upperWestSideTownhouses.ts
+
 ---
 
 ## 10. Remaining migrated pages (full site)
