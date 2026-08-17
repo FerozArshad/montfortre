@@ -11,7 +11,7 @@
 | Live sitemap index | https://montfortre.com/sitemap_index.xml |
 | Live **page** sitemap | https://montfortre.com/page-sitemap.xml |
 | Live post sitemap | https://montfortre.com/post-sitemap.xml |
-| SPA sitemap (this repo) | `public/sitemap.xml` — 118 migrated URLs only |
+| SPA sitemap (this repo) | `public/sitemap.xml` — 120 migrated URLs only |
 | Preview | https://montfortre-live.vibepreview.com/ |
 | Local | `npm run dev` (Vite; port may be 5173+) |
 | Phone | `(646) 970-1078` |
@@ -85,7 +85,7 @@ Shell / chrome: `src/styles/page-shell.css`, `mobile-layout.css`, `desktop-nav.c
 
 Home sections: `home-hero.css`, `home-promises.css`, `home-hidden-cost.css`, `home-founder.css`, `home-areas.css`, `home-expect.css`, `home-plan.css`, `home-services.css`, `home-reviews.css`, `home-instagram.css`, `home-included.css`, `home-listings.css`, `home-download.css`.
 
-Inner pages: `services-page.css`, `blog-page.css`, `stanley-page.css`, `success-page.css`, `brownstone-guide.css`, `neighborhoods-page.css`, `about-page.css`, `harlem-page.css`, `two-family-page.css`, `home-valuation-page.css`, `mortgage-calculator-page.css`, `harlem-brownstones-page.css`, `harlem-condos-page.css`, `harlem-sros-page.css`, `harlem-co-ownership-page.css`, `idx-page.css`, `not-migrated.css`.
+Inner pages: `services-page.css`, `blog-page.css`, `stanley-page.css`, `success-page.css`, `brownstone-guide.css`, `neighborhoods-page.css`, `about-page.css`, `harlem-page.css`, `two-family-page.css`, `home-valuation-page.css`, `mortgage-calculator-page.css`, `harlem-brownstones-page.css`, `harlem-condos-page.css`, `harlem-sros-page.css`, `harlem-co-ownership-page.css`, `legal-pages.css`, `idx-page.css`, `not-migrated.css`.
 
 Content components **import** their CSS. Desktop ≥1440px stays pixel-identical. Mobile/tablet rules live in the **same CSS file** under `@media (max-width: …)`. Prefer `:hover` over `style-hover`. `useStyleHover()` still runs in `PageShell` in case any leftover attribute exists.
 
@@ -255,7 +255,7 @@ ghl-react/
     ├── instagram/
     ├── favicon.svg
     ├── robots.txt
-    └── sitemap.xml            # 118 migrated URLs only
+    └── sitemap.xml            # 120 migrated URLs only
 ```
 
 `App.tsx` must keep `<MobileHeader />` above `<Routes>`. Canonical routes live in `App.tsx` (ignore `ROUTES.tsx.snippet` if it exists). Do not add neighborhood/service/blog-article routes.
@@ -344,7 +344,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 
 ## 3. Pages done vs left (sitemap)
 
-**Migrated (64)** — also listed in `public/sitemap.xml` and `src/App.tsx`:
+**Migrated (120 URLs)** — also listed in `public/sitemap.xml` and `src/App.tsx`:
 
 | URL (trailing slash in links) | Router path | Page | Content | CSS | SEO module |
 |---|---|---|---|---|---|
@@ -413,8 +413,10 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/neighborhoods/` | `/neighborhoods` | `Neighborhoods.tsx` | `neighborhoods/NeighborhoodsContent.tsx` | `neighborhoods-page.css` | `neighborhoods.ts` |
 | `/idx-sales/` | `/idx-sales` | `IdxSales.tsx` | `idx/IdxSearchLayout.tsx` | `idx-page.css` | `idxSales.ts` |
 | `/idx-rentals/` | `/idx-rentals` | `IdxRentals.tsx` | `IdxSearchLayout.tsx` | `idx-page.css` | `idxRentals.ts` |
+| `/privacy-policy/` | `/privacy-policy` | `PrivacyPolicy.tsx` | `legal/PrivacyPolicyContent.tsx` | `legal-pages.css` | `privacyPolicy.ts` |
+| `/sitemap/` | `/sitemap` | `SiteMap.tsx` | `legal/SiteMapContent.tsx` | `legal-pages.css` | `siteMap.ts` |
 
-**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships **64**. Examples still live: `/prospect-heights/`, `/3-family-house-for-sale-nyc/`, listing addresses, service subpages, blog posts (`post-sitemap.xml`). **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`).
+**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships **120 URLs** including 55 blog posts. Examples still live: `/prospect-heights/`, `/3-family-house-for-sale-nyc/`, listing addresses, and service subpages. **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`).
 
 Internal `<a href>` uses trailing slashes (`/harlem/`). React Router `path` does not.
 
@@ -438,7 +440,7 @@ Keep these **four** `Disallow: /` user-agents (scrapers, not Google/AI):
 
 Path disallows under `User-agent: *` (WordPress leftovers; keep so cutover matches live): `/wp-admin/` (except `admin-ajax.php`), `/wp-json/agentfire/v1/core/cron/`, `/?s=`, `/cgi-bin/`.
 
-**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 118 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
+**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 120 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
 
 ---
 
@@ -527,6 +529,7 @@ If raw fetch truncates, paste **one full file per GHL message** using the paths 
 | `GHL-STUDIO-STRUCTURE.md` | Directory checklist (keep aligned with §2) |
 | `HANDOFF.md` | Platform launch blockers + SEO audit history |
 | `HANDOFF-SECTION-seo-launch-readiness.md` | Platform vs repo SEO |
+| `HANDOFF-SECTION-blog-articles.md` | All 55 blog articles (shared guide design + registry) |
 | `README.md` | Human README |
 
 Canonical routes: `src/App.tsx`. Git folder: `d:\montfortre\ghl-react`.

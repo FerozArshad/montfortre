@@ -1,8 +1,8 @@
-﻿# Unique loc URLs from https://montfortre.com/page-sitemap.xml (fetched 2026-08-14)
+# Unique loc URLs from https://montfortre.com/page-sitemap.xml (fetched 2026-08-14)
 # SPA migrated routes are marked [MIGRATED]. All others stay NotMigrated until owner asks.
 
 [MIGRATED] https://montfortre.com/
-[LEFT] https://montfortre.com/privacy-policy/
+[MIGRATED] https://montfortre.com/privacy-policy/
 [LEFT] https://montfortre.com/home-team/
 [LEFT] https://montfortre.com/why-choose-us/
 [MIGRATED] https://montfortre.com/success-stories/
@@ -45,7 +45,7 @@
 [LEFT] https://montfortre.com/manhattan-neighborhoods/
 [LEFT] https://montfortre.com/newsletter/
 [LEFT] https://montfortre.com/queens-neighborhoods/
-[LEFT] https://montfortre.com/sitemap/
+[MIGRATED] https://montfortre.com/sitemap/
 [LEFT] https://montfortre.com/thank-you/
 [LEFT] https://montfortre.com/the-definitive-guide-on-how-to-upsize-into-a-new-home/
 [LEFT] https://montfortre.com/the-essential-guide-on-how-to-buy-like-a-pro/

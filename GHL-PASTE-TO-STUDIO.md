@@ -604,6 +604,20 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/park
 
 ---
 
+## 9ar. Privacy Policy + HTML Sitemap
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/PrivacyPolicy.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/legal/PrivacyPolicyContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/privacyPolicy.ts
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SiteMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/legal/SiteMapContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/siteMap.ts
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/legal-pages.css
+
+---
+
 ## 10. Remaining migrated pages (full site)
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Home.tsx

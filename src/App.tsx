@@ -51,7 +51,9 @@ import ParkSlopeCoOps from "./pages/ParkSlopeCoOps";
 import ParkSlopeCoOwnership from "./pages/ParkSlopeCoOwnership";
 import ParkSlopeCondo from "./pages/ParkSlopeCondo";
 import ParkSlopeSro from "./pages/ParkSlopeSro";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Services from "./pages/Services";
+import SiteMap from "./pages/SiteMap";
 import StanleyMontfort from "./pages/StanleyMontfort";
 import SuccessStories from "./pages/SuccessStories";
 import TwoFamilyHouseForSaleNyc from "./pages/TwoFamilyHouseForSaleNyc";
@@ -146,6 +148,8 @@ export default function App() {
         <Route path="/neighborhoods" element={<Neighborhoods />} />
         <Route path="/idx-sales" element={<IdxSales />} />
         <Route path="/idx-rentals" element={<IdxRentals />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/sitemap" element={<SiteMap />} />
         <Route path="*" element={<NotMigrated />} />
       </Routes>
     </BrowserRouter>

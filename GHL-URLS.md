@@ -28,6 +28,13 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/idxRentals.ts
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/layout/DesktopHeader.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/layout/SiteFooter.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/PrivacyPolicy.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/legal/PrivacyPolicyContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/privacyPolicy.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SiteMap.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/legal/SiteMapContent.tsx
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/siteMap.ts
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/legal-pages.css
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/about/AboutUsContent.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/stanley/StanleyMontfortContent.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/success/SuccessStoriesContent.tsx
@@ -48,6 +55,7 @@ Paste-ready grouped list (shared first, then pages): `GHL-PASTE-TO-STUDIO.md`
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/TRANSFER-GUIDE.md
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/HANDOFF.md
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/HANDOFF-SECTION-seo-launch-readiness.md
+- https://raw.githubusercontent.com/FerozArshad/montfortre/main/HANDOFF-SECTION-blog-articles.md
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/main.tsx
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/responsive.css
 - https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/HarlemSchools.tsx

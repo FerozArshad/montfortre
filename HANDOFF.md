@@ -80,6 +80,7 @@ Our repo is the source of truth for all SEO. The deployed build currently overri
 |------|--------|
 | `DOCUMENTATION.md` | Architecture, how to write code, directories |
 | `HANDOFF-SECTION-seo-launch-readiness.md` | SEO/launch readiness: platform blockers, applied fixes, open client decisions |
+| `HANDOFF-SECTION-blog-articles.md` | All 55 blog posts: shared Brownstone-guide design, registry architecture, ship status (`main` @ `e34a126`) |
 
 ## Round-2 SEO audit — repo fixes applied (2026-08-10)
 
