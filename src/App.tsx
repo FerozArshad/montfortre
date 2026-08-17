@@ -72,6 +72,9 @@ import NycBrownstoneFreeHomeValuation from "./pages/NycBrownstoneFreeHomeValuati
 import NycSroFreeHomeValuation from "./pages/NycSroFreeHomeValuation";
 import NycCoOpFreeHomeValuation from "./pages/NycCoOpFreeHomeValuation";
 import NycCondoFreeHomeValuation from "./pages/NycCondoFreeHomeValuation";
+import NycFirstTimeHomeBuyerMortages from "./pages/NycFirstTimeHomeBuyerMortages";
+import NycBrownstoneMortgages from "./pages/NycBrownstoneMortgages";
+import NycSroMortgages from "./pages/NycSroMortgages";
 import UpperEastSide from "./pages/UpperEastSide";
 import UpperEastSideCoOps from "./pages/UpperEastSideCoOps";
 import UpperEastSideCondos from "./pages/UpperEastSideCondos";
@@ -168,6 +171,9 @@ export default function App() {
         />
         <Route path="/home-valuation" element={<HomeValuation />} />
         <Route path="/mortgage-calculator" element={<MortgageCalculator />} />
+        <Route path="/nyc-first-time-home-buyer-mortages" element={<NycFirstTimeHomeBuyerMortages />} />
+        <Route path="/nyc-brownstone-mortgages" element={<NycBrownstoneMortgages />} />
+        <Route path="/nyc-sro-mortgages" element={<NycSroMortgages />} />
         <Route
           path="/advice-for-buyers-looking-to-purchase-brownstones"
           element={<BrownstoneBuyingGuide />}

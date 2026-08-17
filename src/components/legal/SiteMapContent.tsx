@@ -38,6 +38,9 @@ const SERVICE_LINKS: readonly SiteLink[] = [
   { href: "/selling-brownstones-in-nyc/", label: "Selling Brownstones in NYC" },
   { href: "/home-valuation/", label: "Free Home Valuation" },
   { href: "/mortgage-calculator/", label: "Mortgage Calculator" },
+  { href: "/nyc-first-time-home-buyer-mortages/", label: "NYC First-Time Home Buyer Mortgages" },
+  { href: "/nyc-brownstone-mortgages/", label: "NYC Brownstone Mortgages" },
+  { href: "/nyc-sro-mortgages/", label: "NYC SRO Mortgages" },
   { href: "/idx-sales/", label: "Search Homes for Sale" },
   { href: "/idx-rentals/", label: "Search Rentals" },
 ];

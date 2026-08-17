@@ -695,6 +695,24 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycCondo
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-condo-free-home-valuation/NycCondoFreeHomeValuationContent.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycCondoFreeHomeValuation.ts
 
+## 9bh. NycFirstTimeHomeBuyerMortages
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycFirstTimeHomeBuyerMortages.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-first-time-home-buyer-mortages/NycFirstTimeHomeBuyerMortagesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycFirstTimeHomeBuyerMortages.ts
+
+## 9bi. NycBrownstoneMortgages
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycBrownstoneMortgages.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-brownstone-mortgages/NycBrownstoneMortgagesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycBrownstoneMortgages.ts
+
+## 9bj. NycSroMortgages
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycSroMortgages.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-sro-mortgages/NycSroMortgagesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycSroMortgages.ts
+
 ---
 
 ## 9ar. Privacy Policy + HTML Sitemap

@@ -11,7 +11,7 @@
 | Live sitemap index | https://montfortre.com/sitemap_index.xml |
 | Live **page** sitemap | https://montfortre.com/page-sitemap.xml |
 | Live post sitemap | https://montfortre.com/post-sitemap.xml |
-| SPA sitemap (this repo) | `public/sitemap.xml` — 135 migrated URLs only |
+| SPA sitemap (this repo) | `public/sitemap.xml` — 138 migrated URLs only |
 | Preview | https://montfortre-live.vibepreview.com/ |
 | Local | `npm run dev` (Vite; port may be 5173+) |
 | Phone | `(646) 970-1078` |
@@ -253,6 +253,9 @@ ghl-react/
 │   │   ├── nyc-co-op-free-home-valuation/NycCoOpFreeHomeValuationContent.tsx
 │   │   ├── nyc-condo-free-home-valuation/NycCondoFreeHomeValuationContent.tsx
 │   │   ├── mortgage-calculator/MortgageCalculatorContent.tsx
+│   │   ├── nyc-first-time-home-buyer-mortages/NycFirstTimeHomeBuyerMortagesContent.tsx
+│   │   ├── nyc-brownstone-mortgages/NycBrownstoneMortgagesContent.tsx
+│   │   ├── nyc-sro-mortgages/NycSroMortgagesContent.tsx
 │   │   ├── brownstone/BrownstoneGuideContent.tsx
 │   │   ├── neighborhoods/NeighborhoodsContent.tsx
 │   │   └── idx/IdxSearchLayout.tsx
@@ -274,7 +277,7 @@ ghl-react/
     ├── instagram/
     ├── favicon.svg
     ├── robots.txt
-    └── sitemap.xml            # 135 migrated URLs only
+    └── sitemap.xml            # 138 migrated URLs only
 ```
 
 `App.tsx` must keep `<MobileHeader />` above `<Routes>`. Canonical routes live in `App.tsx` (ignore `ROUTES.tsx.snippet` if it exists). Do not add neighborhood/service/blog-article routes.
@@ -363,7 +366,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 
 ## 3. Pages done vs left (sitemap)
 
-**Migrated (135 URLs)** — also listed in `public/sitemap.xml` and `src/App.tsx`:
+**Migrated (138 URLs)** — also listed in `public/sitemap.xml` and `src/App.tsx`:
 
 | URL (trailing slash in links) | Router path | Page | Content | CSS | SEO module |
 |---|---|---|---|---|---|
@@ -442,6 +445,9 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/nyc-multifamily-real-estate-agent-service/` | `/nyc-multifamily-real-estate-agent-service` | `NycMultifamilyRealEstateAgentService.tsx` | `nyc-multifamily-agent/NycMultifamilyContent.tsx` | `two-family-page.css` + `nyc-multifamily-agent-page.css` | `nycMultifamily.ts` |
 | `/home-valuation/` | `/home-valuation` | `HomeValuation.tsx` | `home-valuation/HomeValuationContent.tsx` | `two-family-page.css` + `home-valuation-page.css` | `homeValuation.ts` |
 | `/mortgage-calculator/` | `/mortgage-calculator` | `MortgageCalculator.tsx` | `mortgage-calculator/MortgageCalculatorContent.tsx` | `two-family-page.css` + `mortgage-calculator-page.css` | `mortgageCalculator.ts` |
+| `/nyc-first-time-home-buyer-mortages/` | `/nyc-first-time-home-buyer-mortages` | `NycFirstTimeHomeBuyerMortages.tsx` | `nyc-first-time-home-buyer-mortages/NycFirstTimeHomeBuyerMortagesContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `nycFirstTimeHomeBuyerMortages.ts` |
+| `/nyc-brownstone-mortgages/` | `/nyc-brownstone-mortgages` | `NycBrownstoneMortgages.tsx` | `nyc-brownstone-mortgages/NycBrownstoneMortgagesContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `nycBrownstoneMortgages.ts` |
+| `/nyc-sro-mortgages/` | `/nyc-sro-mortgages` | `NycSroMortgages.tsx` | `nyc-sro-mortgages/NycSroMortgagesContent.tsx` | `two-family-page.css` + `buying-guides-page.css` | `nycSroMortgages.ts` |
 | `/advice-for-buyers-looking-to-purchase-brownstones/` | same path | `BrownstoneBuyingGuide.tsx` | `brownstone/BrownstoneGuideContent.tsx` | `brownstone-guide.css` | `brownstoneGuide.ts` |
 | `/<blog-slug>/` (54 posts) | same path | `BlogArticlePage.tsx` + `blog/registry.ts` | `blog/articles/<slug>/` | `brownstone-guide.css` (shared) | `blog/articles/<slug>/seo.ts` |
 | `/neighborhoods/` | `/neighborhoods` | `Neighborhoods.tsx` | `neighborhoods/NeighborhoodsContent.tsx` | `neighborhoods-page.css` | `neighborhoods.ts` |
@@ -450,7 +456,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/privacy-policy/` | `/privacy-policy` | `PrivacyPolicy.tsx` | `legal/PrivacyPolicyContent.tsx` | `legal-pages.css` | `privacyPolicy.ts` |
 | `/sitemap/` | `/sitemap` | `SiteMap.tsx` | `legal/SiteMapContent.tsx` | `legal-pages.css` | `siteMap.ts` |
 
-**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships **135 URLs** including 55 blog posts. Examples still live: `/prospect-heights/`, listing addresses, and remaining service subpages. **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`).
+**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships **138 URLs** including 55 blog posts. Examples still live: `/prospect-heights/`, listing addresses, and remaining service subpages. **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`).
 
 Internal `<a href>` uses trailing slashes (`/harlem/`). React Router `path` does not.
 
@@ -474,7 +480,7 @@ Keep these **four** `Disallow: /` user-agents (scrapers, not Google/AI):
 
 Path disallows under `User-agent: *` (WordPress leftovers; keep so cutover matches live): `/wp-admin/` (except `admin-ajax.php`), `/wp-json/agentfire/v1/core/cron/`, `/?s=`, `/cgi-bin/`.
 
-**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 135 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
+**Sitemap line difference (expected):** live file points at `https://montfortre.com/sitemap_index.xml`. This repo points at `https://montfortre.com/sitemap.xml` because the SPA only publishes the 138 migrated URLs. Do not paste the full WP sitemap into `public/sitemap.xml` until those pages exist. Host must actually serve these two files at the web root (`GHL-LAUNCH-CHECKLIST.md`).
 
 ---
 
