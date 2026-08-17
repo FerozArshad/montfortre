@@ -915,7 +915,7 @@
   }
 }
 
-@media (max-width: 1023.98px) {
+@media (max-width: 1024px) {
   .nbhd-hero,
   .nbhd-promises-sec,
   .nbhd-intro,
@@ -943,7 +943,7 @@
   .nbhd-promise:nth-child(3) {
     padding: 0 0 28px;
     border-right: none;
-    border-bottom: 1px solid rgba(201, 138, 44, 0.24);
+    border-bottom: none;
     text-align: left;
     justify-self: stretch;
   }
