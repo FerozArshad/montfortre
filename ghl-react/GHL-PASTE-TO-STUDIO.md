@@ -345,6 +345,18 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/har
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-brownstones-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlemBrownstones.ts
 
+## 9g2. HarlemBrownstonesForSale
+
+Gated IDX listings page. Also re-fetch Harlem nav/data files if updating the Harlem hub:
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/HarlemBrownstonesForSale.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem-brownstones-for-sale/HarlemBrownstonesForSaleContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-brownstones-for-sale.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlemBrownstonesForSale.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/harlemGuide.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem/HarlemContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/sitemap.xml
+
 ## 9h. HarlemCondos
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/HarlemCondos.tsx

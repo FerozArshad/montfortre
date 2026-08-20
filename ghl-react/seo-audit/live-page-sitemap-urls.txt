@@ -8,7 +8,7 @@
 [MIGRATED] https://montfortre.com/success-stories/
 [LEFT] https://montfortre.com/upper-west-side-townhouses-for-sale/
 [LEFT] https://montfortre.com/upper-west-side-apartments-for-sale/
-[LEFT] https://montfortre.com/harlem-brownstones-for-sale/
+[DONE] https://montfortre.com/harlem-brownstones-for-sale/
 [LEFT] https://montfortre.com/124-west-131st-street-2/
 [LEFT] https://montfortre.com/nyc-brownstones-parking/
 [LEFT] https://montfortre.com/whats-my-home-worth/

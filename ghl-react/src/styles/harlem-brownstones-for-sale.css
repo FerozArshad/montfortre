@@ -1,0 +1,359 @@
+/* Harlem Brownstones For Sale — gated IDX listings */
+
+.hbfs-page {
+  --hbfs-ink: #0f1729;
+  --hbfs-navy: #113b5f;
+  --hbfs-gold: #c98a2c;
+  --hbfs-cream: #f9f6e6;
+  --hbfs-line: #e0d9b8;
+}
+
+.hbfs-root {
+  background: #f7f4ea;
+}
+
+.hbfs-hero {
+  position: relative;
+  min-height: min(70vh, 620px);
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  color: #fff;
+}
+
+.hbfs-hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.hbfs-hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(9, 14, 26, 0.28) 0%, rgba(9, 14, 26, 0.72) 55%, rgba(9, 14, 26, 0.9) 100%),
+    radial-gradient(ellipse at 18% 12%, rgba(201, 138, 44, 0.28), transparent 48%);
+}
+
+.hbfs-hero-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 110px 0 64px;
+}
+
+.hbfs-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 18px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(249, 246, 230, 0.78);
+}
+
+.hbfs-crumbs a {
+  color: #f5eecb;
+  text-decoration: none;
+}
+
+.hbfs-brand {
+  margin: 0 0 10px;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f5eecb;
+}
+
+.hbfs-hero h1 {
+  margin: 0;
+  max-width: 16ch;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(32px, 5.2vw, 54px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.hbfs-lead {
+  margin: 16px 0 0;
+  max-width: 34rem;
+  font-size: 16px;
+  line-height: 1.55;
+  color: rgba(249, 246, 230, 0.9);
+}
+
+.hbfs-hero-cta,
+.hbfs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 26px;
+  min-height: 48px;
+  padding: 0 26px;
+  border: 0;
+  border-radius: 100px;
+  background: var(--hbfs-gold);
+  color: #0f1729;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.hbfs-hero-cta:hover,
+.hbfs-btn:hover {
+  background: #f5eecb;
+  transform: translateY(-1px);
+}
+
+.hbfs-btn--block {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.hbfs-listings {
+  padding: 56px 0 88px;
+}
+
+.hbfs-listings-inner {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.hbfs-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--hbfs-navy);
+}
+
+.hbfs-kicker-line {
+  width: 36px;
+  height: 2px;
+  background: var(--hbfs-gold);
+}
+
+.hbfs-listings h2 {
+  margin: 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -0.02em;
+  color: var(--hbfs-ink);
+}
+
+.hbfs-listings-lead {
+  margin: 12px 0 28px;
+  max-width: 40rem;
+  color: #5a6478;
+  line-height: 1.55;
+}
+
+.hbfs-locked,
+.hbfs-fallback {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+  padding: 40px 28px;
+  border: 1px solid var(--hbfs-line);
+  border-radius: 16px;
+  background: #fff;
+  color: #5a6478;
+}
+
+.hbfs-locked .hbfs-btn,
+.hbfs-fallback .hbfs-btn {
+  margin-top: 4px;
+}
+
+.hbfs-frame {
+  display: block;
+  width: 100%;
+  height: 1200px;
+  border: 1px solid var(--hbfs-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.hbfs-footnote {
+  margin: 18px 0 0;
+  font-size: 14px;
+  color: #5a6478;
+}
+
+.hbfs-footnote a {
+  color: var(--hbfs-navy);
+}
+
+/* Gate modal */
+.hbfs-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(9, 14, 26, 0.74);
+  backdrop-filter: blur(5px);
+  padding: 40px 20px;
+  overflow-y: auto;
+  animation: hbfs-fade 0.22s ease;
+}
+
+@keyframes hbfs-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hbfs-gate-card {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 48px 36px 36px;
+  border: 1px solid var(--hbfs-line);
+  border-radius: 20px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 40px 90px rgba(9, 14, 26, 0.42);
+}
+
+.hbfs-gate-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  min-height: 36px;
+  padding: 0 16px;
+  border-radius: 100px;
+  border: 1px solid var(--hbfs-line);
+  background: #f5eecb;
+  color: var(--hbfs-navy);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hbfs-gate-portrait {
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 20px;
+  border-radius: 100px;
+  overflow: hidden;
+  border: 3px solid rgba(201, 138, 44, 0.55);
+  background: #e0d9b8;
+}
+
+.hbfs-gate-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transform: scale(0.92);
+  transform-origin: center 18%;
+  display: block;
+}
+
+.hbfs-gate-eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--hbfs-gold);
+}
+
+.hbfs-gate-card h2 {
+  margin: 10px 0 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(28px, 3vw, 36px);
+  letter-spacing: -0.02em;
+  color: var(--hbfs-ink);
+}
+
+.hbfs-gate-body {
+  margin: 14px auto 0;
+  max-width: 36ch;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #5a6478;
+}
+
+.hbfs-gate-form {
+  margin-top: 26px;
+  text-align: left;
+}
+
+.hbfs-gate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.hbfs-field {
+  display: grid;
+  gap: 6px;
+}
+
+.hbfs-field span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--hbfs-navy);
+}
+
+.hbfs-field input {
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid var(--hbfs-line);
+  border-radius: 12px;
+  background: #f9f6e6;
+  font: inherit;
+  color: var(--hbfs-ink);
+}
+
+.hbfs-gate-thanks {
+  margin: 28px 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--hbfs-navy);
+}
+
+@media (max-width: 640px) {
+  .hbfs-hero-inner {
+    padding: 96px 0 52px;
+  }
+
+  .hbfs-gate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hbfs-gate-card {
+    padding: 40px 20px 28px;
+  }
+
+  .hbfs-frame {
+    height: 900px;
+  }
+}
