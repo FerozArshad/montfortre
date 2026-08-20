@@ -540,7 +540,7 @@ If raw fetch truncates, paste **one full file per GHL message** using the paths 
 3. Do not rewrite Calendly, IDX, email, or social profile URLs.
 4. Google review badges stay overlapping the photo (bottom-right), not a full-width bar under it.
 5. Neighborhood nav labels: `{Neighborhood} Realtor`.
-6. Commit/push **`main`** when the owner wants GitHub (GHL) updated. Do not commit `node_modules`. Workspace snapshot branch is **`local-root`** (`BRANCHES.md`). Never merge `local-root` into `main`.
+6. Commit/push **`main`** when the owner wants GitHub (GHL) updated: overlay rewritten `ghl-react/` files onto `origin/main` from this `local-root` workspace — no extra folder per push, no `git checkout main` here. Do not commit `node_modules`. Never merge `local-root` into `main`.
 
 ### Reference material (not in git)
 

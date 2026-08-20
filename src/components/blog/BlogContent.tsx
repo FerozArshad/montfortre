@@ -1,4 +1,5 @@
 import ContactSection from "../shared/ContactSection";
+import PromisesBar from "../shared/PromisesBar";
 import "../../styles/blog-page.css";
 
 const ARTICLES = [
@@ -474,6 +475,8 @@ export default function BlogContent() {
           </div>
         </div>
       </section>
+<PromisesBar variant="nbhd" />
+
       <section className="blog-articles" data-screen-label="Articles">
         <div className="blog-articles-inner">
           <div data-reveal="" className="blog-articles-head">

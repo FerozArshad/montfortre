@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import DesktopHeader from "../components/layout/DesktopHeader";
 import SiteFooter from "../components/layout/SiteFooter";
+import ReviewsSection from "../components/shared/ReviewsSection";
 import Seo from "../components/Seo";
 import useCarousels from "../hooks/useCarousels";
 import useStyleHover from "../hooks/useStyleHover";
@@ -17,12 +18,17 @@ export interface PageShellProps {
   showFooter?: boolean;
   /** IDX pages omit the desktop header (MobileHeader still renders from App.tsx) */
   showDesktopHeader?: boolean;
+  /** Live Google reviews iframe. Defaults to true whenever the shared footer shows. IDX sets showFooter={false}. */
+  showReviews?: boolean;
 }
 
 /**
  * GHL AI Studio page shell for converted TSX routes.
- * Pattern: Seo → DesktopHeader → page content → SiteFooter.
+ * Pattern: Seo → DesktopHeader → page content → ReviewsSection (iframe) → SiteFooter.
  * MobileHeader is rendered once in App.tsx above all routes.
+ *
+ * Reviews: same ReputationHub iframe on every page that shows the footer.
+ * IDX / minimal shells set showFooter={false} (and optionally showReviews) to omit it.
  */
 export default function PageShell({
   seo,
@@ -30,9 +36,11 @@ export default function PageShell({
   pageClassName = "",
   showFooter = true,
   showDesktopHeader = true,
+  showReviews,
 }: PageShellProps) {
   useStyleHover();
   useCarousels();
+  const reviewsVisible = showReviews ?? showFooter;
 
   return (
     <>
@@ -43,7 +51,10 @@ export default function PageShell({
         jsonLd={[...seo.jsonLd]}
       />
       {showDesktopHeader && <DesktopHeader />}
-      <div className={["site-page", pageClassName].filter(Boolean).join(" ")}>{children}</div>
+      <div className={["site-page", pageClassName].filter(Boolean).join(" ")}>
+        {children}
+        {reviewsVisible ? <ReviewsSection /> : null}
+      </div>
       {showFooter && <SiteFooter />}
     </>
   );

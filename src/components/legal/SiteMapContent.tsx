@@ -1,4 +1,5 @@
 import { BLOG_ARTICLE_REGISTRY } from "../../blog/registry";
+import PromisesBar from "../shared/PromisesBar";
 import "../../styles/legal-pages.css";
 
 type SiteLink = {
@@ -125,6 +126,7 @@ const SECTIONS = [
 export default function SiteMapContent() {
   return (
     <>
+      <PromisesBar variant="light" />
       <section className="legal-hero legal-hero--sitemap" aria-labelledby="sitemap-heading">
         <div className="legal-hero-ring" aria-hidden="true" />
         <div className="legal-hero-inner">

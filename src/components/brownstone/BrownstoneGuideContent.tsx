@@ -1,4 +1,5 @@
 import ContactSection from "../shared/ContactSection";
+import PromisesBar from "../shared/PromisesBar";
 import "../../styles/brownstone-guide.css";
 
 const TOC = [
@@ -42,6 +43,7 @@ const FAQS = [
 export default function BrownstoneGuideContent() {
   return (
     <>
+      <PromisesBar variant="light" />
       <section className="bsg-hero" data-screen-label="Article hero">
         <div className="bsg-hero-ring" />
         <div className="bsg-hero-inner">

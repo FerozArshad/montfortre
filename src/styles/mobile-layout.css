@@ -336,41 +336,6 @@
     box-sizing: border-box !important;
   }
 
-  .neighborhoods-page .nbhd-promises {
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 0 !important;
-    margin-top: 28px !important;
-    width: 100% !important;
-  }
-
-  .neighborhoods-page .nbhd-promise {
-    padding: 0 0 28px !important;
-    border-right: none !important;
-    border-bottom: none !important;
-    text-align: left !important;
-    justify-self: stretch !important;
-  }
-
-  .neighborhoods-page .nbhd-promise:last-child {
-    border-bottom: none !important;
-    padding-bottom: 0 !important;
-  }
-
-  .neighborhoods-page .nbhd-promise > div {
-    justify-content: flex-start !important;
-  }
-
-  .neighborhoods-page .nbhd-promise p {
-    margin-left: 0 !important;
-    max-width: none !important;
-    text-align: left !important;
-  }
-
-  .neighborhoods-page [data-screen-label="Promises"] > div[style*="max-width"] {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
   .neighborhoods-page [data-screen-label="Intro"] [style*="0.85fr"] {
     grid-template-columns: minmax(0, 1fr) !important;
     gap: 28px !important;

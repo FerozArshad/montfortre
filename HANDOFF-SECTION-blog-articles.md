@@ -6,9 +6,9 @@
 **Date:** 2026-08-17  
 **Parent handoff:** `HANDOFF.md` / `DOCUMENTATION.md`  
 **Repo:** https://github.com/FerozArshad/montfortre  
-**GitHub `main` tip for this stream:** `e34a126` (includes `7ced154` + Harlem featured-image fix)  
+**GitHub `main` tip for this stream:** `e34a126` (includes `7ced154` + Harlem featured-image fix; later tips may include unrelated streams)  
 **Local workspace:** `d:\GHL_Montfort` on branch **`local-root`** (app under `ghl-react/`) — never merge into `main`  
-**Ship worktree used:** `D:\GHL_Montfort_main_push15` · **Next unused:** `D:\GHL_Montfort_main_push16`  
+**Ship (historical):** `D:\GHL_Montfort_main_push15` — numbered worktrees are **retired**. Future ships: overlay rewritten files onto `origin/main` from `local-root` (no new local dir).  
 **Design / UX reference (live local):** `http://localhost:5174/advice-for-buyers-looking-to-purchase-brownstones/`  
 **Design HTML reference (local only):** `reference/design/Montfort homepage redesign/Brownstone Buying Guide.dc.html`  
 **Inventory source (local only — do not push to `main`):** `reference/httrack/Blog_refrence.txt` (55 posts)  
@@ -251,7 +251,7 @@ Desktop `DesktopHeader`: **About** dropdown = About Us + Stanley (parity with mo
 3. Edit article **content** in `bodyHtml.ts` / `meta.ts`; edit **head** only when correcting a true extraction error against HTTrack (still treat as frozen).
 4. Keep presentation changes in **shared** layout/CSS so all 54 stay consistent; use `afterBody` only for rare article-specific React blocks.
 5. After visual changes: check **375 / 768 / 1024 / 1440**, especially hero image fill and TOC stack.
-6. Ship via **separate `main` worktree** + path rewrite — never `git checkout main` inside `d:\GHL_Montfort`, never merge `local-root` ↔ `main`, never force-push `main`.
+6. Ship via path rewrite onto `origin/main` from this `local-root` workspace — never `git checkout main` inside `d:\GHL_Montfort`, never merge `local-root` ↔ `main`, never force-push `main`, never create `D:\GHL_Montfort_main_pushN`.
 7. When listing files for GHL paste, use **main paths** (`src/blog/...`), never `ghl-react/src/...`.
 8. Platform launch blockers (prerender, canonical injection, 404 status, robots/sitemap at root) remain in `HANDOFF-SECTION-seo-launch-readiness.md` — blog SEO constants being correct in-repo does not mean the deployed preview shows them.
 
@@ -265,7 +265,7 @@ Desktop `DesktopHeader`: **About** dropdown = About Us + Stanley (parity with mo
 4. Register in `src/blog/registry.ts` (import + map entry).
 5. Ensure `App.tsx` still maps the registry (no per-slug route needed).
 6. Add `<loc>https://montfortre.com/<slug>/</loc>` to `public/sitemap.xml` if missing.
-7. Typecheck; spot-check the route locally; ship rewritten files to `main` via next worktree (`push16+`).
+7. Typecheck; spot-check the route locally; ship rewritten files onto `origin/main` from `local-root` (no extra worktree dir).
 
 ---
 
@@ -293,7 +293,7 @@ Desktop `DesktopHeader`: **About** dropdown = About Us + Stanley (parity with mo
 - [ ] Confirm GHL Studio has fetched blog tree from `main` @ `e34a126` and routes resolve on preview.
 - [ ] Optionally refresh stale `DOCUMENTATION.md` lines that forbid blog routes / HTML injection (align with this handoff).
 - [ ] Optionally commit blog tree on `local-root` for backup (`git push origin local-root`) — separate from `main` ship.
-- [ ] Next ship worktree: **`D:\GHL_Montfort_main_push16`**.
+- [ ] Next ship: overlay rewritten files onto `origin/main` from `local-root` (numbered worktrees retired).
 
 ---
 
@@ -303,8 +303,8 @@ Desktop `DesktopHeader`: **About** dropdown = About Us + Stanley (parity with mo
 # Remote main tip (authoritative)
 git ls-remote origin refs/heads/main
 
-# Count registry articles on a main worktree checkout
-git ls-tree -r --name-only HEAD | findstr /R "src/blog/articles/.*/index.ts"
+# Count registry articles in this local-root clone
+git ls-files "ghl-react/src/blog/articles/*/index.ts"
 
 # Local inventory vs registry
 # 55 slugs in reference/httrack/Blog_refrence.txt

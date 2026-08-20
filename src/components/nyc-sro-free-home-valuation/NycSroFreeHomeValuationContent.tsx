@@ -1,13 +1,9 @@
 import ContactSection from "../shared/ContactSection";
+import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
 
-const CHECK_ICON = (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-    <path d="M6 12.5l3.5 3.5L18 7.5" stroke="#0F1729" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
 
 const NEWS_ARTICLES = [
   {
@@ -60,22 +56,7 @@ export default function NycSroFreeHomeValuationContent() {
         </div>
       </section>
 
-      <section className="tf-promises" data-screen-label="Client promises">
-        <div className="tf-promises-inner">
-          <div className="tf-promise" data-reveal="">
-            <span className="tf-promise-icon">{CHECK_ICON}</span>
-            <div><h3 className="tf-promise-title">SMOOTH TRANSACTION</h3><p>With limited risk throughout the buying process.</p></div>
-          </div>
-          <div className="tf-promise" data-reveal="">
-            <span className="tf-promise-icon">{CHECK_ICON}</span>
-            <div><h3 className="tf-promise-title">NO PRESSURE</h3><p>No pressure to overpay or purchase within a specific timeframe.</p></div>
-          </div>
-          <div className="tf-promise" data-reveal="">
-            <span className="tf-promise-icon">{CHECK_ICON}</span>
-            <div><h3 className="tf-promise-title">ONGOING SUPPORT</h3><p>A dedicated team that remains available even after the transaction is complete.</p></div>
-          </div>
-        </div>
-      </section>
+      <PromisesBar variant="light" screenLabel="Client promises" />
 
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
@@ -225,12 +206,7 @@ export default function NycSroFreeHomeValuationContent() {
         </div>
       </section>
 
-      <section className="tf-reviews" data-screen-label="Reviews">
-        <div className="tf-reviews-inner">
-          <iframe className="tf-reviews-frame" title="Montfort Real Estate reviews" src="https://reputationhub.site/reputation/widgets/review_widget/J3cYmGK3p1ja7wTS63Dn" loading="lazy" />
-        </div>
-      </section>
-      <ResourcesSection title="Recent News & Realtor Advice" subtitle="Stay in the loop on the latest events, news, & happenings in and around our community!" showCategory={false} showCta={false} articles={NEWS_ARTICLES} />
+<ResourcesSection title="Recent News & Realtor Advice" subtitle="Stay in the loop on the latest events, news, & happenings in and around our community!" showCategory={false} showCta={false} articles={NEWS_ARTICLES} />
       <ContactSection />
     </>
   );

@@ -1,13 +1,10 @@
 import type { ReactNode } from "react";
+import PromisesBar from "../shared/PromisesBar";
 import ContactSection from "../shared/ContactSection";
 import ResourcesSection from "../shared/ResourcesSection";
+import useReputationAggregate from "../../hooks/useReputationAggregate";
 import "../../styles/services-page.css";
 
-const CHECK_ICON = (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-    <path d="M6 12.5l3.5 3.5L18 7.5" stroke="#0F1729" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
 
 const HERO_NEIGHBORHOODS = [
   { href: "/park-slope/", label: "Park Slope Realtor" },
@@ -100,6 +97,7 @@ function ThumbImage({ src, alt }: { src: string; alt: string }) {
 }
 
 export default function ServicesContent() {
+  const { ratingLabel, stars, totalReviews } = useReputationAggregate();
   return (
     <div>
       <section className="svc-hero" data-screen-label="Services hero">
@@ -142,11 +140,11 @@ export default function ServicesContent() {
               <div className="svc-hero-rating-copy">
                 <span className="svc-hero-rating-title">Google Rating</span>
                 <div className="svc-hero-rating-row">
-                  <span className="svc-hero-rating-score">5.0</span>
-                  <span className="svc-hero-rating-stars">★★★★★</span>
+                  <span className="svc-hero-rating-score">{ratingLabel}</span>
+                  <span className="svc-hero-rating-stars">{stars}</span>
                 </div>
                 <span className="svc-hero-rating-count">
-                  Over <strong>57 Reviews</strong>
+                  Over <strong>{totalReviews} Reviews</strong>
                 </span>
               </div>
             </div>
@@ -154,31 +152,7 @@ export default function ServicesContent() {
         </div>
       </section>
 
-      <section className="svc-promises" data-screen-label="Client promises">
-        <div className="svc-promises-inner">
-          <div data-reveal="" className="svc-promises-item">
-            <span className="svc-promises-icon">{CHECK_ICON}</span>
-            <div>
-              <div className="svc-promises-title">Smooth Transaction</div>
-              <p>With limited risk throughout the buying process.</p>
-            </div>
-          </div>
-          <div data-reveal="" className="svc-promises-item">
-            <span className="svc-promises-icon">{CHECK_ICON}</span>
-            <div>
-              <div className="svc-promises-title">No Pressure</div>
-              <p>No pressure to overpay or purchase within a specific timeframe.</p>
-            </div>
-          </div>
-          <div data-reveal="" className="svc-promises-item">
-            <span className="svc-promises-icon">{CHECK_ICON}</span>
-            <div>
-              <div className="svc-promises-title">Ongoing Support</div>
-              <p>A dedicated team that stays available even after the deal closes.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PromisesBar variant="light" screenLabel="Client promises" />
 
       <section className="svc-catalog" data-screen-label="Services">
         <div className="svc-catalog-inner">

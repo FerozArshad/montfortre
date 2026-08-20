@@ -1,8 +1,10 @@
 import "../../styles/legal-pages.css";
+import PromisesBar from "../shared/PromisesBar";
 
 export default function PrivacyPolicyContent() {
   return (
     <>
+      <PromisesBar variant="light" />
       <section className="legal-hero" aria-labelledby="privacy-policy-heading">
         <div className="legal-hero-ring" aria-hidden="true" />
         <div className="legal-hero-inner">

@@ -1,10 +1,12 @@
 import ContactSection from "../shared/ContactSection";
+import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/stanley-page.css";
 
 export default function StanleyMontfortContent() {
   return (
     <div>
+      <PromisesBar variant="light" />
       <section className="stan-hero" data-screen-label="Stanley hero">
         <div className="stan-hero-ring stan-hero-ring--tr" />
         <div className="stan-hero-ring stan-hero-ring--bl" />
