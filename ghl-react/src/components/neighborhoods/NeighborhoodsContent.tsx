@@ -1,4 +1,5 @@
 import ContactSection from "../shared/ContactSection";
+import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 
 type PropertyLink = {
@@ -7,7 +8,7 @@ type PropertyLink = {
   subtitle: string;
 };
 
-type ManhattanHood = {
+type Hood = {
   href: string;
   title: string;
   description: string;
@@ -17,50 +18,48 @@ type ManhattanHood = {
   types: PropertyLink[];
 };
 
-type BrooklynHood = {
-  href: string;
-  title: string;
-  description: string;
-  image: string;
-  alt: string;
-  wide?: boolean;
-  types: PropertyLink[];
-};
-
 const PROMISES = [
   {
-    title: (
-      <>
-        Smooth
-        <br />
-        Transaction
-      </>
-    ),
+    title: "SMOOTH TRANSACTION",
     text: "With limited risk throughout the buying process.",
   },
   {
-    title: (
-      <>
-        No
-        <br />
-        Pressure
-      </>
-    ),
+    title: "NO PRESSURE",
     text: "No pressure to overpay or purchase within a specific timeframe.",
   },
   {
-    title: (
-      <>
-        Ongoing
-        <br />
-        Support
-      </>
-    ),
+    title: "ONGOING SUPPORT",
     text: "A dedicated team that remains available even after the transaction is complete.",
   },
 ] as const;
 
-const MANHATTAN: ManhattanHood[] = [
+const NEWS_ARTICLES = [
+  {
+    href: "/upper-west-side-townhouse-q2-2024-market-report/",
+    image: "/redesign-assets/hoods/upper-west-side.webp",
+    alt: "Upper West Side Townhouse Q2 2024 Market Report",
+    title: "Upper West Side Townhouse Q2 2024 Market Report",
+    excerpt:
+      "On the Upper West Side, we observed a distinct trend that diverges from the citywide patterns. Speci…",
+  },
+  {
+    href: "/harlem-brownstone-q2-2024-market-report/",
+    image: "/redesign-assets/hoods/harlem.webp",
+    alt: "Harlem Brownstone Q2 2024 Market Report",
+    title: "Harlem Brownstone Q2 2024 Market Report",
+    excerpt: "The Harlem brownstone market has seen an increase in sales activity since this time last year. In Q2…",
+  },
+  {
+    href: "/discover-your-dream-home-explore-apartments-for-sale-on-the-upper-west-side/",
+    image: "/redesign-assets/hoods/chelsea.webp",
+    alt: "Discover Your Dream Home: Explore Apartments for Sale on the Upper West Side",
+    title: "Discover Your Dream Home: Explore Apartments for Sale on the Upper West Side",
+    excerpt:
+      "Are you searching for your dream home in one of New York City’s most sought-after neighborhoods? Loo…",
+  },
+] as const;
+
+const MANHATTAN: Hood[] = [
   {
     href: "/harlem/",
     title: "Harlem Realtor",
@@ -69,10 +68,11 @@ const MANHATTAN: ManhattanHood[] = [
     alt: "Harlem brownstones",
     imageFirst: true,
     types: [
-      { href: "/harlem-brownstones/", title: "Harlem Brownstones", subtitle: "Historic architecture, timeless charm, and classic Harlem living" },
-      { href: "/harlem-condos/", title: "Harlem Condos", subtitle: "Modern amenities, urban convenience, and vibrant Harlem living" },
-      { href: "/harlem-sros/", title: "Harlem SROs", subtitle: "Affordable housing, investment potential, and unique opportunities" },
-      { href: "/harlem-co-ownership/", title: "Harlem Co-Ownership", subtitle: "Shared ownership, lower costs, and greater buying power" },
+      { href: "/harlem-brownstones/", title: "Harlem Brownstones Realtor", subtitle: "Historic architecture, timeless charm, and classic Harlem living" },
+      { href: "/harlem-condos/", title: "Harlem Condos Realtor", subtitle: "Modern amenities, urban convenience, and vibrant Harlem living" },
+      { href: "/harlem-co-ops/", title: "Harlem Co-Ops Realtor", subtitle: "Investment opportunity, urban convenience, and vibrant Harlem living" },
+      { href: "/harlem-sros/", title: "Harlem SROs Realtor", subtitle: "Affordable housing, investment potential, and unique opportunities" },
+      { href: "/harlem-co-ownership/", title: "Harlem Co-Ownership Realtor", subtitle: "Shared ownership, lower costs, and greater buying power" },
     ],
   },
   {
@@ -83,9 +83,9 @@ const MANHATTAN: ManhattanHood[] = [
     alt: "Upper West Side",
     imageFirst: false,
     types: [
-      { href: "/upper-west-side-townhouses/", title: "Upper West Side Townhouses", subtitle: "Elegant townhomes, historic charm, and classic Manhattan living" },
-      { href: "/upper-west-side-condos/", title: "Upper West Side Condos", subtitle: "Modern luxury, premium amenities, and sophisticated city living" },
-      { href: "/upper-west-side-co-ops-2/", title: "Upper West Side Co-Ops", subtitle: "Classic residences, strong communities, and timeless Manhattan appeal" },
+      { href: "/upper-west-side-townhouses/", title: "Upper West Side Townhouses Realtor", subtitle: "Elegant townhomes, historic charm, and classic Manhattan living" },
+      { href: "/upper-west-side-condos/", title: "Upper West Side Condos Realtor", subtitle: "Modern luxury, premium amenities, and sophisticated city living" },
+      { href: "/upper-west-side-co-ops-2/", title: "Upper West Side Co-Ops Realtor", subtitle: "Classic residences, strong communities, and timeless Manhattan appeal" },
     ],
   },
   {
@@ -96,9 +96,9 @@ const MANHATTAN: ManhattanHood[] = [
     alt: "Upper East Side",
     imageFirst: true,
     types: [
-      { href: "/upper-east-side-townhouses/", title: "Upper East Side Townhouses", subtitle: "Elegant townhomes, timeless charm, and prestigious Manhattan living" },
-      { href: "/upper-east-side-condos/", title: "Upper East Side Condos", subtitle: "Luxury residences, premium amenities, and sophisticated city living" },
-      { href: "/upper-east-side-co-ops/", title: "Upper East Side Co-Ops", subtitle: "Classic residences, refined communities, and timeless Upper East Side appeal" },
+      { href: "/upper-east-side-townhouses/", title: "Upper East Side Townhouses Realtor", subtitle: "Elegant townhomes, timeless charm, and prestigious Manhattan living" },
+      { href: "/upper-east-side-condos/", title: "Upper East Side Condos Realtor", subtitle: "Luxury residences, premium amenities, and sophisticated city living" },
+      { href: "/upper-east-side-co-ops/", title: "Upper East Side Co-Ops Realtor", subtitle: "Classic residences, refined communities, and timeless Upper East Side appeal" },
     ],
   },
   {
@@ -109,23 +109,24 @@ const MANHATTAN: ManhattanHood[] = [
     alt: "Chelsea",
     imageFirst: false,
     types: [
-      { href: "/chelsea-townhouses/", title: "Chelsea Townhouses", subtitle: "Historic townhomes, architectural charm, and stylish city living" },
-      { href: "/chelsea-condos/", title: "Chelsea Condos", subtitle: "Modern luxury, premium amenities, and vibrant Manhattan living" },
-      { href: "/chelsea-co-ops-2/", title: "Chelsea Co-Ops", subtitle: "Classic residences, strong communities, and timeless Chelsea appeal" },
+      { href: "/chelsea-townhouses/", title: "Chelsea Townhouses Realtor", subtitle: "Historic townhomes, architectural charm, and stylish city living" },
+      { href: "/chelsea-condos/", title: "Chelsea Condos Realtor", subtitle: "Modern luxury, premium amenities, and vibrant Manhattan living" },
+      { href: "/chelsea-co-ops-2/", title: "Chelsea Co-Ops Realtor", subtitle: "Classic residences, strong communities, and timeless Chelsea appeal" },
     ],
   },
 ];
 
-const BROOKLYN: BrooklynHood[] = [
+const BROOKLYN: Hood[] = [
   {
     href: "/downtown-brooklyn/",
     title: "Downtown Brooklyn Realtor",
     description: "High-rise living at the borough’s transit and business core.",
     image: "/redesign-assets/nbhd/0dd93ed5.webp",
     alt: "Downtown Brooklyn",
+    imageFirst: true,
     types: [
-      { href: "/downtown-brooklyn-condos-2/", title: "Downtown Brooklyn Condos", subtitle: "Modern high-rises, premium amenities, and convenient city living" },
-      { href: "/downstone-brooklyn-co-ops/", title: "Downtown Brooklyn Co-Ops", subtitle: "Established communities, great value, and classic Brooklyn living" },
+      { href: "/downtown-brooklyn-condos-2/", title: "Downtown Brooklyn Condos Realtor", subtitle: "Modern high-rises, premium amenities, and convenient city living" },
+      { href: "/downstone-brooklyn-co-ops/", title: "Downtown Brooklyn Co-Ops Realtor", subtitle: "Established communities, great value, and classic Brooklyn living" },
     ],
   },
   {
@@ -134,9 +135,10 @@ const BROOKLYN: BrooklynHood[] = [
     description: "Converted warehouses, cobblestone streets, and the best skyline views in the city.",
     image: "/redesign-assets/nbhd/d86879d1.webp",
     alt: "Dumbo",
+    imageFirst: false,
     types: [
-      { href: "/dumbo-condos/", title: "Dumbo Condos", subtitle: "Waterfront views, modern luxury, and iconic Brooklyn living" },
-      { href: "/dumbo-co-ops-2/", title: "Dumbo Co-Ops", subtitle: "Historic character, vibrant communities, and lasting Brooklyn appeal" },
+      { href: "/dumbo-condos/", title: "Dumbo Condos Realtor", subtitle: "Waterfront views, modern luxury, and iconic Brooklyn living" },
+      { href: "/dumbo-co-ops-2/", title: "Dumbo Co-Ops Realtor", subtitle: "Historic character, vibrant communities, and lasting Brooklyn appeal" },
     ],
   },
   {
@@ -145,10 +147,11 @@ const BROOKLYN: BrooklynHood[] = [
     description: "The city’s first landmarked district — the Promenade, and blocks of 19th-century townhouses.",
     image: "/redesign-assets/nbhd/745851cc.webp",
     alt: "Brooklyn Heights",
+    imageFirst: true,
     types: [
-      { href: "/brooklyn-heights-townhouses-2/", title: "Brooklyn Heights Townhouses", subtitle: "Historic brownstones, skyline views, and timeless Brooklyn charm" },
-      { href: "/brooklyn-heights-condos-3/", title: "Brooklyn Heights Condos", subtitle: "Luxury residences, waterfront views, and sophisticated city living" },
-      { href: "/brooklyn-heights-co-ops-3/", title: "Brooklyn Heights Co-Ops", subtitle: "Classic residences, strong communities, and enduring Brooklyn appeal" },
+      { href: "/brooklyn-heights-townhouses-2/", title: "Brooklyn Heights Townhouses Realtor", subtitle: "Historic brownstones, skyline views, and timeless Brooklyn charm" },
+      { href: "/brooklyn-heights-condos-3/", title: "Brooklyn Heights Condos Realtor", subtitle: "Luxury residences, waterfront views, and sophisticated city living" },
+      { href: "/brooklyn-heights-co-ops-3/", title: "Brooklyn Heights Co-Ops Realtor", subtitle: "Classic residences, strong communities, and enduring Brooklyn appeal" },
     ],
   },
   {
@@ -157,9 +160,13 @@ const BROOKLYN: BrooklynHood[] = [
     description: "One of the largest concentrations of intact brownstones anywhere in New York.",
     image: "/redesign-assets/nbhd/66fdf193.webp",
     alt: "Bedford-Stuyvesant",
+    imageFirst: false,
     types: [
-      { href: "/bedford-stuyvesant-brownstones-2/", title: "Bedford-Stuyvesant Brownstones", subtitle: "Historic brownstones, rich culture, and authentic Brooklyn living" },
-      { href: "/bedford-stuyvesant/", title: "Bedford-Stuyvesant Multifamily", subtitle: "Two-, three-, and four-family houses with strong rental income" },
+      { href: "/bedford-stuyvesant-brownstones-2/", title: "Bedford stuyvesant Brownstones Realtor", subtitle: "Historic brownstones, rich culture, and authentic Brooklyn living" },
+      { href: "/bedford-stuyvesant-condos-2/", title: "Bedford stuyvesant Condos Realtor", subtitle: "Modern residences, vibrant neighborhoods, and urban convenience" },
+      { href: "/bedford-stuyvesant-co-ops-2/", title: "Bedford stuyvesant Co-Ops Realtor", subtitle: "Community-focused living, great value, and Brooklyn charm" },
+      { href: "/bedford-stuyvesant-sros-2/", title: "Bedford stuyvesant SROs Realtor", subtitle: "Affordable housing, investment potential, and unique opportunities" },
+      { href: "/bedford-stuyvesant-co-ownership/", title: "Bedford stuyvesant Co-Ownership Realtor", subtitle: "Shared ownership, lower costs, and greater buying power" },
     ],
   },
   {
@@ -168,9 +175,12 @@ const BROOKLYN: BrooklynHood[] = [
     description: "Waterfront towers, converted lofts, and Brooklyn’s most in-demand nightlife and dining.",
     image: "/redesign-assets/nbhd/f55c71f9.webp",
     alt: "Williamsburg",
+    imageFirst: true,
     types: [
-      { href: "/williamsburg/", title: "Williamsburg Condos", subtitle: "New development, waterfront amenities, and strong resale demand" },
-      { href: "/williamsburg/", title: "Williamsburg Townhouses", subtitle: "Row houses and conversions with rental upside" },
+      { href: "/williamsburg-brownstones-2/", title: "Williamsburg Brownstones Realtor", subtitle: "Historic townhomes, creative energy, and timeless Brooklyn charm" },
+      { href: "/williamsburg-condos/", title: "Williamsburg Condos Realtor", subtitle: "Modern luxury, waterfront living, and vibrant city life" },
+      { href: "/williamsburg-co-ops/", title: "Williamsburg Co-Ops Realtor", subtitle: "Established communities, great value, and classic Brooklyn living" },
+      { href: "/williamsburg-co-ownership/", title: "Williamsburg Co-Ownership Realtor", subtitle: "Shared ownership, flexible financing, and smarter home buying" },
     ],
   },
   {
@@ -179,9 +189,13 @@ const BROOKLYN: BrooklynHood[] = [
     description: "Limestone row houses beside the Botanic Garden — still one of Brooklyn’s best values.",
     image: "/redesign-assets/nbhd/b6c26a69.webp",
     alt: "Crown Heights",
+    imageFirst: false,
     types: [
-      { href: "/crown-heights/", title: "Crown Heights Brownstones", subtitle: "Limestone and brownstone row houses with original detail" },
-      { href: "/crown-heights/", title: "Crown Heights Multifamily", subtitle: "Investment buildings with room to reposition" },
+      { href: "/crown-heights-brownstones-2/", title: "Crown Heights Brownstones Realtor", subtitle: "Historic brownstones, cultural richness, and timeless Brooklyn charm" },
+      { href: "/crown-heights-condos-2/", title: "Crown Heights Condos Realtor", subtitle: "Modern residences, vibrant amenities, and convenient city living" },
+      { href: "/crown-heights-co-ops-2/", title: "Crown Heights Co-Ops Realtor", subtitle: "Strong communities, great value, and classic Brooklyn living" },
+      { href: "/crown-heights-sros-3/", title: "Crown Heights SROs Realtor", subtitle: "Affordable housing, investment potential, and unique opportunities" },
+      { href: "/crown-heights-co-ownership-2/", title: "Crown Heights Co-Ownership Realtor", subtitle: "Shared ownership, lower costs, and greater buying power" },
     ],
   },
   {
@@ -190,10 +204,13 @@ const BROOKLYN: BrooklynHood[] = [
     description: "Prospect Park at the door, celebrated schools, and some of the most sought-after row houses in Brooklyn.",
     image: "/redesign-assets/nbhd/69cc59cd.webp",
     alt: "Park Slope",
-    wide: true,
+    imageFirst: true,
     types: [
-      { href: "/park-slope/", title: "Park Slope Brownstones", subtitle: "Landmarked row houses steps from Prospect Park" },
-      { href: "/park-slope/", title: "Park Slope Co-Ops", subtitle: "Pre-war apartments with strong communities and steady value" },
+      { href: "/park-slope-brownstone-2/", title: "Park Slope Brownstones Realtor", subtitle: "Historic brownstones, timeless architecture, and expert guidance for buying and selling in Park Slope" },
+      { href: "/park-slope-condo-2/", title: "Park Slope Condos Realtor", subtitle: "Modern condominiums, luxury amenities, and expert representation in Park Slope's competitive market" },
+      { href: "/park-slope-coops/", title: "Park Slope Co-Ops Realtor", subtitle: "Established co-op communities, board expertise, and trusted guidance for buying and selling in Park Slope" },
+      { href: "/park-slope-coownership-2/", title: "Park Slope Co-Ownership Realtor", subtitle: "Affordable shared ownership, flexible financing, and expert guidance for buying a co-ownership home in Park Slope" },
+      { href: "/park-slope-sro-2/", title: "Park Slope SRO Realtor", subtitle: "Expert guidance for buying and selling SRO properties in Park Slope with confidence and local market expertise" },
     ],
   },
 ];
@@ -204,17 +221,15 @@ const CHECK_ICON = (
   </svg>
 );
 
-function PtArrow({ compact }: { compact?: boolean }) {
-  const w = compact ? 18 : 20;
-  const h = compact ? 13 : 14;
+function PtArrow() {
   return (
-    <svg className="pt-arrow" width={w} height={h} viewBox="0 0 20 14" fill="none">
+    <svg className="pt-arrow" width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
       <path d="M1 7h16M12.5 1.5L18 7l-5.5 5.5" stroke="#C98A2C" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
-function ManhattanCopy({ hood }: { hood: ManhattanHood }) {
+function HoodCopy({ hood, rowClass }: { hood: Hood; rowClass: string }) {
   return (
     <div className="nbhd-copy">
       <a href={hood.href} className="nbhd-copy-title">
@@ -223,7 +238,7 @@ function ManhattanCopy({ hood }: { hood: ManhattanHood }) {
       <p>{hood.description}</p>
       <div className="nbhd-types">
         {hood.types.map((item) => (
-          <a key={item.title} href={item.href} className="pt-row pt-row--mh">
+          <a key={item.title} href={item.href} className={`pt-row ${rowClass}`}>
             <span className="pt-row-copy">
               <span className="pt-row-title pt-row-title--mh">{item.title}</span>
               <span className="pt-row-sub pt-row-sub--mh">{item.subtitle}</span>
@@ -233,6 +248,36 @@ function ManhattanCopy({ hood }: { hood: ManhattanHood }) {
         ))}
       </div>
     </div>
+  );
+}
+
+function HoodList({ hoods, rowClass }: { hoods: Hood[]; rowClass: string }) {
+  return (
+    <>
+      {hoods.map((hood) => (
+        <div
+          key={hood.href}
+          className={`nbhd-hood ${hood.imageFirst ? "nbhd-hood--img-first" : "nbhd-hood--copy-first"}`}
+          data-reveal=""
+        >
+          {hood.imageFirst ? (
+            <>
+              <div className="hood-card hood-card--mh-photo">
+                <img src={hood.image} alt={hood.alt} />
+              </div>
+              <HoodCopy hood={hood} rowClass={rowClass} />
+            </>
+          ) : (
+            <>
+              <HoodCopy hood={hood} rowClass={rowClass} />
+              <div className="hood-card hood-card--mh-photo">
+                <img src={hood.image} alt={hood.alt} />
+              </div>
+            </>
+          )}
+        </div>
+      ))}
+    </>
   );
 }
 
@@ -246,16 +291,16 @@ export default function NeighborhoodsContent() {
             <div className="nbhd-crumb">
               <a href="/" className="nbhd-crumb-link">Home</a> <span className="nbhd-crumb-sep">/</span> <span className="nbhd-crumb-here">Neighborhoods</span>
             </div>
-            <h1>NYC Neighborhoods</h1>
+            <h1>NYC Neighborhoods — Expert Local Insights for Buyers, Sellers & Investors</h1>
             <p className="nbhd-hero-lead">
-              Expert local insight for buyers, sellers and investors. We’ll help you find the <strong>right NYC neighborhood</strong> based on your lifestyle, budget and long-term goals — so you can buy with confidence and avoid costly mistakes.
+              We'll help you find the <strong>right NYC neighborhood</strong> based on your lifestyle, budget, and long-term goals—so <strong>you can buy with confidence</strong> and avoid costly mistakes
             </p>
             <div className="nbhd-hero-ctas">
-              <a href="https://calendly.com/montfort" className="nbhd-hero-book">
-                Book Now
+              <a href="tel:+1-646-970-1078" className="nbhd-hero-tel">
+                Call 1-(646)-970-1078
               </a>
-              <a href="tel:646-970-1078" className="nbhd-hero-tel">
-                (646) 970-1078
+              <a href="https://calendly.com/montfort" className="nbhd-hero-book">
+                Schedule A Constulation
               </a>
             </div>
             <div className="nbhd-hero-boro">
@@ -325,7 +370,7 @@ export default function NeighborhoodsContent() {
           </div>
           <div className="nbhd-intro-copy" data-reveal="">
             <p>
-              Finding the right neighborhood is just as important as finding the right property. Whether you’re searching for a historic Harlem brownstone, a luxury Upper East Side condo, or an investment opportunity in Brooklyn, our neighborhood guides provide local market insights, lifestyle information, pricing trends, and community highlights to help you make an informed decision.
+              Finding the right neighborhood is just as important as finding the right property. Whether you're searching for a historic Harlem brownstone, a luxury Upper East Side condo, or an investment opportunity in Brooklyn, our neighborhood guides provide local market insights, lifestyle information, pricing trends, and community highlights to help you make an informed decision.
             </p>
             <p>
               Browse NYC neighborhoods below, or call us at <a href="tel:646-970-1078" className="nbhd-intro-phone">1-646-970-1078</a> for personalized guidance from a local real estate expert.
@@ -349,29 +394,7 @@ export default function NeighborhoodsContent() {
           <span className="nbhd-boro-meta">Harlem · UWS · UES · Chelsea</span>
         </div>
         <div className="nbhd-hood-list nbhd-hood-list--mh">
-          {MANHATTAN.map((hood) => (
-            <div
-              key={hood.href}
-              className={`nbhd-hood ${hood.imageFirst ? "nbhd-hood--img-first" : "nbhd-hood--copy-first"}`}
-              data-reveal=""
-            >
-              {hood.imageFirst ? (
-                <>
-                  <div className="hood-card hood-card--mh-photo">
-                    <img src={hood.image} alt={hood.alt} />
-                  </div>
-                  <ManhattanCopy hood={hood} />
-                </>
-              ) : (
-                <>
-                  <ManhattanCopy hood={hood} />
-                  <div className="hood-card hood-card--mh-photo">
-                    <img src={hood.image} alt={hood.alt} />
-                  </div>
-                </>
-              )}
-            </div>
-          ))}
+          <HoodList hoods={MANHATTAN} rowClass="pt-row--mh" />
         </div>
       </section>
 
@@ -382,55 +405,7 @@ export default function NeighborhoodsContent() {
           <span className="nbhd-boro-meta">Seven neighborhoods</span>
         </div>
         <div className="nbhd-hood-list nbhd-hood-list--bk">
-          {BROOKLYN.map((hood) =>
-            hood.wide ? (
-              <div key={hood.href} data-reveal="" className="hood-card hood-card--wide">
-                <div className="hood-card--wide-media">
-                  <img src={hood.image} alt={hood.alt} />
-                </div>
-                <div className="hood-card--wide-body">
-                  <a href={hood.href} className="nbhd-bk-title nbhd-bk-title--wide">
-                    {hood.title}
-                  </a>
-                  <p>{hood.description}</p>
-                  <div className="hood-card--wide-types">
-                    {hood.types.map((item) => (
-                      <a key={item.title} href={item.href} className="pt-row pt-row--bk">
-                        <span className="pt-row-copy">
-                          <span className="pt-row-title pt-row-title--bk">{item.title}</span>
-                          <span className="pt-row-sub pt-row-sub--bk">{item.subtitle}</span>
-                        </span>
-                        <PtArrow compact />
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div key={hood.href} data-reveal="" className="hood-card hood-card--bk">
-                <div className="hood-card--bk-media">
-                  <img src={hood.image} alt={hood.alt} />
-                </div>
-                <div className="hood-card--bk-body">
-                  <a href={hood.href} className="nbhd-bk-title nbhd-bk-title--card">
-                    {hood.title}
-                  </a>
-                  <p>{hood.description}</p>
-                  <div className="hood-card--bk-types">
-                    {hood.types.map((item) => (
-                      <a key={item.title} href={item.href} className="pt-row pt-row--bk">
-                        <span className="pt-row-copy">
-                          <span className="pt-row-title pt-row-title--bk">{item.title}</span>
-                          <span className="pt-row-sub pt-row-sub--bk">{item.subtitle}</span>
-                        </span>
-                        <PtArrow compact />
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ),
-          )}
+          <HoodList hoods={BROOKLYN} rowClass="pt-row--mh" />
         </div>
       </section>
 
@@ -453,6 +428,13 @@ export default function NeighborhoodsContent() {
         </div>
       </section>
 
+      <ResourcesSection
+        title="Recent News & Realtor Advice"
+        subtitle="Stay in the loop on the latest events, news, & happenings in and around our community!"
+        showCategory={false}
+        showCta={false}
+        articles={NEWS_ARTICLES}
+      />
       <ContactSection />
     </>
   );
