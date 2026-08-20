@@ -259,6 +259,40 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/parkSlope
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/parkSlopeYelp.json
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/parkSlopeSchools.json
 
+## 8l. Listings — current inventory + detail template
+
+Montfort `/current-listings/` index and shared listing detail template for all broker listings. Also re-fetch shared `App.tsx`, headers, and `sitemap.xml`.
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/CurrentListings.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ListingDetailPage.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/listings/CurrentListingsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/listing/ListingPageContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/listing/ListingLeadModal.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/types.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/index.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing523West121stStreet2.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing475West144thStreet.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing26West95thStreet.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing124West131stStreet2.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing313West143rdStreet2a.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing14West121stStreet.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing481West145thStreet.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing542CathedralParkway.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing544West148thStreet.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing76West105thStreetThn.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing76West105thStreetPh.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing2040MadisonAvenue4.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing420West144thStreet.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/listings/listing108West114thStreet4b.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/buildListingSeo.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/currentListings.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/listing-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/current-listings.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/layout/DesktopHeader.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/MobileHeader.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/redesign-assets/team/stanley-montfort.png
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/public/sitemap.xml
+
 ## 9. TwoFamilyHouseForSaleNyc
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/TwoFamilyHouseForSaleNyc.tsx

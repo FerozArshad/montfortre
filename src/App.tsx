@@ -49,6 +49,9 @@ import HomeValuation from "./pages/HomeValuation";
 import MortgageCalculator from "./pages/MortgageCalculator";
 import IdxRentals from "./pages/IdxRentals";
 import IdxSales from "./pages/IdxSales";
+import CurrentListings from "./pages/CurrentListings";
+import ListingDetailPage from "./pages/ListingDetailPage";
+import { LISTING_SLUGS } from "./data/listings";
 import Neighborhoods from "./pages/Neighborhoods";
 import NotMigrated from "./pages/NotMigrated";
 import NycBuyersAgentService from "./pages/NycBuyersAgentService";
@@ -182,8 +185,12 @@ export default function App() {
           <Route key={slug} path={`/${slug}`} element={<BlogArticlePage article={article} />} />
         ))}
         <Route path="/neighborhoods" element={<Neighborhoods />} />
+        <Route path="/current-listings" element={<CurrentListings />} />
         <Route path="/idx-sales" element={<IdxSales />} />
         <Route path="/idx-rentals" element={<IdxRentals />} />
+        {LISTING_SLUGS.map((slug) => (
+          <Route key={slug} path={`/${slug}`} element={<ListingDetailPage />} />
+        ))}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/sitemap" element={<SiteMap />} />
         <Route path="*" element={<NotMigrated />} />

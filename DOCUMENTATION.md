@@ -456,7 +456,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/privacy-policy/` | `/privacy-policy` | `PrivacyPolicy.tsx` | `legal/PrivacyPolicyContent.tsx` | `legal-pages.css` | `privacyPolicy.ts` |
 | `/sitemap/` | `/sitemap` | `SiteMap.tsx` | `legal/SiteMapContent.tsx` | `legal-pages.css` | `siteMap.ts` |
 
-**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships **138 URLs** including 55 blog posts. Examples still live: `/prospect-heights/`, listing addresses, and remaining service subpages. **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`).
+**Not migrated (on purpose)** — `NotMigrated.tsx` + `not-migrated.css`. Live WordPress `page-sitemap.xml` lists ~197 page URLs; this SPA ships migrated pages including blog posts. Examples still live: `/prospect-heights/` and remaining service subpages. **Do not invent those pages.** Nav may still link to them; they show the “not migrated” card. Pick new work from `seo-audit/live-page-sitemap-urls.txt` (`[LEFT]`). Listings: `/current-listings/` index + 14 detail routes via `ListingDetailPage` + `ListingPageContent` + `src/data/listings/`.
 
 Internal `<a href>` uses trailing slashes (`/harlem/`). React Router `path` does not.
 

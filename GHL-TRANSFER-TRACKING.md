@@ -204,3 +204,15 @@ Compare the GHL AI Studio project to github.com/FerozArshad/montfortre main.
 ```
 
 After GHL answers, update the FETCHED/VERIFIED columns in this file and commit.
+
+---
+
+## Local notes (2026-08-20) — listings template
+
+Implemented on `local-root` under `ghl-react/` (not yet shipped to GitHub `main`):
+
+- `/current-listings/` index + 14 listing detail routes via `ListingDetailPage` + `ALL_LISTINGS`
+- Lead popup `ListingLeadModal` auto-opens on detail pages
+- Paste list updated in `GHL-PASTE-TO-STUDIO.md` section **8l**
+
+Next unused main worktree: `D:\GHL_Montfort_main_push18` when shipping.

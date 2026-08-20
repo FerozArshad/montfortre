@@ -1,0 +1,286 @@
+/* Current Listings index — Montfort branded grid */
+
+.current-listings-page {
+  --cl-ink: #0f1729;
+  --cl-navy: #113b5f;
+  --cl-gold: #c98a2c;
+  --cl-cream: #f9f6e6;
+  --cl-line: #e0d9b8;
+}
+
+.cl-root {
+  background: #f7f4ea;
+}
+
+.cl-hero {
+  position: relative;
+  min-height: min(72vh, 640px);
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  color: #fff;
+}
+
+.cl-hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.cl-hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(9, 14, 26, 0.35) 0%, rgba(9, 14, 26, 0.72) 55%, rgba(9, 14, 26, 0.88) 100%),
+    radial-gradient(ellipse at 20% 10%, rgba(201, 138, 44, 0.28), transparent 50%);
+}
+
+.cl-hero-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 120px 0 72px;
+}
+
+.cl-brand {
+  margin: 0 0 12px;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: #f5eecb;
+}
+
+.cl-hero h1 {
+  margin: 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+
+.cl-hero-lead {
+  margin: 18px 0 0;
+  max-width: 34rem;
+  font-size: 17px;
+  line-height: 1.55;
+  color: rgba(249, 246, 230, 0.9);
+}
+
+.cl-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 28px;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 100px;
+  background: var(--cl-gold);
+  color: #0f1729;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.cl-hero-cta:hover {
+  background: #f5eecb;
+  transform: translateY(-1px);
+}
+
+.cl-toolbar {
+  border-bottom: 1px solid var(--cl-line);
+  background: rgba(249, 246, 230, 0.92);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 72px;
+  z-index: 20;
+}
+
+.cl-toolbar-inner {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 18px 0;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 14px 20px;
+  align-items: end;
+}
+
+.cl-search input,
+.cl-sort select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--cl-line);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--cl-ink);
+  font: inherit;
+  padding: 0 14px;
+}
+
+.cl-search span,
+.cl-sort span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cl-navy);
+}
+
+.cl-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.cl-search {
+  position: relative;
+}
+
+.cl-count {
+  margin: 0;
+  padding-bottom: 12px;
+  font-size: 14px;
+  color: #5a6478;
+  white-space: nowrap;
+}
+
+.cl-grid-wrap {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 40px 0 88px;
+}
+
+.cl-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 22px;
+}
+
+.cl-card {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.28s ease;
+}
+
+.cl-card:hover {
+  transform: translateY(-4px);
+}
+
+.cl-card-media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #d9d2b4;
+}
+
+.cl-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.cl-card:hover .cl-card-media img {
+  transform: scale(1.04);
+}
+
+.cl-card-body {
+  padding: 16px 2px 0;
+}
+
+.cl-card-price {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--cl-navy);
+  letter-spacing: -0.02em;
+}
+
+.cl-card-title {
+  margin: 6px 0 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--cl-ink);
+}
+
+.cl-card-loc {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #5a6478;
+}
+
+.cl-card-chips {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cl-card-chips li {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cl-navy);
+  border-bottom: 1px solid rgba(201, 138, 44, 0.55);
+  padding-bottom: 2px;
+}
+
+.cl-empty {
+  margin: 40px 0 0;
+  text-align: center;
+  color: #5a6478;
+}
+
+@media (max-width: 980px) {
+  .cl-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cl-toolbar-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cl-count {
+    grid-column: 1 / -1;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .cl-hero-inner {
+    padding: 100px 0 56px;
+  }
+
+  .cl-toolbar {
+    top: 64px;
+  }
+
+  .cl-toolbar-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .cl-grid {
+    grid-template-columns: 1fr;
+  }
+}

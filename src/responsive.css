@@ -110,7 +110,7 @@ html.mfr-header-scrolled .mfr-mobile-header {
   }
   /* Skip images that set their own inline height (logos, icons): forcing
      height:auto would blow them up to their natural pixel size. */
-  img:not([style*="position:absolute"]):not([style*="object-fit"]):not([style*="height:"]):not(.site-footer-logo-img):not(.bsg-hero-image) {
+  img:not([style*="position:absolute"]):not([style*="object-fit"]):not([style*="height:"]):not(.site-footer-logo-img):not(.bsg-hero-image):not(.listing-cover-img) {
     height: auto !important;
   }
   iframe {

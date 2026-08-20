@@ -91,10 +91,13 @@ export default function DesktopHeader() {
           </div>
 
           <div className="mnav-item">
-            <a href="/idx-sales/" className="mnav-top">
+            <a href="/current-listings/" className="mnav-top">
               Listings <ChevronIcon />
             </a>
             <div className="mnav-drop mnav-drop--listings">
+              <a href="/current-listings/" className="mnav-link">
+                Current Listings
+              </a>
               <a href="/idx-sales/" className="mnav-link">
                 Homes For Sale
               </a>

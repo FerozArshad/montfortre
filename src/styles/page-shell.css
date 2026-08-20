@@ -5,7 +5,8 @@
 .about-page,
 .stanley-page,
 .success-page,
-.harlem-page {
+.harlem-page,
+.listing-page {
   width: 100%;
   max-width: 100%;
   background: #f9f6e6;
@@ -15,7 +16,8 @@
 .about-page a,
 .stanley-page a,
 .success-page a,
-.harlem-page a {
+.harlem-page a,
+.listing-page a {
   color: #113b5f;
   text-decoration: none;
 }
@@ -24,7 +26,8 @@
 .about-page a:hover,
 .stanley-page a:hover,
 .success-page a:hover,
-.harlem-page a:hover {
+.harlem-page a:hover,
+.listing-page a:hover {
   color: #c98a2c;
 }
 
