@@ -21,6 +21,7 @@ export default function HarlemAreaNav() {
   return (
     <section className="hlm-guide-nav" data-screen-label="Harlem area navigation" aria-label="Harlem area navigation">
       <div className="hlm-guide-nav-inner">
+        <div className="hlm-guide-nav-start">
         <div className="hlm-guide-agent" ref={agentRef}>
           <button
             type="button"
@@ -71,6 +72,7 @@ export default function HarlemAreaNav() {
             ))}
           </select>
         </label>
+        </div>
 
         <nav className="hlm-guide-tabs" aria-label="On this page">
           {HARLEM_AREA_LINKS.map((link) => (
@@ -85,7 +87,7 @@ export default function HarlemAreaNav() {
             <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.8" />
             <path d="M20 20l-3.5-3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
           </svg>
-                    <span>Search For Listings</span>
+          <span>Search For Listings</span>
         </a>
       </div>
     </section>

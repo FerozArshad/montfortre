@@ -45,6 +45,17 @@ function PoiIcon({ id }: { id: string }) {
       </svg>
     );
   }
+  if (id === "restaurant") {
+    return (
+      <svg {...common}>
+        <path d="M7 3v8a2 2 0 0 1-2 2H5v8" />
+        <path d="M7 7H4M7 3H4" />
+        <path d="M11 3v18" />
+        <path d="M15 3v18" />
+        <path d="M15 3c2.8 0 4.5 2.2 4.5 5.5V11H15" />
+      </svg>
+    );
+  }
   return (
     <svg {...common}>
       <path d="M4 20V8h16v12" />
