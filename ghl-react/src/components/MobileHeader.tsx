@@ -48,8 +48,9 @@ const MENU: MenuSection[] = [
   },
   {
     label: "Listings",
-    href: "/idx-sales/",
+    href: "/current-listings/",
     links: [
+      { label: "Current Listings", href: "/current-listings/" },
       { label: "Homes For Sale", href: "/idx-sales/" },
       { label: "Rentals", href: "/idx-rentals/" },
       { label: "Customer Login", href: "https://stanley.olridx.com/#", external: true },
