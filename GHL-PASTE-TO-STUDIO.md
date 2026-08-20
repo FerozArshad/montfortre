@@ -121,8 +121,11 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/abou
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/Harlem.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem/HarlemContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem/HarlemPoiMap.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem/HarlemAreaNav.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlem.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/harlemGuide.ts
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/HarlemSchools.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/data/harlemSchools.json
 
