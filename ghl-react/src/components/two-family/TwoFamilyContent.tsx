@@ -1,14 +1,12 @@
 import ContactSection from "../shared/ContactSection";
+import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
+import useReputationAggregate from "../../hooks/useReputationAggregate";
 import "../../styles/two-family-page.css";
 
-const CHECK_ICON = (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-    <path d="M6 12.5l3.5 3.5L18 7.5" stroke="#0F1729" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
 
 export default function TwoFamilyContent() {
+  const { ratingLabel, stars, totalReviews } = useReputationAggregate();
   return (
     <>
       <section className="tf-hero" data-screen-label="Service hero">
@@ -46,41 +44,17 @@ export default function TwoFamilyContent() {
               <div className="tf-hero-rating-copy">
                 <span className="tf-hero-rating-title">Google Rating</span>
                 <div className="tf-hero-rating-row">
-                  <span className="tf-hero-rating-score">5.0</span>
-                  <span className="tf-hero-rating-stars">★★★★★</span>
+                  <span className="tf-hero-rating-score">{ratingLabel}</span>
+                  <span className="tf-hero-rating-stars">{stars}</span>
                 </div>
-                <span className="tf-hero-rating-count">Over <strong>57 Reviews</strong></span>
+                <span className="tf-hero-rating-count">Over <strong>{totalReviews} Reviews</strong></span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="tf-promises" data-screen-label="Client promises">
-        <div className="tf-promises-inner">
-          <div className="tf-promise" data-reveal="">
-            <span className="tf-promise-icon">{CHECK_ICON}</span>
-            <div>
-              <div className="tf-promise-title">Smooth Transaction</div>
-              <p>With limited risk throughout the buying process.</p>
-            </div>
-          </div>
-          <div className="tf-promise" data-reveal="">
-            <span className="tf-promise-icon">{CHECK_ICON}</span>
-            <div>
-              <div className="tf-promise-title">No Pressure</div>
-              <p>No pressure to overpay or purchase within a specific timeframe.</p>
-            </div>
-          </div>
-          <div className="tf-promise" data-reveal="">
-            <span className="tf-promise-icon">{CHECK_ICON}</span>
-            <div>
-              <div className="tf-promise-title">Ongoing Support</div>
-              <p>A dedicated team that remains available even after the transaction is complete.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PromisesBar variant="light" screenLabel="Client promises" />
 
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">

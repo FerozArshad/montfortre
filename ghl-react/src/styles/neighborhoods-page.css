@@ -166,6 +166,43 @@
   color: #f9f6e6;
 }
 
+.nbhd-hero-hoods {
+  margin-top: 38px;
+  padding-top: 26px;
+  border-top: 1px solid #d9cfa6;
+}
+
+.nbhd-hero-hoods-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8a7b4e;
+}
+
+.nbhd-hero-hoods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px 40px;
+  margin-top: 18px;
+}
+
+.neighborhoods-page a.nbhd-hero-hood {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #0f1729;
+  text-wrap: pretty;
+  text-decoration: none;
+}
+
+.neighborhoods-page a.nbhd-hero-hood:hover {
+  color: #c98a2c;
+}
+
+.nbhd-hood {
+  scroll-margin-top: 110px;
+}
+
 .nbhd-hero-boro {
   margin-top: 38px;
   padding-top: 26px;
@@ -283,114 +320,6 @@
 
 .nbhd-hero-rating-count strong {
   font-weight: 700;
-}
-
-.nbhd-promises-sec {
-  position: relative;
-  background: #0f1729;
-  padding: 52px 64px 56px;
-  overflow: hidden;
-}
-
-.nbhd-promises-ring {
-  position: absolute;
-  top: -220px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 900px;
-  height: 900px;
-  border-radius: 50%;
-  border: 1px solid rgba(201, 138, 44, 0.13);
-}
-
-.nbhd-promises-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.nbhd-promises-kicker {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
-
-.nbhd-promises-kicker-line {
-  width: 40px;
-  height: 1px;
-  background: rgba(201, 138, 44, 0.6);
-  display: block;
-}
-
-.nbhd-promises-kicker-label {
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #c98a2c;
-}
-
-.nbhd-promises {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
-  margin-top: 34px;
-}
-
-.nbhd-promise:nth-child(1) {
-  padding: 0 48px 0 0;
-  border-right: 1px solid rgba(201, 138, 44, 0.24);
-}
-
-.nbhd-promise:nth-child(2) {
-  padding: 0 48px;
-  border-right: 1px solid rgba(201, 138, 44, 0.24);
-}
-
-.nbhd-promise:nth-child(3) {
-  padding: 0 0 0 48px;
-}
-
-.nbhd-promise-head {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.nbhd-promise-icon {
-  flex: 0 0 auto;
-  width: 54px;
-  height: 54px;
-  border-radius: 100px;
-  border: 1px solid rgba(201, 138, 44, 0.55);
-  background: rgba(201, 138, 44, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nbhd-promise-icon svg {
-  display: block;
-}
-
-.nbhd-promise-title {
-  font-family: "Space Grotesk", system-ui, sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #f9f6e6;
-}
-
-.nbhd-promise p {
-  font-size: 16.5px;
-  line-height: 1.7;
-  color: rgba(249, 246, 230, 0.76);
-  margin: 16px 0 0;
-  text-wrap: pretty;
 }
 
 .nbhd-intro {
@@ -878,7 +807,6 @@
 
 @media (max-width: 1024px) {
   .nbhd-hero,
-  .nbhd-promises-sec,
   .nbhd-intro,
   .nbhd-boro,
   .nbhd-cta {
@@ -892,6 +820,11 @@
   .nbhd-hood--copy-first {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .nbhd-hero-hoods-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 28px;
   }
 
   .nbhd-hero h1 {
@@ -910,7 +843,6 @@
 
 @media (max-width: 1024px) {
   .nbhd-hero,
-  .nbhd-promises-sec,
   .nbhd-intro,
   .nbhd-boro,
   .nbhd-cta {
@@ -922,28 +854,6 @@
     right: 12px;
     max-width: calc(100% - 24px);
     box-sizing: border-box;
-  }
-
-  .nbhd-promises {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0;
-    margin-top: 28px;
-    width: 100%;
-  }
-
-  .nbhd-promise:nth-child(1),
-  .nbhd-promise:nth-child(2),
-  .nbhd-promise:nth-child(3) {
-    padding: 0 0 28px;
-    border-right: none;
-    border-bottom: none;
-    text-align: left;
-    justify-self: stretch;
-  }
-
-  .nbhd-promise:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
   }
 
   .nbhd-intro-inner {
@@ -1004,11 +914,6 @@
     padding-bottom: 56px;
   }
 
-  .nbhd-promises-sec {
-    padding-top: 40px;
-    padding-bottom: 44px;
-  }
-
   .nbhd-cta {
     padding-bottom: 56px;
   }
@@ -1049,6 +954,10 @@
     flex-wrap: nowrap;
     gap: 8px;
     width: 100%;
+  }
+
+  .nbhd-hero-hoods-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .neighborhoods-page a.nbhd-hero-book,
@@ -1165,7 +1074,6 @@
 
 @media (max-width: 479.98px) {
   .nbhd-hero,
-  .nbhd-promises-sec,
   .nbhd-intro,
   .nbhd-boro,
   .nbhd-cta {

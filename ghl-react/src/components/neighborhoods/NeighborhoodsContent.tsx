@@ -1,5 +1,7 @@
+import PromisesBar from "../shared/PromisesBar";
 import ContactSection from "../shared/ContactSection";
 import ResourcesSection from "../shared/ResourcesSection";
+import useReputationAggregate from "../../hooks/useReputationAggregate";
 import "../../styles/neighborhoods-page.css";
 
 type PropertyLink = {
@@ -17,21 +19,6 @@ type Hood = {
   imageFirst: boolean;
   types: PropertyLink[];
 };
-
-const PROMISES = [
-  {
-    title: "SMOOTH TRANSACTION",
-    text: "With limited risk throughout the buying process.",
-  },
-  {
-    title: "NO PRESSURE",
-    text: "No pressure to overpay or purchase within a specific timeframe.",
-  },
-  {
-    title: "ONGOING SUPPORT",
-    text: "A dedicated team that remains available even after the transaction is complete.",
-  },
-] as const;
 
 const NEWS_ARTICLES = [
   {
@@ -58,6 +45,25 @@ const NEWS_ARTICLES = [
       "Are you searching for your dream home in one of New York City’s most sought-after neighborhoods? Loo…",
   },
 ] as const;
+
+/** Same labels as Services hero; order matches Manhattan → Brooklyn sections on this page. */
+const HERO_NEIGHBORHOODS = [
+  { id: "harlem", label: "Harlem Realtor" },
+  { id: "upper-west-side", label: "Upper West Side Realtor" },
+  { id: "upper-east-side", label: "Upper East Side Realtor" },
+  { id: "chelsea", label: "Chelsea Realtor" },
+  { id: "downtown-brooklyn", label: "Downtown Brooklyn Realtor" },
+  { id: "dumbo", label: "Dumbo Realtor" },
+  { id: "brooklyn-heights", label: "Brooklyn Heights Realtor" },
+  { id: "bedford-stuyvesant", label: "Bedford Stuyvesant Realtor" },
+  { id: "williamsburg", label: "Williamsburg Realtor" },
+  { id: "crown-heights", label: "Crown Heights Realtor" },
+  { id: "park-slope", label: "Park Slope Realtor" },
+] as const;
+
+function hoodSectionId(href: string) {
+  return href.replace(/^\/|\/$/g, "");
+}
 
 const MANHATTAN: Hood[] = [
   {
@@ -215,12 +221,6 @@ const BROOKLYN: Hood[] = [
   },
 ];
 
-const CHECK_ICON = (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C98A2C" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M20 6L9 17l-5-5" />
-  </svg>
-);
-
 function PtArrow() {
   return (
     <svg className="pt-arrow" width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
@@ -257,6 +257,7 @@ function HoodList({ hoods, rowClass }: { hoods: Hood[]; rowClass: string }) {
       {hoods.map((hood) => (
         <div
           key={hood.href}
+          id={hoodSectionId(hood.href)}
           className={`nbhd-hood ${hood.imageFirst ? "nbhd-hood--img-first" : "nbhd-hood--copy-first"}`}
           data-reveal=""
         >
@@ -282,6 +283,7 @@ function HoodList({ hoods, rowClass }: { hoods: Hood[]; rowClass: string }) {
 }
 
 export default function NeighborhoodsContent() {
+  const { ratingLabel, stars, totalReviews } = useReputationAggregate();
   return (
     <>
       <section className="nbhd-hero" data-screen-label="Neighborhoods hero">
@@ -303,11 +305,14 @@ export default function NeighborhoodsContent() {
                 Schedule A Constulation
               </a>
             </div>
-            <div className="nbhd-hero-boro">
-              <div className="nbhd-hero-boro-label">Explore by borough</div>
-              <div className="nbhd-hero-boro-links">
-                <a href="#manhattan" className="nbhd-hero-boro-link">Manhattan · 4 neighborhoods</a>
-                <a href="#brooklyn" className="nbhd-hero-boro-link">Brooklyn · 7 neighborhoods</a>
+            <div className="nbhd-hero-hoods">
+              <div className="nbhd-hero-hoods-label">Serving NYC&apos;s top neighborhoods</div>
+              <div className="nbhd-hero-hoods-grid">
+                {HERO_NEIGHBORHOODS.map((hood) => (
+                  <a key={hood.id} href={`#${hood.id}`} className="nbhd-hero-hood">
+                    {hood.label}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -325,11 +330,11 @@ export default function NeighborhoodsContent() {
               <div className="nbhd-hero-rating-copy">
                 <span className="nbhd-hero-rating-title">Google Rating</span>
                 <div className="nbhd-hero-rating-row">
-                  <span className="nbhd-hero-rating-score">5.0</span>
-                  <span className="nbhd-hero-rating-stars">★★★★★</span>
+                  <span className="nbhd-hero-rating-score">{ratingLabel}</span>
+                  <span className="nbhd-hero-rating-stars">{stars}</span>
                 </div>
                 <span className="nbhd-hero-rating-count">
-                  Over <strong>57 Reviews</strong>
+                  Over <strong>{totalReviews} Reviews</strong>
                 </span>
               </div>
             </div>
@@ -337,27 +342,7 @@ export default function NeighborhoodsContent() {
         </div>
       </section>
 
-      <section className="nbhd-promises-sec" data-screen-label="Promises">
-        <div className="nbhd-promises-ring" />
-        <div className="nbhd-promises-inner">
-          <div className="nbhd-promises-kicker">
-            <span className="nbhd-promises-kicker-line" />
-            <span className="nbhd-promises-kicker-label">What working with us means</span>
-            <span className="nbhd-promises-kicker-line" />
-          </div>
-          <div className="nbhd-promises">
-            {PROMISES.map((item) => (
-              <div key={item.text} className="nbhd-promise" data-reveal="">
-                <div className="nbhd-promise-head">
-                  <span className="nbhd-promise-icon">{CHECK_ICON}</span>
-                  <span className="nbhd-promise-title">{item.title}</span>
-                </div>
-                <p>{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PromisesBar variant="nbhd" />
 
       <section className="nbhd-intro" data-screen-label="Intro">
         <div className="nbhd-intro-inner">

@@ -1,4 +1,5 @@
 import { BLOG_ARTICLE_REGISTRY } from "../../blog/registry";
+import PromisesBar from "../shared/PromisesBar";
 import "../../styles/legal-pages.css";
 
 type SiteLink = {
@@ -21,12 +22,26 @@ const SERVICE_LINKS: readonly SiteLink[] = [
   { href: "/nyc-listing-agent-service/", label: "NYC Listing Agent Service" },
   { href: "/nyc-multifamily-real-estate-agent-service/", label: "NYC Multifamily Real Estate Agent Service" },
   { href: "/2-family-house-for-sale-nyc/", label: "2 Family House for Sale NYC" },
+  { href: "/3-family-house-for-sale-nyc/", label: "3 Family House for Sale NYC" },
+  { href: "/4-family-house-for-sale-nyc/", label: "4 Family House for Sale NYC" },
+  { href: "/nyc-brownstone-free-home-valuation/", label: "NYC Brownstone Free Home Valuation" },
+  { href: "/nyc-sro-free-home-valuation/", label: "NYC SRO Free Home Valuation" },
+  { href: "/nyc-co-op-free-home-valuation/", label: "NYC Co-Op Free Home Valuation" },
+  { href: "/nyc-condo-free-home-valuation/", label: "NYC Condo Free Home Valuation" },
   { href: "/buying-a-condo-in-nyc/", label: "Buying a Condo in NYC" },
   { href: "/buying-a-brownstone-in-nyc/", label: "Buying a Brownstone in NYC" },
   { href: "/buying-sro-in-nyc/", label: "Buying SRO in NYC" },
   { href: "/co-ownership-buying-in-nyc/", label: "Co-Ownership Buying in NYC" },
+  { href: "/selling-probate-properties-in-nyc/", label: "Selling Probate Properties in NYC" },
+  { href: "/selling-sros-in-nyc/", label: "Selling SROs in NYC" },
+  { href: "/selling-co-ops-in-nyc/", label: "Selling Co-Ops in NYC" },
+  { href: "/selling-condos-in-nyc/", label: "Selling Condos in NYC" },
+  { href: "/selling-brownstones-in-nyc/", label: "Selling Brownstones in NYC" },
   { href: "/home-valuation/", label: "Free Home Valuation" },
   { href: "/mortgage-calculator/", label: "Mortgage Calculator" },
+  { href: "/nyc-first-time-home-buyer-mortages/", label: "NYC First-Time Home Buyer Mortgages" },
+  { href: "/nyc-brownstone-mortgages/", label: "NYC Brownstone Mortgages" },
+  { href: "/nyc-sro-mortgages/", label: "NYC SRO Mortgages" },
   { href: "/idx-sales/", label: "Search Homes for Sale" },
   { href: "/idx-rentals/", label: "Search Rentals" },
 ];
@@ -111,6 +126,7 @@ const SECTIONS = [
 export default function SiteMapContent() {
   return (
     <>
+      <PromisesBar variant="light" />
       <section className="legal-hero legal-hero--sitemap" aria-labelledby="sitemap-heading">
         <div className="legal-hero-ring" aria-hidden="true" />
         <div className="legal-hero-inner">

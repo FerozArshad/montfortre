@@ -1,4 +1,5 @@
 import ResourcesSection from "../shared/ResourcesSection";
+import PromisesBar from "../shared/PromisesBar";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/downstone-brooklyn-co-ops-page.css";
 import "../../styles/contact-section.css";
@@ -57,6 +58,8 @@ export default function DownstoneBrooklynCoOpsContent() {
           </div>
         </div>
       </section>
+<PromisesBar variant="nbhd" />
+
 
       <section className="nbhd-intro" data-screen-label="Heading">
         <div className="nbhd-intro-inner">
@@ -72,18 +75,7 @@ export default function DownstoneBrooklynCoOpsContent() {
         </div>
       </section>
 
-      <section className="nbhd-reviews" data-screen-label="Reviews">
-        <div className="nbhd-reviews-inner">
-          <iframe
-            className="nbhd-reviews-frame"
-            title="Montfort Real Estate reviews"
-            src="https://reputationhub.site/reputation/widgets/review_widget/J3cYmGK3p1ja7wTS63Dn"
-            loading="lazy"
-          />
-        </div>
-      </section>
-
-      <section className="nbhd-intro" data-screen-label="Guide">
+<section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
           <div className="nbhd-intro-copy" data-reveal="">
             <h2>WHY ARE DOWNTOWN BROOKLYN CO OPS SO DESIRABLE?</h2>

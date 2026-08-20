@@ -1,5 +1,7 @@
 import ContactSection from "../shared/ContactSection";
+import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
+import useReputationAggregate from "../../hooks/useReputationAggregate";
 import "../../styles/success-page.css";
 
 const GOOGLE_MARK =
@@ -79,6 +81,7 @@ const TESTIMONIALS = [
 ] as const;
 
 export default function SuccessStoriesContent() {
+  const { ratingLabel, stars, totalReviews } = useReputationAggregate();
   return (
     <div>
       <section className="succ-hero" data-screen-label="Success hero">
@@ -105,14 +108,14 @@ export default function SuccessStoriesContent() {
             <div className="succ-google-score">
               <div className="succ-google-score-row">
                 <img src={GOOGLE_MARK} alt="Google" />
-                <span className="succ-google-num">5.0</span>
+                <span className="succ-google-num">{ratingLabel}</span>
               </div>
               <span className="succ-google-label">Verified Google reviews</span>
             </div>
             <div className="succ-google-meta">
-              <span className="succ-google-stars">★★★★★</span>
+              <span className="succ-google-stars">{stars}</span>
               <span className="succ-google-count">
-                Over <strong>57 reviews</strong>
+                Over <strong>{totalReviews} reviews</strong>
               </span>
             </div>
           </a>
@@ -129,6 +132,8 @@ export default function SuccessStoriesContent() {
           </div>
         </div>
       </section>
+<PromisesBar variant="nbhd" />
+
 
       <section className="succ-list" data-screen-label="Testimonials">
         <div className="success-masonry">

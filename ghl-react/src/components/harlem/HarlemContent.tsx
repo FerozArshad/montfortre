@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import PromisesBar from "../shared/PromisesBar";
 import HarlemSchools from "../HarlemSchools";
 import ResourcesSection from "../shared/ResourcesSection";
 import HarlemAreaNav from "./HarlemAreaNav";
@@ -213,6 +214,7 @@ export default function HarlemContent() {
       <HarlemPoiMap />
       <HarlemAreaNav />
 
+      <PromisesBar variant="nbhd" />
       <section id="featured-listings" className="hlm-listings" data-screen-label="Featured listings">
         <div className="hlm-listings-inner">
           <div data-reveal="">
@@ -244,17 +246,6 @@ export default function HarlemContent() {
           <div className="hlm-about-photo" data-reveal="">
             <img src="/redesign-assets/hoods/harlem.webp" alt="Harlem street" />
           </div>
-        </div>
-      </section>
-
-      <section className="hlm-reviews" data-screen-label="Harlem reviews">
-        <div className="hlm-reviews-inner">
-          <iframe
-            className="hlm-reviews-frame"
-            title="Montfort Real Estate reviews"
-            src="https://reputationhub.site/reputation/widgets/review_widget/J3cYmGK3p1ja7wTS63Dn"
-            loading="lazy"
-          />
         </div>
       </section>
 

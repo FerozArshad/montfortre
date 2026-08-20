@@ -1,6 +1,36 @@
 .home-promises {
-  background: #0b1220;
-  border-bottom: 1px solid rgba(201, 138, 44, 0.35);
+  --promises-bg: #0b1220;
+  --promises-border: rgba(201, 138, 44, 0.35);
+  --promises-text: #f9f6e6;
+  --promises-check-fill: #c98a2c;
+  --promises-check-stroke: #0f1729;
+
+  background: var(--promises-bg);
+  border-bottom: 1px solid var(--promises-border);
+}
+
+.home-promises--nbhd {
+  --promises-bg: #0f1729;
+  --promises-border: rgba(201, 138, 44, 0.35);
+  --promises-text: #f9f6e6;
+  --promises-check-fill: #c98a2c;
+  --promises-check-stroke: #0f1729;
+}
+
+.home-promises--light {
+  --promises-bg: #f9f6e6;
+  --promises-border: #e0d9b8;
+  --promises-text: #0f1729;
+  --promises-check-fill: #c98a2c;
+  --promises-check-stroke: #0f1729;
+}
+
+.home-promises--about {
+  --promises-bg: #f5eecb;
+  --promises-border: #e0d9b8;
+  --promises-text: #0f1729;
+  --promises-check-fill: #c98a2c;
+  --promises-check-stroke: #0f1729;
 }
 
 .home-promises-inner {
@@ -30,7 +60,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
-  color: #f9f6e6;
+  color: var(--promises-text);
   white-space: nowrap;
   margin: 0;
 }

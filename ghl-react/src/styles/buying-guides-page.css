@@ -1,5 +1,16 @@
 /* Buyer-guide service pages reuse 2-family tokens. Extra layout for lists, quotes, tables, reviews. */
 
+.buying-guides-page .tf-hero h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #0f1729;
+  margin: 18px 0 0;
+  text-wrap: pretty;
+}
+
 .buying-guides-page .tf-promise-title {
   text-transform: uppercase;
 }
@@ -101,6 +112,10 @@
 }
 
 @media (max-width: 1024px) {
+  .buying-guides-page .tf-hero h2 {
+    font-size: 42px;
+  }
+
   .buying-guides-page .tf-reviews {
     padding-left: 32px;
     padding-right: 32px;
@@ -111,6 +126,18 @@
   .buying-guides-page .tf-reviews {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .buying-guides-page .tf-hero h2 {
+    font-size: 31px;
+  }
+}
+
+@media (max-width: 480px) {
+  .buying-guides-page .tf-hero h2 {
+    font-size: 27px;
   }
 }
 

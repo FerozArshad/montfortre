@@ -629,6 +629,90 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/CoOwners
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/co-ownership-buying-in-nyc/CoOwnershipBuyingInNycContent.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/coOwnershipBuyingInNyc.ts
 
+## 9aw. SellingProbatePropertiesInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SellingProbatePropertiesInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/selling-probate-properties-in-nyc/SellingProbatePropertiesInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/sellingProbatePropertiesInNyc.ts
+
+## 9ax. SellingSrosInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SellingSrosInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/selling-sros-in-nyc/SellingSrosInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/sellingSrosInNyc.ts
+
+## 9ay. SellingCoOpsInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SellingCoOpsInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/selling-co-ops-in-nyc/SellingCoOpsInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/sellingCoOpsInNyc.ts
+
+## 9az. SellingCondosInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SellingCondosInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/selling-condos-in-nyc/SellingCondosInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/sellingCondosInNyc.ts
+
+## 9ba. SellingBrownstonesInNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/SellingBrownstonesInNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/selling-brownstones-in-nyc/SellingBrownstonesInNycContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/sellingBrownstonesInNyc.ts
+
+## 9bb. ThreeFamilyHouseForSaleNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/ThreeFamilyHouseForSaleNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/three-family/ThreeFamilyContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/threeFamily.ts
+
+## 9bc. FourFamilyHouseForSaleNyc
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/FourFamilyHouseForSaleNyc.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/four-family/FourFamilyContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/fourFamily.ts
+
+## 9bd. NycBrownstoneFreeHomeValuation
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycBrownstoneFreeHomeValuation.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-brownstone-free-home-valuation/NycBrownstoneFreeHomeValuationContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycBrownstoneFreeHomeValuation.ts
+
+## 9be. NycSroFreeHomeValuation
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycSroFreeHomeValuation.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-sro-free-home-valuation/NycSroFreeHomeValuationContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycSroFreeHomeValuation.ts
+
+## 9bf. NycCoOpFreeHomeValuation
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycCoOpFreeHomeValuation.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-co-op-free-home-valuation/NycCoOpFreeHomeValuationContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycCoOpFreeHomeValuation.ts
+
+## 9bg. NycCondoFreeHomeValuation
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycCondoFreeHomeValuation.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-condo-free-home-valuation/NycCondoFreeHomeValuationContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycCondoFreeHomeValuation.ts
+
+## 9bh. NycFirstTimeHomeBuyerMortages
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycFirstTimeHomeBuyerMortages.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-first-time-home-buyer-mortages/NycFirstTimeHomeBuyerMortagesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycFirstTimeHomeBuyerMortages.ts
+
+## 9bi. NycBrownstoneMortgages
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycBrownstoneMortgages.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-brownstone-mortgages/NycBrownstoneMortgagesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycBrownstoneMortgages.ts
+
+## 9bj. NycSroMortgages
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/NycSroMortgages.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/nyc-sro-mortgages/NycSroMortgagesContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/nycSroMortgages.ts
+
 ---
 
 ## 9ar. Privacy Policy + HTML Sitemap

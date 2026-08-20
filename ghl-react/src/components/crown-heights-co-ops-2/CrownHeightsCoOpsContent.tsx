@@ -1,4 +1,5 @@
 import ResourcesSection from "../shared/ResourcesSection";
+import PromisesBar from "../shared/PromisesBar";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/crown-heights-co-ops-page.css";
 import "../../styles/contact-section.css";
@@ -52,6 +53,8 @@ export default function CrownHeightsCoOpsContent() {
           </div>
         </div>
       </section>
+<PromisesBar variant="nbhd" />
+
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">

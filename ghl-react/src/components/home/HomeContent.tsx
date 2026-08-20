@@ -1,13 +1,13 @@
 import ResourcesSection from "../shared/ResourcesSection";
+import PromisesBar from "../shared/PromisesBar";
+import useReputationAggregate from "../../hooks/useReputationAggregate";
 import "../../styles/home-hero.css";
-import "../../styles/home-promises.css";
 import "../../styles/home-hidden-cost.css";
 import "../../styles/home-founder.css";
 import "../../styles/home-areas.css";
 import "../../styles/home-expect.css";
 import "../../styles/home-plan.css";
 import "../../styles/home-services.css";
-import "../../styles/home-reviews.css";
 import "../../styles/home-instagram.css";
 import "../../styles/home-included.css";
 import "../../styles/home-listings.css";
@@ -194,51 +194,6 @@ const SERVICE_CARDS = [
     alt: "NYC Mortgage Calculator on a laptop",
     title: "NYC Mortgage Calculator",
     copy: "See your full monthly cost, maintenance, common charges, taxes, and closing costs, before you make an offer.",
-  },
-] as const;
-
-const REVIEWS = [
-  {
-    href: "https://www.google.com/maps/contrib/107286042219082422872/reviews?hl=en",
-    photo: "https://lh3.googleusercontent.com/a-/ALV-UjViSqMG3KN7oLq8R0QnIw-DaXDyjT90luYGecAIkSmU_hO3gSPc=s120-c-rp-mo",
-    name: "Anika Nfr-Ka Ma’at Daniels",
-    quote:
-      "Stan is extremely knowledgeable and professional. He also has the utmost patience! He helped me sell my home and purchase a condo at the same time. My home had all types of special contingencies but he was able to find me a buyer and get me very close to the price I wanted. I was very specific in terms of the property that I wanted to buy and although it took some time, he was able to find me the…",
-  },
-  {
-    href: "https://www.google.com/maps/contrib/108132066685824850224/reviews?hl=en",
-    photo: "https://lh3.googleusercontent.com/a-/ALV-UjW2GJgbKFCs8CWRPaU68LmyIpJoffj2f9xx_ErBW95J1KmjMk0q=s120-c-rp-mo",
-    name: "Davon Snipes",
-    quote:
-      "Stan has been an incredibly patient, knowledge, and professional broker. He understands the market, and has many relationships in the industry. He was thoughtful and gracious about responding to our feedback, and left no stone unturned in helping us to find the property of our dreams. And he continues to provide guidance and counsel post-closing. If you're looking for a brilliant real estate…",
-  },
-  {
-    href: "https://www.google.com/maps/contrib/116771421068638089471/reviews?hl=en",
-    photo: "https://lh3.googleusercontent.com/a/ACg8ocJF8BS2Xi87Fcaj122YKs-p4jY3uuigUkyo_LFIR4JEbnbvbg=s120-c-rp-mo",
-    name: "Perry Witmer",
-    quote:
-      "Stanley is amazing! No one knows the Harlem market better than him, and his deep expertise was a tremendous resource. He taught me along the way how to spot 'red flags' and talked me out of making an offer on a place that seemed amazing but had, upon his close inspection, evidence of poor workmanship and lots of cut corners. Other brokers remarked in private to me about both his expertise and his…",
-  },
-  {
-    href: "https://www.google.com/maps/contrib/109328620676722096746/reviews?hl=en",
-    photo: "https://lh3.googleusercontent.com/a/ACg8ocJ_u11llTjoHDxUSwbwBOVjPqAEEYxXctnGw2ipJT0OmPkN0KAd=s120-c-rp-mo-ba12",
-    name: "Corey A. Witmer",
-    quote:
-      "Stanley was the dream real estate agent we didn’t know we deserved! From the beginning he was attentive to our curiosity to help us figure out what type of property we wanted - and could afford. Throughout the process he was a calm and patient presence in our lives, offering us sincere and sage perspectives to keep us grounded while managing our expectations. Even with the ups and downs -…",
-  },
-  {
-    href: "https://www.google.com/maps/contrib/100922205373403327263/reviews?hl=en",
-    photo: "https://lh3.googleusercontent.com/a-/ALV-UjVd25nW1zHtfxUwKZuHN2Z62I2M2518k9vbRgSFDL7raRgZLhc=s120-c-rp-mo",
-    name: "Seth Rabinowitz",
-    quote:
-      "We had a great experience working with Stanley. He taught us a lot about the specific market we were looking in, which enabled us to make a very good decision on purchase of a new home.",
-  },
-  {
-    href: "https://www.google.com/maps/contrib/101694945511048714275/reviews?hl=en",
-    photo: "https://lh3.googleusercontent.com/a-/ALV-UjX0xFjJe65Or_gH4pidKtMzlHLnwtjHpiu1DGAeEo9WZQTVlvKdzg=s120-c-rp-mo-ba12",
-    name: "Angelina Darrisaw",
-    quote:
-      "Incredible experience. Very knowledgeable about the brownstone buying process and helped me understand the budget differences for condo vs brownstones. Walked away more informed as a result.",
   },
 ] as const;
 
@@ -493,14 +448,8 @@ const LISTINGS_PREV_CLICK =
 const LISTINGS_NEXT_CLICK =
   "var t=document.getElementById('listings-track'); t.scrollBy({left:(1)*Math.min(t.clientWidth,760), behavior:'smooth'}); return false;";
 
-const REVIEW_PREV_CLICK =
-  "var t=document.getElementById('review-track'); var w=t.clientWidth||1; var n=t.children.length; var cur=Math.round(t.scrollLeft/w); var i=((cur+(-1))%n+n)%n; t.scrollTo({left:i*w, behavior:'smooth'}); return false;";
-const REVIEW_NEXT_CLICK =
-  "var t=document.getElementById('review-track'); var w=t.clientWidth||1; var n=t.children.length; var cur=Math.round(t.scrollLeft/w); var i=((cur+(1))%n+n)%n; t.scrollTo({left:i*w, behavior:'smooth'}); return false;";
-const REVIEW_DOT_CLICK =
-  "var t=document.getElementById('review-track'); t.scrollTo({left:parseInt(this.getAttribute('data-i'))*t.clientWidth, behavior:'smooth'}); return false;";
-
 export default function HomeContent() {
+  const { ratingLabel, stars, totalReviews } = useReputationAggregate();
   return (
     <>
       <section className="home-hero" data-screen-label="Hero">
@@ -637,14 +586,14 @@ export default function HomeContent() {
                       src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"
                       alt="Google"
                     />
-                    <span className="home-hero-badge-num">5.0</span>
+                    <span className="home-hero-badge-num">{ratingLabel}</span>
                   </div>
                   <span className="home-hero-badge-caption">Verified Google reviews</span>
                 </div>
                 <div className="home-hero-badge-reviews">
-                  <span className="home-hero-stars">★★★★★</span>
+                  <span className="home-hero-stars">{stars}</span>
                   <span className="home-hero-reviews-copy">
-                    Over <strong>57 reviews</strong>
+                    Over <strong>{totalReviews} reviews</strong>
                   </span>
                 </div>
               </a>
@@ -655,29 +604,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section className="home-promises" data-screen-label="Buyer promises">
-        <div className="home-promises-inner">
-          {[
-            "Smooth transaction with limited risk",
-            "No pressure to over pay and buy within a certain time period",
-            "A team of people that will be with you even after the transaction is complete",
-          ].map((text) => (
-            <div key={text} className="home-promises-item">
-              <svg viewBox="0 0 24 24" width="21" height="21" fill="none">
-                <circle cx="12" cy="12" r="11" fill="#C98A2C"></circle>
-                <path
-                  d="M7.4 12.3l3.1 3.1 6.1-6.6"
-                  stroke="#0F1729"
-                  strokeWidth="2.1"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-              </svg>
-              <p>{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <PromisesBar variant="home" screenLabel="Buyer promises" />
 
       <section className="home-cost" data-screen-label="Hidden cost of buying alone">
         <div className="home-cost-orb home-cost-orb--tr" />
@@ -1075,107 +1002,6 @@ export default function HomeContent() {
                 Book a consultation <span>→</span>
               </div>
             </a>
-          </div>
-        </div>
-      </section>
-      <section className="home-rev" data-screen-label="Reviews">
-        <div className="home-rev-inner">
-          <div data-reveal="" className="home-rev-head">
-            <div>
-              <div className="home-rev-kicker">
-                <span className="home-rev-kicker-line" />
-                <span className="home-rev-kicker-label">What clients say</span>
-              </div>
-              <h2>Realtor Reviews</h2>
-            </div>
-            <div className="home-rev-score">
-              <img
-                src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"
-                alt="Google"
-              />
-              <span className="home-rev-score-num">5.0</span>
-              <div>
-                <span className="home-rev-stars">★★★★★</span>
-                <a href="/success-stories/" className="home-rev-all">
-                  Read all reviews →
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="home-rev-slider">
-            <div id="review-track" className="no-sb">
-              {REVIEWS.map((review) => (
-                <a
-                  key={review.href}
-                  href={review.href}
-                  target="_blank"
-                  rel="noopener"
-                  className="home-rev-slide"
-                >
-                  <div className="home-rev-author">
-                    <img src={review.photo} alt={review.name} referrerPolicy="no-referrer" />
-                    <div>
-                      <h4>{review.name}</h4>
-                      <div className="home-rev-posted">
-                        <img
-                          src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"
-                          alt="Googleg Standard Color 128Dp"
-                        />{" "}
-                        Posted on Google
-                      </div>
-                    </div>
-                    <span className="home-rev-slide-stars">★★★★★</span>
-                  </div>
-                  <div>
-                    <span className="home-rev-quote-mark">“</span>
-                    <p>{review.quote}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
-            <button
-              id="review-prev"
-              className="home-rev-nav"
-              aria-label="Previous review"
-              {...{ onclick: REVIEW_PREV_CLICK }}
-            >
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path
-                  d="M12.5 4.5L7 10l5.5 5.5"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-              </svg>
-            </button>
-            <button
-              id="review-next"
-              className="home-rev-nav"
-              aria-label="Next review"
-              {...{ onclick: REVIEW_NEXT_CLICK }}
-            >
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path
-                  d="M7.5 4.5L13 10l-5.5 5.5"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div id="review-dots">
-            {REVIEWS.map((_, i) => (
-              <button
-                key={i}
-                className="rev-dot"
-                data-i={String(i)}
-                aria-label={`Go to review ${i + 1}`}
-                {...{ onclick: REVIEW_DOT_CLICK }}
-              />
-            ))}
           </div>
         </div>
       </section>

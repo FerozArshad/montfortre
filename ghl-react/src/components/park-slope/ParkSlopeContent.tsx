@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import PromisesBar from "../shared/PromisesBar";
 import HarlemSchools from "../HarlemSchools";
 import ResourcesSection from "../shared/ResourcesSection";
 import ParkSlopeAreaNav from "./ParkSlopeAreaNav";
@@ -238,6 +239,7 @@ export default function ParkSlopeContent() {
       <ParkSlopePoiMap />
       <ParkSlopeAreaNav />
 
+      <PromisesBar variant="nbhd" />
       <section id="featured-listings" className="hlm-listings" data-screen-label="Featured listings">
         <div className="hlm-listings-inner">
           <div data-reveal="">
@@ -262,18 +264,7 @@ export default function ParkSlopeContent() {
 
       <ParkSlopeRealtorArticle />
 
-      <section className="hlm-reviews" data-screen-label="Park Slope reviews">
-        <div className="hlm-reviews-inner">
-          <iframe
-            className="hlm-reviews-frame"
-            title="Montfort Real Estate reviews"
-            src="https://reputationhub.site/reputation/widgets/review_widget/J3cYmGK3p1ja7wTS63Dn"
-            loading="lazy"
-          />
-        </div>
-      </section>
-
-      <section className="hlm-types" data-screen-label="Park Slope property types">
+<section className="hlm-types" data-screen-label="Park Slope property types">
         <div className="hlm-types-inner">
           <div className="hlm-types-grid">
             {PROPERTY_TYPES.map((item) => (

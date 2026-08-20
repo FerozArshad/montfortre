@@ -1,13 +1,9 @@
+import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/crown-heights-co-ownership-page.css";
 import "../../styles/contact-section.css";
 
-const CHECK_ICON = (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C98A2C" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M20 6L9 17l-5-5" />
-  </svg>
-);
 
 const NEWS_ARTICLES = [
   {
@@ -58,34 +54,7 @@ export default function CrownHeightsCoOwnershipContent() {
         </div>
       </section>
 
-      <section className="nbhd-promises-sec" data-screen-label="Promises">
-        <div className="nbhd-promises-ring" />
-        <div className="nbhd-promises-inner">
-          <div className="nbhd-promises">
-            <div className="nbhd-promise" data-reveal="">
-              <div className="nbhd-promise-head">
-                <span className="nbhd-promise-icon">{CHECK_ICON}</span>
-                <h3 className="nbhd-promise-title">SMOOTH TRANSACTION</h3>
-              </div>
-              <p>With limited risk throughout the buying process.</p>
-            </div>
-            <div className="nbhd-promise" data-reveal="">
-              <div className="nbhd-promise-head">
-                <span className="nbhd-promise-icon">{CHECK_ICON}</span>
-                <h3 className="nbhd-promise-title">NO PRESSURE</h3>
-              </div>
-              <p>No pressure to overpay or purchase within a specific timeframe.</p>
-            </div>
-            <div className="nbhd-promise" data-reveal="">
-              <div className="nbhd-promise-head">
-                <span className="nbhd-promise-icon">{CHECK_ICON}</span>
-                <h3 className="nbhd-promise-title">ONGOING SUPPORT</h3>
-              </div>
-              <p>A dedicated team that remains available even after the transaction is complete.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PromisesBar variant="nbhd" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
@@ -195,8 +164,7 @@ export default function CrownHeightsCoOwnershipContent() {
             <p>If you'd like to meet in person to discuss options, contact me to request directions.</p>
             <p><strong>Phone:</strong> 1-646-970-1078                 <strong>Email:</strong><a href="mailto:sm@montfortre.com" className="nbhd-guide-link">sm@montfortre.com</a></p>
             <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule A Consultation</a><a href="tel:646-970-1078" className="nbhd-guide-link">Call For Information</a>
-            <iframe className="nbhd-reviews-frame" title="Montfort Real Estate reviews" src="https://reputationhub.site/reputation/widgets/review_widget/J3cYmGK3p1ja7wTS63Dn" loading="lazy" />
-          </div>
+</div>
         </div>
       </section>
 

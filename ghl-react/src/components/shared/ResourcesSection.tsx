@@ -43,6 +43,7 @@ type ResourcesSectionProps = {
   moreLabel?: string;
   showCategory?: boolean;
   showCta?: boolean;
+  articleTitlesAsHeadings?: boolean;
   articles?: readonly ResourceArticle[];
 };
 
@@ -53,6 +54,7 @@ export default function ResourcesSection({
   moreLabel = "Read article",
   showCategory = true,
   showCta = true,
+  articleTitlesAsHeadings = false,
   articles = BLOG_ARTICLES,
 }: ResourcesSectionProps) {
   return (
@@ -76,7 +78,11 @@ export default function ResourcesSection({
                 <img src={article.image} alt={article.alt} loading="lazy" />
               </div>
               {showCategory && article.category ? <div className="resources-card-cat">{article.category}</div> : null}
-              <div className="resources-card-title">{article.title}</div>
+              {articleTitlesAsHeadings ? (
+                <h3 className="resources-card-title">{article.title}</h3>
+              ) : (
+                <div className="resources-card-title">{article.title}</div>
+              )}
               <p className="resources-card-excerpt">{article.excerpt}</p>
               <div className="resources-card-more">{moreLabel}</div>
             </a>

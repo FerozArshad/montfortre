@@ -1,12 +1,8 @@
 import ContactSection from "../shared/ContactSection";
+import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/about-page.css";
 
-const CHECK_ICON = (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-    <path d="M6 12.5l3.5 3.5L18 7.5" stroke="#0F1729" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
 
 const NEIGHBORHOODS = [
   {
@@ -129,31 +125,7 @@ export default function AboutUsContent() {
         </div>
       </section>
 
-      <section className="abt-promises" data-screen-label="Client promises">
-        <div className="abt-promises-inner">
-          <div className="abt-promise" data-reveal="">
-            <span className="abt-promise-icon">{CHECK_ICON}</span>
-            <div>
-              <div className="abt-promise-title">Smooth Transaction</div>
-              <p>With limited risk throughout the buying process.</p>
-            </div>
-          </div>
-          <div className="abt-promise" data-reveal="">
-            <span className="abt-promise-icon">{CHECK_ICON}</span>
-            <div>
-              <div className="abt-promise-title">No Pressure</div>
-              <p>No pressure to overpay or purchase within a specific timeframe.</p>
-            </div>
-          </div>
-          <div className="abt-promise" data-reveal="">
-            <span className="abt-promise-icon">{CHECK_ICON}</span>
-            <div>
-              <div className="abt-promise-title">Ongoing Support</div>
-              <p>A dedicated team that stays available even after the deal closes.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PromisesBar variant="about" screenLabel="Client promises" />
 
       <section className="abt-approach" data-screen-label="Approach">
         <div className="abt-approach-inner" data-reveal="">

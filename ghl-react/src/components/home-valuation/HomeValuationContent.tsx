@@ -1,4 +1,5 @@
 import HomeValuationTool from "./HomeValuationTool";
+import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/home-valuation-page.css";
@@ -68,6 +69,7 @@ const NEWS_ARTICLES = [
 export default function HomeValuationContent() {
   return (
     <>
+      <PromisesBar variant="light" />
       <section className="tf-hero" data-screen-label="Service hero">
         <div className="tf-hero-ring" />
         <div className="tf-hero-inner">
@@ -549,18 +551,7 @@ export default function HomeValuationContent() {
         </div>
       </section>
 
-      <section className="tf-reviews" data-screen-label="Reviews">
-        <div className="tf-reviews-inner">
-          <iframe
-            className="tf-reviews-frame"
-            title="Montfort Real Estate reviews"
-            src="https://reputationhub.site/reputation/widgets/review_widget/J3cYmGK3p1ja7wTS63Dn"
-            loading="lazy"
-          />
-        </div>
-      </section>
-
-      <ResourcesSection
+<ResourcesSection
         title="Recent News & Realtor Advice"
         subtitle="Stay in the loop on the latest events, news, & happenings in and around our community!"
         ctaLabel="Read More"
