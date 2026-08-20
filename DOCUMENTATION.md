@@ -401,6 +401,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/dumbo-condos/` | `/dumbo-condos` | `DumboCondos.tsx` | `dumbo-condos/DumboCondosContent.tsx` | `neighborhoods-page.css` + `dumbo-condos-page.css` | `dumboCondos.ts` |
 | `/harlem/` | `/harlem` | `Harlem.tsx` | `harlem/HarlemContent.tsx` + `HarlemSchools.tsx` | `harlem-page.css` | `harlem.ts` |
 | `/harlem-brownstones/` | `/harlem-brownstones` | `HarlemBrownstones.tsx` | `harlem-brownstones/HarlemBrownstonesContent.tsx` | `neighborhoods-page.css` + `harlem-brownstones-page.css` | `harlemBrownstones.ts` |
+| `/harlem-brownstones-for-sale/` | `/harlem-brownstones-for-sale` | `HarlemBrownstonesForSale.tsx` | `harlem-brownstones-for-sale/HarlemBrownstonesForSaleContent.tsx` | `harlem-brownstones-for-sale.css` | `harlemBrownstonesForSale.ts` |
 | `/harlem-condos/` | `/harlem-condos` | `HarlemCondos.tsx` | `harlem-condos/HarlemCondosContent.tsx` | `neighborhoods-page.css` + `harlem-condos-page.css` | `harlemCondos.ts` |
 | `/harlem-sros/` | `/harlem-sros` | `HarlemSros.tsx` | `harlem-sros/HarlemSrosContent.tsx` | `neighborhoods-page.css` + `harlem-sros-page.css` | `harlemSros.ts` |
 | `/harlem-co-ownership/` | `/harlem-co-ownership` | `HarlemCoOwnership.tsx` | `harlem-co-ownership/HarlemCoOwnershipContent.tsx` | `neighborhoods-page.css` + `harlem-co-ownership-page.css` | `harlemCoOwnership.ts` |

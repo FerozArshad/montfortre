@@ -14,6 +14,7 @@ export const HARLEM_POI_FILTERS = [
 ] as const;
 
 export const HARLEM_AREA_LINKS = [
+  { href: "/harlem-brownstones-for-sale/", label: "Brownstones For Sale" },
   { href: "#featured-listings", label: "Featured Listings" },
   { href: "#market-report", label: "Market Report" },
   { href: "#advice", label: "Local Advice" },

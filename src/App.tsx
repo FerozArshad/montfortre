@@ -41,6 +41,7 @@ import DumboCoOps from "./pages/DumboCoOps";
 import DumboCondos from "./pages/DumboCondos";
 import Harlem from "./pages/Harlem";
 import HarlemBrownstones from "./pages/HarlemBrownstones";
+import HarlemBrownstonesForSale from "./pages/HarlemBrownstonesForSale";
 import HarlemCondos from "./pages/HarlemCondos";
 import HarlemSros from "./pages/HarlemSros";
 import HarlemCoOwnership from "./pages/HarlemCoOwnership";
@@ -127,6 +128,7 @@ export default function App() {
         <Route path="/dumbo-condos" element={<DumboCondos />} />
         <Route path="/harlem" element={<Harlem />} />
         <Route path="/harlem-brownstones" element={<HarlemBrownstones />} />
+        <Route path="/harlem-brownstones-for-sale" element={<HarlemBrownstonesForSale />} />
         <Route path="/harlem-condos" element={<HarlemCondos />} />
         <Route path="/harlem-sros" element={<HarlemSros />} />
         <Route path="/harlem-co-ownership" element={<HarlemCoOwnership />} />

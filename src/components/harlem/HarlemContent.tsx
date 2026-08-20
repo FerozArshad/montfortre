@@ -23,11 +23,11 @@ const PROPERTY_TYPES = [
     copy: "Modern amenities, urban convenience, and vibrant Harlem living",
   },
   {
-    href: "/harlem-sros/",
-    image: "/redesign-assets/hoods/harlem-sros.webp",
-    alt: "Harlem SROs",
-    title: "Harlem sros",
-    copy: "Affordable housing, investment potential, and unique opportunities",
+    href: "/harlem-co-ops/",
+    image: "/redesign-assets/hoods/uws-coops.png",
+    alt: "Harlem Co-Ops",
+    title: "Harlem Co-Ops",
+    copy: "Investment opportunity, urban convenience, and vibrant Harlem living",
   },
   {
     href: "/harlem-co-ownership/",
