@@ -29,18 +29,11 @@
   color: #0f1729;
 }
 
-.neighborhoods-page .pt-row:hover .pt-arrow {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 .neighborhoods-page .pt-arrow {
   flex: 0 0 auto;
-  opacity: 0;
-  transform: translateX(-6px);
-  transition:
-    opacity 0.22s ease,
-    transform 0.22s ease;
+  display: block;
+  opacity: 1;
+  transform: none;
 }
 
 .nbhd-hero {
@@ -578,10 +571,10 @@
 .nbhd-hood-list--bk {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 56px 0 40px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 44px;
+  padding: 64px 0 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .nbhd-hood {
@@ -1020,7 +1013,6 @@
     padding-bottom: 56px;
   }
 
-  .nbhd-hood-list--bk,
   .hood-card--wide {
     grid-template-columns: 1fr;
     gap: 24px;

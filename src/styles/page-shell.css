@@ -258,14 +258,10 @@
   background: rgba(201, 138, 44, 0.1);
   padding-left: 18px;
 }
-.neighborhoods-page .pt-row:hover .pt-arrow {
-  opacity: 1;
-  transform: translateX(0);
-}
 .neighborhoods-page .pt-arrow {
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity 0.22s ease, transform 0.22s ease;
+  display: block;
+  opacity: 1;
+  transform: none;
 }
 
 @media (max-width: 1024px) {
