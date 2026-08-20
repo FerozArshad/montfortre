@@ -9,14 +9,13 @@ export const WILLIAMSBURG_POI_FILTERS = [
   { id: "school", title: "Schools", query: "schools near Williamsburg Brooklyn New York NY" },
   { id: "park", title: "Parks", query: "parks near Williamsburg Brooklyn New York NY" },
   { id: "station", title: "Transit Stations", query: "subway stations near Williamsburg Brooklyn New York NY" },
+  { id: "restaurant", title: "Restaurants", query: "restaurants near Williamsburg Brooklyn New York NY" },
   { id: "supermarket", title: "Supermarkets", query: "supermarkets near Williamsburg Brooklyn New York NY" },
 ] as const;
 
 export const WILLIAMSBURG_AREA_LINKS = [
   { href: "#featured-listings", label: "Featured Listings" },
   { href: "#market-report", label: "Market Report" },
-  { href: "#top-schools", label: "Top Schools" },
-  { href: "#the-area", label: "Around The Area" },
   { href: "#advice", label: "Local Advice" },
 ] as const;
 

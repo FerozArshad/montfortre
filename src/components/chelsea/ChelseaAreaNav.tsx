@@ -21,6 +21,7 @@ export default function ChelseaAreaNav() {
       aria-label="Chelsea area navigation"
     >
       <div className="hlm-guide-nav-inner">
+        <div className="hlm-guide-nav-start">
         <div className="hlm-guide-agent" ref={agentRef}>
           <button
             type="button"
@@ -71,6 +72,7 @@ export default function ChelseaAreaNav() {
             ))}
           </select>
         </label>
+        </div>
 
         <nav className="hlm-guide-tabs" aria-label="On this page">
           {CHELSEA_AREA_LINKS.map((link) => (

@@ -74,6 +74,8 @@ export default function HarlemSchools({
 
   const activeLabel = FILTERS.find((f) => f.id === filter)?.label ?? "All Schools";
 
+  if (!schoolList.length) return null;
+
   return (
     <section id="top-schools" data-screen-label="Schools" className="harlem-schools">
       <div className="harlem-schools-inner">

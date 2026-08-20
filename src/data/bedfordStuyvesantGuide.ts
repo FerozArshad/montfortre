@@ -7,14 +7,13 @@ export const BEDFORD_STUYVESANT_POI_FILTERS = [
   { id: "school", title: "Schools", query: "schools near Bedford-Stuyvesant Brooklyn New York NY" },
   { id: "park", title: "Parks", query: "parks near Bedford-Stuyvesant Brooklyn New York NY" },
   { id: "station", title: "Transit Stations", query: "subway stations near Bedford-Stuyvesant Brooklyn New York NY" },
+  { id: "restaurant", title: "Restaurants", query: "restaurants near Bedford-Stuyvesant Brooklyn New York NY" },
   { id: "supermarket", title: "Supermarkets", query: "supermarkets near Bedford-Stuyvesant Brooklyn New York NY" },
 ] as const;
 
 export const BEDFORD_STUYVESANT_AREA_LINKS = [
   { href: "#featured-listings", label: "Featured Listings" },
   { href: "#market-report", label: "Market Report" },
-  { href: "#top-schools", label: "Top Schools" },
-  { href: "#the-area", label: "Around The Area" },
   { href: "#advice", label: "Local Advice" },
 ] as const;
 

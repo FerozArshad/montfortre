@@ -1,13 +1,10 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import PromisesBar from "../shared/PromisesBar";
-import HarlemSchools from "../HarlemSchools";
 import ResourcesSection from "../shared/ResourcesSection";
 import DumboAreaNav from "./DumboAreaNav";
 import DumboPoiMap from "./DumboPoiMap";
 import DumboRealtorArticle from "./DumboRealtorArticle";
-import { DUMBO_YELP_CATS } from "../../data/dumboGuide";
-import DUMBO_SCHOOLS from "../../data/dumboSchools.json";
-import DUMBO_YELP from "../../data/dumboYelp.json";
+
 import "../../styles/harlem-page.css";
 import "../../styles/dumbo-page.css";
 
@@ -28,95 +25,10 @@ const PROPERTY_TYPES = [
   },
 ] as const;
 
-type YelpCat = (typeof DUMBO_YELP_CATS)[number]["id"];
 
-type AreaPlace = {
-  href: string;
-  name: string;
-  reviews: string;
-  rating: number;
-  image?: string;
-};
 
-type School = {
-  name: string;
-  phone: string;
-  type: string;
-  grades: string;
-  rating: number | null;
-  website: string | null;
-  categories: string[];
-};
 
-function ShareIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M12 3v12M12 3l-4 4M12 3l4 4M5 12v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
-function StarRating({ rating }: { rating: number }) {
-  const width = `${Math.max(0, Math.min(100, (rating / 5) * 100))}%`;
-  return (
-    <span className="hlm-stars">
-      ★★★★★
-      <span className="hlm-stars-fill" style={{ width }}>
-        ★★★★★
-      </span>
-    </span>
-  );
-}
-
-async function sharePlace(url: string, name: string) {
-  try {
-    if (navigator.share) {
-      await navigator.share({ title: name, url });
-      return;
-    }
-  } catch {
-    return;
-  }
-  try {
-    await navigator.clipboard.writeText(url);
-  } catch {
-    window.open(url, "_blank", "noopener,noreferrer");
-  }
-}
-
-function AreaCard({ place }: { place: AreaPlace }) {
-  return (
-    <div className="hlm-area-card">
-      <a href={place.href} target="_blank" rel="noopener nofollow" className="hlm-area-media">
-        {place.image ? <img src={place.image} alt={place.name} loading="lazy" /> : null}
-        <div className="hlm-area-shade" />
-        <div className="hlm-area-caption">
-          <div className="hlm-area-name">{place.name}</div>
-          <div className="hlm-area-meta">
-            <StarRating rating={place.rating} />
-            <span className="hlm-area-reviews">{place.reviews}</span>
-          </div>
-        </div>
-      </a>
-      <button
-        type="button"
-        className="area-share"
-        data-url={place.href}
-        data-name={place.name}
-        onClick={() => void sharePlace(place.href, place.name)}
-      >
-        <ShareIcon />
-        Share
-      </button>
-    </div>
-  );
-}
 
 const OLR_SALES_URL = "https://stanley.olridx.com/Search/Sales";
 
@@ -191,24 +103,7 @@ const DUMBO_ARTICLES = [
 ] as const;
 
 export default function DumboContent() {
-  const [areaCat, setAreaCat] = useState<YelpCat>("dine");
   const [marketEmail, setMarketEmail] = useState(false);
-  const areaTrackRef = useRef<HTMLDivElement>(null);
-
-  const areaPlaces = (DUMBO_YELP[areaCat] ?? []) as AreaPlace[];
-
-  const scrollArea = (dir: -1 | 1) => {
-    const track = areaTrackRef.current;
-    if (!track) return;
-    const card = track.firstElementChild as HTMLElement | null;
-    const step = card ? card.getBoundingClientRect().width + 22 : 322;
-    track.scrollBy({ left: dir * step, behavior: "smooth" });
-  };
-
-  const selectAreaCat = (id: YelpCat) => {
-    setAreaCat(id);
-    areaTrackRef.current?.scrollTo({ left: 0 });
-  };
 
   return (
     <>
@@ -307,51 +202,7 @@ export default function DumboContent() {
         </div>
       </section>
 
-      <HarlemSchools schools={DUMBO_SCHOOLS as School[]} nearLabel="Dumbo" />
-
-      <section id="the-area" className="hlm-area" data-screen-label="Around the area">
-        <div className="hlm-area-inner">
-          <div className="hlm-area-head" data-reveal="">
-            <div className="hlm-area-head-copy">
-              <h2>Around The Area</h2>
-              <p>Browse through the top rated businesses that Dumbo has to offer!</p>
-            </div>
-            {areaPlaces.length ? (
-              <div className="hlm-area-nav">
-                <button id="area-prev" className="hlm-area-arrow" type="button" aria-label="Previous" onClick={() => scrollArea(-1)}>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-                <button id="area-next" className="hlm-area-arrow" type="button" aria-label="Next" onClick={() => scrollArea(1)}>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-              </div>
-            ) : null}
-          </div>
-          <div className="hlm-area-chips">
-            {DUMBO_YELP_CATS.map((cat) => (
-              <button
-                key={cat.id}
-                type="button"
-                className={`area-chip${areaCat === cat.id ? " is-active" : ""}`}
-                data-cat={cat.id}
-                onClick={() => selectAreaCat(cat.id)}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
-          <div id="area-track" ref={areaTrackRef} className="area-track no-sb">
-            {areaPlaces.map((place) => (
-              <AreaCard key={`${areaCat}-${place.href}`} place={place} />
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       <div id="advice">
         <ResourcesSection
           title="Local News & Advice"

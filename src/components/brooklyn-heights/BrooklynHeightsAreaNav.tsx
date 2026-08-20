@@ -25,6 +25,7 @@ export default function BrooklynHeightsAreaNav() {
       aria-label="Brooklyn Heights area navigation"
     >
       <div className="hlm-guide-nav-inner">
+        <div className="hlm-guide-nav-start">
         <div className="hlm-guide-agent" ref={agentRef}>
           <button
             type="button"
@@ -75,6 +76,7 @@ export default function BrooklynHeightsAreaNav() {
             ))}
           </select>
         </label>
+        </div>
 
         <nav className="hlm-guide-tabs" aria-label="On this page">
           {BROOKLYN_HEIGHTS_AREA_LINKS.map((link) => (

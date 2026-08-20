@@ -145,10 +145,18 @@
 .hlm-guide-nav-inner {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 16px 64px;
+  padding: 14px 64px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px 28px;
+}
+
+.hlm-guide-nav-start {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 0 0 auto;
+  min-width: 0;
 }
 
 .hlm-guide-agent {
@@ -209,7 +217,9 @@
 }
 
 .hlm-guide-hood {
-  flex: 0 0 220px;
+  flex: 0 1 240px;
+  min-width: 168px;
+  max-width: 260px;
 }
 
 .hlm-guide-hood-select {
@@ -217,19 +227,29 @@
   min-height: 48px;
   border: 1px solid #e0d9b8;
   border-radius: 10px;
-  background: #f9f6e6;
+  background-color: #f9f6e6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M3 5l4 4 4-4' stroke='%230f1729' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
   color: #0f1729;
   font-family: inherit;
   font-size: 15px;
   font-weight: 600;
-  padding: 0 14px;
+  /* Space left of the chevron icon; comfortable left inset for the label text. */
+  padding: 0 40px 0 18px;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .hlm-guide-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 18px;
-  flex: 1 1 auto;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px 28px;
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
 .harlem-page a.hlm-guide-tab {
@@ -238,7 +258,8 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   text-decoration: none;
-  padding: 8px 0;
+  padding: 10px 2px;
+  white-space: nowrap;
 }
 
 .harlem-page a.hlm-guide-tab:hover {
@@ -248,8 +269,10 @@
 .harlem-page a.hlm-guide-search {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 10px;
   flex: 0 0 auto;
+  margin-left: auto;
   background: #113b5f;
   color: #f9f6e6;
   font-size: 12.5px;
@@ -258,8 +281,9 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 100px;
-  padding: 14px 20px;
+  padding: 14px 22px;
   min-height: 48px;
+  white-space: nowrap;
 }
 
 .harlem-page a.hlm-guide-search:hover {
@@ -1818,15 +1842,28 @@
 
   .hlm-guide-nav-inner {
     flex-wrap: wrap;
+    gap: 12px 16px;
+  }
+
+  .hlm-guide-nav-start {
+    flex: 1 1 auto;
+    min-width: 0;
   }
 
   .hlm-guide-hood {
-    flex: 1 1 180px;
+    flex: 1 1 160px;
+    max-width: none;
   }
 
   .hlm-guide-tabs {
     flex: 1 1 100%;
     order: 5;
+    justify-content: flex-start;
+    gap: 6px 20px;
+  }
+
+  .harlem-page a.hlm-guide-search {
+    margin-left: 0;
   }
 
   .hlm-map-poi-label {
