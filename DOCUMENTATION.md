@@ -85,7 +85,7 @@ Shell / chrome: `src/styles/page-shell.css`, `mobile-layout.css`, `desktop-nav.c
 
 Home sections: `home-hero.css`, `home-promises.css`, `home-hidden-cost.css`, `home-founder.css`, `home-areas.css`, `home-expect.css`, `home-plan.css`, `home-services.css`, `home-reviews.css`, `home-instagram.css`, `home-included.css`, `home-listings.css`, `home-download.css`.
 
-Inner pages: `services-page.css`, `blog-page.css`, `stanley-page.css`, `success-page.css`, `brownstone-guide.css`, `neighborhoods-page.css`, `about-page.css`, `harlem-page.css`, `two-family-page.css`, `buying-guides-page.css`, `home-valuation-page.css`, `mortgage-calculator-page.css`, `harlem-brownstones-page.css`, `harlem-condos-page.css`, `harlem-sros-page.css`, `harlem-co-ownership-page.css`, `legal-pages.css`, `idx-page.css`, `not-migrated.css`.
+Inner pages: `services-page.css`, `blog-page.css`, `stanley-page.css`, `success-page.css`, `brownstone-guide.css`, `neighborhoods-page.css`, `about-page.css`, `harlem-page.css`, `two-family-page.css`, `buying-guides-page.css`, `home-valuation-page.css`, `mortgage-calculator-page.css`, `harlem-brownstones-page.css`, `harlem-condos-page.css`, `harlem-co-ops-page.css`, `harlem-sros-page.css`, `harlem-co-ownership-page.css`, `legal-pages.css`, `idx-page.css`, `not-migrated.css`.
 
 Content components **import** their CSS. Desktop ≥1440px stays pixel-identical. Mobile/tablet rules live in the **same CSS file** under `@media (max-width: …)`. Prefer `:hover` over `style-hover`. `useStyleHover()` still runs in `PageShell` in case any leftover attribute exists.
 
@@ -403,6 +403,7 @@ Do **not** invent routes. If the owner asks to migrate one live URL from `seo-au
 | `/harlem-brownstones/` | `/harlem-brownstones` | `HarlemBrownstones.tsx` | `harlem-brownstones/HarlemBrownstonesContent.tsx` | `neighborhoods-page.css` + `harlem-brownstones-page.css` | `harlemBrownstones.ts` |
 | `/harlem-brownstones-for-sale/` | `/harlem-brownstones-for-sale` | `HarlemBrownstonesForSale.tsx` | `harlem-brownstones-for-sale/HarlemBrownstonesForSaleContent.tsx` | `harlem-brownstones-for-sale.css` | `harlemBrownstonesForSale.ts` |
 | `/harlem-condos/` | `/harlem-condos` | `HarlemCondos.tsx` | `harlem-condos/HarlemCondosContent.tsx` | `neighborhoods-page.css` + `harlem-condos-page.css` | `harlemCondos.ts` |
+| `/harlem-co-ops/` | `/harlem-co-ops` | `HarlemCoOps.tsx` | `harlem-co-ops/HarlemCoOpsContent.tsx` | `neighborhoods-page.css` + `harlem-co-ops-page.css` | `harlemCoOps.ts` |
 | `/harlem-sros/` | `/harlem-sros` | `HarlemSros.tsx` | `harlem-sros/HarlemSrosContent.tsx` | `neighborhoods-page.css` + `harlem-sros-page.css` | `harlemSros.ts` |
 | `/harlem-co-ownership/` | `/harlem-co-ownership` | `HarlemCoOwnership.tsx` | `harlem-co-ownership/HarlemCoOwnershipContent.tsx` | `neighborhoods-page.css` + `harlem-co-ownership-page.css` | `harlemCoOwnership.ts` |
 | `/park-slope/` | `/park-slope` | `ParkSlope.tsx` | `park-slope/ParkSlopeContent.tsx` | `harlem-page.css` + `park-slope-page.css` | `parkSlope.ts` |

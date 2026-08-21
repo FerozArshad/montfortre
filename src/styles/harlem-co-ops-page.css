@@ -1,0 +1,106 @@
+/* Harlem Co-Ops reuses /neighborhoods tokens. Extra layout for guide sections. */
+
+.harlem-co-ops-page .nbhd-hero-inner {
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+.harlem-co-ops-page .nbhd-hero-lead {
+  max-width: none;
+}
+
+.harlem-co-ops-page .nbhd-hero-lead b {
+  font-weight: 700;
+  color: #0f1729;
+}
+
+.harlem-co-ops-page .nbhd-promises {
+  margin-top: 0;
+}
+
+.harlem-co-ops-page h3.nbhd-promise-title {
+  margin: 0;
+}
+
+.harlem-co-ops-page .nbhd-intro-inner {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.harlem-co-ops-page .nbhd-intro-copy h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.16;
+  letter-spacing: -0.014em;
+  color: #0f1729;
+  margin: 48px 0 18px;
+  text-wrap: pretty;
+}
+
+.harlem-co-ops-page .nbhd-intro-copy h2:first-child {
+  margin-top: 0;
+}
+
+.harlem-co-ops-page .nbhd-intro-copy h3 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #0f1729;
+  margin: 32px 0 14px;
+}
+
+.harlem-co-ops-page .nbhd-intro-copy .nbhd-guide-list {
+  margin: 0 0 18px;
+  padding-left: 1.25rem;
+  color: #334155;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.harlem-co-ops-page .nbhd-intro-copy .nbhd-guide-list li {
+  margin: 0 0 10px;
+}
+
+.harlem-co-ops-page .nbhd-intro-copy .nbhd-guide-link {
+  color: #c98a2c;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.harlem-co-ops-page .nbhd-intro-copy .nbhd-guide-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin: 24px 0 8px;
+}
+
+.harlem-co-ops-page .contact-form {
+  margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+  .harlem-co-ops-page .nbhd-intro-copy h2 {
+    font-size: 36px;
+  }
+
+  .harlem-co-ops-page .nbhd-intro-copy h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .harlem-co-ops-page .nbhd-intro-copy h2 {
+    font-size: 32px;
+  }
+
+  .harlem-co-ops-page .nbhd-intro-copy h3 {
+    font-size: 22px;
+  }
+
+  .harlem-co-ops-page .nbhd-intro-copy .nbhd-guide-list {
+    font-size: 16px;
+  }
+}
