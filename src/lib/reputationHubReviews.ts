@@ -1,6 +1,11 @@
 /** ReputationHub review widget (HighLevel) — location + widget ids for Stan Montfort. */
 export const REPUTATION_HUB_WIDGET_URL =
-  "https://reputationhub.site/reputation/widgets/review_widget/J3cYmGK3p1ja7wTS63Dn?widgetId=6a8692fdcc2e0449fdf45029";
+  "https://reputationhub.site/reputation/widgets/review_widget/J3cYmGK3p1ja7wTS63Dn?widgetId=69e4040dc73baf4b1ee40fd0";
+
+export const REPUTATION_HUB_WIDGET_SCRIPT =
+  "https://reputationhub.site/reputation/assets/review-widget.js";
+
+export const REPUTATION_HUB_WIDGET_SCRIPT_ID = "reputationhub-review-widget";
 
 /** Fallback when a reviewer has no Google Maps contrib URL in the feed. */
 export const GOOGLE_REVIEWS_FALLBACK_HREF =

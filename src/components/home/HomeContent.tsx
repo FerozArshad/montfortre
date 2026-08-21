@@ -1,5 +1,6 @@
 import ResourcesSection from "../shared/ResourcesSection";
 import PromisesBar from "../shared/PromisesBar";
+import ReviewsSection from "../shared/ReviewsSection";
 import useReputationAggregate from "../../hooks/useReputationAggregate";
 import "../../styles/home-hero.css";
 import "../../styles/home-hidden-cost.css";
@@ -1005,6 +1006,8 @@ export default function HomeContent() {
           </div>
         </div>
       </section>
+
+      <ReviewsSection />
 
       <section className="home-ig" data-screen-label="Instagram">
         <div className="home-ig-inner">

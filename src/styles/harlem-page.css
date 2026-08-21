@@ -1066,6 +1066,67 @@
   margin-top: 28px;
 }
 
+.hlm-faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0 8px;
+}
+
+.hlm-faq {
+  background: #f9f6e6;
+  border: 1px solid #e0d9b8;
+  border-radius: 16px;
+  padding: 4px 26px;
+}
+
+.hlm-faq summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.3;
+  color: #0f1729;
+}
+
+.hlm-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.hlm-faq-mark {
+  flex: 0 0 auto;
+  color: #c98a2c;
+  font-size: 24px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.hlm-faq[open] > summary .hlm-faq-mark {
+  transform: rotate(45deg);
+}
+
+.hlm-faq-body {
+  padding-bottom: 18px;
+}
+
+.hlm-faq-body > :first-child {
+  margin-top: 0;
+}
+
+.hlm-faq-body > :last-child {
+  margin-bottom: 0;
+}
+
+.hlm-faqs .hlm-article-figure {
+  margin: 8px 0;
+}
+
 .harlem-page a.hlm-article-cta {
   display: inline-flex;
   align-items: center;

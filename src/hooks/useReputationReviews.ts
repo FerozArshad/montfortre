@@ -7,17 +7,16 @@ import {
 
 type ReviewsState = {
   reviews: ReputationReview[];
-  aggregate: ReputationAggregate;
+  aggregate: ReputationAggregate | null;
   loading: boolean;
   error: string | null;
 };
 
-const DEFAULT_AGGREGATE: ReputationAggregate = { rating: 5, totalReviews: 79 };
-
-export default function useReputationReviews(fallback: ReputationReview[]) {
+/** Live Google reviews from ReputationHub only — no static fallback cards. */
+export default function useReputationReviews() {
   const [state, setState] = useState<ReviewsState>({
-    reviews: fallback,
-    aggregate: DEFAULT_AGGREGATE,
+    reviews: [],
+    aggregate: null,
     loading: true,
     error: null,
   });
@@ -29,7 +28,7 @@ export default function useReputationReviews(fallback: ReputationReview[]) {
       .then(({ reviews, aggregate }) => {
         if (cancelled) return;
         setState({
-          reviews: reviews.length ? reviews : fallback,
+          reviews,
           aggregate,
           loading: false,
           error: null,
@@ -38,8 +37,8 @@ export default function useReputationReviews(fallback: ReputationReview[]) {
       .catch((err: unknown) => {
         if (cancelled) return;
         setState({
-          reviews: fallback,
-          aggregate: DEFAULT_AGGREGATE,
+          reviews: [],
+          aggregate: null,
           loading: false,
           error: err instanceof Error ? err.message : "Failed to load reviews",
         });
@@ -48,8 +47,6 @@ export default function useReputationReviews(fallback: ReputationReview[]) {
     return () => {
       cancelled = true;
     };
-    // Fallback is a stable module-level constant from ReviewsSection.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return state;

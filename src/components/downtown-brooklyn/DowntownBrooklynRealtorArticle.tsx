@@ -277,32 +277,80 @@ export default function DowntownBrooklynRealtorArticle() {
         <p>Whether you're searching for a one-bedroom condo near the Jay Street–MetroTech station or evaluating a penthouse with Manhattan skyline views, Stanley's coverage of Downtown Brooklyn's distinct micro-markets ensures you find the right property - or reach the right buyer.</p>
 
         <h3>Frequently Asked Questions About Downtown Brooklyn Real Estate</h3>
+        <div className="hlm-faqs">
+          <details className="hlm-faq">
+            <summary>
+              What's the difference between new development and resale condos in Downtown Brooklyn?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>New development condos come directly from the sponsor (developer) under an offering plan, often with incentives like paid transfer taxes or initial common charge coverage. Resale condos are sold by individual owners in established buildings with documented financial histories. The key comparison isn't just finishes and amenities - it's total acquisition cost, monthly carrying costs at maturity, future competing inventory from remaining sponsor units, and realistic resale demand. Stanley helps buyers evaluate both options side by side based on their specific financial profile and timeline.</p>
+            </div>
+          </details>
 
-        <h4>What's the difference between new development and resale condos in Downtown Brooklyn?</h4>
+          <details className="hlm-faq">
+            <summary>
+              How do common charges and property taxes vary between Downtown Brooklyn buildings?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Significantly. Common charges in Downtown Brooklyn condos typically range from roughly $1.00 to $2.00+ per square foot per month, depending on amenity level and staffing. Property taxes are billed separately by NYC and vary based on assessed value, classification, and whether the building carries an active tax abatement. Two buildings on the same block can produce monthly carrying cost differences of $500 to $1,000+ for comparable units. Always request the most recent common charge schedule and check the building's Notice of Property Value (NOPV) before making an offer.</p>
+            </div>
+          </details>
 
-        <p>New development condos come directly from the sponsor (developer) under an offering plan, often with incentives like paid transfer taxes or initial common charge coverage. Resale condos are sold by individual owners in established buildings with documented financial histories. The key comparison isn't just finishes and amenities - it's total acquisition cost, monthly carrying costs at maturity, future competing inventory from remaining sponsor units, and realistic resale demand. Stanley helps buyers evaluate both options side by side based on their specific financial profile and timeline.</p>
+          <details className="hlm-faq">
+            <summary>
+              What should buyers know about Downtown Brooklyn co-op buildings?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Co-ops require board approval, which means submitting a detailed financial package - income documentation, asset statements, tax returns, letters of reference, and sometimes an interview. Many co-op boards require higher down payments (20–50%) and greater post-closing liquidity than condo buildings. Maintenance payments include property taxes and may include building debt service. Sublet policies vary from building to building, with some prohibiting rentals entirely. These requirements narrow the buyer pool, which can affect both purchase timing and future resale.</p>
+            </div>
+          </details>
 
-        <h4>How do common charges and property taxes vary between Downtown Brooklyn buildings?</h4>
+          <details className="hlm-faq">
+            <summary>
+              How do you price a Downtown Brooklyn property for sale?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Before recommending an asking price, I analyze recent closed sales within the same building - not just neighborhood averages. I compare units by floor level, exposure, layout, condition, and view to establish a realistic price-per-square-foot range for the specific unit. I then evaluate competing active inventory: how many similar units are currently listed, at what prices, and how long they've been on market. With approximately 24–25% of Downtown Brooklyn listings currently carrying price reductions, accurate initial pricing is critical to avoid chasing the market downward.</p>
+            </div>
+          </details>
 
-        <p>Significantly. Common charges in Downtown Brooklyn condos typically range from roughly $1.00 to $2.00+ per square foot per month, depending on amenity level and staffing. Property taxes are billed separately by NYC and vary based on assessed value, classification, and whether the building carries an active tax abatement. Two buildings on the same block can produce monthly carrying cost differences of $500 to $1,000+ for comparable units. Always request the most recent common charge schedule and check the building's Notice of Property Value (NOPV) before making an offer.</p>
+          <details className="hlm-faq">
+            <summary>
+              How long does it take to sell a home in Downtown Brooklyn?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Median days on market have increased to approximately 111 days, up from about 58 days in the same period last year. However, well-priced units in desirable buildings with strong fundamentals still sell faster than market averages. Overpriced listings, particularly those competing against newer inventory or sponsor units in the same building, tend to sit longer and ultimately sell at steeper discounts. Strategic pricing from day one is the most effective tool for minimizing time on market.</p>
+            </div>
+          </details>
 
-        <h4>What should buyers know about Downtown Brooklyn co-op buildings?</h4>
-
-        <p>Co-ops require board approval, which means submitting a detailed financial package - income documentation, asset statements, tax returns, letters of reference, and sometimes an interview. Many co-op boards require higher down payments (20–50%) and greater post-closing liquidity than condo buildings. Maintenance payments include property taxes and may include building debt service. Sublet policies vary from building to building, with some prohibiting rentals entirely. These requirements narrow the buyer pool, which can affect both purchase timing and future resale.</p>
-
-        <h4>How do you price a Downtown Brooklyn property for sale?</h4>
-
-        <p>Before recommending an asking price, I analyze recent closed sales within the same building - not just neighborhood averages. I compare units by floor level, exposure, layout, condition, and view to establish a realistic price-per-square-foot range for the specific unit. I then evaluate competing active inventory: how many similar units are currently listed, at what prices, and how long they've been on market. With approximately 24–25% of Downtown Brooklyn listings currently carrying price reductions, accurate initial pricing is critical to avoid chasing the market downward.</p>
-
-        <h4>How long does it take to sell a home in Downtown Brooklyn?</h4>
-
-        <p>Median days on market have increased to approximately 111 days, up from about 58 days in the same period last year. However, well-priced units in desirable buildings with strong fundamentals still sell faster than market averages. Overpriced listings, particularly those competing against newer inventory or sponsor units in the same building, tend to sit longer and ultimately sell at steeper discounts. Strategic pricing from day one is the most effective tool for minimizing time on market.</p>
-
-        <h4>What questions should I ask before buying a Downtown Brooklyn condo?</h4>
-
-        <p>Key questions include: What are the current common charges, and how have they changed over the past three years? What is the building's reserve fund balance relative to upcoming capital needs? Have there been any special assessments in the past five years? Are there any pending capital projects (façade work, elevator modernization, roof replacement)? What is the building's rental cap? How many units are currently for sale in the building? These questions - and the information they reveal - often matter more than the listing price itself.</p>
-
-        <h3>Get Expert Downtown Brooklyn Real Estate Guidance</h3>
+          <details className="hlm-faq">
+            <summary>
+              What questions should I ask before buying a Downtown Brooklyn condo?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Key questions include: What are the current common charges, and how have they changed over the past three years? What is the building's reserve fund balance relative to upcoming capital needs? Have there been any special assessments in the past five years? Are there any pending capital projects (façade work, elevator modernization, roof replacement)? What is the building's rental cap? How many units are currently for sale in the building? These questions - and the information they reveal - often matter more than the listing price itself.</p>
+            </div>
+          </details>
+        </div>
+<h3>Get Expert Downtown Brooklyn Real Estate Guidance</h3>
 
         <p>If you have questions about buying, selling, or evaluating Downtown Brooklyn real estate, Stanley Montfort provides the building-level market expertise and transparent communication that informed decisions require. Whether you're a first-time buyer navigating the condo vs. co-op decision, a seller preparing to list in a shifting market, or an investor analyzing your next Downtown Brooklyn opportunity, a focused consultation is the right starting point.</p>
 

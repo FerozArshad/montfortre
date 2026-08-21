@@ -94,19 +94,80 @@ export default function BrooklynHeightsRealtorArticle() {
         <p><strong>Adjacent neighborhoods also served</strong> include DUMBO, Cobble Hill, Vinegar Hill, and Downtown Brooklyn. These neighborhoods compete for similar buyer pools in certain price ranges, and understanding how Brooklyn Heights compares in terms of pricing, housing stock, and long-term value helps clients make informed decisions about where to buy or how to position a listing.</p>
         <p><strong>Transportation and accessibility</strong> throughout the service area is strong, with subway access via the 2/3, A/C, and R/4/5 lines, NYC Ferry service, and pedestrian access to Manhattan via the Brooklyn Bridge and Manhattan Bridge.</p>
         <h3>Frequently Asked Questions About Brooklyn Heights Real Estate</h3>
-        <h4>What are the total monthly carrying costs for different Brooklyn Heights property types?</h4>
-        <p>Buyers need to calculate the full monthly cost of ownership, not just the mortgage payment. For co-ops, monthly maintenance typically covers building operating costs, property taxes, insurance, and sometimes heat and hot water. For condos, common charges cover building maintenance and amenities, but property taxes are billed separately and can be substantial. For townhouses, owners bear the full burden of property taxes, insurance, utilities, and all maintenance and repair costs. Stanley helps buyers model total carrying costs for any property under consideration so there are no surprises after closing.</p>
-        <h4>How long does co-op board approval take in Brooklyn Heights?</h4>
-        <p>Board approval typically takes two to six weeks after submission of a complete board package, depending on the building's review schedule and the thoroughness of the application. Some buildings also require an in-person interview. Condo board approvals are generally faster and less restrictive. Stanley helps buyers prepare board packages that present their financial profile clearly, reducing the risk of delays.</p>
-        <h4>What are the down payment and financing requirements?</h4>
-        <p>Co-ops in Brooklyn Heights often require minimum down payments of 20–25%, with more conservative or luxury buildings requiring 30–50%. Post-closing liquidity requirements-sometimes two years of maintenance plus mortgage payments-are common. Condo financing requirements tend to be more flexible. Mortgage lenders treat co-op share loans and condo mortgages differently, so working with a lender experienced in New York real estate is important.</p>
-        <h4>Are there flip taxes or subletting restrictions?</h4>
-        <p>Many Brooklyn Heights co-ops impose flip taxes-a percentage of profit or sale price paid at resale. Sublet policies vary widely: some buildings prohibit subletting entirely, others allow it after a period of owner occupancy with board approval. Condos are generally more permissive regarding rentals but may have their own restrictions. Understanding these policies before purchase is essential for anyone considering investment flexibility.</p>
-        <h4>What can I renovate in the Brooklyn Heights Historic District?</h4>
-        <p>Exterior alterations to buildings within the historic district require approval from the NYC Landmarks Preservation Commission. This includes changes to façades, windows, stoops, cornices, and roofs. Interior renovations are generally less regulated unless they affect the building's structure or are visible from the public realm. Renovation budgets for properties requiring exterior work should account for specialized materials, experienced contractors, and the time required for LPC review. For property-specific questions about what is and isn't permitted, Stanley can connect you with qualified architects and preservation professionals.</p>
-        <h4>Is now a good time to buy or sell in Brooklyn Heights?</h4>
-        <p>The current market shows homes selling faster (median days on market down roughly 32.7% year-over-year) while listing prices have adjusted downward. Sold prices, however, continue to appreciate. For sellers, this means realistic pricing from the start is more important than ever. For buyers, there are opportunities-but competition for the best properties remains strong. Whether the timing is right depends entirely on your specific goals, property type, and financial situation. A conversation with Stanley about your circumstances is the best way to evaluate your options.</p>
-        <h3>Contact Your Brooklyn Heights Realtor</h3>
+        <div className="hlm-faqs">
+          <details className="hlm-faq">
+            <summary>
+              What are the total monthly carrying costs for different Brooklyn Heights property types?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Buyers need to calculate the full monthly cost of ownership, not just the mortgage payment. For co-ops, monthly maintenance typically covers building operating costs, property taxes, insurance, and sometimes heat and hot water. For condos, common charges cover building maintenance and amenities, but property taxes are billed separately and can be substantial. For townhouses, owners bear the full burden of property taxes, insurance, utilities, and all maintenance and repair costs. Stanley helps buyers model total carrying costs for any property under consideration so there are no surprises after closing.</p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              How long does co-op board approval take in Brooklyn Heights?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Board approval typically takes two to six weeks after submission of a complete board package, depending on the building's review schedule and the thoroughness of the application. Some buildings also require an in-person interview. Condo board approvals are generally faster and less restrictive. Stanley helps buyers prepare board packages that present their financial profile clearly, reducing the risk of delays.</p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              What are the down payment and financing requirements?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Co-ops in Brooklyn Heights often require minimum down payments of 20–25%, with more conservative or luxury buildings requiring 30–50%. Post-closing liquidity requirements-sometimes two years of maintenance plus mortgage payments-are common. Condo financing requirements tend to be more flexible. Mortgage lenders treat co-op share loans and condo mortgages differently, so working with a lender experienced in New York real estate is important.</p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              Are there flip taxes or subletting restrictions?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Many Brooklyn Heights co-ops impose flip taxes-a percentage of profit or sale price paid at resale. Sublet policies vary widely: some buildings prohibit subletting entirely, others allow it after a period of owner occupancy with board approval. Condos are generally more permissive regarding rentals but may have their own restrictions. Understanding these policies before purchase is essential for anyone considering investment flexibility.</p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              What can I renovate in the Brooklyn Heights Historic District?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Exterior alterations to buildings within the historic district require approval from the NYC Landmarks Preservation Commission. This includes changes to façades, windows, stoops, cornices, and roofs. Interior renovations are generally less regulated unless they affect the building's structure or are visible from the public realm. Renovation budgets for properties requiring exterior work should account for specialized materials, experienced contractors, and the time required for LPC review. For property-specific questions about what is and isn't permitted, Stanley can connect you with qualified architects and preservation professionals.</p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              Is now a good time to buy or sell in Brooklyn Heights?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>The current market shows homes selling faster (median days on market down roughly 32.7% year-over-year) while listing prices have adjusted downward. Sold prices, however, continue to appreciate. For sellers, this means realistic pricing from the start is more important than ever. For buyers, there are opportunities-but competition for the best properties remains strong. Whether the timing is right depends entirely on your specific goals, property type, and financial situation. A conversation with Stanley about your circumstances is the best way to evaluate your options.</p>
+            </div>
+          </details>
+        </div>
+<h3>Contact Your Brooklyn Heights Realtor</h3>
         <p style={{ textAlign: "center" }}>Whether you're beginning a property search, preparing to list, or simply want an experienced perspective on a specific Brooklyn Heights property or block, Stanley Montfort is available to discuss your goals and provide the kind of property-specific, block-level analysis that helps clients make confident real estate decisions.</p>
         <p style={{ textAlign: "center" }}><strong>Phone:</strong> 1-646-970-1078{"\u00a0"}  {"\u00a0"} <strong>Email:</strong><a href="mailto:sm@montfortre.com">sm@montfortre.com</a>{"\u00a0"}  {"\u00a0"} <strong>Address:</strong> 8 West 126th Street, New York NY 10027</p>
       </div>
