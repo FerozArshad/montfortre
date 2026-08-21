@@ -136,6 +136,12 @@ export default function HarlemCoOpsContent() {
                 itself has characteristics that narrow or expand demand.
               </li>
             </ul>
+            <img
+              src="/redesign-assets/hoods/harlem-co-ops-1.png"
+              alt="Harlem co-op building and ownership guidance"
+              className="nbhd-guide-img"
+              loading="lazy"
+            />
 
             <h2>Harlem Co-Op Real Estate Services</h2>
             <p>
@@ -205,6 +211,12 @@ export default function HarlemCoOpsContent() {
                 anticipating documentation requirements so that delays and surprises are minimized.
               </li>
             </ul>
+            <img
+              src="/redesign-assets/hoods/harlem-co-ops-2.png"
+              alt="Harlem co-op seller representation and pricing analysis"
+              className="nbhd-guide-img"
+              loading="lazy"
+            />
 
             <h3>Harlem Co-Op Market Analysis and Valuation</h3>
             <p>
@@ -341,6 +353,12 @@ export default function HarlemCoOpsContent() {
                 regulatory requirements; strong first-time buyer demand
               </li>
             </ul>
+            <img
+              src="/redesign-assets/hoods/harlem-co-ops-3.png"
+              alt="Harlem co-op neighborhoods and areas served"
+              className="nbhd-guide-img"
+              loading="lazy"
+            />
 
             <h2>Frequently Asked Questions About Harlem Co-Ops</h2>
 
