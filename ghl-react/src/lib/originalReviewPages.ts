@@ -42,6 +42,7 @@ export const ORIGINAL_REVIEW_PATHS: ReadonlySet<string> = new Set([
   "/harlem-brownstones",
   "/harlem-co-ownership",
   "/harlem-condos",
+  "/harlem-co-ops",
   "/harlem-sros",
   "/home-valuation",
   "/mortgage-calculator",

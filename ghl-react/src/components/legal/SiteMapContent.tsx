@@ -64,6 +64,7 @@ const NEIGHBORHOOD_LINKS: readonly SiteLink[] = [
 const PROPERTY_LINKS: readonly SiteLink[] = [
   { href: "/harlem-brownstones/", label: "Harlem Brownstones" },
   { href: "/harlem-condos/", label: "Harlem Condos" },
+  { href: "/harlem-co-ops/", label: "Harlem Co-Ops" },
   { href: "/harlem-sros/", label: "Harlem SROs" },
   { href: "/harlem-co-ownership/", label: "Harlem Co-Ownership" },
   { href: "/upper-west-side-townhouses/", label: "Upper West Side Townhouses" },
