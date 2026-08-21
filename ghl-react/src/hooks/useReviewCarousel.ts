@@ -63,8 +63,11 @@ function initReviewCarousel() {
     raf = requestAnimationFrame(() => {
       const n = current();
       dots.forEach((dot, i) => {
-        dot.style.background = i === n ? "#C29B5C" : "#D9CFA6";
-        dot.style.width = i === n ? "28px" : "9px";
+        const active = i === n;
+        dot.style.background = active ? "#C29B5C" : "#D9CFA6";
+        dot.style.width = active ? "28px" : "9px";
+        if (active) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
       });
     });
   };

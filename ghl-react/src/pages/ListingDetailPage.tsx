@@ -11,7 +11,7 @@ export default function ListingDetailPage() {
   if (!listing) return <Navigate to="/current-listings" replace />;
 
   return (
-    <PageShell seo={buildListingSeo(listing)} pageClassName="listing-page" showReviews={false}>
+    <PageShell seo={buildListingSeo(listing)} pageClassName="listing-page">
       <ListingPageContent listing={listing} />
     </PageShell>
   );

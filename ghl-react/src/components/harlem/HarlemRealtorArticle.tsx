@@ -220,93 +220,131 @@ export default function HarlemRealtorArticle() {
         </p>
 
         <h3>Frequently Asked Questions About Working with a Harlem Realtor</h3>
-        <h4>What&apos;s the difference between Harlem property types and which is right for me?</h4>
-        <p>Harlem includes a variety of property types with different rules and dynamics. Here&apos;s a practical comparison:</p>
-        <div className="hlm-article-table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Property Type</th>
-                <th>Typical Price Range</th>
-                <th>Advantages</th>
-                <th>Watch For</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Co-op</td>
-                <td>$300K–$700K</td>
-                <td>Lower purchase price, strong communities, affordable entry options including HDFC and ANCP properties</td>
-                <td>Strict board approval, income caps, limited renovation and subletting flexibility, and potential flip taxes</td>
-              </tr>
-              <tr>
-                <td>Condo</td>
-                <td>$500K–$1.2M+</td>
-                <td>More ownership autonomy, easier rentals, modern amenities, and fewer board restrictions</td>
-                <td>Higher purchase prices and common charges, potential assessments, and 421-a tax abatement expirations</td>
-              </tr>
-              <tr>
-                <td>Brownstone / Townhouse</td>
-                <td>$1.2M–$4.5M+</td>
-                <td>Architectural character, prestige, larger lots, and strong resale potential</td>
-                <td>High renovation costs, landmark restrictions, complex permitting, and potential structural issues</td>
-              </tr>
-              <tr>
-                <td>Multifamily</td>
-                <td>Varies widely</td>
-                <td>Strong rental income potential, multiple units, and long-term investment opportunities</td>
-                <td>Rent stabilization compliance, Local Law requirements, operating expenses, and property management responsibilities</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="hlm-faqs">
+          <details className="hlm-faq">
+            <summary>
+              What&apos;s the difference between Harlem property types and which is right for me?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Harlem includes a variety of property types with different rules and dynamics. Here&apos;s a practical comparison:</p>
+              <div className="hlm-article-table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Property Type</th>
+                      <th>Typical Price Range</th>
+                      <th>Advantages</th>
+                      <th>Watch For</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Co-op</td>
+                      <td>$300K–$700K</td>
+                      <td>Lower purchase price, strong communities, affordable entry options including HDFC and ANCP properties</td>
+                      <td>Strict board approval, income caps, limited renovation and subletting flexibility, and potential flip taxes</td>
+                    </tr>
+                    <tr>
+                      <td>Condo</td>
+                      <td>$500K–$1.2M+</td>
+                      <td>More ownership autonomy, easier rentals, modern amenities, and fewer board restrictions</td>
+                      <td>Higher purchase prices and common charges, potential assessments, and 421-a tax abatement expirations</td>
+                    </tr>
+                    <tr>
+                      <td>Brownstone / Townhouse</td>
+                      <td>$1.2M–$4.5M+</td>
+                      <td>Architectural character, prestige, larger lots, and strong resale potential</td>
+                      <td>High renovation costs, landmark restrictions, complex permitting, and potential structural issues</td>
+                    </tr>
+                    <tr>
+                      <td>Multifamily</td>
+                      <td>Varies widely</td>
+                      <td>Strong rental income potential, multiple units, and long-term investment opportunities</td>
+                      <td>Rent stabilization compliance, Local Law requirements, operating expenses, and property management responsibilities</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                One question I always discuss with clients is whether they prioritize purchase price, monthly carrying costs, renovation freedom, or long-term resale. The right property type follows from that answer.
+              </p>
+            </div>
+          </details>
+
+          <figure className="hlm-article-figure">
+            <img
+              src="/redesign-assets/hoods/harlem-mortgage-calculator.png"
+              alt="Specialized NYC mortgage calculator displayed on a laptop with home financing documents, calculator and real estate planning materials"
+              loading="lazy"
+            />
+          </figure>
+
+          <details className="hlm-faq">
+            <summary>
+              How much should I expect to pay for a home in different parts of Harlem?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Pricing in Harlem varies significantly by sub-neighborhood:</p>
+              <ul>
+                <li>
+                  <strong>Central Harlem</strong>: Condos $700K–$1M+; brownstones $1.5M–$4M+; co-ops $300K–$600K
+                </li>
+                <li>
+                  <strong>Sugar Hill / Hamilton Heights</strong>: Townhouses $2M–$4.5M; co-ops $350K–$700K
+                </li>
+                <li>
+                  <strong>Manhattanville / Morningside Heights</strong>: New construction condos $600K–$1.2M+
+                </li>
+                <li>
+                  <strong>East Harlem</strong>: Co-ops $250K–$500K; condos $450K–$800K; investment properties at lower entry points
+                </li>
+              </ul>
+              <p>
+                Beyond the purchase price, factor in renovation costs (especially in historic districts), co-op maintenance fees, condo common charges, property taxes, and potential assessments. Many buyers are surprised to learn that a seemingly affordable co-op can carry monthly maintenance that rivals a condo&apos;s combined costs when you include assessments and flip taxes.
+              </p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              What should I know about selling my Harlem property in today&apos;s market?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>
+                The median days on market for homes in Harlem is 58 days. Properties priced accurately from day one sell faster and closer to asking. One mistake I frequently see is sellers pricing above what comparable recent sales support - this leads to staleness on market and eventual price cuts that erode buyer confidence.
+              </p>
+              <p>
+                For properties in historic districts, plan renovation timelines carefully. Even straightforward exterior work (window replacement, stoop repair, facade restoration) may require LPC review and a Certificate of Appropriateness, adding weeks or months before you can list. I work with sellers to identify which improvements genuinely add value versus those that simply add cost and delay.
+              </p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              How do co-op board applications work in Harlem buildings?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>
+                Co-op boards in Harlem review financial statements, credit history, income documentation, tax returns, reference letters, and employment verification. Many boards require liquid reserves equal to one or two years of maintenance payments after closing. Debt-to-income ratios around 43% are common for mortgage approvals, but co-op boards often apply stricter financial thresholds.
+              </p>
+              <p>
+                The interview process varies building by building. Some are brief and procedural; others are rigorous. I prepare every buyer for their specific building&apos;s board culture, including documentation strategy and interview coaching. Subletting restrictions, renovation approval processes, and flip tax schedules are all subject to board policy - I review these with buyers before they ever make an offer.
+              </p>
+            </div>
+          </details>
         </div>
-        <p>
-          One question I always discuss with clients is whether they prioritize purchase price, monthly carrying costs, renovation freedom, or long-term resale. The right property type follows from that answer.
-        </p>
-
-        <figure className="hlm-article-figure">
-          <img
-            src="/redesign-assets/hoods/harlem-mortgage-calculator.png"
-            alt="Specialized NYC mortgage calculator displayed on a laptop with home financing documents, calculator and real estate planning materials"
-            loading="lazy"
-          />
-        </figure>
-
-        <h4>How much should I expect to pay for a home in different parts of Harlem?</h4>
-        <p>Pricing in Harlem varies significantly by sub-neighborhood:</p>
-        <ul>
-          <li>
-            <strong>Central Harlem</strong>: Condos $700K–$1M+; brownstones $1.5M–$4M+; co-ops $300K–$600K
-          </li>
-          <li>
-            <strong>Sugar Hill / Hamilton Heights</strong>: Townhouses $2M–$4.5M; co-ops $350K–$700K
-          </li>
-          <li>
-            <strong>Manhattanville / Morningside Heights</strong>: New construction condos $600K–$1.2M+
-          </li>
-          <li>
-            <strong>East Harlem</strong>: Co-ops $250K–$500K; condos $450K–$800K; investment properties at lower entry points
-          </li>
-        </ul>
-        <p>
-          Beyond the purchase price, factor in renovation costs (especially in historic districts), co-op maintenance fees, condo common charges, property taxes, and potential assessments. Many buyers are surprised to learn that a seemingly affordable co-op can carry monthly maintenance that rivals a condo&apos;s combined costs when you include assessments and flip taxes.
-        </p>
-
-        <h4>What should I know about selling my Harlem property in today&apos;s market?</h4>
-        <p>
-          The median days on market for homes in Harlem is 58 days. Properties priced accurately from day one sell faster and closer to asking. One mistake I frequently see is sellers pricing above what comparable recent sales support - this leads to staleness on market and eventual price cuts that erode buyer confidence.
-        </p>
-        <p>
-          For properties in historic districts, plan renovation timelines carefully. Even straightforward exterior work (window replacement, stoop repair, facade restoration) may require LPC review and a Certificate of Appropriateness, adding weeks or months before you can list. I work with sellers to identify which improvements genuinely add value versus those that simply add cost and delay.
-        </p>
-
-        <h4>How do co-op board applications work in Harlem buildings?</h4>
-        <p>
-          Co-op boards in Harlem review financial statements, credit history, income documentation, tax returns, reference letters, and employment verification. Many boards require liquid reserves equal to one or two years of maintenance payments after closing. Debt-to-income ratios around 43% are common for mortgage approvals, but co-op boards often apply stricter financial thresholds.
-        </p>
-        <p>
-          The interview process varies building by building. Some are brief and procedural; others are rigorous. I prepare every buyer for their specific building&apos;s board culture, including documentation strategy and interview coaching. Subletting restrictions, renovation approval processes, and flip tax schedules are all subject to board policy - I review these with buyers before they ever make an offer.
-        </p>
 
         <h3>Ready to Buy or Sell in Harlem?</h3>
         <p>

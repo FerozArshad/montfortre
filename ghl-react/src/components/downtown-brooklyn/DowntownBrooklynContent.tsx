@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import DowntownBrooklynAreaNav from "./DowntownBrooklynAreaNav";
@@ -84,21 +84,21 @@ const DOWNTOWN_BROOKLYN_ARTICLES = [
     image: "/redesign-assets/hoods/upper-west-side.webp",
     alt: "Upper West Side Townhouse Q2 2024 Market Report",
     title: "Upper West Side Townhouse Q2 2024 Market Report",
-    excerpt: "On the Upper West Side, we observed a distinct trend that diverges from the citywide patterns. Specifically, theâ€¦",
+    excerpt: "On the Upper West Side, we observed a distinct trend that diverges from the citywide patterns. Specifically, the…",
   },
   {
     href: "/harlem-brownstone-q2-2024-market-report/",
     image: "/redesign-assets/hoods/harlem.webp",
     alt: "Harlem Brownstone Q2 2024 Market Report",
     title: "Harlem Brownstone Q2 2024 Market Report",
-    excerpt: "The Harlem brownstone market has seen an increase in sales activity since this time last year. In Q2â€¦",
+    excerpt: "The Harlem brownstone market has seen an increase in sales activity since this time last year. In Q2…",
   },
   {
     href: "/discover-your-dream-home-explore-apartments-for-sale-on-the-upper-west-side/",
     image: "/redesign-assets/hoods/downtown-brooklyn.webp",
-    alt: "Discover Your Dream Home: Explore Apartments for Sale on the â€¦",
-    title: "Discover Your Dream Home: Explore Apartments for Sale on the â€¦",
-    excerpt: "Are you searching for your dream home in one of New York Cityâ€™s most sought-after neighborhoods? Look noâ€¦",
+    alt: "Discover Your Dream Home: Explore Apartments for Sale on the …",
+    title: "Discover Your Dream Home: Explore Apartments for Sale on the …",
+    excerpt: "Are you searching for your dream home in one of New York City’s most sought-after neighborhoods? Look no…",
   },
 ] as const;
 
@@ -153,7 +153,6 @@ export default function DowntownBrooklynContent() {
           </div>
         </div>
       </section>
-
       <section id="market-report" className="hlm-market" data-screen-label="Market report">
         <div className="hlm-market-inner">
           <div data-reveal="">
@@ -178,7 +177,7 @@ export default function DowntownBrooklynContent() {
             ) : (
               <div className="hlm-form">
                 <button type="button" className="hlm-market-back" onClick={() => setMarketEmail(false)}>
-                  â† Back
+                  ← Back
                 </button>
                 <div className="hlm-form-row">
                   <input type="text" placeholder="First Name *" className="hlm-field" required />

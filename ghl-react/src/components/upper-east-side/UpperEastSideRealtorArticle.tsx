@@ -148,32 +148,80 @@ export default function UpperEastSideRealtorArticle() {
         <p>The neighborhood is known for its cultural institutions and fine dining; Museum Mile is a key cultural highlight that influences buyer demand along Fifth Avenue and the blocks surrounding it. Central Park is a major recreational area that adds measurable value to every property with proximity or views. Upper East Side offers pre-war co-ops and modern condos, luxury townhouses and historic apartments, and the right choice depends on your priorities, financial profile, and long-term plan.</p>
 
         <h3>Frequently Asked Questions About Upper East Side Real Estate</h3>
+        <div className="hlm-faqs">
+          <details className="hlm-faq">
+            <summary>
+              How much should I expect to pay in monthly costs for an Upper East Side co-op?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Monthly maintenance for a UES co-op typically includes property taxes and common charges combined into one payment. For a $1.5–2.5 million apartment, expect $2,000–$5,000 per month depending on apartment size, building location, amenities (doorman, gym, roof deck, storage), and the building's financial condition. Pre-war buildings with older mechanical systems, deferred boiler or façade repairs, or underfunded reserves tend to carry higher maintenance and greater risk of special assessments. Always review the building's audited financial statements and recent board minutes before making an offer.</p>
+            </div>
+          </details>
 
-        <h4>How much should I expect to pay in monthly costs for an Upper East Side co-op?</h4>
+          <details className="hlm-faq">
+            <summary>
+              What are the typical co-op board requirements for Upper East Side buildings?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Most UES co-ops require a minimum down payment of 20–25%, with the most prestigious buildings expecting 30–40% or more. Boards evaluate total debt-to-income ratio, targeting 25–30% of gross income when combining mortgage, maintenance, and all other obligations. Post-closing liquidity requirements typically range from 12 to 24 months of total carrying costs in cash or securities. The board package includes REBNY financial statements, two to three years of tax returns, recent pay stubs, bank and brokerage statements, an employer letter, and personal references. Some elite buildings require liquidity well above standard thresholds. Stanley's 95% board approval rate reflects careful financial pre-qualification and package preparation before submission.</p>
+            </div>
+          </details>
 
-        <p>Monthly maintenance for a UES co-op typically includes property taxes and common charges combined into one payment. For a $1.5–2.5 million apartment, expect $2,000–$5,000 per month depending on apartment size, building location, amenities (doorman, gym, roof deck, storage), and the building's financial condition. Pre-war buildings with older mechanical systems, deferred boiler or façade repairs, or underfunded reserves tend to carry higher maintenance and greater risk of special assessments. Always review the building's audited financial statements and recent board minutes before making an offer.</p>
+          <details className="hlm-faq">
+            <summary>
+              How do Upper East Side property values compare between different avenues?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Fifth Avenue units with Central Park exposure command the highest prices, typically 20–50% above equivalent apartments east of Park Avenue, depending on floor level and views. Park Avenue co-ops are the next tier in prestige, with large classic layouts and white-glove service. Madison and Lexington Avenues offer lower price per square foot while maintaining an upscale address. Yorkville, east of Lexington toward the East River, provides the most competitive pricing in the UES. In mid-2026, the overall UES median sale price sits around $1.4 million, but this number is nearly meaningless for an individual property decision. A two-bedroom on a high floor of a Fifth Avenue condo and a two-bedroom in a walkup east of Third Avenue occupy entirely different markets.</p>
+            </div>
+          </details>
 
-        <h4>What are the typical co-op board requirements for Upper East Side buildings?</h4>
+          <details className="hlm-faq">
+            <summary>
+              What's the difference between pre-war and newer Upper East Side buildings?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Pre-war buildings (generally constructed before 1940) typically feature higher ceilings, larger room proportions, architectural detail (moldings, herringbone floors, wood-burning fireplaces), and thicker walls. They also tend to carry higher maintenance costs, have older mechanical and plumbing systems, and face more frequent capital projects. Newer buildings offer modern layouts, efficient HVAC, better insulation, contemporary amenities (fitness centers, children's playrooms, rooftop terraces), and more flexible ownership rules. Condos are more common in newer construction; co-ops dominate the pre-war stock. Consider future resale value when buying a home: pre-war charm appeals to a specific buyer, while newer buildings attract buyers who prioritize convenience, amenities, and lower maintenance risk.</p>
+            </div>
+          </details>
 
-        <p>Most UES co-ops require a minimum down payment of 20–25%, with the most prestigious buildings expecting 30–40% or more. Boards evaluate total debt-to-income ratio, targeting 25–30% of gross income when combining mortgage, maintenance, and all other obligations. Post-closing liquidity requirements typically range from 12 to 24 months of total carrying costs in cash or securities. The board package includes REBNY financial statements, two to three years of tax returns, recent pay stubs, bank and brokerage statements, an employer letter, and personal references. Some elite buildings require liquidity well above standard thresholds. Stanley's 95% board approval rate reflects careful financial pre-qualification and package preparation before submission.</p>
+          <details className="hlm-faq">
+            <summary>
+              How long does it typically take to sell an Upper East Side property?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Average days on market across the UES runs 50–55 days, but this varies by property type, condition, and pricing accuracy. Well-priced condos in desirable buildings with strong amenities can sell in under 30 days. Co-ops with demanding board requirements, high maintenance, or properties needing renovation may take 75–90 days or longer. Stanley's listings have averaged 28 days on market, reflecting strategic pricing, professional presentation, and targeted marketing to qualified buyers. Sellers who overprice by more than 5% typically see their listing sit, accumulate days on market, and ultimately sell at a steeper discount than if priced correctly from the start.</p>
+            </div>
+          </details>
 
-        <h4>How do Upper East Side property values compare between different avenues?</h4>
-
-        <p>Fifth Avenue units with Central Park exposure command the highest prices, typically 20–50% above equivalent apartments east of Park Avenue, depending on floor level and views. Park Avenue co-ops are the next tier in prestige, with large classic layouts and white-glove service. Madison and Lexington Avenues offer lower price per square foot while maintaining an upscale address. Yorkville, east of Lexington toward the East River, provides the most competitive pricing in the UES. In mid-2026, the overall UES median sale price sits around $1.4 million, but this number is nearly meaningless for an individual property decision. A two-bedroom on a high floor of a Fifth Avenue condo and a two-bedroom in a walkup east of Third Avenue occupy entirely different markets.</p>
-
-        <h4>What's the difference between pre-war and newer Upper East Side buildings?</h4>
-
-        <p>Pre-war buildings (generally constructed before 1940) typically feature higher ceilings, larger room proportions, architectural detail (moldings, herringbone floors, wood-burning fireplaces), and thicker walls. They also tend to carry higher maintenance costs, have older mechanical and plumbing systems, and face more frequent capital projects. Newer buildings offer modern layouts, efficient HVAC, better insulation, contemporary amenities (fitness centers, children's playrooms, rooftop terraces), and more flexible ownership rules. Condos are more common in newer construction; co-ops dominate the pre-war stock. Consider future resale value when buying a home: pre-war charm appeals to a specific buyer, while newer buildings attract buyers who prioritize convenience, amenities, and lower maintenance risk.</p>
-
-        <h4>How long does it typically take to sell an Upper East Side property?</h4>
-
-        <p>Average days on market across the UES runs 50–55 days, but this varies by property type, condition, and pricing accuracy. Well-priced condos in desirable buildings with strong amenities can sell in under 30 days. Co-ops with demanding board requirements, high maintenance, or properties needing renovation may take 75–90 days or longer. Stanley's listings have averaged 28 days on market, reflecting strategic pricing, professional presentation, and targeted marketing to qualified buyers. Sellers who overprice by more than 5% typically see their listing sit, accumulate days on market, and ultimately sell at a steeper discount than if priced correctly from the start.</p>
-
-        <h4>What commission should I expect when selling on the Upper East Side?</h4>
-
-        <p>Agents typically earn 5% to 6% of the home sale price. Agents usually split commissions with the buyer's agent, meaning the seller's broker and the buyer's broker each receive a portion. Real estate agents cannot manage their own businesses without a broker, so every agent operates under a licensed brokerage. The commission structure, marketing investment, and negotiation results should all factor into your broker selection. Real estate transactions in the UES require knowledge of building finances and board requirements that goes well beyond what a consumer's personal online search can provide.</p>
-
-        <h3>Start Your Upper East Side Real Estate Journey</h3>
+          <details className="hlm-faq">
+            <summary>
+              What commission should I expect when selling on the Upper East Side?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Agents typically earn 5% to 6% of the home sale price. Agents usually split commissions with the buyer's agent, meaning the seller's broker and the buyer's broker each receive a portion. Real estate agents cannot manage their own businesses without a broker, so every agent operates under a licensed brokerage. The commission structure, marketing investment, and negotiation results should all factor into your broker selection. Real estate transactions in the UES require knowledge of building finances and board requirements that goes well beyond what a consumer's personal online search can provide.</p>
+            </div>
+          </details>
+        </div>
+<h3>Start Your Upper East Side Real Estate Journey</h3>
 
         <p>Whether you're buying your first Upper East Side co-op, selling a Park Avenue classic six, or evaluating a Yorkville condo purchase, the right Upper East Side realtor makes the difference between a smooth transaction and a costly mistake. Stanley Montfort provides market analysis, property valuation, negotiation, and transaction management grounded in 15+ years of UES-specific experience.</p>
 

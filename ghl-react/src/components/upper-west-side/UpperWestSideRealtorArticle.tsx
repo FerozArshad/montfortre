@@ -469,53 +469,113 @@ export default function UpperWestSideRealtorArticle() {
         </p>
 
         <h3>Frequently Asked Questions About Upper West Side Real Estate</h3>
-        <h4>How much should I expect to pay in monthly carrying costs?</h4>
-        <p>
+        <div className="hlm-faqs">
+          <details className="hlm-faq">
+            <summary>
+              How much should I expect to pay in monthly carrying costs?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>
           Monthly costs depend on property type, building, and unit size. Co-op maintenance on the Upper West Side can
           range from $800/month for a studio to $5,000+ for a large three- or four-bedroom, and that figure typically
           includes property taxes. Condo common charges run lower (often $1,200-$3,000/month for comparable units) but
           property taxes are billed separately, often adding $1,000-$2,500/month. Always request the building&apos;s
           most recent financial statement and check for upcoming assessments before making an offer.
         </p>
-        <h4>What is the difference between Upper West Side co-op and condo markets?</h4>
-        <p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              What is the difference between Upper West Side co-op and condo markets?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>
           Co-ops outnumber condos on the Upper West Side, especially in the pre-war building stock. Co-ops generally
           trade at lower PPSF than condos but require higher down payments (25-50%), more extensive financial
           disclosure, and longer closing timelines (60-90+ days). Condos offer more flexibility for investors,
           subletters, and buyers with non-traditional income, and typically close in 30-60 days. Co-op boards can reject
           applicants for reasons beyond credit and finances.
         </p>
-        <h4>How long does the typical Upper West Side transaction take?</h4>
-        <p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              How long does the typical Upper West Side transaction take?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>
           Median days on market is 75 days. Once a deal is agreed upon, condo closings often take 30-60 days with
           financing and documents in order. Co-op closings typically take 60-90+ days because of the board review
           process, which includes package assembly, board meeting schedules, and interviews. If you are moving on a firm
           deadline, factor board timelines into your search strategy.
         </p>
-        <h4>What are the strongest and weakest aspects of the current market?</h4>
-        <p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              What are the strongest and weakest aspects of the current market?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>
           Strengths: rising median prices (up 4.55% year-over-year), shrinking inventory creating pricing power for
           sellers, and homes selling at 99% of asking price. Weaknesses: elevated interest rates squeezing buyer
           purchasing power, long co-op board timelines, rising carrying costs, and limited supply of large-format units
           in the most desirable buildings.
         </p>
-        <h4>How do I evaluate whether a building is financially sound?</h4>
-        <p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              How do I evaluate whether a building is financially sound?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>
           Request the building&apos;s audited financial statements for the last two to three years. Review the reserve
           fund balance relative to upcoming capital projects. Check the delinquency rate among shareholders or unit
           owners. Ask whether the building carries an underlying mortgage and when it matures. Review board meeting
           minutes for discussion of planned assessments, litigation, or code violations. Stanley performs this analysis
           for every building his clients consider purchasing in.
         </p>
-        <h4>How are realtor commissions structured on the Upper West Side?</h4>
-        <p>
+            </div>
+          </details>
+
+          <details className="hlm-faq">
+            <summary>
+              How are realtor commissions structured on the Upper West Side?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>
           Typical commission rates are about 5% to 6% of the sale price, split between the listing agent and buyer&apos;s
           agent. Commission rates depend on property price and market conditions, and rates are negotiable between
           sellers and real estate agents. Stanley discusses commission structure, representation type, and scope of
           services before entering any engagement.
         </p>
-
-        <h3>Contact Stanley Montfort for Upper West Side Real Estate</h3>
+            </div>
+          </details>
+        </div>
+<h3>Contact Stanley Montfort for Upper West Side Real Estate</h3>
         <p>
           If you have questions about buying or selling on the Upper West Side, or need a property valuation based on
           your building, block, and unit specifics rather than neighborhood averages, contact Stanley Montfort for a

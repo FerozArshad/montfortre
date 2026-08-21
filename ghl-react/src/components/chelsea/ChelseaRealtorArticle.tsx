@@ -161,24 +161,56 @@ export default function ChelseaRealtorArticle() {
         <p>How these micro-markets interact matters for both buyers and sellers. When I advise a seller on pricing strategy, I evaluate not just recent sales in their building but also what competing inventory looks like in adjacent micro-markets-because a buyer considering a resale condo in central Chelsea may also be looking at new development in West Chelsea or a loft conversion near the gallery district.</p>
 
         <h3>Frequently Asked Questions About Chelsea and New York Real Estate</h3>
+        <div className="hlm-faqs">
+          <details className="hlm-faq">
+            <summary>
+              How are Chelsea properties priced compared to other Manhattan neighborhoods?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Chelsea's median sale prices run well above Manhattan's overall median. The typical home value is approximately $1,621,000, but the spread between property types is dramatic-median condo sales near $2.9 million versus median co-op sales around $838,000. Chelsea commands a premium over neighborhoods like Hell's Kitchen, Gramercy, and parts of the Upper East Side, driven by its architectural diversity, High Line proximity, gallery culture, and the mix of homes available. However, pricing varies significantly by building, floor, exposure, and micro-market location within Chelsea itself.</p>
+            </div>
+          </details>
 
-        <h4>How are Chelsea properties priced compared to other Manhattan neighborhoods?</h4>
+          <details className="hlm-faq">
+            <summary>
+              What should I know about Chelsea building financials and monthly costs?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Building financial health directly affects your monthly carrying costs and your property's resale value. For co-ops, I review maintenance fees, the building's underlying mortgage burden, reserve fund adequacy, recent assessments, and the current budget versus actual expenses. For condos, common charges and real estate taxes are the primary ongoing costs-but pending capital projects or <a href="https://www.nyc.gov/site/finance/property/landlords-coop-condo.page">tax abatement expirations</a> can change those numbers materially. Buildings with deferred maintenance, thin reserves, or escalating assessments present risks that may not be visible in the listing price alone.</p>
+            </div>
+          </details>
 
-        <p>Chelsea's median sale prices run well above Manhattan's overall median. The typical home value is approximately $1,621,000, but the spread between property types is dramatic-median condo sales near $2.9 million versus median co-op sales around $838,000. Chelsea commands a premium over neighborhoods like Hell's Kitchen, Gramercy, and parts of the Upper East Side, driven by its architectural diversity, High Line proximity, gallery culture, and the mix of homes available. However, pricing varies significantly by building, floor, exposure, and micro-market location within Chelsea itself.</p>
+          <details className="hlm-faq">
+            <summary>
+              How does the High Line affect Chelsea property values?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Proximity to the High Line is one of the strongest value drivers in Chelsea real estate. Properties with direct views of or immediate access to the High Line-particularly in West Chelsea's rezoned corridor-command significant price premiums per square foot. But the effect is not uniform: a unit on a high floor with unobstructed park views will capture far more premium than a ground-floor unit on the same block. I help buyers and sellers quantify this impact through building-specific comparable sales rather than broad assumptions.</p>
+            </div>
+          </details>
 
-        <h4>What should I know about Chelsea building financials and monthly costs?</h4>
-
-        <p>Building financial health directly affects your monthly carrying costs and your property's resale value. For co-ops, I review maintenance fees, the building's underlying mortgage burden, reserve fund adequacy, recent assessments, and the current budget versus actual expenses. For condos, common charges and real estate taxes are the primary ongoing costs-but pending capital projects or <a href="https://www.nyc.gov/site/finance/property/landlords-coop-condo.page">tax abatement expirations</a> can change those numbers materially. Buildings with deferred maintenance, thin reserves, or escalating assessments present risks that may not be visible in the listing price alone.</p>
-
-        <h4>How does the High Line affect Chelsea property values?</h4>
-
-        <p>Proximity to the High Line is one of the strongest value drivers in Chelsea real estate. Properties with direct views of or immediate access to the High Line-particularly in West Chelsea's rezoned corridor-command significant price premiums per square foot. But the effect is not uniform: a unit on a high floor with unobstructed park views will capture far more premium than a ground-floor unit on the same block. I help buyers and sellers quantify this impact through building-specific comparable sales rather than broad assumptions.</p>
-
-        <h4>What are the key considerations for Chelsea new development purchases?</h4>
-
-        <p>New development purchases in Chelsea involve different financial mechanics than resale transactions. Sponsor sales may include closing cost structures where the buyer covers NYC and NY State transfer taxes, and common charges in newer buildings with extensive amenities tend to be higher. Buyers should evaluate the developer's track record, building construction quality, projected common charges, and how the unit's pricing compares to resale inventory in the immediate area. One issue I consistently raise with new development buyers is future resale competition-if the building hasn't fully sold out, your eventual resale may compete against the sponsor's remaining inventory.</p>
-
-        <h3>Schedule Your Chelsea and New York Real Estate Consultation</h3>
+          <details className="hlm-faq">
+            <summary>
+              What are the key considerations for Chelsea new development purchases?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>New development purchases in Chelsea involve different financial mechanics than resale transactions. Sponsor sales may include closing cost structures where the buyer covers NYC and NY State transfer taxes, and common charges in newer buildings with extensive amenities tend to be higher. Buyers should evaluate the developer's track record, building construction quality, projected common charges, and how the unit's pricing compares to resale inventory in the immediate area. One issue I consistently raise with new development buyers is future resale competition-if the building hasn't fully sold out, your eventual resale may compete against the sponsor's remaining inventory.</p>
+            </div>
+          </details>
+        </div>
+<h3>Schedule Your Chelsea and New York Real Estate Consultation</h3>
 
         <p>Whether you're evaluating a Chelsea property for purchase, preparing to list a home for sale, or need a detailed market analysis to inform your next decision, Stanley Montfort provides the local expertise and transaction guidance that Chelsea's complex market demands.</p>
 

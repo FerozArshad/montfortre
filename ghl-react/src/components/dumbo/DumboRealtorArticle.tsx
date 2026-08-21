@@ -190,28 +190,68 @@ export default function DumboRealtorArticle() {
         <p>The neighborhood is well connected to Manhattan via the York Street F train station and the High Street A/C station, and proximity to the Manhattan Bridge and Brooklyn Bridge provides additional transportation access - factors that consistently support real estate demand.</p>
 
         <h3>Frequently Asked Questions About DUMBO Real Estate</h3>
+        <div className="hlm-faqs">
+          <details className="hlm-faq">
+            <summary>
+              How do DUMBO property values compare between different buildings?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>DUMBO property values vary significantly between buildings, even among units of similar size. The median sale price in DUMBO is $2,040,000, but this average masks wide building-level differences. A two-bedroom in a converted loft building with original architectural features may trade at a different price per square foot than a similarly sized unit in a full-service new development tower. Floor level, views, exposure, carrying costs, amenities, and building financial health all influence value. When comparing two DUMBO lofts or condos, Stanley uses same-building comparable sales and adjusts for floor, view, and condition - an approach that's far more accurate than applying a neighborhood-wide average.</p>
+            </div>
+          </details>
 
-        <h4>How do DUMBO property values compare between different buildings?</h4>
+          <details className="hlm-faq">
+            <summary>
+              What should buyers know about DUMBO loft conversions versus new development condos?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Loft conversions deliver high ceilings, oversized factory windows, exposed structural elements, and architectural character that's difficult to replicate. But they may come with less predictable layouts, potential maintenance issues with older building systems, fewer amenities, and variable carrying costs. New development condos offer modern finishes, full amenity packages, more standardized floor plans, and typically lower near-term maintenance - but higher common charges and property taxes, and less of the industrial character that defines DUMBO. The right choice depends on whether a buyer prioritizes authenticity and architectural uniqueness or turnkey living with comprehensive building services. Stanley helps buyers evaluate both property types through the same rigorous framework: layout efficiency, building financial health, carrying costs, and realistic resale potential.</p>
+            </div>
+          </details>
 
-        <p>DUMBO property values vary significantly between buildings, even among units of similar size. The median sale price in DUMBO is $2,040,000, but this average masks wide building-level differences. A two-bedroom in a converted loft building with original architectural features may trade at a different price per square foot than a similarly sized unit in a full-service new development tower. Floor level, views, exposure, carrying costs, amenities, and building financial health all influence value. When comparing two DUMBO lofts or condos, Stanley uses same-building comparable sales and adjusts for floor, view, and condition - an approach that's far more accurate than applying a neighborhood-wide average.</p>
+          <details className="hlm-faq">
+            <summary>
+              How do views impact DUMBO property values and which exposures command premiums?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Views of the Manhattan Bridge or Brooklyn Bridge significantly affect property value, but the premium varies based on several factors. West-facing exposures with Manhattan skyline and sunset views are generally most prized. Brooklyn Bridge and Manhattan Bridge views command strong premiums, particularly on higher floors with unobstructed sight lines. East River waterfront exposure adds value but must be evaluated for permanence - whether future development or zoning changes could block currently open views. Corner units with multiple exposures typically outperform interior-facing units. Stanley evaluates view quality for each specific property rather than applying a generic "view premium" percentage.</p>
+            </div>
+          </details>
 
-        <h4>What should buyers know about DUMBO loft conversions versus new development condos?</h4>
+          <details className="hlm-faq">
+            <summary>
+              What are typical carrying costs for DUMBO condos and how do they vary by building?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Monthly carrying costs (common charges plus property taxes, excluding mortgage) in DUMBO range widely. At the lower end, a unit at 100 Jay Street may carry approximately $760/month in combined common charges and taxes. Mid-range examples like 70 Washington Street run around $1,128/month. At the high end, units in buildings with extensive amenity packages can exceed $4,000/month. These differences are driven by building amenities and services, unit size, tax classification and abatement status, and whether the building has recently imposed special assessments. Stanley reviews verified carrying cost data for every property under consideration, because a $50,000 difference in purchase price can be eclipsed by a $500/month difference in carrying costs over a typical holding period.</p>
+            </div>
+          </details>
 
-        <p>Loft conversions deliver high ceilings, oversized factory windows, exposed structural elements, and architectural character that's difficult to replicate. But they may come with less predictable layouts, potential maintenance issues with older building systems, fewer amenities, and variable carrying costs. New development condos offer modern finishes, full amenity packages, more standardized floor plans, and typically lower near-term maintenance - but higher common charges and property taxes, and less of the industrial character that defines DUMBO. The right choice depends on whether a buyer prioritizes authenticity and architectural uniqueness or turnkey living with comprehensive building services. Stanley helps buyers evaluate both property types through the same rigorous framework: layout efficiency, building financial health, carrying costs, and realistic resale potential.</p>
-
-        <h4>How do views impact DUMBO property values and which exposures command premiums?</h4>
-
-        <p>Views of the Manhattan Bridge or Brooklyn Bridge significantly affect property value, but the premium varies based on several factors. West-facing exposures with Manhattan skyline and sunset views are generally most prized. Brooklyn Bridge and Manhattan Bridge views command strong premiums, particularly on higher floors with unobstructed sight lines. East River waterfront exposure adds value but must be evaluated for permanence - whether future development or zoning changes could block currently open views. Corner units with multiple exposures typically outperform interior-facing units. Stanley evaluates view quality for each specific property rather than applying a generic "view premium" percentage.</p>
-
-        <h4>What are typical carrying costs for DUMBO condos and how do they vary by building?</h4>
-
-        <p>Monthly carrying costs (common charges plus property taxes, excluding mortgage) in DUMBO range widely. At the lower end, a unit at 100 Jay Street may carry approximately $760/month in combined common charges and taxes. Mid-range examples like 70 Washington Street run around $1,128/month. At the high end, units in buildings with extensive amenity packages can exceed $4,000/month. These differences are driven by building amenities and services, unit size, tax classification and abatement status, and whether the building has recently imposed special assessments. Stanley reviews verified carrying cost data for every property under consideration, because a $50,000 difference in purchase price can be eclipsed by a $500/month difference in carrying costs over a typical holding period.</p>
-
-        <h4>How long does it typically take to sell a DUMBO condo or loft?</h4>
-
-        <p>Homes in DUMBO spend a median of 85 days on the market, though average selling time for properties in DUMBO is around 57 days in some reporting periods. The discrepancy reflects the impact of property type, pricing accuracy, and market conditions on individual transactions. Well-priced units in high-demand buildings with strong views or amenities tend to sell faster. Unique lofts or premium-priced properties may require longer marketing periods. Stanley advises sellers on realistic timing expectations based on their specific property, current competing inventory, and recent absorption rates within comparable buildings.</p>
-
-        <h3>Contact Stanley Montfort - Your DUMBO Real Estate Expert</h3>
+          <details className="hlm-faq">
+            <summary>
+              How long does it typically take to sell a DUMBO condo or loft?
+              <span className="hlm-faq-mark" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="hlm-faq-body">
+              <p>Homes in DUMBO spend a median of 85 days on the market, though average selling time for properties in DUMBO is around 57 days in some reporting periods. The discrepancy reflects the impact of property type, pricing accuracy, and market conditions on individual transactions. Well-priced units in high-demand buildings with strong views or amenities tend to sell faster. Unique lofts or premium-priced properties may require longer marketing periods. Stanley advises sellers on realistic timing expectations based on their specific property, current competing inventory, and recent absorption rates within comparable buildings.</p>
+            </div>
+          </details>
+        </div>
+<h3>Contact Stanley Montfort - Your DUMBO Real Estate Expert</h3>
 
         <p>Whether you're buying your first DUMBO condo, selling a loft conversion, evaluating a new development opportunity, or trying to understand how your property's views, carrying costs, and building position affect its market value, Stanley Montfort provides the building-level expertise and neighborhood knowledge that DUMBO real estate demands. Every consultation focuses on your specific property or search - not generic information or courtesy overviews.</p>
 

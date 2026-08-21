@@ -7,7 +7,6 @@ export default function HarlemBrownstonesForSale() {
     <PageShell
       seo={HARLEM_BROWNSTONES_FOR_SALE_SEO}
       pageClassName="hbfs-page"
-      showReviews={false}
     >
       <HarlemBrownstonesForSaleContent />
     </PageShell>

@@ -177,7 +177,6 @@ export default function ParkSlopeContent() {
           </div>
         </div>
       </section>
-
       <section id="market-report" className="hlm-market" data-screen-label="Market report">
         <div className="hlm-market-inner">
           <div data-reveal="">
