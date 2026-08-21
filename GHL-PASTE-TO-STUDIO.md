@@ -27,6 +27,10 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/lay
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/layout/SiteFooter.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/shared/ResourcesSection.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/shared/ContactSection.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/shared/PromisesBar.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/shared/ReviewsSection.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/lib/reputationHubReviews.ts
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/lib/originalReviewPages.ts
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useStyleHover.ts
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useTouchDropdowns.ts
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/hooks/useCarousels.ts
@@ -42,13 +46,13 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/resourc
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/contact-section.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-hero.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-promises.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-reviews.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-hidden-cost.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-founder.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-areas.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-expect.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-plan.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-services.css
-https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-reviews.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-instagram.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-included.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/home-listings.css
@@ -363,6 +367,13 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/HarlemCo
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem-condos/HarlemCondosContent.tsx
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-condos-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlemCondos.ts
+
+## 9h2. HarlemCoOps
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/HarlemCoOps.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem-co-ops/HarlemCoOpsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-co-ops-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlemCoOps.ts
 
 ## 9i. HarlemSros
 
