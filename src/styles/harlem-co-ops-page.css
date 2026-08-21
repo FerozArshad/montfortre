@@ -1,41 +1,17 @@
 /* Harlem Co-Ops reuses /neighborhoods tokens. Extra layout for guide sections. */
 
-.harlem-co-ops-page .nbhd-hero {
-  background:
-    linear-gradient(180deg, rgba(15, 23, 41, 0.55) 0%, rgba(15, 23, 41, 0.62) 100%),
-    url("/redesign-assets/hoods/harlem-co-ops-hero.png") center / cover no-repeat;
-  border-bottom: 0;
-  padding: 100px 64px 110px;
-}
-
-.harlem-co-ops-page .nbhd-hero-ring {
-  display: none;
-}
-
 .harlem-co-ops-page .nbhd-hero-inner {
   grid-template-columns: 1fr;
   gap: 36px;
-  text-align: center;
-  justify-items: center;
-}
-
-.harlem-co-ops-page .nbhd-hero h1 {
-  color: #ffffff;
-  max-width: 18ch;
 }
 
 .harlem-co-ops-page .nbhd-hero-lead {
-  max-width: 42rem;
-  color: rgba(255, 255, 255, 0.92);
+  max-width: none;
 }
 
 .harlem-co-ops-page .nbhd-hero-lead b {
   font-weight: 700;
-  color: #ffffff;
-}
-
-.harlem-co-ops-page .nbhd-hero-ctas {
-  justify-content: center;
+  color: #0f1729;
 }
 
 .harlem-co-ops-page .nbhd-promises {
@@ -114,11 +90,6 @@
 }
 
 @media (max-width: 1024px) {
-  .harlem-co-ops-page .nbhd-hero {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
   .harlem-co-ops-page .nbhd-intro-copy h2 {
     font-size: 36px;
   }
@@ -129,10 +100,6 @@
 }
 
 @media (max-width: 768px) {
-  .harlem-co-ops-page .nbhd-hero {
-    padding: 72px 20px 80px;
-  }
-
   .harlem-co-ops-page .nbhd-intro-copy h2 {
     font-size: 32px;
   }
@@ -143,12 +110,5 @@
 
   .harlem-co-ops-page .nbhd-intro-copy .nbhd-guide-list {
     font-size: 16px;
-  }
-}
-
-@media (max-width: 479.98px) {
-  .harlem-co-ops-page .nbhd-hero {
-    padding-left: 16px;
-    padding-right: 16px;
   }
 }
