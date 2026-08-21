@@ -368,6 +368,13 @@ https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/har
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-condos-page.css
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlemCondos.ts
 
+## 9h2. HarlemCoOps
+
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/HarlemCoOps.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/components/harlem-co-ops/HarlemCoOpsContent.tsx
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/styles/harlem-co-ops-page.css
+https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/seo/pages/harlemCoOps.ts
+
 ## 9i. HarlemSros
 
 https://raw.githubusercontent.com/FerozArshad/montfortre/main/src/pages/HarlemSros.tsx
