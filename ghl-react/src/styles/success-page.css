@@ -218,8 +218,25 @@
 
 .succ-list {
   background: #f5eecb;
-  padding: 100px 64px;
+  padding: 48px 64px;
   border-bottom: 1px solid #e0d9b8;
+}
+
+.succ-list.home-rev {
+  border-top: 0;
+}
+
+.succ-list .home-rev-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.succ-list .home-rev-frame {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  min-height: 600px;
 }
 
 .success-masonry {

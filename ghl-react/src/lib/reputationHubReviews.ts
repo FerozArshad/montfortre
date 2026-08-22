@@ -2,6 +2,10 @@
 export const REPUTATION_HUB_WIDGET_URL =
   "https://reputationhub.site/reputation/widgets/review_widget/J3cYmGK3p1ja7wTS63Dn?widgetId=69e4040dc73baf4b1ee40fd0";
 
+/** Success Stories page — alternate ReputationHub widget layout. */
+export const REPUTATION_HUB_SUCCESS_STORIES_WIDGET_URL =
+  "https://reputationhub.site/reputation/widgets/review_widget/J3cYmGK3p1ja7wTS63Dn?widgetId=6a899d17cc2e0449fd024f69";
+
 export const REPUTATION_HUB_WIDGET_SCRIPT =
   "https://reputationhub.site/reputation/assets/review-widget.js";
 
