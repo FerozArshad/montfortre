@@ -1,87 +1,35 @@
+import { useEffect } from "react";
 import ContactSection from "../shared/ContactSection";
 import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import useReputationAggregate from "../../hooks/useReputationAggregate";
+import {
+  REPUTATION_HUB_SUCCESS_STORIES_WIDGET_URL,
+  REPUTATION_HUB_WIDGET_SCRIPT,
+  REPUTATION_HUB_WIDGET_SCRIPT_ID,
+} from "../../lib/reputationHubReviews";
 import "../../styles/success-page.css";
+import "../../styles/home-reviews.css";
 
 const GOOGLE_MARK =
   "https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png";
 
-const TESTIMONIALS = [
-  {
-    initials: "KS",
-    name: "Kristen Scheyder",
-    href: "https://www.google.com/maps/contrib/106383080176387870829/reviews?hl=en",
-    date: "Jul 2026 · View on Google",
-    quote:
-      "Stanley was great to work with. He worked with our schedule, took the time to understand our priorities, showed us a range of properties in different areas that could suit our needs and helped us strategize our approach. He was also a great resource in helping us find local connections for inspections, repairs, etc. We look forward to staying in touch with him and will definitely recommend him.",
-  },
-  {
-    initials: "AD",
-    name: "Angelina Darrisaw",
-    href: "https://www.google.com/maps/contrib/101694945511048714275/reviews?hl=en",
-    date: "Jul 2026 · View on Google",
-    quote:
-      "Incredible experience. Very knowledgeable about the brownstone buying process and helped me understand the budget differences for condo vs brownstones. Walked away more informed as a result.",
-  },
-  {
-    initials: "SR",
-    name: "Stephie Rowe",
-    href: "https://www.google.com/maps/contrib/112594200448090017399/reviews?hl=en",
-    date: "Jul 2026 · View on Google",
-    quote: "Great Service",
-  },
-  {
-    initials: "SC",
-    name: "Sandrine Charles",
-    href: "https://www.google.com/maps/contrib/111964719774825390259/reviews?hl=en",
-    date: "Jun 2026 · View on Google",
-    quote: "Thank you for a streamlined process from start to finish ensuring the right place was found and secured without haste!",
-  },
-  {
-    initials: "SR",
-    name: "Seth Rabinowitz",
-    href: "https://www.google.com/maps/contrib/100922205373403327263/reviews?hl=en",
-    date: "Jun 2026 · View on Google",
-    quote:
-      "We had a great experience working with Stanley. He taught us a lot about the specific market we were looking in, which enabled us to make a very good decision on purchase of a new home.",
-  },
-  {
-    initials: "CA",
-    name: "Corey A. Witmer",
-    href: "https://www.google.com/maps/contrib/109328620676722096746/reviews?hl=en",
-    date: "Apr 2026 · View on Google",
-    quote:
-      "Stanley was the dream real estate agent we didn't know we deserved! From the beginning he was attentive to help us figure out what type of property we wanted, and could afford. Throughout the process he was a calm and patient presence, offering sincere and sage perspectives to keep us grounded. Ultimately we landed a unicorn of a property for below market price for the block. I'd highly recommend him for future homebuyers.",
-  },
-  {
-    initials: "PW",
-    name: "Perry Witmer",
-    href: "https://www.google.com/maps/contrib/116771421068638089471/reviews?hl=en",
-    date: "Apr 2026 · View on Google",
-    quote:
-      "Stanley is amazing! No one knows the Harlem market better than him, and his deep expertise was a tremendous resource. He taught me how to spot 'red flags' and talked me out of an offer on a place that had evidence of poor workmanship. He always knew exactly what a property was worth, regardless of the listing price. Responsive, thorough, and gave excellent advice at every step. So grateful to have worked with him!",
-  },
-  {
-    initials: "DS",
-    name: "Davon Snipes",
-    href: "https://www.google.com/maps/contrib/108132066685824850224/reviews?hl=en",
-    date: "Mar 2026 · View on Google",
-    quote:
-      "Stan has been an incredibly patient, knowledgeable, and professional broker. He understands the market and has many relationships in the industry. He was thoughtful and gracious about responding to our feedback, and left no stone unturned in helping us find the property of our dreams. And he continues to provide guidance post-closing. Look no further!",
-  },
-  {
-    initials: "AN",
-    name: "Anika Nfr-Ka Ma’at Daniels",
-    href: "https://www.google.com/maps/contrib/107286042219082422872/reviews?hl=en",
-    date: "Jan 2026 · View on Google",
-    quote:
-      "Stan is extremely knowledgeable and professional. He also has the utmost patience! He helped me sell my home and purchase a condo at the same time. My home had all types of special contingencies but he found me a buyer very close to the price I wanted. Stan works extremely hard and is always accessible. I would give him more stars if I could. Highly recommend.",
-  },
-] as const;
+function ensureReviewWidgetScript() {
+  if (document.getElementById(REPUTATION_HUB_WIDGET_SCRIPT_ID)) return;
+  const script = document.createElement("script");
+  script.id = REPUTATION_HUB_WIDGET_SCRIPT_ID;
+  script.src = REPUTATION_HUB_WIDGET_SCRIPT;
+  script.async = true;
+  document.body.appendChild(script);
+}
 
 export default function SuccessStoriesContent() {
   const { ratingLabel, stars, totalReviews } = useReputationAggregate();
+
+  useEffect(() => {
+    ensureReviewWidgetScript();
+  }, []);
+
   return (
     <div>
       <section className="succ-hero" data-screen-label="Success hero">
@@ -132,32 +80,20 @@ export default function SuccessStoriesContent() {
           </div>
         </div>
       </section>
-<PromisesBar variant="nbhd" />
+      <PromisesBar variant="nbhd" />
 
-
-      <section className="succ-list" data-screen-label="Testimonials">
-        <div className="success-masonry">
-          {TESTIMONIALS.map((item) => (
-            <div key={item.href} data-reveal="" className="succ-card">
-              <div className="succ-card-head">
-                <span className="succ-card-quote">{'\u201C'}</span>
-                <span className="succ-card-stars">★★★★★</span>
-              </div>
-              <p>{item.quote}</p>
-              <div className="succ-card-author">
-                <div className="succ-card-initials">{item.initials}</div>
-                <div className="succ-card-who">
-                  <div className="succ-card-name">{item.name}</div>
-                  <div className="succ-card-google">
-                    <img src={GOOGLE_MARK} alt="Google" />
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="succ-card-date">
-                      {item.date}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+      <section className="succ-list home-rev" data-screen-label="Testimonials">
+        <div className="home-rev-inner">
+          <iframe
+            className="lc_reviews_widget home-rev-frame"
+            src={REPUTATION_HUB_SUCCESS_STORIES_WIDGET_URL}
+            title="Google reviews for Montfort Real Estate"
+            loading="eager"
+            scrolling="no"
+            frameBorder={0}
+            referrerPolicy="no-referrer-when-downgrade"
+            style={{ minWidth: "100%", width: "100%" }}
+          />
         </div>
       </section>
 
