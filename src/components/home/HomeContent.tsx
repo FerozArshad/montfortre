@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ResourcesSection from "../shared/ResourcesSection";
 import PromisesBar from "../shared/PromisesBar";
 import ReviewsSection from "../shared/ReviewsSection";
@@ -198,81 +199,19 @@ const SERVICE_CARDS = [
   },
 ] as const;
 
-const IG_POSTS = [
-  {
-    href: "https://www.instagram.com/p/DbZFQBTD4hS/",
-    image: "/instagram/ig-1.webp",
-    w: 640,
-    h: 800,
-    caption: "Just Listed: 904 Gates Avenue, Bedford-Stuyvesant",
-    likes: "22",
-    comments: "3",
-  },
-  {
-    href: "https://www.instagram.com/p/DbWdWwVCUnb/",
-    image: "/instagram/ig-2.webp",
-    w: 1439,
-    h: 959,
-    caption: "A 4-unit Brooklyn property where the numbers really stand out",
-    likes: "41",
-    comments: "2",
-  },
-  {
-    href: "https://www.instagram.com/p/DbHHdBzGiZ3/",
-    image: "/instagram/ig-3.webp",
-    w: 1439,
-    h: 959,
-    caption: "SOLD: 481 West 145th Street, last asking $2,550,000",
-    likes: "70",
-    comments: "11",
-  },
-  {
-    href: "https://www.instagram.com/p/DalKzvTEWlq/",
-    image: "/instagram/ig-4.webp",
-    w: 720,
-    h: 900,
-    caption: "What if owning a brownstone cost less each month than renting?",
-    likes: "65",
-    comments: "9",
-  },
-  {
-    href: "https://www.instagram.com/p/DadYwSGFTy_/",
-    image: "/instagram/ig-5.webp",
-    w: 720,
-    h: 900,
-    caption: "SOLD: 49 East 126th Street, last asking $2,250,000",
-    likes: "88",
-    comments: "19",
-  },
-  {
-    href: "https://www.instagram.com/p/DaQ7iNZicGp/",
-    image: "/instagram/ig-6.webp",
-    w: 1080,
-    h: 1350,
-    caption: "How to create $2,000,000+ in equity buying a brownstone",
-    likes: "67",
-    comments: "5",
-  },
-  {
-    href: "https://www.instagram.com/p/DaLXUDZkbRu/",
-    image: "/instagram/ig-7.webp",
-    w: 1080,
-    h: 1350,
-    caption: "SOLD: 265 West 139th Street, a Strivers’ Row landmark",
-    likes: "169",
-    comments: "16",
-  },
-  {
-    href: "https://www.instagram.com/reel/DY0PDihu1pt/",
-    image: "/instagram/ig-8.webp",
-    w: 1080,
-    h: 1350,
-    caption: "In Contract: 49 East 126th Street, Harlem brownstone",
-    likes: "58",
-    comments: "10",
-    reel: true,
-  },
-] as const;
+const SOCIABLEKIT_IG_EMBED_ID = "25707376";
+const SOCIABLEKIT_IG_SCRIPT = "https://widgets.sociablekit.com/instagram-feed/widget.js";
+const SOCIABLEKIT_IG_SCRIPT_ID = "sociablekit-instagram-feed";
+
+function ensureSociableKitIgScript() {
+  const existing = document.getElementById(SOCIABLEKIT_IG_SCRIPT_ID);
+  if (existing) existing.remove();
+  const script = document.createElement("script");
+  script.id = SOCIABLEKIT_IG_SCRIPT_ID;
+  script.src = SOCIABLEKIT_IG_SCRIPT;
+  script.defer = true;
+  document.body.appendChild(script);
+}
 
 const INCLUDED = [
   {
@@ -451,6 +390,10 @@ const LISTINGS_NEXT_CLICK =
 
 export default function HomeContent() {
   const { ratingLabel, stars, totalReviews } = useReputationAggregate();
+
+  useEffect(() => {
+    ensureSociableKitIgScript();
+  }, []);
   return (
     <>
       <section className="home-hero" data-screen-label="Hero">
@@ -1011,65 +954,8 @@ export default function HomeContent() {
 
       <section className="home-ig" data-screen-label="Instagram">
         <div className="home-ig-inner">
-          <div data-reveal="" className="home-ig-head">
-            <div className="home-ig-brand">
-              <div className="home-ig-avatar-ring">
-                <div className="home-ig-avatar">
-                  <img
-                    src="/redesign-assets/favicon-icon.png"
-                    alt="Montfort"
-                  />
-                </div>
-              </div>
-              <div>
-                <div className="home-ig-handle">@stanleymontfort</div>
-                <div className="home-ig-sub">Follow the latest listings, sales &amp; NYC market insight</div>
-              </div>
-            </div>
-            <a
-              href="https://www.instagram.com/stanleymontfort/"
-              target="_blank"
-              rel="noopener"
-              className="home-ig-follow"
-            >
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
-                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.8"></rect>
-                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.8"></circle>
-                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"></circle>
-              </svg>
-              Follow
-            </a>
-          </div>
-          <div className="home-ig-grid">
-            {IG_POSTS.map((post) => (
-              <a key={post.href} href={post.href} target="_blank" rel="noopener" className="home-ig-card">
-                <img src={post.image} alt="Instagram post" width={post.w} height={post.h} />
-                {"reel" in post && post.reel ? (
-                  <span className="home-ig-play">
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="#fff">
-                      <path d="M4 3l9 5-9 5z"></path>
-                    </svg>
-                  </span>
-                ) : null}
-                <div className="ig-ov">
-                  <p>{post.caption}</p>
-                  <div className="home-ig-meta">
-                    <span>
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 21s-7.5-4.6-10-9.3C.5 8.6 2 5 5.3 5c2 0 3.4 1.1 4.7 2.8C11.3 6.1 12.7 5 14.7 5 18 5 19.5 8.6 18 11.7 15.5 16.4 12 21 12 21z"></path>
-                      </svg>{" "}
-                      {post.likes}
-                    </span>
-                    <span>
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.4 4.7 3.6 6.2-.2 1.3-.9 2.6-1.9 3.6 1.7-.2 3.4-.8 4.8-1.8 1.1.3 2.3.5 3.5.5 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path>
-                      </svg>{" "}
-                      {post.comments}
-                    </span>
-                  </div>
-                </div>
-              </a>
-            ))}
+          <div className="home-ig-feed">
+            <div className="sk-instagram-feed" data-embed-id={SOCIABLEKIT_IG_EMBED_ID} />
           </div>
         </div>
       </section>
