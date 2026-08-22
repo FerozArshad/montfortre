@@ -18,7 +18,77 @@
   display: block;
   width: 100% !important;
   max-width: 100%;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
   border: 0;
+}
+
+/* 3 columns × 3 rows on desktop (9 posts from SociableKIT) */
+.home-ig-feed .sk-ig-all-posts {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Keep first 9 posts (3 rows × 3). Sizer is child 1 → hide from child 11. */
+.home-ig-feed .sk-ig-all-posts > .sk-instagram-feed-item:nth-child(n + 11) {
+  display: none !important;
+}
+
+.home-ig-feed .sk-ig-load-more-posts {
+  display: none !important;
+}
+
+.home-ig-feed .sk_branding,
+.home-ig-feed a.tutorial_link,
+.home-ig-feed a.--custom-branding {
+  display: none !important;
+}
+
+/*
+  Uniform Instagram 4:5 cells. Portrait posts fill; landscape posts letterbox
+  (no crop, no stretch to taller siblings).
+*/
+.home-ig-feed .sk-instagram-feed-item {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #0f1729;
+  align-self: stretch;
+}
+
+.home-ig-feed .sk-instagram-feed-item > img.sk-img-sizer {
+  display: none !important;
+}
+
+.home-ig-feed .sk-instagram-feed-item > img.sk-ig-post-img,
+.home-ig-feed .sk-instagram-feed-item .sk-ig-post-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block !important;
+}
+
+.home-ig-feed .sk-ig-post-hover {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  line-height: normal !important;
+  margin: 0 !important;
+  box-sizing: border-box;
 }
 
 @media (min-width: 1025px) {
@@ -36,6 +106,26 @@
 @media (max-width: 1023.98px) {
   .home-ig {
     padding: 48px 20px;
+  }
+
+  .home-ig-feed .sk-ig-all-posts {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* keep 3 rows × 2 = 6 on tablet */
+  .home-ig-feed .sk-ig-all-posts > .sk-instagram-feed-item:nth-child(n + 8) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 639.98px) {
+  .home-ig-feed .sk-ig-all-posts {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  /* 3 rows × 1 = 3 on phone */
+  .home-ig-feed .sk-ig-all-posts > .sk-instagram-feed-item:nth-child(n + 5) {
+    display: none !important;
   }
 }
 

@@ -213,6 +213,22 @@ function ensureSociableKitIgScript() {
   document.body.appendChild(script);
 }
 
+/** Strip SociableKIT fixed pixel sizes so CSS can size portrait + landscape evenly. */
+function normalizeSociableKitIgSizing(root: ParentNode = document) {
+  root.querySelectorAll<HTMLElement>(".home-ig-feed .sk-ig-post-img").forEach((img) => {
+    img.style.width = "100%";
+    img.style.height = "100%";
+    img.style.maxHeight = "100%";
+    img.style.objectFit = "contain";
+  });
+  root.querySelectorAll<HTMLElement>(".home-ig-feed .sk-ig-post-hover").forEach((hover) => {
+    hover.style.width = "100%";
+    hover.style.height = "100%";
+    hover.style.lineHeight = "normal";
+    hover.style.margin = "0";
+  });
+}
+
 const INCLUDED = [
   {
     image: "/redesign-assets/included/closing-costs.png",
@@ -393,6 +409,21 @@ export default function HomeContent() {
 
   useEffect(() => {
     ensureSociableKitIgScript();
+
+    const feed = document.querySelector(".home-ig-feed");
+    if (!feed) return;
+
+    normalizeSociableKitIgSizing(feed);
+
+    const observer = new MutationObserver(() => normalizeSociableKitIgSizing(feed));
+    observer.observe(feed, { childList: true, subtree: true, attributes: true, attributeFilter: ["style"] });
+
+    const timers = [500, 1500, 3000].map((ms) => window.setTimeout(() => normalizeSociableKitIgSizing(feed), ms));
+
+    return () => {
+      observer.disconnect();
+      timers.forEach((id) => window.clearTimeout(id));
+    };
   }, []);
   return (
     <>
