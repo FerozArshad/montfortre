@@ -209,3 +209,12 @@ export function IconTag(props: IconProps) {
     </Ico>
   );
 }
+
+export function IconButton(props: IconProps) {
+  return (
+    <Ico {...props}>
+      <rect x="3" y="7" width="18" height="10" rx="3" stroke="currentColor" strokeWidth="2" />
+      <path stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M8 12h8" />
+    </Ico>
+  );
+}

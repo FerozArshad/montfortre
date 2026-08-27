@@ -205,13 +205,29 @@ const SOCIABLEKIT_IG_EMBED_ID = "25707376";
 const SOCIABLEKIT_IG_SCRIPT = "https://widgets.sociablekit.com/instagram-feed/widget.js";
 const SOCIABLEKIT_IG_SCRIPT_ID = "sociablekit-instagram-feed";
 
-function ensureSociableKitIgScript() {
-  const existing = document.getElementById(SOCIABLEKIT_IG_SCRIPT_ID);
-  if (existing) existing.remove();
+/** Ensure embed host exists and SociableKIT widget.js actually executes. */
+function mountSociableKitIgFeed(feedRoot: Element) {
+  let host = feedRoot.querySelector<HTMLElement>(".sk-instagram-feed");
+  if (!host) {
+    host = document.createElement("div");
+    host.className = "sk-instagram-feed";
+    host.setAttribute("data-embed-id", SOCIABLEKIT_IG_EMBED_ID);
+    feedRoot.appendChild(host);
+  }
+
+  if (host.getAttribute("data-sk-initialized") === "1" && host.children.length > 0) return;
+
+  // Reset failed/partial init without replacing the React-managed node.
+  host.removeAttribute("data-sk-initialized");
+  host.removeAttribute("style");
+  host.innerHTML = "";
+
+  // Same-URL re-insert does not re-execute in browsers — cache-bust and replace.
+  document.getElementById(SOCIABLEKIT_IG_SCRIPT_ID)?.remove();
   const script = document.createElement("script");
   script.id = SOCIABLEKIT_IG_SCRIPT_ID;
-  script.src = SOCIABLEKIT_IG_SCRIPT;
-  script.defer = true;
+  script.src = `${SOCIABLEKIT_IG_SCRIPT}?t=${Date.now()}`;
+  script.async = true;
   document.body.appendChild(script);
 }
 
@@ -221,7 +237,8 @@ function normalizeSociableKitIgSizing(root: ParentNode = document) {
     img.style.width = "100%";
     img.style.height = "100%";
     img.style.maxHeight = "100%";
-    img.style.objectFit = "contain";
+    img.style.objectFit = "cover";
+    img.style.objectPosition = "top center";
   });
   root.querySelectorAll<HTMLElement>(".home-ig-feed .sk-ig-post-hover").forEach((hover) => {
     hover.style.width = "100%";
@@ -293,17 +310,24 @@ export default function HomeContent() {
   }, []);
 
   useEffect(() => {
-    ensureSociableKitIgScript();
-
     const feed = document.querySelector(".home-ig-feed");
     if (!feed) return;
 
+    mountSociableKitIgFeed(feed);
     normalizeSociableKitIgSizing(feed);
 
     const observer = new MutationObserver(() => normalizeSociableKitIgSizing(feed));
     observer.observe(feed, { childList: true, subtree: true, attributes: true, attributeFilter: ["style"] });
 
-    const timers = [500, 1500, 3000].map((ms) => window.setTimeout(() => normalizeSociableKitIgSizing(feed), ms));
+    // SociableKIT can hydrate late — retry mount if still empty.
+    const timers = [800, 2000, 4500].map((ms) =>
+      window.setTimeout(() => {
+        const host = feed.querySelector(".sk-instagram-feed");
+        const empty = !host || host.getAttribute("data-sk-initialized") !== "1" || host.children.length === 0;
+        if (empty) mountSociableKitIgFeed(feed);
+        normalizeSociableKitIgSizing(feed);
+      }, ms),
+    );
 
     return () => {
       observer.disconnect();
@@ -870,6 +894,32 @@ export default function HomeContent() {
 
       <section className="home-ig" data-screen-label="Instagram">
         <div className="home-ig-inner">
+          <div data-reveal="" className="home-ig-head">
+            <div className="home-ig-kicker">
+              <span className="home-ig-kicker-line" />
+              <span className="home-ig-kicker-label">On Instagram</span>
+            </div>
+            <div className="home-ig-head-row">
+              <div className="home-ig-identity">
+                <img
+                  className="home-ig-avatar"
+                  src="/redesign-assets/team/stanley-montfort.png"
+                  alt="@stanleymontfort"
+                  width={72}
+                  height={72}
+                />
+                <h2>@stanleymontfort</h2>
+              </div>
+              <a
+                className="home-ig-follow"
+                href="https://www.instagram.com/stanleymontfort/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Follow on Instagram →
+              </a>
+            </div>
+          </div>
           <div className="home-ig-feed">
             <div className="sk-instagram-feed" data-embed-id={SOCIABLEKIT_IG_EMBED_ID} />
           </div>

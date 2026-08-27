@@ -14,12 +14,12 @@ function exec(command: string, value?: string) {
 
 export function RichTextEditor({ value, onChange, placeholder = "Write your article…", minHeight = 220 }: Props) {
   const editorRef = useRef<HTMLDivElement>(null);
-  const lastHtml = useRef(value);
+  const lastHtml = useRef<string | null>(null);
 
   useEffect(() => {
     const el = editorRef.current;
     if (!el) return;
-    if (value !== lastHtml.current && el.innerHTML !== value) {
+    if (lastHtml.current === null || (value !== lastHtml.current && el.innerHTML !== value)) {
       el.innerHTML = value || "";
       lastHtml.current = value;
     }

@@ -6,6 +6,7 @@ import {
   IconAlignRight,
   IconBold,
   IconBulletList,
+  IconButton,
   IconClearFormat,
   IconForm,
   IconHome,
@@ -40,6 +41,14 @@ const FORMATS: { id: Format; label: string }[] = [
 const IDX_SEARCH = "https://stanley.olridx.com/Search/Sales";
 const IDX_RENTALS = "https://stanley.olridx.com/Search/Rentals";
 const IDX_HOME = "https://stanley.olridx.com/";
+
+function escapeAttr(s: string): string {
+  return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function escapeText(s: string): string {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
 
 function ToolbarIconBtn({
   title,
@@ -96,18 +105,24 @@ export function AgentFireRichEditor({
   minHeight = 320,
 }: Props) {
   const editorRef = useRef<HTMLDivElement>(null);
-  const lastHtml = useRef(value);
+  const lastHtml = useRef<string | null>(null);
   const savedRange = useRef<Range | null>(null);
   const [format, setFormat] = useState<Format>("p");
   const [mediaOpen, setMediaOpen] = useState(false);
   const [tableOpen, setTableOpen] = useState(false);
   const [tableRows, setTableRows] = useState(3);
   const [tableCols, setTableCols] = useState(3);
+  const [buttonOpen, setButtonOpen] = useState(false);
+  const [buttonText, setButtonText] = useState("Harlem Brownstones for Sale");
+  const [buttonHref, setButtonHref] = useState("/harlem-brownstones/");
+  const [buttonNewTab, setButtonNewTab] = useState(false);
 
   useEffect(() => {
     const el = editorRef.current;
     if (!el) return;
-    if (value !== lastHtml.current && el.innerHTML !== value) {
+    // First mount must always hydrate — lastHtml starts null so empty editable
+    // surfaces get blocksToHtml(value) instead of staying blank.
+    if (lastHtml.current === null || (value !== lastHtml.current && el.innerHTML !== value)) {
       el.innerHTML = value || "";
       lastHtml.current = value;
     }
@@ -197,6 +212,19 @@ export function AgentFireRichEditor({
     table += "</tbody></table><p></p>";
     insertHtml(table);
     setTableOpen(false);
+  }
+
+  function insertButton() {
+    const label = buttonText.trim() || "Learn more";
+    let href = buttonHref.trim() || "/";
+    if (!/^https?:\/\//i.test(href) && !href.startsWith("/") && !href.startsWith("mailto:") && !href.startsWith("tel:")) {
+      href = `/${href}`;
+    }
+    const target = buttonNewTab ? ' target="_blank" rel="noopener noreferrer"' : "";
+    insertHtml(
+      `<p class="cms-post-cta"><a class="cms-post-btn" href="${escapeAttr(href)}"${target}>${escapeText(label)}</a></p><p></p>`,
+    );
+    setButtonOpen(false);
   }
 
   function onAddForm() {
@@ -311,6 +339,16 @@ export function AgentFireRichEditor({
               setMediaOpen(true);
             }}
           />
+          <ToolbarLabelBtn
+            title="Insert CTA button with custom text"
+            icon={<IconButton size={16} />}
+            label="Button"
+            onClick={() => {
+              saveSelection();
+              setTableOpen(false);
+              setButtonOpen(true);
+            }}
+          />
           <ToolbarLabelBtn title="Insert contact form (saves leads to dashboard)" icon={<IconForm size={16} />} label="Form" onClick={onAddForm} />
           <ToolbarLabelBtn
             title="Insert table"
@@ -318,6 +356,7 @@ export function AgentFireRichEditor({
             label="Table"
             onClick={() => {
               saveSelection();
+              setButtonOpen(false);
               setTableOpen(true);
             }}
           />
@@ -345,6 +384,43 @@ export function AgentFireRichEditor({
         onMouseUp={saveSelection}
         suppressContentEditableWarning
       />
+
+      {buttonOpen ? (
+        <div className="af-table-dialog" role="dialog" aria-label="Insert button">
+          <strong>Insert button</strong>
+          <label>
+            Button text
+            <input
+              type="text"
+              value={buttonText}
+              onChange={(e) => setButtonText(e.target.value)}
+              placeholder="Harlem Brownstones for Sale"
+              autoFocus
+            />
+          </label>
+          <label>
+            Link URL
+            <input
+              type="text"
+              value={buttonHref}
+              onChange={(e) => setButtonHref(e.target.value)}
+              placeholder="/harlem-brownstones/ or https://…"
+            />
+          </label>
+          <label className="af-table-dialog-check">
+            <input type="checkbox" checked={buttonNewTab} onChange={(e) => setButtonNewTab(e.target.checked)} />
+            Open in new tab
+          </label>
+          <div className="af-table-dialog-actions">
+            <button type="button" className="af-btn af-btn--pill" onClick={insertButton}>
+              Insert
+            </button>
+            <button type="button" className="af-btn af-btn--pill" onClick={() => setButtonOpen(false)}>
+              Cancel
+            </button>
+          </div>
+        </div>
+      ) : null}
 
       {tableOpen ? (
         <div className="af-table-dialog" role="dialog" aria-label="Insert table">

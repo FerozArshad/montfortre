@@ -109,6 +109,8 @@ export default function ListingPageContent({ listing, preview = false }: Props) 
   const [tab, setTab] = useState<TabId>("overview");
   const [lightbox, setLightbox] = useState(false);
   const [tourOpen, setTourOpen] = useState(false);
+  const [tourSubmitted, setTourSubmitted] = useState(false);
+  const [tourBusy, setTourBusy] = useState(false);
   const [leadOpen, setLeadOpen] = useState(false);
   const [heroPassed, setHeroPassed] = useState(false);
   const heroRef = useRef<HTMLElement | null>(null);
@@ -195,7 +197,10 @@ export default function ListingPageContent({ listing, preview = false }: Props) 
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         if (leadOpen) closeLead();
-        else if (tourOpen) setTourOpen(false);
+        else if (tourOpen) {
+          setTourOpen(false);
+          setTourSubmitted(false);
+        }
         else setLightbox(false);
         return;
       }
@@ -609,13 +614,19 @@ export default function ListingPageContent({ listing, preview = false }: Props) 
           role="dialog"
           aria-modal="true"
           aria-labelledby="listing-tour-title"
-          onClick={() => setTourOpen(false)}
+          onClick={() => {
+            setTourOpen(false);
+            setTourSubmitted(false);
+          }}
         >
           <div className="listing-modal-card" onClick={(e) => e.stopPropagation()}>
             <button
               type="button"
               className="listing-modal-close"
-              onClick={() => setTourOpen(false)}
+              onClick={() => {
+                setTourOpen(false);
+                setTourSubmitted(false);
+              }}
               aria-label="Close"
             >
               Close
@@ -641,6 +652,11 @@ export default function ListingPageContent({ listing, preview = false }: Props) 
               </div>
             </div>
 
+            {tourSubmitted ? (
+              <p className="listing-lead-thanks" role="status">
+                Thank you — we&apos;ll confirm your tour shortly.
+              </p>
+            ) : (
             <form
               className="listing-tour-form"
               onSubmit={(e) => {
@@ -649,9 +665,14 @@ export default function ListingPageContent({ listing, preview = false }: Props) 
                 const data = new FormData(form);
                 const days = data.getAll("days").map(String).join(", ");
                 const times = data.getAll("times").map(String).join(", ");
+                if (!days || !times) {
+                  window.alert("Please pick at least one preferred day and time.");
+                  return;
+                }
                 const name = String(data.get("name") || "");
                 const [firstName, ...rest] = name.trim().split(/\s+/);
                 const lastName = rest.join(" ");
+                setTourBusy(true);
                 void (async () => {
                   try {
                     await submitLead({
@@ -670,10 +691,15 @@ export default function ListingPageContent({ listing, preview = false }: Props) 
                       listingSlug: listing.slug,
                       meta: { days, times, tourHref: listing.tourHref },
                     });
-                    setTourOpen(false);
-                    window.location.href = listing.tourHref;
+                    setTourSubmitted(true);
+                    window.setTimeout(() => {
+                      setTourOpen(false);
+                      setTourSubmitted(false);
+                    }, 1600);
                   } catch (err) {
                     window.alert(err instanceof Error ? err.message : "Could not submit tour request");
+                  } finally {
+                    setTourBusy(false);
                   }
                 })();
               }}
@@ -736,10 +762,15 @@ export default function ListingPageContent({ listing, preview = false }: Props) 
                 </label>
               ) : null}
 
-              <button type="submit" className="listing-btn listing-btn--gold listing-btn--block">
-                {tourLabel}
+              <button
+                type="submit"
+                className="listing-btn listing-btn--gold listing-btn--block"
+                disabled={tourBusy}
+              >
+                {tourBusy ? "Sending…" : tourLabel}
               </button>
             </form>
+            )}
           </div>
         </div>
       ) : null}
