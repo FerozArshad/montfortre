@@ -195,6 +195,7 @@ Read the **section file** for the stream you are continuing. Parent rules above 
 | `DOCUMENTATION.md` | Full directory map, coding rules, **complete 120-URL route table** | Living source of truth for inventory | Looking up a specific route or CSS file list |
 | `HANDOFF-SECTION-seo-launch-readiness.md` | Platform vs repo SEO: canonical/meta overrides, prerender, real 404s, robots + XML sitemap at web root, open client content decisions | Platform still owns blockers; repo SEO is correct | Debugging preview head tags, launch checklist, or “SEO is wrong on deploy” |
 | `HANDOFF-SECTION-blog-articles.md` | All **55** posts: 1 handcrafted Brownstones guide + 54 registry articles, shared guide design, hero-image fixes, ship rules | On `main` @ `e34a126` (+ tip may be newer) | Editing blogs, registry, `brownstone-guide.css`, featured images |
+| `HANDOFF-SECTION-lovable-cms.md` | Lovable Cloud CMS: admin listings/blog, `pages`/`posts`/`user_roles`, flows, status, blockers, go-live | **In progress** — login blocked on email confirm + `user_roles` admin | CMS admin, Supabase/Lovable Cloud, seed, Lovable overlay |
 | `HANDOFF-SECTION-privacy-sitemap.md` | `/privacy-policy/` + `/sitemap/` in site style; legal CSS; SPA-only HTML sitemap; frozen SEO | On `main` @ `9be34ec` | Editing legal pages, footer legal links, or HTML sitemap groups |
 
 **Git ship reminder (all streams):** implement on `local-root` in this workspace → overlay rewritten paths onto `origin/main` (parent = `main`, not `local-root`) → FF-push to `main`. No extra local dir per push.

@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import {
-  fetchReputationReviews,
+  DEFAULT_AGGREGATE,
+  fetchGoogleReviews,
   formatRatingLabel,
   ratingStars,
   type ReputationAggregate,
-} from "../lib/reputationHubReviews";
-
-const DEFAULT_AGGREGATE: ReputationAggregate = { rating: 5, totalReviews: 57 };
+} from "../lib/googlePlacesReviews";
 
 export type ReputationAggregateView = ReputationAggregate & {
   ratingLabel: string;
@@ -14,7 +13,7 @@ export type ReputationAggregateView = ReputationAggregate & {
   loading: boolean;
 };
 
-/** Live Google rating + review count from ReputationHub (shared sitewide). */
+/** Live Google rating + review count (Places + curated fallback). */
 export default function useReputationAggregate(): ReputationAggregateView {
   const [aggregate, setAggregate] = useState<ReputationAggregate>(DEFAULT_AGGREGATE);
   const [loading, setLoading] = useState(true);
@@ -22,7 +21,7 @@ export default function useReputationAggregate(): ReputationAggregateView {
   useEffect(() => {
     let cancelled = false;
 
-    fetchReputationReviews()
+    fetchGoogleReviews()
       .then(({ aggregate: next }) => {
         if (cancelled) return;
         setAggregate({

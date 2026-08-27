@@ -1,4 +1,5 @@
 import "../../styles/contact-section.css";
+import LeadCaptureForm from "./LeadCaptureForm";
 
 export default function ContactSection() {
   return (
@@ -7,17 +8,7 @@ export default function ContactSection() {
         <div data-reveal="" className="contact-copy">
           <div className="contact-kicker">Get in touch</div>
           <h2>Contact Montfort Real Estate</h2>
-          <div className="contact-form">
-            <div className="contact-names">
-              <input type="text" placeholder="First name" className="contact-field" />
-              <input type="text" placeholder="Last name" className="contact-field" />
-            </div>
-            <input type="email" placeholder="Email address" className="contact-field" />
-            <textarea placeholder="Comments, questions?" rows={4} className="contact-field contact-field--area" />
-            <a href="https://calendly.com/montfort" className="contact-submit">
-              Submit
-            </a>
-          </div>
+          <LeadCaptureForm formType="contact" submitLabel="Submit" className="contact-form lead-in-contact" />
         </div>
         <div data-reveal="" className="contact-map">
           <iframe

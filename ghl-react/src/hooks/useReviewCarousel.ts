@@ -81,7 +81,7 @@ function initReviewCarousel() {
   return () => cleanups.forEach((fn) => fn());
 }
 
-/** Wire review carousel after slides mount or update (dynamic ReputationHub fetch). */
+/** Wire review carousel after slides mount or update (Places / curated reviews). */
 export default function useReviewCarousel(slideCount: number) {
   useEffect(() => {
     if (slideCount === 0) return;

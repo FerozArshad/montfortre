@@ -3,3 +3,118 @@
 #root {
   isolation: isolate;
 }
+
+/* —— CMS freeform block pages (public) —— */
+.cms-block-page {
+  --cms-cream: #f9f6e6;
+  --cms-ink: #0f1729;
+  --cms-muted: #3b4c5e;
+  --cms-gold: #c98a2c;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  color: var(--cms-ink);
+}
+
+.cms-block-page__hero {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(15, 23, 41, 0.12);
+}
+
+.cms-block-page__title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+}
+
+.cms-block-page__lead {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: var(--cms-muted);
+  max-width: 42rem;
+}
+
+.cms-block-page__body {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.cms-block-page__body h2,
+.cms-block-page__body h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -0.01em;
+  margin: 2rem 0 0.75rem;
+  line-height: 1.25;
+}
+
+.cms-block-page__body h2 {
+  font-size: 1.75rem;
+}
+
+.cms-block-page__body h3 {
+  font-size: 1.375rem;
+}
+
+.cms-block-page__body p {
+  margin: 0 0 1.1rem;
+}
+
+.cms-block-page__body .cms-block-image,
+.cms-block-page__body .cms-block-gallery figure {
+  margin: 1.5rem 0;
+}
+
+.cms-block-page__body .cms-block-image img,
+.cms-block-page__body .cms-block-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.cms-block-page__body .cms-block-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 1.5rem 0;
+}
+
+.cms-block-page__body .cms-block-container {
+  margin: 1.75rem 0;
+  padding: 1.25rem 0;
+}
+
+.cms-block-page__body .cms-block-divider {
+  border: none;
+  border-top: 1px solid rgba(15, 23, 41, 0.15);
+  margin: 2rem 0;
+}
+
+.cms-block-page__body .cms-block-cta {
+  margin: 2rem 0;
+}
+
+.cms-block-page__body .cms-block-cta-link {
+  display: inline-block;
+  background: var(--cms-ink);
+  color: var(--cms-cream);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.85rem 1.35rem;
+  border-radius: 4px;
+}
+
+.cms-block-page__body .cms-block-cta-link:hover {
+  background: var(--cms-gold);
+  color: #fff;
+}
+
+.cms-block-page-shell {
+  background: #f5eecb;
+}

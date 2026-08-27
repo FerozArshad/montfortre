@@ -87,6 +87,166 @@
   color: #113b5f;
 }
 
+/* Real lead form (replaces Calendly link shell) */
+.contact-section .lead-capture-form,
+.contact-section .lead-in-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+  max-width: 520px;
+}
+
+.contact-section .lead-capture-names {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.contact-section .lead-capture-field {
+  background: rgba(249, 246, 230, 0.1);
+  border: 1px solid rgba(201, 138, 44, 0.45);
+  border-radius: 10px;
+  padding: 15px 16px;
+  font-family: inherit;
+  font-size: 15.5px;
+  color: #f9f6e6;
+  min-height: 52px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-section .lead-capture-field::placeholder {
+  color: rgba(249, 246, 230, 0.45);
+}
+
+.contact-section .lead-capture-field--area {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.contact-section .lead-capture-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c98a2c;
+  color: #0f1729;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 100px;
+  font-size: 15px;
+  padding: 17px 24px;
+  min-height: 54px;
+  cursor: pointer;
+}
+
+.contact-section .lead-capture-submit:hover:not(:disabled) {
+  background: #f9f6e6;
+  color: #113b5f;
+}
+
+.contact-section .lead-capture-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.contact-section .lead-capture-error,
+.contact-section .lead-form-thanks {
+  color: #f9f6e6;
+  font-size: 14px;
+  margin: 0;
+}
+
+.contact-section .lead-capture-error {
+  color: #ffb4b4;
+}
+
+.cms-lead-form {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid rgba(201, 138, 44, 0.35);
+  border-radius: 12px;
+  background: #f7f4ec;
+}
+
+.cms-lead-form-title {
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  color: #0f1729;
+}
+
+.cms-lead-form .lead-capture-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cms-lead-form .lead-capture-names {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cms-lead-form .lead-capture-field {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d8d2c4;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+  background: #fff;
+  color: #121826;
+}
+
+.cms-lead-form .lead-capture-submit {
+  align-self: flex-start;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  background: #c98a2c;
+  color: #0f1729;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cms-idx-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.25rem 0;
+}
+
+.cms-idx-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #c98a2c;
+  color: #0f1729 !important;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.cms-idx-btn--ghost {
+  background: transparent;
+  border: 1px solid #c98a2c;
+  color: #9a7b2e !important;
+}
+
+.cms-editor-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.cms-editor-table th,
+.cms-editor-table td {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+}
+
 .contact-map {
   position: relative;
   border-radius: 16px;

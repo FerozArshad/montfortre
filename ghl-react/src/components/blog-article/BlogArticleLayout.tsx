@@ -2,8 +2,10 @@ import ContactSection from "../shared/ContactSection";
 import "../../styles/brownstone-guide.css";
 import BlogAuthorBio from "./BlogAuthorBio";
 import BlogShareButtons from "./BlogShareButtons";
+import LeadFormHydrator from "../shared/LeadFormHydrator";
 import type { BlogArticleMeta } from "./types";
 import type { ReactNode } from "react";
+import { useRef } from "react";
 
 interface BlogArticleLayoutProps {
   meta: BlogArticleMeta;
@@ -13,6 +15,8 @@ interface BlogArticleLayoutProps {
 
 export default function BlogArticleLayout({ meta, bodyHtml, afterBody }: BlogArticleLayoutProps) {
   const showHeroCtas = meta.showHeroCtas !== false;
+  const bodyRef = useRef<HTMLDivElement>(null);
+
   return (
     <>
       <section className="bsg-hero" data-screen-label="Article hero">
@@ -75,7 +79,8 @@ export default function BlogArticleLayout({ meta, bodyHtml, afterBody }: BlogArt
               <span className="bsg-kicker-line" />
               <span className="bsg-kicker-label">{meta.kickerLabel ?? "The article"}</span>
             </div>
-            <div className="bsg-html" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+            <div ref={bodyRef} className="bsg-html" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+            <LeadFormHydrator containerRef={bodyRef} bodyHtml={bodyHtml} />
             {afterBody}
             <BlogShareButtons shareUrl={meta.shareUrl} />
             <BlogAuthorBio />

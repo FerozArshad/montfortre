@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import {
-  fetchReputationReviews,
+  fetchGoogleReviews,
   type ReputationAggregate,
   type ReputationReview,
-} from "../lib/reputationHubReviews";
+} from "../lib/googlePlacesReviews";
 
 type ReviewsState = {
   reviews: ReputationReview[];
@@ -12,7 +12,7 @@ type ReviewsState = {
   error: string | null;
 };
 
-/** Live Google reviews from ReputationHub only — no static fallback cards. */
+/** Live Google reviews (Places API) with curated Montfort fallback — no iframe. */
 export default function useReputationReviews() {
   const [state, setState] = useState<ReviewsState>({
     reviews: [],
@@ -24,7 +24,7 @@ export default function useReputationReviews() {
   useEffect(() => {
     let cancelled = false;
 
-    fetchReputationReviews()
+    fetchGoogleReviews()
       .then(({ reviews, aggregate }) => {
         if (cancelled) return;
         setState({

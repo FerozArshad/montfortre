@@ -56,6 +56,21 @@ export type ListingDetail = {
   tourHref: string;
   /** Sort order on current-listings (lower = earlier / “newer” in default). */
   sortOrder: number;
+  /** Optional Listings Hub / Spark fields */
+  mls?: string;
+  videoTour?: string;
+  matterportEmbed?: string;
+  moreDetailsParas?: string[];
+  tourButtonLabel?: string;
+  showScheduleButton?: boolean;
+  priceTitle?: string;
+  priceSubtitle?: string;
+  areaGuideName?: string;
+  areaDescription?: string;
+  /** AgentFire Spark Design-panel parity (content + section toggles). */
+  spark?: import("./sparkUi").ListingSparkUi;
+  metaTitle?: string;
+  metaDescription?: string;
 };
 
 export const LISTING_AGENT = {

@@ -4,7 +4,7 @@ import { useEffect } from "react";
  * Wires up the Home page listings scroller.
  *
  * Safe to call on pages without carousels (no-ops when ids are missing).
- * Reviews load via the live ReputationHub widget iframe in ReviewsSection.
+ * Reviews load via the custom Montfort carousel in ReviewsSection.
  */
 export default function useCarousels() {
   useEffect(() => {

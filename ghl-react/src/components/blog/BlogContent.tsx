@@ -1,8 +1,10 @@
+import { useEffect, useState } from "react";
 import ContactSection from "../shared/ContactSection";
 import PromisesBar from "../shared/PromisesBar";
+import { fetchPublishedBlogCards, type BlogCard } from "../../lib/cms/blog";
 import "../../styles/blog-page.css";
 
-const ARTICLES = [
+const ARTICLES: BlogCard[] = [
   {
     href: "/upper-west-side-townhouse-q2-2024-market-report/",
     image: "/redesign-assets/hoods/harlem.webp",
@@ -443,9 +445,22 @@ const ARTICLES = [
     title: "How to Price a Harlem Townhouse",
     excerpt: "What Harlem homeowners can take from the record-setting $27 million townhouse listing.",
   },
-] as const;
+] satisfies BlogCard[];
 
 export default function BlogContent() {
+  const [articles, setArticles] = useState<BlogCard[]>([...ARTICLES]);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const cms = await fetchPublishedBlogCards();
+      if (!cancelled && cms?.length) setArticles(cms);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <>
       <section className="blog-hero" data-screen-label="Blog hero">
@@ -475,16 +490,18 @@ export default function BlogContent() {
           </div>
         </div>
       </section>
-<PromisesBar variant="nbhd" />
+      <PromisesBar variant="nbhd" />
 
       <section className="blog-articles" data-screen-label="Articles">
         <div className="blog-articles-inner">
           <div data-reveal="" className="blog-articles-head">
-            <div className="blog-articles-count">55 articles</div>
+            <div className="blog-articles-count">
+              {articles.length} article{articles.length === 1 ? "" : "s"}
+            </div>
             <div className="blog-articles-topics">Market Reports · Buyer & Seller Guides · Co-Ownership · Investing</div>
           </div>
           <div className="blog-articles-grid">
-            {ARTICLES.map((article) => (
+            {articles.map((article) => (
               <a key={article.href} data-reveal="" href={article.href} className="blog-card">
                 <div className="blog-card-media">
                   <img src={article.image} alt={article.alt} loading="lazy" />

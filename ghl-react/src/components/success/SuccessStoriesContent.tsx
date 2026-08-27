@@ -1,34 +1,14 @@
-import { useEffect } from "react";
 import ContactSection from "../shared/ContactSection";
 import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
+import ReviewsSection from "../shared/ReviewsSection";
 import useReputationAggregate from "../../hooks/useReputationAggregate";
-import {
-  REPUTATION_HUB_SUCCESS_STORIES_WIDGET_URL,
-  REPUTATION_HUB_WIDGET_SCRIPT,
-  REPUTATION_HUB_WIDGET_SCRIPT_ID,
-} from "../../lib/reputationHubReviews";
+import { GOOGLE_G_MARK, GOOGLE_MAPS_PROFILE_HREF } from "../../lib/googlePlacesReviews";
 import "../../styles/success-page.css";
 import "../../styles/home-reviews.css";
 
-const GOOGLE_MARK =
-  "https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png";
-
-function ensureReviewWidgetScript() {
-  if (document.getElementById(REPUTATION_HUB_WIDGET_SCRIPT_ID)) return;
-  const script = document.createElement("script");
-  script.id = REPUTATION_HUB_WIDGET_SCRIPT_ID;
-  script.src = REPUTATION_HUB_WIDGET_SCRIPT;
-  script.async = true;
-  document.body.appendChild(script);
-}
-
 export default function SuccessStoriesContent() {
   const { ratingLabel, stars, totalReviews } = useReputationAggregate();
-
-  useEffect(() => {
-    ensureReviewWidgetScript();
-  }, []);
 
   return (
     <div>
@@ -47,7 +27,7 @@ export default function SuccessStoriesContent() {
             Real reviews from New York buyers and sellers who trusted Stanley Montfort with one of the biggest decisions of their lives.
           </p>
           <a
-            href="https://maps.google.com/?cid=11378470238102062088"
+            href={GOOGLE_MAPS_PROFILE_HREF}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Read verified Google reviews"
@@ -55,7 +35,7 @@ export default function SuccessStoriesContent() {
           >
             <div className="succ-google-score">
               <div className="succ-google-score-row">
-                <img src={GOOGLE_MARK} alt="Google" />
+                <img src={GOOGLE_G_MARK} alt="Google" />
                 <span className="succ-google-num">{ratingLabel}</span>
               </div>
               <span className="succ-google-label">Verified Google reviews</span>
@@ -82,20 +62,9 @@ export default function SuccessStoriesContent() {
       </section>
       <PromisesBar variant="nbhd" />
 
-      <section className="succ-list home-rev" data-screen-label="Testimonials">
-        <div className="home-rev-inner">
-          <iframe
-            className="lc_reviews_widget home-rev-frame"
-            src={REPUTATION_HUB_SUCCESS_STORIES_WIDGET_URL}
-            title="Google reviews for Montfort Real Estate"
-            loading="eager"
-            scrolling="no"
-            frameBorder={0}
-            referrerPolicy="no-referrer-when-downgrade"
-            style={{ minWidth: "100%", width: "100%" }}
-          />
-        </div>
-      </section>
+      <div className="succ-list">
+        <ReviewsSection />
+      </div>
 
       <ResourcesSection />
       <ContactSection />

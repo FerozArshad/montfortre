@@ -1,6 +1,7 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ALL_LISTINGS, type ListingDetail } from "../../data/listings";
+import { fetchPublishedListings } from "../../lib/cms/listings";
 import "../../styles/current-listings.css";
 
 type SortKey = "default" | "newest" | "price-asc" | "price-desc";
@@ -47,10 +48,23 @@ function ListingCard({ listing }: { listing: ListingDetail }) {
 export default function CurrentListingsContent() {
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<SortKey>("default");
+  const [source, setSource] = useState<ListingDetail[]>(ALL_LISTINGS);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const rows = await fetchPublishedListings();
+      if (!cancelled) setSource(rows);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const listings = useMemo(() => {
     const q = query.trim().toLowerCase();
-    let rows = ALL_LISTINGS.filter((l) => {
+    let rows = source.filter((l) => {
+      if (/sold/i.test(l.status || "")) return false;
       if (!q) return true;
       const hay = `${l.title} ${l.street} ${l.city} ${l.zip} ${l.neighborhood}`.toLowerCase();
       return hay.includes(q);
@@ -60,7 +74,7 @@ export default function CurrentListingsContent() {
     else if (sort === "price-desc") rows = [...rows].sort((a, b) => b.priceValue - a.priceValue);
     else rows = [...rows].sort((a, b) => a.sortOrder - b.sortOrder);
     return rows;
-  }, [query, sort]);
+  }, [query, sort, source]);
 
   return (
     <div className="cl-root">

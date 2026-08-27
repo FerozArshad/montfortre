@@ -1,0 +1,2 @@
+-- Prefer 20260827105000_media_bucket_and_leads.sql (combined). Kept for docs.
+-- See that file for has_role-compatible media bucket + leads.
