@@ -90,6 +90,11 @@
 
 .home-ig-feed {
   width: 100%;
+  min-height: 120px;
+}
+
+.home-ig-feed .first_loading_animation {
+  padding: 48px 0;
 }
 
 /* —— SociableKIT: blend into Montfort cream section —— */

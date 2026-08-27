@@ -205,9 +205,21 @@ const SOCIABLEKIT_IG_EMBED_ID = "25707376";
 const SOCIABLEKIT_IG_SCRIPT = "https://widgets.sociablekit.com/instagram-feed/widget.js";
 const SOCIABLEKIT_IG_SCRIPT_ID = "sociablekit-instagram-feed";
 
+function skIgHost(feedRoot: Element): HTMLElement | null {
+  return feedRoot.querySelector<HTMLElement>(".sk-instagram-feed");
+}
+
+function skIgHasPosts(host: Element): boolean {
+  return !!host.querySelector(".sk-instagram-feed-item, .sk-ig-all-posts");
+}
+
+function skIgIsLoading(host: Element): boolean {
+  return !!host.querySelector(".first_loading_animation, .loading-img");
+}
+
 /** Ensure embed host exists and SociableKIT widget.js actually executes. */
-function mountSociableKitIgFeed(feedRoot: Element) {
-  let host = feedRoot.querySelector<HTMLElement>(".sk-instagram-feed");
+function mountSociableKitIgFeed(feedRoot: Element, opts?: { force?: boolean }) {
+  let host = skIgHost(feedRoot);
   if (!host) {
     host = document.createElement("div");
     host.className = "sk-instagram-feed";
@@ -215,7 +227,15 @@ function mountSociableKitIgFeed(feedRoot: Element) {
     feedRoot.appendChild(host);
   }
 
-  if (host.getAttribute("data-sk-initialized") === "1" && host.children.length > 0) return;
+  // Already hydrated — leave alone.
+  if (!opts?.force && (skIgHasPosts(host) || host.getAttribute("data-sk-initialized") === "1")) {
+    return;
+  }
+
+  // Still fetching from SociableKIT — do NOT wipe (that caused live feed to stick on the spinner).
+  if (!opts?.force && skIgIsLoading(host)) {
+    return;
+  }
 
   // Reset failed/partial init without replacing the React-managed node.
   host.removeAttribute("data-sk-initialized");
@@ -319,12 +339,25 @@ export default function HomeContent() {
     const observer = new MutationObserver(() => normalizeSociableKitIgSizing(feed));
     observer.observe(feed, { childList: true, subtree: true, attributes: true, attributeFilter: ["style"] });
 
-    // SociableKIT can hydrate late — retry mount if still empty.
-    const timers = [800, 2000, 4500].map((ms) =>
+    // SociableKIT can hydrate late on production. Only remount when truly stalled
+    // (no posts AND not showing the loading spinner). Never wipe mid-load.
+    const timers = [2500, 6000, 12000].map((ms, i) =>
       window.setTimeout(() => {
-        const host = feed.querySelector(".sk-instagram-feed");
-        const empty = !host || host.getAttribute("data-sk-initialized") !== "1" || host.children.length === 0;
-        if (empty) mountSociableKitIgFeed(feed);
+        const host = skIgHost(feed);
+        if (!host) {
+          mountSociableKitIgFeed(feed);
+          return;
+        }
+        if (skIgHasPosts(host)) {
+          normalizeSociableKitIgSizing(feed);
+          return;
+        }
+        if (skIgIsLoading(host) && i < 2) {
+          // Still loading — wait for a later retry.
+          return;
+        }
+        // Empty or stuck after long wait — hard remount once.
+        mountSociableKitIgFeed(feed, { force: i === 2 });
         normalizeSociableKitIgSizing(feed);
       }, ms),
     );
