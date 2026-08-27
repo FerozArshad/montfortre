@@ -55,6 +55,8 @@
   height: 72px;
   border-radius: 50%;
   object-fit: cover;
+  /* Waist-up source — bias up so the top of the head is not cropped */
+  object-position: center 12%;
   flex-shrink: 0;
   border: 2px solid #e0d9b8;
   background: #0f1729;
