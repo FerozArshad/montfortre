@@ -1,31 +1,23 @@
+import { BLOG_ARTICLE_REGISTRY } from "../../blog/registry";
 import "../../styles/resources-section.css";
 
-const BLOG_ARTICLES = [
-  {
-    href: "/upper-west-side-townhouse-q2-2024-market-report/",
-    image: "/redesign-assets/hoods/upper-west-side.webp",
-    alt: "Upper West Side Townhouse Q2 2024 Market Report",
-    category: "Market Report",
-    title: "Upper West Side Townhouse Q2 2024 Market Report",
-    excerpt: "On the Upper West Side, we observed a distinct trend that diverges from the citywide patterns…",
-  },
-  {
-    href: "/harlem-brownstone-q2-2024-market-report/",
-    image: "/redesign-assets/hoods/harlem.webp",
-    alt: "Harlem Brownstone Q2 2024 Market Report",
-    category: "Market Report",
-    title: "Harlem Brownstone Q2 2024 Market Report",
-    excerpt: "The Harlem brownstone market has seen an increase in sales activity since this time last year…",
-  },
-  {
-    href: "/discover-your-dream-home-explore-apartments-for-sale-on-the-upper-west-side/",
-    image: "/redesign-assets/hoods/chelsea.webp",
-    alt: "Explore Apartments for Sale on the Upper West Side",
-    category: "Buyer Guide",
-    title: "Discover Your Dream Home: Apartments for Sale on the Upper West Side",
-    excerpt: "Searching for your dream home in one of New York City's most sought-after neighborhoods?…",
-  },
+const RESOURCE_SLUGS = [
+  "upper-west-side-townhouse-q2-2024-market-report",
+  "harlem-brownstone-q2-2024-market-report",
+  "discover-your-dream-home-explore-apartments-for-sale-on-the-upper-west-side",
 ] as const;
+
+const BLOG_ARTICLES = RESOURCE_SLUGS.map((slug) => {
+  const meta = BLOG_ARTICLE_REGISTRY[slug]?.meta;
+  return {
+    href: `/${slug}/`,
+    image: meta?.featuredImageSrc || "/redesign-assets/hoods/harlem.webp",
+    alt: meta?.featuredImageAlt || meta?.h1 || slug,
+    category: meta?.category || "News",
+    title: meta?.h1 || slug,
+    excerpt: meta?.lead ? `${meta.lead.slice(0, 120).trimEnd()}…` : "",
+  };
+});
 
 type ResourceArticle = {
   href: string;

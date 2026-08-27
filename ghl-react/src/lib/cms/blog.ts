@@ -6,6 +6,7 @@ import { assertOwnsResource, getRequiredUserId } from "./ownership";
 import {
   cloudPostToArticle,
   isPublishedStatus,
+  resolveBlogFeaturedImage,
   type CloudCategoryRow,
   type CloudPostRow,
   type CmsBlogRow,
@@ -20,9 +21,15 @@ export type BlogCard = {
   excerpt: string;
 };
 
+export { resolveBlogFeaturedImage };
+
 function postToAdminRow(row: CloudPostRow): CmsBlogRow {
   const meta = parseArticleMeta(row.body);
   const blocks = parseArticleBody(row.body);
+  const featured = resolveBlogFeaturedImage(row.slug, {
+    src: meta.featured_image_src,
+    alt: meta.featured_image_alt,
+  }, row.title);
   return {
     id: row.id,
     slug: row.slug,
@@ -32,8 +39,8 @@ function postToAdminRow(row: CloudPostRow): CmsBlogRow {
     author_name: meta.author_name || "Stanley Montfort",
     author_href: meta.author_href || "/stanley-montfort/",
     author_role: meta.author_role || "Real Estate Advisor®",
-    featured_image_src: meta.featured_image_src || "/redesign-assets/hoods/harlem.webp",
-    featured_image_alt: meta.featured_image_alt || row.title,
+    featured_image_src: featured.src,
+    featured_image_alt: featured.alt,
     share_url: `https://montfortre.com/${row.slug}/`,
     toc: [],
     body_html: articleBodyToHtml(row.body),
@@ -116,10 +123,14 @@ export async function fetchPublishedBlogCards(): Promise<BlogCard[] | null> {
   return data.map((row) => {
     const cat = (row as { categories?: { name?: string } | null }).categories?.name || "News";
     const meta = parseArticleMeta(typeof row.body === "string" ? row.body : null);
+    const featured = resolveBlogFeaturedImage(row.slug, {
+      src: meta.featured_image_src,
+      alt: meta.featured_image_alt,
+    }, row.title);
     return {
       href: `/${row.slug}/`,
-      image: meta.featured_image_src || "/redesign-assets/hoods/harlem.webp",
-      alt: meta.featured_image_alt || row.title,
+      image: featured.src,
+      alt: featured.alt,
       category: cat,
       title: row.title,
       excerpt: row.excerpt || "",

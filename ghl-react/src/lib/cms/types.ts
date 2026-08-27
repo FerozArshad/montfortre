@@ -1,7 +1,30 @@
 import type { ListingDetail } from "../../data/listings/types";
 import type { BlogArticleMeta, BlogTocItem } from "../../components/blog-article/types";
 import type { PageSeo } from "../../seo/types";
+import { BLOG_ARTICLE_REGISTRY } from "../../blog/registry";
 import { articleBodyToHtml, parseArticleBody, parseArticleMeta, tocFromBlocks } from "./blocks";
+
+const DEFAULT_FEATURED = "/redesign-assets/hoods/harlem.webp";
+
+/** Prefer CMS meta, then static article registry, then neighborhood fallback. */
+export function resolveBlogFeaturedImage(
+  slug: string,
+  fromMeta?: { src?: string | null; alt?: string | null },
+  titleFallback = "",
+): { src: string; alt: string } {
+  const staticMeta = BLOG_ARTICLE_REGISTRY[slug]?.meta;
+  const src =
+    (fromMeta?.src || "").trim() ||
+    staticMeta?.featuredImageSrc ||
+    DEFAULT_FEATURED;
+  const alt =
+    (fromMeta?.alt || "").trim() ||
+    staticMeta?.featuredImageAlt ||
+    staticMeta?.h1 ||
+    titleFallback ||
+    "Article";
+  return { src, alt };
+}
 
 /** Lovable Cloud `posts` row (blog). */
 export type CloudPostRow = {
@@ -97,6 +120,11 @@ export function cloudPostToArticle(row: CloudPostRow): {
   const toc = tocFromBlocks(blocks);
   const seoTitle = editorMeta.meta_title?.trim() || title;
   const seoDesc = editorMeta.meta_description?.trim() || desc;
+  const featured = resolveBlogFeaturedImage(
+    row.slug,
+    { src: editorMeta.featured_image_src, alt: editorMeta.featured_image_alt },
+    row.title,
+  );
   const meta: BlogArticleMeta = {
     slug: row.slug,
     h1: row.title,
@@ -105,8 +133,8 @@ export function cloudPostToArticle(row: CloudPostRow): {
     authorName: editorMeta.author_name || "Stanley Montfort",
     authorHref: editorMeta.author_href || "/stanley-montfort/",
     authorRole: editorMeta.author_role || "Real Estate Advisor®",
-    featuredImageSrc: editorMeta.featured_image_src || "/redesign-assets/hoods/harlem.webp",
-    featuredImageAlt: editorMeta.featured_image_alt || row.title,
+    featuredImageSrc: featured.src,
+    featuredImageAlt: featured.alt,
     shareUrl: url,
     toc,
     showHeroCtas: editorMeta.show_hero_ctas ?? true,
