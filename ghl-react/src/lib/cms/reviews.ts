@@ -149,6 +149,86 @@ export async function adminSaveReviewOrder(ids: string[]): Promise<void> {
   }
 }
 
+export type ReviewInput = {
+  author_name: string;
+  quote: string;
+  rating: number;
+  published_at: string | null;
+  author_url: string;
+  photo_url: string;
+};
+
+/** Manual rows carry this prefix so the Google sync can never overwrite them. */
+export const MANUAL_REVIEW_PREFIX = "manual/";
+
+export function isManualReview(row: Pick<GoogleReviewRow, "review_key">): boolean {
+  return row.review_key.startsWith(MANUAL_REVIEW_PREFIX);
+}
+
+function newManualKey(): string {
+  const id =
+    typeof crypto !== "undefined" && crypto.randomUUID
+      ? crypto.randomUUID()
+      : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  return `${MANUAL_REVIEW_PREFIX}${id}`;
+}
+
+/**
+ * Adds a review typed in by an admin. Google's Places API only ever returns its
+ * five "most relevant" reviews, so the rest have to be entered by hand.
+ */
+export async function adminCreateReview(input: ReviewInput): Promise<GoogleReviewRow> {
+  const sb = getSupabase();
+  if (!sb) throw new Error("CMS not configured");
+  await getRequiredUserId();
+
+  // Append below the existing list rather than jumping to the front.
+  const { data: last } = await sb
+    .from("google_reviews")
+    .select("sort_order")
+    .order("sort_order", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  const sortOrder = Number((last as { sort_order?: number } | null)?.sort_order ?? -1) + 1;
+
+  const { data, error } = await sb
+    .from("google_reviews")
+    .insert({
+      review_key: newManualKey(),
+      author_name: input.author_name.trim(),
+      quote: input.quote.trim(),
+      rating: input.rating,
+      published_at: input.published_at,
+      author_url: input.author_url.trim(),
+      photo_url: input.photo_url.trim(),
+      hidden: false,
+      sort_order: sortOrder,
+    })
+    .select(REVIEW_COLUMNS)
+    .single();
+
+  if (error) throw new Error(describeError(error.message));
+  return data as GoogleReviewRow;
+}
+
+export async function adminUpdateReview(id: string, patch: Partial<ReviewInput>): Promise<void> {
+  const sb = getSupabase();
+  if (!sb) throw new Error("CMS not configured");
+  await getRequiredUserId();
+
+  const { error } = await sb.from("google_reviews").update(patch).eq("id", id);
+  if (error) throw new Error(describeError(error.message));
+}
+
+export async function adminDeleteReview(id: string): Promise<void> {
+  const sb = getSupabase();
+  if (!sb) throw new Error("CMS not configured");
+  await getRequiredUserId();
+
+  const { error } = await sb.from("google_reviews").delete().eq("id", id);
+  if (error) throw new Error(describeError(error.message));
+}
+
 /**
  * Triggers the sync job by hand. pg_net is async, so the request is fired and
  * the ingest is polled a few times until the response lands.
@@ -175,6 +255,11 @@ export async function adminSyncReviewsNow(): Promise<string> {
 function describeError(message: string): string {
   if (/does not exist|schema cache|PGRST205|PGRST202/i.test(message)) {
     return "Reviews tables missing. Run supabase/migrations/20260828100000_google_reviews.sql and 20260828100100_google_reviews_sync.sql in Lovable Cloud SQL, then try again.";
+  }
+  // Hit locally whenever VITE_ADMIN_DEV_BYPASS skips the gate without a session,
+  // since the policies check has_role(auth.uid(), 'admin').
+  if (/row-level security|violates row-level|42501/i.test(message)) {
+    return "Not allowed — sign in with an admin account on the live site. Writing reviews doesn't work with the local admin bypass because there's no signed-in user.";
   }
   return message || "Reviews request failed";
 }

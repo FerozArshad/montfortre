@@ -3483,3 +3483,86 @@
 .spark-faq-row textarea {
   resize: vertical;
 }
+
+/* ---------------------------------------------------------------------------
+   Reviews admin: manual add/edit form + row tools
+--------------------------------------------------------------------------- */
+.review-form {
+  border: 1px solid var(--admin-line, #e3e8ef);
+  border-radius: 10px;
+  padding: 18px;
+  margin: 18px 0 24px;
+  background: #fbfcfe;
+}
+
+.review-form-title {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.review-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+.review-form label,
+.review-form-full {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #52677a;
+  margin-bottom: 12px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 8px 10px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  color: #0f1729;
+  border: 1px solid var(--admin-line, #e3e8ef);
+  border-radius: 6px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.review-form textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.review-form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.reviews-admin-tools {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.reviews-admin-tools .is-danger {
+  color: #b42318;
+}
+
+.reviews-admin-source {
+  margin-left: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #52677a;
+  border: 1px solid var(--admin-line, #e3e8ef);
+  border-radius: 100px;
+  padding: 2px 8px;
+}
