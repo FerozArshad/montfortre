@@ -63,7 +63,7 @@ export default function SuccessStoriesContent() {
       <PromisesBar variant="nbhd" />
 
       <div className="succ-list">
-        <ReviewsSection />
+        <ReviewsSection variant="grid" heading="All client reviews" />
       </div>
 
       <ResourcesSection />

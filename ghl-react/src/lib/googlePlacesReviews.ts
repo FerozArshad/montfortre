@@ -27,7 +27,12 @@ export type ReputationAggregate = {
   totalReviews: number;
 };
 
-const TARGET_SLIDES = 6;
+/**
+ * Curated slides only pad the list up to this count when the database is short;
+ * once enough real reviews are stored, every one of them is returned uncapped so
+ * the success-stories page can show the full set.
+ */
+const MIN_SLIDES = 6;
 
 /** Original Montfort carousel slides (pre–ReputationHub iframe). */
 export const CURATED_REVIEWS: ReputationReview[] = [
@@ -123,16 +128,18 @@ function reviewerKey(name: string): string {
 }
 
 function mergeWithCurated(live: ReputationReview[]): ReputationReview[] {
+  if (live.length >= MIN_SLIDES) return live;
+
   const out = [...live];
   const seen = new Set(out.map((r) => reviewerKey(r.name)));
   for (const curated of CURATED_REVIEWS) {
-    if (out.length >= TARGET_SLIDES) break;
+    if (out.length >= MIN_SLIDES) break;
     const key = reviewerKey(curated.name);
     if (seen.has(key)) continue;
     seen.add(key);
     out.push(curated);
   }
-  return out.slice(0, TARGET_SLIDES);
+  return out;
 }
 
 let reviewsCache: Promise<{
@@ -147,7 +154,7 @@ export async function fetchGoogleReviews(): Promise<{
   if (!reviewsCache) {
     reviewsCache = (async () => {
       const curatedOnly = {
-        reviews: CURATED_REVIEWS.slice(0, TARGET_SLIDES),
+        reviews: CURATED_REVIEWS.slice(0, MIN_SLIDES),
         aggregate: DEFAULT_AGGREGATE,
       };
 

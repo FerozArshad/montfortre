@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/home-reviews.css";
 import useReputationAggregate from "../../hooks/useReputationAggregate";
@@ -5,13 +6,35 @@ import useReputationReviews from "../../hooks/useReputationReviews";
 import useReviewCarousel from "../../hooks/useReviewCarousel";
 import { GOOGLE_G_MARK, ratingStars } from "../../lib/googlePlacesReviews";
 
+type ReviewsSectionProps = {
+  /**
+   * "carousel" is the sitewide teaser; "grid" stacks every stored review for the
+   * success-stories page, where the whole set is the point.
+   */
+  variant?: "carousel" | "grid";
+  /** Slides shown in carousel mode. Ignored by the grid. */
+  limit?: number;
+  heading?: string;
+};
+
+const GRID_PAGE_SIZE = 8;
+
 /** Sitewide Google reviews — original Montfort cream carousel (no GHL iframe). */
-export default function ReviewsSection() {
+export default function ReviewsSection({
+  variant = "carousel",
+  limit = 6,
+  heading = "Realtor Reviews",
+}: ReviewsSectionProps = {}) {
   const { reviews, loading } = useReputationReviews();
   const { ratingLabel, stars, totalReviews } = useReputationAggregate();
-  const slides = reviews;
+  const isGrid = variant === "grid";
+  const [shown, setShown] = useState(GRID_PAGE_SIZE);
 
-  useReviewCarousel(slides.length);
+  const slides = isGrid ? reviews.slice(0, shown) : reviews.slice(0, limit);
+  const hasMore = isGrid && shown < reviews.length;
+
+  // Passing 0 keeps the carousel wiring inert on the grid page.
+  useReviewCarousel(isGrid ? 0 : slides.length);
 
   return (
     <section className="home-rev" data-screen-label="Reviews">
@@ -22,16 +45,18 @@ export default function ReviewsSection() {
               <span className="home-rev-kicker-line" />
               <span className="home-rev-kicker-label">What clients say</span>
             </div>
-            <h2>Realtor Reviews</h2>
+            <h2>{heading}</h2>
           </div>
           <div className="home-rev-score">
             <img src={GOOGLE_G_MARK} alt="Google" />
             <span className="home-rev-score-num">{ratingLabel}</span>
             <div>
               <span className="home-rev-stars">{stars}</span>
-              <Link to="/success-stories/" className="home-rev-all">
-                Read all reviews →
-              </Link>
+              {isGrid ? null : (
+                <Link to="/success-stories/" className="home-rev-all">
+                  Read all reviews →
+                </Link>
+              )}
               {!loading && totalReviews > 0 ? (
                 <span className="home-rev-count-hint">Over {totalReviews} Google reviews</span>
               ) : null}
@@ -41,6 +66,52 @@ export default function ReviewsSection() {
 
         {slides.length === 0 ? (
           <p className="home-rev-empty">Loading client reviews…</p>
+        ) : isGrid ? (
+          <>
+            <div className="home-rev-grid">
+              {slides.map((review) => (
+                <a
+                  key={review.id}
+                  href={review.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="home-rev-slide"
+                >
+                  <div className="home-rev-author">
+                    {review.photo ? (
+                      <img src={review.photo} alt="" referrerPolicy="no-referrer" />
+                    ) : (
+                      <span className="home-rev-author-fallback" aria-hidden="true">
+                        {(review.name.trim()[0] || "G").toUpperCase()}
+                      </span>
+                    )}
+                    <div>
+                      <h4>{review.name}</h4>
+                      <div className="home-rev-posted">
+                        <img src={GOOGLE_G_MARK} alt="" /> Posted on Google
+                      </div>
+                    </div>
+                    <span className="home-rev-slide-stars">{ratingStars(review.rating)}</span>
+                  </div>
+                  <div>
+                    <span className="home-rev-quote-mark">“</span>
+                    <p>{review.quote}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+            {hasMore ? (
+              <div className="home-rev-more">
+                <button
+                  type="button"
+                  className="home-rev-more-btn"
+                  onClick={() => setShown((n) => n + GRID_PAGE_SIZE)}
+                >
+                  Show more reviews ({reviews.length - shown} left)
+                </button>
+              </div>
+            ) : null}
+          </>
         ) : (
           <>
             <div className="home-rev-slider">

@@ -349,3 +349,63 @@
     padding-right: 16px;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Grid variant (success stories): every stored review, same cream card design
+--------------------------------------------------------------------------- */
+.home-rev-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 22px;
+  margin-top: 52px;
+}
+
+/* The card is built for a full-width carousel slide, so undo the flex/snap
+   geometry and soften the oversized quote type for a stacked list. */
+.home-rev .home-rev-grid a.home-rev-slide {
+  flex: initial;
+  scroll-snap-align: none;
+  padding: 40px 44px;
+  gap: 40px;
+}
+
+.home-rev .home-rev-grid a.home-rev-slide p {
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.home-rev-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.home-rev-more-btn {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #0f1729;
+  background: #fbf8ec;
+  border: 1px solid #e0d9b8;
+  border-radius: 100px;
+  padding: 14px 30px;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.home-rev-more-btn:hover {
+  background: #f5f0dd;
+  border-color: #c29b5c;
+}
+
+@media (max-width: 1024px) {
+  .home-rev .home-rev-grid a.home-rev-slide {
+    padding: 28px 20px;
+    gap: 24px;
+  }
+
+  .home-rev .home-rev-grid a.home-rev-slide p {
+    font-size: 18px;
+  }
+}
