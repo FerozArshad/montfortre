@@ -521,7 +521,7 @@ export default function HomeValuationContent() {
                 <strong>Address:</strong> 8 West 126th Street, New York NY 10027
               </p>
               <p>
-                <strong>Business Hours:</strong> Monday to Friday 9AM-6PM, Saturday 10AM-2PM{" "}
+                <strong>Business Hours:</strong> Open 24 hours, 7 days a week{" "}
                 <strong>Response Time:</strong> We’ll get back to you within 24 business hours
               </p>
             </div>

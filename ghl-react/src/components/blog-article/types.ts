@@ -3,6 +3,8 @@ import type { PageSeo } from "../../seo/types";
 
 export type BlogTocItem = readonly [href: string, label: string];
 
+export type BlogFaqItem = { q: string; a: string };
+
 export interface BlogArticleMeta {
   slug: string;
   h1: string;
@@ -17,6 +19,8 @@ export interface BlogArticleMeta {
   toc: readonly BlogTocItem[];
   kickerLabel?: string;
   showHeroCtas?: boolean;
+  /** Bottom-of-article FAQ accordion; omitted or empty hides the section. */
+  faqs?: readonly BlogFaqItem[];
 }
 
 export interface BlogArticleModule {

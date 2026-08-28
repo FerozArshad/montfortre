@@ -1,7 +1,14 @@
 import { BLOG_ARTICLE_REGISTRY } from "../../blog/registry";
 import type { BlogArticleModule } from "../../components/blog-article/types";
 import { getSupabase, isCmsConfigured } from "../supabase";
-import { parseArticleBody, parseArticleMeta, serializeArticleBody, articleBodyToHtml, type CmsBlock } from "./blocks";
+import {
+  parseArticleBody,
+  parseArticleMeta,
+  sanitizeFaqs,
+  serializeArticleBody,
+  articleBodyToHtml,
+  type CmsBlock,
+} from "./blocks";
 import { assertOwnsResource, getRequiredUserId } from "./ownership";
 import {
   cloudPostToArticle,
@@ -47,6 +54,8 @@ function postToAdminRow(row: CloudPostRow): CmsBlogRow {
     blocks,
     kicker_label: meta.kicker_label ?? null,
     show_hero_ctas: meta.show_hero_ctas ?? true,
+    faqs: sanitizeFaqs(meta.faqs),
+    show_toc: meta.show_toc ?? true,
     published: isPublishedStatus(row.status),
     meta_title: meta.meta_title || null,
     meta_description: meta.meta_description || null,
@@ -214,6 +223,8 @@ export async function adminUpsertBlogPost(
     meta_description: payload.meta_description ? String(payload.meta_description) : undefined,
     show_hero_ctas: payload.show_hero_ctas === undefined ? true : Boolean(payload.show_hero_ctas),
     kicker_label: payload.kicker_label ? String(payload.kicker_label) : null,
+    faqs: sanitizeFaqs(payload.faqs),
+    show_toc: payload.show_toc === undefined ? true : Boolean(payload.show_toc),
   });
 
   const row = {

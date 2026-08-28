@@ -109,12 +109,25 @@ function truncateQuote(text: string, max = 320): string {
   return `${trimmed.slice(0, max).trimEnd()}…`;
 }
 
+/**
+ * Google returns straight apostrophes while the curated copy uses curly ones,
+ * so "Ma'at" and "Ma’at" must collapse to the same key or the reviewer is
+ * rendered twice.
+ */
+function reviewerKey(name: string): string {
+  return name
+    .trim()
+    .toLowerCase()
+    .replace(/[’‘`´]/g, "'")
+    .replace(/\s+/g, " ");
+}
+
 function mergeWithCurated(live: ReputationReview[]): ReputationReview[] {
   const out = [...live];
-  const seen = new Set(out.map((r) => r.name.trim().toLowerCase()));
+  const seen = new Set(out.map((r) => reviewerKey(r.name)));
   for (const curated of CURATED_REVIEWS) {
     if (out.length >= TARGET_SLIDES) break;
-    const key = curated.name.trim().toLowerCase();
+    const key = reviewerKey(curated.name);
     if (seen.has(key)) continue;
     seen.add(key);
     out.push(curated);

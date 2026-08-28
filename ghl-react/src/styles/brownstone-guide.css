@@ -198,15 +198,23 @@
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 240px;
   gap: 56px;
   align-items: start;
 }
 
+/* TOC sits second visually (right rail) but stays first in the DOM. */
 .bsg-toc {
   position: sticky;
   top: 110px;
   align-self: start;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.bsg-body {
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .bsg-toc-label {
@@ -551,6 +559,13 @@
   .bsg-article-inner {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  /* Stacked: drop the right-rail placement so the TOC leads the article again. */
+  .bsg-toc,
+  .bsg-body {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .bsg-hero h1 {

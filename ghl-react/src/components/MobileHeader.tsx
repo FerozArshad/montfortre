@@ -60,10 +60,7 @@ const MENU: MenuSection[] = [
   {
     label: "About",
     href: "/about-us/",
-    links: [
-      { label: "About Us", href: "/about-us/" },
-      { label: "Stanley Montfort", href: "/stanley-montfort/" },
-    ],
+    links: [{ label: "Stanley Montfort", href: "/stanley-montfort/" }],
   },
   { label: "Resources", href: "/blog/" },
   { label: "Contact", href: "https://calendly.com/montfort", external: true },
@@ -194,7 +191,7 @@ export default function MobileHeader() {
             </svg>
             (646) 970-1078
           </a>
-          <div className="mfr-menu-hours">Mon-Sat 8AM-7PM</div>
+          <div className="mfr-menu-hours">Open 24 Hours</div>
         </nav>
       </div>
     </div>

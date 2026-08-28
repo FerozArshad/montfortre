@@ -11,6 +11,9 @@ export type CmsBlock =
   | { id: string; type: "divider" }
   | { id: string; type: "cta"; label: string; href: string };
 
+/** One question/answer pair rendered in the article's FAQ accordion. */
+export type ArticleFaq = { q: string; a: string };
+
 export type ArticleEditorMeta = {
   featured_image_src?: string;
   featured_image_alt?: string;
@@ -21,7 +24,25 @@ export type ArticleEditorMeta = {
   meta_description?: string;
   show_hero_ctas?: boolean;
   kicker_label?: string | null;
+  /** Bottom-of-article FAQ. Also emitted as FAQPage JSON-LD. */
+  faqs?: ArticleFaq[];
+  /** Defaults to true when absent so existing posts keep their sidebar. */
+  show_toc?: boolean;
 };
+
+/** Drops blanks and trims, so half-filled editor rows never reach the page. */
+export function sanitizeFaqs(input: unknown): ArticleFaq[] {
+  if (!Array.isArray(input)) return [];
+  return input
+    .map((row) => {
+      const item = row as Partial<ArticleFaq> | null;
+      return {
+        q: String(item?.q ?? "").trim(),
+        a: String(item?.a ?? "").trim(),
+      };
+    })
+    .filter((row) => row.q.length > 0 && row.a.length > 0);
+}
 
 export type ArticleBodyPayload = {
   __montfort: "article";

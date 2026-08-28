@@ -11,18 +11,22 @@ import {
   blocksToHtml,
   createEmptyBlock,
   parseArticleBody,
+  sanitizeFaqs,
   tocFromBlocks,
+  type ArticleFaq,
   type CmsBlock,
 } from "../../lib/cms/blocks";
+import { withHeadingAnchors } from "../../lib/cms/articleToc";
 import { slugify } from "../../lib/cms/sanitize";
 import { uploadCmsImage } from "../../lib/cms/upload";
 
-type BlogSectionId = "details" | "featured" | "body" | "page";
+type BlogSectionId = "details" | "featured" | "body" | "faq" | "page";
 
 const SECTIONS: { id: BlogSectionId; label: string }[] = [
   { id: "details", label: "Details" },
   { id: "featured", label: "Featured image" },
   { id: "body", label: "Body" },
+  { id: "faq", label: "FAQ" },
   { id: "page", label: "Page settings" },
 ];
 
@@ -41,6 +45,8 @@ type BlogForm = {
   meta_title: string;
   meta_description: string;
   show_hero_ctas: boolean;
+  faqs: ArticleFaq[];
+  show_toc: boolean;
 };
 
 function demoBlogForm(title = "", slug = ""): BlogForm {
@@ -70,6 +76,8 @@ function demoBlogForm(title = "", slug = ""): BlogForm {
     meta_title: "",
     meta_description: "",
     show_hero_ctas: true,
+    faqs: [],
+    show_toc: true,
   };
 }
 
@@ -89,6 +97,8 @@ function emptyBlogForm(): BlogForm {
     meta_title: "",
     meta_description: "",
     show_hero_ctas: true,
+    faqs: [],
+    show_toc: true,
   };
 }
 
@@ -124,8 +134,16 @@ function SparkBlogInner() {
   const preview = useMemo(() => {
     const slug = deferred.slug.trim() || slugify(deferred.h1) || "draft";
     const blocks = deferred.blocks;
-    const bodyHtml = blocksToHtml(blocks);
-    const toc = tocFromBlocks(blocks);
+    const faqs = sanitizeFaqs(deferred.faqs);
+
+    // Mirror the public path: headings come from the rendered HTML, not blocks.
+    const anchored = withHeadingAnchors(blocksToHtml(blocks));
+    const bodyHtml = anchored.html;
+    const derivedToc = anchored.toc.length ? anchored.toc : tocFromBlocks(blocks);
+    const toc = deferred.show_toc
+      ? [...derivedToc, ...(faqs.length ? [["#faqs", "Frequently asked questions"] as const] : [])]
+      : [];
+
     const meta: BlogArticleMeta = {
       slug,
       h1: deferred.h1.trim() || "Untitled article",
@@ -139,6 +157,7 @@ function SparkBlogInner() {
       shareUrl: `https://montfortre.com/${slug}/`,
       toc,
       showHeroCtas: deferred.show_hero_ctas,
+      faqs,
     };
     return { meta, bodyHtml };
   }, [deferred]);
@@ -174,6 +193,8 @@ function SparkBlogInner() {
           meta_title: row.meta_title || "",
           meta_description: row.meta_description || "",
           show_hero_ctas: row.show_hero_ctas !== false,
+          faqs: row.faqs ?? [],
+          show_toc: row.show_toc !== false,
         });
         historyRef.current = [];
         setHistoryLen(0);
@@ -219,6 +240,32 @@ function SparkBlogInner() {
     navigate("/admin/blog");
   }
 
+  function addFaq() {
+    patchForm((prev) => ({ ...prev, faqs: [...prev.faqs, { q: "", a: "" }] }));
+  }
+
+  function removeFaq(index: number) {
+    patchForm((prev) => ({ ...prev, faqs: prev.faqs.filter((_, i) => i !== index) }));
+  }
+
+  function patchFaq(index: number, patch: Partial<ArticleFaq>) {
+    patchForm((prev) => ({
+      ...prev,
+      faqs: prev.faqs.map((faq, i) => (i === index ? { ...faq, ...patch } : faq)),
+    }));
+  }
+
+  function moveFaq(index: number, delta: number) {
+    const target = index + delta;
+    patchForm((prev) => {
+      if (target < 0 || target >= prev.faqs.length) return prev;
+      const faqs = [...prev.faqs];
+      const [moved] = faqs.splice(index, 1);
+      faqs.splice(target, 0, moved);
+      return { ...prev, faqs };
+    });
+  }
+
   async function onSave() {
     setBusy(true);
     setError("");
@@ -241,6 +288,9 @@ function SparkBlogInner() {
           published: form.published,
           meta_title: form.meta_title || null,
           meta_description: form.meta_description || null,
+          show_hero_ctas: form.show_hero_ctas,
+          faqs: sanitizeFaqs(form.faqs),
+          show_toc: form.show_toc,
         },
         isNew ? undefined : id,
       );
@@ -422,6 +472,74 @@ function SparkBlogInner() {
                           </div>
                         ) : null}
 
+                        {s.id === "faq" ? (
+                          <>
+                            <p className="spark-hint">
+                              Shown as an accordion at the bottom of the article, and published as
+                              FAQ structured data so AI assistants and Google can quote the answers.
+                              Rows missing a question or answer are skipped.
+                            </p>
+                            {form.faqs.map((faq, i) => (
+                              <div key={i} className="spark-faq-row">
+                                <div className="spark-faq-head">
+                                  <span className="spark-faq-num">{i + 1}</span>
+                                  <div className="spark-faq-tools">
+                                    <button
+                                      type="button"
+                                      className="spark-btn spark-btn--ghost"
+                                      disabled={i === 0}
+                                      aria-label={`Move FAQ ${i + 1} up`}
+                                      onClick={() => moveFaq(i, -1)}
+                                    >
+                                      ↑
+                                    </button>
+                                    <button
+                                      type="button"
+                                      className="spark-btn spark-btn--ghost"
+                                      disabled={i === form.faqs.length - 1}
+                                      aria-label={`Move FAQ ${i + 1} down`}
+                                      onClick={() => moveFaq(i, 1)}
+                                    >
+                                      ↓
+                                    </button>
+                                    <button
+                                      type="button"
+                                      className="spark-btn spark-btn--ghost is-danger"
+                                      onClick={() => removeFaq(i)}
+                                    >
+                                      Remove
+                                    </button>
+                                  </div>
+                                </div>
+                                <label>
+                                  Question
+                                  <input
+                                    value={faq.q}
+                                    placeholder="How long does it take to sell a Harlem brownstone?"
+                                    onChange={(e) => patchFaq(i, { q: e.target.value })}
+                                  />
+                                </label>
+                                <label>
+                                  Answer
+                                  <textarea
+                                    value={faq.a}
+                                    rows={4}
+                                    placeholder="Give a direct, complete answer in one or two sentences."
+                                    onChange={(e) => patchFaq(i, { a: e.target.value })}
+                                  />
+                                </label>
+                              </div>
+                            ))}
+                            <button
+                              type="button"
+                              className="spark-btn spark-btn--ghost spark-btn--block"
+                              onClick={addFaq}
+                            >
+                              + Add question
+                            </button>
+                          </>
+                        ) : null}
+
                         {s.id === "page" ? (
                           <>
                             <label className="spark-check">
@@ -431,6 +549,14 @@ function SparkBlogInner() {
                                 onChange={(e) => setField("published", e.target.checked)}
                               />
                               Publish live
+                            </label>
+                            <label className="spark-check">
+                              <input
+                                type="checkbox"
+                                checked={form.show_toc}
+                                onChange={(e) => setField("show_toc", e.target.checked)}
+                              />
+                              Show table of contents
                             </label>
                             <label>
                               Meta title

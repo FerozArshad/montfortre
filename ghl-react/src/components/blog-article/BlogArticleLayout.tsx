@@ -15,6 +15,7 @@ interface BlogArticleLayoutProps {
 
 export default function BlogArticleLayout({ meta, bodyHtml, afterBody }: BlogArticleLayoutProps) {
   const showHeroCtas = meta.showHeroCtas !== false;
+  const faqs = meta.faqs ?? [];
   const bodyRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -82,6 +83,24 @@ export default function BlogArticleLayout({ meta, bodyHtml, afterBody }: BlogArt
             <div ref={bodyRef} className="bsg-html" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
             <LeadFormHydrator containerRef={bodyRef} bodyHtml={bodyHtml} />
             {afterBody}
+            {faqs.length > 0 ? (
+              <>
+                <h2 id="faqs" className="bsg-faqs-title">
+                  Frequently asked questions
+                </h2>
+                <div className="bsg-faqs">
+                  {faqs.map((faq, i) => (
+                    <details key={`${faq.q}-${i}`} className="bsg-faq">
+                      <summary>
+                        {faq.q}
+                        <span className="bsg-faq-mark">+</span>
+                      </summary>
+                      <p>{faq.a}</p>
+                    </details>
+                  ))}
+                </div>
+              </>
+            ) : null}
             <BlogShareButtons shareUrl={meta.shareUrl} />
             <BlogAuthorBio />
           </div>

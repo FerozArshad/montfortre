@@ -2,7 +2,14 @@ import type { ListingDetail } from "../../data/listings/types";
 import type { BlogArticleMeta, BlogTocItem } from "../../components/blog-article/types";
 import type { PageSeo } from "../../seo/types";
 import { BLOG_ARTICLE_REGISTRY } from "../../blog/registry";
-import { articleBodyToHtml, parseArticleBody, parseArticleMeta, tocFromBlocks } from "./blocks";
+import {
+  articleBodyToHtml,
+  parseArticleBody,
+  parseArticleMeta,
+  sanitizeFaqs,
+  tocFromBlocks,
+} from "./blocks";
+import { withHeadingAnchors } from "./articleToc";
 
 const DEFAULT_FEATURED = "/redesign-assets/hoods/harlem.webp";
 
@@ -117,7 +124,22 @@ export function cloudPostToArticle(row: CloudPostRow): {
   const desc = lead.slice(0, 160) || row.title;
   const blocks = parseArticleBody(row.body);
   const editorMeta = parseArticleMeta(row.body);
-  const toc = tocFromBlocks(blocks);
+  const faqs = sanitizeFaqs(editorMeta.faqs);
+
+  // The body editor stores everything as one HTML block, so tocFromBlocks finds
+  // nothing for CMS posts. Derive headings from the rendered HTML instead and
+  // keep the block-based TOC as the fallback for block-authored articles.
+  const anchored = withHeadingAnchors(articleBodyToHtml(row.body));
+  const bodyHtml = anchored.html;
+  const derivedToc = anchored.toc.length ? anchored.toc : tocFromBlocks(blocks);
+  const toc =
+    editorMeta.show_toc === false
+      ? []
+      : [
+          ...derivedToc,
+          ...(faqs.length ? ([["#faqs", "Frequently asked questions"]] as BlogTocItem[]) : []),
+        ];
+
   const seoTitle = editorMeta.meta_title?.trim() || title;
   const seoDesc = editorMeta.meta_description?.trim() || desc;
   const featured = resolveBlogFeaturedImage(
@@ -138,6 +160,7 @@ export function cloudPostToArticle(row: CloudPostRow): {
     shareUrl: url,
     toc,
     showHeroCtas: editorMeta.show_hero_ctas ?? true,
+    faqs,
   };
   const seo: PageSeo = {
     title: seoTitle,
@@ -163,9 +186,22 @@ export function cloudPostToArticle(row: CloudPostRow): {
         author: { "@type": "Person", name: meta.authorName },
         url,
       }),
+      ...(faqs.length
+        ? [
+            JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.q,
+                acceptedAnswer: { "@type": "Answer", text: faq.a },
+              })),
+            }),
+          ]
+        : []),
     ],
   };
-  return { meta, seo, bodyHtml: articleBodyToHtml(row.body) };
+  return { meta, seo, bodyHtml };
 }
 
 /** @deprecated old custom CMS shape — kept so seed/admin compile during migration */
@@ -234,6 +270,8 @@ export type CmsBlogRow = {
   blocks?: import("./blocks").CmsBlock[];
   kicker_label: string | null;
   show_hero_ctas: boolean;
+  faqs: import("./blocks").ArticleFaq[];
+  show_toc: boolean;
   published: boolean;
   meta_title: string | null;
   meta_description: string | null;

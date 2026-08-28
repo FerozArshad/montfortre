@@ -118,9 +118,6 @@ export default function DesktopHeader() {
               About <ChevronIcon />
             </a>
             <div className="mnav-drop mnav-drop--resources">
-              <a href="/about-us/" className="mnav-link">
-                About Us
-              </a>
               <a href="/stanley-montfort/" className="mnav-link">
                 Stanley Montfort
               </a>
@@ -140,7 +137,7 @@ export default function DesktopHeader() {
           </svg>
           <span className="dnav-phone-copy">
             <span className="dnav-phone-num">(646) 970-1078</span>
-            <span className="dnav-phone-hours">Mon-Sat 8AM-7PM</span>
+            <span className="dnav-phone-hours">Open 24 Hours</span>
           </span>
         </a>
       </div>
