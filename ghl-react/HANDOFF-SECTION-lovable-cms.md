@@ -1,7 +1,8 @@
 # Section handoff — Lovable Cloud CMS (Listings + Blog Admin)
 
 > **Scope:** Admin dashboard so Stanley (and Feroz) can create/edit/unpublish **property listings**, **freeform Pages** (block builder), and **blog posts** (block body) without hand-editing TypeScript. Public site keeps Montfort listing/blog/page chrome; data from **Lovable Cloud Supabase** when env is set, else static registries.  
-> **Not in scope:** Replacing listing MLS form with blocks; Instagram / Google reviews CMS; neighborhood-guide CMS; full canvas page builders; GHL paste unless requested.
+> **Not in scope:** Replacing listing MLS form with blocks; Instagram CMS; neighborhood-guide CMS; full canvas page builders; GHL paste unless requested.
+> **Added 2026-08-28:** Google reviews are now CMS-backed — synced into `public.google_reviews` twice a week by a `pg_cron` job, with hide/reorder controls at `/admin/reviews`. See `LOVABLE-GO-LIVE.md` for the one-time Vault setup.
 
 **Date:** 2026-08-24  
 **Parent handoff:** `HANDOFF.md` / `DOCUMENTATION.md`  

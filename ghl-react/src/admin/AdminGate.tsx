@@ -108,6 +108,7 @@ function AdminShell({ session, children }: { session: AdminSession; children: Re
             {link("/admin/pages", "Pages")}
             {link("/admin/blog", "Blogging")}
             {link("/admin/media", "Media")}
+            {link("/admin/reviews", "Reviews")}
           </div>
 
           <div className="admin-nav-group">

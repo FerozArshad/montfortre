@@ -153,14 +153,19 @@ VITE_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-publishable-key
 ```
 
-Custom Google reviews carousel (no ReputationHub iframe):
+Google reviews need **no Lovable env vars**. They are stored in Supabase and refreshed
+twice a week (Mon + Thu, 09:00 UTC) by a `pg_cron` + `pg_net` job. One-time setup in the
+Cloud SQL editor, after running the two `google_reviews` migrations:
 
-```
-VITE_GOOGLE_MAPS_API_KEY=your-browser-maps-key
-VITE_GOOGLE_PLACE_ID=ChIJ...
+```sql
+select vault.create_secret('<server-side-places-key>', 'google_places_api_key');
+update public.google_review_stats set place_id = 'ChIJ...' where id = 1;
 ```
 
-Omit Place ID to show curated Montfort slides only. Enable billing + Places API on the Google Cloud project; restrict the key to HTTP referrers.
+Enable **Places API (New)** and billing on the Google Cloud project. The key stored in
+Vault must **not** have an HTTP-referrer restriction, because Postgres sends no referrer —
+restrict it by API instead. Manage which reviews appear at `/admin/reviews`; if none are
+stored yet the carousel falls back to the curated Montfort slides.
 
 Optional:
 

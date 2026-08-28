@@ -1,4 +1,9 @@
-/** Live Google reviews via Maps JS Places Details + curated Montfort fallback slides. */
+/**
+ * Google reviews read from Supabase (synced twice a week by a pg_cron job) with
+ * curated Montfort fallback slides. The browser never calls Google directly.
+ */
+
+import { fetchReviewsFromDb } from "./cms/reviews";
 
 export const GOOGLE_REVIEWS_FALLBACK_HREF =
   "https://www.google.com/maps/search/?api=1&query=Stan+Montfort+Real+Estate+8+West+126th+Street+New+York";
@@ -89,20 +94,6 @@ export const CURATED_REVIEWS: ReputationReview[] = [
 
 export const DEFAULT_AGGREGATE: ReputationAggregate = { rating: 5, totalReviews: 57 };
 
-function clean(v: string | undefined): string | undefined {
-  if (!v) return undefined;
-  const t = v.replace(/^["']|["']$/g, "").trim();
-  return t || undefined;
-}
-
-function readMapsKey(): string | undefined {
-  return clean(import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string | undefined);
-}
-
-function readPlaceId(): string | undefined {
-  return clean(import.meta.env.VITE_GOOGLE_PLACE_ID as string | undefined);
-}
-
 export function formatRatingLabel(rating: number): string {
   return (Number.isFinite(rating) ? rating : 5).toFixed(1);
 }
@@ -131,234 +122,6 @@ function mergeWithCurated(live: ReputationReview[]): ReputationReview[] {
   return out.slice(0, TARGET_SLIDES);
 }
 
-type PlacesReview = {
-  author_name?: string;
-  author_url?: string;
-  profile_photo_url?: string;
-  rating?: number;
-  text?: string;
-};
-
-type PlacesResult = {
-  rating?: number;
-  user_ratings_total?: number;
-  url?: string;
-  reviews?: PlacesReview[];
-};
-
-type PlacesServiceStatus = string;
-
-type PlacesServiceLike = {
-  getDetails: (
-    request: { placeId: string; fields: string[] },
-    callback: (result: PlacesResult | null, status: PlacesServiceStatus) => void,
-  ) => void;
-};
-
-type GoogleMapsPlaces = {
-  PlacesService: new (attrContainer: HTMLDivElement) => PlacesServiceLike;
-  PlacesServiceStatus: { OK: string };
-};
-
-type PlaceNewLike = {
-  fetchFields: (opts: { fields: string[] }) => Promise<void>;
-  rating?: number;
-  userRatingCount?: number;
-  googleMapsURI?: string;
-  reviews?: Array<{
-    rating?: number;
-    text?: string | { text?: string };
-    authorAttribution?: { displayName?: string; uri?: string; photoURI?: string };
-  }>;
-};
-
-type PlacesLibraryNew = {
-  Place: new (opts: { id: string }) => PlaceNewLike;
-};
-
-declare global {
-  interface Window {
-    google?: {
-      maps?: {
-        places?: GoogleMapsPlaces;
-        importLibrary?: (name: string) => Promise<unknown>;
-      };
-    };
-  }
-}
-
-let mapsScriptPromise: Promise<GoogleMapsPlaces> | null = null;
-
-function loadMapsPlacesLibrary(apiKey: string): Promise<GoogleMapsPlaces> {
-  if (window.google?.maps?.places) {
-    return Promise.resolve(window.google.maps.places);
-  }
-  if (mapsScriptPromise) return mapsScriptPromise;
-
-  mapsScriptPromise = new Promise((resolve, reject) => {
-    const timeout = window.setTimeout(() => {
-      mapsScriptPromise = null;
-      reject(new Error("Google Maps script load timed out"));
-    }, 10000);
-
-    const finishOk = () => {
-      window.clearTimeout(timeout);
-      const places = window.google?.maps?.places;
-      if (places) resolve(places);
-      else {
-        mapsScriptPromise = null;
-        reject(new Error("Google Maps Places library missing after load"));
-      }
-    };
-
-    const existing = document.getElementById("google-maps-places-js");
-    if (existing) {
-      existing.addEventListener("load", finishOk);
-      existing.addEventListener("error", () => {
-        window.clearTimeout(timeout);
-        mapsScriptPromise = null;
-        reject(new Error("Google Maps script failed"));
-      });
-      // Already in DOM — may already be ready
-      if (window.google?.maps?.places) finishOk();
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.id = "google-maps-places-js";
-    script.async = true;
-    script.defer = true;
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&libraries=places&v=weekly&loading=async`;
-    script.onload = finishOk;
-    script.onerror = () => {
-      window.clearTimeout(timeout);
-      mapsScriptPromise = null;
-      reject(new Error("Google Maps script failed to load"));
-    };
-    document.head.appendChild(script);
-  });
-
-  return mapsScriptPromise;
-}
-
-function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
-  return new Promise((resolve, reject) => {
-    const t = window.setTimeout(() => reject(new Error(`${label} timed out`)), ms);
-    promise.then(
-      (v) => {
-        window.clearTimeout(t);
-        resolve(v);
-      },
-      (err) => {
-        window.clearTimeout(t);
-        reject(err);
-      },
-    );
-  });
-}
-
-function mapNewPlaceReviews(place: PlaceNewLike): PlacesResult {
-  return {
-    rating: place.rating,
-    user_ratings_total: place.userRatingCount,
-    url: place.googleMapsURI,
-    reviews: (place.reviews || []).map((r) => ({
-      author_name: r.authorAttribution?.displayName,
-      author_url: r.authorAttribution?.uri,
-      profile_photo_url: r.authorAttribution?.photoURI,
-      rating: r.rating,
-      text: typeof r.text === "string" ? r.text : r.text?.text,
-    })),
-  };
-}
-
-/** Places API (New) — preferred when "Places API (New)" is enabled in Cloud. */
-async function fetchPlaceDetailsNew(placeId: string): Promise<PlacesResult> {
-  const importLibrary = window.google?.maps?.importLibrary;
-  if (!importLibrary) throw new Error("Maps importLibrary unavailable");
-
-  const lib = (await importLibrary("places")) as PlacesLibraryNew;
-  if (!lib?.Place) throw new Error("Places Place class missing");
-
-  const place = new lib.Place({ id: placeId });
-  await withTimeout(
-    place.fetchFields({
-      fields: ["rating", "userRatingCount", "reviews", "googleMapsURI"],
-    }),
-    10000,
-    "Place.fetchFields",
-  );
-  return mapNewPlaceReviews(place);
-}
-
-/** Legacy PlacesService.getDetails — needs Places API (legacy) enabled. */
-function fetchPlaceDetailsLegacy(places: GoogleMapsPlaces, placeId: string): Promise<PlacesResult> {
-  return new Promise<PlacesResult>((resolve, reject) => {
-    const timeout = window.setTimeout(() => {
-      reject(new Error("Places getDetails timed out"));
-    }, 8000);
-
-    try {
-      const attr = document.createElement("div");
-      attr.setAttribute("aria-hidden", "true");
-      attr.style.cssText = "width:1px;height:1px;overflow:hidden;position:absolute;left:-9999px;";
-      document.body.appendChild(attr);
-      const cleanup = () => {
-        try {
-          attr.remove();
-        } catch {
-          /* ignore */
-        }
-      };
-
-      const svc = new places.PlacesService(attr);
-      svc.getDetails(
-        {
-          placeId,
-          fields: ["rating", "user_ratings_total", "reviews", "url"],
-        },
-        (result, status) => {
-          window.clearTimeout(timeout);
-          cleanup();
-          if (status !== places.PlacesServiceStatus.OK || !result) {
-            reject(new Error(`Places getDetails failed (${status})`));
-            return;
-          }
-          resolve(result);
-        },
-      );
-    } catch (err) {
-      window.clearTimeout(timeout);
-      reject(err instanceof Error ? err : new Error("Places getDetails threw"));
-    }
-  });
-}
-
-async function fetchPlaceDetails(apiKey: string, placeId: string): Promise<PlacesResult> {
-  const places = await loadMapsPlacesLibrary(apiKey);
-
-  try {
-    return await fetchPlaceDetailsNew(placeId);
-  } catch (newErr) {
-    console.warn("[reviews] Places API (New) failed — trying legacy getDetails.", newErr);
-    return fetchPlaceDetailsLegacy(places, placeId);
-  }
-}
-
-function mapPlacesReviews(result: PlacesResult): ReputationReview[] {
-  const reviews = result.reviews ?? [];
-  return reviews
-    .filter((r) => (r.rating ?? 0) >= 5 && (r.text?.trim().length ?? 0) >= 24)
-    .map((r, i) => ({
-      id: `places-${i}-${(r.author_name || "reviewer").replace(/\s+/g, "-").toLowerCase()}`,
-      href: r.author_url?.trim() || result.url || GOOGLE_REVIEWS_FALLBACK_HREF,
-      name: (r.author_name || "Google reviewer").trim(),
-      quote: truncateQuote(r.text || ""),
-      rating: r.rating ?? 5,
-      photo: r.profile_photo_url?.trim() || undefined,
-    }));
-}
-
 let reviewsCache: Promise<{
   reviews: ReputationReview[];
   aggregate: ReputationAggregate;
@@ -370,39 +133,34 @@ export async function fetchGoogleReviews(): Promise<{
 }> {
   if (!reviewsCache) {
     reviewsCache = (async () => {
-      const key = readMapsKey();
-      const placeId = readPlaceId();
-
-      if (!key || !placeId) {
-        console.info("[reviews] Missing VITE_GOOGLE_MAPS_API_KEY or VITE_GOOGLE_PLACE_ID — using curated slides.");
-        return {
-          reviews: CURATED_REVIEWS.slice(0, TARGET_SLIDES),
-          aggregate: DEFAULT_AGGREGATE,
-        };
-      }
+      const curatedOnly = {
+        reviews: CURATED_REVIEWS.slice(0, TARGET_SLIDES),
+        aggregate: DEFAULT_AGGREGATE,
+      };
 
       try {
-        const result = await fetchPlaceDetails(key, placeId);
-        const live = mapPlacesReviews(result);
-        const rating =
-          typeof result.rating === "number" && result.rating > 0
-            ? result.rating
-            : DEFAULT_AGGREGATE.rating;
-        const totalReviews =
-          typeof result.user_ratings_total === "number" && result.user_ratings_total > 0
-            ? result.user_ratings_total
-            : DEFAULT_AGGREGATE.totalReviews;
+        const stored = await fetchReviewsFromDb();
+        if (!stored) return curatedOnly;
+
+        const live = stored.reviews.map((review) => ({
+          ...review,
+          href: review.href || GOOGLE_REVIEWS_FALLBACK_HREF,
+          quote: truncateQuote(review.quote),
+        }));
 
         return {
           reviews: mergeWithCurated(live),
-          aggregate: { rating, totalReviews },
+          aggregate: {
+            rating: stored.aggregate.rating > 0 ? stored.aggregate.rating : DEFAULT_AGGREGATE.rating,
+            totalReviews:
+              stored.aggregate.totalReviews > 0
+                ? stored.aggregate.totalReviews
+                : DEFAULT_AGGREGATE.totalReviews,
+          },
         };
       } catch (err) {
-        console.warn("[reviews] Places fetch failed — using curated slides.", err);
-        return {
-          reviews: CURATED_REVIEWS.slice(0, TARGET_SLIDES),
-          aggregate: DEFAULT_AGGREGATE,
-        };
+        console.warn("[reviews] Stored reviews fetch failed — using curated slides.", err);
+        return curatedOnly;
       }
     })().catch((err) => {
       reviewsCache = null;

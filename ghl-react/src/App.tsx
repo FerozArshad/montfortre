@@ -105,6 +105,7 @@ import AdminPageEditPage from "./pages/admin/AdminPageEditPage";
 import AdminSettingsPage from "./pages/admin/AdminSettingsPage";
 import AdminLeadsPage from "./pages/admin/AdminLeadsPage";
 import AdminMediaPage from "./pages/admin/AdminMediaPage";
+import AdminReviewsPage from "./pages/admin/AdminReviewsPage";
 import CmsSlugPage from "./pages/CmsSlugPage";
 
 function PublicMobileHeader() {
@@ -132,6 +133,7 @@ export default function App() {
         <Route path="/admin/pages/:id" element={<AdminPageEditPage />} />
         <Route path="/admin/leads" element={<AdminLeadsPage />} />
         <Route path="/admin/media" element={<AdminMediaPage />} />
+        <Route path="/admin/reviews" element={<AdminReviewsPage />} />
         <Route path="/admin/settings" element={<AdminSettingsPage />} />
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
