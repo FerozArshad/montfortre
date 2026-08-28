@@ -3,7 +3,7 @@
  * curated Montfort fallback slides. The browser never calls Google directly.
  */
 
-import { fetchReviewsFromDb } from "./cms/reviews";
+import { fetchReviewsFromDb, reviewerKey } from "./cms/reviews";
 
 export const GOOGLE_REVIEWS_FALLBACK_HREF =
   "https://www.google.com/maps/search/?api=1&query=Stan+Montfort+Real+Estate+8+West+126th+Street+New+York";
@@ -112,19 +112,6 @@ function truncateQuote(text: string, max = 320): string {
   const trimmed = text.trim();
   if (trimmed.length <= max) return trimmed;
   return `${trimmed.slice(0, max).trimEnd()}…`;
-}
-
-/**
- * Google returns straight apostrophes while the curated copy uses curly ones,
- * so "Ma'at" and "Ma’at" must collapse to the same key or the reviewer is
- * rendered twice.
- */
-function reviewerKey(name: string): string {
-  return name
-    .trim()
-    .toLowerCase()
-    .replace(/[’‘`´]/g, "'")
-    .replace(/\s+/g, " ");
 }
 
 function mergeWithCurated(live: ReputationReview[]): ReputationReview[] {

@@ -51,6 +51,25 @@ function rowToReview(row: GoogleReviewRow, mapsUri: string): ReputationReview {
 }
 
 /**
+ * Drops a hand-added review once the same reviewer arrives from Google, which
+ * happens when a manually imported person later rotates into the Places API's
+ * top five. The synced copy wins because Google keeps it up to date. Order is
+ * otherwise preserved.
+ */
+function dedupeByReviewer(rows: GoogleReviewRow[]): GoogleReviewRow[] {
+  const byKey = new Map<string, GoogleReviewRow>();
+  for (const row of rows) {
+    const key = reviewerKey(row.author_name);
+    const existing = byKey.get(key);
+    if (!existing || (isManualReview(existing) && !isManualReview(row))) {
+      byKey.set(key, row);
+    }
+  }
+  const kept = new Set(byKey.values());
+  return rows.filter((row) => kept.has(row));
+}
+
+/**
  * Public read: visible reviews plus the aggregate rating. Returns null when the
  * CMS is unreachable or empty so the caller can fall back to curated slides.
  */
@@ -80,7 +99,7 @@ export async function fetchReviewsFromDb(): Promise<{
     return null;
   }
 
-  const rows = (reviewsRes.data || []) as GoogleReviewRow[];
+  const rows = dedupeByReviewer((reviewsRes.data || []) as GoogleReviewRow[]);
   if (!rows.length) return null;
 
   const stats = (statsRes.data || null) as Pick<
@@ -174,6 +193,30 @@ function newManualKey(): string {
 }
 
 /**
+ * Normalised reviewer name used to spot the same person arriving from two
+ * sources. Google returns straight apostrophes while hand-entered copy tends to
+ * use curly ones, so "Ma'at" and "Ma’at" must collapse to one key.
+ */
+export function reviewerKey(name: string): string {
+  return name
+    .trim()
+    .toLowerCase()
+    .replace(/[’‘`´]/g, "'")
+    .replace(/\s+/g, " ");
+}
+
+/** Imports and hand-added reviews append below whatever is already stored. */
+async function nextSortOrder(sb: NonNullable<ReturnType<typeof getSupabase>>): Promise<number> {
+  const { data } = await sb
+    .from("google_reviews")
+    .select("sort_order")
+    .order("sort_order", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  return Number((data as { sort_order?: number } | null)?.sort_order ?? -1) + 1;
+}
+
+/**
  * Adds a review typed in by an admin. Google's Places API only ever returns its
  * five "most relevant" reviews, so the rest have to be entered by hand.
  */
@@ -182,14 +225,7 @@ export async function adminCreateReview(input: ReviewInput): Promise<GoogleRevie
   if (!sb) throw new Error("CMS not configured");
   await getRequiredUserId();
 
-  // Append below the existing list rather than jumping to the front.
-  const { data: last } = await sb
-    .from("google_reviews")
-    .select("sort_order")
-    .order("sort_order", { ascending: false })
-    .limit(1)
-    .maybeSingle();
-  const sortOrder = Number((last as { sort_order?: number } | null)?.sort_order ?? -1) + 1;
+  const sortOrder = await nextSortOrder(sb);
 
   const { data, error } = await sb
     .from("google_reviews")
@@ -209,6 +245,64 @@ export async function adminCreateReview(input: ReviewInput): Promise<GoogleRevie
 
   if (error) throw new Error(describeError(error.message));
   return data as GoogleReviewRow;
+}
+
+export type ImportResult = { inserted: number; skipped: string[] };
+
+/**
+ * Bulk-adds reviews pasted in from the Google Maps dialog.
+ *
+ * Reviewers already stored are skipped rather than inserted, because a paste of
+ * the full list will always re-include the five the scheduled sync has already
+ * pulled from Google.
+ */
+export async function adminImportReviews(rows: ReviewInput[]): Promise<ImportResult> {
+  const sb = getSupabase();
+  if (!sb) throw new Error("CMS not configured");
+  await getRequiredUserId();
+
+  const { data: existingRows, error: existingError } = await sb
+    .from("google_reviews")
+    .select("author_name");
+  if (existingError) throw new Error(describeError(existingError.message));
+
+  const seen = new Set(
+    ((existingRows || []) as { author_name: string }[]).map((r) => reviewerKey(r.author_name))
+  );
+
+  const skipped: string[] = [];
+  const payload: Record<string, unknown>[] = [];
+  let sortOrder = await nextSortOrder(sb);
+
+  for (const row of rows) {
+    const name = row.author_name.trim();
+    const key = reviewerKey(name);
+    if (!name || !row.quote.trim()) continue;
+    if (seen.has(key)) {
+      skipped.push(name);
+      continue;
+    }
+    seen.add(key);
+    payload.push({
+      review_key: newManualKey(),
+      author_name: name,
+      quote: row.quote.trim(),
+      rating: row.rating,
+      published_at: row.published_at,
+      author_url: row.author_url.trim(),
+      photo_url: row.photo_url.trim(),
+      hidden: false,
+      sort_order: sortOrder,
+    });
+    sortOrder += 1;
+  }
+
+  if (payload.length) {
+    const { error } = await sb.from("google_reviews").insert(payload);
+    if (error) throw new Error(describeError(error.message));
+  }
+
+  return { inserted: payload.length, skipped };
 }
 
 export async function adminUpdateReview(id: string, patch: Partial<ReviewInput>): Promise<void> {

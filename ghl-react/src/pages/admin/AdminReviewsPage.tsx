@@ -5,15 +5,18 @@ import {
   adminDeleteReview,
   adminFetchReviewStats,
   adminFetchReviews,
+  adminImportReviews,
   adminSaveReviewOrder,
   adminSetReviewHidden,
   adminSyncReviewsNow,
   adminUpdateReview,
   isManualReview,
+  reviewerKey,
   type GoogleReviewRow,
   type GoogleReviewStats,
   type ReviewInput,
 } from "../../lib/cms/reviews";
+import { parseGoogleReviews, type ParsedReview } from "../../lib/cms/parseGoogleReviews";
 
 const EMPTY_DRAFT: ReviewInput = {
   author_name: "",
@@ -67,6 +70,10 @@ function ReviewsInner() {
   const [draft, setDraft] = useState<ReviewInput | null>(null);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
+  const [importOpen, setImportOpen] = useState(false);
+  const [pasted, setPasted] = useState("");
+  const [parsed, setParsed] = useState<ParsedReview[] | null>(null);
+  const [importing, setImporting] = useState(false);
 
   async function load() {
     try {
@@ -175,6 +182,62 @@ function ReviewsInner() {
     }
   }
 
+  function runParse() {
+    setError("");
+    setNotice("");
+    const rows = parseGoogleReviews(pasted);
+    if (!rows.length) {
+      setParsed(null);
+      setError(
+        "Couldn't find any reviews in that text. Copy straight from the Google Maps review list, including each reviewer's name and their “N reviews” line."
+      );
+      return;
+    }
+    setParsed(rows);
+  }
+
+  function patchParsed(index: number, patch: Partial<ParsedReview>) {
+    setParsed((prev) =>
+      prev ? prev.map((row, i) => (i === index ? { ...row, ...patch } : row)) : prev
+    );
+  }
+
+  function dropParsed(index: number) {
+    setParsed((prev) => (prev ? prev.filter((_, i) => i !== index) : prev));
+  }
+
+  async function commitImport() {
+    if (!parsed?.length) return;
+    setImporting(true);
+    setError("");
+    try {
+      const result = await adminImportReviews(
+        parsed.map((row) => ({
+          author_name: row.author_name,
+          quote: row.quote,
+          rating: row.rating,
+          published_at: row.published_at,
+          author_url: "",
+          photo_url: "",
+        }))
+      );
+      const skippedNote = result.skipped.length
+        ? ` Skipped ${result.skipped.length} already stored (${result.skipped.slice(0, 3).join(", ")}${
+            result.skipped.length > 3 ? "…" : ""
+          }).`
+        : "";
+      setNotice(`Imported ${result.inserted} review${result.inserted === 1 ? "" : "s"}.${skippedNote}`);
+      setParsed(null);
+      setPasted("");
+      setImportOpen(false);
+      await load();
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Import failed");
+    } finally {
+      setImporting(false);
+    }
+  }
+
   async function removeReview(row: GoogleReviewRow) {
     if (!window.confirm(`Delete the review from ${row.author_name}? This cannot be undone.`)) return;
     setBusyId(row.id);
@@ -206,6 +269,10 @@ function ReviewsInner() {
   }
 
   const visibleCount = rows.filter((r) => !r.hidden).length;
+  const storedKeys = new Set(rows.map((r) => reviewerKey(r.author_name)));
+  const importableCount = parsed
+    ? parsed.filter((r) => !storedKeys.has(reviewerKey(r.author_name))).length
+    : 0;
 
   return (
     <>
@@ -213,12 +280,23 @@ function ReviewsInner() {
         <div>
           <h1>Reviews</h1>
           <p className="admin-lede">
-            Google’s API only ever returns its five “most relevant” reviews, so add the rest by hand with
-            “Add review”. Synced and added reviews sit in one list — hide any you don’t want, and reorder
-            them to control the carousel. Synced text comes from Google and can’t be edited.
+            Google’s API only ever returns its five “most relevant” reviews, so bring the rest across with
+            “Import from Google” — paste the list copied from Google Maps and they’re added in one go.
+            Synced and imported reviews sit in one list: hide any you don’t want, and reorder them to
+            control the carousel. Synced text comes from Google and can’t be edited.
           </p>
         </div>
         <div className="admin-page-actions">
+          <button
+            type="button"
+            className="admin-btn admin-btn--ghost"
+            onClick={() => {
+              setImportOpen((v) => !v);
+              setDraft(null);
+            }}
+          >
+            {importOpen ? "Close import" : "Import from Google"}
+          </button>
           <button type="button" className="admin-btn admin-btn--ghost" onClick={startAdd}>
             Add review
           </button>
@@ -270,6 +348,109 @@ function ReviewsInner() {
       </div>
 
       <p className="admin-hint">Last synced: {formatWhen(stats?.synced_at ?? null)}</p>
+
+      {importOpen ? (
+        <div className="review-form">
+          <h2 className="review-form-title">Import from Google</h2>
+          <ol className="review-import-steps">
+            <li>Open your Google Maps reviews and click through to the full review list.</li>
+            <li>Set “Sort by” to Newest so the order matches the site.</li>
+            <li>Scroll to the bottom until every review has loaded, and click any “More” links so no text is cut off.</li>
+            <li>Select the whole list, copy it, and paste it below.</li>
+          </ol>
+          <label className="review-form-full">
+            Pasted reviews
+            <textarea
+              rows={8}
+              value={pasted}
+              placeholder="Paste the copied review list here…"
+              onChange={(e) => setPasted(e.target.value)}
+            />
+          </label>
+          <div className="review-form-actions">
+            <button
+              type="button"
+              className="admin-btn admin-btn--ghost"
+              disabled={!pasted.trim()}
+              onClick={runParse}
+            >
+              Preview reviews
+            </button>
+            {parsed?.length ? (
+              <button
+                type="button"
+                className="admin-btn"
+                disabled={importing || importableCount === 0}
+                onClick={() => void commitImport()}
+              >
+                {importing ? "Importing…" : `Import ${importableCount} review${importableCount === 1 ? "" : "s"}`}
+              </button>
+            ) : null}
+          </div>
+
+          {parsed?.length ? (
+            <>
+              <p className="spark-hint">
+                Found {parsed.length}. Ratings default to 5 stars because Google’s stars don’t survive a
+                copy — change any that differ. Dates are approximate.
+              </p>
+              <ul className="review-import-list">
+                {parsed.map((row, i) => {
+                  const already = storedKeys.has(reviewerKey(row.author_name));
+                  return (
+                    <li key={`${row.author_name}-${i}`} className="review-import-row">
+                      <div className="review-import-head">
+                        <input
+                          className="review-import-name"
+                          value={row.author_name}
+                          onChange={(e) => patchParsed(i, { author_name: e.target.value })}
+                        />
+                        <select
+                          value={row.rating}
+                          onChange={(e) => patchParsed(i, { rating: Number(e.target.value) })}
+                        >
+                          {[5, 4, 3, 2, 1].map((n) => (
+                            <option key={n} value={n}>
+                              {"★".repeat(n)}
+                            </option>
+                          ))}
+                        </select>
+                        <input
+                          type="date"
+                          value={toDateInput(row.published_at)}
+                          onChange={(e) =>
+                            patchParsed(i, { published_at: fromDateInput(e.target.value) })
+                          }
+                        />
+                        <button
+                          type="button"
+                          className="admin-btn admin-btn--sm admin-btn--ghost is-danger"
+                          onClick={() => dropParsed(i)}
+                        >
+                          Remove
+                        </button>
+                      </div>
+                      <textarea
+                        rows={3}
+                        value={row.quote}
+                        onChange={(e) => patchParsed(i, { quote: e.target.value })}
+                      />
+                      {already ? (
+                        <p className="review-import-flag">Already stored — will be skipped.</p>
+                      ) : null}
+                      {row.warnings.map((warning) => (
+                        <p key={warning} className="review-import-flag">
+                          {warning}
+                        </p>
+                      ))}
+                    </li>
+                  );
+                })}
+              </ul>
+            </>
+          ) : null}
+        </div>
+      ) : null}
 
       {draft ? (
         <div className="review-form">
