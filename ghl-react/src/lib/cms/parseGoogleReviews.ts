@@ -26,11 +26,11 @@ export type ParsedReview = {
  * the anchor for a review block: the line above it is the reviewer's name.
  */
 const REVIEWER_META_RE =
-  /^(?:local guide\s*[·â€¢]\s*)?\d+\s+reviews?(?:\s*[·â€¢]\s*\d+\s+photos?)?$/i;
+  /^(?:local guide\s*[·•]\s*)?[\d,]+\s+reviews?(?:\s*[·•]\s*[\d,]+\s+photos?)?$/i;
 
-/** "2 months ago", "a year ago", "an hour ago", optionally " on Google". */
+/** "2 months ago", "a year ago", "Edited 5 months ago". */
 const RELATIVE_DATE_RE =
-  /^(a|an|\d+)\s+(minute|hour|day|week|month|year)s?\s+ago(?:\s+on\s+google)?$/i;
+  /^(?:edited\s+)?(a|an|\d+)\s+(minute|hour|day|week|month|year)s?\s+ago(?:\s+on\s+google)?$/i;
 
 /**
  * UI chrome Google interleaves with the review text. The action words can be
@@ -39,8 +39,14 @@ const RELATIVE_DATE_RE =
 const NOISE_RE =
   /^(?:(?:like|share|helpful|report|more|see more|read more|photos?|\d+|translated by google|see original|show original)(?:\s+|$))+$/i;
 
-/** Everything from here on is the business replying, not the review. */
-const OWNER_REPLY_RE = /^(?:response from the owner|owner['’]s response)\b/i;
+/** Reaction tallies such as "🙏1" that sit between the review and the reply. */
+const REACTION_RE = /^[^\p{L}\p{N}]+\d*$/u;
+
+/**
+ * Everything from here on is the business replying, not the review. Google
+ * labels the reply with the business name, e.g. "Montfort Real Estate (owner)".
+ */
+const OWNER_REPLY_RE = /^(?:response from the owner|owner['’]s response\b|.+\(owner\)$)/i;
 
 const UNIT_DAYS: Record<string, number> = {
   minute: 1 / 1440,
@@ -71,19 +77,20 @@ function cleanLine(line: string): string {
 }
 
 function isNoise(line: string): boolean {
-  return NOISE_RE.test(line) || line.length === 0;
+  return line.length === 0 || NOISE_RE.test(line) || REACTION_RE.test(line);
 }
 
 /**
- * A name line is short, has no sentence punctuation, and isn't itself metadata.
- * Guards against treating a wrapped line of review prose as a reviewer name.
+ * A name line is short and isn't itself metadata or chrome. Trailing periods are
+ * allowed because initials are common ("Dionne N."); the requirement that the
+ * next line be a "N reviews" count is what actually prevents prose from being
+ * mistaken for a name.
  */
 function looksLikeName(line: string): boolean {
   if (!line || line.length > 60) return false;
   if (REVIEWER_META_RE.test(line) || RELATIVE_DATE_RE.test(line)) return false;
   if (OWNER_REPLY_RE.test(line)) return false;
-  if (isNoise(line)) return false;
-  return !/[.!?]$/.test(line);
+  return !isNoise(line);
 }
 
 export function parseGoogleReviews(raw: string, now: Date = new Date()): ParsedReview[] {
@@ -128,6 +135,8 @@ export function parseGoogleReviews(raw: string, now: Date = new Date()): ParsedR
     const quote = (replyAt === -1 ? body : body.slice(0, replyAt))
       .filter((line) => !isNoise(line))
       .join(" ")
+      // Collapsed reviews end with a "…More" affordance rather than a separate line.
+      .replace(/\s*[…]?\s*More$/i, "…")
       .trim();
 
     if (!quote) continue;
