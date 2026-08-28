@@ -314,6 +314,25 @@ export async function adminUpdateReview(id: string, patch: Partial<ReviewInput>)
   if (error) throw new Error(describeError(error.message));
 }
 
+/**
+ * Removes every hand-added row, leaving the Google-synced ones untouched. Exists
+ * so a bad paste can be undone in one action instead of dozens of deletions.
+ */
+export async function adminDeleteImportedReviews(): Promise<number> {
+  const sb = getSupabase();
+  if (!sb) throw new Error("CMS not configured");
+  await getRequiredUserId();
+
+  const { data, error } = await sb
+    .from("google_reviews")
+    .delete()
+    .like("review_key", `${MANUAL_REVIEW_PREFIX}%`)
+    .select("id");
+
+  if (error) throw new Error(describeError(error.message));
+  return (data || []).length;
+}
+
 export async function adminDeleteReview(id: string): Promise<void> {
   const sb = getSupabase();
   if (!sb) throw new Error("CMS not configured");

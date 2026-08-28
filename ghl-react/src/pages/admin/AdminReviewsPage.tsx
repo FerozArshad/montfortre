@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { AdminGate } from "../../admin/AdminGate";
 import {
   adminCreateReview,
+  adminDeleteImportedReviews,
   adminDeleteReview,
   adminFetchReviewStats,
   adminFetchReviews,
@@ -238,6 +239,26 @@ function ReviewsInner() {
     }
   }
 
+  async function removeAllImported() {
+    const count = rows.filter(isManualReview).length;
+    if (!count) return;
+    if (
+      !window.confirm(
+        `Delete all ${count} imported reviews? Reviews synced from Google are kept. This cannot be undone.`
+      )
+    ) {
+      return;
+    }
+    setError("");
+    try {
+      const deleted = await adminDeleteImportedReviews();
+      setNotice(`Deleted ${deleted} imported review${deleted === 1 ? "" : "s"}.`);
+      await load();
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Could not delete imported reviews");
+    }
+  }
+
   async function removeReview(row: GoogleReviewRow) {
     if (!window.confirm(`Delete the review from ${row.author_name}? This cannot be undone.`)) return;
     setBusyId(row.id);
@@ -269,6 +290,7 @@ function ReviewsInner() {
   }
 
   const visibleCount = rows.filter((r) => !r.hidden).length;
+  const importedCount = rows.filter(isManualReview).length;
   const storedKeys = new Set(rows.map((r) => reviewerKey(r.author_name)));
   const importableCount = parsed
     ? parsed.filter((r) => !storedKeys.has(reviewerKey(r.author_name))).length
@@ -300,6 +322,15 @@ function ReviewsInner() {
           <button type="button" className="admin-btn admin-btn--ghost" onClick={startAdd}>
             Add review
           </button>
+          {importedCount > 0 ? (
+            <button
+              type="button"
+              className="admin-btn admin-btn--ghost is-danger"
+              onClick={() => void removeAllImported()}
+            >
+              Remove {importedCount} imported
+            </button>
+          ) : null}
           <button
             type="button"
             className="admin-btn admin-btn--ghost"
