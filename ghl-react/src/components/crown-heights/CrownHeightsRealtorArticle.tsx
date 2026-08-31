@@ -62,7 +62,7 @@ export default function CrownHeightsRealtorArticle() {
           <a href="https://calendly.com/montfort" className="hlm-listings-btn">
             Schedule Free Consultation
           </a>
-          <a href="tel:+1-646-970-1078" className="hlm-listings-ext">
+          <a href="tel:+16469701078" className="hlm-listings-ext">
             Call For Information
           </a>
         </p>

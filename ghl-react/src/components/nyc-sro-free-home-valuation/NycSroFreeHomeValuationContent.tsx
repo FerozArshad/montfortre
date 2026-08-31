@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +46,7 @@ export default function NycSroFreeHomeValuationContent() {
               considers <strong>income potential</strong>, regulatory factors, and neighborhood demand
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
           </div>
@@ -52,6 +54,7 @@ export default function NycSroFreeHomeValuationContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/nyc-sro-free-home-valuation.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -167,39 +170,46 @@ export default function NycSroFreeHomeValuationContent() {
             <p>Home value is influenced by location, size, and condition. For SROs, I&apos;d add legal status, occupancy, and regulatory history to that list.</p>
 
             <h2>Frequently Asked Questions</h2>
-            <h3>Why are automated home value estimates inaccurate for SRO properties?</h3>
-            <p>Automated home value estimates are less reliable for SRO properties than standard homes because algorithms rely on public data points-square footage, recent sale prices of comparable homes, and neighborhood sales volume. They cannot evaluate your Certificate of Occupancy, detect illegal unit configurations, assess rent stabilization status, or factor in HPD violations. Comparative Market Analysis uses recent sales of similar homes, but for SROs, those comparable sales require specialized knowledge to identify and adjust properly. A free home value estimator simply isn&apos;t built for income-producing, regulated multifamily assets.</p>
-            <h3>How long does a professional SRO valuation take?</h3>
-            <p>The full process typically spans three to four weeks:</p>
-            <ul className="tf-list">
-              <li><span className="tf-dot" /><strong>Document review:</strong> 1–2 weeks (depending on document availability)</li>
-              <li><span className="tf-dot" /><strong>On-site inspection:</strong> 1 day</li>
-              <li><span className="tf-dot" /><strong>Market analysis and report delivery:</strong> 1–2 additional weeks</li>
-            </ul>
-            <p>If there are complex legal issues-such as a missing CO, active DOB violations, or CONH requirements-the timeline may extend. Obtaining an official valuation for SROs typically involves reviewing city records and consulting experts, and I coordinate that process for you.</p>
-            <h3>What documents do I need to prepare for an SRO valuation?</h3>
-            <p>Here&apos;s the essential checklist:</p>
-            <ul className="tf-list">
-              {["Certificate of Occupancy and any amendments", "HPD registration history", "Current rent roll showing legal and actual rents for all units", "Operating expense records (2–3 years)", "HPD and DOB violation records", "Floor plans and records of any building alterations", "Utility bills", "Occupancy and vacancy records"].map((item) => <li key={item}><span className="tf-dot" />{item}</li>)}
-            </ul>
-            <p>If you&apos;re missing any of these, don&apos;t let that delay you. I can advise on how to obtain records from HPD, DOB, and NYC Finance.</p>
-            <h3>Do you provide valuations for occupied SRO properties?</h3>
-            <p>Yes. Most SRO properties I evaluate have existing tenants. The approach changes based on tenant status: stabilized tenants with long-term leases and below-market rents produce predictable income but limit upside. Vacant or partially vacant buildings offer repositioning flexibility but carry higher risk and carrying costs. I evaluate the specific tenant mix, lease terms, and income stability to produce the most accurate assessment of what a buyer will pay.</p>
-            <h3>How do SRO valuations differ from standard home valuations?</h3>
-            <p>Standard home valuations are typically based on consideration of recent sales of similar properties, adjusted for size, condition, and location. Professional appraisals are more accurate than online estimates for any property type, but appraisers and agents compare similar properties differently here because SRO valuation calls for a customized comparative market analysis rather than the approach used for standard homes. That gives owners valuable knowledge when weighing a sale, refinancing, or repositioning. SRO valuations add layers that don&apos;t exist for conventional residential property: legal configuration review, rent regulation analysis, income capitalization, violation exposure, and CONH status. A home valuation determines the probable selling price for a standard home; an SRO valuation determines what informed, risk-aware buyers will pay given the full regulatory and operational picture.</p>
-            <h3>Can knowing my SRO&apos;s property worth help with refinancing?</h3>
-            <p>Absolutely. Home valuations help determine equity for refinancing options, and some owners seek one before they borrow cash through refinancing or a home equity line. Lenders require home valuations to assess collateral for mortgages, and mortgage companies and refinancing lenders base loan terms on the property’s value and equity position. Home equity lines of credit require at least 20% equity, and lenders allow borrowing up to 96.5% of your home&apos;s value depending on the loan product. That kind of home equity line can also depend on lender guidelines and the asset type, especially for SRO properties. Home valuations prevent excessive borrowing and financial losses-and for SRO owners, having a precise valuation performed by someone who understands the asset class gives necessary refinancing lenders the confidence to approve favorable terms, while serving as one of the home valuation safeguards lenders use when assessing collateral.</p>
-
+            <FaqAccordion>
+              <FaqItem question={<>Why are automated home value estimates inaccurate for SRO properties?</>}>
+              <p>Automated home value estimates are less reliable for SRO properties than standard homes because algorithms rely on public data points-square footage, recent sale prices of comparable homes, and neighborhood sales volume. They cannot evaluate your Certificate of Occupancy, detect illegal unit configurations, assess rent stabilization status, or factor in HPD violations. Comparative Market Analysis uses recent sales of similar homes, but for SROs, those comparable sales require specialized knowledge to identify and adjust properly. A free home value estimator simply isn&apos;t built for income-producing, regulated multifamily assets.</p>
+              </FaqItem>
+              <FaqItem question={<>How long does a professional SRO valuation take?</>}>
+              <p>The full process typically spans three to four weeks:</p>
+              <ul className="tf-list">
+                <li><span className="tf-dot" /><strong>Document review:</strong> 1–2 weeks (depending on document availability)</li>
+                <li><span className="tf-dot" /><strong>On-site inspection:</strong> 1 day</li>
+                <li><span className="tf-dot" /><strong>Market analysis and report delivery:</strong> 1–2 additional weeks</li>
+              </ul>
+              <p>If there are complex legal issues-such as a missing CO, active DOB violations, or CONH requirements-the timeline may extend. Obtaining an official valuation for SROs typically involves reviewing city records and consulting experts, and I coordinate that process for you.</p>
+              </FaqItem>
+              <FaqItem question={<>What documents do I need to prepare for an SRO valuation?</>}>
+              <p>Here&apos;s the essential checklist:</p>
+              <ul className="tf-list">
+                {["Certificate of Occupancy and any amendments", "HPD registration history", "Current rent roll showing legal and actual rents for all units", "Operating expense records (2–3 years)", "HPD and DOB violation records", "Floor plans and records of any building alterations", "Utility bills", "Occupancy and vacancy records"].map((item) => <li key={item}><span className="tf-dot" />{item}</li>)}
+              </ul>
+              <p>If you&apos;re missing any of these, don&apos;t let that delay you. I can advise on how to obtain records from HPD, DOB, and NYC Finance.</p>
+              </FaqItem>
+              <FaqItem question={<>Do you provide valuations for occupied SRO properties?</>}>
+              <p>Yes. Most SRO properties I evaluate have existing tenants. The approach changes based on tenant status: stabilized tenants with long-term leases and below-market rents produce predictable income but limit upside. Vacant or partially vacant buildings offer repositioning flexibility but carry higher risk and carrying costs. I evaluate the specific tenant mix, lease terms, and income stability to produce the most accurate assessment of what a buyer will pay.</p>
+              </FaqItem>
+              <FaqItem question={<>How do SRO valuations differ from standard home valuations?</>}>
+              <p>Standard home valuations are typically based on consideration of recent sales of similar properties, adjusted for size, condition, and location. Professional appraisals are more accurate than online estimates for any property type, but appraisers and agents compare similar properties differently here because SRO valuation calls for a customized comparative market analysis rather than the approach used for standard homes. That gives owners valuable knowledge when weighing a sale, refinancing, or repositioning. SRO valuations add layers that don&apos;t exist for conventional residential property: legal configuration review, rent regulation analysis, income capitalization, violation exposure, and CONH status. A home valuation determines the probable selling price for a standard home; an SRO valuation determines what informed, risk-aware buyers will pay given the full regulatory and operational picture.</p>
+              </FaqItem>
+              <FaqItem question={<>Can knowing my SRO&apos;s property worth help with refinancing?</>}>
+              <p>Absolutely. Home valuations help determine equity for refinancing options, and some owners seek one before they borrow cash through refinancing or a home equity line. Lenders require home valuations to assess collateral for mortgages, and mortgage companies and refinancing lenders base loan terms on the property’s value and equity position. Home equity lines of credit require at least 20% equity, and lenders allow borrowing up to 96.5% of your home&apos;s value depending on the loan product. That kind of home equity line can also depend on lender guidelines and the asset type, especially for SRO properties. Home valuations prevent excessive borrowing and financial losses-and for SRO owners, having a precise valuation performed by someone who understands the asset class gives necessary refinancing lenders the confidence to approve favorable terms, while serving as one of the home valuation safeguards lenders use when assessing collateral.</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Get Your Free SRO Valuation</h2>
             <p>Knowing your home&apos;s value aids in financial planning and decision-making-whether you&apos;re considering a sale, evaluating refinancing options, or simply trying to plan for the future. For SRO owners, that knowledge has to be based on more than algorithms. It requires someone who understands the legal, regulatory, and operational realities that shape what your property is actually worth in the current market.</p>
             <p>I offer a free consultation that functions as an educational walk-through-not a sales pitch. We&apos;ll review your building&apos;s legal status, discuss occupancy and income, identify any issues that may suppress value, and outline what professional buyers will evaluate before making an offer. Every SRO property should be evaluated individually based on its legal status, occupancy, building condition, documentation, location, and current market demand.</p>
             <p className="tf-guide-center">
-              <strong>Phone:</strong>{" "}<a href="tel:+1-646-970-1078" className="tf-guide-link">1-646-970-1078</a>{"  "}
+              <strong>Phone:</strong>{" "}<a href="tel:+16469701078" className="tf-guide-link">1-646-970-1078</a>{"  "}
               <strong>Email:</strong>{" "}<a href="mailto:sm@montfortre.com" className="tf-guide-link">sm@montfortre.com</a>{"  "}
               <strong>Address:</strong> 8 West 126th Street, New York NY 10027
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">Call For Information</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call For Information</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
           </div>

@@ -3,6 +3,8 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/upper-east-side-co-ops-page.css";
 import "../../styles/contact-section.css";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +46,7 @@ export default function UpperEastSideCoOpsContent() {
               health, and board requirements to help you secure the right home with fewer risks
             </p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:646-970-1078" className="nbhd-hero-tel">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">
@@ -52,10 +54,18 @@ export default function UpperEastSideCoOpsContent() {
               </a>
             </div>
           </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/ues-coops.png" alt="Upper East Side co-op buildings" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
+          </div>
         </div>
       </section>
 
       <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Upper East Side" propertyType="Co-op" label="Upper East Side co-ops" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">

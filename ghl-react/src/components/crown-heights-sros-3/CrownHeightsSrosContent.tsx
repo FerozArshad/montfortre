@@ -3,6 +3,9 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/crown-heights-sros-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 
 const NEWS_ARTICLES = [
@@ -43,7 +46,7 @@ export default function CrownHeightsSrosContent() {
               We'll help you invest in the right Crown Heights SRO by identifying properties with strong potential while avoiding compliance, maintenance, and violation issues.
             </p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:646-970-1078" className="nbhd-hero-tel">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">
@@ -51,10 +54,18 @@ export default function CrownHeightsSrosContent() {
               </a>
             </div>
           </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/crown-heights-sros.png" alt="Crown Heights SRO buildings" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
+          </div>
         </div>
       </section>
 
       <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Crown Heights" propertyType="SRO" label="Crown Heights SROs" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
@@ -195,31 +206,37 @@ export default function CrownHeightsSrosContent() {
             </blockquote>
             <hr className="nbhd-guide-rule" />
             <h2>Frequently Asked Questions</h2>
-            <h3>Can I convert an SRO property to regular rental apartments?</h3>
-            <p>Many buyers assume an SRO purchase comes with conversion potential. In reality, converting SRO units is one of the most heavily regulated processes in NYC real estate. Any alteration that changes unit configuration, adds or removes kitchens or bathrooms, or modifies the number of dwelling units requires a Certificate of No Harassment from HPD before DOB will approve permits.</p>
-            <p>A property owner in Crown Heights sought to upgrade an SRO to luxury micro-apartments; plans were rejected due to community board zoning resolution, the definition of permanent residency under MDL § 248, and failure to secure CONH. Before assuming any conversion is possible, work with an experienced real estate attorney and DOB-specialist architect who can view the property's specific regulatory constraints.</p>
-            <h3>What financing options are available for SRO properties?</h3>
-            <p>Financing an SRO is more challenging than financing a conventional multi-family property. Traditional banks require certified SRO status, a clean Certificate of Occupancy, stable income documentation, and often prior experience with regulated housing. Down payment requirements are typically larger, and lenders may require escrowed reserves for compliance costs.</p>
-            <p>Alternative lenders and private equity sources are more willing to finance smaller SROs but charge higher interest rates with shorter terms. Subsidized housing programs - including HPD payment standards and Section 8 / CoC Mod SRO programs - can improve net cash flow through utility allowances for heat, hot water, gas cooking, and electricity. Equity partners or syndication structures may also make sense given higher initial compliance and upgrade costs.</p>
-            <img src="/redesign-assets/hoods/crown-heights-sros-3.png" alt="Crown Heights SRO Property valuation" className="nbhd-guide-img" loading="lazy" />
-            <h3>How do I evaluate the income potential of an SRO property?</h3>
-            <p>Start by understanding whether units are rent stabilized or governed by RGB hotel orders. Stabilized units have legally limited rent increases - there have been proposals to permit vacancy increases of approximately 20% upon vacancy of SRO units, but these rules change. Your cash flow model must account for:</p>
-            <ul className="nbhd-guide-list"><li>
-            <p>Rent stabilization caps on annual increases</p>
-            </li><li>
-            <p>Higher tenant turnover typical in SRO buildings</p>
-            </li><li>
-            <p>Shared facility maintenance costs (bathrooms, kitchens, common areas)</p>
-            </li><li>
-            <p>Compliance expenses (sprinkler maintenance, inspections, permit fees)</p>
-            </li><li>
-            <p>Potential vacancies limited by leasable unit constraints</p>
-            </li></ul>
-            <p>Median rents across Crown Heights hover around $3,750/month for standard apartments. SRO units command less individually but can generate competitive building-level income when fully occupied.</p>
-            <h3>What are my responsibilities as an SRO property owner?</h3>
-            <p>SRO ownership carries obligations that go beyond standard landlord duties. Under <a href="https://law.justia.com/codes/new-york/mdw/article-7/title-2-a/248/" className="nbhd-guide-link">MDL § 248</a>, you must maintain compliance with regulations covering light and ventilation, minimum room sizes, hygiene and sanitation standards, property management practices (including maintaining a register of occupants), and fire safety systems including automatic wet sprinkler systems in halls and rooms.</p>
-            <p>You must also maintain shared facilities - bathrooms, kitchens, common areas - to code standards, respond to HPD inspections and enforcement actions, and comply with applicable rent stabilization or hotel order requirements. Violations can carry civil and administrative penalties, and patterns of non-compliance can affect your ability to obtain CONH for any future building work.</p>
-            <hr className="nbhd-guide-rule" />
+            <FaqAccordion>
+              <FaqItem question={<>Can I convert an SRO property to regular rental apartments?</>}>
+              <p>Many buyers assume an SRO purchase comes with conversion potential. In reality, converting SRO units is one of the most heavily regulated processes in NYC real estate. Any alteration that changes unit configuration, adds or removes kitchens or bathrooms, or modifies the number of dwelling units requires a Certificate of No Harassment from HPD before DOB will approve permits.</p>
+              <p>A property owner in Crown Heights sought to upgrade an SRO to luxury micro-apartments; plans were rejected due to community board zoning resolution, the definition of permanent residency under MDL § 248, and failure to secure CONH. Before assuming any conversion is possible, work with an experienced real estate attorney and DOB-specialist architect who can view the property's specific regulatory constraints.</p>
+              </FaqItem>
+              <FaqItem question={<>What financing options are available for SRO properties?</>}>
+              <p>Financing an SRO is more challenging than financing a conventional multi-family property. Traditional banks require certified SRO status, a clean Certificate of Occupancy, stable income documentation, and often prior experience with regulated housing. Down payment requirements are typically larger, and lenders may require escrowed reserves for compliance costs.</p>
+              <p>Alternative lenders and private equity sources are more willing to finance smaller SROs but charge higher interest rates with shorter terms. Subsidized housing programs - including HPD payment standards and Section 8 / CoC Mod SRO programs - can improve net cash flow through utility allowances for heat, hot water, gas cooking, and electricity. Equity partners or syndication structures may also make sense given higher initial compliance and upgrade costs.</p>
+              <img src="/redesign-assets/hoods/crown-heights-sros-3.png" alt="Crown Heights SRO Property valuation" className="nbhd-guide-img" loading="lazy" />
+              </FaqItem>
+              <FaqItem question={<>How do I evaluate the income potential of an SRO property?</>}>
+              <p>Start by understanding whether units are rent stabilized or governed by RGB hotel orders. Stabilized units have legally limited rent increases - there have been proposals to permit vacancy increases of approximately 20% upon vacancy of SRO units, but these rules change. Your cash flow model must account for:</p>
+              <ul className="nbhd-guide-list"><li>
+              <p>Rent stabilization caps on annual increases</p>
+              </li><li>
+              <p>Higher tenant turnover typical in SRO buildings</p>
+              </li><li>
+              <p>Shared facility maintenance costs (bathrooms, kitchens, common areas)</p>
+              </li><li>
+              <p>Compliance expenses (sprinkler maintenance, inspections, permit fees)</p>
+              </li><li>
+              <p>Potential vacancies limited by leasable unit constraints</p>
+              </li></ul>
+              <p>Median rents across Crown Heights hover around $3,750/month for standard apartments. SRO units command less individually but can generate competitive building-level income when fully occupied.</p>
+              </FaqItem>
+              <FaqItem question={<>What are my responsibilities as an SRO property owner?</>}>
+              <p>SRO ownership carries obligations that go beyond standard landlord duties. Under <a href="https://law.justia.com/codes/new-york/mdw/article-7/title-2-a/248/" className="nbhd-guide-link">MDL § 248</a>, you must maintain compliance with regulations covering light and ventilation, minimum room sizes, hygiene and sanitation standards, property management practices (including maintaining a register of occupants), and fire safety systems including automatic wet sprinkler systems in halls and rooms.</p>
+              <p>You must also maintain shared facilities - bathrooms, kitchens, common areas - to code standards, respond to HPD inspections and enforcement actions, and comply with applicable rent stabilization or hotel order requirements. Violations can carry civil and administrative penalties, and patterns of non-compliance can affect your ability to obtain CONH for any future building work.</p>
+              <hr className="nbhd-guide-rule" />
+              </FaqItem>
+            </FaqAccordion>
             <h2>Contact Us</h2>
             <h3>Start Your Crown Heights SRO Investment Journey Today</h3>
             <p>Purchasing an SRO property in Crown Heights requires significantly more due diligence than buying a traditional Brooklyn residential property. The regulatory complexity, tenant protections, financing requirements, and building code obligations demand expert guidance at every stage.</p>
@@ -232,7 +249,7 @@ export default function CrownHeightsSrosContent() {
             <p><strong>Access my network</strong> of SRO-experienced attorneys, inspectors, and financing professionals</p>
             </li></ul>
             <p><strong>Phone:</strong> 1-646-970-1078                 <strong>Email:</strong><a href="mailto:sm@montfortre.com" className="nbhd-guide-link"><u>sm@montfortre.com</u></a></p>
-            <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule A Consultation</a><a href="tel:646-970-1078" className="nbhd-guide-link">Call For Information</a>
+            <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule A Consultation</a><a href="tel:+16469701078" className="nbhd-guide-link">Call For Information</a>
 </div>
         </div>
       </section>

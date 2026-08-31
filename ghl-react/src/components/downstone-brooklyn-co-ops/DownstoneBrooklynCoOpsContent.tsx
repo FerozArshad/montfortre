@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/downstone-brooklyn-co-ops-page.css";
 import "../../styles/contact-section.css";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 const NEWS_ARTICLES = [
   {
@@ -43,7 +45,7 @@ export default function DownstoneBrooklynCoOpsContent() {
               local expertise needed to master the world’s most complex property market.
             </p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:646-970-1078" className="nbhd-hero-tel">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">
@@ -55,10 +57,13 @@ export default function DownstoneBrooklynCoOpsContent() {
             <div className="nbhd-hero-frame">
               <img src="/redesign-assets/hoods/downtown-co-ops.png" alt="Downtown Brooklyn co-ops" />
             </div>
+            <HeroGoogleRating prefix="nbhd" />
           </div>
         </div>
       </section>
 <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Downtown Brooklyn" propertyType="Co-op" label="Downtown Brooklyn co-ops" />
 
 
       <section className="nbhd-intro" data-screen-label="Heading">

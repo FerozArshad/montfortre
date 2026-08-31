@@ -27,6 +27,15 @@
   align-items: center;
 }
 
+/* See the matching note in neighborhoods-page.css: pages that reuse this hero
+   force a single column, so heroes that gained a media column need it back. */
+@media (min-width: 1025px) {
+  .tf-hero .tf-hero-inner:has(.tf-hero-media) {
+    grid-template-columns: 1.02fr 0.98fr;
+    gap: 72px;
+  }
+}
+
 .tf-crumb {
   display: inline-flex;
   align-items: center;

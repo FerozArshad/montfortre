@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -43,7 +45,7 @@ export default function NycSroMortgagesContent() {
               issues.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -55,6 +57,7 @@ export default function NycSroMortgagesContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/nyc-sro-mortgages.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -540,50 +543,55 @@ export default function NycSroMortgagesContent() {
             </p>
 
             <h2>Frequently Asked Questions About NYC SRO Mortgages</h2>
-            <h3>Can I use a conventional mortgage to buy an SRO property?</h3>
-            <p>
-              Only if the property meets all residential standards - private kitchen and bathroom in each unit, a valid
-              Certificate of Occupancy showing legal residential use, and no open violations or occupancy discrepancies.
-              In practice, most authentic SRO properties in New York City don&apos;t meet these requirements. If the
-              building has shared facilities, is classified as a Class B multiple dwelling, or has a CO that reflects SRO
-              or rooming house use, conventional financing through Fannie Mae, Freddie Mac, FHA, or VA programs will not
-              work. You&apos;ll need to explore portfolio lenders, private financing, or government programs instead. HUD
-              Section 221(d)(4) loans can insure private lenders against losses for SRO projects with five or more units,
-              which may open additional financing channels for larger buildings.
-            </p>
-            <h3>How much should I budget for SRO conversion costs?</h3>
-            <p>
-              Conversion costs vary dramatically based on unit count, building condition, and the extent of work needed.
-              NYC HPD&apos;s moderate rehabilitation program offers up to $115,000 per dwelling unit for qualifying
-              projects, which gives some indication of scale. Private conversion costs - including architectural plans,
-              construction for adding private bathrooms and kitchens, electrical and plumbing upgrades, permit fees, CONH
-              application costs, and legal fees - can equal or exceed that figure per unit. Budget conservatively, include
-              at least 20% contingency, and account for 12–18 months of carrying costs during the conversion process.
-            </p>
-            <p>
-              Additionally, the New York State Office of Mental Health provides funding for Supportive Housing SRO units,
-              which may be relevant for buyers developing affordable or supportive housing projects.
-            </p>
-            <h3>What if the building has existing tenants?</h3>
-            <p>
-              Occupied SRO buildings present both opportunities and challenges. Existing tenants with more than 30 days
-              of residency have strong eviction protections under New York City law, and any conversion plan must account
-              for legal tenant relocation, lease compliance, and the certificate of no harassment requirement. Lenders
-              will scrutinize how tenant occupancy affects both current income stability and future conversion
-              feasibility. If tenants remain in the building, your financing structure needs to accommodate ongoing
-              rental operations alongside any planned renovations. The NYC Department of Housing Preservation and
-              Development offers specialized financing options for SROs that account for tenant-occupied scenarios.
-            </p>
-            <h3>How long does SRO financing typically take?</h3>
-            <p>
-              For properties with clean legal status, stabilized income, and no outstanding violations, financing through
-              a portfolio lender or private lender can close in 60–90 days. For properties requiring violation
-              remediation, CO amendments, or certificate of no harassment approvals, realistic timelines extend to 4–6
-              months or longer. Full conversion projects involving alt-1 permits, construction, and a new certificate of
-              occupancy can take 12–18 months from acquisition to permanent financing. SRO properties often attract
-              investors due to reduced prices, but the extended timeline must be factored into your overall cost analysis.
-            </p>
-
+            <FaqAccordion>
+              <FaqItem question={<>Can I use a conventional mortgage to buy an SRO property?</>}>
+              <p>
+                Only if the property meets all residential standards - private kitchen and bathroom in each unit, a valid
+                Certificate of Occupancy showing legal residential use, and no open violations or occupancy discrepancies.
+                In practice, most authentic SRO properties in New York City don&apos;t meet these requirements. If the
+                building has shared facilities, is classified as a Class B multiple dwelling, or has a CO that reflects SRO
+                or rooming house use, conventional financing through Fannie Mae, Freddie Mac, FHA, or VA programs will not
+                work. You&apos;ll need to explore portfolio lenders, private financing, or government programs instead. HUD
+                Section 221(d)(4) loans can insure private lenders against losses for SRO projects with five or more units,
+                which may open additional financing channels for larger buildings.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How much should I budget for SRO conversion costs?</>}>
+              <p>
+                Conversion costs vary dramatically based on unit count, building condition, and the extent of work needed.
+                NYC HPD&apos;s moderate rehabilitation program offers up to $115,000 per dwelling unit for qualifying
+                projects, which gives some indication of scale. Private conversion costs - including architectural plans,
+                construction for adding private bathrooms and kitchens, electrical and plumbing upgrades, permit fees, CONH
+                application costs, and legal fees - can equal or exceed that figure per unit. Budget conservatively, include
+                at least 20% contingency, and account for 12–18 months of carrying costs during the conversion process.
+              </p>
+              <p>
+                Additionally, the New York State Office of Mental Health provides funding for Supportive Housing SRO units,
+                which may be relevant for buyers developing affordable or supportive housing projects.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What if the building has existing tenants?</>}>
+              <p>
+                Occupied SRO buildings present both opportunities and challenges. Existing tenants with more than 30 days
+                of residency have strong eviction protections under New York City law, and any conversion plan must account
+                for legal tenant relocation, lease compliance, and the certificate of no harassment requirement. Lenders
+                will scrutinize how tenant occupancy affects both current income stability and future conversion
+                feasibility. If tenants remain in the building, your financing structure needs to accommodate ongoing
+                rental operations alongside any planned renovations. The NYC Department of Housing Preservation and
+                Development offers specialized financing options for SROs that account for tenant-occupied scenarios.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How long does SRO financing typically take?</>}>
+              <p>
+                For properties with clean legal status, stabilized income, and no outstanding violations, financing through
+                a portfolio lender or private lender can close in 60–90 days. For properties requiring violation
+                remediation, CO amendments, or certificate of no harassment approvals, realistic timelines extend to 4–6
+                months or longer. Full conversion projects involving alt-1 permits, construction, and a new certificate of
+                occupancy can take 12–18 months from acquisition to permanent financing. SRO properties often attract
+                investors due to reduced prices, but the extended timeline must be factored into your overall cost analysis.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Schedule Your SRO Property Consultation</h2>
             <p>
               Financing an SRO property in NYC is fundamentally different from purchasing a traditional townhouse, co-op,
@@ -605,7 +613,7 @@ export default function NycSroMortgagesContent() {
             </p>
             <p className="tf-guide-center">
               <strong>Phone:</strong>{" "}
-              <a href="tel:+1-646-970-1078" className="tf-guide-link">1-646-970-1078</a>
+              <a href="tel:+16469701078" className="tf-guide-link">1-646-970-1078</a>
               {"  "}
               <strong>Email:</strong>{" "}
               <a href="mailto:sm@montfortre.com" className="tf-guide-link">sm@montfortre.com</a>
@@ -613,7 +621,7 @@ export default function NycSroMortgagesContent() {
               <strong>Address:</strong> 8 West 126th Street, New York NY 10027
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">Call For Information</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call For Information</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
           </div>

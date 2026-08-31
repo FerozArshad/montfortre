@@ -222,6 +222,19 @@ revoke all on function public.lead_notify_config() from public, anon, authentica
 grant execute on function public.lead_notify_config() to service_role;
 
 -- ---------------------------------------------------------------------------
+-- Admin RPCs: reachable by signed-in users, who are then role-checked inside.
+-- Granted explicitly because the default PUBLIC execute is revoked below, and
+-- without this the dashboard fails with "permission denied for function".
+-- ---------------------------------------------------------------------------
+revoke all on function public.lead_notify_status() from public, anon;
+revoke all on function public.lead_notify_save_config(text, text, text, text, boolean) from public, anon;
+revoke all on function public.lead_notify_disconnect() from public, anon;
+
+grant execute on function public.lead_notify_status() to authenticated, service_role;
+grant execute on function public.lead_notify_save_config(text, text, text, text, boolean) to authenticated, service_role;
+grant execute on function public.lead_notify_disconnect() to authenticated, service_role;
+
+-- ---------------------------------------------------------------------------
 -- Record a send failure so the dashboard can surface it.
 -- ---------------------------------------------------------------------------
 create or replace function public.lead_notify_set_error(p_error text)

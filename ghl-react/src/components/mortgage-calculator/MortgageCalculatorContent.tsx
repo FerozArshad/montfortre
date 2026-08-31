@@ -4,6 +4,8 @@ import MortgageCalculator from "./MortgageCalculator";
 import "../../styles/two-family-page.css";
 import "../../styles/mortgage-calculator-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -45,13 +47,19 @@ export default function MortgageCalculatorContent() {
               throughout the <b>home-buying process</b>.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
                 Schedule A Consultation
               </a>
             </div>
+          </div>
+          <div className="tf-hero-media" data-reveal="">
+            <div className="tf-hero-frame">
+              <img src="/redesign-assets/services/specialized-mortgage-calculator.png" alt="NYC mortgage calculator" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -343,85 +351,91 @@ export default function MortgageCalculatorContent() {
             </blockquote>
             <div className="tf-guide-rule" />
             <h2>Frequently Asked Questions</h2>
-            <h3>What’s the difference between co-op maintenance and condo common charges?</h3>
-            <div className="tf-fig">
-              <img
-                src="/redesign-assets/services/coops-charges-vs-condos-common-charges.png"
-                alt="Condo common charges vs co-op maintenance comparison with financial charts, real estate documents, calculator and laptop for NYC home buyers"
-                loading="lazy"
-              />
-            </div>
-            <p>
-              Co-op maintenance includes property taxes within the monthly fee, while condo common charges are completely
-              separate from your tax bill. When you pay co-op maintenance, a portion goes toward the building’s property
-              tax bill—your share is based on the number of shares you own. Co-op maintenance also covers any underlying
-              mortgage payments the building carries, which can be substantial in buildings that haven’t paid off their
-              debt.
-            </p>
-            <p>
-              Condo common charges fund only building operations: staff salaries, elevator maintenance, common area
-              cleaning, insurance, and reserve fund contributions. You receive a separate property tax bill from New
-              York City based on your unit’s assessed value. This distinction affects both monthly cash flow and tax
-              deductibility—only the property tax and mortgage interest portions of co-op maintenance are
-              tax-deductible, similar to how condo owners deduct only their property taxes and mortgage interest.
-            </p>
-            <h3>How much should I put down to avoid PMI in NYC?</h3>
-            <p>
-              The standard 20% down payment eliminates PMI on most conventional loan types. For a $1 million purchase,
-              that means $200,000 down to avoid monthly PMI costs that could range from $250 to $1,250 depending on your
-              credit score and lender.
-            </p>
-            <p>
-              Co-op boards often require even larger down payments—20-30% minimum, with some luxury buildings demanding
-              50% or more in liquid assets. These board requirements exist independently of lender requirements.
-            </p>
-            <p>
-              Alternative loan programs offer different PMI thresholds. FHA loans require only 3.5% down but include
-              mortgage insurance for the life of the loan. VA loans require no down payment and no PMI for qualifying
-              veterans. USDA loans, available for eligible rural areas within New York State, allow low-income borrowers
-              to purchase with no down payment and have loose credit requirements.
-            </p>
-            <p>
-              First-time homebuyers should explore payment assistance programs that can help bridge the gap to PMI-free
-              down payment levels.
-            </p>
-            <h3>Are interest-only loans a good option for NYC buyers?</h3>
-            <p>
-              Interest-only loans make financial sense in specific situations: buyers who plan to sell or refinance
-              before the interest-only period ends, those with irregular income expecting significant future earnings,
-              or investors holding property short-term.
-            </p>
-            <p>
-              The monthly payment savings are real. On a $1.2 million loan at 6.5%, interest-only payments run
-              approximately $6,500 monthly versus $7,600 for fully amortizing—saving $1,100 per month initially. However,
-              investing involves risk, and you build zero equity during the interest-only period unless the property
-              appreciates.
-            </p>
-            <p>
-              Qualification requirements are stricter. Most lenders require larger down payments (often 20-25%), higher
-              credit scores, substantial cash reserves, and proof you can afford the fully amortized payment when the
-              interest-only period ends. The payment increase after year 5, 7, or 10 can be 25-40% higher than your
-              initial payment—a shock that has caused financial distress for unprepared borrowers.
-            </p>
-            <h3>How much should townhouse owners save for maintenance?</h3>
-            <p>
-              Financial experts recommend saving 1-3% of your townhouse’s property value annually for major repairs. For
-              a $2 million Brooklyn townhouse, budget $20,000-$60,000 per year—roughly $1,700-$5,000 monthly—into a
-              dedicated reserve fund.
-            </p>
-            <p>
-              Typical townhouse maintenance costs by system include: roof replacement ($15,000-$50,000 every 20-30
-              years), HVAC system replacement ($10,000-$25,000 every 15-20 years), structural foundation work
-              ($5,000-$50,000+ as needed), plumbing overhauls ($3,000-$15,000), and electrical upgrades ($5,000-$20,000).
-              Façade requirements under Local Law 11 may also apply to townhouses, requiring periodic inspections and
-              repairs.
-            </p>
-            <p>
-              Without building reserves to draw from, every emergency comes directly from your savings. A burst pipe in
-              January or a failed boiler in February requires immediate payment—there’s no superintendent to call or
-              building fund to tap.
-            </p>
-            <div className="tf-guide-rule" />
+            <FaqAccordion>
+              <FaqItem question={<>What’s the difference between co-op maintenance and condo common charges?</>}>
+              <div className="tf-fig">
+                <img
+                  src="/redesign-assets/services/coops-charges-vs-condos-common-charges.png"
+                  alt="Condo common charges vs co-op maintenance comparison with financial charts, real estate documents, calculator and laptop for NYC home buyers"
+                  loading="lazy"
+                />
+              </div>
+              <p>
+                Co-op maintenance includes property taxes within the monthly fee, while condo common charges are completely
+                separate from your tax bill. When you pay co-op maintenance, a portion goes toward the building’s property
+                tax bill—your share is based on the number of shares you own. Co-op maintenance also covers any underlying
+                mortgage payments the building carries, which can be substantial in buildings that haven’t paid off their
+                debt.
+              </p>
+              <p>
+                Condo common charges fund only building operations: staff salaries, elevator maintenance, common area
+                cleaning, insurance, and reserve fund contributions. You receive a separate property tax bill from New
+                York City based on your unit’s assessed value. This distinction affects both monthly cash flow and tax
+                deductibility—only the property tax and mortgage interest portions of co-op maintenance are
+                tax-deductible, similar to how condo owners deduct only their property taxes and mortgage interest.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How much should I put down to avoid PMI in NYC?</>}>
+              <p>
+                The standard 20% down payment eliminates PMI on most conventional loan types. For a $1 million purchase,
+                that means $200,000 down to avoid monthly PMI costs that could range from $250 to $1,250 depending on your
+                credit score and lender.
+              </p>
+              <p>
+                Co-op boards often require even larger down payments—20-30% minimum, with some luxury buildings demanding
+                50% or more in liquid assets. These board requirements exist independently of lender requirements.
+              </p>
+              <p>
+                Alternative loan programs offer different PMI thresholds. FHA loans require only 3.5% down but include
+                mortgage insurance for the life of the loan. VA loans require no down payment and no PMI for qualifying
+                veterans. USDA loans, available for eligible rural areas within New York State, allow low-income borrowers
+                to purchase with no down payment and have loose credit requirements.
+              </p>
+              <p>
+                First-time homebuyers should explore payment assistance programs that can help bridge the gap to PMI-free
+                down payment levels.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Are interest-only loans a good option for NYC buyers?</>}>
+              <p>
+                Interest-only loans make financial sense in specific situations: buyers who plan to sell or refinance
+                before the interest-only period ends, those with irregular income expecting significant future earnings,
+                or investors holding property short-term.
+              </p>
+              <p>
+                The monthly payment savings are real. On a $1.2 million loan at 6.5%, interest-only payments run
+                approximately $6,500 monthly versus $7,600 for fully amortizing—saving $1,100 per month initially. However,
+                investing involves risk, and you build zero equity during the interest-only period unless the property
+                appreciates.
+              </p>
+              <p>
+                Qualification requirements are stricter. Most lenders require larger down payments (often 20-25%), higher
+                credit scores, substantial cash reserves, and proof you can afford the fully amortized payment when the
+                interest-only period ends. The payment increase after year 5, 7, or 10 can be 25-40% higher than your
+                initial payment—a shock that has caused financial distress for unprepared borrowers.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How much should townhouse owners save for maintenance?</>}>
+              <p>
+                Financial experts recommend saving 1-3% of your townhouse’s property value annually for major repairs. For
+                a $2 million Brooklyn townhouse, budget $20,000-$60,000 per year—roughly $1,700-$5,000 monthly—into a
+                dedicated reserve fund.
+              </p>
+              <p>
+                Typical townhouse maintenance costs by system include: roof replacement ($15,000-$50,000 every 20-30
+                years), HVAC system replacement ($10,000-$25,000 every 15-20 years), structural foundation work
+                ($5,000-$50,000+ as needed), plumbing overhauls ($3,000-$15,000), and electrical upgrades ($5,000-$20,000).
+                Façade requirements under Local Law 11 may also apply to townhouses, requiring periodic inspections and
+                repairs.
+              </p>
+              <p>
+                Without building reserves to draw from, every emergency comes directly from your savings. A burst pipe in
+                January or a failed boiler in February requires immediate payment—there’s no superintendent to call or
+                building fund to tap.
+              </p>
+              <div className="tf-guide-rule" />
+              </FaqItem>
+            </FaqAccordion>
             <h2>Get Started with Your NYC Mortgage Calculation</h2>
             <h3>Calculate Your True Monthly Payment Today</h3>
             <p>

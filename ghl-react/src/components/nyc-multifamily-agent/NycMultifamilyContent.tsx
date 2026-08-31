@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/nyc-multifamily-agent-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const RELATED_SERVICES = [
@@ -68,7 +70,7 @@ export default function NycMultifamilyContent() {
               opportunities, avoiding costly building issues, and <strong>maximizing long-term returns</strong>.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -80,6 +82,7 @@ export default function NycMultifamilyContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/nyc-multifamily-agent.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -313,7 +316,7 @@ export default function NycMultifamilyContent() {
               He then uses his in-depth market analysis to pinpoint the boroughs and neighborhoods that best fit your
               investment requirements, including high-demand areas like{" "}
               <a
-                href="/featured-upper-west-side-and-harlem-homes-for-sale/manhattan/upper-west-side/"
+                href="/upper-west-side/"
                 className="tf-guide-link"
               >
                 Upper West Side investment properties
@@ -405,64 +408,69 @@ export default function NycMultifamilyContent() {
               </p>
             </blockquote>
             <h2>Frequently Asked Questions</h2>
-            <h3>What makes for a good NYC residential multifamily investment property?</h3>
-            <p>
-              In the NYC multifamily space, your goal is to find properties that will maximize cash-on-cash returns and
-              grow your equity over time through smart acquisitions, renovations, and lease optimization. Accurate
-              valuation is essential to ensure you are making informed decisions and identifying properties with the
-              best investment potential. Working with a reputable brokerage provides you with strategic market insight
-              and transaction support, giving you a competitive edge. Stanley works with both private and institutional
-              investors to identify the best opportunities, leveraging a broad buyer pool and deep market expertise.
-            </p>
-            <p>
-              You’re looking for positive cash flow after debt service, proximity to public transportation and good
-              local employment opportunities, a building that doesn’t need a lot of capital to fix up right away, and a
-              rent roll that matches the current market conditions.
-            </p>
-            <p>
-              If a property has potential for improvement—whether that’s renovating the units or making operational
-              changes—you’re looking at a property that can provide both immediate income and long-term growth
-              potential.
-            </p>
-            <h3>How much money do I need to start investing in NYC multifamily properties?</h3>
-            <div className="tf-fig">
-              <img
-                src="/redesign-assets/services/nyc-multifamily-article-3.jpg"
-                alt="real estate investment analysis with property keys and financial charts for property valuation and ROI planning"
-                loading="lazy"
-              />
-            </div>
-            <p>
-              The down payment needed to buy a multifamily property in NYC will depend on the property itself, but the
-              standard requirement for a 2-4 unit residential building is 20-25% down. There are some first-time buyer
-              options that allow you to put down 10% down, or you can look at stacking products that let you put down
-              15%. Beyond the down payment, you’ll also need to budget for closing costs of 2-4% (which can be quite
-              high in NYC due to transfer taxes) and 6-12 months worth of operating expenses as a liquidity reserve.
-            </p>
-            <p>
-              Stanley’s professionalism and clear communication ensure that clients fully understand these financial
-              requirements, providing guidance every step of the way for a smooth and stress-free experience.
-            </p>
-            <p>
-              For a modest 2-4 unit outer-borough residential multifamily property, you’re looking at an initial
-              investment of $150,000 to $600,000. In Manhattan and prime Brooklyn, the numbers will be a lot higher.
-            </p>
-            <h3>Do you work with first-time real estate investors?</h3>
-            <p>
-              Absolutely. Stanley Montfort’s client-first approach is built around making sure first-time investors feel
-              at home in the NYC multifamily market. Stanley is committed to open communication and professionalism,
-              ensuring that every step is clear and stress-free for new investors. He takes the time to explain all the
-              first-time home buyer programs that’ll allow you to get into a property with as little as a 10% down
-              payment—and no pesky private mortgage insurance to boot—which makes it that much more accessible.
-            </p>
-            <p>
-              Stanley helps clients find the right home or investment property tailored to their needs, using his
-              expertise to guide you through a personalized and efficient property search. Most new investors start off
-              by going for 2–4 unit properties, using owner occupancy as a strategy to get favorable financing and just
-              get a feel for being a landlord. And as your go-to guy, Stanley also helps out with leasing the units,
-              vetting tenants so you can be sure you’ve got reliable tenants in place, and then there’s ongoing support
-              throughout your first purchase to get you set up for future growth as you get more confident.
-            </p>
+            <FaqAccordion>
+              <FaqItem question={<>What makes for a good NYC residential multifamily investment property?</>}>
+              <p>
+                In the NYC multifamily space, your goal is to find properties that will maximize cash-on-cash returns and
+                grow your equity over time through smart acquisitions, renovations, and lease optimization. Accurate
+                valuation is essential to ensure you are making informed decisions and identifying properties with the
+                best investment potential. Working with a reputable brokerage provides you with strategic market insight
+                and transaction support, giving you a competitive edge. Stanley works with both private and institutional
+                investors to identify the best opportunities, leveraging a broad buyer pool and deep market expertise.
+              </p>
+              <p>
+                You’re looking for positive cash flow after debt service, proximity to public transportation and good
+                local employment opportunities, a building that doesn’t need a lot of capital to fix up right away, and a
+                rent roll that matches the current market conditions.
+              </p>
+              <p>
+                If a property has potential for improvement—whether that’s renovating the units or making operational
+                changes—you’re looking at a property that can provide both immediate income and long-term growth
+                potential.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How much money do I need to start investing in NYC multifamily properties?</>}>
+              <div className="tf-fig">
+                <img
+                  src="/redesign-assets/services/nyc-multifamily-article-3.jpg"
+                  alt="real estate investment analysis with property keys and financial charts for property valuation and ROI planning"
+                  loading="lazy"
+                />
+              </div>
+              <p>
+                The down payment needed to buy a multifamily property in NYC will depend on the property itself, but the
+                standard requirement for a 2-4 unit residential building is 20-25% down. There are some first-time buyer
+                options that allow you to put down 10% down, or you can look at stacking products that let you put down
+                15%. Beyond the down payment, you’ll also need to budget for closing costs of 2-4% (which can be quite
+                high in NYC due to transfer taxes) and 6-12 months worth of operating expenses as a liquidity reserve.
+              </p>
+              <p>
+                Stanley’s professionalism and clear communication ensure that clients fully understand these financial
+                requirements, providing guidance every step of the way for a smooth and stress-free experience.
+              </p>
+              <p>
+                For a modest 2-4 unit outer-borough residential multifamily property, you’re looking at an initial
+                investment of $150,000 to $600,000. In Manhattan and prime Brooklyn, the numbers will be a lot higher.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Do you work with first-time real estate investors?</>}>
+              <p>
+                Absolutely. Stanley Montfort’s client-first approach is built around making sure first-time investors feel
+                at home in the NYC multifamily market. Stanley is committed to open communication and professionalism,
+                ensuring that every step is clear and stress-free for new investors. He takes the time to explain all the
+                first-time home buyer programs that’ll allow you to get into a property with as little as a 10% down
+                payment—and no pesky private mortgage insurance to boot—which makes it that much more accessible.
+              </p>
+              <p>
+                Stanley helps clients find the right home or investment property tailored to their needs, using his
+                expertise to guide you through a personalized and efficient property search. Most new investors start off
+                by going for 2–4 unit properties, using owner occupancy as a strategy to get favorable financing and just
+                get a feel for being a landlord. And as your go-to guy, Stanley also helps out with leasing the units,
+                vetting tenants so you can be sure you’ve got reliable tenants in place, and then there’s ongoing support
+                throughout your first purchase to get you set up for future growth as you get more confident.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Get in Touch with Stanley Montfort</h2>
             <h3>Start Building Your NYC Residential Multifamily Portfolio Today !</h3>
             <p>

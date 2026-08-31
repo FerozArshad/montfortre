@@ -304,7 +304,10 @@
   .home-page [data-screen-label="Client expectations"] img {
     margin: 0 !important;
     margin-right: auto !important;
-    width: min(220px, 100%) !important;
+    /* Fill the stacked column instead of the desktop 220px, which left a dead
+       gutter beside each image. Capped so the square does not become a
+       full-height panel on tablets. */
+    width: min(100%, 420px) !important;
     height: auto !important;
     aspect-ratio: 1 / 1 !important;
     object-fit: cover !important;

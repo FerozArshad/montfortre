@@ -3,6 +3,7 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import useReputationAggregate from "../../hooks/useReputationAggregate";
 import "../../styles/two-family-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
 
 
 export default function TwoFamilyContent() {
@@ -20,7 +21,7 @@ export default function TwoFamilyContent() {
             <p className="tf-hero-lead">We'll help you make a smart <strong>two-family home purchase</strong>, maximizing rental income potential while avoiding costly maintenance, legal, and compliance issues.</p>
             <div className="tf-hero-ctas">
               <a href="https://calendly.com/montfort" className="tf-hero-book">Book Now</a>
-              <a href="tel:646-970-1078" className="tf-hero-tel">(646) 970-1078</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">(646) 970-1078</a>
             </div>
             <div className="tf-serve">
               <div className="tf-serve-label">Serving most locations in</div>
@@ -140,19 +141,25 @@ export default function TwoFamilyContent() {
               <li><span className="tf-dot" /><strong>Not reviewing building permits and alteration history</strong>, unpermitted work can make a property unfinanceable</li>
             </ul>
             <h2>Frequently asked questions</h2>
-            <h3>How much rental income can a two-family house generate?</h3>
-            <p>It depends on neighborhood, unit size, condition, and demand. In Queens, units currently rent for roughly $2,000–$2,600/month. I provide every client a detailed analysis using current market data, not best-case projections.</p>
-            <h3>Can I live in one unit while renting the other?</h3>
-            <p>Yes, this is the most common strategy. FHA and SONYMA financing require owner-occupancy, so you live in one unit as your primary residence and rent the second, subject to any existing leases.</p>
-            <h3>How do I verify a property is legally a two-family house?</h3>
-            <p>Request the Certificate of Occupancy through the NYC DOB or BIS portal, cross-reference the physical layout during inspection, and check for open violations and permit history. This verification is standard in every evaluation I conduct.</p>
-            <h3>What should I evaluate during inspection?</h3>
-            <ul className="tf-list">
-              <li><span className="tf-dot" /><strong>Separate utility meters</strong> for electric, gas, and water</li>
-              <li><span className="tf-dot" /><strong>Legal unit configurations</strong>, each with its own kitchen, bath, sleeping area, and egress</li>
-              <li><span className="tf-dot" /><strong>Structural systems</strong>, foundation, roof age, plumbing, and electrical capacity</li>
-              <li><span className="tf-dot" /><strong>Signs of unpermitted work</strong> and <strong>fire safety compliance</strong></li>
-            </ul>
+            <FaqAccordion>
+              <FaqItem question={<>How much rental income can a two-family house generate?</>}>
+              <p>It depends on neighborhood, unit size, condition, and demand. In Queens, units currently rent for roughly $2,000–$2,600/month. I provide every client a detailed analysis using current market data, not best-case projections.</p>
+              </FaqItem>
+              <FaqItem question={<>Can I live in one unit while renting the other?</>}>
+              <p>Yes, this is the most common strategy. FHA and SONYMA financing require owner-occupancy, so you live in one unit as your primary residence and rent the second, subject to any existing leases.</p>
+              </FaqItem>
+              <FaqItem question={<>How do I verify a property is legally a two-family house?</>}>
+              <p>Request the Certificate of Occupancy through the NYC DOB or BIS portal, cross-reference the physical layout during inspection, and check for open violations and permit history. This verification is standard in every evaluation I conduct.</p>
+              </FaqItem>
+              <FaqItem question={<>What should I evaluate during inspection?</>}>
+              <ul className="tf-list">
+                <li><span className="tf-dot" /><strong>Separate utility meters</strong> for electric, gas, and water</li>
+                <li><span className="tf-dot" /><strong>Legal unit configurations</strong>, each with its own kitchen, bath, sleeping area, and egress</li>
+                <li><span className="tf-dot" /><strong>Structural systems</strong>, foundation, roof age, plumbing, and electrical capacity</li>
+                <li><span className="tf-dot" /><strong>Signs of unpermitted work</strong> and <strong>fire safety compliance</strong></li>
+              </ul>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Start your 2 family house search today</h2>
             <p>Finding the right two-family house in NYC takes an experienced buyer's agent who understands legal configuration, realistic investment analysis, and neighborhood rental demand. I guide every client from initial consultation through closing so you know exactly what you're buying, what it costs to operate, and what it can realistically earn.</p>
 
@@ -160,7 +167,7 @@ export default function TwoFamilyContent() {
               <div className="tf-cta-title">Ready to buy a two-family home the smart way?</div>
               <p>Twenty minutes on the phone is all it takes to map out your next move.</p>
               <div className="tf-cta-actions">
-                <a href="tel:646-970-1078" className="tf-cta-tel">Call 1-646-970-1078</a>
+                <a href="tel:+16469701078" className="tf-cta-tel">Call 1-646-970-1078</a>
                 <a href="https://calendly.com/montfort" className="tf-cta-book">Schedule a Consultation</a>
               </div>
               <div className="tf-cta-meta">8 West 126th Street, New York, NY 10027 · <a href="mailto:sm@montfortre.com" className="tf-cta-mail">sm@montfortre.com</a></div>

@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +46,7 @@ export default function SellingCondosInNycContent() {
               smoothly from listing to closing.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -56,6 +58,7 @@ export default function SellingCondosInNycContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/selling-condos-nyc.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -420,162 +423,169 @@ export default function SellingCondosInNycContent() {
                 loading="lazy"
               />
             </div>
-            <h3>How long does it typically take to sell a condo in NYC?</h3>
-            <p>
-              The selling process in NYC takes two to four months from listing to closing. From listing to contract
-              acceptance, expect approximately 2–3 months depending on pricing accuracy, property condition, and market
-              demand. Once under contract, financed deals generally close in 60–90 days; all-cash transactions sometimes
-              in 30–45 days.
-            </p>
-            <p>
-              Compare that to co op sales, which often take 90–120 days from contract to closing due to board approval
-              requirements, interviews, and extensive board package review. This is one of the key reasons condo sales
-              typically move faster than co-op sales.
-            </p>
-            <p>
-              Spring is generally the best time to list condos in NYC, though fall also produces strong buyer activity. I
-              always advise sellers to be aware of seasonal patterns and plan their listing timeline accordingly.
-            </p>
-            <h3>What documents do I need to prepare before listing my condo?</h3>
-            <p>
-              Sellers must prepare building documents before listing their condo. One of the first things I tell every
-              seller is to gather the necessary paperwork in advance:
-            </p>
-            <ul className="tf-list">
-              <li>
-                <span className="tf-dot" />
-                <strong>Offering plan</strong> (especially for condo conversions or sponsor units)
-              </li>
-              <li>
-                <span className="tf-dot" />
-                <strong>Building financial statements</strong> and recent board meeting minutes
-              </li>
-              <li>
-                <span className="tf-dot" />
-                <strong>Reserve fund status</strong> and history of assessments
-              </li>
-              <li>
-                <span className="tf-dot" />
-                <strong>Monthly common charge statement</strong> and current budget
-              </li>
-              <li>
-                <span className="tf-dot" />
-                <strong>Property tax bills</strong> and proof of any active tax abatements
-              </li>
-              <li>
-                <span className="tf-dot" />
-                <strong>Certificate of occupancy</strong> (if relevant)
-              </li>
-              <li>
-                <span className="tf-dot" />
-                <strong>Alteration agreement history</strong> for any renovations performed
-              </li>
-              <li>
-                <span className="tf-dot" />
-                <strong>Title deed</strong> and proof of ownership
-              </li>
-            </ul>
-            <p>
-              Be transparent about building information to speed up transactions. Having this paperwork organized before
-              your first showing eliminates delays that can kill deals and demonstrates to every buyer and their real
-              estate agent that you&apos;re a serious, prepared seller.
-            </p>
-            <h3>Should I make renovations before selling my condo?</h3>
-            <p>
-              This is one of the most common questions I discuss with sellers, and the answer depends entirely on your
-              unit&apos;s condition relative to comparable sales in your building and neighborhood.
-            </p>
-            <p>
-              <strong>Cosmetic improvements typically deliver the best return.</strong> Paint, updated light fixtures,
-              modern hardware, and minor kitchen or bathroom refreshes often yield outsized results. Professional staging
-              increases sale prices by 6%-far more cost-effective than a $150,000 kitchen renovation.
-            </p>
-            <p>
-              <strong>Major renovations are risky unless your unit is significantly below neighborhood standards.</strong>{" "}
-              A full kitchen and bathroom renovation in a Manhattan luxury condo can cost $80,000–$200,000+, and the
-              return isn&apos;t guaranteed. Over-upgrading relative to comparables risks overcapitalizing-spending money
-              you won&apos;t recover at closing.
-            </p>
-            <p>
-              My advice: decide based on data, not hope. I walk through every unit and recommend specific improvements
-              calibrated to what buyers in that building and neighborhood expect to pay for.
-            </p>
-            <h3>What are the typical seller fees and closing costs?</h3>
-            <p>
-              Closing costs can range from hundreds to thousands of dollars depending on your sale price and transaction
-              structure. Here&apos;s what sellers should expect to pay:
-            </p>
-            <div className="tf-table-wrap">
-              <table className="tf-table">
-                <thead>
-                  <tr>
-                    <th>Cost Category</th>
-                    <th>Typical Range</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <strong>Broker Commission</strong>
-                    </td>
-                    <td>5–6% of the sale price</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>NYC Transfer Tax (Sale Price Up to $500,000)</strong>
-                    </td>
-                    <td>1.00%</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>NYC Transfer Tax (Sale Price Above $500,000)</strong>
-                    </td>
-                    <td>1.425%</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Attorney / Legal Fees</strong>
-                    </td>
-                    <td>$2,000–$5,000+</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Move-Out or Transfer Fees</strong>
-                    </td>
-                    <td>Varies by building</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Building Application Fees</strong>
-                    </td>
-                    <td>Varies</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p>
-              Sellers may incur move-out or transfer fees from condo buildings, and broker commissions in NYC typically
-              range from 5% to 6% of the sale price. Condos usually have higher closing costs than co-ops due to transfer
-              taxes and recording fees. I always walk sellers through a detailed cost estimate before we sign the listing
-              agreement so there are no surprises at closing.
-            </p>
-            <h3>How do common charges affect my condo&apos;s sale price?</h3>
-            <p>
-              Every buyer and their buyer&apos;s broker will scrutinize your building&apos;s common charges. In Manhattan,
-              the average is approximately $3.20 per square foot-for a typical 700-square-foot one-bedroom, that&apos;s
-              roughly $2,200+ per month before property taxes.
-            </p>
-            <p>
-              High common charges aren&apos;t necessarily a deal-killer if they&apos;re justified by strong amenities,
-              services, and building financial health. But unexplained high charges-or a building with a history of
-              frequent assessments and deferred maintenance-will drive buyers away or lead to aggressive price
-              negotiations.
-            </p>
-            <p>
-              Managing building-specific processes is critical for successfully selling condos in NYC. I always review
-              the condo association&apos;s financials, reserve fund, and assessment history before we set pricing,
-              because these factors directly influence what a buyer is willing to pay.
-            </p>
+            <FaqAccordion>
+              <FaqItem question={<>How long does it typically take to sell a condo in NYC?</>}>
+              <p>
+                The selling process in NYC takes two to four months from listing to closing. From listing to contract
+                acceptance, expect approximately 2–3 months depending on pricing accuracy, property condition, and market
+                demand. Once under contract, financed deals generally close in 60–90 days; all-cash transactions sometimes
+                in 30–45 days.
+              </p>
+              <p>
+                Compare that to co op sales, which often take 90–120 days from contract to closing due to board approval
+                requirements, interviews, and extensive board package review. This is one of the key reasons condo sales
+                typically move faster than co-op sales.
+              </p>
+              <p>
+                Spring is generally the best time to list condos in NYC, though fall also produces strong buyer activity. I
+                always advise sellers to be aware of seasonal patterns and plan their listing timeline accordingly.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What documents do I need to prepare before listing my condo?</>}>
+              <p>
+                Sellers must prepare building documents before listing their condo. One of the first things I tell every
+                seller is to gather the necessary paperwork in advance:
+              </p>
+              <ul className="tf-list">
+                <li>
+                  <span className="tf-dot" />
+                  <strong>Offering plan</strong> (especially for condo conversions or sponsor units)
+                </li>
+                <li>
+                  <span className="tf-dot" />
+                  <strong>Building financial statements</strong> and recent board meeting minutes
+                </li>
+                <li>
+                  <span className="tf-dot" />
+                  <strong>Reserve fund status</strong> and history of assessments
+                </li>
+                <li>
+                  <span className="tf-dot" />
+                  <strong>Monthly common charge statement</strong> and current budget
+                </li>
+                <li>
+                  <span className="tf-dot" />
+                  <strong>Property tax bills</strong> and proof of any active tax abatements
+                </li>
+                <li>
+                  <span className="tf-dot" />
+                  <strong>Certificate of occupancy</strong> (if relevant)
+                </li>
+                <li>
+                  <span className="tf-dot" />
+                  <strong>Alteration agreement history</strong> for any renovations performed
+                </li>
+                <li>
+                  <span className="tf-dot" />
+                  <strong>Title deed</strong> and proof of ownership
+                </li>
+              </ul>
+              <p>
+                Be transparent about building information to speed up transactions. Having this paperwork organized before
+                your first showing eliminates delays that can kill deals and demonstrates to every buyer and their real
+                estate agent that you&apos;re a serious, prepared seller.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Should I make renovations before selling my condo?</>}>
+              <p>
+                This is one of the most common questions I discuss with sellers, and the answer depends entirely on your
+                unit&apos;s condition relative to comparable sales in your building and neighborhood.
+              </p>
+              <p>
+                <strong>Cosmetic improvements typically deliver the best return.</strong> Paint, updated light fixtures,
+                modern hardware, and minor kitchen or bathroom refreshes often yield outsized results. Professional staging
+                increases sale prices by 6%-far more cost-effective than a $150,000 kitchen renovation.
+              </p>
+              <p>
+                <strong>Major renovations are risky unless your unit is significantly below neighborhood standards.</strong>{" "}
+                A full kitchen and bathroom renovation in a Manhattan luxury condo can cost $80,000–$200,000+, and the
+                return isn&apos;t guaranteed. Over-upgrading relative to comparables risks overcapitalizing-spending money
+                you won&apos;t recover at closing.
+              </p>
+              <p>
+                My advice: decide based on data, not hope. I walk through every unit and recommend specific improvements
+                calibrated to what buyers in that building and neighborhood expect to pay for.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What are the typical seller fees and closing costs?</>}>
+              <p>
+                Closing costs can range from hundreds to thousands of dollars depending on your sale price and transaction
+                structure. Here&apos;s what sellers should expect to pay:
+              </p>
+              <div className="tf-table-wrap">
+                <table className="tf-table">
+                  <thead>
+                    <tr>
+                      <th>Cost Category</th>
+                      <th>Typical Range</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <strong>Broker Commission</strong>
+                      </td>
+                      <td>5–6% of the sale price</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>NYC Transfer Tax (Sale Price Up to $500,000)</strong>
+                      </td>
+                      <td>1.00%</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>NYC Transfer Tax (Sale Price Above $500,000)</strong>
+                      </td>
+                      <td>1.425%</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Attorney / Legal Fees</strong>
+                      </td>
+                      <td>$2,000–$5,000+</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Move-Out or Transfer Fees</strong>
+                      </td>
+                      <td>Varies by building</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Building Application Fees</strong>
+                      </td>
+                      <td>Varies</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                Sellers may incur move-out or transfer fees from condo buildings, and broker commissions in NYC typically
+                range from 5% to 6% of the sale price. Condos usually have higher closing costs than co-ops due to transfer
+                taxes and recording fees. I always walk sellers through a detailed cost estimate before we sign the listing
+                agreement so there are no surprises at closing.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How do common charges affect my condo&apos;s sale price?</>}>
+              <p>
+                Every buyer and their buyer&apos;s broker will scrutinize your building&apos;s common charges. In Manhattan,
+                the average is approximately $3.20 per square foot-for a typical 700-square-foot one-bedroom, that&apos;s
+                roughly $2,200+ per month before property taxes.
+              </p>
+              <p>
+                High common charges aren&apos;t necessarily a deal-killer if they&apos;re justified by strong amenities,
+                services, and building financial health. But unexplained high charges-or a building with a history of
+                frequent assessments and deferred maintenance-will drive buyers away or lead to aggressive price
+                negotiations.
+              </p>
+              <p>
+                Managing building-specific processes is critical for successfully selling condos in NYC. I always review
+                the condo association&apos;s financials, reserve fund, and assessment history before we set pricing,
+                because these factors directly influence what a buyer is willing to pay.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <hr />
             <h2>Ready to Sell Your NYC Condo?</h2>
             <h3>Get Your Free Condo Valuation</h3>
@@ -592,7 +602,7 @@ export default function SellingCondosInNycContent() {
             </p>
             <p className="tf-guide-center">
               <strong>Phone:</strong>{" "}
-              <a href="tel:+1-646-970-1078" className="tf-guide-link">
+              <a href="tel:+16469701078" className="tf-guide-link">
                 1-646-970-1078
               </a>
               {"  "}

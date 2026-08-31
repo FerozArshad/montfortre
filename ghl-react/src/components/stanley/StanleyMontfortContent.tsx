@@ -1,4 +1,5 @@
 import ContactSection from "../shared/ContactSection";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/stanley-page.css";
@@ -6,7 +7,6 @@ import "../../styles/stanley-page.css";
 export default function StanleyMontfortContent() {
   return (
     <div>
-      <PromisesBar variant="light" />
       <section className="stan-hero" data-screen-label="Stanley hero">
         <div className="stan-hero-ring stan-hero-ring--tr" />
         <div className="stan-hero-ring stan-hero-ring--bl" />
@@ -15,12 +15,13 @@ export default function StanleyMontfortContent() {
             <div className="stan-hero-halo" />
             <div className="stan-hero-dot" />
             <div className="stan-hero-photo">
-              <img src="/redesign-assets/stanley-montfort-bio.webp" alt="Stanley Montfort" />
+              <img src="/redesign-assets/stanley-montfort-hero.png" alt="Stanley Montfort" />
             </div>
             <div className="stan-hero-sales">
               <div className="stan-hero-sales-num">$1B+</div>
               <div className="stan-hero-sales-label">In Brownstone Sales</div>
             </div>
+            <HeroGoogleRating prefix="stan" />
           </div>
           <div data-reveal="">
             <div className="stan-hero-kicker">
@@ -40,7 +41,7 @@ export default function StanleyMontfortContent() {
               </a>
             </div>
             <div className="stan-hero-contact">
-              <a href="tel:9084146006" className="stan-hero-link">
+              <a href="tel:+19084146006" className="stan-hero-link">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
@@ -58,6 +59,8 @@ export default function StanleyMontfortContent() {
         </div>
       </section>
 
+      <PromisesBar variant="light" />
+
       <section className="stan-stats" data-screen-label="Stats">
         <div className="stan-stats-inner">
           <div data-reveal="" className="stan-stats-item">
@@ -65,16 +68,16 @@ export default function StanleyMontfortContent() {
             <p>In brownstone &amp; townhouse sales facilitated</p>
           </div>
           <div data-reveal="" className="stan-stats-item stan-stats-item--rule">
-            <div className="stan-stats-num">Serhant</div>
-            <p>One of New York&apos;s most renowned brokerages</p>
+            <div className="stan-stats-num">NYC</div>
+            <p>Townhouses, condos, co-ops and new development citywide</p>
           </div>
           <div data-reveal="" className="stan-stats-item stan-stats-item--rule">
             <div className="stan-stats-num">JD</div>
             <p>Fordham University, with a Master&apos;s in IPED</p>
           </div>
           <div data-reveal="" className="stan-stats-item stan-stats-item--rule">
-            <div className="stan-stats-num">Harlem</div>
-            <p>Established the townhouse market at Leslie J. Garfield</p>
+            <div className="stan-stats-num">Brownstone Expert</div>
+            <p>Established in the Harlem townhouse and brownstone market</p>
           </div>
         </div>
       </section>
@@ -88,7 +91,7 @@ export default function StanleyMontfortContent() {
             Since the start of the pandemic, I&apos;ve played a crucial role in facilitating over one billion dollars worth of brownstone sales in New York City. I&apos;m a recognized expert in the city&apos;s brownstone and townhouse market, with extensive experience on both the sell side and buy side, thanks to a background rooted in the military and law.
           </p>
           <p>
-            I honed my skills at Leslie J. Garfield, where I established myself in the Harlem townhouse market and assisted in numerous co-ownership transactions, including more complicated deals involving SROs, seller financing, and negotiating with tenants, always leaving every party satisfied.
+            I honed my skills in the Harlem townhouse market and assisted in numerous co-ownership transactions, including more complicated deals involving SROs, seller financing, and negotiating with tenants, always leaving every party satisfied.
           </p>
         </div>
       </section>
@@ -106,10 +109,10 @@ export default function StanleyMontfortContent() {
                 Stanley Montfort is a dynamic, accomplished real estate professional whose expertise and passion for the industry have made him a standout in New York City. With a background in <strong>law and the military</strong>, he has made his mark in the city&apos;s competitive brownstone and townhouse market, playing a pivotal role in over <strong>one billion dollars</strong> worth of sales.
               </p>
               <p>
-                At <strong>Leslie J. Garfield</strong>, he established himself as an expert in the Harlem townhouse market, renowned for navigating even the most complex co-ownership transactions with ease, working with SROs, negotiating with tenants, and securing seller financing while keeping every party satisfied.
+                He established himself as an expert in the Harlem townhouse market, renowned for navigating even the most complex co-ownership transactions with ease, working with SROs, negotiating with tenants, and securing seller financing while keeping every party satisfied.
               </p>
               <p>
-                Now at <strong>Serhant</strong>, one of New York&apos;s most renowned brokerages, Stanley has expanded his expertise to condos, co-ops, and new developments while maintaining a stronghold on the townhouse and brownstone market.
+                Stanley has since expanded his expertise to condos, co-ops, and new developments while maintaining a stronghold on the townhouse and brownstone market.
               </p>
               <p>
                 What sets Stanley apart is his ability to merge creativity with precision. Deep marketing knowledge, strategic thinking, and impeccable analytical skills let him tackle the most challenging deals with confidence and positive outcomes for everyone involved.
@@ -149,7 +152,7 @@ export default function StanleyMontfortContent() {
             </div>
           </div>
           <div data-reveal="" className="stan-connect-grid">
-            <a href="tel:9084146006" className="stan-connect-card">
+            <a href="tel:+19084146006" className="stan-connect-card">
               <span className="stan-connect-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F1729" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -172,7 +175,7 @@ export default function StanleyMontfortContent() {
                 <span className="stan-connect-card-value">sm@montfortre.com</span>
               </span>
             </a>
-            <a href="https://www.instagram.com/uptownbrownstones/" target="_blank" rel="noopener" className="stan-connect-card">
+            <a href="https://www.instagram.com/stanleymontfort/" target="_blank" rel="noopener" className="stan-connect-card">
               <span className="stan-connect-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                   <rect x="3" y="3" width="18" height="18" rx="5" stroke="#0F1729" strokeWidth="1.9" />
@@ -182,7 +185,7 @@ export default function StanleyMontfortContent() {
               </span>
               <span>
                 <span className="stan-connect-card-kicker">Instagram</span>
-                <span className="stan-connect-card-value">@uptownbrownstones</span>
+                <span className="stan-connect-card-value">@stanleymontfort</span>
               </span>
             </a>
             <a href="https://www.linkedin.com/in/stanley-p-montfort-b3675548/" target="_blank" rel="noopener" className="stan-connect-card">

@@ -3,6 +3,8 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/bedford-stuyvesant-sros-page.css";
 import "../../styles/contact-section.css";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 
 const NEWS_ARTICLES = [
@@ -43,7 +45,7 @@ export default function BedfordStuyvesantSrosContent() {
               We'll help you evaluate Bedford-Stuyvesant SRO opportunities with confidence by identifying potential compliance concerns, maintenance liabilities, and investment risks before you buy
             </p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:646-970-1078" className="nbhd-hero-tel">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">
@@ -51,10 +53,18 @@ export default function BedfordStuyvesantSrosContent() {
               </a>
             </div>
           </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/bedford-stuyvesant-sros.png" alt="Bedford-Stuyvesant SRO buildings" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
+          </div>
         </div>
       </section>
 
       <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Bedford-Stuyvesant" propertyType="SRO" label="Bedford-Stuyvesant SROs" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">

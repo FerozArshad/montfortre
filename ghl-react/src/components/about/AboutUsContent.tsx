@@ -2,6 +2,7 @@ import ContactSection from "../shared/ContactSection";
 import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/about-page.css";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEIGHBORHOODS = [
@@ -107,7 +108,7 @@ export default function AboutUsContent() {
               Whether you&apos;re buying your first home, investing in a brownstone, or selling a valuable property, Stanley provides the expertise, market insight, and personalized guidance needed to make informed decisions and achieve the best possible outcome.
             </p>
             <div className="abt-hero-ctas">
-              <a href="tel:646-970-1078" className="abt-hero-tel">
+              <a href="tel:+16469701078" className="abt-hero-tel">
                 Call 1-646-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="abt-hero-book">
@@ -121,6 +122,7 @@ export default function AboutUsContent() {
             <div className="abt-hero-photo">
               <img src="/redesign-assets/stanley-portrait.webp" alt="Stanley Montfort" />
             </div>
+            <HeroGoogleRating prefix="solo" />
           </div>
         </div>
       </section>
@@ -151,10 +153,10 @@ export default function AboutUsContent() {
                 Stanley Montfort is a dynamic, accomplished real estate professional whose expertise and passion for the industry have made him a standout in New York City. With a background in <strong>law and the military</strong>, he has made his mark in the city&apos;s competitive brownstone and townhouse market, playing a pivotal role in over <strong>one billion dollars</strong> worth of sales.
               </p>
               <p>
-                At <strong>Leslie J. Garfield</strong>, he established himself as an expert in the Harlem townhouse market, renowned for navigating even the most complex co-ownership transactions with ease, working with SROs, negotiating with tenants, and securing seller financing while keeping every party satisfied.
+                He established himself as an expert in the Harlem townhouse market, renowned for navigating even the most complex co-ownership transactions with ease, working with SROs, negotiating with tenants, and securing seller financing while keeping every party satisfied.
               </p>
               <p>
-                Now at <strong>Serhant</strong>, one of New York&apos;s most renowned brokerages, Stanley has expanded his expertise to condos, co-ops, and new developments while maintaining a stronghold on the townhouse and brownstone market.
+                Stanley has since expanded his expertise to condos, co-ops, and new developments while maintaining a stronghold on the townhouse and brownstone market.
               </p>
               <p>
                 What sets Stanley apart is his ability to merge creativity with precision. Deep marketing knowledge, strategic thinking, and impeccable analytical skills let him tackle the most challenging deals with confidence and positive outcomes for everyone involved.

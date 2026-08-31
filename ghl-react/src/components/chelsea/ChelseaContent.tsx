@@ -7,6 +7,7 @@ import ChelseaRealtorArticle from "./ChelseaRealtorArticle";
 
 import "../../styles/harlem-page.css";
 import "../../styles/chelsea-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
 
 const PROPERTY_TYPES = [
   {
@@ -114,6 +115,8 @@ export default function ChelseaContent() {
 
   return (
     <>
+      <NeighborhoodHubHero name="Chelsea" image="chelsea.webp" lead="Lofts, condos, co-ops and townhouses in Chelsea, with straight answers on pricing and timing." />
+
       <ChelseaPoiMap />
       <ChelseaAreaNav />
 
@@ -128,7 +131,7 @@ export default function ChelseaContent() {
               $1,108,683 from the previous period.
             </p>
             <div className="hlm-listings-cta">
-              <a href="/idx/listings/chelsea/" className="hlm-listings-btn">
+              <a href="/idx-sales" className="hlm-listings-btn">
                 View More Listings
               </a>
               <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">

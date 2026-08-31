@@ -358,7 +358,7 @@ export default function HarlemRealtorArticle() {
           <a href="mailto:sm@montfortre.com">sm@montfortre.com</a> <strong>Address:</strong> 8 West 126th Street, New York NY 10027
         </p>
         <div className="hlm-article-ctas">
-          <a href="tel:646-970-1078" className="hlm-article-cta hlm-article-cta--ghost">
+          <a href="tel:+16469701078" className="hlm-article-cta hlm-article-cta--ghost">
             Call For Information
           </a>
           <a href="https://calendly.com/montfort" className="hlm-article-cta hlm-article-cta--solid">

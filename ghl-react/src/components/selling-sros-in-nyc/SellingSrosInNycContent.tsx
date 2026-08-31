@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -45,7 +47,7 @@ export default function SellingSrosInNycContent() {
               complications
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -60,6 +62,7 @@ export default function SellingSrosInNycContent() {
                 alt="Selling SROs in NYC"
               />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -376,79 +379,87 @@ export default function SellingSrosInNycContent() {
             </p>
             <hr />
             <h2>Frequently Asked Questions About Selling SRO Properties</h2>
-            <h3>What makes selling an SRO different from selling other rental properties?</h3>
-            <p>
-              SROs are classified as Class B multiple dwellings, subject to different regulations than standard Class A
-              apartments. SROs typically feature shared kitchens and bathrooms, and SRO properties face strict
-              regulations from HPD and DOB that don&apos;t apply to conventional rental buildings. Buyers evaluate legal
-              occupancy classification, violation history, tenant protections, and compliance with multiple dwelling
-              law before they evaluate the physical condition. Rent regulation compliance is critical in selling SRO
-              properties-a subject that requires careful documentation and often legal counsel.
-            </p>
-            <p>
-              College dormitories, luxury hotels, and certain institutional housing are specifically excluded from SRO
-              definitions, even though they may share some physical characteristics with SRO units.
-            </p>
-            <h3>Do I need a Certificate of No Harassment to sell my SRO?</h3>
-            <p>
-              A Certificate of No Harassment is required for SRO conversion and certain alterations-not for the sale
-              itself. However, if a buyer plans to convert the building to Class A apartments, add or remove kitchens or
-              bathrooms, or demolish the structure, they will need a CONH before DOB will approve construction
-              documents. Many SRO owners seek to convert to Class A apartments, but this requires obtaining a CONH first.
-              Because obtaining a Certificate of No Harassment can take years, understanding whether this requirement
-              applies significantly affects buyer interest, offer terms, and your sale timeline.
-            </p>
-            <h3>Can I sell with existing tenants in place?</h3>
-            <p>
-              Yes-and in most SRO sales, you will. The sale of SRO properties does not terminate tenant leases or
-              occupancy rights. Transparency is key: provide complete lease documentation, occupancy history, and
-              clarify each tenant&apos;s regulatory protection status. SRO tenants may be protected under rent
-              stabilization laws if the building was built before 1969. Buyers will heavily discount uncertain or
-              problematic tenant situations, so clean documentation typically produces better offers. Tenant turnover
-              in SRO properties can be high, ranging from 40% to 60%, which is a factor buyers consider when projecting
-              future rental income.
-            </p>
-            <h3>How do building violations affect the sale process?</h3>
-            <p>
-              Open HPD and DOB violations reduce buyer confidence, may block financing, and can delay or prevent
-              closing. I&apos;ve seen sellers lose hundreds of thousands of dollars in negotiated value because open
-              violations gave buyers leverage to demand price reductions. Resolving violations before listing often
-              yields better net proceeds than pricing the property expecting the buyer to assume risk. SRO buildings
-              require frequent repairs due to shared facilities, so staying ahead of maintenance issues is both an
-              operational and a transactional priority.
-            </p>
-            <h3>What documentation do buyers expect during due diligence?</h3>
-            <p>Experienced SRO investors expect a comprehensive package that includes:</p>
-            <ul className="tf-list">
-              <li><span className="tf-dot" />Certificate of Occupancy (current, showing SRO/Class B designation)</li>
-              <li><span className="tf-dot" />DOB building records: occupancy classification, alteration permits, open and resolved violations</li>
-              <li><span className="tf-dot" />HPD records: violation history, habitability complaints</li>
-              <li><span className="tf-dot" />Tenant leases, occupancy agreements, rent rolls, payment histories</li>
-              <li><span className="tf-dot" />Building plans, architectural drawings, alteration history</li>
-              <li><span className="tf-dot" />Proof of compliance with safety and fire codes (sprinklers, smoke detectors, egress)</li>
-              <li><span className="tf-dot" />Zoning documentation, including any special district designations</li>
-              <li><span className="tf-dot" />Income and expense statements</li>
-            </ul>
-            <p>
-              Assembling this documentation before going to market signals to buyers that you&apos;re a serious,
-              organized seller-and it accelerates the transaction. Days on market for standard residential properties
-              in Manhattan recently averaged approximately 80–90 days; SROs tend to take longer, especially when legal
-              or occupancy issues are unresolved.
-            </p>
-            <h3>What is happening with shared housing laws that might affect my sale?</h3>
-            <p>
-              The Shared Housing Law (Int. 66 of 2026) takes effect January 1, 2027, allowing new shared housing rooming
-              units within Class A multiple dwellings under certain rules. This may shift investor expectations for SRO
-              conversions and create new development interest. Additionally, the{" "}
-              <a
-                href="https://www.nyc.gov/site/specialenforcement/reporting-law/class-b-mdl.page"
-                className="tf-guide-link"
-              >
-                OSE&apos;s Class B Multiple Dwellings List
-              </a>
-              , updated June 4, 2026, identifies buildings legally recognized as Class B-sellers should verify whether
-              their building is included, as this can affect certain exemptions and buyer perceptions.
-            </p>
+            <FaqAccordion>
+              <FaqItem question={<>What makes selling an SRO different from selling other rental properties?</>}>
+              <p>
+                SROs are classified as Class B multiple dwellings, subject to different regulations than standard Class A
+                apartments. SROs typically feature shared kitchens and bathrooms, and SRO properties face strict
+                regulations from HPD and DOB that don&apos;t apply to conventional rental buildings. Buyers evaluate legal
+                occupancy classification, violation history, tenant protections, and compliance with multiple dwelling
+                law before they evaluate the physical condition. Rent regulation compliance is critical in selling SRO
+                properties-a subject that requires careful documentation and often legal counsel.
+              </p>
+              <p>
+                College dormitories, luxury hotels, and certain institutional housing are specifically excluded from SRO
+                definitions, even though they may share some physical characteristics with SRO units.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Do I need a Certificate of No Harassment to sell my SRO?</>}>
+              <p>
+                A Certificate of No Harassment is required for SRO conversion and certain alterations-not for the sale
+                itself. However, if a buyer plans to convert the building to Class A apartments, add or remove kitchens or
+                bathrooms, or demolish the structure, they will need a CONH before DOB will approve construction
+                documents. Many SRO owners seek to convert to Class A apartments, but this requires obtaining a CONH first.
+                Because obtaining a Certificate of No Harassment can take years, understanding whether this requirement
+                applies significantly affects buyer interest, offer terms, and your sale timeline.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Can I sell with existing tenants in place?</>}>
+              <p>
+                Yes-and in most SRO sales, you will. The sale of SRO properties does not terminate tenant leases or
+                occupancy rights. Transparency is key: provide complete lease documentation, occupancy history, and
+                clarify each tenant&apos;s regulatory protection status. SRO tenants may be protected under rent
+                stabilization laws if the building was built before 1969. Buyers will heavily discount uncertain or
+                problematic tenant situations, so clean documentation typically produces better offers. Tenant turnover
+                in SRO properties can be high, ranging from 40% to 60%, which is a factor buyers consider when projecting
+                future rental income.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How do building violations affect the sale process?</>}>
+              <p>
+                Open HPD and DOB violations reduce buyer confidence, may block financing, and can delay or prevent
+                closing. I&apos;ve seen sellers lose hundreds of thousands of dollars in negotiated value because open
+                violations gave buyers leverage to demand price reductions. Resolving violations before listing often
+                yields better net proceeds than pricing the property expecting the buyer to assume risk. SRO buildings
+                require frequent repairs due to shared facilities, so staying ahead of maintenance issues is both an
+                operational and a transactional priority.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What documentation do buyers expect during due diligence?</>}>
+              <p>Experienced SRO investors expect a comprehensive package that includes:</p>
+              <ul className="tf-list">
+                <li><span className="tf-dot" />Certificate of Occupancy (current, showing SRO/Class B designation)</li>
+                <li><span className="tf-dot" />DOB building records: occupancy classification, alteration permits, open and resolved violations</li>
+                <li><span className="tf-dot" />HPD records: violation history, habitability complaints</li>
+                <li><span className="tf-dot" />Tenant leases, occupancy agreements, rent rolls, payment histories</li>
+                <li><span className="tf-dot" />Building plans, architectural drawings, alteration history</li>
+                <li><span className="tf-dot" />Proof of compliance with safety and fire codes (sprinklers, smoke detectors, egress)</li>
+                <li><span className="tf-dot" />Zoning documentation, including any special district designations</li>
+                <li><span className="tf-dot" />Income and expense statements</li>
+              </ul>
+              <p>
+                Assembling this documentation before going to market signals to buyers that you&apos;re a serious,
+                organized seller-and it accelerates the transaction. Days on market for standard residential properties
+                in Manhattan recently averaged approximately 80–90 days; SROs tend to take longer, especially when legal
+                or occupancy issues are unresolved.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What is happening with shared housing laws that might affect my sale?</>}>
+              <p>
+                The Shared Housing Law (Int. 66 of 2026) takes effect January 1, 2027, allowing new shared housing rooming
+                units within Class A multiple dwellings under certain rules. This may shift investor expectations for SRO
+                conversions and create new development interest. Additionally, the{" "}
+                <a
+                  href="https://www.nyc.gov/site/specialenforcement/reporting-law/class-b-mdl.page"
+                  className="tf-guide-link"
+                >
+                  OSE&apos;s Class B Multiple Dwellings List
+                </a>
+                , updated June 4, 2026, identifies buildings legally recognized as Class B-sellers should verify whether
+                their building is included, as this can affect certain exemptions and buyer perceptions.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <hr />
             <h2>Ready to Sell Your SRO Property?</h2>
             <p>
@@ -463,7 +474,7 @@ export default function SellingSrosInNycContent() {
             </p>
             <p className="tf-guide-center">
               <strong>Phone:</strong>{" "}
-              <a href="tel:+1-646-970-1078" className="tf-guide-link">
+              <a href="tel:+16469701078" className="tf-guide-link">
                 1-646-970-1078
               </a>
               {"  "}

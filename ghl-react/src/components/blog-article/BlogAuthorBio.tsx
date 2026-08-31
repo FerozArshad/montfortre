@@ -18,8 +18,8 @@ export default function BlogAuthorBio() {
               thanks to his military and law background.
             </p>
             <p>
-              Stanley honed his real estate skills at Leslie J. Garfield, where he established himself in the Harlem
-              townhouse market and assisted in numerous co-ownership transactions, including more complicated deals
+              Stanley honed his real estate skills in the Harlem townhouse market and assisted in numerous
+              co-ownership transactions, including more complicated deals
               involving SROs, seller financing, and negotiating with tenants, always leaving all parties satisfied.
             </p>
             <p>

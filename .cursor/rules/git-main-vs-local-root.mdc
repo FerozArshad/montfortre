@@ -68,4 +68,4 @@ When listing files for the user / GHL paste, use **main paths only** (e.g. `src/
 6. `git push -u origin HEAD` then **fast-forward** `git push origin HEAD:main` (not force).
 7. Do **not** merge branches between `local-root` and `main`.
 
-Next unused main worktree after `push17`: **`D:\GHL_Montfort_main_push18`**.
+Next unused main worktree after `push27`: **`D:\GHL_Montfort_main_push28`**.

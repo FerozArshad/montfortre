@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +46,7 @@ export default function NycBrownstoneMortgagesContent() {
               mistakes and ensuring you buy within a budget that supports your long-term financial goals
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
           </div>
@@ -52,6 +54,7 @@ export default function NycBrownstoneMortgagesContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/nyc-brownstone-mortgages.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -214,64 +217,66 @@ export default function NycBrownstoneMortgagesContent() {
               <img src="/redesign-assets/services/nyc-brownstone-mortgages-article-3.png" alt="NYC Brownstone" loading="lazy" />
             </div>
             <h2>Frequently Asked Questions About NYC Brownstone Mortgages</h2>
-            <h3>What makes brownstone financing different from condo or co-op mortgages?</h3>
-            <p>Brownstone financing is more complex for several interconnected reasons. First, the property&apos;s age and condition directly affect loan terms-lenders want to know about the foundation, roof, mechanical systems, and façade before they&apos;ll commit. Inspectors should evaluate foundations, roofs, and mechanical systems thoroughly, and brownstones often have deferred maintenance that impacts the appraised value.</p>
-            <p>Second, many brownstones are in landmark districts affecting renovations. Renovation plans must comply with local zoning laws and may require LPC approval, adding both time and money to the process.</p>
-            <p>Third, appraisal challenges are common. These properties are unique-varying in width, lot depth, interior configuration, and historic details. Automated valuation models often fail, and finding recent comparable sales in landmark districts is genuinely difficult. The appraiser needs experience with brownstones and townhouses to make appropriate adjustments.</p>
-            <p>Fourth, higher purchase prices in New York frequently push buyers into jumbo loans, which come with stricter underwriting requirements. Conventional loans are often not available for high-priced brownstones, and the 2026 conforming loan limit for a one-unit property in high-cost areas is <a href="https://www.fhfa.gov/news/news-release/fhfa-announces-conforming-loan-limit-values-for-2026?utm_source=openai" className="tf-guide-link">$1,249,125</a>. Anything above that becomes a jumbo loan.</p>
-            <p>Finally, mixed-use configurations-a storefront on the ground floor, for example-may require commercial lending or specialized programs. Properties with five or more units require commercial financing entirely, which is a different world from residential mortgage lending.</p>
-
-            <h3>How much should I expect to put down on a NYC brownstone?</h3>
-            <p>This depends heavily on the property type, loan program, and your financial profile. Here&apos;s what I typically see:</p>
-            <div className="tf-table-wrap">
-              <table className="tf-table">
-                <thead><tr><th>Scenario</th><th>Typical Down Payment</th></tr></thead>
-                <tbody>
-                  <tr><td><strong>Conventional Conforming Loan</strong></td><td>20–25%</td></tr>
-                  <tr><td><strong>Jumbo Loan</strong></td><td>25–30%+</td></tr>
-                  <tr><td><strong>Mixed-Use Property</strong></td><td>25–30%+</td></tr>
-                  <tr><td><strong>Brownstones with Four or More Units</strong></td><td>40%</td></tr>
-                  <tr><td><strong>Portfolio Lending (Complex Properties)</strong></td><td>25–40%</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p>Brownstones with four or more units require a 40% down payment from most lenders-a number that catches many buyers off guard. Beyond the down payment, you need enough cash for closing costs (including NYC&apos;s 1.675% mortgage recording tax on first mortgages), inspections, immediate repairs, and several months of reserves. Insurance for brownstones can be more complex due to potential requirement for replacement-cost coverage, which adds to your upfront and ongoing expenses.</p>
-            <p>For buyers who qualify, down payment assistance programs like SONYMA may help. I always recommend discussing these options with your lender early in the process.</p>
-
-            <h3>Can rental income from a multi-family brownstone help with mortgage qualification?</h3>
-            <p>Yes-but with important caveats. Lenders typically count 75% of verified rental income toward qualification. This means you need:</p>
-            <ul className="tf-list">
-              <li><span className="tf-dot" /><strong>Executed leases</strong>: Not verbal agreements. Current, signed lease documents with tenant information.</li>
-              <li><span className="tf-dot" /><strong>Legal occupancy verification</strong>: The units generating rent must be legal according to the property&apos;s Certificate of Occupancy. Non-legal units should not count in DSCR calculations, and lenders will generally exclude that income entirely.</li>
-              <li><span className="tf-dot" /><strong>Rent roll documentation</strong>: A clear accounting of what each unit pays, vacancy history, and lease terms.</li>
-              <li><span className="tf-dot" /><strong>Property management experience</strong>: Some lenders, particularly for jumbo or investment scenarios, want to see that you have experience managing renters or a plan to hire professional management.</li>
-            </ul>
-            <p>Vacant units require market rent analysis and conservative projections-lenders won&apos;t take your optimistic estimate at face value. For Debt Service Coverage Ratio loans, which focus on property income, not personal income, the math centers on Net Operating Income divided by Debt Service. DSCR loans can be powerful for investors, but they require stable, documented income streams.</p>
-            <p>Renting out a room can generate extra income for homeowners, and brownstones can be converted into multi-family units for rental income over time. Short-term rentals can provide income during owner vacations, though NYC&apos;s short-term rental regulations are strict. Landlords enjoy special tax breaks when renting out units-consult a tax professional about depreciation and deductible expenses.</p>
-            <p>One important reality check: evicting tenants in NYC can take years due to tenant protections. Factor this into your investment analysis. The income potential is real, but so are the responsibilities of being a landlord in this city.</p>
-
-            <h3>What financing options exist for brownstones needing major renovations?</h3>
-            <p>Renovation financing is one of the areas where I spend the most time educating buyers. Here are the primary options:</p>
-            <ul className="tf-list">
-              <li><span className="tf-dot" /><strong>FHA 203(k) loans</strong>: FHA 203(k) loans are available for renovation financing. The Standard version covers structural work and major renovations; the Limited version handles non-structural improvements up to approximately $35,000. Funds are held in escrow and released with inspections. These require HUD-approved lenders and consultants.</li>
-              <li><span className="tf-dot" /><strong>Fannie Mae HomeStyle Renovation / Freddie Mac CHOICE Renovation</strong>: Conventional renovation programs that appraise based on &quot;as-completed&quot; value. More flexible than FHA in some respects and may allow investment properties. Private mortgage insurance applies if your loan-to-value exceeds 80%.</li>
-              <li><span className="tf-dot" /><strong>SONYMA RemodelNY / Remodel Historic NY</strong>: A <a href="https://hcr.ny.gov/remodelny?utm_source=openai" className="tf-guide-link">New York State program</a> that combines purchase and repair under one loan. The historic version offers tax credits of approximately 20% for eligible historic repair work, subject to maintaining historic appearance.</li>
-              <li><span className="tf-dot" /><strong>HPD CPAR</strong>: For buildings with 3+ residential units needing moderate rehabilitation, <a href="https://www.nyc.gov/site/hpd/services-and-information/cp-affordable-renovation-loan-program.page?utm_source=openai" className="tf-guide-link">HPD&apos;s CPAR program</a> offers up to $80,000 per unit in subsidy, combining public funding with private financing.</li>
-              <li><span className="tf-dot" /><strong>Portfolio lenders and bridge loans</strong>: For quick purchase followed by long-term refinancing, or for properties too complex for agency programs. Bridge loans carry higher interest but allow you to close fast and renovate before securing permanent financing.</li>
-              <li><span className="tf-dot" /><strong>Cash purchase with renovation financing</strong>: Some buyers with enough cash purchase outright, then secure renovation financing after closing-simplifying the purchase but requiring significant liquid assets.</li>
-            </ul>
-            <p>The key thing I tell buyers: renovation loans add complexity, time, and cost. But for the right property, they let you build equity by purchasing below market value, completing the work, and emerging with a home worth significantly more than you paid. The trade-off is worth it if you go in with realistic renovation costs and a solid contractor.</p>
-
-            <h3>What are the most common financing mistakes brownstone buyers make?</h3>
-            <p>Over 200+ transactions, I&apos;ve seen the same mistakes repeated:</p>
-            <ul className="tf-list">
-              <li><span className="tf-dot" /><strong>Underestimating renovation costs</strong>: Many brownstones look good from the curb but have tens of thousands of dollars in deferred maintenance hiding behind the walls. Get detailed contractor estimates in writing before you make an offer. Buyers are responsible for all repairs and ongoing maintenance in brownstone ownership-there&apos;s no building management to share the costs.</li>
-              <li><span className="tf-dot" /><strong>Appraisal shortfall</strong>: Making an aggressive offer assuming the appraised value will follow. When it doesn&apos;t-and with brownstones, it often doesn&apos;t-you&apos;re left scrambling to cover the gap with additional cash or renegotiating the purchase price.</li>
-              <li><span className="tf-dot" /><strong>Ignoring legal occupancy</strong>: Counting on rental income from unpermitted units or assuming you can legalize them quickly. Lenders either reject that income or discount it heavily. Correcting non-legal units often requires architectural drawings, DOB sign-offs, and significant money.</li>
-              <li><span className="tf-dot" /><strong>Getting pre-approved with the wrong lender</strong>: A pre-approval letter from a lender who doesn&apos;t understand brownstone financing isn&apos;t worth the paper it&apos;s printed on. If your lender has never handled a mixed-use property or a building in a landmark district, you&apos;ll face surprises during underwriting that can kill the deal.</li>
-              <li><span className="tf-dot" /><strong>Not budgeting for the full picture</strong>: Your mortgage payment is just one piece. Factor in property taxes, insurance, maintenance, and potential vacancy if you&apos;re counting on tenant income. The total monthly payment on a brownstone-including all carrying costs-is almost always higher than buyers initially estimate.</li>
-            </ul>
-
+            <FaqAccordion>
+              <FaqItem question={<>What makes brownstone financing different from condo or co-op mortgages?</>}>
+              <p>Brownstone financing is more complex for several interconnected reasons. First, the property&apos;s age and condition directly affect loan terms-lenders want to know about the foundation, roof, mechanical systems, and façade before they&apos;ll commit. Inspectors should evaluate foundations, roofs, and mechanical systems thoroughly, and brownstones often have deferred maintenance that impacts the appraised value.</p>
+              <p>Second, many brownstones are in landmark districts affecting renovations. Renovation plans must comply with local zoning laws and may require LPC approval, adding both time and money to the process.</p>
+              <p>Third, appraisal challenges are common. These properties are unique-varying in width, lot depth, interior configuration, and historic details. Automated valuation models often fail, and finding recent comparable sales in landmark districts is genuinely difficult. The appraiser needs experience with brownstones and townhouses to make appropriate adjustments.</p>
+              <p>Fourth, higher purchase prices in New York frequently push buyers into jumbo loans, which come with stricter underwriting requirements. Conventional loans are often not available for high-priced brownstones, and the 2026 conforming loan limit for a one-unit property in high-cost areas is <a href="https://www.fhfa.gov/news/news-release/fhfa-announces-conforming-loan-limit-values-for-2026?utm_source=openai" className="tf-guide-link">$1,249,125</a>. Anything above that becomes a jumbo loan.</p>
+              <p>Finally, mixed-use configurations-a storefront on the ground floor, for example-may require commercial lending or specialized programs. Properties with five or more units require commercial financing entirely, which is a different world from residential mortgage lending.</p>
+              </FaqItem>
+              <FaqItem question={<>How much should I expect to put down on a NYC brownstone?</>}>
+              <p>This depends heavily on the property type, loan program, and your financial profile. Here&apos;s what I typically see:</p>
+              <div className="tf-table-wrap">
+                <table className="tf-table">
+                  <thead><tr><th>Scenario</th><th>Typical Down Payment</th></tr></thead>
+                  <tbody>
+                    <tr><td><strong>Conventional Conforming Loan</strong></td><td>20–25%</td></tr>
+                    <tr><td><strong>Jumbo Loan</strong></td><td>25–30%+</td></tr>
+                    <tr><td><strong>Mixed-Use Property</strong></td><td>25–30%+</td></tr>
+                    <tr><td><strong>Brownstones with Four or More Units</strong></td><td>40%</td></tr>
+                    <tr><td><strong>Portfolio Lending (Complex Properties)</strong></td><td>25–40%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>Brownstones with four or more units require a 40% down payment from most lenders-a number that catches many buyers off guard. Beyond the down payment, you need enough cash for closing costs (including NYC&apos;s 1.675% mortgage recording tax on first mortgages), inspections, immediate repairs, and several months of reserves. Insurance for brownstones can be more complex due to potential requirement for replacement-cost coverage, which adds to your upfront and ongoing expenses.</p>
+              <p>For buyers who qualify, down payment assistance programs like SONYMA may help. I always recommend discussing these options with your lender early in the process.</p>
+              </FaqItem>
+              <FaqItem question={<>Can rental income from a multi-family brownstone help with mortgage qualification?</>}>
+              <p>Yes-but with important caveats. Lenders typically count 75% of verified rental income toward qualification. This means you need:</p>
+              <ul className="tf-list">
+                <li><span className="tf-dot" /><strong>Executed leases</strong>: Not verbal agreements. Current, signed lease documents with tenant information.</li>
+                <li><span className="tf-dot" /><strong>Legal occupancy verification</strong>: The units generating rent must be legal according to the property&apos;s Certificate of Occupancy. Non-legal units should not count in DSCR calculations, and lenders will generally exclude that income entirely.</li>
+                <li><span className="tf-dot" /><strong>Rent roll documentation</strong>: A clear accounting of what each unit pays, vacancy history, and lease terms.</li>
+                <li><span className="tf-dot" /><strong>Property management experience</strong>: Some lenders, particularly for jumbo or investment scenarios, want to see that you have experience managing renters or a plan to hire professional management.</li>
+              </ul>
+              <p>Vacant units require market rent analysis and conservative projections-lenders won&apos;t take your optimistic estimate at face value. For Debt Service Coverage Ratio loans, which focus on property income, not personal income, the math centers on Net Operating Income divided by Debt Service. DSCR loans can be powerful for investors, but they require stable, documented income streams.</p>
+              <p>Renting out a room can generate extra income for homeowners, and brownstones can be converted into multi-family units for rental income over time. Short-term rentals can provide income during owner vacations, though NYC&apos;s short-term rental regulations are strict. Landlords enjoy special tax breaks when renting out units-consult a tax professional about depreciation and deductible expenses.</p>
+              <p>One important reality check: evicting tenants in NYC can take years due to tenant protections. Factor this into your investment analysis. The income potential is real, but so are the responsibilities of being a landlord in this city.</p>
+              </FaqItem>
+              <FaqItem question={<>What financing options exist for brownstones needing major renovations?</>}>
+              <p>Renovation financing is one of the areas where I spend the most time educating buyers. Here are the primary options:</p>
+              <ul className="tf-list">
+                <li><span className="tf-dot" /><strong>FHA 203(k) loans</strong>: FHA 203(k) loans are available for renovation financing. The Standard version covers structural work and major renovations; the Limited version handles non-structural improvements up to approximately $35,000. Funds are held in escrow and released with inspections. These require HUD-approved lenders and consultants.</li>
+                <li><span className="tf-dot" /><strong>Fannie Mae HomeStyle Renovation / Freddie Mac CHOICE Renovation</strong>: Conventional renovation programs that appraise based on &quot;as-completed&quot; value. More flexible than FHA in some respects and may allow investment properties. Private mortgage insurance applies if your loan-to-value exceeds 80%.</li>
+                <li><span className="tf-dot" /><strong>SONYMA RemodelNY / Remodel Historic NY</strong>: A <a href="https://hcr.ny.gov/remodelny?utm_source=openai" className="tf-guide-link">New York State program</a> that combines purchase and repair under one loan. The historic version offers tax credits of approximately 20% for eligible historic repair work, subject to maintaining historic appearance.</li>
+                <li><span className="tf-dot" /><strong>HPD CPAR</strong>: For buildings with 3+ residential units needing moderate rehabilitation, <a href="https://www.nyc.gov/site/hpd/services-and-information/cp-affordable-renovation-loan-program.page?utm_source=openai" className="tf-guide-link">HPD&apos;s CPAR program</a> offers up to $80,000 per unit in subsidy, combining public funding with private financing.</li>
+                <li><span className="tf-dot" /><strong>Portfolio lenders and bridge loans</strong>: For quick purchase followed by long-term refinancing, or for properties too complex for agency programs. Bridge loans carry higher interest but allow you to close fast and renovate before securing permanent financing.</li>
+                <li><span className="tf-dot" /><strong>Cash purchase with renovation financing</strong>: Some buyers with enough cash purchase outright, then secure renovation financing after closing-simplifying the purchase but requiring significant liquid assets.</li>
+              </ul>
+              <p>The key thing I tell buyers: renovation loans add complexity, time, and cost. But for the right property, they let you build equity by purchasing below market value, completing the work, and emerging with a home worth significantly more than you paid. The trade-off is worth it if you go in with realistic renovation costs and a solid contractor.</p>
+              </FaqItem>
+              <FaqItem question={<>What are the most common financing mistakes brownstone buyers make?</>}>
+              <p>Over 200+ transactions, I&apos;ve seen the same mistakes repeated:</p>
+              <ul className="tf-list">
+                <li><span className="tf-dot" /><strong>Underestimating renovation costs</strong>: Many brownstones look good from the curb but have tens of thousands of dollars in deferred maintenance hiding behind the walls. Get detailed contractor estimates in writing before you make an offer. Buyers are responsible for all repairs and ongoing maintenance in brownstone ownership-there&apos;s no building management to share the costs.</li>
+                <li><span className="tf-dot" /><strong>Appraisal shortfall</strong>: Making an aggressive offer assuming the appraised value will follow. When it doesn&apos;t-and with brownstones, it often doesn&apos;t-you&apos;re left scrambling to cover the gap with additional cash or renegotiating the purchase price.</li>
+                <li><span className="tf-dot" /><strong>Ignoring legal occupancy</strong>: Counting on rental income from unpermitted units or assuming you can legalize them quickly. Lenders either reject that income or discount it heavily. Correcting non-legal units often requires architectural drawings, DOB sign-offs, and significant money.</li>
+                <li><span className="tf-dot" /><strong>Getting pre-approved with the wrong lender</strong>: A pre-approval letter from a lender who doesn&apos;t understand brownstone financing isn&apos;t worth the paper it&apos;s printed on. If your lender has never handled a mixed-use property or a building in a landmark district, you&apos;ll face surprises during underwriting that can kill the deal.</li>
+                <li><span className="tf-dot" /><strong>Not budgeting for the full picture</strong>: Your mortgage payment is just one piece. Factor in property taxes, insurance, maintenance, and potential vacancy if you&apos;re counting on tenant income. The total monthly payment on a brownstone-including all carrying costs-is almost always higher than buyers initially estimate.</li>
+              </ul>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Start Your Brownstone Purchase Journey</h2>
             <p>If you&apos;re serious about buying a brownstone in New York, the financing conversation should happen before you start attending open houses-not after you&apos;ve found the property you love. I help buyers save time, manage expectations, and avoid costly mistakes by ensuring they understand their financing options from the very beginning.</p>
             <ul className="tf-list">
@@ -281,12 +286,12 @@ export default function NycBrownstoneMortgagesContent() {
             </ul>
             <p>Whether you&apos;re a first-time buyer looking at an affordable entry point in Bed-Stuy, a family searching for space and character in Park Slope, or an investor building a portfolio of multi unit properties in Crown Heights, I bring the experience and relationships to help you navigate this complex market with confidence.</p>
             <p className="tf-guide-center">
-              <strong>Phone:</strong>{" "}<a href="tel:+1-646-970-1078" className="tf-guide-link">1-646-970-1078</a>{"  "}
+              <strong>Phone:</strong>{" "}<a href="tel:+16469701078" className="tf-guide-link">1-646-970-1078</a>{"  "}
               <strong>Email:</strong>{" "}<a href="mailto:sm@montfortre.com" className="tf-guide-link">sm@montfortre.com</a>{"  "}
               <strong>Address:</strong> 8 West 126th Street, New York NY 10027
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">Call For Information</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call For Information</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
           </div>

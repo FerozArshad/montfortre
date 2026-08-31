@@ -7,6 +7,7 @@ import UpperWestSideRealtorArticle from "./UpperWestSideRealtorArticle";
 
 import "../../styles/harlem-page.css";
 import "../../styles/uws-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
 
 const PROPERTY_TYPES = [
   {
@@ -114,6 +115,8 @@ export default function UpperWestSideContent() {
 
   return (
     <>
+      <NeighborhoodHubHero name="Upper West Side" image="upper-west-side.webp" lead="Prewar co-ops, condos and townhouses between the Park and the River, guided by an agent who knows every block." />
+
       <UpperWestSidePoiMap />
       <UpperWestSideAreaNav />
 
@@ -128,7 +131,7 @@ export default function UpperWestSideContent() {
               decrease of $404,178 from the previous period.
             </p>
             <div className="hlm-listings-cta">
-              <a href="/idx/listings/upper-west-side/" className="hlm-listings-btn">
+              <a href="/idx-sales" className="hlm-listings-btn">
                 View More Listings
               </a>
               <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">

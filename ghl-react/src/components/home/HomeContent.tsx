@@ -251,6 +251,16 @@ function mountSociableKitIgFeed(feedRoot: Element, opts?: { force?: boolean }) {
   document.body.appendChild(script);
 }
 
+/** Page the Instagram row by roughly one viewport of posts. */
+function scrollIgFeed(direction: 1 | -1) {
+  const row = document.querySelector<HTMLElement>(".home-ig-feed .sk-ig-all-posts");
+  if (!row) return;
+  const item = row.querySelector<HTMLElement>(".sk-instagram-feed-item");
+  // Fall back to most of the visible width when no post has rendered yet.
+  const step = item ? item.getBoundingClientRect().width + 12 : row.clientWidth * 0.8;
+  row.scrollBy({ left: step * direction * 2, behavior: "smooth" });
+}
+
 /** Strip SociableKIT fixed pixel sizes so CSS can size portrait + landscape evenly. */
 function normalizeSociableKitIgSizing(root: ParentNode = document) {
   root.querySelectorAll<HTMLElement>(".home-ig-feed .sk-ig-post-img").forEach((img) => {
@@ -401,7 +411,7 @@ export default function HomeContent() {
                 <a href="https://calendly.com/montfort" className="home-hero-book">
                   Book Now
                 </a>
-                <a href="tel:646-970-1078" className="home-hero-call">
+                <a href="tel:+16469701078" className="home-hero-call">
                   646-970-1078
                 </a>
               </div>
@@ -881,7 +891,7 @@ export default function HomeContent() {
             <h2>Offered Realtor Services</h2>
             <p>
               Whether you are looking for realtors in{" "}
-              <a href="/featured-brownstones-for-sale/manhattan/west-harlem/" className="home-svcs-inline">
+              <a href="/harlem/" className="home-svcs-inline">
                 Harlem
               </a>
               , Upper Westside, or other parts of NYC our dedicated, and highly qualified team of brokers is at your
@@ -936,21 +946,57 @@ export default function HomeContent() {
               <div className="home-ig-identity">
                 <img
                   className="home-ig-avatar"
-                  src="/redesign-assets/team/stanley-montfort.png"
+                  src="/redesign-assets/team/stanley-montfort-2026.jpg"
                   alt="@stanleymontfort"
                   width={72}
                   height={72}
                 />
                 <h2>@stanleymontfort</h2>
               </div>
-              <a
-                className="home-ig-follow"
-                href="https://www.instagram.com/stanleymontfort/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Follow on Instagram →
-              </a>
+              <div className="home-ig-head-actions">
+                <div className="home-ig-arrows">
+                  <button
+                    type="button"
+                    className="home-ig-nav"
+                    aria-label="Previous Instagram posts"
+                    onClick={() => scrollIgFeed(-1)}
+                  >
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path
+                        d="M12.5 4.5L7 10l5.5 5.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    className="home-ig-nav"
+                    aria-label="Next Instagram posts"
+                    onClick={() => scrollIgFeed(1)}
+                  >
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path
+                        d="M7.5 4.5L13 10l-5.5 5.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <a
+                  className="home-ig-follow"
+                  href="https://www.instagram.com/stanleymontfort/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Follow on Instagram →
+                </a>
+              </div>
             </div>
           </div>
           <div className="home-ig-feed">
@@ -1069,7 +1115,7 @@ export default function HomeContent() {
             </p>
             <p className="home-dl-body">
               Are you in the market for a{" "}
-              <a href="/featured-brownstones-for-sale/harlem-brownstones/" className="home-dl-link">
+              <a href="/harlem-brownstones/" className="home-dl-link">
                 brownstone
               </a>
               ? Taking the time to educate yourself on these 11 costly mistakes can make all the difference between a successful purchase and a disastrous one.

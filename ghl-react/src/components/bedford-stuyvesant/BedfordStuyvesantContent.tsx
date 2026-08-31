@@ -7,6 +7,7 @@ import BedfordStuyvesantRealtorArticle from "./BedfordStuyvesantRealtorArticle";
 
 import "../../styles/harlem-page.css";
 import "../../styles/bedford-stuyvesant-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
 
 const PROPERTY_TYPES = [
   {
@@ -128,6 +129,8 @@ export default function BedfordStuyvesantContent() {
 
   return (
     <>
+      <NeighborhoodHubHero name="Bedford-Stuyvesant" image="bedford-stuyvesant.webp" lead="Brownstones, condos and multifamily homes across Bed-Stuy, with block-by-block guidance you can rely on." />
+
       <BedfordStuyvesantPoiMap />
       <BedfordStuyvesantAreaNav />
 
@@ -142,7 +145,7 @@ export default function BedfordStuyvesantContent() {
               from the previous period.
             </p>
             <div className="hlm-listings-cta">
-              <a href="/idx/listings/bedford-stuyvesant/" className="hlm-listings-btn">
+              <a href="/idx-sales" className="hlm-listings-btn">
                 View More Listings
               </a>
               <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">

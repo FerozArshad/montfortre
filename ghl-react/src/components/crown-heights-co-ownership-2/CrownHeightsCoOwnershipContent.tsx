@@ -3,6 +3,9 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/crown-heights-co-ownership-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 
 const NEWS_ARTICLES = [
@@ -43,7 +46,7 @@ export default function CrownHeightsCoOwnershipContent() {
               We'll help you make a smart co-ownership investment in Crown Heights by structuring the purchase properly, reducing risk, and protecting everyone's interests.
             </p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:646-970-1078" className="nbhd-hero-tel">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">
@@ -51,10 +54,18 @@ export default function CrownHeightsCoOwnershipContent() {
               </a>
             </div>
           </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/crown-heights-coownership.png" alt="Crown Heights co-ownership homes" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
+          </div>
         </div>
       </section>
 
       <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Crown Heights" propertyType="Co-ownership" label="Crown Heights co-ownership homes" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
@@ -144,17 +155,24 @@ export default function CrownHeightsCoOwnershipContent() {
             </blockquote>
             <hr className="nbhd-guide-rule" />
             <h2>Frequently Asked Questions</h2>
-            <h3>How do we determine fair ownership percentages in Crown Heights co-ownership?</h3>
-            <p>One question I always encourage clients to discuss early is what "fair" actually means in their specific situation. The standard approach calculates ownership share as a percentage of total capital investment: down payment contributions, ongoing mortgage payments, and any sweat equity from renovations or construction. For example, if two buyers contribute unequal down payments-say 60% and 40%-their ownership percentages should reflect that split. But what if one partner handles all maintenance and repairs? That labor has value, and it should be documented in your co-ownership agreement with a clear compensation mechanism. Tenancy in Common accommodates unequal percentages; Joint Tenancy requires equal shares.</p>
-            <h3>What happens if one co-owner wants to sell before the others?</h3>
-            <p>This is the single most important scenario your co-ownership agreement must address. A well-drafted agreement includes a right of first refusal giving remaining co-owners the opportunity to buy the departing owner's share before it's offered to outsiders. It also specifies the valuation method-typically an independent appraisal or a pre-agreed formula-and a timeline for completing the buyout. Without these provisions, your only legal option may be a partition action, which is expensive, time-consuming, and unpredictable. An experienced <a href="https://www.nycbar.org/get-legal-help/article/real-property-law/title-real-property/" className="nbhd-guide-link">real estate attorney</a> can draft these provisions to protect all parties.</p>
-            <h3>Can we get financing for a co-ownership purchase in Crown Heights?</h3>
-            <p>Yes, but expect more scrutiny from lenders. Joint mortgages require all co-borrowers to meet credit and income requirements, and lenders will evaluate the financial health of every person on the loan. Some banks are less familiar with TIC arrangements and may impose lower loan-to-value ratios or higher interest rates. For co-op purchases, <a href="https://guardhill.com/product/co-op-loans/" className="nbhd-guide-link">specialist lenders</a> experienced with proprietary lease submissions and board approval processes are often a better fit. I always advise clients to explore multiple financing options before committing.</p>
-            <h3>How do we handle major repairs and property improvements?</h3>
-            <p>When evaluating a shared ownership opportunity, this is an area where I see the most future conflict. Your co-ownership agreement should define thresholds-for example, any repair or improvement over a specific dollar amount requires unanimous agreement, while routine maintenance below that threshold can be approved by any single co-owner. Establish a reserve fund for unexpected costs (Crown Heights brownstones in particular require ongoing attention to roofing, plumbing, and exterior maintenance), and agree in advance on how emergency repairs are authorized and paid for.</p>
-            <h3>Do you help with ongoing co-ownership management after purchase?</h3>
-            <p>Absolutely. Co-ownership isn't a one-time transaction-it's an ongoing relationship that benefits from professional guidance. I offer continued consultation for co-owners navigating property management decisions, handling disagreements, planning for refinancing, or preparing for an eventual sale or buyout. When needed, that support can also include coordinating with a management company. Many of my clients schedule quarterly check-ins during the first year to address questions as they come up in real life, rather than waiting until small issues become major problems. We can also cover practical shared-house details such as furniture planning. I can advise on clear expectations around desk use in common areas. Support may also include resident workshops when that fits the household.</p>
-            <img src="/redesign-assets/hoods/crown-heights-co-ownership-3.jpg" alt="crown heights Main Page" className="nbhd-guide-img" loading="lazy" />
+            <FaqAccordion>
+              <FaqItem question={<>How do we determine fair ownership percentages in Crown Heights co-ownership?</>}>
+              <p>One question I always encourage clients to discuss early is what "fair" actually means in their specific situation. The standard approach calculates ownership share as a percentage of total capital investment: down payment contributions, ongoing mortgage payments, and any sweat equity from renovations or construction. For example, if two buyers contribute unequal down payments-say 60% and 40%-their ownership percentages should reflect that split. But what if one partner handles all maintenance and repairs? That labor has value, and it should be documented in your co-ownership agreement with a clear compensation mechanism. Tenancy in Common accommodates unequal percentages; Joint Tenancy requires equal shares.</p>
+              </FaqItem>
+              <FaqItem question={<>What happens if one co-owner wants to sell before the others?</>}>
+              <p>This is the single most important scenario your co-ownership agreement must address. A well-drafted agreement includes a right of first refusal giving remaining co-owners the opportunity to buy the departing owner's share before it's offered to outsiders. It also specifies the valuation method-typically an independent appraisal or a pre-agreed formula-and a timeline for completing the buyout. Without these provisions, your only legal option may be a partition action, which is expensive, time-consuming, and unpredictable. An experienced <a href="https://www.nycbar.org/get-legal-help/article/real-property-law/title-real-property/" className="nbhd-guide-link">real estate attorney</a> can draft these provisions to protect all parties.</p>
+              </FaqItem>
+              <FaqItem question={<>Can we get financing for a co-ownership purchase in Crown Heights?</>}>
+              <p>Yes, but expect more scrutiny from lenders. Joint mortgages require all co-borrowers to meet credit and income requirements, and lenders will evaluate the financial health of every person on the loan. Some banks are less familiar with TIC arrangements and may impose lower loan-to-value ratios or higher interest rates. For co-op purchases, <a href="https://guardhill.com/product/co-op-loans/" className="nbhd-guide-link">specialist lenders</a> experienced with proprietary lease submissions and board approval processes are often a better fit. I always advise clients to explore multiple financing options before committing.</p>
+              </FaqItem>
+              <FaqItem question={<>How do we handle major repairs and property improvements?</>}>
+              <p>When evaluating a shared ownership opportunity, this is an area where I see the most future conflict. Your co-ownership agreement should define thresholds-for example, any repair or improvement over a specific dollar amount requires unanimous agreement, while routine maintenance below that threshold can be approved by any single co-owner. Establish a reserve fund for unexpected costs (Crown Heights brownstones in particular require ongoing attention to roofing, plumbing, and exterior maintenance), and agree in advance on how emergency repairs are authorized and paid for.</p>
+              </FaqItem>
+              <FaqItem question={<>Do you help with ongoing co-ownership management after purchase?</>}>
+              <p>Absolutely. Co-ownership isn't a one-time transaction-it's an ongoing relationship that benefits from professional guidance. I offer continued consultation for co-owners navigating property management decisions, handling disagreements, planning for refinancing, or preparing for an eventual sale or buyout. When needed, that support can also include coordinating with a management company. Many of my clients schedule quarterly check-ins during the first year to address questions as they come up in real life, rather than waiting until small issues become major problems. We can also cover practical shared-house details such as furniture planning. I can advise on clear expectations around desk use in common areas. Support may also include resident workshops when that fits the household.</p>
+              <img src="/redesign-assets/hoods/crown-heights-co-ownership-3.jpg" alt="crown heights Main Page" className="nbhd-guide-img" loading="lazy" />
+              </FaqItem>
+            </FaqAccordion>
             <h2>Start Your Crown Heights Co-Ownership Journey</h2>
             <h3>Ready to Explore Co-Ownership Options?</h3>
             <p>Crown Heights is a neighborhood where housing opportunities continue to grow-but so do the costs. Over 660 affordable housing units have been developed since 1987, community programs like Crown Gardens offer 240 middle-income homes, and <a href="https://ag.ny.gov/resources/individuals/tenants-homeowners/cooperatives" className="nbhd-guide-link">Mitchell-Lama apartments</a> start at $19,222-but for many buyers, co-ownership represents the most realistic path to building real equity in this neighborhood.</p>
@@ -163,7 +181,7 @@ export default function CrownHeightsCoOwnershipContent() {
             <p>Co-ownership is not for everyone. But for the right buyers with the right agreement, it opens doors that would otherwise stay closed.</p>
             <p>If you'd like to meet in person to discuss options, contact me to request directions.</p>
             <p><strong>Phone:</strong> 1-646-970-1078                 <strong>Email:</strong><a href="mailto:sm@montfortre.com" className="nbhd-guide-link">sm@montfortre.com</a></p>
-            <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule A Consultation</a><a href="tel:646-970-1078" className="nbhd-guide-link">Call For Information</a>
+            <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule A Consultation</a><a href="tel:+16469701078" className="nbhd-guide-link">Call For Information</a>
 </div>
         </div>
       </section>

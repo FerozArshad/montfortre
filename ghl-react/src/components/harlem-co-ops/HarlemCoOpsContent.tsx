@@ -3,6 +3,9 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/harlem-co-ops-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 const NEWS_ARTICLES = [
   {
@@ -43,7 +46,7 @@ export default function HarlemCoOpsContent() {
               properties that don&apos;t fit your long-term goals
             </p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:646-970-1078" className="nbhd-hero-tel">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">
@@ -51,10 +54,18 @@ export default function HarlemCoOpsContent() {
               </a>
             </div>
           </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/harlem-co-ops-1.png" alt="Harlem co-op buildings" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
+          </div>
         </div>
       </section>
 
       <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Harlem" propertyType="Co-op" label="Harlem co-ops" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
@@ -362,52 +373,54 @@ export default function HarlemCoOpsContent() {
 
             <h2>Frequently Asked Questions About Harlem Co-Ops</h2>
 
-            <h3>What should I know about Harlem co-op board approval requirements?</h3>
-            <p>
-              Co-op boards in Harlem typically require that buyers show gross household income at least 3 to 4 times the
-              combined mortgage payment and monthly maintenance. Boards also expect post-closing liquidity equal to 1 to
-              2 years of housing costs. The board package includes tax returns, bank statements, pay stubs, employer
-              verification, personal and professional references, and a completed application form. Timeline varies by
-              building; most boards take several weeks from package submission to interview to decision. HDFC and ANCP
-              buildings may add regulatory review, extending the timeline further. Stanley reviews each building&apos;s
-              specific requirements before a buyer commits to an offer.
-            </p>
-
-            <h3>How do maintenance charges affect Harlem co-op values?</h3>
-            <p>
-              Maintenance charges directly affect monthly affordability, which determines the buyer pool size for any
-              unit. A co-op with a $2,500 monthly maintenance payment requires a buyer who can carry that cost on top of
-              a mortgage, so fewer buyers qualify compared to a similar unit with $1,200 maintenance. Lower maintenance
-              does not automatically indicate a better building; it may reflect deferred capital work, underfunded
-              reserves, or minimal staffing. Stanley compares maintenance charges against buildings of the same type
-              (prewar walk-up, postwar elevator, HDFC) and reviews what the charges include: some buildings bundle heat,
-              hot water, and gas into maintenance while others do not.
-            </p>
-
-            <h3>What financing options are available for Harlem co-ops?</h3>
-            <p>
-              Most co-op purchases in New York require a co-op mortgage (technically a share loan). Lenders evaluate both
-              the buyer and the building: buildings with weak reserve funds, pending assessments, or high ratios of
-              sponsor-owned units may face difficulty securing favorable financing for buyers. Harlem co-op boards often
-              require down payments of 20% or more, and some buildings cap the loan-to-value ratio at 75% or 80%. For
-              HDFC co-ops, financing can be more restricted because lenders must accept the regulatory agreement terms,
-              including income restrictions and resale limitations. Stanley works with lenders experienced in Harlem
-              co-op underwriting and helps buyers identify buildings where their financing structure is compatible with
-              board requirements.
-            </p>
-
-            <h3>How are Harlem co-ops priced compared to condos?</h3>
-            <p>
-              Co-op prices generally appear lower than condo prices in the same area, but direct comparison requires
-              accounting for maintenance charges (which include property taxes in a co-op, unlike condo common charges),
-              financing restrictions, board approval requirements, and resale limitations. A co-op with a $400,000
-              purchase price and $1,800 monthly maintenance may cost more per month than a condo at $550,000 with $600
-              common charges and separate property taxes. Flip taxes, which are transfer fees authorized by the
-              co-op&apos;s governing documents, reduce seller net proceeds in many Harlem co-ops and should be factored
-              into any pricing comparison. Stanley models the total cost of ownership for each property type so buyers
-              can compare realistically.
-            </p>
-
+            <FaqAccordion>
+              <FaqItem question={<>What should I know about Harlem co-op board approval requirements?</>}>
+              <p>
+                Co-op boards in Harlem typically require that buyers show gross household income at least 3 to 4 times the
+                combined mortgage payment and monthly maintenance. Boards also expect post-closing liquidity equal to 1 to
+                2 years of housing costs. The board package includes tax returns, bank statements, pay stubs, employer
+                verification, personal and professional references, and a completed application form. Timeline varies by
+                building; most boards take several weeks from package submission to interview to decision. HDFC and ANCP
+                buildings may add regulatory review, extending the timeline further. Stanley reviews each building&apos;s
+                specific requirements before a buyer commits to an offer.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How do maintenance charges affect Harlem co-op values?</>}>
+              <p>
+                Maintenance charges directly affect monthly affordability, which determines the buyer pool size for any
+                unit. A co-op with a $2,500 monthly maintenance payment requires a buyer who can carry that cost on top of
+                a mortgage, so fewer buyers qualify compared to a similar unit with $1,200 maintenance. Lower maintenance
+                does not automatically indicate a better building; it may reflect deferred capital work, underfunded
+                reserves, or minimal staffing. Stanley compares maintenance charges against buildings of the same type
+                (prewar walk-up, postwar elevator, HDFC) and reviews what the charges include: some buildings bundle heat,
+                hot water, and gas into maintenance while others do not.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What financing options are available for Harlem co-ops?</>}>
+              <p>
+                Most co-op purchases in New York require a co-op mortgage (technically a share loan). Lenders evaluate both
+                the buyer and the building: buildings with weak reserve funds, pending assessments, or high ratios of
+                sponsor-owned units may face difficulty securing favorable financing for buyers. Harlem co-op boards often
+                require down payments of 20% or more, and some buildings cap the loan-to-value ratio at 75% or 80%. For
+                HDFC co-ops, financing can be more restricted because lenders must accept the regulatory agreement terms,
+                including income restrictions and resale limitations. Stanley works with lenders experienced in Harlem
+                co-op underwriting and helps buyers identify buildings where their financing structure is compatible with
+                board requirements.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How are Harlem co-ops priced compared to condos?</>}>
+              <p>
+                Co-op prices generally appear lower than condo prices in the same area, but direct comparison requires
+                accounting for maintenance charges (which include property taxes in a co-op, unlike condo common charges),
+                financing restrictions, board approval requirements, and resale limitations. A co-op with a $400,000
+                purchase price and $1,800 monthly maintenance may cost more per month than a condo at $550,000 with $600
+                common charges and separate property taxes. Flip taxes, which are transfer fees authorized by the
+                co-op&apos;s governing documents, reduce seller net proceeds in many Harlem co-ops and should be factored
+                into any pricing comparison. Stanley models the total cost of ownership for each property type so buyers
+                can compare realistically.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Get Expert Harlem Co-Op Representation</h2>
             <p>
               Stanley Montfort represents co-op buyers and sellers across Harlem with a focus on building-level analysis,
@@ -423,7 +436,7 @@ export default function HarlemCoOpsContent() {
               <strong>Address:</strong> 8 West 126th Street, New York NY 10027
             </p>
             <div className="nbhd-guide-ctas">
-              <a href="tel:646-970-1078" className="nbhd-guide-link">
+              <a href="tel:+16469701078" className="nbhd-guide-link">
                 Call For Information
               </a>
               <a href="https://calendly.com/montfort" className="nbhd-guide-link">

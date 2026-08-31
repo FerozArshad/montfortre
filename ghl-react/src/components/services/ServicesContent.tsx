@@ -116,7 +116,7 @@ export default function ServicesContent() {
               <a href="https://calendly.com/montfort" className="svc-hero-book">
                 Book Now
               </a>
-              <a href="tel:646-970-1078" className="svc-hero-tel">
+              <a href="tel:+16469701078" className="svc-hero-tel">
                 (646) 970-1078
               </a>
             </div>

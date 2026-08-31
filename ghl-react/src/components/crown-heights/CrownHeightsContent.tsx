@@ -7,6 +7,7 @@ import CrownHeightsRealtorArticle from "./CrownHeightsRealtorArticle";
 
 import "../../styles/harlem-page.css";
 import "../../styles/crown-heights-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
 
 const PROPERTY_TYPES = [
   {
@@ -128,6 +129,8 @@ export default function CrownHeightsContent() {
 
   return (
     <>
+      <NeighborhoodHubHero name="Crown Heights" image="crown-heights.webp" lead="Brownstones, condos, co-ops and multifamily homes across Crown Heights, with local market insight at every step." />
+
       <CrownHeightsPoiMap />
       <CrownHeightsAreaNav />
 
@@ -142,7 +145,7 @@ export default function CrownHeightsContent() {
               $306,206 from the previous period.
             </p>
             <div className="hlm-listings-cta">
-              <a href="/idx/listings/crown-heights/" className="hlm-listings-btn">
+              <a href="/idx-sales" className="hlm-listings-btn">
                 View More Listings
               </a>
               <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">

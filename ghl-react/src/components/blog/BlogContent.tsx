@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import ContactSection from "../shared/ContactSection";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PromisesBar from "../shared/PromisesBar";
 import { BLOG_ARTICLE_REGISTRY } from "../../blog/registry";
 import { fetchPublishedBlogCards, type BlogCard } from "../../lib/cms/blog";
+import "../../styles/neighborhoods-page.css";
 import "../../styles/blog-page.css";
 
 /** Offline / pre-CMS fallback — real featured images from static article meta. */
@@ -31,30 +33,39 @@ export default function BlogContent() {
 
   return (
     <>
-      <section className="blog-hero" data-screen-label="Blog hero">
-        <img className="blog-hero-photo" src="/redesign-assets/hoods/harlem.webp" alt="Harlem" aria-hidden="true" />
-        <div className="blog-hero-shade" />
-        <div className="blog-hero-ring" />
-        <div className="blog-hero-inner">
-          <div className="blog-hero-kicker">
-            <span className="blog-hero-kicker-line" />
-            <span className="blog-hero-kicker-label">Resources</span>
-            <span className="blog-hero-kicker-line" />
+      <section className="nbhd-hero" data-screen-label="Blog hero">
+        <div className="nbhd-hero-ring" />
+        <div className="nbhd-hero-inner">
+          <div data-reveal="">
+            <div className="nbhd-crumb">
+              <a href="/" className="nbhd-crumb-link">Home</a> <span className="nbhd-crumb-sep">/</span>{" "}
+              <span className="nbhd-crumb-here">News &amp; Realtor Advice</span>
+            </div>
+            <h1>News &amp; realtor advice for NYC buyers and sellers</h1>
+            <p className="nbhd-hero-lead">
+              Market reports, buyer and seller guides, and neighborhood insight from Stanley Montfort, stay in the loop
+              on everything NYC real estate.
+            </p>
+            <div className="nbhd-hero-ctas">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
+                Call 1-(646)-970-1078
+              </a>
+              <a href="https://calendly.com/montfort" className="nbhd-hero-book">
+                Book A Consultation
+              </a>
+            </div>
           </div>
-          <h1>News & realtor advice</h1>
-          <p className="blog-hero-lead">
-            Market reports, buyer and seller guides, and neighborhood insight from Stanley Montfort, stay in the loop on everything NYC real estate.
-          </p>
-          <div className="blog-hero-ctas">
-            <a href="https://calendly.com/montfort" target="_blank" rel="noopener" className="blog-hero-book">
-              Book a consultation{" "}
-              <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h9M8 3.5L12.5 8 8 12.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
-            <a href="tel:+1-646-970-1078" className="blog-hero-tel">
-              Call (646) 970-1078
-            </a>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img
+                src="/redesign-assets/hoods/harlem.webp"
+                alt="Harlem brownstones"
+                width="640"
+                height="512"
+                loading="eager"
+              />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
           </div>
         </div>
       </section>

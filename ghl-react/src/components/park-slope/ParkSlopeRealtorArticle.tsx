@@ -62,7 +62,7 @@ export default function ParkSlopeRealtorArticle() {
         </div>
 <h3>Start Your Park Slope Brownstone Search or Sale</h3><p>Whether you're buying your first brownstone, selling a family home you've owned for decades, or evaluating a multi-family investment in Brooklyn's most iconic brownstone neighborhood, the right Park Slope brownstone realtor makes the difference between a successful transaction and a costly mistake.</p><p>Stanley Montfort brings the hyper-local market knowledge, regulatory expertise, and negotiation experience that brownstone transactions in Park Slope demand. Connect today to discuss your goals - from initial market analysis to closing day.</p><p><strong>Phone:</strong> 1-646-970-1078{'\u00a0'}{'\u00a0'}<strong>Email: </strong><a href="mailto:sm@montfortre.com">sm@montfortre.com</a>{'\u00a0'}{'\u00a0'}<strong>Address:</strong> 8 West 126th Street, New York NY 10027</p>
         <div className="hlm-article-ctas">
-          <a href="tel:+1-646-970-1078" className="hlm-article-cta hlm-article-cta--ghost">
+          <a href="tel:+16469701078" className="hlm-article-cta hlm-article-cta--ghost">
             Call For Information
           </a>
           <a href="https://calendly.com/montfort" className="hlm-article-cta hlm-article-cta--solid">

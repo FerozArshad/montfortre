@@ -242,7 +242,10 @@
   .home-expect-media img.home-expect-img--231 {
     margin: 0;
     margin-right: auto;
-    width: min(220px, 100%);
+    /* Fill the stacked column rather than sitting at the desktop 220px, which
+       left a dead gutter beside each image. Capped so the square does not turn
+       into a full-height panel on tablets. */
+    width: min(100%, 420px);
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
