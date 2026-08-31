@@ -106,11 +106,13 @@ import AdminSettingsPage from "./pages/admin/AdminSettingsPage";
 import AdminLeadsPage from "./pages/admin/AdminLeadsPage";
 import AdminMediaPage from "./pages/admin/AdminMediaPage";
 import AdminReviewsPage from "./pages/admin/AdminReviewsPage";
+import AdminNotificationsPage from "./pages/admin/AdminNotificationsPage";
+import GoogleOAuthCallback from "./pages/GoogleOAuthCallback";
 import CmsSlugPage from "./pages/CmsSlugPage";
 
 function PublicMobileHeader() {
   const { pathname } = useLocation();
-  if (pathname.startsWith("/admin")) return null;
+  if (pathname.startsWith("/admin") || pathname.startsWith("/auth/")) return null;
   return <MobileHeader />;
 }
 
@@ -134,7 +136,9 @@ export default function App() {
         <Route path="/admin/leads" element={<AdminLeadsPage />} />
         <Route path="/admin/media" element={<AdminMediaPage />} />
         <Route path="/admin/reviews" element={<AdminReviewsPage />} />
+        <Route path="/admin/notifications" element={<AdminNotificationsPage />} />
         <Route path="/admin/settings" element={<AdminSettingsPage />} />
+        <Route path="/auth/google" element={<GoogleOAuthCallback />} />
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about-us" element={<AboutUs />} />

@@ -113,6 +113,7 @@ function AdminShell({ session, children }: { session: AdminSession; children: Re
 
           <div className="admin-nav-group">
             <div className="admin-nav-label">System</div>
+            {link("/admin/notifications", "Notifications")}
             {link("/admin/settings", "Settings")}
           </div>
 

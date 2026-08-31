@@ -1,0 +1,13 @@
+project_id = "zmnoguzttgqufgooitpx"
+
+# Invoked by the AFTER INSERT trigger on public.leads, which authenticates with
+# the x-webhook-secret header instead of a JWT (Postgres has no user session to
+# sign one). The function rejects any request without the matching secret.
+[functions.notify-lead]
+verify_jwt = false
+
+# Called from the admin UI. Platform JWT verification is off so the CORS
+# preflight succeeds; the function authorises the caller itself by replaying
+# their token against lead_notify_status(), which admits admins only.
+[functions.gmail-oauth]
+verify_jwt = false
