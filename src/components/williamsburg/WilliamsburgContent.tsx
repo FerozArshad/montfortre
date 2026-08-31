@@ -7,6 +7,7 @@ import WilliamsburgRealtorArticle from "./WilliamsburgRealtorArticle";
 
 import "../../styles/harlem-page.css";
 import "../../styles/williamsburg-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
 
 const PROPERTY_TYPES = [
   {
@@ -121,6 +122,8 @@ export default function WilliamsburgContent() {
 
   return (
     <>
+      <NeighborhoodHubHero name="Williamsburg" image="williamsburg.webp" lead="Condos, co-ops, brownstones and townhouses across Williamsburg, guided from first showing to closing day." />
+
       <WilliamsburgPoiMap />
       <WilliamsburgAreaNav />
 
@@ -135,7 +138,7 @@ export default function WilliamsburgContent() {
               $1,481,440 from the previous period.
             </p>
             <div className="hlm-listings-cta">
-              <a href="/idx/listings/williamsburg/" className="hlm-listings-btn">
+              <a href="/idx-sales" className="hlm-listings-btn">
                 View More Listings
               </a>
               <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">

@@ -3,6 +3,9 @@ import PromisesBar from "../shared/PromisesBar";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/crown-heights-co-ops-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 
 const NEWS_ARTICLES = [
@@ -43,7 +46,7 @@ export default function CrownHeightsCoOpsContent() {
               We'll guide you through the Crown Heights co-op buying process, helping you navigate board requirements, financial reviews, and avoid costly mistakes
             </p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:646-970-1078" className="nbhd-hero-tel">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">
@@ -51,9 +54,17 @@ export default function CrownHeightsCoOpsContent() {
               </a>
             </div>
           </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/crown-heights-coops.png" alt="Crown Heights co-op buildings" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
+          </div>
         </div>
       </section>
 <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Crown Heights" propertyType="Co-op" label="Crown Heights co-ops" />
 
 
       <section className="nbhd-intro" data-screen-label="Guide">
@@ -147,46 +158,53 @@ export default function CrownHeightsCoOpsContent() {
             </blockquote>
             <hr className="nbhd-guide-rule" />
             <h2>Frequently Asked Questions</h2>
-            <h3>What's the difference between Crown Heights co-ops and condos?</h3>
-            <p>The fundamental difference is ownership structure. When you buy a co-op, you're purchasing shares in a corporation that owns the building-you receive a proprietary lease granting you the right to live in your unit. With a condo, you own your apartment outright as real property.</p>
-            <p>This distinction affects everything. Co-ops require board approval; condos typically have only a right of first refusal. Co-ops charge maintenance fees that bundle property taxes, building services, and sometimes utilities; condos charge separate common charges plus individual property taxes. Co-ops generally have stricter subletting restrictions, while condos offer more rental flexibility.</p>
-            <p>Strict board approval processes in co-ops help ensure financial stability across the building-which is actually a benefit for long-term owners, even though it adds complexity to the buying process.</p>
-            FeatureCo-opCondo<strong>Ownership</strong>Shares in a corporationReal property deed<strong>Board Approval</strong>Required, including an interviewUsually right of first refusal only<strong>Down Payment</strong>Typically 20–30%Often 10–20%<strong>Subletting</strong>Restricted; board approval requiredGenerally more flexible<strong>Purchase Price</strong>Typically 10–20% lower than comparable condosGenerally higher<strong>Closing Costs</strong>Generally lowerHigher (title insurance, mortgage recording tax)<strong>Monthly Costs</strong>Maintenance (includes property taxes)Common charges + separate property taxes
-            <h3>How long does the Crown Heights co-op buying process take?</h3>
-            <p>From accepted offer to closing, plan for 60–90 days. Here's how the timeline typically breaks down:</p>
-            <ul className="nbhd-guide-list"><li>
-            <p><strong>Week 1–2:</strong> Attorney review, contract signing, deposit</p>
-            </li><li>
-            <p><strong>Week 2–4:</strong> Board package preparation and submission</p>
-            </li><li>
-            <p><strong>Week 4–8:</strong> Board review, <a href="https://www.brickunderground.com/buy/ask-an-expert-how-long-does-it-take-co-op-board-schedule-interview-nyc" className="nbhd-guide-link">interview scheduling</a>, and decision</p>
-            </li><li>
-            <p><strong>Week 8–12:</strong> Closing coordination</p>
-            </li></ul>
-            <p>Factors that extend the timeline include incomplete documentation, boards that only meet monthly (especially during summer or December), slow references, and lender delays. One question I always encourage clients to ask early is when the board's next meeting is scheduled-that single date often determines your entire timeline.</p>
-            <img src="/redesign-assets/hoods/crown-heights-co-ops-3.png" alt="Crown Heights co-op maintenance fees comparison with property documents, brownstone photos and monthly maintenance cost analysis in Brooklyn NYC" className="nbhd-guide-img" loading="lazy" />
-            <h3>What are typical maintenance fees in Crown Heights co-ops?</h3>
-            <p>Maintenance fees vary significantly based on the number of shares allocated to your unit, the building's amenities, staff levels, and whether the building carries an underlying mortgage. Studios and one-bedrooms in Crown Heights walk-ups might run $400–$800 per month, while larger units in elevator buildings with doormen can exceed $1,200.</p>
-            <p>What's included matters as much as the number. Most Crown Heights co-op maintenance fees cover property taxes, heat, hot water, water, building insurance, staff salaries, and common area maintenance. Some buildings also include gas or electricity.</p>
-            <p>When evaluating whether a fee is reasonable, I look at whether increases have been consistent (3–5% annually is typical) or erratic, and whether the building has adequate reserves. A low maintenance fee with a depleted reserve fund is a red flag, not a bargain.</p>
-            <h3>Can I rent out my Crown Heights co-op?</h3>
-            <p>Most Crown Heights co-ops restrict subletting to some degree. Common policies include:</p>
-            <ul className="nbhd-guide-list"><li>
-            <p>A waiting period of one to three years after purchase before subletting is permitted</p>
-            </li><li>
-            <p>A cap on how many units in the building can be sublet simultaneously</p>
-            </li><li>
-            <p>Board approval required for any sublease tenant</p>
-            </li><li>
-            <p>Maximum sublet duration (often one to two years at a time)</p>
-            </li><li>
-            <p>A subletting fee paid to the building</p>
-            </li></ul>
-            <p>HDFC co-ops have strict income eligibility requirements for buyers and may have additional subletting limitations. If rental income is part of your financial plan, we review the building's specific subletting policy in the proprietary lease before you make an offer.</p>
-            <h3>What about Crown Gardens and affordable co-op options?</h3>
-            <p>Crown Gardens is one of the most notable affordable co-op developments in Crown Heights. Crown Gardens contains 240 middle-income co-op homes and offers co-ops priced from $19,222 to $48,030. The development opened in 1973 and features a 15-story tower. Crown Gardens has 240 middle-income homes available through a waitlist process-applications for Crown Gardens' waitlist close on December 1, 2025.</p>
-            <p>Crown Gardens is part of the <a href="https://en.wikipedia.org/wiki/Flip_tax" className="nbhd-guide-link">Mitchell-Lama program</a>, which started in the 1950s for affordable housing. These programs have specific income eligibility requirements and resale restrictions that differ from market-rate co-ops. If you're interested in affordable co-op options, I can walk you through the eligibility requirements and application process.</p>
-            <hr className="nbhd-guide-rule" />
+            <FaqAccordion>
+              <FaqItem question={<>What's the difference between Crown Heights co-ops and condos?</>}>
+              <p>The fundamental difference is ownership structure. When you buy a co-op, you're purchasing shares in a corporation that owns the building-you receive a proprietary lease granting you the right to live in your unit. With a condo, you own your apartment outright as real property.</p>
+              <p>This distinction affects everything. Co-ops require board approval; condos typically have only a right of first refusal. Co-ops charge maintenance fees that bundle property taxes, building services, and sometimes utilities; condos charge separate common charges plus individual property taxes. Co-ops generally have stricter subletting restrictions, while condos offer more rental flexibility.</p>
+              <p>Strict board approval processes in co-ops help ensure financial stability across the building-which is actually a benefit for long-term owners, even though it adds complexity to the buying process.</p>
+              FeatureCo-opCondo<strong>Ownership</strong>Shares in a corporationReal property deed<strong>Board Approval</strong>Required, including an interviewUsually right of first refusal only<strong>Down Payment</strong>Typically 20–30%Often 10–20%<strong>Subletting</strong>Restricted; board approval requiredGenerally more flexible<strong>Purchase Price</strong>Typically 10–20% lower than comparable condosGenerally higher<strong>Closing Costs</strong>Generally lowerHigher (title insurance, mortgage recording tax)<strong>Monthly Costs</strong>Maintenance (includes property taxes)Common charges + separate property taxes
+              </FaqItem>
+              <FaqItem question={<>How long does the Crown Heights co-op buying process take?</>}>
+              <p>From accepted offer to closing, plan for 60–90 days. Here's how the timeline typically breaks down:</p>
+              <ul className="nbhd-guide-list"><li>
+              <p><strong>Week 1–2:</strong> Attorney review, contract signing, deposit</p>
+              </li><li>
+              <p><strong>Week 2–4:</strong> Board package preparation and submission</p>
+              </li><li>
+              <p><strong>Week 4–8:</strong> Board review, <a href="https://www.brickunderground.com/buy/ask-an-expert-how-long-does-it-take-co-op-board-schedule-interview-nyc" className="nbhd-guide-link">interview scheduling</a>, and decision</p>
+              </li><li>
+              <p><strong>Week 8–12:</strong> Closing coordination</p>
+              </li></ul>
+              <p>Factors that extend the timeline include incomplete documentation, boards that only meet monthly (especially during summer or December), slow references, and lender delays. One question I always encourage clients to ask early is when the board's next meeting is scheduled-that single date often determines your entire timeline.</p>
+              <img src="/redesign-assets/hoods/crown-heights-co-ops-3.png" alt="Crown Heights co-op maintenance fees comparison with property documents, brownstone photos and monthly maintenance cost analysis in Brooklyn NYC" className="nbhd-guide-img" loading="lazy" />
+              </FaqItem>
+              <FaqItem question={<>What are typical maintenance fees in Crown Heights co-ops?</>}>
+              <p>Maintenance fees vary significantly based on the number of shares allocated to your unit, the building's amenities, staff levels, and whether the building carries an underlying mortgage. Studios and one-bedrooms in Crown Heights walk-ups might run $400–$800 per month, while larger units in elevator buildings with doormen can exceed $1,200.</p>
+              <p>What's included matters as much as the number. Most Crown Heights co-op maintenance fees cover property taxes, heat, hot water, water, building insurance, staff salaries, and common area maintenance. Some buildings also include gas or electricity.</p>
+              <p>When evaluating whether a fee is reasonable, I look at whether increases have been consistent (3–5% annually is typical) or erratic, and whether the building has adequate reserves. A low maintenance fee with a depleted reserve fund is a red flag, not a bargain.</p>
+              </FaqItem>
+              <FaqItem question={<>Can I rent out my Crown Heights co-op?</>}>
+              <p>Most Crown Heights co-ops restrict subletting to some degree. Common policies include:</p>
+              <ul className="nbhd-guide-list"><li>
+              <p>A waiting period of one to three years after purchase before subletting is permitted</p>
+              </li><li>
+              <p>A cap on how many units in the building can be sublet simultaneously</p>
+              </li><li>
+              <p>Board approval required for any sublease tenant</p>
+              </li><li>
+              <p>Maximum sublet duration (often one to two years at a time)</p>
+              </li><li>
+              <p>A subletting fee paid to the building</p>
+              </li></ul>
+              <p>HDFC co-ops have strict income eligibility requirements for buyers and may have additional subletting limitations. If rental income is part of your financial plan, we review the building's specific subletting policy in the proprietary lease before you make an offer.</p>
+              </FaqItem>
+              <FaqItem question={<>What about Crown Gardens and affordable co-op options?</>}>
+              <p>Crown Gardens is one of the most notable affordable co-op developments in Crown Heights. Crown Gardens contains 240 middle-income co-op homes and offers co-ops priced from $19,222 to $48,030. The development opened in 1973 and features a 15-story tower. Crown Gardens has 240 middle-income homes available through a waitlist process-applications for Crown Gardens' waitlist close on December 1, 2025.</p>
+              <p>Crown Gardens is part of the <a href="https://en.wikipedia.org/wiki/Flip_tax" className="nbhd-guide-link">Mitchell-Lama program</a>, which started in the 1950s for affordable housing. These programs have specific income eligibility requirements and resale restrictions that differ from market-rate co-ops. If you're interested in affordable co-op options, I can walk you through the eligibility requirements and application process.</p>
+              <hr className="nbhd-guide-rule" />
+              </FaqItem>
+            </FaqAccordion>
             <h2>Start Your Crown Heights Co-op Purchase</h2>
             <h3>Schedule Your Expert Consultation</h3>
             <p>Whether you're a first-time buyer trying to understand how co-op boards work, a growing family searching for the right neighborhood fit, or an experienced buyer looking for strong building financials-I can help you navigate the Crown Heights co-op market with confidence.</p>
@@ -202,7 +220,7 @@ export default function CrownHeightsCoOpsContent() {
             </li></ul>
             <p>Crown Heights co-ops offer real value for people who enter the process prepared. Let me help you get there.</p>
             <p><strong>Phone:</strong> 1-646-970-1078                 <strong>Email:</strong><a href="mailto:sm@montfortre.com" className="nbhd-guide-link"><u>sm@montfortre.com</u></a></p>
-            <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule Free Consultation</a><a href="tel:646-970-1078" className="nbhd-guide-link">Call For Information</a>
+            <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule Free Consultation</a><a href="tel:+16469701078" className="nbhd-guide-link">Call For Information</a>
           </div>
         </div>
       </section>

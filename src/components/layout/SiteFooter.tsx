@@ -4,8 +4,8 @@ const SERVICES = [
   ["NYC Buyer's Agent", "/nyc-buyers-agent-service/"],
   ["NYC Listing Agent", "/nyc-listing-agent-service/"],
   ["NYC Multifamily Real Estate Agent", "/nyc-multifamily-real-estate-agent-service/"],
-  ["Home Valuation", "/home-valuation/"],
-  ["Mortgage Calculator", "/mortgage-calculator/"],
+  ["NYC Home Valuation", "/home-valuation/"],
+  ["NYC Mortgage Calculator", "/mortgage-calculator/"],
 ] as const;
 
 const NEIGHBORHOODS = [
@@ -101,7 +101,7 @@ export default function SiteFooter() {
         <div className="site-footer-phone">
           <div>
             <span className="site-footer-label">Phone:</span>{" "}
-            <a href="tel:646-970-1078" className="site-footer-accent">
+            <a href="tel:+16469701078" className="site-footer-accent">
               1-646-970-1078
             </a>
           </div>

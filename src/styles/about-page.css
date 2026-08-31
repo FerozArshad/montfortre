@@ -202,6 +202,13 @@
   display: block;
 }
 
+.abt-hero-portrait .solo-hero-rating {
+  position: relative;
+  display: flex;
+  margin: 22px auto 0;
+  width: max-content;
+}
+
 .abt-promises {
   background: #f5eecb;
   border-top: 1px solid #e0d9b8;

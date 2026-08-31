@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import MobileHeader from "./components/MobileHeader";
 import AboutUs from "./pages/AboutUs";
 import BedfordStuyvesant from "./pages/BedfordStuyvesant";
@@ -92,12 +92,53 @@ import Williamsburg from "./pages/Williamsburg";
 import WilliamsburgBrownstones from "./pages/WilliamsburgBrownstones";
 import WilliamsburgCondos from "./pages/WilliamsburgCondos";
 import WilliamsburgCoOwnership from "./pages/WilliamsburgCoOwnership";
+import AdminLoginPage from "./pages/admin/AdminLoginPage";
+import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
+import AdminListingsPage from "./pages/admin/AdminListingsPage";
+import AdminListingEditPage from "./pages/admin/AdminListingEditPage";
+import AdminListingsSettingsPage from "./pages/admin/AdminListingsSettingsPage";
+import AdminBlogPage from "./pages/admin/AdminBlogPage";
+import AdminBlogSettingsPage from "./pages/admin/AdminBlogSettingsPage";
+import AdminBlogEditPage from "./pages/admin/AdminBlogEditPage";
+import AdminPagesPage from "./pages/admin/AdminPagesPage";
+import AdminPageEditPage from "./pages/admin/AdminPageEditPage";
+import AdminSettingsPage from "./pages/admin/AdminSettingsPage";
+import AdminLeadsPage from "./pages/admin/AdminLeadsPage";
+import AdminMediaPage from "./pages/admin/AdminMediaPage";
+import AdminReviewsPage from "./pages/admin/AdminReviewsPage";
+import AdminNotificationsPage from "./pages/admin/AdminNotificationsPage";
+import GoogleOAuthCallback from "./pages/GoogleOAuthCallback";
+import CmsSlugPage from "./pages/CmsSlugPage";
+
+function PublicMobileHeader() {
+  const { pathname } = useLocation();
+  if (pathname.startsWith("/admin") || pathname.startsWith("/auth/")) return null;
+  return <MobileHeader />;
+}
 
 export default function App() {
   return (
     <BrowserRouter>
-      <MobileHeader />
+      <PublicMobileHeader />
       <Routes>
+        <Route path="/admin/login" element={<AdminLoginPage />} />
+        <Route path="/admin" element={<AdminDashboardPage />} />
+        <Route path="/admin/listings" element={<AdminListingsPage />} />
+        <Route path="/admin/listings/settings" element={<AdminListingsSettingsPage />} />
+        <Route path="/admin/listings/:id" element={<AdminListingEditPage />} />
+        <Route path="/admin/blog" element={<AdminBlogPage />} />
+        <Route path="/admin/blog/settings" element={<AdminBlogSettingsPage />} />
+        <Route path="/admin/blog/:id" element={<AdminBlogEditPage />} />
+        <Route path="/admin/pages" element={<AdminPagesPage />} />
+        <Route path="/admin/pages/cms/:id" element={<AdminPageEditPage />} />
+        <Route path="/admin/pages/seo/:slug" element={<AdminPageEditPage />} />
+        <Route path="/admin/pages/:id" element={<AdminPageEditPage />} />
+        <Route path="/admin/leads" element={<AdminLeadsPage />} />
+        <Route path="/admin/media" element={<AdminMediaPage />} />
+        <Route path="/admin/reviews" element={<AdminReviewsPage />} />
+        <Route path="/admin/notifications" element={<AdminNotificationsPage />} />
+        <Route path="/admin/settings" element={<AdminSettingsPage />} />
+        <Route path="/auth/google" element={<GoogleOAuthCallback />} />
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -185,8 +226,8 @@ export default function App() {
           path="/advice-for-buyers-looking-to-purchase-brownstones"
           element={<BrownstoneBuyingGuide />}
         />
-        {Object.entries(BLOG_ARTICLE_REGISTRY).map(([slug, article]) => (
-          <Route key={slug} path={`/${slug}`} element={<BlogArticlePage article={article} />} />
+        {Object.keys(BLOG_ARTICLE_REGISTRY).map((slug) => (
+          <Route key={slug} path={`/${slug}`} element={<BlogArticlePage slug={slug} />} />
         ))}
         <Route path="/neighborhoods" element={<Neighborhoods />} />
         <Route path="/current-listings" element={<CurrentListings />} />
@@ -197,6 +238,7 @@ export default function App() {
         ))}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/sitemap" element={<SiteMap />} />
+        <Route path="/:slug" element={<CmsSlugPage />} />
         <Route path="*" element={<NotMigrated />} />
       </Routes>
     </BrowserRouter>

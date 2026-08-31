@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -42,7 +44,7 @@ export default function NycCoOpFreeHomeValuationContent() {
               into account, helping you make informed selling decisions
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
           </div>
@@ -50,6 +52,7 @@ export default function NycCoOpFreeHomeValuationContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/nyc-co-op-free-home-valuation.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -186,35 +189,42 @@ export default function NycCoOpFreeHomeValuationContent() {
             <div className="tf-fig">
               <img src="/redesign-assets/services/nyc-co-op-valuation-article-3.png" alt="New York Interior" loading="lazy" />
             </div>
-            <h3>How accurate are online co-op value estimates?</h3>
-            <p>Home value estimates can differ significantly across websites. Tools like Zillow, Redfin, and others use algorithms based on square footage, property address, neighborhood averages, and public data from recent sales. HomeLight&apos;s estimator provides results in under 2 minutes, which gives you a sense of how quickly these tools operate-and how little building-specific analysis they perform.</p>
-            <p>The problem is that these tools cannot evaluate the factors that matter most in a co-op valuation: building financial health, maintenance fees, board policies, flip taxes, financing restrictions, or reserve fund adequacy. Requesting a Comparative Market Analysis (CMA) from a <a href="/about-us/" className="tf-guide-link">licensed agent who understands co-op buildings</a> is a far more reliable approach. The most accurate free valuations come from licensed real estate agents who can evaluate both the apartment and the cooperative corporation.</p>
-            <p>Appraisals typically use the comparable sales approach for valuation-and appraisers use comparable sales to determine property value-but even a professional appraisal can fall short if the appraiser lacks experience with co-op-specific factors in your market.</p>
-            <h3>What building factors affect my co-op&apos;s value?</h3>
-            <p>The cooperative corporation&apos;s financial health is one of the most significant factors. Specifically:</p>
-            <ul className="tf-list">
-              <li><span className="tf-dot" /><strong>Underlying mortgage:</strong> Large building debt increases maintenance and discounts value</li>
-              <li><span className="tf-dot" /><strong>Reserve fund adequacy:</strong> Low reserves signal deferred maintenance risk and potential future assessments</li>
-              <li><span className="tf-dot" /><strong>Maintenance fees:</strong> How your building&apos;s cost per square foot compares to similar properties matters enormously to buyers</li>
-              <li><span className="tf-dot" /><strong>Flip tax structure and rate:</strong> Whether it&apos;s 1% or 10%-and who pays-directly affects net proceeds and buyer interest</li>
-              <li><span className="tf-dot" /><strong>Board policies:</strong> Strict requirements around subletting, renovations, down payments, and post-closing liquidity reduce the buyer pool</li>
-              <li><span className="tf-dot" /><strong>Assessment history:</strong> Past special assessments and anticipated future capital needs (facade, elevator, roof) factor into buyer calculations</li>
-              <li><span className="tf-dot" /><strong>Income and operating expenses:</strong> How efficiently the building is managed affects long-term carrying costs</li>
-            </ul>
-            <p>The valuation process includes building-specific financial health considerations that go well beyond what any automated tool can capture.</p>
-            <h3>How long does a professional valuation take?</h3>
-            <p>From initial contact to completed analysis, expect approximately one to two weeks. The timeline depends primarily on how quickly building financial documents-annual reports, audited financials, board minutes regarding upcoming capital projects-are available. The apartment walkthrough itself typically takes 30–60 minutes. I handle all the market research, comparable sales analysis, and building financial review after that initial visit.</p>
-            <h3>Do you charge for the initial valuation consultation?</h3>
-            <p>No. My co-op valuation consultation is completely free with no obligation. You&apos;ll receive a thorough analysis of your apartment&apos;s estimated market value, the building factors influencing that value, and strategic guidance on timing and preparation-whether you decide to sell now, later, or not at all. I believe every co-op homeowner deserves to understand their equity position, and this free consultation is designed to educate, not pressure.</p>
-            <h3>How is a co-op valuation different from a condo valuation?</h3>
-            <p>A condo buyer receives a deed for their specific unit and owns real property. Co-ops are structured differently-you own shares in a corporation that owns the building. This means valuation must account for the corporation&apos;s financial health, the building&apos;s debt, board governance, and restrictions that don&apos;t exist in condo sales. Co-ops typically cost 30–50% less than comparable condos in the same neighborhood, but that discount isn&apos;t uniform-it varies based on building quality, policies, and financial strength.</p>
-            <h3>What improvements increase a co-op&apos;s value the most?</h3>
-            <p>Kitchen and bathroom renovations consistently deliver the strongest returns in NYC co-op sales. Updated flooring, improved lighting, and layout modifications that maximize usable square footage also add measurable value. However, the return on any renovation depends on the building, the neighborhood, and the price point. One of the first things I review during a walkthrough is whether any planned or completed renovations align with what buyers in your specific neighborhood are willing to pay for.</p>
-
+            <FaqAccordion>
+              <FaqItem question={<>How accurate are online co-op value estimates?</>}>
+              <p>Home value estimates can differ significantly across websites. Tools like Zillow, Redfin, and others use algorithms based on square footage, property address, neighborhood averages, and public data from recent sales. HomeLight&apos;s estimator provides results in under 2 minutes, which gives you a sense of how quickly these tools operate-and how little building-specific analysis they perform.</p>
+              <p>The problem is that these tools cannot evaluate the factors that matter most in a co-op valuation: building financial health, maintenance fees, board policies, flip taxes, financing restrictions, or reserve fund adequacy. Requesting a Comparative Market Analysis (CMA) from a <a href="/about-us/" className="tf-guide-link">licensed agent who understands co-op buildings</a> is a far more reliable approach. The most accurate free valuations come from licensed real estate agents who can evaluate both the apartment and the cooperative corporation.</p>
+              <p>Appraisals typically use the comparable sales approach for valuation-and appraisers use comparable sales to determine property value-but even a professional appraisal can fall short if the appraiser lacks experience with co-op-specific factors in your market.</p>
+              </FaqItem>
+              <FaqItem question={<>What building factors affect my co-op&apos;s value?</>}>
+              <p>The cooperative corporation&apos;s financial health is one of the most significant factors. Specifically:</p>
+              <ul className="tf-list">
+                <li><span className="tf-dot" /><strong>Underlying mortgage:</strong> Large building debt increases maintenance and discounts value</li>
+                <li><span className="tf-dot" /><strong>Reserve fund adequacy:</strong> Low reserves signal deferred maintenance risk and potential future assessments</li>
+                <li><span className="tf-dot" /><strong>Maintenance fees:</strong> How your building&apos;s cost per square foot compares to similar properties matters enormously to buyers</li>
+                <li><span className="tf-dot" /><strong>Flip tax structure and rate:</strong> Whether it&apos;s 1% or 10%-and who pays-directly affects net proceeds and buyer interest</li>
+                <li><span className="tf-dot" /><strong>Board policies:</strong> Strict requirements around subletting, renovations, down payments, and post-closing liquidity reduce the buyer pool</li>
+                <li><span className="tf-dot" /><strong>Assessment history:</strong> Past special assessments and anticipated future capital needs (facade, elevator, roof) factor into buyer calculations</li>
+                <li><span className="tf-dot" /><strong>Income and operating expenses:</strong> How efficiently the building is managed affects long-term carrying costs</li>
+              </ul>
+              <p>The valuation process includes building-specific financial health considerations that go well beyond what any automated tool can capture.</p>
+              </FaqItem>
+              <FaqItem question={<>How long does a professional valuation take?</>}>
+              <p>From initial contact to completed analysis, expect approximately one to two weeks. The timeline depends primarily on how quickly building financial documents-annual reports, audited financials, board minutes regarding upcoming capital projects-are available. The apartment walkthrough itself typically takes 30–60 minutes. I handle all the market research, comparable sales analysis, and building financial review after that initial visit.</p>
+              </FaqItem>
+              <FaqItem question={<>Do you charge for the initial valuation consultation?</>}>
+              <p>No. My co-op valuation consultation is completely free with no obligation. You&apos;ll receive a thorough analysis of your apartment&apos;s estimated market value, the building factors influencing that value, and strategic guidance on timing and preparation-whether you decide to sell now, later, or not at all. I believe every co-op homeowner deserves to understand their equity position, and this free consultation is designed to educate, not pressure.</p>
+              </FaqItem>
+              <FaqItem question={<>How is a co-op valuation different from a condo valuation?</>}>
+              <p>A condo buyer receives a deed for their specific unit and owns real property. Co-ops are structured differently-you own shares in a corporation that owns the building. This means valuation must account for the corporation&apos;s financial health, the building&apos;s debt, board governance, and restrictions that don&apos;t exist in condo sales. Co-ops typically cost 30–50% less than comparable condos in the same neighborhood, but that discount isn&apos;t uniform-it varies based on building quality, policies, and financial strength.</p>
+              </FaqItem>
+              <FaqItem question={<>What improvements increase a co-op&apos;s value the most?</>}>
+              <p>Kitchen and bathroom renovations consistently deliver the strongest returns in NYC co-op sales. Updated flooring, improved lighting, and layout modifications that maximize usable square footage also add measurable value. However, the return on any renovation depends on the building, the neighborhood, and the price point. One of the first things I review during a walkthrough is whether any planned or completed renovations align with what buyers in your specific neighborhood are willing to pay for.</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Get Your Free Co-op Valuation</h2>
             <p>Whether you&apos;re planning to sell this year or simply want to understand your property&apos;s worth, a professional co-op valuation gives you the clarity that online estimates cannot. Every co-op should be evaluated individually based on the apartment&apos;s condition, building financials, board policies, comparable sales, and current buyer demand-and that&apos;s exactly what my free consultation delivers.</p>
             <p>Stanley Montfort · NYC Licensed Real Estate Agent · Specializing in Co-op Sales Across Manhattan, Brooklyn, Queens &amp; the Bronx</p>
-            <p className="tf-guide-center"><strong>Phone:</strong> <a href="tel:+1-646-970-1078" className="tf-guide-link">1-646-970-1078</a>{"  "}<strong>Email:</strong> <a href="mailto:sm@montfortre.com" className="tf-guide-link">[email protected]</a>{"  "}<strong>Address:</strong> 8 West 126th Street, New York NY 10027</p>
+            <p className="tf-guide-center"><strong>Phone:</strong> <a href="tel:+16469701078" className="tf-guide-link">1-646-970-1078</a>{"  "}<strong>Email:</strong> <a href="mailto:sm@montfortre.com" className="tf-guide-link">[email protected]</a>{"  "}<strong>Address:</strong> 8 West 126th Street, New York NY 10027</p>
           </div>
         </div>
       </section>

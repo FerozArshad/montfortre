@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { LISTING_AGENT } from "../../data/listings";
 import "../../styles/harlem-brownstones-for-sale.css";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 const STORAGE_KEY = "montfort-hbfs-unlocked";
 const IDX_SRC = "https://stanley.olridx.com/Search/Sales#109591";
@@ -81,6 +82,9 @@ export default function HarlemBrownstonesForSaleContent() {
           <a href="#listings" className="hbfs-hero-cta">
             View listings
           </a>
+          <div>
+            <HeroGoogleRating prefix="solo" />
+          </div>
         </div>
       </section>
 
@@ -127,7 +131,7 @@ export default function HarlemBrownstonesForSaleContent() {
             <p className="hbfs-footnote">
               Live listing data provided by OLR IDX. Need help?{" "}
               <a href="mailto:sm@montfortre.com">Email Stanley</a> or call{" "}
-              <a href="tel:646-970-1078">(646) 970-1078</a>.
+              <a href="tel:+16469701078">(646) 970-1078</a>.
             </p>
           ) : null}
         </div>

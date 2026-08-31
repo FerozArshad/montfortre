@@ -7,6 +7,7 @@ import BrooklynHeightsRealtorArticle from "./BrooklynHeightsRealtorArticle";
 
 import "../../styles/harlem-page.css";
 import "../../styles/brooklyn-heights-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
 
 const PROPERTY_TYPES = [
   {
@@ -114,6 +115,8 @@ export default function BrooklynHeightsContent() {
 
   return (
     <>
+      <NeighborhoodHubHero name="Brooklyn Heights" image="brooklyn-heights.webp" lead="Historic townhouses, condos and co-ops in Brooklyn Heights, guided by an agent who knows the neighborhood." />
+
       <BrooklynHeightsPoiMap />
       <BrooklynHeightsAreaNav />
 
@@ -128,7 +131,7 @@ export default function BrooklynHeightsContent() {
               decrease of $1,325,800 from the previous period.
             </p>
             <div className="hlm-listings-cta">
-              <a href="/idx/listings/brooklyn-heights/" className="hlm-listings-btn">
+              <a href="/idx-sales" className="hlm-listings-btn">
                 View More Listings
               </a>
               <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">

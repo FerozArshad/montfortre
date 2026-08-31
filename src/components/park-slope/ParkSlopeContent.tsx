@@ -7,6 +7,7 @@ import ParkSlopeRealtorArticle from "./ParkSlopeRealtorArticle";
 
 import "../../styles/harlem-page.css";
 import "../../styles/park-slope-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
 
 const PROPERTY_TYPES = [
   {
@@ -131,6 +132,8 @@ export default function ParkSlopeContent() {
 
   return (
     <>
+      <NeighborhoodHubHero name="Park Slope" image="park-slope.webp" lead="Brownstones, condos and co-ops across Park Slope, guided from first showing to closing day." />
+
       <ParkSlopePoiMap />
       <ParkSlopeAreaNav />
 

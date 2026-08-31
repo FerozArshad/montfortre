@@ -150,7 +150,7 @@ export default function PrivacyPolicyContent() {
 <li>Montfort Real Estate</li>
 <li>montfortre.com</li>
 <li>8 West 126th Street, New York, NY 10027</li>
-<li><a href="tel:646-970-1078">(646) 970-1078</a></li>
+<li><a href="tel:+16469701078">(646) 970-1078</a></li>
 <li><a href="mailto:sm@montfortre.com">sm@montfortre.com</a></li>
 </ul>
           </section>

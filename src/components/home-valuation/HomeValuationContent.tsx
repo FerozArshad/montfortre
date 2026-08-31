@@ -4,6 +4,8 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/home-valuation-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 const RELATED_SERVICES = [
   {
@@ -77,6 +79,12 @@ export default function HomeValuationContent() {
             <h1>FREE HOME VALUATION</h1>
             <p className="tf-hero-lead">Generate a free home estimate in just three simple steps</p>
             <HomeValuationTool />
+          </div>
+          <div className="tf-hero-media" data-reveal="">
+            <div className="tf-hero-frame">
+              <img src="/redesign-assets/services/home-valuation.webp" alt="NYC home valuation" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -437,73 +445,78 @@ export default function HomeValuationContent() {
             </blockquote>
             <div className="tf-guide-rule" />
             <h2>Frequently Asked Questions</h2>
-            <h3>How Accurate is a Free Home Value Estimator Compared to a Professional Appraisal?</h3>
-            <p>
-              Free home value estimator tools provide an estimated value based on recent sales, property details, and
-              local market trends. For off-market properties, these tools usually show a 5-10% swing from actual market
-              value, while on-market homes tend to be more accurate, often within 2-3%. For example, Zillow&apos;s
-              Zestimate has a median error rate of 1.83% for on-market homes. However, it&apos;s important to remember
-              that the estimated value from online tools is a general estimate and should be supplemented with
-              professional insight for a more precise valuation. A professional appraisal, on the other hand, can get it
-              spot on 2-5% of the time because an appraiser actually goes out and inspects the property and can take
-              into account the condition, how well the place has been finished, and any unique features that an
-              algorithm might miss.
-            </p>
-            <p>
-              But accuracy will depend on any number of factors like how much data is available in your area, how
-              recently homes nearby have sold, the uniqueness of your place, and whether you’re in a state that
-              discloses prices or not. Homes in suburban neighbourhoods with lots of sales will usually get a more
-              accurate estimate than a rural property or one with a really unusual architecture.
-            </p>
-            <h3>Which Free Home Value Estimator is the Most Reliable in 2026?</h3>
-            <p>
-              On-market properties are usually easiest for free home value estimators to get right, and Redfin Estimate
-              comes out on top with an error rate of around 1.9-2.1% because of its direct access to the MLS. Zillow
-              Zestimate is second, with an error rate of about 2.4% for active listings. But for off-market homes, both
-              of these tools tend to be way off—we are talking 6.5-7.8% error on average.
-            </p>
-            <p>
-              Where you live and what kind of home you have also makes a big difference in how accurate the estimates
-              are. In really busy areas, where lots of homes are sold, the estimates will be way more accurate. To
-              estimate home value more accurately, search multiple free home value estimator tools and compare their
-              results. However, connecting with a local real estate agent will provide the most precise and personalized
-              estimate, as a local expert can account for neighborhood-specific factors that online tools may miss.
-            </p>
-            <h3>When Should I Just Get a Professional Appraisal?</h3>
-            <div className="tf-fig">
-              <img
-                src="/redesign-assets/services/home-valuation-appraisal.png"
-                alt="Professional home appraisal with real estate appraiser completing property valuation report inside residential home"
-                loading="lazy"
-              />
-            </div>
-            <p>
-              You’ll need a professional appraisal, or it will be strongly recommended for things like mortgage
-              applications, refinancing, divorce settlements, estate planning, property tax disputes, and any other
-              situation where the value of a property is in dispute. Banks and lenders are pretty strict about this—they
-              won’t accept a Zestimate as a home loan decision.
-            </p>
-            <p>
-              The most accurate home valuations are performed by licensed professionals who can account for the many
-              factors that affect a specific property’s value. These factors include property condition, recent
-              renovations, location, and current market trends—variables that online estimators simply cannot fully
-              consider.
-            </p>
-            <p>
-              It’s worth noting that the results of an appraisal can be influenced by the context. When someone is
-              refinancing a property the appraisal often comes in a bit higher because the lender is more likely to
-              approve the loan. But when someone is selling, the appraisal will usually match the sale price 90% of the
-              time because appraisal companies have a vested interest in getting it right. So keep that in mind when
-              you’re setting your expectations.
-            </p>
-            <p>
-              The cost-benefit analysis is pretty clear: free estimators are great for getting a rough idea of your
-              home’s value and keeping an eye on things, but for big money decisions, you really can’t beat the accuracy
-              of a professional appraisal. If your house has some unique features, has had a major renovation recently,
-              or if you live in an area where there is very little data available, then a professional appraisal will be
-              worth the cost. Get one 30-60 days before you need the final number.
-            </p>
-            <div className="tf-guide-rule" />
+            <FaqAccordion>
+              <FaqItem question={<>How Accurate is a Free Home Value Estimator Compared to a Professional Appraisal?</>}>
+              <p>
+                Free home value estimator tools provide an estimated value based on recent sales, property details, and
+                local market trends. For off-market properties, these tools usually show a 5-10% swing from actual market
+                value, while on-market homes tend to be more accurate, often within 2-3%. For example, Zillow&apos;s
+                Zestimate has a median error rate of 1.83% for on-market homes. However, it&apos;s important to remember
+                that the estimated value from online tools is a general estimate and should be supplemented with
+                professional insight for a more precise valuation. A professional appraisal, on the other hand, can get it
+                spot on 2-5% of the time because an appraiser actually goes out and inspects the property and can take
+                into account the condition, how well the place has been finished, and any unique features that an
+                algorithm might miss.
+              </p>
+              <p>
+                But accuracy will depend on any number of factors like how much data is available in your area, how
+                recently homes nearby have sold, the uniqueness of your place, and whether you’re in a state that
+                discloses prices or not. Homes in suburban neighbourhoods with lots of sales will usually get a more
+                accurate estimate than a rural property or one with a really unusual architecture.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Which Free Home Value Estimator is the Most Reliable in 2026?</>}>
+              <p>
+                On-market properties are usually easiest for free home value estimators to get right, and Redfin Estimate
+                comes out on top with an error rate of around 1.9-2.1% because of its direct access to the MLS. Zillow
+                Zestimate is second, with an error rate of about 2.4% for active listings. But for off-market homes, both
+                of these tools tend to be way off—we are talking 6.5-7.8% error on average.
+              </p>
+              <p>
+                Where you live and what kind of home you have also makes a big difference in how accurate the estimates
+                are. In really busy areas, where lots of homes are sold, the estimates will be way more accurate. To
+                estimate home value more accurately, search multiple free home value estimator tools and compare their
+                results. However, connecting with a local real estate agent will provide the most precise and personalized
+                estimate, as a local expert can account for neighborhood-specific factors that online tools may miss.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>When Should I Just Get a Professional Appraisal?</>}>
+              <div className="tf-fig">
+                <img
+                  src="/redesign-assets/services/home-valuation-appraisal.png"
+                  alt="Professional home appraisal with real estate appraiser completing property valuation report inside residential home"
+                  loading="lazy"
+                />
+              </div>
+              <p>
+                You’ll need a professional appraisal, or it will be strongly recommended for things like mortgage
+                applications, refinancing, divorce settlements, estate planning, property tax disputes, and any other
+                situation where the value of a property is in dispute. Banks and lenders are pretty strict about this—they
+                won’t accept a Zestimate as a home loan decision.
+              </p>
+              <p>
+                The most accurate home valuations are performed by licensed professionals who can account for the many
+                factors that affect a specific property’s value. These factors include property condition, recent
+                renovations, location, and current market trends—variables that online estimators simply cannot fully
+                consider.
+              </p>
+              <p>
+                It’s worth noting that the results of an appraisal can be influenced by the context. When someone is
+                refinancing a property the appraisal often comes in a bit higher because the lender is more likely to
+                approve the loan. But when someone is selling, the appraisal will usually match the sale price 90% of the
+                time because appraisal companies have a vested interest in getting it right. So keep that in mind when
+                you’re setting your expectations.
+              </p>
+              <p>
+                The cost-benefit analysis is pretty clear: free estimators are great for getting a rough idea of your
+                home’s value and keeping an eye on things, but for big money decisions, you really can’t beat the accuracy
+                of a professional appraisal. If your house has some unique features, has had a major renovation recently,
+                or if you live in an area where there is very little data available, then a professional appraisal will be
+                worth the cost. Get one 30-60 days before you need the final number.
+              </p>
+              <div className="tf-guide-rule" />
+              </FaqItem>
+            </FaqAccordion>
             <h2>Contact Us</h2>
             <h3>Get Your Free Consultation - Let&apos;s Get Started!</h3>
             <p>
@@ -521,7 +534,7 @@ export default function HomeValuationContent() {
                 <strong>Address:</strong> 8 West 126th Street, New York NY 10027
               </p>
               <p>
-                <strong>Business Hours:</strong> Monday to Friday 9AM-6PM, Saturday 10AM-2PM{" "}
+                <strong>Business Hours:</strong> Open 24 hours, 7 days a week{" "}
                 <strong>Response Time:</strong> We’ll get back to you within 24 business hours
               </p>
             </div>

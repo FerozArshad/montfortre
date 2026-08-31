@@ -7,6 +7,7 @@ import DumboRealtorArticle from "./DumboRealtorArticle";
 
 import "../../styles/harlem-page.css";
 import "../../styles/dumbo-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
 
 const PROPERTY_TYPES = [
   {
@@ -107,6 +108,8 @@ export default function DumboContent() {
 
   return (
     <>
+      <NeighborhoodHubHero name="DUMBO" image="dumbo.webp" lead="Converted lofts, condos and co-ops in DUMBO, with representation for buyers and sellers alike." />
+
       <DumboPoiMap />
       <DumboAreaNav />
 
@@ -121,7 +124,7 @@ export default function DumboContent() {
               $439,425 from the previous period.
             </p>
             <div className="hlm-listings-cta">
-              <a href="/idx/listings/dumbo/" className="hlm-listings-btn">
+              <a href="/idx-sales" className="hlm-listings-btn">
                 View More Listings
               </a>
               <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">

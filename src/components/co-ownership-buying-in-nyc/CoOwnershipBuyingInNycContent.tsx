@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +46,7 @@ export default function CoOwnershipBuyingInNycContent() {
               hidden liabilities, and <strong>ownership structure</strong> mistakes before you buy.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -56,6 +58,7 @@ export default function CoOwnershipBuyingInNycContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/co-ownership-buying-nyc.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -305,86 +308,92 @@ export default function CoOwnershipBuyingInNycContent() {
             </blockquote>
             <hr />
             <h2>Frequently Asked Questions</h2>
-            <h3>What happens if one co-owner wants to sell but others don&apos;t?</h3>
-            <p>
-              This is the question that keeps me up at night on behalf of my clients-because without a plan, it can
-              destroy both the investment and the relationship.
-            </p>
-            <p>
-              If your co ownership agreement includes a buyout clause, the process is straightforward: the remaining
-              owners have the right of first refusal to purchase the departing co owner&apos;s ownership interest at a
-              price determined by an agreed formula. In the{" "}
-              <a href="https://case-law.vlex.com/vid/phillip-v-zanani-0012267-884545946" className="tf-guide-link">Phillip v. Zanani</a>{" "}
-              case, two New York co-owners had an agreement specifying that each party would obtain an independent
-              appraisal, the values would be averaged, the outstanding mortgage subtracted, and the departing owner
-              would receive their proportional share of net equity.
-            </p>
-            <p>
-              Without such an agreement, a co-owner can sell their share without consent from others-or worse, file a
-              partition lawsuit to force a sale. Partition lawsuits can take 12 to 18 months to resolve, and the outcome
-              rarely benefits anyone. In{" "}
-              <a href="https://ylevinlaw.com/partition-action-vs-partnership-agreement-leonardo-v-leonardo-ii/" className="tf-guide-link">Leonardo v. Leonardo II</a>,
-              the court enforced a partnership agreement that restricted partition rights, demonstrating that
-              well-drafted ownership agreements hold up in court.
-            </p>
-            <p>
-              Co-owners are jointly liable for the <a href="/mortgage-calculator/" className="tf-guide-link">mortgage payments</a>{" "}
-              regardless of ownership share. Even if one owner defaults on their contribution, mortgage payments must be
-              made even if one owner defaults-the lender doesn&apos;t care about internal arrangements between co owners.
-            </p>
-            <h3>Can co-owners get financing if only one person qualifies for the mortgage?</h3>
-            <p>
-              Yes, but it requires careful structuring. Many buyers assume all co owners must be on the mortgage, but
-              that&apos;s not always the case. One person may hold the mortgage while other co owners contribute through
-              a separate reimbursement arrangement documented in the co ownership agreement.
-            </p>
-            <p>
-              However, there are risks. The mortgage-holding co owner bears full legal responsibility for payments, and
-              lenders assess eligibility based on the lowest credit score and weakest debt to income ratio among co
-              borrowers if all parties are on the loan. Pooling resources improves mortgage approval chances for
-              higher-priced properties, but each co owner&apos;s financial profile matters.
-            </p>
-            <p>
-              Generally speaking, I recommend getting pre-approved early and discussing options with lenders who have
-              experience with co-ownership financing. Mortgage interest deductions and capital gains implications should
-              be discussed among co-owners and their tax advisors before closing.
-            </p>
-            <div className="tf-fig">
-              <img src="/redesign-assets/services/co-ownership-article-3.png" alt="Coownership buying" loading="lazy" />
-            </div>
-            <h3>Do all NYC buildings accept co-ownership arrangements?</h3>
-            <p>No. This is one of the key factors I evaluate before recommending any property.</p>
-            <p>
-              Co op boards have significant authority over who can purchase shares. Some co op building policies
-              explicitly address multiple owners, while others evaluate each applicant individually against the
-              building&apos;s financial requirements. The board approval process for co-ops typically involves extensive
-              review of financial documents, tax returns, bank statements, and personal references for every buyer.
-            </p>
-            <p>
-              Condo boards generally have less authority over purchases, but may still have policies regarding
-              co-ownership. Condos typically allow more flexibility, making them a better fit for some co-ownership arrangements.
-            </p>
-            <p>I identify co-ownership-friendly buildings early in the search process so clients don&apos;t waste time pursuing properties where board approval is unlikely.</p>
-            <h3>What legal documents do co-owners need before closing?</h3>
-            <p>At minimum, co owners need:</p>
-            <ul className="tf-list">
-              <li><span className="tf-dot" /><strong>A co ownership agreement</strong> - This is the foundational document. Co-ownership agreements help define financial responsibilities and rights, including ownership percentages, cost-sharing formulas, decision authority, buyout provisions, and dispute resolution procedures. Co-owners must pay property expenses in proportion to ownership share as defined in this agreement.</li>
-              <li><span className="tf-dot" /><strong>Buyout and exit provisions</strong> - Detailed terms for what happens when one co owner wants out, including appraisal methods, payment timelines, and right of first refusal.</li>
-              <li><span className="tf-dot" /><strong>Updated wills or trusts</strong> - Especially critical for tenants in common arrangements, where ownership interest doesn&apos;t automatically pass to surviving owners.</li>
-              <li><span className="tf-dot" /><strong>Partnership or LLC operating agreement</strong> - If owning through legal entities, the operating agreement governs management, distributions, and dissolution.</li>
-            </ul>
-            <p>
-              Co-owners can face disputes over property expenses, and disputes often arise over renovations and property
-              management. Having comprehensive written agreements dramatically reduces the risk of costly property
-              disputes. I strongly recommend working with an{" "}
-              <a href="https://www.nycbar.org/get-legal-help/article/real-property-law/title-real-property/" className="tf-guide-link">experienced real estate attorney</a>{" "}
-              who specializes in co-ownership and co-op transactions.
-            </p>
-            <p>
-              Co-owners are jointly and severally liable for the mortgage, meaning each person is individually
-              responsible for the full amount if other owners fail to pay. This reality makes proper legal documentation
-              not optional-it&apos;s essential.
-            </p>
+            <FaqAccordion>
+              <FaqItem question={<>What happens if one co-owner wants to sell but others don&apos;t?</>}>
+              <p>
+                This is the question that keeps me up at night on behalf of my clients-because without a plan, it can
+                destroy both the investment and the relationship.
+              </p>
+              <p>
+                If your co ownership agreement includes a buyout clause, the process is straightforward: the remaining
+                owners have the right of first refusal to purchase the departing co owner&apos;s ownership interest at a
+                price determined by an agreed formula. In the{" "}
+                <a href="https://case-law.vlex.com/vid/phillip-v-zanani-0012267-884545946" className="tf-guide-link">Phillip v. Zanani</a>{" "}
+                case, two New York co-owners had an agreement specifying that each party would obtain an independent
+                appraisal, the values would be averaged, the outstanding mortgage subtracted, and the departing owner
+                would receive their proportional share of net equity.
+              </p>
+              <p>
+                Without such an agreement, a co-owner can sell their share without consent from others-or worse, file a
+                partition lawsuit to force a sale. Partition lawsuits can take 12 to 18 months to resolve, and the outcome
+                rarely benefits anyone. In{" "}
+                <a href="https://ylevinlaw.com/partition-action-vs-partnership-agreement-leonardo-v-leonardo-ii/" className="tf-guide-link">Leonardo v. Leonardo II</a>,
+                the court enforced a partnership agreement that restricted partition rights, demonstrating that
+                well-drafted ownership agreements hold up in court.
+              </p>
+              <p>
+                Co-owners are jointly liable for the <a href="/mortgage-calculator/" className="tf-guide-link">mortgage payments</a>{" "}
+                regardless of ownership share. Even if one owner defaults on their contribution, mortgage payments must be
+                made even if one owner defaults-the lender doesn&apos;t care about internal arrangements between co owners.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Can co-owners get financing if only one person qualifies for the mortgage?</>}>
+              <p>
+                Yes, but it requires careful structuring. Many buyers assume all co owners must be on the mortgage, but
+                that&apos;s not always the case. One person may hold the mortgage while other co owners contribute through
+                a separate reimbursement arrangement documented in the co ownership agreement.
+              </p>
+              <p>
+                However, there are risks. The mortgage-holding co owner bears full legal responsibility for payments, and
+                lenders assess eligibility based on the lowest credit score and weakest debt to income ratio among co
+                borrowers if all parties are on the loan. Pooling resources improves mortgage approval chances for
+                higher-priced properties, but each co owner&apos;s financial profile matters.
+              </p>
+              <p>
+                Generally speaking, I recommend getting pre-approved early and discussing options with lenders who have
+                experience with co-ownership financing. Mortgage interest deductions and capital gains implications should
+                be discussed among co-owners and their tax advisors before closing.
+              </p>
+              <div className="tf-fig">
+                <img src="/redesign-assets/services/co-ownership-article-3.png" alt="Coownership buying" loading="lazy" />
+              </div>
+              </FaqItem>
+              <FaqItem question={<>Do all NYC buildings accept co-ownership arrangements?</>}>
+              <p>No. This is one of the key factors I evaluate before recommending any property.</p>
+              <p>
+                Co op boards have significant authority over who can purchase shares. Some co op building policies
+                explicitly address multiple owners, while others evaluate each applicant individually against the
+                building&apos;s financial requirements. The board approval process for co-ops typically involves extensive
+                review of financial documents, tax returns, bank statements, and personal references for every buyer.
+              </p>
+              <p>
+                Condo boards generally have less authority over purchases, but may still have policies regarding
+                co-ownership. Condos typically allow more flexibility, making them a better fit for some co-ownership arrangements.
+              </p>
+              <p>I identify co-ownership-friendly buildings early in the search process so clients don&apos;t waste time pursuing properties where board approval is unlikely.</p>
+              </FaqItem>
+              <FaqItem question={<>What legal documents do co-owners need before closing?</>}>
+              <p>At minimum, co owners need:</p>
+              <ul className="tf-list">
+                <li><span className="tf-dot" /><strong>A co ownership agreement</strong> - This is the foundational document. Co-ownership agreements help define financial responsibilities and rights, including ownership percentages, cost-sharing formulas, decision authority, buyout provisions, and dispute resolution procedures. Co-owners must pay property expenses in proportion to ownership share as defined in this agreement.</li>
+                <li><span className="tf-dot" /><strong>Buyout and exit provisions</strong> - Detailed terms for what happens when one co owner wants out, including appraisal methods, payment timelines, and right of first refusal.</li>
+                <li><span className="tf-dot" /><strong>Updated wills or trusts</strong> - Especially critical for tenants in common arrangements, where ownership interest doesn&apos;t automatically pass to surviving owners.</li>
+                <li><span className="tf-dot" /><strong>Partnership or LLC operating agreement</strong> - If owning through legal entities, the operating agreement governs management, distributions, and dissolution.</li>
+              </ul>
+              <p>
+                Co-owners can face disputes over property expenses, and disputes often arise over renovations and property
+                management. Having comprehensive written agreements dramatically reduces the risk of costly property
+                disputes. I strongly recommend working with an{" "}
+                <a href="https://www.nycbar.org/get-legal-help/article/real-property-law/title-real-property/" className="tf-guide-link">experienced real estate attorney</a>{" "}
+                who specializes in co-ownership and co-op transactions.
+              </p>
+              <p>
+                Co-owners are jointly and severally liable for the mortgage, meaning each person is individually
+                responsible for the full amount if other owners fail to pay. This reality makes proper legal documentation
+                not optional-it&apos;s essential.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <hr />
             <h2>Schedule Your Co-Ownership Consultation</h2>
             <p>
@@ -409,7 +418,7 @@ export default function CoOwnershipBuyingInNycContent() {
             </p>
             <div className="tf-cta-card">
               <div className="tf-cta-actions">
-                <a href="tel:+1-646-970-1078" className="tf-cta-tel">Call For Information</a>
+                <a href="tel:+16469701078" className="tf-cta-tel">Call For Information</a>
                 <a href="https://calendly.com/montfort" className="tf-cta-book">Schedule A Consultation</a>
               </div>
               <div className="tf-cta-meta">

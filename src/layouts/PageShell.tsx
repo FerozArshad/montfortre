@@ -6,6 +6,7 @@ import ReviewsSection from "../components/shared/ReviewsSection";
 import Seo from "../components/Seo";
 import useCarousels from "../hooks/useCarousels";
 import useStyleHover from "../hooks/useStyleHover";
+import { applyPageSeoOverride } from "../lib/cms/pageSeoOverrides";
 import { pathHadOriginalReviews } from "../lib/originalReviewPages";
 import type { PageSeo } from "../seo/types";
 import "../styles/page-shell.css";
@@ -21,8 +22,8 @@ export interface PageShellProps {
   /** IDX pages omit the desktop header (MobileHeader still renders from App.tsx) */
   showDesktopHeader?: boolean;
   /**
-   * Live Google reviews iframe at end of content (original placement).
-   * Defaults to pages that originally embedded ReputationHub — not sitewide.
+   * Custom Montfort Google reviews carousel at end of content (original placement).
+   * Defaults to pages that originally showed reviews — not sitewide.
    * Pass true/false to force; Home uses mid-page ReviewsSection instead.
    */
   showReviews?: boolean;
@@ -45,14 +46,15 @@ export default function PageShell({
   useCarousels();
   const { pathname } = useLocation();
   const reviewsVisible = showReviews ?? pathHadOriginalReviews(pathname);
+  const resolvedSeo = applyPageSeoOverride(seo, pathname);
 
   return (
     <>
       <Seo
-        title={seo.title}
-        metas={[...seo.metas]}
-        links={[...seo.links]}
-        jsonLd={[...seo.jsonLd]}
+        title={resolvedSeo.title}
+        metas={[...resolvedSeo.metas]}
+        links={[...resolvedSeo.links]}
+        jsonLd={[...resolvedSeo.jsonLd]}
       />
       {showDesktopHeader && <DesktopHeader />}
       <div className={["site-page", pageClassName].filter(Boolean).join(" ")}>

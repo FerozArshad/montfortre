@@ -3,6 +3,9 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/park-slope-co-ops-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 const NEWS_ARTICLES = [
   {
@@ -40,14 +43,22 @@ export default function ParkSlopeCoOpsContent() {
             <h1>{"Park Slope Co-ops — Experts realtor for Buying, Selling & Investing"}</h1>
             <p className="nbhd-hero-lead">{"We'll help you buy the right Park Slope Condo by avoiding costly structural issues, hidden repair expenses, and overpaying in a competitive market"}</p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:+1-(646)-970-1078" className="nbhd-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="nbhd-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">Schedule A Consultation</a>
             </div>
+          </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/park-slope-coops.png" alt="Park Slope co-op buildings" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
           </div>
         </div>
       </section>
 
       <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Park Slope" propertyType="Co-op" label="Park Slope co-ops" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
@@ -108,23 +119,30 @@ export default function ParkSlopeCoOpsContent() {
             <p>{"Building types served include brownstone and townhouse conversions, boutique walk-up condos, mid-rise elevator buildings, modern full-service developments, and sponsor sales in new construction."}</p>
             <p>{"Recent Brooklyn market reports indicate improved co-op inventory compared to previous years, and there are currently 20 co-ops for sale in Park Slope - giving buyers evaluating both property types a broader selection. Co-ops in Park Slope are listed by multiple active agents, and open houses are scheduled for several co-ops this weekend. Buyer competition for pre-war co-ops near Prospect Park remains high, and negotiability for co-ops hovers slightly above asking due to bidding wars in high-demand areas."}</p>
             <h2>{"Frequently Asked Questions About Park Slope Condos"}</h2>
-            <h3>{"How are Park Slope condos priced compared to co-ops?"}</h3>
-            <p>{"Condos in Park Slope typically carry a 10–15% price premium over comparable co-ops. This premium reflects greater ownership flexibility - condos allow easier resale, subletting, and financing - along with modern amenities in newer buildings. In 2026, Park Slope condo studios range from approximately $375,000–$550,000, one-bedrooms from $550,000–$900,000, two-bedrooms from $900,000–$2M, and three-bedrooms from $1.5M–$4M+. Co-op pricing runs lower: studios ~$275,000–$425,000, one-bedrooms ~$425,000–$700,000, two-bedrooms ~$700,000–$1.5M. Co-op price performance in Park Slope has remained robust amid competitive bidding, and well-run pre-war co-ops command strong prices in desirable Park Slope locations. When comparing the two, factor in not just purchase price but monthly carrying costs, board requirements, and long-term appreciation. Buyers should evaluate co-op financial statements before making an offer."}</p>
-            <h3>{"What should I know about common charges in Park Slope condo buildings?"}</h3>
-            <p>{"Common charges vary widely depending on building size, amenities, staffing, and reserve contributions. In small brownstone conversions, monthly charges may appear low but often reflect minimal reserve contributions - meaning large special assessments can arrive without much warning. Full-service elevator buildings charge more monthly but typically offer greater cost predictability and stronger reserves. Always ask what common charges cover specifically: insurance, utilities, staff salaries, amenities, and the reserve fund allocation. A building where common charges include a meaningful reserve contribution is usually in better long-term financial shape than one where nearly all charges go to operating expenses."}</p>
-            <h3>{"How long does it take to buy or sell a Park Slope condo?"}</h3>
-            <p>{"From accepted offer to closing, a Park Slope condo transaction typically takes 45–60 days. Delays can occur due to financing contingencies, title issues, building document review, or attorney negotiations. Brownstone conversion condos occasionally require additional time for inspection findings or legal document preparation. Park Slope has a mix of pre-war walk-ups and elevator buildings with strict board approval processes - though condo boards generally have less authority to reject buyers than co-op boards, condo boards may still exercise rights of first refusal, which can add time. Selling timelines depend heavily on pricing: well-priced condos in Park Slope average around 47 days on market, while overpriced listings may sit considerably longer before receiving offers."}</p>
-            <h3>{"What building documents should I review before buying a Park Slope condo?"}</h3>
-            <p>{"Essential documents include: the offering plan and all amendments, audited financial statements for the past two to three years, the current reserve fund balance in dollars, minutes from recent board meetings, the building's insurance certificate, any pending or recently completed special assessments, Local Law 11/FISP facade inspection reports (for buildings over six stories), and the managing agent's contact information and track record. Red flags include: reserve funds under $50,000 in small buildings, a pattern of frequent special assessments, high owner delinquency rates, unresolved DOB violations, and ongoing litigation. Stanley reviews all of these documents as part of buyer representation."}</p>
-            <img src="/redesign-assets/hoods/park-slope-coops-3.png" alt={"Park Slope available properties"} className="nbhd-guide-img" loading="lazy" />
-            <h3>{"Are new development condos better than resale in Park Slope?"}</h3>
-            <p>{"Neither category is inherently superior - each presents distinct advantages and risks. New development condos often feature modern layouts, energy-efficient systems, and building amenities, but sponsor units may carry higher closing costs (including sponsor's transfer tax obligations in some cases), initially underfunded reserve accounts, and offering plan terms that haven't been tested by years of actual operations. Resale condos in established buildings offer the advantage of verifiable financial history, known maintenance trajectories, and potentially lower price per square foot in buildings that have already completed major capital work. The strongest approach is to evaluate each property individually based on unit characteristics, building financials, monthly carrying costs, and current competition - which is exactly what a qualified Park Slope condo real estate agent should do for you."}</p>
+            <FaqAccordion>
+              <FaqItem question={"How are Park Slope condos priced compared to co-ops?"}>
+              <p>{"Condos in Park Slope typically carry a 10–15% price premium over comparable co-ops. This premium reflects greater ownership flexibility - condos allow easier resale, subletting, and financing - along with modern amenities in newer buildings. In 2026, Park Slope condo studios range from approximately $375,000–$550,000, one-bedrooms from $550,000–$900,000, two-bedrooms from $900,000–$2M, and three-bedrooms from $1.5M–$4M+. Co-op pricing runs lower: studios ~$275,000–$425,000, one-bedrooms ~$425,000–$700,000, two-bedrooms ~$700,000–$1.5M. Co-op price performance in Park Slope has remained robust amid competitive bidding, and well-run pre-war co-ops command strong prices in desirable Park Slope locations. When comparing the two, factor in not just purchase price but monthly carrying costs, board requirements, and long-term appreciation. Buyers should evaluate co-op financial statements before making an offer."}</p>
+              </FaqItem>
+              <FaqItem question={"What should I know about common charges in Park Slope condo buildings?"}>
+              <p>{"Common charges vary widely depending on building size, amenities, staffing, and reserve contributions. In small brownstone conversions, monthly charges may appear low but often reflect minimal reserve contributions - meaning large special assessments can arrive without much warning. Full-service elevator buildings charge more monthly but typically offer greater cost predictability and stronger reserves. Always ask what common charges cover specifically: insurance, utilities, staff salaries, amenities, and the reserve fund allocation. A building where common charges include a meaningful reserve contribution is usually in better long-term financial shape than one where nearly all charges go to operating expenses."}</p>
+              </FaqItem>
+              <FaqItem question={"How long does it take to buy or sell a Park Slope condo?"}>
+              <p>{"From accepted offer to closing, a Park Slope condo transaction typically takes 45–60 days. Delays can occur due to financing contingencies, title issues, building document review, or attorney negotiations. Brownstone conversion condos occasionally require additional time for inspection findings or legal document preparation. Park Slope has a mix of pre-war walk-ups and elevator buildings with strict board approval processes - though condo boards generally have less authority to reject buyers than co-op boards, condo boards may still exercise rights of first refusal, which can add time. Selling timelines depend heavily on pricing: well-priced condos in Park Slope average around 47 days on market, while overpriced listings may sit considerably longer before receiving offers."}</p>
+              </FaqItem>
+              <FaqItem question={"What building documents should I review before buying a Park Slope condo?"}>
+              <p>{"Essential documents include: the offering plan and all amendments, audited financial statements for the past two to three years, the current reserve fund balance in dollars, minutes from recent board meetings, the building's insurance certificate, any pending or recently completed special assessments, Local Law 11/FISP facade inspection reports (for buildings over six stories), and the managing agent's contact information and track record. Red flags include: reserve funds under $50,000 in small buildings, a pattern of frequent special assessments, high owner delinquency rates, unresolved DOB violations, and ongoing litigation. Stanley reviews all of these documents as part of buyer representation."}</p>
+              <img src="/redesign-assets/hoods/park-slope-coops-3.png" alt={"Park Slope available properties"} className="nbhd-guide-img" loading="lazy" />
+              </FaqItem>
+              <FaqItem question={"Are new development condos better than resale in Park Slope?"}>
+              <p>{"Neither category is inherently superior - each presents distinct advantages and risks. New development condos often feature modern layouts, energy-efficient systems, and building amenities, but sponsor units may carry higher closing costs (including sponsor's transfer tax obligations in some cases), initially underfunded reserve accounts, and offering plan terms that haven't been tested by years of actual operations. Resale condos in established buildings offer the advantage of verifiable financial history, known maintenance trajectories, and potentially lower price per square foot in buildings that have already completed major capital work. The strongest approach is to evaluate each property individually based on unit characteristics, building financials, monthly carrying costs, and current competition - which is exactly what a qualified Park Slope condo real estate agent should do for you."}</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>{"Get Expert Park Slope Condo Guidance"}</h2>
             <p>{"Whether you're buying, selling, or need an honest valuation of a Park Slope condo, the next step is a conversation about your specific property or goals. Stanley Montfort provides personalized evaluations grounded in building-level financial analysis, recent comparable sales, and practical knowledge of this neighborhood's condo inventory."}</p>
             <p><strong>{"Phone:"}</strong>{" 1-646-970-1078  "}<strong>{"Email:"}</strong><a href={"mailto:sm@montfortre.com"} className="nbhd-guide-link"><span>{"[email protected]"}</span></a><strong>{"Address:"}</strong>{" 8 West 126th Street, New York NY 10027"}</p>
             <div className="nbhd-guide-ctas">
               <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule Free Consultation</a>
-              <a href="tel:+1-646-970-1078" className="nbhd-guide-link">Call For Information</a>
+              <a href="tel:+16469701078" className="nbhd-guide-link">Call For Information</a>
             </div>
 </div>
         </div>

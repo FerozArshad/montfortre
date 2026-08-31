@@ -3,6 +3,9 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/park-slope-brownstone-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 const NEWS_ARTICLES = [
   {
@@ -40,14 +43,22 @@ export default function ParkSlopeBrownstoneContent() {
             <h1>{"Park Slope Brownstones — Experts for Buying, Selling & Investing"}</h1>
             <p className="nbhd-hero-lead">{"We'll help you buy the right Park Slope brownstone by avoiding costly structural issues, hidden repair expenses, and overpaying in a competitive market"}</p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:+1-(646)-970-1078" className="nbhd-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="nbhd-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">Schedule A Consultation</a>
             </div>
+          </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/park-slope-brownstones.png" alt="Park Slope brownstones" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
           </div>
         </div>
       </section>
 
       <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Park Slope" propertyType="Brownstone" label="Park Slope brownstones" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
@@ -112,23 +123,30 @@ export default function ParkSlopeBrownstoneContent() {
             <p>{"Park Slope is ranked as one of NYC's most desirable neighborhoods, and the micro-market dynamics within its boundaries make hyperlocal expertise essential. The difference between an informed purchase on the right block and an uninformed one on the wrong block can be measured in hundreds of thousands of dollars - and years of resale frustration."}</p>
             <p>{"Park Slope also hosts the Grand Army Plaza Greenmarket year-round and is home to the Brooklyn Public Library's Park Slope branch, community institutions that reinforce the neighborhood's appeal and support property values in the surrounding blocks."}</p>
             <h2>{"Frequently Asked Questions About Park Slope Brownstone Transactions"}</h2>
-            <h3>{"How are Park Slope brownstones priced and what affects value?"}</h3>
-            <p>{"Brownstone values in Park Slope are driven by a combination of location, lot dimensions, legal configuration, renovation level, and architectural integrity. Width matters significantly - a 20-foot-wide, 40-foot-deep 4-story brownstone offers substantially more usable square footage and renovation flexibility than a narrower building. The current median price in the neighborhood is approximately $1.9 million across all home types, but renovated brownstones typically range from $3.2 million to $8 million or more. When evaluating a Park Slope brownstone, I always pull block-specific comparable sales rather than neighborhood-wide averages, because even a couple of blocks can mean a large difference in value."}</p>
-            <h3>{"What should I know about legal configurations and Certificates of Occupancy?"}</h3>
-            <p>{"A Certificate of Occupancy states a building's legal use and occupancy type - and many buyers are surprised to learn that the property they're touring has a CO that doesn't match how the building is actually configured. For brownstones built before 1938, a CO might not have been originally required unless the building was later altered. If the property has been divided into units that aren't reflected in the CO, those units may be considered illegal, which affects financing, insurance, and resale value. Under NYC's 2024 ADU laws, some one- or two-family brownstones may now add a legal accessory dwelling unit in a basement, cellar, or top floor - but this can trigger reclassification and additional code requirements under the Multiple Dwelling Law. Before making an offer, I always verify the CO, review zoning classification under "}<a href={"https://zr.planning.nyc.gov/article-ii/chapter-3/23-52"} className="nbhd-guide-link">{"NYC zoning rules"}</a>{", and assess whether any legal irregularities exist."}</p>
-            <h3>{"How do Historic District rules affect buying or selling a brownstone?"}</h3>
-            <p>{"Within the Park Slope Historic District, any exterior work - from window replacement to stoop restoration to facade repair - requires approval from the NYC Landmarks Preservation Commission through a Certificate of Appropriateness. The LPC reviews proposed work for consistency with historic styles, materials, design, and texture. Non-complex changes may be handled at staff level relatively quickly, but major alterations require a public hearing and full board review that can take three months or longer. For sellers, unresolved LPC violations or non-compliant past work can complicate transactions. For buyers, understanding what you can and can't change on the exterior - and what it will cost - is essential before committing."}</p>
-            <h3>{"What's the difference between single-family and multi-unit brownstones?"}</h3>
-            <p>{"A single-family brownstone is typically wider, with higher ceiling heights and the entire building configured for one household - parlor floor, upper floors, attic, and basement all under one family's use. Multi-family brownstones may be divided into two or three separate units, sometimes legally, sometimes not. Multi-family properties allow rental income generation - an owner's duplex upstairs with a garden or parlor-level rental unit, for example - but they are subject to additional building code, fire safety, egress, and zoning requirements, and must have a certified CO reflecting the actual unit count. Legal rental units add value; illegal ones represent risk that experienced buyers will discount or walk away from entirely."}</p>
-            <h3>{"How long do Park Slope brownstone transactions typically take?"}</h3>
-            <p>{"After an offer is accepted, well-organized transactions in Park Slope can close in 30–60 days. However, properties with legal irregularities, open violations, or needed LPC approvals may take significantly longer. The due diligence period - inspections, CO verification, title review, financing - is where most delays occur. Having an experienced Park Slope brownstone real estate agent who coordinates these processes proactively, rather than reactively, is what keeps transactions on track."}</p>
+            <FaqAccordion>
+              <FaqItem question={"How are Park Slope brownstones priced and what affects value?"}>
+              <p>{"Brownstone values in Park Slope are driven by a combination of location, lot dimensions, legal configuration, renovation level, and architectural integrity. Width matters significantly - a 20-foot-wide, 40-foot-deep 4-story brownstone offers substantially more usable square footage and renovation flexibility than a narrower building. The current median price in the neighborhood is approximately $1.9 million across all home types, but renovated brownstones typically range from $3.2 million to $8 million or more. When evaluating a Park Slope brownstone, I always pull block-specific comparable sales rather than neighborhood-wide averages, because even a couple of blocks can mean a large difference in value."}</p>
+              </FaqItem>
+              <FaqItem question={"What should I know about legal configurations and Certificates of Occupancy?"}>
+              <p>{"A Certificate of Occupancy states a building's legal use and occupancy type - and many buyers are surprised to learn that the property they're touring has a CO that doesn't match how the building is actually configured. For brownstones built before 1938, a CO might not have been originally required unless the building was later altered. If the property has been divided into units that aren't reflected in the CO, those units may be considered illegal, which affects financing, insurance, and resale value. Under NYC's 2024 ADU laws, some one- or two-family brownstones may now add a legal accessory dwelling unit in a basement, cellar, or top floor - but this can trigger reclassification and additional code requirements under the Multiple Dwelling Law. Before making an offer, I always verify the CO, review zoning classification under "}<a href={"https://zr.planning.nyc.gov/article-ii/chapter-3/23-52"} className="nbhd-guide-link">{"NYC zoning rules"}</a>{", and assess whether any legal irregularities exist."}</p>
+              </FaqItem>
+              <FaqItem question={"How do Historic District rules affect buying or selling a brownstone?"}>
+              <p>{"Within the Park Slope Historic District, any exterior work - from window replacement to stoop restoration to facade repair - requires approval from the NYC Landmarks Preservation Commission through a Certificate of Appropriateness. The LPC reviews proposed work for consistency with historic styles, materials, design, and texture. Non-complex changes may be handled at staff level relatively quickly, but major alterations require a public hearing and full board review that can take three months or longer. For sellers, unresolved LPC violations or non-compliant past work can complicate transactions. For buyers, understanding what you can and can't change on the exterior - and what it will cost - is essential before committing."}</p>
+              </FaqItem>
+              <FaqItem question={"What's the difference between single-family and multi-unit brownstones?"}>
+              <p>{"A single-family brownstone is typically wider, with higher ceiling heights and the entire building configured for one household - parlor floor, upper floors, attic, and basement all under one family's use. Multi-family brownstones may be divided into two or three separate units, sometimes legally, sometimes not. Multi-family properties allow rental income generation - an owner's duplex upstairs with a garden or parlor-level rental unit, for example - but they are subject to additional building code, fire safety, egress, and zoning requirements, and must have a certified CO reflecting the actual unit count. Legal rental units add value; illegal ones represent risk that experienced buyers will discount or walk away from entirely."}</p>
+              </FaqItem>
+              <FaqItem question={"How long do Park Slope brownstone transactions typically take?"}>
+              <p>{"After an offer is accepted, well-organized transactions in Park Slope can close in 30–60 days. However, properties with legal irregularities, open violations, or needed LPC approvals may take significantly longer. The due diligence period - inspections, CO verification, title review, financing - is where most delays occur. Having an experienced Park Slope brownstone real estate agent who coordinates these processes proactively, rather than reactively, is what keeps transactions on track."}</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>{"Start Your Park Slope Brownstone Journey"}</h2>
             <p>{"Whether you're looking to buy a brownstone in Park Slope, sell one at the right price, or evaluate a property's investment potential, the details matter more here than in almost any other residential market in New York City. From legal configuration and historic district compliance to block-level pricing and renovation cost exposure, every decision benefits from working with a realtor who understands these properties inside and out."}</p>
             <p>{"Stanley Montfort provides buyer representation, listing services, brownstone valuations, and neighborhood-specific guidance throughout Park Slope, Brooklyn. Reach out for a consultation - whether you're ready to make a move or simply want to understand what your brownstone is worth in today's market."}</p>
             <p><strong>{"Phone:"}</strong>{" 1-646-970-1078  "}<strong>{"Email:"}</strong><a href={"mailto:sm@montfortre.com"} className="nbhd-guide-link"><span>{"[email protected]"}</span></a><strong>{"Address:"}</strong>{" 8 West 126th Street, New York NY 10027"}</p>
             <div className="nbhd-guide-ctas">
               <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule Free Consultation</a>
-              <a href="tel:+1-646-970-1078" className="nbhd-guide-link">Call For Information</a>
+              <a href="tel:+16469701078" className="nbhd-guide-link">Call For Information</a>
             </div>
 </div>
         </div>

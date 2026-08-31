@@ -3,6 +3,7 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +45,7 @@ export default function BuyingABrownstoneInNycContent() {
               considerations, and <strong>market value</strong> so you can buy with confidence.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -56,6 +57,7 @@ export default function BuyingABrownstoneInNycContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/buying-a-brownstone-nyc.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -482,7 +484,7 @@ export default function BuyingABrownstoneInNycContent() {
             </p>
             <p className="tf-guide-center">
               <strong>Phone:</strong>{" "}
-              <a href="tel:+1-646-970-1078" className="tf-guide-link">1-646-970-1078</a>{" "}
+              <a href="tel:+16469701078" className="tf-guide-link">1-646-970-1078</a>{" "}
               <strong>Email:</strong>{" "}
               <a href="mailto:sm@montfortre.com" className="tf-guide-link">sm@montfortre.com</a>{" "}
               <strong>Address:</strong> 8 West 126th Street, New York NY 10027

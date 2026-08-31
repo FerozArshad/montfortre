@@ -1,7 +1,7 @@
 /**
- * Paths whose original Montfort pages embedded the ReputationHub
- * `lc_reviews_widget` (from HTTrack index.html / index-original.html).
- * Reviews render at end of page content (PageShell), matching the original placement.
+ * Paths that show the custom Montfort Google reviews carousel at end of content
+ * (same pages that originally embedded ReputationHub on HTTrack).
+ * Reviews render via PageShell, matching the original placement.
  * Home (`/`) is excluded — it uses a mid-page ReviewsSection after Services.
  */
 export const ORIGINAL_REVIEW_PATHS: ReadonlySet<string> = new Set([

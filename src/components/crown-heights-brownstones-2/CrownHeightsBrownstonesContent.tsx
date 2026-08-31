@@ -3,6 +3,9 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/crown-heights-brownstones-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 
 const NEWS_ARTICLES = [
@@ -43,7 +46,7 @@ export default function CrownHeightsBrownstonesContent() {
               We'll help you buy the right Crown Heights brownstone by avoiding costly structural issues, hidden repair expenses, and overpaying in a competitive market
             </p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:646-970-1078" className="nbhd-hero-tel">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">
@@ -51,10 +54,18 @@ export default function CrownHeightsBrownstonesContent() {
               </a>
             </div>
           </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/crown-heights-brownstones.png" alt="Crown Heights brownstones" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
+          </div>
         </div>
       </section>
 
       <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Crown Heights" propertyType="Brownstone" label="Crown Heights brownstones" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
@@ -136,42 +147,49 @@ export default function CrownHeightsBrownstonesContent() {
             </blockquote>
             <hr className="nbhd-guide-rule" />
             <h2>Frequently Asked Questions About Crown Heights Brownstones</h2>
-            <h3>What's the current market for Crown Heights brownstones in 2026?</h3>
-            <p>Seven townhouses are currently for sale in Crown Heights, with a median listing price for townhouses of $1.25 million. Townhouses in Crown Heights stay on the market for 58 days, and in the past month, 10 townhouses were sold. <a href="https://www.redfin.com/neighborhood/224180/NY/New-York/Crown-Heights/housing-market" className="nbhd-guide-link">Price per square foot</a> is approaching $956, up roughly 20% year-over-year. Homes are spending approximately 67 days on market on average across all property types - slightly longer than last year's 59 days, suggesting some cooling but still a competitive market for well-maintained, landmarked, or Parkway-adjacent brownstones. Buyer competition remains strong for properties in good condition on desirable blocks.</p>
-            <h3>How much should I budget for brownstone renovations?</h3>
-            <p>Renovation costs vary dramatically based on scope. Here are realistic ranges for mid-2026:</p>
-            Renovation ScopeCost RangeKey Variables<strong>Full Gut Renovation (3–4 Story)</strong>$400–$800+/sq ft ($650K–$1.4M+)Square footage, historic detail, extensions, landmark status<strong>Facade Restoration</strong>$85,000–$250,000+Deterioration level, ornament complexity, LPC approvals<strong>Stoop Rebuild</strong>$18,000–$60,000Material quality, wrought iron detailing, water damage<strong>Pointing / Mortar Repair</strong>$15–$35/sq ftMasonry type, accessibility, mortar matching<strong>Chimney & Parapet Repairs</strong>
-            $8,000–$30,000 (parapet)<br />
-            $2,500–$15,000+ (chimney)
-            Height, material, code compliance
-            <p>Many buyers assume renovation cost per square foot is linear - it's not. Adding a rear extension, relocating a kitchen, or achieving full code compliance for systems can sharply increase per-sq-ft costs. I always recommend budgeting a 15-25% contingency for hidden issues like lead paint, asbestos, structural wood rot, or moisture in basement vaults.</p>
-            <h3>What financing options work best for Crown Heights brownstones?</h3>
-            <p>For owner-occupied single-family brownstones (1-3 units), traditional conforming or jumbo mortgages typically offer the best terms. Multi-family investment properties require lenders who underwrite based on net operating income - expect higher down payments (25-30%+) and slightly elevated interest rates.</p>
-            Financing TypeBest ForKey Considerations<strong>Traditional Mortgage</strong>Owner-occupied, 1–3 unitsLower interest rates, standard LTV requirements<strong>Investment / Portfolio Loan</strong>Multi-family income propertiesDSCR-based underwriting, higher down payment requirements<strong>Construction / Renovation Loan</strong>Gut renovations and major rehab projectsFunds are disbursed in phases and require a detailed renovation plan<strong>Owner Financing</strong>Motivated seller situationsRequires experienced legal counsel and a clear property title
-            <p>Renovation-loan options and historic-preservation incentives may also be available depending on landmark status and approved work scope.</p>
-            <h3>How do I evaluate rental income potential?</h3>
-            <p>Start with current Crown Heights rental averages: studios at approximately $2,199/month, one-bedrooms at $2,688, two-bedrooms at $3,170, and three-bedrooms at $3,194. Then adjust based on unit condition, location within the building (parlor floor vs. basement), and whether units are rent-stabilized.</p>
-            <p>For a real-world reference, consider <a href="https://www.cityrealty.com/nyc/crown-heights/680-saint-marks-avenue/66112" className="nbhd-guide-link">680 Saint Marks Avenue</a>: a seven-family brownstone in the Crown Heights North Historic District generating approximately $85,000 in annual income against $28,000 in expenses, yielding a cap rate of roughly 7%. When evaluating a Crown Heights brownstone for income, I use conservative rent estimates (lowest comparable), factor in 5-10% vacancy, and include reserves for façade maintenance, systems repair, and potential tax increases after renovation.</p>
-            <h3>What are common mistakes first-time brownstone buyers make?</h3>
-            <p>After 15+ years in this market, these are the pitfalls I see most often:</p>
-            <ul className="nbhd-guide-list"><li>
-            <p><strong>Assuming "move-in ready" means no hidden costs.</strong> Many buyers assume brownstones will come ready if they look outwardly good. Utilities, structure, and facades are often the hidden skeletons with major deferred maintenance - original plumbing, knob-and-tube wiring, or deteriorating floors behind cosmetic finishes.</p>
-            </li><li>
-            <p><strong>Underestimating landmark compliance.</strong> Securing a Certificate of Appropriateness for even minor façade changes can take 3-6 months or more. Design constraints may limit features buyers assume can be added, such as certain window styles or balconies. Crown Heights is recognized for its historic districts that protect architectural integrity - and those protections have real cost implications.</p>
-            </li><li>
-            <p><strong>Overestimating rental income.</strong> Garden or basement units may have ceiling height or compliance issues that affect legality and marketability. Rent stabilization may cap increases regardless of renovation investment.</p>
-            </li><li>
-            <p><strong>Ignoring tax-class implications.</strong> NYC property tax rates for 2026 are approximately 19.843% for Class 1 (1-3 unit residential) and 12.439% for Class 2 (multi-unit income-producing). Assessments may lag market value initially but trigger reassessment after renovation - buyers must budget for potential increases.</p>
-            </li><li>
-            <p><strong>Skipping the block-level walkthrough.</strong> I always tell clients: look at the neighboring brownstones. Are facades in disrepair? Is there consistent maintenance? Block condition directly affects your property's value trajectory.</p>
-            </li></ul>
-            <hr className="nbhd-guide-rule" />
+            <FaqAccordion>
+              <FaqItem question={<>What's the current market for Crown Heights brownstones in 2026?</>}>
+              <p>Seven townhouses are currently for sale in Crown Heights, with a median listing price for townhouses of $1.25 million. Townhouses in Crown Heights stay on the market for 58 days, and in the past month, 10 townhouses were sold. <a href="https://www.redfin.com/neighborhood/224180/NY/New-York/Crown-Heights/housing-market" className="nbhd-guide-link">Price per square foot</a> is approaching $956, up roughly 20% year-over-year. Homes are spending approximately 67 days on market on average across all property types - slightly longer than last year's 59 days, suggesting some cooling but still a competitive market for well-maintained, landmarked, or Parkway-adjacent brownstones. Buyer competition remains strong for properties in good condition on desirable blocks.</p>
+              </FaqItem>
+              <FaqItem question={<>How much should I budget for brownstone renovations?</>}>
+              <p>Renovation costs vary dramatically based on scope. Here are realistic ranges for mid-2026:</p>
+              Renovation ScopeCost RangeKey Variables<strong>Full Gut Renovation (3–4 Story)</strong>$400–$800+/sq ft ($650K–$1.4M+)Square footage, historic detail, extensions, landmark status<strong>Facade Restoration</strong>$85,000–$250,000+Deterioration level, ornament complexity, LPC approvals<strong>Stoop Rebuild</strong>$18,000–$60,000Material quality, wrought iron detailing, water damage<strong>Pointing / Mortar Repair</strong>$15–$35/sq ftMasonry type, accessibility, mortar matching<strong>Chimney & Parapet Repairs</strong>
+              $8,000–$30,000 (parapet)<br />
+              $2,500–$15,000+ (chimney)
+              Height, material, code compliance
+              <p>Many buyers assume renovation cost per square foot is linear - it's not. Adding a rear extension, relocating a kitchen, or achieving full code compliance for systems can sharply increase per-sq-ft costs. I always recommend budgeting a 15-25% contingency for hidden issues like lead paint, asbestos, structural wood rot, or moisture in basement vaults.</p>
+              </FaqItem>
+              <FaqItem question={<>What financing options work best for Crown Heights brownstones?</>}>
+              <p>For owner-occupied single-family brownstones (1-3 units), traditional conforming or jumbo mortgages typically offer the best terms. Multi-family investment properties require lenders who underwrite based on net operating income - expect higher down payments (25-30%+) and slightly elevated interest rates.</p>
+              Financing TypeBest ForKey Considerations<strong>Traditional Mortgage</strong>Owner-occupied, 1–3 unitsLower interest rates, standard LTV requirements<strong>Investment / Portfolio Loan</strong>Multi-family income propertiesDSCR-based underwriting, higher down payment requirements<strong>Construction / Renovation Loan</strong>Gut renovations and major rehab projectsFunds are disbursed in phases and require a detailed renovation plan<strong>Owner Financing</strong>Motivated seller situationsRequires experienced legal counsel and a clear property title
+              <p>Renovation-loan options and historic-preservation incentives may also be available depending on landmark status and approved work scope.</p>
+              </FaqItem>
+              <FaqItem question={<>How do I evaluate rental income potential?</>}>
+              <p>Start with current Crown Heights rental averages: studios at approximately $2,199/month, one-bedrooms at $2,688, two-bedrooms at $3,170, and three-bedrooms at $3,194. Then adjust based on unit condition, location within the building (parlor floor vs. basement), and whether units are rent-stabilized.</p>
+              <p>For a real-world reference, consider <a href="https://www.cityrealty.com/nyc/crown-heights/680-saint-marks-avenue/66112" className="nbhd-guide-link">680 Saint Marks Avenue</a>: a seven-family brownstone in the Crown Heights North Historic District generating approximately $85,000 in annual income against $28,000 in expenses, yielding a cap rate of roughly 7%. When evaluating a Crown Heights brownstone for income, I use conservative rent estimates (lowest comparable), factor in 5-10% vacancy, and include reserves for façade maintenance, systems repair, and potential tax increases after renovation.</p>
+              </FaqItem>
+              <FaqItem question={<>What are common mistakes first-time brownstone buyers make?</>}>
+              <p>After 15+ years in this market, these are the pitfalls I see most often:</p>
+              <ul className="nbhd-guide-list"><li>
+              <p><strong>Assuming "move-in ready" means no hidden costs.</strong> Many buyers assume brownstones will come ready if they look outwardly good. Utilities, structure, and facades are often the hidden skeletons with major deferred maintenance - original plumbing, knob-and-tube wiring, or deteriorating floors behind cosmetic finishes.</p>
+              </li><li>
+              <p><strong>Underestimating landmark compliance.</strong> Securing a Certificate of Appropriateness for even minor façade changes can take 3-6 months or more. Design constraints may limit features buyers assume can be added, such as certain window styles or balconies. Crown Heights is recognized for its historic districts that protect architectural integrity - and those protections have real cost implications.</p>
+              </li><li>
+              <p><strong>Overestimating rental income.</strong> Garden or basement units may have ceiling height or compliance issues that affect legality and marketability. Rent stabilization may cap increases regardless of renovation investment.</p>
+              </li><li>
+              <p><strong>Ignoring tax-class implications.</strong> NYC property tax rates for 2026 are approximately 19.843% for Class 1 (1-3 unit residential) and 12.439% for Class 2 (multi-unit income-producing). Assessments may lag market value initially but trigger reassessment after renovation - buyers must budget for potential increases.</p>
+              </li><li>
+              <p><strong>Skipping the block-level walkthrough.</strong> I always tell clients: look at the neighboring brownstones. Are facades in disrepair? Is there consistent maintenance? Block condition directly affects your property's value trajectory.</p>
+              </li></ul>
+              <hr className="nbhd-guide-rule" />
+              </FaqItem>
+            </FaqAccordion>
             <h2>Schedule Your Crown Heights Brownstone Consultation</h2>
             <h3>Ready to Find Your Perfect Crown Heights Brownstone?</h3>
             <p>Buying a brownstone in Crown Heights is one of the most rewarding real estate decisions you can make in New York - but only if you approach it with the right expertise and preparation. Every property, every block, and every deal has its own considerations, and generic advice won't protect your investment.</p>
             <p>I offer a complimentary initial consultation that includes a current market analysis tailored to your specific buying criteria - whether you're a family looking for your forever home on a tree-lined block or an investor building a multi-family portfolio.</p>
             <p><strong>Phone:</strong> 1-646-970-1078                 <strong>Email:</strong><a href="mailto:sm@montfortre.com" className="nbhd-guide-link">sm@montfortre.com</a></p>
-            <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule Free Consultation</a><a href="tel:646-970-1078" className="nbhd-guide-link">Call For Information</a>
+            <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule Free Consultation</a><a href="tel:+16469701078" className="nbhd-guide-link">Call For Information</a>
 </div>
         </div>
       </section>

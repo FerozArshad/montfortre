@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -42,7 +44,7 @@ export default function NycFirstTimeHomeBuyerMortagesContent() {
               and ensuring you buy within a budget that supports your long-term financial goals
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
           </div>
@@ -50,6 +52,7 @@ export default function NycFirstTimeHomeBuyerMortagesContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/nyc-first-time-home-buyer-mortages.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -210,26 +213,32 @@ export default function NycFirstTimeHomeBuyerMortagesContent() {
             </ul>
 
             <h2>Frequently Asked Questions About NYC First-Time Buyer Mortgages</h2>
-            <h3>How much should I save for a down payment in NYC?</h3>
-            <p>For condos, expect to need 10-20% down. Co-op boards often require 20-30% plus 12-24 months of reserves in liquid savings. If you qualify for assistance programs, the math changes: HomeFirst provides up to $100,000 for down payment assistance, and SONYMA&apos;s DPAL covers up to $15,000. Budget an additional 4-6% of the purchase price for closing costs. Your total savings target should cover the down payment (minus any payment assistance), closing costs, moving expenses, and at least three months of carrying costs as a buffer.</p>
-            <h3>What credit score do I need for a mortgage in NYC?</h3>
-            <p>For conventional loans, 620 is the floor, though you&apos;ll access better rates at 740+. FHA loans accept scores as low as 580 for 3.5% down. The HomeFirst program requires a 620 minimum credit score, with an exception to 580 when using an FHA lender. If your score is below these thresholds, spending six months improving it before applying can save thousands over the life of your mortgage through a lower interest rate.</p>
-            <h3>How long does the mortgage approval process take?</h3>
-            <p>From pre-approval to closing, plan for 45-60 days for condos and co ops. Simpler transactions (single-family homes without board approval) can close in 30-45 days. Co-op board interviews and document reviews add time. Common delays include appraisal issues, title problems, and income verification for self-employed borrowers. Having your documentation organized from the start is the single most effective way to avoid delays.</p>
-            <h3>Should I get pre-approved before looking at homes?</h3>
-            <p>Yes. Pre-approval defines your realistic budget, shows sellers you have verified financing, and helps you include the right contingencies in your offer. In NYC&apos;s competitive market, an offer without pre approval often gets passed over. Pre-approval also reveals whether your chosen lender can finance the specific property types (co-op, condo, new construction) you&apos;re considering.</p>
-            <h3>What if I&apos;m self-employed or have irregular income?</h3>
-            <p>Lenders will request two or more years of tax returns, profit-and-loss statements, 1099 forms, and bank statements. They typically average your income over two years, so a single strong year won&apos;t fully count unless the prior year supports it. Some first-time buyer assistance programs have rigid documentation requirements that match FHA or Fannie Mae underwriting standards. I help self-employed buyers organize clean, consistent documentation before submitting their mortgage application, which reduces back-and-forth with underwriters.</p>
-
+            <FaqAccordion>
+              <FaqItem question={<>How much should I save for a down payment in NYC?</>}>
+              <p>For condos, expect to need 10-20% down. Co-op boards often require 20-30% plus 12-24 months of reserves in liquid savings. If you qualify for assistance programs, the math changes: HomeFirst provides up to $100,000 for down payment assistance, and SONYMA&apos;s DPAL covers up to $15,000. Budget an additional 4-6% of the purchase price for closing costs. Your total savings target should cover the down payment (minus any payment assistance), closing costs, moving expenses, and at least three months of carrying costs as a buffer.</p>
+              </FaqItem>
+              <FaqItem question={<>What credit score do I need for a mortgage in NYC?</>}>
+              <p>For conventional loans, 620 is the floor, though you&apos;ll access better rates at 740+. FHA loans accept scores as low as 580 for 3.5% down. The HomeFirst program requires a 620 minimum credit score, with an exception to 580 when using an FHA lender. If your score is below these thresholds, spending six months improving it before applying can save thousands over the life of your mortgage through a lower interest rate.</p>
+              </FaqItem>
+              <FaqItem question={<>How long does the mortgage approval process take?</>}>
+              <p>From pre-approval to closing, plan for 45-60 days for condos and co ops. Simpler transactions (single-family homes without board approval) can close in 30-45 days. Co-op board interviews and document reviews add time. Common delays include appraisal issues, title problems, and income verification for self-employed borrowers. Having your documentation organized from the start is the single most effective way to avoid delays.</p>
+              </FaqItem>
+              <FaqItem question={<>Should I get pre-approved before looking at homes?</>}>
+              <p>Yes. Pre-approval defines your realistic budget, shows sellers you have verified financing, and helps you include the right contingencies in your offer. In NYC&apos;s competitive market, an offer without pre approval often gets passed over. Pre-approval also reveals whether your chosen lender can finance the specific property types (co-op, condo, new construction) you&apos;re considering.</p>
+              </FaqItem>
+              <FaqItem question={<>What if I&apos;m self-employed or have irregular income?</>}>
+              <p>Lenders will request two or more years of tax returns, profit-and-loss statements, 1099 forms, and bank statements. They typically average your income over two years, so a single strong year won&apos;t fully count unless the prior year supports it. Some first-time buyer assistance programs have rigid documentation requirements that match FHA or Fannie Mae underwriting standards. I help self-employed buyers organize clean, consistent documentation before submitting their mortgage application, which reduces back-and-forth with underwriters.</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Start Your NYC Home Buying Journey</h2>
             <p>Before you attend a single open house, let&apos;s build your purchasing strategy. A 30-minute consultation covers your financial health, identifies which assistance programs you may qualify for, and creates a realistic timeline for your home purchase. Every successful first-time buyer I&apos;ve worked with started with a plan, not a listing.</p>
             <p className="tf-guide-center">
-              <strong>Phone:</strong>{" "}<a href="tel:+1-646-970-1078" className="tf-guide-link">1-646-970-1078</a>{"  "}
+              <strong>Phone:</strong>{" "}<a href="tel:+16469701078" className="tf-guide-link">1-646-970-1078</a>{"  "}
               <strong>Email:</strong>{" "}<a href="mailto:sm@montfortre.com" className="tf-guide-link">sm@montfortre.com</a>{"  "}
               <strong>Address:</strong> 8 West 126th Street, New York NY 10027
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">Call For Information</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call For Information</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
           </div>

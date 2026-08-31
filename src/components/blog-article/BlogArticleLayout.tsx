@@ -2,8 +2,10 @@ import ContactSection from "../shared/ContactSection";
 import "../../styles/brownstone-guide.css";
 import BlogAuthorBio from "./BlogAuthorBio";
 import BlogShareButtons from "./BlogShareButtons";
+import LeadFormHydrator from "../shared/LeadFormHydrator";
 import type { BlogArticleMeta } from "./types";
 import type { ReactNode } from "react";
+import { useRef } from "react";
 
 interface BlogArticleLayoutProps {
   meta: BlogArticleMeta;
@@ -13,6 +15,9 @@ interface BlogArticleLayoutProps {
 
 export default function BlogArticleLayout({ meta, bodyHtml, afterBody }: BlogArticleLayoutProps) {
   const showHeroCtas = meta.showHeroCtas !== false;
+  const faqs = meta.faqs ?? [];
+  const bodyRef = useRef<HTMLDivElement>(null);
+
   return (
     <>
       <section className="bsg-hero" data-screen-label="Article hero">
@@ -40,7 +45,7 @@ export default function BlogArticleLayout({ meta, bodyHtml, afterBody }: BlogArt
                 <a href="https://calendly.com/montfort" className="bsg-hero-book">
                   Book Now
                 </a>
-                <a href="tel:646-970-1078" className="bsg-hero-tel">
+                <a href="tel:+16469701078" className="bsg-hero-tel">
                   (646) 970-1078
                 </a>
               </div>
@@ -75,8 +80,27 @@ export default function BlogArticleLayout({ meta, bodyHtml, afterBody }: BlogArt
               <span className="bsg-kicker-line" />
               <span className="bsg-kicker-label">{meta.kickerLabel ?? "The article"}</span>
             </div>
-            <div className="bsg-html" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+            <div ref={bodyRef} className="bsg-html" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+            <LeadFormHydrator containerRef={bodyRef} bodyHtml={bodyHtml} />
             {afterBody}
+            {faqs.length > 0 ? (
+              <>
+                <h2 id="faqs" className="bsg-faqs-title">
+                  Frequently asked questions
+                </h2>
+                <div className="bsg-faqs">
+                  {faqs.map((faq, i) => (
+                    <details key={`${faq.q}-${i}`} className="bsg-faq">
+                      <summary>
+                        {faq.q}
+                        <span className="bsg-faq-mark">+</span>
+                      </summary>
+                      <p>{faq.a}</p>
+                    </details>
+                  ))}
+                </div>
+              </>
+            ) : null}
             <BlogShareButtons shareUrl={meta.shareUrl} />
             <BlogAuthorBio />
           </div>

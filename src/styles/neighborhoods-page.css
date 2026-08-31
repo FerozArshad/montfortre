@@ -65,6 +65,17 @@
   align-items: center;
 }
 
+/* Per-page stylesheets collapse this hero to one column, which was right while
+   these heroes were copy-only. Any hero that now carries a media column needs
+   the two-column layout back, at a specificity that outranks those overrides.
+   Scoped above the stacking breakpoint so mobile still stacks. */
+@media (min-width: 1025px) {
+  .nbhd-hero .nbhd-hero-inner:has(.nbhd-hero-media) {
+    grid-template-columns: 1.02fr 0.98fr;
+    gap: 72px;
+  }
+}
+
 .nbhd-crumb {
   display: inline-flex;
   align-items: center;
@@ -76,12 +87,12 @@
   color: #8a7b4e;
 }
 
-.neighborhoods-page a.nbhd-crumb-link {
+.nbhd-hero a.nbhd-crumb-link {
   color: #8a7b4e;
   text-decoration: none;
 }
 
-.neighborhoods-page a.nbhd-crumb-link:hover {
+.nbhd-hero a.nbhd-crumb-link:hover {
   color: #c98a2c;
 }
 
@@ -93,7 +104,8 @@
   color: #c98a2c;
 }
 
-.nbhd-hero h1 {
+.nbhd-hero h1,
+.nbhd-hero .nbhd-hero-title {
   font-family: "Space Grotesk", system-ui, sans-serif;
   font-weight: 700;
   font-size: 62px;
@@ -125,7 +137,7 @@
   margin-top: 34px;
 }
 
-.neighborhoods-page a.nbhd-hero-book {
+.nbhd-hero a.nbhd-hero-book {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -141,12 +153,12 @@
   text-decoration: none;
 }
 
-.neighborhoods-page a.nbhd-hero-book:hover {
+.nbhd-hero a.nbhd-hero-book:hover {
   background: #c98a2c;
   color: #0f1729;
 }
 
-.neighborhoods-page a.nbhd-hero-tel {
+.nbhd-hero a.nbhd-hero-tel {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -161,7 +173,7 @@
   text-decoration: none;
 }
 
-.neighborhoods-page a.nbhd-hero-tel:hover {
+.nbhd-hero a.nbhd-hero-tel:hover {
   background: #113b5f;
   color: #f9f6e6;
 }
@@ -187,7 +199,7 @@
   margin-top: 18px;
 }
 
-.neighborhoods-page a.nbhd-hero-hood {
+.nbhd-hero a.nbhd-hero-hood {
   font-size: 15.5px;
   font-weight: 600;
   color: #0f1729;
@@ -195,7 +207,7 @@
   text-decoration: none;
 }
 
-.neighborhoods-page a.nbhd-hero-hood:hover {
+.nbhd-hero a.nbhd-hero-hood:hover {
   color: #c98a2c;
 }
 
@@ -224,14 +236,14 @@
   margin-top: 16px;
 }
 
-.neighborhoods-page a.nbhd-hero-boro-link {
+.nbhd-hero a.nbhd-hero-boro-link {
   font-size: 15.5px;
   font-weight: 600;
   color: #0f1729;
   text-decoration: none;
 }
 
-.neighborhoods-page a.nbhd-hero-boro-link:hover {
+.nbhd-hero a.nbhd-hero-boro-link:hover {
   color: #c98a2c;
 }
 
@@ -827,7 +839,8 @@
     gap: 12px 28px;
   }
 
-  .nbhd-hero h1 {
+  .nbhd-hero h1,
+.nbhd-hero .nbhd-hero-title {
     font-size: 44px;
   }
 
@@ -923,7 +936,8 @@
     gap: 24px;
   }
 
-  .nbhd-hero h1 {
+  .nbhd-hero h1,
+.nbhd-hero .nbhd-hero-title {
     font-size: 32px;
   }
 
@@ -960,8 +974,8 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .neighborhoods-page a.nbhd-hero-book,
-  .neighborhoods-page a.nbhd-hero-tel {
+  .nbhd-hero a.nbhd-hero-book,
+  .nbhd-hero a.nbhd-hero-tel {
     flex: 1 1 0;
     min-width: 0;
     justify-content: center;
@@ -1063,7 +1077,8 @@
 }
 
 @media (max-width: 480px) {
-  .nbhd-hero h1 {
+  .nbhd-hero h1,
+.nbhd-hero .nbhd-hero-title {
     font-size: 27px;
   }
 

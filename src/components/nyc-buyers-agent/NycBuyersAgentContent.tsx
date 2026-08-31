@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/nyc-buyers-agent-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const RELATED_SERVICES = [
@@ -75,7 +77,7 @@ export default function NycBuyersAgentContent() {
               negotiating favorable terms, and ensuring <strong>you buy the right property</strong> at the right price.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -87,6 +89,7 @@ export default function NycBuyersAgentContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/nyc-buyers-agent.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -473,54 +476,59 @@ export default function NycBuyersAgentContent() {
             </blockquote>
             <hr />
             <h2>Frequently Asked Questions</h2>
-            <h3>How much does a buyer’s agent cost anyway?</h3>
-            <p>
-              Following that August 17th NAR settlement, buyer’s agent commission structures changed pretty
-              dramatically. Previously, sellers would typically pay 5-6% total commission - split between the listing
-              agent and buyer’s agent. Now compensation offers are no longer required in RLS entries, and buyers have to
-              have a written agreement with their agent which spells out the fee structure before they can look at
-              homes.
-            </p>
-            <p>
-              Well, currently the buyer’s agent commission is usually around 2.5-3% of the purchase price, though
-              that&apos;s negotiable. Sometimes the home seller offers compensation, sometimes the buyer has to pay
-              their agent directly, and sometimes they negotiate credits. From Stanley&apos;s experience, 99% of sellers
-              in NYC are still offering a buy side commission. So buyers rarely have to worry about paying this fee
-              themselves. What you really want to do is discuss your agent&apos;s compensation upfront - so you can
-              budget accurately for all your closing costs.
-            </p>
-            <h3>How is a buyer’s agent different from a listing agent?</h3>
-            <p>
-              A listing agent—the seller&apos;s agent or sales agent—is representing the home seller, and is focused on
-              getting them the highest possible sale price. In contrast your buyer’s agent owes you fiduciary duty under
-              New York Real Property Law, which means they have to be loyal to you, keep your business confidential,
-              give you full disclosure of any material facts, and exercise reasonable care. This is a big deal - it&apos;s
-              a serious commitment to putting your needs first.
-            </p>
-            <p>
-              Dual agency—where one agent is representing both parties in the same transaction—is legal in New York, but
-              it does create some conflicts of interest. While it can work out in some cases, especially when accessing
-              off market deals that aren&apos;t available otherwise - many buyers still prefer to work with a dedicated
-              agent who is legally bound to only represent their interests.
-            </p>
-            <h3>Do you really need a buyer’s agent for NYC real estate?</h3>
-            <p>
-              Absolutely many buyers who try to work directly with selling agents discover they&apos;re in a tough spot
-              from the word go. A listing agent&apos;s number one job is to get the best possible deal for the seller -
-              and that means you&apos;re not getting the kind of help you really need. Without someone on your side,
-              you&apos;re flying blind, with no one to turn to when you&apos;re trying to figure out if the place
-              you&apos;re looking at is worth the price tag - or if there are some major issues lurking that you need to
-              know about. Plus you&apos;re missing out on someone to help you craft an offer that&apos;s competitive and
-              likely to get accepted - and then of course there&apos;s all the paperwork and red tape of dealing with
-              the co-op board.
-            </p>
-            <p>
-              For anyone new to the game - first time buyer or seasoned pro who&apos;s not familiar with the quirks of
-              New York&apos;s market - an experienced buyer&apos;s agent can be a lifesaver. They&apos;ve seen it all
-              and can give you advice that&apos;s worked for their clients before. And it&apos;s pretty common for
-              people to find themselves working with the same agent again and again, especially in a market as tough as
-              New York&apos;s.
-            </p>
+            <FaqAccordion>
+              <FaqItem question={<>How much does a buyer’s agent cost anyway?</>}>
+              <p>
+                Following that August 17th NAR settlement, buyer’s agent commission structures changed pretty
+                dramatically. Previously, sellers would typically pay 5-6% total commission - split between the listing
+                agent and buyer’s agent. Now compensation offers are no longer required in RLS entries, and buyers have to
+                have a written agreement with their agent which spells out the fee structure before they can look at
+                homes.
+              </p>
+              <p>
+                Well, currently the buyer’s agent commission is usually around 2.5-3% of the purchase price, though
+                that&apos;s negotiable. Sometimes the home seller offers compensation, sometimes the buyer has to pay
+                their agent directly, and sometimes they negotiate credits. From Stanley&apos;s experience, 99% of sellers
+                in NYC are still offering a buy side commission. So buyers rarely have to worry about paying this fee
+                themselves. What you really want to do is discuss your agent&apos;s compensation upfront - so you can
+                budget accurately for all your closing costs.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How is a buyer’s agent different from a listing agent?</>}>
+              <p>
+                A listing agent—the seller&apos;s agent or sales agent—is representing the home seller, and is focused on
+                getting them the highest possible sale price. In contrast your buyer’s agent owes you fiduciary duty under
+                New York Real Property Law, which means they have to be loyal to you, keep your business confidential,
+                give you full disclosure of any material facts, and exercise reasonable care. This is a big deal - it&apos;s
+                a serious commitment to putting your needs first.
+              </p>
+              <p>
+                Dual agency—where one agent is representing both parties in the same transaction—is legal in New York, but
+                it does create some conflicts of interest. While it can work out in some cases, especially when accessing
+                off market deals that aren&apos;t available otherwise - many buyers still prefer to work with a dedicated
+                agent who is legally bound to only represent their interests.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Do you really need a buyer’s agent for NYC real estate?</>}>
+              <p>
+                Absolutely many buyers who try to work directly with selling agents discover they&apos;re in a tough spot
+                from the word go. A listing agent&apos;s number one job is to get the best possible deal for the seller -
+                and that means you&apos;re not getting the kind of help you really need. Without someone on your side,
+                you&apos;re flying blind, with no one to turn to when you&apos;re trying to figure out if the place
+                you&apos;re looking at is worth the price tag - or if there are some major issues lurking that you need to
+                know about. Plus you&apos;re missing out on someone to help you craft an offer that&apos;s competitive and
+                likely to get accepted - and then of course there&apos;s all the paperwork and red tape of dealing with
+                the co-op board.
+              </p>
+              <p>
+                For anyone new to the game - first time buyer or seasoned pro who&apos;s not familiar with the quirks of
+                New York&apos;s market - an experienced buyer&apos;s agent can be a lifesaver. They&apos;ve seen it all
+                and can give you advice that&apos;s worked for their clients before. And it&apos;s pretty common for
+                people to find themselves working with the same agent again and again, especially in a market as tough as
+                New York&apos;s.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <hr />
             <h2>Get Started with Your NYC Home Search Now</h2>
             <h3>Get The Personal Touch from Stanley Montfort - Your Buyer&apos;s Agent</h3>
@@ -537,7 +545,7 @@ export default function NycBuyersAgentContent() {
             </p>
             <div className="tf-cta-card">
               <div className="tf-cta-actions">
-                <a href="tel:+1-646-970-1078" className="tf-cta-tel">
+                <a href="tel:+16469701078" className="tf-cta-tel">
                   Call 1-(646)-970-1078
                 </a>
                 <a href="https://calendly.com/montfort" className="tf-cta-book">

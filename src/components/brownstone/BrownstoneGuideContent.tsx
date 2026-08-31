@@ -1,6 +1,7 @@
 import ContactSection from "../shared/ContactSection";
 import PromisesBar from "../shared/PromisesBar";
 import "../../styles/brownstone-guide.css";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 const TOC = [
   ["#brownstones-long-term", "Long-term commitments"],
@@ -69,10 +70,11 @@ export default function BrownstoneGuideContent() {
               <a href="https://calendly.com/montfort" className="bsg-hero-book">
                 Book Now
               </a>
-              <a href="tel:646-970-1078" className="bsg-hero-tel">
+              <a href="tel:+16469701078" className="bsg-hero-tel">
                 (646) 970-1078
               </a>
             </div>
+            <HeroGoogleRating prefix="solo" />
           </div>
           <div data-reveal="" className="bsg-hero-media">
             <div className="bsg-hero-pin" />
@@ -239,7 +241,7 @@ export default function BrownstoneGuideContent() {
                       Since the start of the pandemic, Stanley Montfort has played a crucial role in facilitating over one billion dollars worth of brownstone sales in New York City. He is a recognized expert in the city's brownstone and townhouse market, with extensive experience in both sell-side and buy-side transactions, thanks to his military and law background.
                     </p>
                     <p>
-                      Stanley honed his real estate skills at Leslie J. Garfield, where he established himself in the Harlem townhouse market and assisted in numerous co-ownership transactions, including more complicated deals involving SROs, seller financing, and negotiating with tenants, always leaving all parties satisfied.
+                      Stanley honed his real estate skills in the Harlem townhouse market and assisted in numerous co-ownership transactions, including more complicated deals involving SROs, seller financing, and negotiating with tenants, always leaving all parties satisfied.
                     </p>
                     <p>
                       With a vibrant, diversified career spanning the legal, banking, and technology industries, Stanley brings a wealth of experience to help clients achieve their real estate objectives. He applies innovative marketing, strategic thinking, and utmost professionalism and integrity to every deal. A savvy negotiator with strong analytical skills, he has navigated even the most challenging deals to deliver the desired results.

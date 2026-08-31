@@ -198,15 +198,23 @@
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 240px;
   gap: 56px;
   align-items: start;
 }
 
+/* TOC sits second visually (right rail) but stays first in the DOM. */
 .bsg-toc {
   position: sticky;
   top: 110px;
   align-self: start;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.bsg-body {
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .bsg-toc-label {
@@ -553,6 +561,13 @@
     gap: 40px;
   }
 
+  /* Stacked: drop the right-rail placement so the TOC leads the article again. */
+  .bsg-toc,
+  .bsg-body {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
   .bsg-hero h1 {
     font-size: 38px;
   }
@@ -798,6 +813,39 @@
 
 .blog-article-page .bsg-html a:hover {
   color: #c98a2c;
+}
+
+.bsg-html .cms-post-cta,
+.af-surface.bsg-html .cms-post-cta {
+  margin: 28px 0 8px;
+  text-align: center;
+}
+
+.bsg-html a.cms-post-btn,
+.af-surface.bsg-html a.cms-post-btn,
+.blog-article-page .bsg-html a.cms-post-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 28px;
+  border-radius: 6px;
+  border-bottom: none !important;
+  background: #c98a2c;
+  color: #0f1729 !important;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  text-decoration: none !important;
+  line-height: 1.2;
+  box-shadow: 0 1px 0 rgba(15, 23, 41, 0.12);
+}
+
+.bsg-html a.cms-post-btn:hover,
+.af-surface.bsg-html a.cms-post-btn:hover,
+.blog-article-page .bsg-html a.cms-post-btn:hover {
+  background: #b87a24;
+  color: #0f1729 !important;
 }
 
 @media (max-width: 768px) {

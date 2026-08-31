@@ -298,7 +298,7 @@ export default function NeighborhoodsContent() {
               We'll help you find the <strong>right NYC neighborhood</strong> based on your lifestyle, budget, and long-term goals—so <strong>you can buy with confidence</strong> and avoid costly mistakes
             </p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="nbhd-hero-tel">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">
@@ -358,7 +358,7 @@ export default function NeighborhoodsContent() {
               Finding the right neighborhood is just as important as finding the right property. Whether you're searching for a historic Harlem brownstone, a luxury Upper East Side condo, or an investment opportunity in Brooklyn, our neighborhood guides provide local market insights, lifestyle information, pricing trends, and community highlights to help you make an informed decision.
             </p>
             <p>
-              Browse NYC neighborhoods below, or call us at <a href="tel:646-970-1078" className="nbhd-intro-phone">1-646-970-1078</a> for personalized guidance from a local real estate expert.
+              Browse NYC neighborhoods below, or call us at <a href="tel:+16469701078" className="nbhd-intro-phone">1-646-970-1078</a> for personalized guidance from a local real estate expert.
             </p>
             <div className="nbhd-intro-pills">
               <a href="#manhattan" className="nbhd-pill-fill">
@@ -406,7 +406,7 @@ export default function NeighborhoodsContent() {
             <a href="https://calendly.com/montfort" className="nbhd-cta-book">
               Book Now
             </a>
-            <a href="tel:646-970-1078" className="nbhd-cta-tel">
+            <a href="tel:+16469701078" className="nbhd-cta-tel">
               (646) 970-1078
             </a>
           </div>

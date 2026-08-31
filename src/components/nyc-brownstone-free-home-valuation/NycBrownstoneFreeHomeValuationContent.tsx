@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +46,7 @@ export default function NycBrownstoneFreeHomeValuationContent() {
               return and <strong>make smarter real estate decisions</strong>.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
           </div>
@@ -52,6 +54,7 @@ export default function NycBrownstoneFreeHomeValuationContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/nyc-brownstone-free-home-valuation.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -178,41 +181,47 @@ export default function NycBrownstoneFreeHomeValuationContent() {
             <p>Each neighborhood has distinct market dynamics. As a local expert, I understand how property values shift block by block-factors like <a href="https://www.cityrealty.com/nyc/market-insight/features/get-to-know/how-historic-districts-impact-property-values-affordability-charming-nyc-homes-landmarked-properties/72125" className="tf-guide-link">historic district boundaries</a>, proximity to transit, and the condition of surrounding homes all influence your current market value.</p>
 
             <h2>Frequently Asked Questions About Brownstone Valuations</h2>
-            <h3>How accurate are online brownstone value estimates compared to professional valuations?</h3>
-            <p>Online estimators use recent sales data for estimates-but they miss critical details. Zillow&apos;s Zestimate has a median error rate of 1.83% for on-market homes, and Redfin Estimate has an error rate of 1.9–2.1% for on-market properties. For brownstones, the actual error is often much larger because these tools can&apos;t assess architectural features, historic significance, façade condition, or renovation quality. Home value estimates can vary significantly between different tools, and for a unique residential property like a brownstone, the discrepancy can be substantial. A professional&apos;s opinion based on a physical inspection, comparable sales research, and understanding of current buyer sentiment will always provide a more precise valuation than any algorithm.</p>
-            <h3>What factors most influence brownstone values in NYC?</h3>
-            <p>Factors such as neighborhood, lot size, and condition are considered in comparative valuations, but several brownstone-specific elements carry outsized weight:</p>
-            <ul className="tf-list">
-              <li><span className="tf-dot" /><strong>Architectural integrity and original details</strong> - Preserved moldings, staircases, ironwork, stained glass, and fireplaces command premiums</li>
-              <li><span className="tf-dot" /><strong>Lot size, garden space, and building dimensions</strong> - Including unused FAR and expansion potential</li>
-              <li><span className="tf-dot" /><strong>Renovation quality and recent renovations</strong> - Full gut renovations with modern systems ($250–$450/sq ft) versus cosmetic refreshes ($50–$100/sq ft) produce very different values. Recent home improvements can significantly affect property value</li>
-              <li><span className="tf-dot" /><strong>Historic district status and landmark designations</strong> - In Brooklyn, landmarked homes with well-preserved features can carry a 5–10% premium; in Manhattan, foregone development rights sometimes offset this benefit</li>
-              <li><span className="tf-dot" /><strong>Neighborhood trends and comparable sales</strong> - Strong buyer demand in Park Slope and Fort Greene versus slower movement in upper price points in Clinton Hill</li>
-            </ul>
-            <h3>How long does a professional brownstone valuation take?</h3>
-            <p>From initial contact to a completed valuation report, the process typically takes 5–10 business days. The on-site assessment itself takes 1–2 hours. Factors that may extend the timeline include permit research, complex renovation histories, or properties with multiple legal units requiring income analysis. I prioritize responding to valuation requests within 24 hours of first contact. Market conditions can shift, so I recommend scheduling a free consultation when you&apos;re within 3–6 months of making a decision about selling, renovating, or refinancing.</p>
-            <h3>When should I get a professional brownstone valuation instead of using online tools?</h3>
-            <p>An instant home valuation-enter your property address and get an estimated value-can give you a general estimate. But you need a professional appraisal or valuation in these situations:</p>
-            <ul className="tf-list">
-              <li><span className="tf-dot" /><strong>Before making significant renovation decisions</strong> - Understanding your property&apos;s potential before investing prevents overcapitalization. Home improvements can significantly increase a property&apos;s value, but only when strategically planned</li>
-              <li><span className="tf-dot" /><strong>When considering selling</strong> - Accurate market positioning is the difference between a successful sale and months of sitting on the market. Appraisers inspect properties, unlike automated valuation models</li>
-              <li><span className="tf-dot" /><strong>For estate planning, divorce proceedings, or tax disputes</strong> - Appraisals are often required for estate planning and tax disputes, and professional appraisals consider property condition and recent renovations</li>
-              <li><span className="tf-dot" /><strong>For mortgage applications or refinancing</strong> - Professional appraisals are crucial for mortgage applications. Mortgage companies and lenders need an accurate assessment to determine a lender&apos;s ability to extend financing and how much equity you have</li>
-              <li><span className="tf-dot" /><strong>When online estimates vary widely</strong> - If different tools show dramatically different numbers, that&apos;s a signal your home has unique property features that algorithms can&apos;t evaluate</li>
-            </ul>
-            <h3>Can a professional valuation help me understand my property&apos;s worth for borrowing purposes?</h3>
-            <p>Yes. Whether you&apos;re exploring a home equity line of credit or looking to borrow cash against your brownstone&apos;s value, a home valuation safeguards both you and the lender by establishing an accurate, defensible current market value. The NYC Department of Finance provides property market value assessments primarily for tax purposes-but these assessments often differ substantially from true market value, especially for brownstones with significant architectural character or recent renovations. A professional valuation gives you the most precise valuation available for financial planning.</p>
-
+            <FaqAccordion>
+              <FaqItem question={<>How accurate are online brownstone value estimates compared to professional valuations?</>}>
+              <p>Online estimators use recent sales data for estimates-but they miss critical details. Zillow&apos;s Zestimate has a median error rate of 1.83% for on-market homes, and Redfin Estimate has an error rate of 1.9–2.1% for on-market properties. For brownstones, the actual error is often much larger because these tools can&apos;t assess architectural features, historic significance, façade condition, or renovation quality. Home value estimates can vary significantly between different tools, and for a unique residential property like a brownstone, the discrepancy can be substantial. A professional&apos;s opinion based on a physical inspection, comparable sales research, and understanding of current buyer sentiment will always provide a more precise valuation than any algorithm.</p>
+              </FaqItem>
+              <FaqItem question={<>What factors most influence brownstone values in NYC?</>}>
+              <p>Factors such as neighborhood, lot size, and condition are considered in comparative valuations, but several brownstone-specific elements carry outsized weight:</p>
+              <ul className="tf-list">
+                <li><span className="tf-dot" /><strong>Architectural integrity and original details</strong> - Preserved moldings, staircases, ironwork, stained glass, and fireplaces command premiums</li>
+                <li><span className="tf-dot" /><strong>Lot size, garden space, and building dimensions</strong> - Including unused FAR and expansion potential</li>
+                <li><span className="tf-dot" /><strong>Renovation quality and recent renovations</strong> - Full gut renovations with modern systems ($250–$450/sq ft) versus cosmetic refreshes ($50–$100/sq ft) produce very different values. Recent home improvements can significantly affect property value</li>
+                <li><span className="tf-dot" /><strong>Historic district status and landmark designations</strong> - In Brooklyn, landmarked homes with well-preserved features can carry a 5–10% premium; in Manhattan, foregone development rights sometimes offset this benefit</li>
+                <li><span className="tf-dot" /><strong>Neighborhood trends and comparable sales</strong> - Strong buyer demand in Park Slope and Fort Greene versus slower movement in upper price points in Clinton Hill</li>
+              </ul>
+              </FaqItem>
+              <FaqItem question={<>How long does a professional brownstone valuation take?</>}>
+              <p>From initial contact to a completed valuation report, the process typically takes 5–10 business days. The on-site assessment itself takes 1–2 hours. Factors that may extend the timeline include permit research, complex renovation histories, or properties with multiple legal units requiring income analysis. I prioritize responding to valuation requests within 24 hours of first contact. Market conditions can shift, so I recommend scheduling a free consultation when you&apos;re within 3–6 months of making a decision about selling, renovating, or refinancing.</p>
+              </FaqItem>
+              <FaqItem question={<>When should I get a professional brownstone valuation instead of using online tools?</>}>
+              <p>An instant home valuation-enter your property address and get an estimated value-can give you a general estimate. But you need a professional appraisal or valuation in these situations:</p>
+              <ul className="tf-list">
+                <li><span className="tf-dot" /><strong>Before making significant renovation decisions</strong> - Understanding your property&apos;s potential before investing prevents overcapitalization. Home improvements can significantly increase a property&apos;s value, but only when strategically planned</li>
+                <li><span className="tf-dot" /><strong>When considering selling</strong> - Accurate market positioning is the difference between a successful sale and months of sitting on the market. Appraisers inspect properties, unlike automated valuation models</li>
+                <li><span className="tf-dot" /><strong>For estate planning, divorce proceedings, or tax disputes</strong> - Appraisals are often required for estate planning and tax disputes, and professional appraisals consider property condition and recent renovations</li>
+                <li><span className="tf-dot" /><strong>For mortgage applications or refinancing</strong> - Professional appraisals are crucial for mortgage applications. Mortgage companies and lenders need an accurate assessment to determine a lender&apos;s ability to extend financing and how much equity you have</li>
+                <li><span className="tf-dot" /><strong>When online estimates vary widely</strong> - If different tools show dramatically different numbers, that&apos;s a signal your home has unique property features that algorithms can&apos;t evaluate</li>
+              </ul>
+              </FaqItem>
+              <FaqItem question={<>Can a professional valuation help me understand my property&apos;s worth for borrowing purposes?</>}>
+              <p>Yes. Whether you&apos;re exploring a home equity line of credit or looking to borrow cash against your brownstone&apos;s value, a home valuation safeguards both you and the lender by establishing an accurate, defensible current market value. The NYC Department of Finance provides property market value assessments primarily for tax purposes-but these assessments often differ substantially from true market value, especially for brownstones with significant architectural character or recent renovations. A professional valuation gives you the most precise valuation available for financial planning.</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Get Your Free Brownstone Valuation</h2>
             <p>Your brownstone&apos;s historical value, architectural character, and neighborhood context deserve more than a number generated by an algorithm. Whether you&apos;re preparing to sell, planning renovations, or simply want to understand your property&apos;s worth in today&apos;s market, I&apos;m here to provide expert advice grounded in real data and hands-on experience.</p>
             <p>My free consultation is an educational conversation-not a sales pitch. I&apos;ll walk through what sophisticated buyers notice immediately, explain how current market conditions affect your home&apos;s value, and help you make smart decisions about your property&apos;s future.</p>
             <p className="tf-guide-center">
-              <strong>Phone:</strong>{" "}<a href="tel:+1-646-970-1078" className="tf-guide-link">1-646-970-1078</a>{"  "}
+              <strong>Phone:</strong>{" "}<a href="tel:+16469701078" className="tf-guide-link">1-646-970-1078</a>{"  "}
               <strong>Email:</strong>{" "}<a href="mailto:sm@montfortre.com" className="tf-guide-link">sm@montfortre.com</a>{"  "}
               <strong>Address:</strong> 8 West 126th Street, New York NY 10027
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">Call For Information</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call For Information</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
           </div>

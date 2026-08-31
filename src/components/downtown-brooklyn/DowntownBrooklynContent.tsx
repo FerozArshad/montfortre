@@ -7,6 +7,7 @@ import DowntownBrooklynRealtorArticle from "./DowntownBrooklynRealtorArticle";
 
 import "../../styles/harlem-page.css";
 import "../../styles/downtown-brooklyn-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
 
 const PROPERTY_TYPES = [
   {
@@ -107,6 +108,8 @@ export default function DowntownBrooklynContent() {
 
   return (
     <>
+      <NeighborhoodHubHero name="Downtown Brooklyn" image="downtown-brooklyn.webp" lead="Condos and co-ops in the heart of Downtown Brooklyn, with clear guidance on value and timing." />
+
       <DowntownBrooklynPoiMap />
       <DowntownBrooklynAreaNav />
 
@@ -121,7 +124,7 @@ export default function DowntownBrooklynContent() {
               $457,475 from the previous period.
             </p>
             <div className="hlm-listings-cta">
-              <a href="/idx/listings/downtown-brooklyn/" className="hlm-listings-btn">
+              <a href="/idx-sales" className="hlm-listings-btn">
                 View More Listings
               </a>
               <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">

@@ -7,6 +7,7 @@ import UpperEastSideRealtorArticle from "./UpperEastSideRealtorArticle";
 
 import "../../styles/harlem-page.css";
 import "../../styles/ues-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
 
 const PROPERTY_TYPES = [
   {
@@ -114,6 +115,8 @@ export default function UpperEastSideContent() {
 
   return (
     <>
+      <NeighborhoodHubHero name="Upper East Side" image="upper-east-side.webp" lead="Townhouses, condos and co-ops across the Upper East Side, with representation for buyers and sellers alike." />
+
       <UpperEastSidePoiMap />
       <UpperEastSideAreaNav />
 
@@ -128,7 +131,7 @@ export default function UpperEastSideContent() {
               increase of $2,947,592 from the previous period.
             </p>
             <div className="hlm-listings-cta">
-              <a href="/idx/listings/upper-east-side/" className="hlm-listings-btn">
+              <a href="/idx-sales" className="hlm-listings-btn">
                 View More Listings
               </a>
               <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">

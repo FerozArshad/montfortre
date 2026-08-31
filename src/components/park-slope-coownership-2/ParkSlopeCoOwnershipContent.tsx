@@ -3,6 +3,9 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/park-slope-co-ownership-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 const NEWS_ARTICLES = [
   {
@@ -40,14 +43,22 @@ export default function ParkSlopeCoOwnershipContent() {
             <h1>{"Park Slope co-ownership— Experts realtor for Buying, Selling & Investing"}</h1>
             <p className="nbhd-hero-lead">{"We'll help you buy the right Park Slope Co-ownership by avoiding costly structural issues, hidden repair expenses, and overpaying in a competitive market"}</p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:+1-(646)-970-1078" className="nbhd-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="nbhd-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">Schedule A Consultation</a>
             </div>
+          </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/park-slope-coownership.png" alt="Park Slope co-ownership homes" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
           </div>
         </div>
       </section>
 
       <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Park Slope" propertyType="Co-ownership" label="Park Slope co-ownership homes" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
@@ -107,13 +118,17 @@ export default function ParkSlopeCoOwnershipContent() {
             <ul className="nbhd-guide-list"><li><p><strong>{"Prospect Park West and Berkeley Place:"}</strong>{" Prewar buildings with architectural detail, larger units, and proximity to Prospect Park. Many co ops in this area have established boards."}</p></li><li><p><strong>{"Family-focused blocks near the park and local playgrounds:"}</strong>{" Brownstone-lined streets between Fifth and Seventh Avenues with strong resale demand."}</p></li><li><p><strong>{"Transit-accessible corridors near F, G, and R subway lines:"}</strong>{" Properties near Fourth Avenue and Atlantic Terminal offer condo inventory with modern construction and easier board approval for co-buyers."}</p></li><li><p><strong>{"Mixed-use areas along Fifth and Seventh Avenues:"}</strong>{" A combination of residential and retail, with smaller buildings and brownstone conversions that can work for investment-focused co-ownership."}</p></li></ul>
             <p>{"Demand extends to adjacent areas. Buyers looking for lower entry prices sometimes reach into South Slope or Gowanus while maintaining access to Park Slope schools and amenities."}</p>
             <h2>{"Frequently Asked Questions About Park Slope Co-Ownership"}</h2>
-            <h3>{"What types of Park Slope properties work best for co-ownership?"}</h3>
-            <p>{"Properties with clear physical separation between living spaces produce the best co-ownership outcomes. Brownstone conversions with units on separate floors and independent entrances reduce friction. Condos in buildings with funded reserves and flexible association rules offer more resale options. Co ops can work if the board accepts multi-buyer applications, though Park Slope co ops enforce strict guidelines that require advance research."}</p>
-            <p>{"The right property depends on the group. Two families sharing a four-bedroom brownstone need a different layout than three investors splitting a multi-unit building. I evaluate each listing against the group's specific use case."}</p>
-            <img src="/redesign-assets/hoods/park-slope-coownership-2-3.png" alt={"Financial documents"} className="nbhd-guide-img" loading="lazy" />
-            <h3>{"How do co-owners handle financing for Park Slope real estate?"}</h3>
-            <p>{"Occupied SROs require a different evaluation than vacant ones. If tenants hold occupancy agreements or leases, their rights under rent regulation laws affect what a new owner can do with the building. Rent stabilization status must be verified independently; it cannot be assumed based on current rent levels."}</p>
-            <p>{"A Certificate of No Harassment may be required for SRO transactions where the owner plans to alter the number of units, add or remove kitchens or bathrooms, or change interior layouts. For SRO Multiple Dwellings, HPD must certify that no harassment of tenants occurred before DOB will accept permit applications. Properties in HPD's CONH Pilot Program face stricter documentation requirements and longer review periods."}</p>
+            <FaqAccordion>
+              <FaqItem question={"What types of Park Slope properties work best for co-ownership?"}>
+              <p>{"Properties with clear physical separation between living spaces produce the best co-ownership outcomes. Brownstone conversions with units on separate floors and independent entrances reduce friction. Condos in buildings with funded reserves and flexible association rules offer more resale options. Co ops can work if the board accepts multi-buyer applications, though Park Slope co ops enforce strict guidelines that require advance research."}</p>
+              <p>{"The right property depends on the group. Two families sharing a four-bedroom brownstone need a different layout than three investors splitting a multi-unit building. I evaluate each listing against the group's specific use case."}</p>
+              <img src="/redesign-assets/hoods/park-slope-coownership-2-3.png" alt={"Financial documents"} className="nbhd-guide-img" loading="lazy" />
+              </FaqItem>
+              <FaqItem question={"How do co-owners handle financing for Park Slope real estate?"}>
+              <p>{"Occupied SROs require a different evaluation than vacant ones. If tenants hold occupancy agreements or leases, their rights under rent regulation laws affect what a new owner can do with the building. Rent stabilization status must be verified independently; it cannot be assumed based on current rent levels."}</p>
+              <p>{"A Certificate of No Harassment may be required for SRO transactions where the owner plans to alter the number of units, add or remove kitchens or bathrooms, or change interior layouts. For SRO Multiple Dwellings, HPD must certify that no harassment of tenants occurred before DOB will accept permit applications. Properties in HPD's CONH Pilot Program face stricter documentation requirements and longer review periods."}</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>{"Park Slope SRO Financing and Investment Considerations"}</h2>
             <p>{"SRO financing requires lenders comfortable with income-property underwriting and regulatory complexity. Conventional mortgage lenders often decline to finance properties where actual use does not match the COO or where open violations remain unresolved."}</p>
             <p><strong>{"Common financing paths for Park Slope SROs:"}</strong></p>
@@ -125,17 +140,24 @@ export default function ParkSlopeCoOwnershipContent() {
             <ul className="nbhd-guide-list"><li><p><strong>{"Historic Park Slope:"}</strong>{" 7th Avenue corridor and Prospect Park West, where the densest concentration of landmark-designated brownstones affects renovation scope and timeline"}</p></li><li><p><strong>{"North Slope:"}</strong>{" Above 9th Street to Atlantic Avenue, including properties near the Barclays Center and transit hubs along Atlantic and Flatbush Avenues"}</p></li><li><p><strong>{"South Slope:"}</strong>{" Below 9th Street to 25th Street, where building stock transitions and zoning overlays shift closer to R7A in some blocks"}</p></li><li><p><strong>{"Gowanus border:"}</strong>{" The 4th Avenue corridor, where R8B zoning patches and proximity to Gowanus rezoning areas create different conversion possibilities"}</p></li></ul>
             <p>{"Park Slope features over 1,400 eateries and is known for its iconic brownstones, but for SRO transactions, what matters is block-level zoning, historic-district boundaries, and the specific regulatory history of each building; some buyers also weigh transit access and connectivity to Manhattan as part of that review."}</p>
             <h2>{"Frequently Asked Questions About Park Slope SRO Real Estate"}</h2>
-            <h3>{"How is an SRO property valued differently from a regular Park Slope brownstone?"}</h3>
-            <p>{"SRO valuation depends on legal use, not layout or square footage. A building's COO establishes how many units exist legally and whether those units are apartments or rooming units. Income from legally permitted rooming units can be capitalized into value; income from unpermitted rooms cannot. Co-ops in Park Slope are priced between $575,000 and $1,695,000, and multi-family townhouses can exceed $6,000,000, but those figures reflect conventional legal use. An SRO's value must account for tenant status, regulatory history, open violations, financing availability, and what a buyer can realistically do with the property under its current and potential legal configuration."}</p>
-            <h3>{"What records should I review before making an offer on a Park Slope SRO?"}</h3>
-            <p>{"Before making an offer, request or retrieve:"}</p>
-            <ul className="nbhd-guide-list"><li><p>{"The current Certificate of Occupancy (legal unit count, unit types, kitchen and bathroom designations)"}</p></li><li><p>{"HPD registration and violation history (open violations, Alternative Enforcement Program status)"}</p></li><li><p>{"DOB records (alteration permits, stop-work orders, unsafe/vacate orders)"}</p></li><li><p>{"Tenant occupancy documentation (leases, occupancy agreements, duration of tenancy)"}</p></li><li><p>{"Rent stabilization status for each occupied unit"}</p></li><li><p>{"Historic district designation and any prior LPC applications or approvals"}</p></li><li><p>{"CONH history or eligibility if the building is classified as an SRO Multiple Dwelling"}</p></li></ul>
-            <h3>{"Can I get financing for an SRO property in Park Slope?"}</h3>
-            <p>{"Yes, but through lenders experienced with income-property and SRO underwriting. Conventional residential lenders typically decline SRO properties. DSCR loans are the most common option for stabilized SRO buildings with documented income. Bridge and hard-money loans are available for properties requiring remediation. All lenders will require that the property's actual use matches its COO, that open violations are resolved or on a documented resolution path, and that rent rolls and tenant documentation are available."}</p>
-            <h3>{"What are the risks of buying an occupied SRO in Park Slope?"}</h3>
-            <p>{"Occupied SROs carry tenant-protection obligations under NYC law. Tenants may hold rent-stabilized status. A Certificate of No Harassment may be required before any alteration permits are issued. If a buyer plans to convert the building, the CONH process can take months, and denial is possible. Rent regulation and occupancy restrictions limit how an owner can reposition the property. Stanley recommends that buyers work with qualified real estate attorneys to evaluate tenant rights and regulatory obligations before making an offer."}</p>
-            <h3>{"How long does it take to convert an SRO in Park Slope's historic district?"}</h3>
-            <p>{"Timelines vary based on building condition, regulatory history, and scope of work. In the historic district, exterior alterations require LPC approval, which adds weeks to months depending on the scope. A CONH application, if required, can take several months. DOB permit review, plan approval, and construction follow. For a full SRO-to-apartment conversion in a landmark building, 18 to 36 months from initial filing to completion is a realistic range. Each property is different, and Stanley coordinates with architects and expediters to provide project-specific timelines."}</p>
+            <FaqAccordion>
+              <FaqItem question={"How is an SRO property valued differently from a regular Park Slope brownstone?"}>
+              <p>{"SRO valuation depends on legal use, not layout or square footage. A building's COO establishes how many units exist legally and whether those units are apartments or rooming units. Income from legally permitted rooming units can be capitalized into value; income from unpermitted rooms cannot. Co-ops in Park Slope are priced between $575,000 and $1,695,000, and multi-family townhouses can exceed $6,000,000, but those figures reflect conventional legal use. An SRO's value must account for tenant status, regulatory history, open violations, financing availability, and what a buyer can realistically do with the property under its current and potential legal configuration."}</p>
+              </FaqItem>
+              <FaqItem question={"What records should I review before making an offer on a Park Slope SRO?"}>
+              <p>{"Before making an offer, request or retrieve:"}</p>
+              <ul className="nbhd-guide-list"><li><p>{"The current Certificate of Occupancy (legal unit count, unit types, kitchen and bathroom designations)"}</p></li><li><p>{"HPD registration and violation history (open violations, Alternative Enforcement Program status)"}</p></li><li><p>{"DOB records (alteration permits, stop-work orders, unsafe/vacate orders)"}</p></li><li><p>{"Tenant occupancy documentation (leases, occupancy agreements, duration of tenancy)"}</p></li><li><p>{"Rent stabilization status for each occupied unit"}</p></li><li><p>{"Historic district designation and any prior LPC applications or approvals"}</p></li><li><p>{"CONH history or eligibility if the building is classified as an SRO Multiple Dwelling"}</p></li></ul>
+              </FaqItem>
+              <FaqItem question={"Can I get financing for an SRO property in Park Slope?"}>
+              <p>{"Yes, but through lenders experienced with income-property and SRO underwriting. Conventional residential lenders typically decline SRO properties. DSCR loans are the most common option for stabilized SRO buildings with documented income. Bridge and hard-money loans are available for properties requiring remediation. All lenders will require that the property's actual use matches its COO, that open violations are resolved or on a documented resolution path, and that rent rolls and tenant documentation are available."}</p>
+              </FaqItem>
+              <FaqItem question={"What are the risks of buying an occupied SRO in Park Slope?"}>
+              <p>{"Occupied SROs carry tenant-protection obligations under NYC law. Tenants may hold rent-stabilized status. A Certificate of No Harassment may be required before any alteration permits are issued. If a buyer plans to convert the building, the CONH process can take months, and denial is possible. Rent regulation and occupancy restrictions limit how an owner can reposition the property. Stanley recommends that buyers work with qualified real estate attorneys to evaluate tenant rights and regulatory obligations before making an offer."}</p>
+              </FaqItem>
+              <FaqItem question={"How long does it take to convert an SRO in Park Slope's historic district?"}>
+              <p>{"Timelines vary based on building condition, regulatory history, and scope of work. In the historic district, exterior alterations require LPC approval, which adds weeks to months depending on the scope. A CONH application, if required, can take several months. DOB permit review, plan approval, and construction follow. For a full SRO-to-apartment conversion in a landmark building, 18 to 36 months from initial filing to completion is a realistic range. Each property is different, and Stanley coordinates with architects and expediters to provide project-specific timelines."}</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>{"Get Expert SRO Guidance in Park Slope"}</h2>
             <p>{"Park Slope SRO transactions involve regulatory, legal, and financial layers that do not exist in conventional Brooklyn real estate deals. Whether you are evaluating an SRO for purchase, preparing one for sale, or assessing conversion potential, the first step is understanding the property's legal status, regulatory history, and market position."}</p>
             <p>{"Stanley Montfort provides personalized consultations for Park Slope SRO buyers and sellers. His experience across decades of Brooklyn real estate, combined with deep familiarity with HPD, DOB, LPC, and SRO-specific regulations, helps clients avoid costly regulatory surprises and make informed decisions."}</p>
@@ -155,7 +177,7 @@ export default function ParkSlopeCoOwnershipContent() {
             <p><strong>{"Phone:"}</strong>{" 1-646-970-1078 "}<strong>{"Email:"}</strong><a href={"mailto:sm@montfortre.com"} className="nbhd-guide-link"><span>{"[email protected]"}</span></a><strong>{"Address:"}</strong>{" 8 West 126th Street, New York NY 10027"}</p>
             <div className="nbhd-guide-ctas">
               <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule Free Consultation</a>
-              <a href="tel:+1-646-970-1078" className="nbhd-guide-link">Call For Information</a>
+              <a href="tel:+16469701078" className="nbhd-guide-link">Call For Information</a>
             </div>
 </div>
         </div>

@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ListingDetail } from "../../data/listings";
+import { mergeSparkUi } from "../../data/listings/sparkUi";
+import { submitLead } from "../../lib/cms/leads";
 import ListingLeadModal, {
   dismissListingLeadSession,
   shouldAutoOpenListingLead,
@@ -13,6 +15,8 @@ type TabId = "overview" | "insights";
 
 type Props = {
   listing: ListingDetail;
+  /** Spark-style live canvas — no lead popup, quieter chrome. */
+  preview?: boolean;
 };
 
 function heroChips(listing: ListingDetail): string[] {
@@ -100,11 +104,13 @@ function InsightIcon({ title }: { title: string }) {
   return null;
 }
 
-export default function ListingPageContent({ listing }: Props) {
+export default function ListingPageContent({ listing, preview = false }: Props) {
   const [active, setActive] = useState(0);
   const [tab, setTab] = useState<TabId>("overview");
   const [lightbox, setLightbox] = useState(false);
   const [tourOpen, setTourOpen] = useState(false);
+  const [tourSubmitted, setTourSubmitted] = useState(false);
+  const [tourBusy, setTourBusy] = useState(false);
   const [leadOpen, setLeadOpen] = useState(false);
   const [heroPassed, setHeroPassed] = useState(false);
   const heroRef = useRef<HTMLElement | null>(null);
@@ -116,6 +122,27 @@ export default function ListingPageContent({ listing }: Props) {
   const current = images[Math.min(active, images.length - 1)] ?? images[0];
   const chips = heroChips(listing);
   const hoodLabel = listing.neighborhood || listing.city || "New York";
+  const spark = mergeSparkUi(listing.spark);
+  const tourLabel = listing.tourButtonLabel?.trim() || "Schedule a tour";
+  const showTour = listing.showScheduleButton !== false;
+  const moreParas = listing.moreDetailsParas?.filter(Boolean) || [];
+  const matterport = listing.matterportEmbed?.trim() || "";
+  const videoTour = listing.videoTour?.trim() || "";
+  const areaDesc = listing.areaDescription?.trim() || "";
+  const areaGuide = listing.areaGuideName?.trim() || "";
+  const matterportSrc = matterport.includes("<iframe")
+    ? matterport.match(/src=["']([^"']+)["']/i)?.[1] || ""
+    : matterport;
+  const zoom = Number(spark.mapZoom) || 14;
+  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(listing.location.mapQuery)}&z=${zoom}&output=embed`;
+  const aboutTitle = spark.aboutDescriptionTitle || "About this property";
+  const overviewTab = spark.aboutTabTitle || "Property Overview";
+  const insightsTab = spark.insightsTabTitle || "Property Insights";
+  const showInsights = spark.showInsightsSection !== false;
+  const showArea = spark.showAreaSection !== false;
+  const showMore = spark.showMoreDetailsSection !== false;
+  const showReviews = spark.showReviewsSection === true;
+  const showMap = spark.showAboutMap !== false && spark.showMapHeader !== false;
 
   const go = useCallback(
     (dir: -1 | 1) => {
@@ -125,10 +152,17 @@ export default function ListingPageContent({ listing }: Props) {
   );
 
   useEffect(() => {
+    if (preview || !spark.infiniteSlider || images.length < 2) return;
+    const t = window.setInterval(() => go(1), 4500);
+    return () => window.clearInterval(t);
+  }, [preview, spark.infiniteSlider, images.length, go]);
+
+  useEffect(() => {
+    if (preview) return;
     if (!shouldAutoOpenListingLead()) return;
     const t = window.setTimeout(() => setLeadOpen(true), 900);
     return () => window.clearTimeout(t);
-  }, [listing.slug]);
+  }, [listing.slug, preview]);
 
   const closeLead = () => {
     dismissListingLeadSession();
@@ -163,7 +197,10 @@ export default function ListingPageContent({ listing }: Props) {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         if (leadOpen) closeLead();
-        else if (tourOpen) setTourOpen(false);
+        else if (tourOpen) {
+          setTourOpen(false);
+          setTourSubmitted(false);
+        }
         else setLightbox(false);
         return;
       }
@@ -172,12 +209,12 @@ export default function ListingPageContent({ listing }: Props) {
       if (e.key === "ArrowLeft") go(-1);
     };
     window.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
+    if (!preview) document.body.style.overflow = "hidden";
     return () => {
       window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      if (!preview) document.body.style.overflow = "";
     };
-  }, [overlayOpen, lightbox, tourOpen, leadOpen, go]);
+  }, [overlayOpen, lightbox, tourOpen, leadOpen, go, preview]);
 
   const openAt = (index: number) => {
     setActive(index);
@@ -188,7 +225,7 @@ export default function ListingPageContent({ listing }: Props) {
   const mosaic = images.slice(0, 9);
 
   return (
-    <div className="listing-root">
+    <div className={`listing-root${preview ? " listing-root--preview" : ""}`}>
       <section className="listing-hero" ref={heroRef} data-screen-label="Listing hero">
         <div className="listing-hero-media">
           <img src={current.src} alt={current.alt} className="listing-hero-img listing-cover-img" />
@@ -210,7 +247,13 @@ export default function ListingPageContent({ listing }: Props) {
               {hoodLabel ? <span className="listing-hero-hood">{hoodLabel}</span> : null}
             </div>
             <h1 className="listing-hero-title">{listing.title}</h1>
+            {spark.showPriceTitle && listing.priceTitle ? (
+              <div className="listing-hero-price-title">{listing.priceTitle}</div>
+            ) : null}
             <div className="listing-hero-price">{listing.price}</div>
+            {spark.showPriceSubtitle && listing.priceSubtitle ? (
+              <div className="listing-hero-price-sub">{listing.priceSubtitle}</div>
+            ) : null}
             {chips.length ? (
               <div className="listing-hero-chips">
                 {chips.map((c) => (
@@ -219,20 +262,27 @@ export default function ListingPageContent({ listing }: Props) {
               </div>
             ) : null}
             <div className="listing-hero-actions">
-              <button type="button" className="listing-btn listing-btn--gold" onClick={() => setTourOpen(true)}>
-                Schedule a tour
-              </button>
+              {showTour ? (
+                <button type="button" className="listing-btn listing-btn--gold" onClick={() => setTourOpen(true)}>
+                  {tourLabel}
+                </button>
+              ) : null}
               <button type="button" className="listing-btn listing-btn--ghost" onClick={() => openAt(active)}>
                 View all {images.length} photos
               </button>
             </div>
           </div>
 
-          <div className="listing-hero-count" aria-live="polite">
-            <span>
-              {active + 1} / {images.length}
+          <div
+            className="listing-hero-count"
+            aria-live="polite"
+            aria-label={`Photo ${active + 1} of ${images.length}${current.alt ? `: ${current.alt}` : ""}`}
+          >
+            <span className="listing-hero-count-num">{active + 1}</span>
+            <span className="listing-hero-count-sep" aria-hidden="true">
+              /
             </span>
-            <span className="listing-hero-count-alt">{current.alt}</span>
+            <span className="listing-hero-count-total">{images.length}</span>
           </div>
         </div>
 
@@ -285,9 +335,11 @@ export default function ListingPageContent({ listing }: Props) {
             <a href={listing.agent.phoneHref} className="listing-btn listing-btn--outline">
               {listing.agent.phoneDisplay}
             </a>
-            <button type="button" className="listing-btn listing-btn--gold" onClick={() => setTourOpen(true)}>
-              Schedule a tour
-            </button>
+            {showTour ? (
+              <button type="button" className="listing-btn listing-btn--gold" onClick={() => setTourOpen(true)}>
+                {tourLabel}
+              </button>
+            ) : null}
           </div>
         </div>
       </div>
@@ -319,32 +371,74 @@ export default function ListingPageContent({ listing }: Props) {
                 className={`listing-tab${tab === "overview" ? " is-active" : ""}`}
                 onClick={() => setTab("overview")}
               >
-                Property Overview
+                {overviewTab}
               </button>
-              <button
-                type="button"
-                role="tab"
-                id="listing-tab-insights"
-                aria-selected={tab === "insights"}
-                aria-controls="listing-panel-insights"
-                className={`listing-tab${tab === "insights" ? " is-active" : ""}`}
-                onClick={() => setTab("insights")}
-              >
-                Property Insights
-              </button>
+              {showInsights ? (
+                <button
+                  type="button"
+                  role="tab"
+                  id="listing-tab-insights"
+                  aria-selected={tab === "insights"}
+                  aria-controls="listing-panel-insights"
+                  className={`listing-tab${tab === "insights" ? " is-active" : ""}`}
+                  onClick={() => setTab("insights")}
+                >
+                  {insightsTab}
+                </button>
+              ) : null}
             </div>
 
-            {tab === "overview" ? (
+            {tab === "overview" || !showInsights ? (
               <div
                 role="tabpanel"
                 id="listing-panel-overview"
                 aria-labelledby="listing-tab-overview"
                 className="listing-panel"
               >
-                <h2>About this property</h2>
+                <h2>{aboutTitle}</h2>
                 {listing.overviewParas.map((p) => (
                   <p key={p.slice(0, 48)}>{p}</p>
                 ))}
+                {spark.aboutButtonLabel && spark.aboutButtonUrl ? (
+                  <p>
+                    <a className="listing-btn listing-btn--gold" href={spark.aboutButtonUrl}>
+                      {spark.aboutButtonLabel}
+                    </a>
+                  </p>
+                ) : null}
+                {showMore && moreParas.length ? (
+                  <>
+                    <h2>{spark.moreDetailsTabTitle || "More details"}</h2>
+                    {moreParas.map((p) => (
+                      <p key={p.slice(0, 48)}>{p}</p>
+                    ))}
+                  </>
+                ) : null}
+                {showArea && (areaGuide || areaDesc) ? (
+                  <>
+                    <h2>
+                      {spark.areaTabTitle || "The area"}
+                      {areaGuide ? `: ${areaGuide}` : ""}
+                    </h2>
+                    {areaDesc ? <p>{areaDesc}</p> : null}
+                  </>
+                ) : null}
+                {showReviews ? (
+                  <>
+                    <h2>Reviews</h2>
+                    <p>
+                      {spark.reviewsSource ? (
+                        <a href={spark.reviewsSource} target="_blank" rel="noreferrer" style={{ color: spark.reviewsPrimaryColor }}>
+                          See client reviews
+                        </a>
+                      ) : (
+                        <a href="/success-stories/" style={{ color: spark.reviewsPrimaryColor }}>
+                          See success stories
+                        </a>
+                      )}
+                    </p>
+                  </>
+                ) : null}
               </div>
             ) : (
               <div
@@ -353,7 +447,7 @@ export default function ListingPageContent({ listing }: Props) {
                 aria-labelledby="listing-tab-insights"
                 className="listing-panel"
               >
-                <h2>Property Insights</h2>
+                <h2>{insightsTab}</h2>
                 <div className="listing-insights">
                   {listing.insights.map((item) => (
                     <div key={item.title} className="listing-insight">
@@ -390,13 +484,15 @@ export default function ListingPageContent({ listing }: Props) {
                 Questions about the layout, the building or the co-op board package? Reach out and I will walk you
                 through it.
               </p>
-              <button
-                type="button"
-                className="listing-btn listing-btn--gold listing-btn--block"
-                onClick={() => setTourOpen(true)}
-              >
-                Schedule a tour
-              </button>
+              {showTour ? (
+                <button
+                  type="button"
+                  className="listing-btn listing-btn--gold listing-btn--block"
+                  onClick={() => setTourOpen(true)}
+                >
+                  {tourLabel}
+                </button>
+              ) : null}
               <a
                 href={listing.agent.phoneHref}
                 className="listing-btn listing-btn--outline listing-btn--block"
@@ -443,6 +539,33 @@ export default function ListingPageContent({ listing }: Props) {
         </div>
       </section>
 
+      {videoTour || matterportSrc ? (
+        <section className="listing-gallery" data-screen-label="Tours">
+          <div className="listing-gallery-inner">
+            <div className="listing-section-head">
+              <div className="listing-kicker">
+                <span className="listing-kicker-line" aria-hidden="true" />
+                <span>Virtual tour</span>
+              </div>
+              <h2>Walk through the home</h2>
+            </div>
+            {videoTour ? (
+              <p>
+                <a href={videoTour} target="_blank" rel="noreferrer">
+                  Watch video tour
+                </a>
+              </p>
+            ) : null}
+            {matterportSrc ? (
+              <div className="listing-map" style={{ minHeight: 420, marginTop: 16 }}>
+                <iframe title={`3D tour of ${listing.title}`} src={matterportSrc} loading="lazy" allowFullScreen />
+              </div>
+            ) : null}
+          </div>
+        </section>
+      ) : null}
+
+      {showMap ? (
       <section className="listing-location" data-screen-label="Location">
         <div className="listing-location-inner">
           <div className="listing-location-copy">
@@ -463,24 +586,27 @@ export default function ListingPageContent({ listing }: Props) {
                 {listing.city}, {listing.state} {listing.zip}
               </span>
             </div>
-            <button
-              type="button"
-              className="listing-btn listing-btn--gold listing-location-cta"
-              onClick={() => setTourOpen(true)}
-            >
-              Schedule a tour
-            </button>
+            {showTour ? (
+              <button
+                type="button"
+                className="listing-btn listing-btn--gold listing-location-cta"
+                onClick={() => setTourOpen(true)}
+              >
+                {tourLabel}
+              </button>
+            ) : null}
           </div>
           <div className="listing-map">
             <iframe
               title={`Map of ${listing.title}`}
-              src={`https://www.google.com/maps?q=${encodeURIComponent(listing.location.mapQuery)}&output=embed`}
+              src={mapSrc}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>
       </section>
+      ) : null}
 
       {tourOpen ? (
         <div
@@ -488,13 +614,19 @@ export default function ListingPageContent({ listing }: Props) {
           role="dialog"
           aria-modal="true"
           aria-labelledby="listing-tour-title"
-          onClick={() => setTourOpen(false)}
+          onClick={() => {
+            setTourOpen(false);
+            setTourSubmitted(false);
+          }}
         >
           <div className="listing-modal-card" onClick={(e) => e.stopPropagation()}>
             <button
               type="button"
               className="listing-modal-close"
-              onClick={() => setTourOpen(false)}
+              onClick={() => {
+                setTourOpen(false);
+                setTourSubmitted(false);
+              }}
               aria-label="Close"
             >
               Close
@@ -520,11 +652,56 @@ export default function ListingPageContent({ listing }: Props) {
               </div>
             </div>
 
+            {tourSubmitted ? (
+              <p className="listing-lead-thanks" role="status">
+                Thank you — we&apos;ll confirm your tour shortly.
+              </p>
+            ) : (
             <form
               className="listing-tour-form"
               onSubmit={(e) => {
                 e.preventDefault();
-                window.location.href = listing.tourHref;
+                const form = e.currentTarget;
+                const data = new FormData(form);
+                const days = data.getAll("days").map(String).join(", ");
+                const times = data.getAll("times").map(String).join(", ");
+                if (!days || !times) {
+                  window.alert("Please pick at least one preferred day and time.");
+                  return;
+                }
+                const name = String(data.get("name") || "");
+                const [firstName, ...rest] = name.trim().split(/\s+/);
+                const lastName = rest.join(" ");
+                setTourBusy(true);
+                void (async () => {
+                  try {
+                    await submitLead({
+                      firstName: firstName || name,
+                      lastName,
+                      email: String(data.get("email") || ""),
+                      phone: String(data.get("phone") || ""),
+                      message: [
+                        String(data.get("comments") || ""),
+                        days ? `Preferred days: ${days}` : "",
+                        times ? `Preferred times: ${times}` : "",
+                      ]
+                        .filter(Boolean)
+                        .join("\n"),
+                      formType: "listing-tour",
+                      listingSlug: listing.slug,
+                      meta: { days, times, tourHref: listing.tourHref },
+                    });
+                    setTourSubmitted(true);
+                    window.setTimeout(() => {
+                      setTourOpen(false);
+                      setTourSubmitted(false);
+                    }, 1600);
+                  } catch (err) {
+                    window.alert(err instanceof Error ? err.message : "Could not submit tour request");
+                  } finally {
+                    setTourBusy(false);
+                  }
+                })();
               }}
             >
               <div className="listing-field-row">
@@ -572,15 +749,33 @@ export default function ListingPageContent({ listing }: Props) {
                 <textarea name="comments" rows={3} placeholder="" />
               </label>
 
-              <button type="submit" className="listing-btn listing-btn--gold listing-btn--block">
-                Schedule a viewing
+              {spark.showFormDisclaimer && spark.disclaimerText ? (
+                <label className="listing-field listing-disclaimer">
+                  {spark.showDisclaimerCheckbox ? (
+                    <span className="listing-chip" style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
+                      <input type="checkbox" name="disclaimer" required={spark.disclaimerRequired} />
+                      <span>{spark.disclaimerText}</span>
+                    </span>
+                  ) : (
+                    <span>{spark.disclaimerText}</span>
+                  )}
+                </label>
+              ) : null}
+
+              <button
+                type="submit"
+                className="listing-btn listing-btn--gold listing-btn--block"
+                disabled={tourBusy}
+              >
+                {tourBusy ? "Sending…" : tourLabel}
               </button>
             </form>
+            )}
           </div>
         </div>
       ) : null}
 
-      <ListingLeadModal open={leadOpen} onClose={closeLead} />
+      {!preview ? <ListingLeadModal open={leadOpen} onClose={closeLead} listingSlug={listing.slug} /> : null}
 
       {lightbox ? (
         <div className="listing-lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery">

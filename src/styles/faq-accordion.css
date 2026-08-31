@@ -1,0 +1,151 @@
+/* Shared collapsible FAQ used by the service, valuation, selling and
+   property-type pages. Visual language matches the blog accordion
+   (.bsg-faq in brownstone-guide.css) so FAQs look the same sitewide. */
+
+.faq-ac {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0 0;
+}
+
+.faq-ac-item {
+  background: #f9f6e6;
+  border: 1px solid #e0d9b8;
+  border-radius: 16px;
+  padding: 0 26px;
+}
+
+.faq-ac-item > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.4;
+  color: #0f1729;
+  text-wrap: pretty;
+}
+
+.faq-ac-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-ac-item > summary:focus-visible {
+  outline: 2px solid #c98a2c;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Drawn rather than typed so the glyph can flip to a minus when open. */
+.faq-ac-mark {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.faq-ac-mark::before,
+.faq-ac-mark::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #c98a2c;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.faq-ac-mark::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.faq-ac-item[open] .faq-ac-mark::after {
+  transform: translateY(-50%) rotate(0deg);
+  opacity: 0;
+}
+
+.faq-ac-body {
+  padding: 0 0 22px;
+}
+
+/* Answers were previously direct children of the page's prose wrapper, so a few
+   pages styled them with child combinators. Restate the base typography here
+   so wrapping the answer does not strip it. */
+.faq-ac-body p,
+.faq-ac-body li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #3b4c5e;
+  text-wrap: pretty;
+}
+
+.faq-ac-body p {
+  margin: 0 0 16px;
+}
+
+.faq-ac-body > *:last-child {
+  margin-bottom: 0;
+}
+
+.faq-ac-body ul,
+.faq-ac-body ol {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+
+.faq-ac-body li {
+  margin: 0 0 8px;
+}
+
+.faq-ac-body h4,
+.faq-ac-body h5 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 17px;
+  color: #0f1729;
+  margin: 20px 0 8px;
+}
+
+.faq-ac-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.faq-ac-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 16px;
+  font-size: 15px;
+}
+
+.faq-ac-body th,
+.faq-ac-body td {
+  border: 1px solid #e0d9b8;
+  padding: 10px 12px;
+  text-align: left;
+  color: #3b4c5e;
+}
+
+.faq-ac-body th {
+  background: #f5eecb;
+  color: #0f1729;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .faq-ac-item {
+    padding: 0 18px;
+  }
+
+  .faq-ac-item > summary {
+    font-size: 17px;
+    gap: 14px;
+  }
+}

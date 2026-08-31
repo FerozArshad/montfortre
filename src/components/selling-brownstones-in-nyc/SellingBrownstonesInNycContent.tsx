@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +46,7 @@ export default function SellingBrownstonesInNycContent() {
               while minimizing stress, delays, and costly mistakes throughout the process.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -56,6 +58,7 @@ export default function SellingBrownstonesInNycContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/selling-brownstones-nyc.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -434,88 +437,100 @@ export default function SellingBrownstonesInNycContent() {
                 loading="lazy"
               />
             </div>
-            <h3>How long does it typically take to sell a brownstone in today&apos;s market?</h3>
-            <p>
-              Timeline varies significantly by borough, price point, and condition. In Brooklyn, average days on market
-              for brownstones have risen to approximately 74 days in early 2026, up from 52 days in 2025. Manhattan
-              brownstones in the right price range can move faster, particularly when fully restored and accurately
-              priced. Overpriced listings, regardless of location, consistently sit longer.
-            </p>
-            <h3>Should I renovate before listing or sell as-is to investors?</h3>
-            <p>
-              This is one question I always discuss with sellers early. The answer depends on your brownstone&apos;s
-              current condition, your budget, and your timeline. High-return improvements for brownstones include fresh
-              paint and minor bathroom upgrades-relatively modest investments that improve buyer perception. Entry-level
-              renovation projects start in the low millions, while fully restored brownstones can exceed $4M–$6M or more
-              in sale price. I build a cost-benefit analysis for every seller so you can make an informed decision.
-            </p>
-            <h3>How do landmark restrictions affect my property&apos;s marketability?</h3>
-            <p>
-              Landmark status adds prestige but also imposes constraints. Exterior alterations to brownstones may need
-              approval from the Landmarks Preservation Commission through a Certificate of Appropriateness, Permit for
-              Minor Work, or Certificate of No Effect. Buyers appreciate knowing exactly what&apos;s permitted and what
-              documentation exists. Transparency about these restrictions-rather than downplaying them-builds buyer
-              confidence and actually strengthens your negotiating position.
-            </p>
-            <h3>What&apos;s the difference in selling strategy for single-family vs. multi-family brownstones?</h3>
-            <p>
-              Single-family brownstones appeal primarily to families seeking privacy, cohesive living across all floors,
-              and residential financing. Multi-family setups can help offset expenses with rental income, attracting
-              investors who evaluate the building based on income potential and cap rates. The marketing approach, buyer
-              outreach, and pricing methodology differ substantially between the two.
-            </p>
-            <h3>How do you market to international buyers interested in NYC brownstones?</h3>
-            <p>
-              International buyers are drawn to NYC brownstones as trophy investments due to their scarcity and
-              architectural significance. I leverage relationships with international brokerages, digital marketing
-              campaigns targeting global markets, and private showings coordinated across time zones. For premium
-              properties, this international outreach has been instrumental in generating competitive, all-cash offers.
-            </p>
-            <h3>What are the most common mistakes sellers make when listing their brownstone?</h3>
-            <p>
-              The biggest mistakes I see include overpricing based on aspirational rather than comparable values,
-              neglecting pre-market preparation, ignoring the cost and timeline of LPC compliance, and poor marketing
-              presentation. Many brownstones require specialized care for aged plumbing systems and mechanical
-              infrastructure-sellers who fail to address or disclose these issues face problems during inspection that
-              can delay or derail transactions.
-            </p>
-            <h3>How do you determine the right listing price for a unique historic property?</h3>
-            <p>
-              I analyze recent townhouse and rowhouse closings on the same or adjacent blocks, matching by configuration,
-              condition, and landmark status. Market changes can create unique opportunities depending on neighborhood
-              inventory levels. Because comps for brownstones can be scarce, I supplement with broader townhouse data
-              while making adjustments for specific property features. The goal is a price that generates strong showing
-              activity and competitive offers within the first few weeks.
-            </p>
-            <h3>Should I consider selling to developers or focus on end-user buyers?</h3>
-            <p>
-              This depends on your property&apos;s zoning, lot size, and location. Recent{" "}
-              <a
-                href="https://www.nyc.gov/mayors-office/news/2026/06/mamdani-administration-unveils-new-tools-to-build-more-housing-w"
-                className="tf-guide-link"
-              >
-                zoning tools introduced by the Mamdani administration
-              </a>{" "}
-              in mid-2026-including expanded ADU provisions and simplified Landmark Transferable Development Rights-have
-              created new possibilities that may attract developer interest. I evaluate whether developer or end-user
-              marketing will yield the stronger result for your specific situation.
-            </p>
-            <h3>What documentation do I need for landmark or historic district properties?</h3>
-            <p>
-              Brownstones require documentation such as renovation permits and Certificates of Occupancy during sales.
-              Documentation of maintenance and renovations builds buyer confidence and supports your asking price during
-              appraisal. I help sellers compile records of past LPC approvals, structural work, mechanical upgrades, and
-              facade restorations before going to market. Transparency about property ownership costs avoids future buyer
-              surprises and keeps transactions moving forward.
-            </p>
-            <h3>How do brownstone sales differ from condo or co-op transactions?</h3>
-            <p>
-              Brownstone sales involve no board approval, no monthly maintenance fees (though owners bear all maintenance
-              costs directly), and no restrictions on renovations beyond landmark and zoning rules. The appraisal process
-              is more complex due to limited comps, and financing differs-particularly for multi-family configurations
-              where commercial financing may apply. The lack of modern amenities often concerns brownstone buyers, so
-              presenting your property&apos;s systems and condition transparently is essential.
-            </p>
+            <FaqAccordion>
+              <FaqItem question={<>How long does it typically take to sell a brownstone in today&apos;s market?</>}>
+              <p>
+                Timeline varies significantly by borough, price point, and condition. In Brooklyn, average days on market
+                for brownstones have risen to approximately 74 days in early 2026, up from 52 days in 2025. Manhattan
+                brownstones in the right price range can move faster, particularly when fully restored and accurately
+                priced. Overpriced listings, regardless of location, consistently sit longer.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Should I renovate before listing or sell as-is to investors?</>}>
+              <p>
+                This is one question I always discuss with sellers early. The answer depends on your brownstone&apos;s
+                current condition, your budget, and your timeline. High-return improvements for brownstones include fresh
+                paint and minor bathroom upgrades-relatively modest investments that improve buyer perception. Entry-level
+                renovation projects start in the low millions, while fully restored brownstones can exceed $4M–$6M or more
+                in sale price. I build a cost-benefit analysis for every seller so you can make an informed decision.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How do landmark restrictions affect my property&apos;s marketability?</>}>
+              <p>
+                Landmark status adds prestige but also imposes constraints. Exterior alterations to brownstones may need
+                approval from the Landmarks Preservation Commission through a Certificate of Appropriateness, Permit for
+                Minor Work, or Certificate of No Effect. Buyers appreciate knowing exactly what&apos;s permitted and what
+                documentation exists. Transparency about these restrictions-rather than downplaying them-builds buyer
+                confidence and actually strengthens your negotiating position.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What&apos;s the difference in selling strategy for single-family vs. multi-family brownstones?</>}>
+              <p>
+                Single-family brownstones appeal primarily to families seeking privacy, cohesive living across all floors,
+                and residential financing. Multi-family setups can help offset expenses with rental income, attracting
+                investors who evaluate the building based on income potential and cap rates. The marketing approach, buyer
+                outreach, and pricing methodology differ substantially between the two.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How do you market to international buyers interested in NYC brownstones?</>}>
+              <p>
+                International buyers are drawn to NYC brownstones as trophy investments due to their scarcity and
+                architectural significance. I leverage relationships with international brokerages, digital marketing
+                campaigns targeting global markets, and private showings coordinated across time zones. For premium
+                properties, this international outreach has been instrumental in generating competitive, all-cash offers.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What are the most common mistakes sellers make when listing their brownstone?</>}>
+              <p>
+                The biggest mistakes I see include overpricing based on aspirational rather than comparable values,
+                neglecting pre-market preparation, ignoring the cost and timeline of LPC compliance, and poor marketing
+                presentation. Many brownstones require specialized care for aged plumbing systems and mechanical
+                infrastructure-sellers who fail to address or disclose these issues face problems during inspection that
+                can delay or derail transactions.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How do you determine the right listing price for a unique historic property?</>}>
+              <p>
+                I analyze recent townhouse and rowhouse closings on the same or adjacent blocks, matching by configuration,
+                condition, and landmark status. Market changes can create unique opportunities depending on neighborhood
+                inventory levels. Because comps for brownstones can be scarce, I supplement with broader townhouse data
+                while making adjustments for specific property features. The goal is a price that generates strong showing
+                activity and competitive offers within the first few weeks.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Should I consider selling to developers or focus on end-user buyers?</>}>
+              <p>
+                This depends on your property&apos;s zoning, lot size, and location. Recent{" "}
+                <a
+                  href="https://www.nyc.gov/mayors-office/news/2026/06/mamdani-administration-unveils-new-tools-to-build-more-housing-w"
+                  className="tf-guide-link"
+                >
+                  zoning tools introduced by the Mamdani administration
+                </a>{" "}
+                in mid-2026-including expanded ADU provisions and simplified Landmark Transferable Development Rights-have
+                created new possibilities that may attract developer interest. I evaluate whether developer or end-user
+                marketing will yield the stronger result for your specific situation.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What documentation do I need for landmark or historic district properties?</>}>
+              <p>
+                Brownstones require documentation such as renovation permits and Certificates of Occupancy during sales.
+                Documentation of maintenance and renovations builds buyer confidence and supports your asking price during
+                appraisal. I help sellers compile records of past LPC approvals, structural work, mechanical upgrades, and
+                facade restorations before going to market. Transparency about property ownership costs avoids future buyer
+                surprises and keeps transactions moving forward.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How do brownstone sales differ from condo or co-op transactions?</>}>
+              <p>
+                Brownstone sales involve no board approval, no monthly maintenance fees (though owners bear all maintenance
+                costs directly), and no restrictions on renovations beyond landmark and zoning rules. The appraisal process
+                is more complex due to limited comps, and financing differs-particularly for multi-family configurations
+                where commercial financing may apply. The lack of modern amenities often concerns brownstone buyers, so
+                presenting your property&apos;s systems and condition transparently is essential.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <hr />
             <h2>Ready to Sell Your Brownstone?</h2>
             <p>
@@ -531,7 +546,7 @@ export default function SellingBrownstonesInNycContent() {
             </p>
             <p className="tf-guide-center">
               <strong>Phone:</strong>{" "}
-              <a href="tel:+1-646-970-1078" className="tf-guide-link">
+              <a href="tel:+16469701078" className="tf-guide-link">
                 1-646-970-1078
               </a>
               {"  "}

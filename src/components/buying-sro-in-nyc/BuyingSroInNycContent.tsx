@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +46,7 @@ export default function BuyingSroInNycContent() {
               tenant complications, and hidden liabilities.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -56,6 +58,7 @@ export default function BuyingSroInNycContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/buying-sro-nyc.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -336,31 +339,36 @@ export default function BuyingSroInNycContent() {
             </blockquote>
             <hr />
             <h2>Frequently Asked Questions</h2>
-            <h3>Can I turn my SRO into apartments?</h3>
-            <p>
-              Sorry but converting SROs to Class A apartments requires an HPD no-harassment certificate to confirm that
-              neither you nor previous owners have been guilty of tenant harassment in the past 3 years. Without it, the
-              Department of Buildings won’t even consider your permit applications. Plus you need to get all the zoning
-              and building codes sorted out.
-            </p>
-            <h3>Do SRO tenants have rights under rent stabilisation?</h3>
-            <p>
-              Unfortunately, yes. Most SRO buildings in NYC are subject to the Rent Stabilization Code - so tenants have
-              rights to renewal, regulated rent increases and protection from unfair eviction. Be aware of these rights
-              or you could end up in a world of trouble.
-            </p>
-            <h3>What happens if I buy an SRO without the right documentation?</h3>
-            <p>
-              Be warned - without verified certificates of occupancy, no-harassment certification and compliance records
-              you could be looking at fines, blocked permits, evictions, court battles and a whole load of other
-              headaches - all because some previous owner decided to gloss over the details. A Cautionary Tale: I
-              witnessed a transaction go off the rails when some poor guy bought a 2 family building for $2.1 million
-              without even checking if it was an SRO property - and he had no clue what that meant. Fast forward a few
-              years and when he tried to sell, he found out - the hard way - that the tenant had way more rights than he
-              thought, which made it nigh on impossible to start renovations or even get rid of the guy. That lack of
-              knowledge ended up costing him nearly 400 grand on the sale - it’s a real-life example of the importance
-              of doing your due diligence before buying.
-            </p>
+            <FaqAccordion>
+              <FaqItem question={<>Can I turn my SRO into apartments?</>}>
+              <p>
+                Sorry but converting SROs to Class A apartments requires an HPD no-harassment certificate to confirm that
+                neither you nor previous owners have been guilty of tenant harassment in the past 3 years. Without it, the
+                Department of Buildings won’t even consider your permit applications. Plus you need to get all the zoning
+                and building codes sorted out.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Do SRO tenants have rights under rent stabilisation?</>}>
+              <p>
+                Unfortunately, yes. Most SRO buildings in NYC are subject to the Rent Stabilization Code - so tenants have
+                rights to renewal, regulated rent increases and protection from unfair eviction. Be aware of these rights
+                or you could end up in a world of trouble.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What happens if I buy an SRO without the right documentation?</>}>
+              <p>
+                Be warned - without verified certificates of occupancy, no-harassment certification and compliance records
+                you could be looking at fines, blocked permits, evictions, court battles and a whole load of other
+                headaches - all because some previous owner decided to gloss over the details. A Cautionary Tale: I
+                witnessed a transaction go off the rails when some poor guy bought a 2 family building for $2.1 million
+                without even checking if it was an SRO property - and he had no clue what that meant. Fast forward a few
+                years and when he tried to sell, he found out - the hard way - that the tenant had way more rights than he
+                thought, which made it nigh on impossible to start renovations or even get rid of the guy. That lack of
+                knowledge ended up costing him nearly 400 grand on the sale - it’s a real-life example of the importance
+                of doing your due diligence before buying.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <hr />
             <h2>Get in Touch</h2>
             <h3>Book Your SRO Investment Consultation with Stanley Montfort</h3>
@@ -371,7 +379,7 @@ export default function BuyingSroInNycContent() {
             </p>
             <p>
               <strong>Phone:</strong>{" "}
-              <a href="tel:+1-646-970-1078" className="tf-guide-link">
+              <a href="tel:+16469701078" className="tf-guide-link">
                 1-646-970-1078
               </a>
               {"  "}
@@ -388,7 +396,7 @@ export default function BuyingSroInNycContent() {
             </p>
             <div className="tf-cta-card">
               <div className="tf-cta-actions">
-                <a href="tel:+1-646-970-1078" className="tf-cta-tel">
+                <a href="tel:+16469701078" className="tf-cta-tel">
                   Call 1-(646)-970-1078
                 </a>
                 <a href="https://calendly.com/montfort" className="tf-cta-book">

@@ -4,7 +4,7 @@ import { SUCCESS_STORIES_SEO } from "../seo/pages/successStories";
 
 export default function SuccessStories() {
   return (
-    <PageShell seo={SUCCESS_STORIES_SEO} pageClassName="success-page">
+    <PageShell seo={SUCCESS_STORIES_SEO} pageClassName="success-page" showReviews={false}>
       <SuccessStoriesContent />
     </PageShell>
   );

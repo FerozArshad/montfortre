@@ -3,6 +3,9 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/crown-heights-condos-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 
 const NEWS_ARTICLES = [
@@ -43,7 +46,7 @@ export default function CrownHeightsCondosContent() {
               We'll help you purchase the right Crown Heights condo by avoiding overpriced listings, unexpected HOA costs, and properties that don't fit your long-term goals.
             </p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:646-970-1078" className="nbhd-hero-tel">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">
@@ -51,10 +54,18 @@ export default function CrownHeightsCondosContent() {
               </a>
             </div>
           </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/crown-heights-condos.png" alt="Crown Heights condos" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
+          </div>
         </div>
       </section>
 
       <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Crown Heights" propertyType="Condo" label="Crown Heights condos" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
@@ -144,47 +155,53 @@ export default function CrownHeightsCondosContent() {
             </blockquote>
             <hr className="nbhd-guide-rule" />
             <h2>Frequently Asked Questions About Crown Heights Condos</h2>
-            <h3>What are typical monthly carrying costs for Crown Heights condos?</h3>
-            <p>Monthly carrying costs for Crown Heights condos generally include three components: common charges, property taxes, and utilities. Common charges typically range from $350 to $800 per month depending on building size, amenity level, and age. Buildings with doormen, elevators, fitness centers, and rooftop terraces will sit at the higher end-sometimes exceeding $1,000 monthly for larger units.</p>
-            <p>Property taxes vary significantly based on the unit's assessed value and whether the building participates in NYC's <a href="https://www.nyc.gov/site/finance/property/co-op-condo-abatement-faqs.page" className="nbhd-guide-link">Co-op/Condo Tax Abatement program</a>. For qualifying buildings with average assessed unit values above $60,001, the abatement is approximately 17.5%. For buildings with lower average assessed values (under $50,000), the abatement can reach 28.1%. One thing I always confirm is whether the building is actually applying for this abatement annually-some don't, and owners miss thousands in potential savings.</p>
-            <p>Many buyers assume that newer buildings automatically have lower carrying costs, but the reverse is often true. A building with a doorman, gym, parking, and rooftop terrace may look luxurious, but if common charges are high, taxes are substantial, and reserves are thin, your monthly outlay can erode total return significantly.</p>
-            <h3>How do Crown Heights condos compare to co-ops and brownstones?</h3>
-            <p>Condominiums grant fee title ownership of your individual unit plus a proportional share of common elements. Co-ops involve purchasing shares in a corporation that owns the building-you don't technically own your apartment, you own stock. Brownstones are private townhouses with entirely different tax, maintenance, and financing structures.</p>
-            FeatureCondoCo-opBrownstone<strong>Ownership Type</strong>Fee title (deed)Shares in a corporationFee title (entire building)<strong>Board Approval for Purchase</strong>Right of first refusal onlyFull board approval requiredNone<strong>Subletting</strong>Generally permittedOften restrictedFully flexible<strong>Down Payment</strong>20–25% typical20–50% depending on the building20–30% typical<strong>Monthly Costs</strong>Common charges + property taxesMaintenance (includes property taxes)Owner is responsible for all costs<strong>Financing</strong>Standard mortgageCo-op loan; building must be approvedStandard mortgage
-            <p>Crown Heights has a limited inventory of condos compared to co-ops in Brooklyn, with only <a href="https://www.homes.com/brooklyn-ny/crown-heights-neighborhood/condos-for-sale/" className="nbhd-guide-link">66 condos currently listed for sale</a> versus a larger co-op inventory. That scarcity can support stronger price appreciation for condos over time, but it also means fewer options during your search.</p>
-            <h3>What should I look for in Crown Heights condo building finances?</h3>
-            <p>Crown Heights buyers should assess the financial health of the condo association before buying-this is non-negotiable in my practice. Here's what I review:</p>
-            <ul className="nbhd-guide-list"><li>
-            <p><strong>Reserve fund balance:</strong> How much cash does the building have set aside for major capital work (roof, facade, elevator, boiler)? Buildings with reserves below roughly $1,000 per unit and aging infrastructure are red flags.</p>
-            </li><li>
-            <p><strong>Special assessment history:</strong> Have assessments been levied in the past 3–5 years? How large were they? Were they communicated transparently?</p>
-            </li><li>
-            <p><strong>Income vs. expenses trend:</strong> Is the building running a surplus or deficit? Chronic deficits mean common charges will likely increase.</p>
-            </li><li>
-            <p><strong>Capital improvement plans:</strong> Does the board have an engineer's reserve study? Are major projects planned? What's the funding strategy?</p>
-            </li><li>
-            <p><strong>Management quality:</strong> Is the building professionally managed or self-managed? What's the litigation history? Any outstanding city code violations?</p>
-            </li></ul>
-            <p>Many buyers assume that older buildings mean more charm, but what they don't budget for is the deferred maintenance-roof work, facade repairs, elevator modernization, and compliance with regulations like <a href="https://www.nyc.gov/site/sustainablebuildings/ll97/local-law-97.page" className="nbhd-guide-link">Local Law 97</a> for carbon emissions. Those costs ultimately land on unit owners through assessments or common charge increases.</p>
-            <h3>Are Crown Heights condos good rental investments?</h3>
-            <p>The rental market data is compelling. Crown Heights condos show strong rental growth of 19.53% year-over-year as of 2026, with median monthly rents around $3,750. With prices for 1-bedroom condos in the $600,000–$700,000 range, the rent-to-price ratio can work for investors-especially in buildings with favorable tax abatement status and reasonable common charges.</p>
-            <p>However, I always caution investor-buyers to verify three things before purchasing:</p>
-            <ol className="nbhd-guide-list"><li>
-            <p><strong>Building rental policies.</strong> Some condo associations restrict subletting or impose owner-occupancy requirements for a period after purchase. This information is in the offering plan and house rules-request them early.</p>
-            </li><li>
-            <p><strong>Tax implications.</strong> If you're renting the unit, you won't qualify for the owner-occupied co-op/condo tax abatement, which can add several thousand dollars annually to your carrying costs.</p>
-            </li><li>
-            <p><strong>Competitive supply.</strong> The <a href="https://www.nyc.gov/assets/planning/download/pdf/plans/crown-heights-west/crown_heights_west.pdf" className="nbhd-guide-link">Crown Heights West Rezoning</a> could bring significant new supply to certain corridors, including proposals like the 1550 Bedford Avenue development with approximately 250 units. More supply could moderate rent growth over time.</p>
-            </li></ol>
-            <p>When I help clients evaluate rental investments, I compare effective cost-purchase price plus carrying costs plus anticipated assessments-rather than just sticker price. Sometimes an older building with strong financials and stable common charges outperforms a flashy new development once you run the numbers over 5–10 years.</p>
-            <p>Crown Heights has a variety of condos available for purchase, but the best investment properties combine strong locations (near transit and Franklin Avenue), well-managed buildings with healthy reserves, and units that attract the tenant profile this neighborhood draws-young professionals, families, and creative workers who value walkability and cultural access.</p>
-            <hr className="nbhd-guide-rule" />
+            <FaqAccordion>
+              <FaqItem question={<>What are typical monthly carrying costs for Crown Heights condos?</>}>
+              <p>Monthly carrying costs for Crown Heights condos generally include three components: common charges, property taxes, and utilities. Common charges typically range from $350 to $800 per month depending on building size, amenity level, and age. Buildings with doormen, elevators, fitness centers, and rooftop terraces will sit at the higher end-sometimes exceeding $1,000 monthly for larger units.</p>
+              <p>Property taxes vary significantly based on the unit's assessed value and whether the building participates in NYC's <a href="https://www.nyc.gov/site/finance/property/co-op-condo-abatement-faqs.page" className="nbhd-guide-link">Co-op/Condo Tax Abatement program</a>. For qualifying buildings with average assessed unit values above $60,001, the abatement is approximately 17.5%. For buildings with lower average assessed values (under $50,000), the abatement can reach 28.1%. One thing I always confirm is whether the building is actually applying for this abatement annually-some don't, and owners miss thousands in potential savings.</p>
+              <p>Many buyers assume that newer buildings automatically have lower carrying costs, but the reverse is often true. A building with a doorman, gym, parking, and rooftop terrace may look luxurious, but if common charges are high, taxes are substantial, and reserves are thin, your monthly outlay can erode total return significantly.</p>
+              </FaqItem>
+              <FaqItem question={<>How do Crown Heights condos compare to co-ops and brownstones?</>}>
+              <p>Condominiums grant fee title ownership of your individual unit plus a proportional share of common elements. Co-ops involve purchasing shares in a corporation that owns the building-you don't technically own your apartment, you own stock. Brownstones are private townhouses with entirely different tax, maintenance, and financing structures.</p>
+              FeatureCondoCo-opBrownstone<strong>Ownership Type</strong>Fee title (deed)Shares in a corporationFee title (entire building)<strong>Board Approval for Purchase</strong>Right of first refusal onlyFull board approval requiredNone<strong>Subletting</strong>Generally permittedOften restrictedFully flexible<strong>Down Payment</strong>20–25% typical20–50% depending on the building20–30% typical<strong>Monthly Costs</strong>Common charges + property taxesMaintenance (includes property taxes)Owner is responsible for all costs<strong>Financing</strong>Standard mortgageCo-op loan; building must be approvedStandard mortgage
+              <p>Crown Heights has a limited inventory of condos compared to co-ops in Brooklyn, with only <a href="https://www.homes.com/brooklyn-ny/crown-heights-neighborhood/condos-for-sale/" className="nbhd-guide-link">66 condos currently listed for sale</a> versus a larger co-op inventory. That scarcity can support stronger price appreciation for condos over time, but it also means fewer options during your search.</p>
+              </FaqItem>
+              <FaqItem question={<>What should I look for in Crown Heights condo building finances?</>}>
+              <p>Crown Heights buyers should assess the financial health of the condo association before buying-this is non-negotiable in my practice. Here's what I review:</p>
+              <ul className="nbhd-guide-list"><li>
+              <p><strong>Reserve fund balance:</strong> How much cash does the building have set aside for major capital work (roof, facade, elevator, boiler)? Buildings with reserves below roughly $1,000 per unit and aging infrastructure are red flags.</p>
+              </li><li>
+              <p><strong>Special assessment history:</strong> Have assessments been levied in the past 3–5 years? How large were they? Were they communicated transparently?</p>
+              </li><li>
+              <p><strong>Income vs. expenses trend:</strong> Is the building running a surplus or deficit? Chronic deficits mean common charges will likely increase.</p>
+              </li><li>
+              <p><strong>Capital improvement plans:</strong> Does the board have an engineer's reserve study? Are major projects planned? What's the funding strategy?</p>
+              </li><li>
+              <p><strong>Management quality:</strong> Is the building professionally managed or self-managed? What's the litigation history? Any outstanding city code violations?</p>
+              </li></ul>
+              <p>Many buyers assume that older buildings mean more charm, but what they don't budget for is the deferred maintenance-roof work, facade repairs, elevator modernization, and compliance with regulations like <a href="https://www.nyc.gov/site/sustainablebuildings/ll97/local-law-97.page" className="nbhd-guide-link">Local Law 97</a> for carbon emissions. Those costs ultimately land on unit owners through assessments or common charge increases.</p>
+              </FaqItem>
+              <FaqItem question={<>Are Crown Heights condos good rental investments?</>}>
+              <p>The rental market data is compelling. Crown Heights condos show strong rental growth of 19.53% year-over-year as of 2026, with median monthly rents around $3,750. With prices for 1-bedroom condos in the $600,000–$700,000 range, the rent-to-price ratio can work for investors-especially in buildings with favorable tax abatement status and reasonable common charges.</p>
+              <p>However, I always caution investor-buyers to verify three things before purchasing:</p>
+              <ol className="nbhd-guide-list"><li>
+              <p><strong>Building rental policies.</strong> Some condo associations restrict subletting or impose owner-occupancy requirements for a period after purchase. This information is in the offering plan and house rules-request them early.</p>
+              </li><li>
+              <p><strong>Tax implications.</strong> If you're renting the unit, you won't qualify for the owner-occupied co-op/condo tax abatement, which can add several thousand dollars annually to your carrying costs.</p>
+              </li><li>
+              <p><strong>Competitive supply.</strong> The <a href="https://www.nyc.gov/assets/planning/download/pdf/plans/crown-heights-west/crown_heights_west.pdf" className="nbhd-guide-link">Crown Heights West Rezoning</a> could bring significant new supply to certain corridors, including proposals like the 1550 Bedford Avenue development with approximately 250 units. More supply could moderate rent growth over time.</p>
+              </li></ol>
+              <p>When I help clients evaluate rental investments, I compare effective cost-purchase price plus carrying costs plus anticipated assessments-rather than just sticker price. Sometimes an older building with strong financials and stable common charges outperforms a flashy new development once you run the numbers over 5–10 years.</p>
+              <p>Crown Heights has a variety of condos available for purchase, but the best investment properties combine strong locations (near transit and Franklin Avenue), well-managed buildings with healthy reserves, and units that attract the tenant profile this neighborhood draws-young professionals, families, and creative workers who value walkability and cultural access.</p>
+              <hr className="nbhd-guide-rule" />
+              </FaqItem>
+            </FaqAccordion>
             <h2>Schedule Your Crown Heights Condo Consultation Today</h2>
             <p>The Crown Heights condo market rewards informed buyers. With 66 condos for sale and 18 condos sold just last month, inventory moves-and the difference between a strong purchase and a costly mistake often comes down to the quality of your due diligence.</p>
             <p><a href="/about-us/" className="nbhd-guide-link">I help buyers</a> evaluate Crown Heights condo opportunities with the depth and rigor this market demands. From building financial analysis to negotiation strategy, I provide expert guidance throughout the entire buying process.</p>
             <p><strong>Ready to start your search for condos for sale in Crown Heights?<br />Phone:</strong> 1-646-970-1078                 <strong>Email:</strong><a href="mailto:sm@montfortre.com" className="nbhd-guide-link"><u>sm@montfortre.com</u></a></p>
             <p>Every consultation begins with understanding your goals-whether that's finding your first home in Brooklyn, NY, building a real estate investment portfolio, or relocating to one of Brooklyn's most dynamic neighborhoods. Let's find the right Crown Heights condo for you.</p>
-            <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule Free Consultation</a><a href="tel:646-970-1078" className="nbhd-guide-link">Call For Information</a>
+            <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule Free Consultation</a><a href="tel:+16469701078" className="nbhd-guide-link">Call For Information</a>
 </div>
         </div>
       </section>

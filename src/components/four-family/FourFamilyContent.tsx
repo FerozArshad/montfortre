@@ -4,6 +4,7 @@ import ResourcesSection from "../shared/ResourcesSection";
 import useReputationAggregate from "../../hooks/useReputationAggregate";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
 
 
 const FOUR_FAMILY_ARTICLES = [
@@ -44,7 +45,7 @@ export default function FourFamilyContent() {
             <h1>NYC Four-Family Homes for Sale — Expert Representation Every Step of the Way</h1>
             <p className="tf-hero-lead">We’ll guide you through every step of the process to <strong>ensure you purchase</strong> a profitable <strong>four-family home without overpaying</strong> or inheriting costly repair and violation issues.</p>
             <div className="tf-hero-ctas">
-              <a href="tel:646-970-1078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
             <div className="tf-serve">
@@ -218,18 +219,26 @@ export default function FourFamilyContent() {
             <p><strong>Astoria financing strategy:</strong> An owner-occupant buyer initially pursued a conventional loan with 25% down. After evaluating their financial profile, I connected them with a lender offering an FHA-backed mortgage on the four-unit building with 3.5% down, freeing up capital for immediate repairs to the building&apos;s aging boiler system. They also qualified for the HomeFirst down payment assistance program, saving an additional $40,000 in upfront costs.</p>
             <p>These outcomes reflect the kind of real estate transaction where specialized knowledge directly translates to measurable financial benefit.</p>
             <h2>Frequently Asked Questions</h2>
-            <h3>What down payment do I need for a four-family house in NYC?</h3>
-            <p>For owner-occupied purchases using residential financing, expect 20–25% down on a conventional loan, or as low as 3.5% with FHA financing. Investment-only DSCR or portfolio loans typically require 25–35% down. NYC&apos;s HomeFirst program can provide up to $100,000 in forgivable loans toward your down payment if you meet income and occupancy requirements. You&apos;ll need a minimum 3% from your own funds regardless of assistance programs. With a median listing price of approximately $1.4M for four-family properties, your request for financing should be well-documented and pre-approved before you begin your search.</p>
-            <h3>How long does it take from starting a search to closing?</h3>
-            <p>The active search phase varies-some buyers find the right property within weeks, others take several months given the tight inventory. Once an offer is accepted, expect 60–90 days to close, including 30–45 days of due diligence, financing, inspections, and title clearance.</p>
-            <h3>Should I self-manage or hire a property manager?</h3>
-            <p>This depends on your proximity to the property, your experience, and your time availability. Self-management saves 8–10% of gross rent but requires handling tenant requests, maintenance coordination, lease renewals, and legal compliance. Many owner-occupants of four-family buildings self-manage successfully because they live on-site. For out-of-state or time-constrained investors, professional management through a licensed firm, whether inc. or sole proprietor, is usually worth the cost.</p>
-            <h3>What does buyer representation with Stanley Montfort include?</h3>
-            <p>My services cover the complete purchase process: property identification and evaluation, financial analysis, CO and compliance verification, inspection coordination, financing strategy, offer negotiation, due diligence management, and closing coordination. As your buyer&apos;s agent, I represent your interests exclusively-not the seller&apos;s.</p>
-            <h3>Do four-family buildings always have rent-stabilized tenants?</h3>
-            <p>Not automatically. Rent stabilization most commonly applies to buildings with six or more units. However, buildings that received certain tax benefits (421-a, J-51) or have historical regulatory agreements may have stabilized units regardless of size. I verify the regulatory status of every unit before my clients make an offer.</p>
-            <h3>What if the Certificate of Occupancy doesn&apos;t match the building?</h3>
-            <p>This is more common than most buyers realize. If the CO lists fewer units than actually exist, those additional units are illegal. This affects financing (lenders won&apos;t count illegal unit income), insurance coverage, and resale value. Resolution may require filing for an amended CO, which involves permits, inspections, and potentially significant construction to meet code requirements.</p>
+            <FaqAccordion>
+              <FaqItem question={<>What down payment do I need for a four-family house in NYC?</>}>
+              <p>For owner-occupied purchases using residential financing, expect 20–25% down on a conventional loan, or as low as 3.5% with FHA financing. Investment-only DSCR or portfolio loans typically require 25–35% down. NYC&apos;s HomeFirst program can provide up to $100,000 in forgivable loans toward your down payment if you meet income and occupancy requirements. You&apos;ll need a minimum 3% from your own funds regardless of assistance programs. With a median listing price of approximately $1.4M for four-family properties, your request for financing should be well-documented and pre-approved before you begin your search.</p>
+              </FaqItem>
+              <FaqItem question={<>How long does it take from starting a search to closing?</>}>
+              <p>The active search phase varies-some buyers find the right property within weeks, others take several months given the tight inventory. Once an offer is accepted, expect 60–90 days to close, including 30–45 days of due diligence, financing, inspections, and title clearance.</p>
+              </FaqItem>
+              <FaqItem question={<>Should I self-manage or hire a property manager?</>}>
+              <p>This depends on your proximity to the property, your experience, and your time availability. Self-management saves 8–10% of gross rent but requires handling tenant requests, maintenance coordination, lease renewals, and legal compliance. Many owner-occupants of four-family buildings self-manage successfully because they live on-site. For out-of-state or time-constrained investors, professional management through a licensed firm, whether inc. or sole proprietor, is usually worth the cost.</p>
+              </FaqItem>
+              <FaqItem question={<>What does buyer representation with Stanley Montfort include?</>}>
+              <p>My services cover the complete purchase process: property identification and evaluation, financial analysis, CO and compliance verification, inspection coordination, financing strategy, offer negotiation, due diligence management, and closing coordination. As your buyer&apos;s agent, I represent your interests exclusively-not the seller&apos;s.</p>
+              </FaqItem>
+              <FaqItem question={<>Do four-family buildings always have rent-stabilized tenants?</>}>
+              <p>Not automatically. Rent stabilization most commonly applies to buildings with six or more units. However, buildings that received certain tax benefits (421-a, J-51) or have historical regulatory agreements may have stabilized units regardless of size. I verify the regulatory status of every unit before my clients make an offer.</p>
+              </FaqItem>
+              <FaqItem question={<>What if the Certificate of Occupancy doesn&apos;t match the building?</>}>
+              <p>This is more common than most buyers realize. If the CO lists fewer units than actually exist, those additional units are illegal. This affects financing (lenders won&apos;t count illegal unit income), insurance coverage, and resale value. Resolution may require filing for an amended CO, which involves permits, inspections, and potentially significant construction to meet code requirements.</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Schedule Your Four-Family Property Consultation</h2>
             <p>Finding the right four-family house for sale in NYC requires more than browsing listings online. It requires a strategic approach that evaluates legal compliance, building condition, income potential, financing options, and long-term ownership costs-all before you make an offer.</p>
             <p>I provide personalized consultations that include custom investment analysis, neighborhood targeting based on your budget and goals, and a clear roadmap from property search through closing. Whether you&apos;re a first-time buyer looking to owner-occupy or an experienced investor expanding your portfolio across New York, I&apos;ll help you evaluate every four-family opportunity with the thoroughness these complex properties demand.</p>
@@ -237,7 +246,7 @@ export default function FourFamilyContent() {
               <div className="tf-cta-title">Schedule Your Four-Family Property Consultation</div>
               <p><strong>Phone:</strong> 1-646-970-1078&nbsp;&nbsp; <strong>Email:</strong> sm@montfortre.com&nbsp;&nbsp; <strong>Address:</strong> 8 West 126th Street, New York NY 10027</p>
               <div className="tf-cta-actions">
-                <a href="tel:646-970-1078" className="tf-cta-tel">Call For Information</a>
+                <a href="tel:+16469701078" className="tf-cta-tel">Call For Information</a>
                 <a href="https://calendly.com/montfort" className="tf-cta-book">Schedule A Consultation</a>
               </div>
             </div>

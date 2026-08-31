@@ -3,6 +3,9 @@ import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/neighborhoods-page.css";
 import "../../styles/park-slope-condo-page.css";
 import "../../styles/contact-section.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
 
 const NEWS_ARTICLES = [
   {
@@ -40,14 +43,22 @@ export default function ParkSlopeCondoContent() {
             <h1>{"Park Slope Condos — Experts realtor for Buying, Selling & Investing"}</h1>
             <p className="nbhd-hero-lead">{"We'll help you buy the right Park Slope Condo by avoiding costly structural issues, hidden repair expenses, and overpaying in a competitive market"}</p>
             <div className="nbhd-hero-ctas">
-              <a href="tel:+1-(646)-970-1078" className="nbhd-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="nbhd-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="nbhd-hero-book">Schedule A Consultation</a>
             </div>
+          </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/hoods/park-slope-condos.png" alt="Park Slope condos" width="640" height="512" loading="eager" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
           </div>
         </div>
       </section>
 
       <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Park Slope" propertyType="Condo" label="Park Slope condos" />
 
       <section className="nbhd-intro" data-screen-label="Guide">
         <div className="nbhd-intro-inner">
@@ -96,22 +107,28 @@ export default function ParkSlopeCondoContent() {
             <ul className="nbhd-guide-list"><li><p><strong>{"Park Slope North"}</strong>{" - Grand Army Plaza to Union Street, near the 2/3 subway at Grand Army and the B/Q at 7th Avenue"}</p></li><li><p><strong>{"Park Slope Central"}</strong>{" - The classic brownstone blocks between Union Street and 9th Street, including the Fifth Avenue and Seventh Avenue commercial corridors"}</p></li><li><p><strong>{"Park Slope South"}</strong>{" - 9th Street to 15th Street, with more affordable entry points and proximity to the F/G at 15th Street–Prospect Park"}</p></li><li><p><strong>{"Fourth Avenue Corridor"}</strong>{" - Newer condo developments and larger buildings, convenient to the R train"}</p></li><li><p><strong>{"Western Slope"}</strong>{" - Streets closest to Prospect Park, commanding premium values for park proximity and views"}</p></li><li><p><strong>{"Adjacent markets"}</strong>{" - Including Prospect Heights, Gowanus, and the Park Slope/Carroll Gardens border, where in 2025, 2,383 units in 4+ unit buildings received new certificates of occupancy"}</p></li></ul>
             <p>{"Park Slope's proximity to highly rated public schools attracts families, and school zone boundaries are a meaningful factor in how Stanley evaluates location value for buyer clients."}</p>
             <h2>{"Frequently Asked Questions About Park Slope Condo Real Estate"}</h2>
-            <h3>{"How do you evaluate a Park Slope condo's value compared to similar units?"}</h3>
-            <p>{"Valuation starts with comparable sales from the same building type, similar floor level, and exposure within the same Park Slope submarket. I look at price per square foot across recent closed sales - currently ranging from approximately $1,200 to $1,900+ depending on the building - and then adjust for condition, amenities, outdoor space, natural light, and layout. Monthly common charges and property taxes contribute to ownership costs in Park Slope, so two condos at the same purchase price can have very different true costs. Condos in Park Slope offer modern systems and amenities appealing to buyers, but the building's management quality and financial health are equally important to long-term value. Each listing must reflect accuracy in how its comparables are selected and presented."}</p>
-            <h3>{"What should I know about Park Slope condo building finances before buying?"}</h3>
-            <p>{"Before recommending any condo, I review the building's audited financial statements, operating budget, reserve fund balance, and history of special assessments. In Park Slope's many small brownstone conversions, reserve funds are frequently underfunded - meaning a major expense like roof replacement, facade pointing, or plumbing work could trigger a special assessment of $20,000 or more per unit. I also verify whether the building is professionally managed or self-managed, review management contracts, and check for any pending Local Law 11 façade work for buildings over six stories. This information is essential and non-negotiable in my due diligence process. Owning a condo usually involves fewer maintenance responsibilities compared to a townhouse, but the building's collective financial health determines whether that advantage holds."}</p>
-            <h3>{"How long does it typically take to sell a condo in Park Slope?"}</h3>
-            <p>{"In the current market, well-priced condos in Park Slope are selling in approximately 40 to 50 days. However, pricing strategy is the single biggest factor - about 23% of current listings have had price reductions, which typically indicates initial overpricing. Seasonality also plays a role; spring and early fall tend to generate the strongest buyer activity. When I prepare a listing, I build a pricing strategy based on verified recent comparable sales, current inventory competition, and the specific strengths and limitations of the unit and building. The goal is to position the listing to attract serious offers quickly rather than chase the market down with reductions."}</p>
-            <img src="/redesign-assets/hoods/park-slope-condo-2-3.png" alt={"Financial documents"} className="nbhd-guide-img" loading="lazy" />
-            <h3>{"What makes Park Slope condos different from other "}<a href={"/brooklyn-heights/"} className="nbhd-guide-link">{"Brooklyn neighborhoods"}</a>{"?"}</h3>
-            <p>{"Park Slope commands higher price-per-square-foot premiums than most Brooklyn submarkets, driven by its combination of Prospect Park proximity, excellent transit access, top-rated schools, walkable commercial corridors, and a strong concentration of well-maintained brownstone and boutique condo buildings. The neighborhood's homes carry an authenticity and architectural character that newer developments in other areas don't replicate. Co-ops remain more common in Park Slope than condos, which keeps condominium inventory tight and sustains strong resale demand. Compared to neighborhoods like Williamsburg or Downtown Brooklyn, Park Slope condos also tend to have more restrictive rental and sublet policies, which supports owner-occupancy rates but should be evaluated carefully by investor buyers. Listing information and market data should always be verified for accuracy before making comparisons."}</p>
+            <FaqAccordion>
+              <FaqItem question={"How do you evaluate a Park Slope condo's value compared to similar units?"}>
+              <p>{"Valuation starts with comparable sales from the same building type, similar floor level, and exposure within the same Park Slope submarket. I look at price per square foot across recent closed sales - currently ranging from approximately $1,200 to $1,900+ depending on the building - and then adjust for condition, amenities, outdoor space, natural light, and layout. Monthly common charges and property taxes contribute to ownership costs in Park Slope, so two condos at the same purchase price can have very different true costs. Condos in Park Slope offer modern systems and amenities appealing to buyers, but the building's management quality and financial health are equally important to long-term value. Each listing must reflect accuracy in how its comparables are selected and presented."}</p>
+              </FaqItem>
+              <FaqItem question={"What should I know about Park Slope condo building finances before buying?"}>
+              <p>{"Before recommending any condo, I review the building's audited financial statements, operating budget, reserve fund balance, and history of special assessments. In Park Slope's many small brownstone conversions, reserve funds are frequently underfunded - meaning a major expense like roof replacement, facade pointing, or plumbing work could trigger a special assessment of $20,000 or more per unit. I also verify whether the building is professionally managed or self-managed, review management contracts, and check for any pending Local Law 11 façade work for buildings over six stories. This information is essential and non-negotiable in my due diligence process. Owning a condo usually involves fewer maintenance responsibilities compared to a townhouse, but the building's collective financial health determines whether that advantage holds."}</p>
+              </FaqItem>
+              <FaqItem question={"How long does it typically take to sell a condo in Park Slope?"}>
+              <p>{"In the current market, well-priced condos in Park Slope are selling in approximately 40 to 50 days. However, pricing strategy is the single biggest factor - about 23% of current listings have had price reductions, which typically indicates initial overpricing. Seasonality also plays a role; spring and early fall tend to generate the strongest buyer activity. When I prepare a listing, I build a pricing strategy based on verified recent comparable sales, current inventory competition, and the specific strengths and limitations of the unit and building. The goal is to position the listing to attract serious offers quickly rather than chase the market down with reductions."}</p>
+              <img src="/redesign-assets/hoods/park-slope-condo-2-3.png" alt={"Financial documents"} className="nbhd-guide-img" loading="lazy" />
+              </FaqItem>
+              <FaqItem question={<>{"What makes Park Slope condos different from other "}<a href={"/brooklyn-heights/"} className="nbhd-guide-link">{"Brooklyn neighborhoods"}</a>{"?"}</>}>
+              <p>{"Park Slope commands higher price-per-square-foot premiums than most Brooklyn submarkets, driven by its combination of Prospect Park proximity, excellent transit access, top-rated schools, walkable commercial corridors, and a strong concentration of well-maintained brownstone and boutique condo buildings. The neighborhood's homes carry an authenticity and architectural character that newer developments in other areas don't replicate. Co-ops remain more common in Park Slope than condos, which keeps condominium inventory tight and sustains strong resale demand. Compared to neighborhoods like Williamsburg or Downtown Brooklyn, Park Slope condos also tend to have more restrictive rental and sublet policies, which supports owner-occupancy rates but should be evaluated carefully by investor buyers. Listing information and market data should always be verified for accuracy before making comparisons."}</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>{"Schedule Your Park Slope Condo Consultation"}</h2>
             <p>{"Whether you're beginning your search for condos for sale in Park Slope or preparing to list your condo in this competitive market, Stanley Montfort provides the building-level expertise and market knowledge that Park Slope condo real estate demands. Every consultation includes a personalized market analysis, a review of your goals and timeline, and an honest assessment of what to expect in today's market."}</p>
             <p>{"Contact Stanley today to discuss your Park Slope condo goals."}</p>
             <p><strong>{"Phone:"}</strong>{" 1-646-970-1078  "}<strong>{"Email:"}</strong><a href={"mailto:sm@montfortre.com"} className="nbhd-guide-link"><span>{"[email protected]"}</span></a><strong>{"Address:"}</strong>{" 8 West 126th Street, New York NY 10027"}</p>
             <div className="nbhd-guide-ctas">
               <a href="https://calendly.com/montfort" className="nbhd-guide-link">Schedule Free Consultation</a>
-              <a href="tel:+1-646-970-1078" className="nbhd-guide-link">Call For Information</a>
+              <a href="tel:+16469701078" className="nbhd-guide-link">Call For Information</a>
             </div>
 </div>
         </div>

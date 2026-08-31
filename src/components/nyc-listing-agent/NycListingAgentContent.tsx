@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/nyc-listing-agent-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const RELATED_SERVICES = [
@@ -83,7 +85,7 @@ export default function NycListingAgentContent() {
               <strong> listing to closing</strong>.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -95,6 +97,7 @@ export default function NycListingAgentContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/nyc-listing-agent.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -528,34 +531,39 @@ export default function NycListingAgentContent() {
             </blockquote>
             <hr />
             <h2>Frequently Asked Questions</h2>
-            <h3>How much commission do listing agents charge?</h3>
-            <p>
-              Typically, listing agent commission can range up to 6% of the sale price, which is usually split between
-              the listing agent and the buyers agent. Commission is negotiable and reflects the range of services
-              provided - from professional marketing to expert negotiation and transaction management. Stanley is
-              upfront about costs and the value you get at every price point.
-            </p>
-            <h3>How long does it take to sell a home?</h3>
-            <p>
-              The time it takes for a house to sell can vary wildly depending on market conditions, what kind of
-              property its a and how you&apos;ve priced it. Generally homes that are staged to sell do better than those
-              that aren&apos;t - we see condos in top shape going under contract in a little under a month and closing
-              up to 2 months later, while brownstones the take longer to sell - you&apos;re looking at 30-60 days to
-              accept an offer and then another 45-60 days to actually close. And then there are the properties that just
-              aren&apos;t priced right - those tend to hang around a lot longer. Stanley Montfort is going to be able to
-              give you a pretty good idea of what you should expect in your neighborhood - he stays on top of the local
-              data, so he can give you some solid numbers.
-            </p>
-            <h3>Do you actually offer staging services?</h3>
-            <p>
-              Actually yes we do - but we do it a bit differently than most real estate agents. While Stanley Montfort
-              wont be staging your house himself, he has some personal recommendations for people and companies that
-              he&apos;s worked with before that can help get your place looking it&apos;s absolute best. We also connect
-              you with a trusted list of pre-screened vendors who can make sure your home looks as attractive to
-              potential buyers as possible. In the end, that&apos;s going to help you sell your house for more money -
-              and staging can actually yield an extra 5-15% on top of your asking price - it&apos;s a pretty solid
-              investment if you ask me.
-            </p>
+            <FaqAccordion>
+              <FaqItem question={<>How much commission do listing agents charge?</>}>
+              <p>
+                Typically, listing agent commission can range up to 6% of the sale price, which is usually split between
+                the listing agent and the buyers agent. Commission is negotiable and reflects the range of services
+                provided - from professional marketing to expert negotiation and transaction management. Stanley is
+                upfront about costs and the value you get at every price point.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How long does it take to sell a home?</>}>
+              <p>
+                The time it takes for a house to sell can vary wildly depending on market conditions, what kind of
+                property its a and how you&apos;ve priced it. Generally homes that are staged to sell do better than those
+                that aren&apos;t - we see condos in top shape going under contract in a little under a month and closing
+                up to 2 months later, while brownstones the take longer to sell - you&apos;re looking at 30-60 days to
+                accept an offer and then another 45-60 days to actually close. And then there are the properties that just
+                aren&apos;t priced right - those tend to hang around a lot longer. Stanley Montfort is going to be able to
+                give you a pretty good idea of what you should expect in your neighborhood - he stays on top of the local
+                data, so he can give you some solid numbers.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Do you actually offer staging services?</>}>
+              <p>
+                Actually yes we do - but we do it a bit differently than most real estate agents. While Stanley Montfort
+                wont be staging your house himself, he has some personal recommendations for people and companies that
+                he&apos;s worked with before that can help get your place looking it&apos;s absolute best. We also connect
+                you with a trusted list of pre-screened vendors who can make sure your home looks as attractive to
+                potential buyers as possible. In the end, that&apos;s going to help you sell your house for more money -
+                and staging can actually yield an extra 5-15% on top of your asking price - it&apos;s a pretty solid
+                investment if you ask me.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <hr />
             <h2>Get In Touch with Stanley Montfort</h2>
             <h3>Ready to Sell Your Property</h3>

@@ -379,7 +379,7 @@ export default function HomeValuationTool() {
               I Want To Speak With An Expert
             </a>
             <p>
-              or give us a call at <a href="tel:(908) 414-6006">(908) 414-6006</a>
+              or give us a call at <a href="tel:+19084146006">(908) 414-6006</a>
             </p>
           </div>
         </div>

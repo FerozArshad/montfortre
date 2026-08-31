@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +46,7 @@ export default function BuyingACondoInNycContent() {
               avoid costly mistakes, and negotiate with confidence.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -56,6 +58,7 @@ export default function BuyingACondoInNycContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/buying-a-condo-nyc.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -333,39 +336,45 @@ export default function BuyingACondoInNycContent() {
                 loading="lazy"
               />
             </div>
-            <h3>What&apos;s the difference between buying a condo and a co-op in NYC?</h3>
-            <p>
-              Well, the main thing is the ownership structure. When you buy a condo, you own the property and have a deed
-              to your unit - plus a share of the common areas. Co-ops are a whole different ball game - you buy shares in
-              a corporation that owns the building, and you get a proprietary lease for your apartment. Condos are way
-              more flexible for subletting and have a simpler board approval process, but they tend to be pricier
-              (Manhattan condos are averaging $1.67 million, while co-ops are around $850,000 at the same price tier).
-            </p>
-            <h3>How much should I budget for closing costs?</h3>
-            <p>
-              For a condo in NYC, you should set aside 4-6% of the purchase price for closing costs. For a $1 million
-              condo, that&apos;s $40,000 to $60,000 - and that&apos;s on top of mortgage recording taxes (1.8-1.925% of
-              the loan amount), NYC transfer tax (1-1.425%), attorney fees ($2,500-$5,000), title insurance, and several
-              other fees. If you&apos;re buying a place at or above $1 million, you&apos;ll also have to factor in
-              mansion tax starting at 1%. These higher closing costs compared to co-ops are offset by more flexibility
-              and stronger appreciation, though.
-            </p>
-            <h3>Do condos require board approval like co-ops do?</h3>
-            <p>
-              Yes, but it&apos;s a different process. Condo boards mainly get to exercise the right of first refusal -
-              that means they can match any offer that gets accepted to buy the unit themselves. In reality, though,
-              boards rarely exercise this right. Unlike co-op boards that do personal interviews and impose strict
-              financial requirements, condo approval is more of a formality and usually wraps up within a few weeks.
-            </p>
-            <h3>Can I rent out my NYC condo as an investment?</h3>
-            <p>
-              Generally, yes - but with way more flexibility than co-ops. Most condo buildings allow subletting with
-              minimal restrictions - some might even require board notification or impose fees. Before you buy as an
-              investment, though, make sure you verify the building&apos;s specific policies regarding rental
-              percentages, minimum lease terms, and any owner-occupancy requirements. Keep in mind, though, that carrying
-              costs in condos average about $3.28 per square foot - you&apos;ll want to factor that into your rent
-              expectations for positive cash flow.
-            </p>
+            <FaqAccordion>
+              <FaqItem question={<>What&apos;s the difference between buying a condo and a co-op in NYC?</>}>
+              <p>
+                Well, the main thing is the ownership structure. When you buy a condo, you own the property and have a deed
+                to your unit - plus a share of the common areas. Co-ops are a whole different ball game - you buy shares in
+                a corporation that owns the building, and you get a proprietary lease for your apartment. Condos are way
+                more flexible for subletting and have a simpler board approval process, but they tend to be pricier
+                (Manhattan condos are averaging $1.67 million, while co-ops are around $850,000 at the same price tier).
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How much should I budget for closing costs?</>}>
+              <p>
+                For a condo in NYC, you should set aside 4-6% of the purchase price for closing costs. For a $1 million
+                condo, that&apos;s $40,000 to $60,000 - and that&apos;s on top of mortgage recording taxes (1.8-1.925% of
+                the loan amount), NYC transfer tax (1-1.425%), attorney fees ($2,500-$5,000), title insurance, and several
+                other fees. If you&apos;re buying a place at or above $1 million, you&apos;ll also have to factor in
+                mansion tax starting at 1%. These higher closing costs compared to co-ops are offset by more flexibility
+                and stronger appreciation, though.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Do condos require board approval like co-ops do?</>}>
+              <p>
+                Yes, but it&apos;s a different process. Condo boards mainly get to exercise the right of first refusal -
+                that means they can match any offer that gets accepted to buy the unit themselves. In reality, though,
+                boards rarely exercise this right. Unlike co-op boards that do personal interviews and impose strict
+                financial requirements, condo approval is more of a formality and usually wraps up within a few weeks.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Can I rent out my NYC condo as an investment?</>}>
+              <p>
+                Generally, yes - but with way more flexibility than co-ops. Most condo buildings allow subletting with
+                minimal restrictions - some might even require board notification or impose fees. Before you buy as an
+                investment, though, make sure you verify the building&apos;s specific policies regarding rental
+                percentages, minimum lease terms, and any owner-occupancy requirements. Keep in mind, though, that carrying
+                costs in condos average about $3.28 per square foot - you&apos;ll want to factor that into your rent
+                expectations for positive cash flow.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Start Your NYC Condo Journey Today - Get Expert Guidance</h2>
             <p>
               Connect with Stanley Montfort, an experienced NYC real estate agent, for personalized condo buying advice.
@@ -374,7 +383,7 @@ export default function BuyingACondoInNycContent() {
             </p>
             <p className="tf-guide-center">
               <strong>Phone:</strong>{" "}
-              <a href="tel:+1-646-970-1078" className="tf-guide-link">
+              <a href="tel:+16469701078" className="tf-guide-link">
                 1-646-970-1078
               </a>
               {"  "}

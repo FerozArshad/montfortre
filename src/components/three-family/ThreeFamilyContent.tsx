@@ -4,6 +4,7 @@ import ResourcesSection from "../shared/ResourcesSection";
 import useReputationAggregate from "../../hooks/useReputationAggregate";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
 
 
 const THREE_FAMILY_ARTICLES = [
@@ -44,7 +45,7 @@ export default function ThreeFamilyContent() {
             <h1>3 Family Houses for Sale in NYC — Expert Guidance for Homebuyers &amp; Investors</h1>
             <p className="tf-hero-lead">We’ll help you find the <strong>right three-family property in NYC</strong>, so you can build equity, generate <strong>rental income</strong>, and avoid expensive surprises after closing.</p>
             <div className="tf-hero-ctas">
-              <a href="tel:646-970-1078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule A Consultation</a>
             </div>
             <div className="tf-serve">
@@ -161,31 +162,37 @@ export default function ThreeFamilyContent() {
             <p><strong>Upper Manhattan</strong> - Legal three-family houses are rare in central Manhattan. In Harlem and Washington Heights, you&apos;ll find pre-war buildings that may be configured as three-unit properties, but many are technically apartment buildings rather than standalone houses. Always verify the CO and zoning classification.</p>
             <p>One question I always encourage buyers to ask about any neighborhood: <em>Is the rental demand here based on fundamentals-jobs, transit, schools-or on speculation?</em> Properties in areas with strong employment access and good transportation tend to yield both stable occupancy and long-term appreciation.</p>
             <h2>Frequently Asked Questions</h2>
-            <h3>What financing options are available for 3-family houses?</h3>
-            <p>Owner-occupied buyers can often secure conventional or FHA financing with down payments of 15–20%. FHA loans permit up to four units for residential use, making three-family houses eligible. Investment-only purchases typically require 25–30% down, and lenders focus heavily on the property&apos;s DSCR-usually requiring at least 1.15, meaning the net operating income must cover debt payments with a 15% margin.</p>
-            <p>NYC also offers specialized programs. <a href="https://home4.nyc.gov/assets/hpd/downloads/pdfs/services/multifamily-housing-rehabilitation-loan-program-hrp-term-sheet.pdf" className="tf-guide-link">HPD&apos;s Multifamily Housing Rehabilitation Loan Program (HRP)</a> provides below-market loans and tax exemptions for existing multifamily rental buildings of three or more units, with loan terms up to 30 years and up to $50,000 per unit for rehabilitation. <a href="https://www.nyserda.ny.gov/All-Programs/Multifamily-Financing-Programs" className="tf-guide-link">NYSERDA&apos;s clean energy financing programs</a> can help subsidize energy retrofits, reducing long-term operating costs.</p>
-            <p>For buyers needing fast acquisition or renovation capital, <a href="https://hardmoneylendersofnewyork.com/property-types/multifamily-homes/" className="tf-guide-link">hard money and bridge loans</a> are available but carry significantly higher interest rates and shorter repayment terms. I generally recommend these only as a last resort or for experienced investors with a clear exit strategy.</p>
-            <div className="tf-fig"><img src="/redesign-assets/services/three-family-article-3.png" alt="Rent evaluation analysis" loading="lazy" /></div>
-            <h3>How do I evaluate the rental income potential?</h3>
-            <p>Start with actual market rents for comparable units in the same neighborhood-not what the seller says the units <em>could</em> rent for. Look at unit size, bedroom count, condition, and amenities. Then apply a realistic vacancy allowance (5–8% in most NYC neighborhoods) and a collection loss factor.</p>
-            <p>For rent-stabilized units, your income growth is capped by the Rent Guidelines Board&apos;s annual decisions. With a rent freeze approved for leases renewing between October 1, 2026 and September 30, 2027, projecting income growth on stabilized units requires particular caution.</p>
-            <p>Calculate your <strong>Net Operating Income (NOI)</strong> by subtracting all operating expenses from your effective gross income. Lenders and experienced investors use this number-not gross rent-to evaluate whether a property makes financial sense.</p>
-            <h3>What are the common maintenance and operating costs?</h3>
-            <p>For a three-family house in NYC, expect operating expenses to consume 30–50% of gross rental income. This includes:</p>
-            <ul className="tf-list">
-              <li><span className="tf-dot" /><strong>Property taxes</strong> - based on assessed value; can increase substantially after a sale</li>
-              <li><span className="tf-dot" /><strong>Insurance</strong> - premiums for small multifamily dwellings are higher than single-family, especially in older buildings or those with claims history</li>
-              <li><span className="tf-dot" /><strong>Heating and hot water</strong> - boiler maintenance, fuel costs, and eventual replacement (a new boiler can cost $15,000–$30,000+)</li>
-              <li><span className="tf-dot" /><strong>Plumbing and electrical</strong> - aging systems in pre-war buildings require ongoing attention</li>
-              <li><span className="tf-dot" /><strong>Facade and roof</strong> - Local Law 11 compliance for exterior walls, plus roofing replacement every 20–25 years</li>
-              <li><span className="tf-dot" /><strong>Common area maintenance</strong> - hallway lighting, stairwell upkeep, shared entryway repairs</li>
-              <li><span className="tf-dot" /><strong>Management</strong> - whether self-managed or professional (typically 8–10% of gross rent for professional management)</li>
-            </ul>
-            <p>Many buyers underestimate the impact of deferred maintenance. A building that looks good on the surface may be one winter away from a $40,000 boiler replacement or a $60,000 roof job.</p>
-            <h3>How do I handle existing tenants during purchase?</h3>
-            <p>In New York City, tenants have significant protections during property sales. Existing leases transfer to the new owner-you cannot terminate a lease simply because you purchased the building. Security deposits must be properly transferred and accounted for.</p>
-            <p>For rent-stabilized tenants, your obligations are even more defined. These tenants have the right to lease renewals, and you&apos;re subject to the same rent increase limits as the previous owner. The HSTPA eliminated vacancy bonuses and tightened deregulation rules, so don&apos;t assume you can raise rents to market rate when a stabilized tenant eventually moves out.</p>
-            <p>My recommendation: request copies of all leases, rent rolls, and tenant correspondence during due diligence-before you&apos;re under contract. Understanding who lives in the building, what they&apos;re paying, and what their rights are is not optional information. It&apos;s foundational to every financial projection you&apos;ll make.</p>
+            <FaqAccordion>
+              <FaqItem question={<>What financing options are available for 3-family houses?</>}>
+              <p>Owner-occupied buyers can often secure conventional or FHA financing with down payments of 15–20%. FHA loans permit up to four units for residential use, making three-family houses eligible. Investment-only purchases typically require 25–30% down, and lenders focus heavily on the property&apos;s DSCR-usually requiring at least 1.15, meaning the net operating income must cover debt payments with a 15% margin.</p>
+              <p>NYC also offers specialized programs. <a href="https://home4.nyc.gov/assets/hpd/downloads/pdfs/services/multifamily-housing-rehabilitation-loan-program-hrp-term-sheet.pdf" className="tf-guide-link">HPD&apos;s Multifamily Housing Rehabilitation Loan Program (HRP)</a> provides below-market loans and tax exemptions for existing multifamily rental buildings of three or more units, with loan terms up to 30 years and up to $50,000 per unit for rehabilitation. <a href="https://www.nyserda.ny.gov/All-Programs/Multifamily-Financing-Programs" className="tf-guide-link">NYSERDA&apos;s clean energy financing programs</a> can help subsidize energy retrofits, reducing long-term operating costs.</p>
+              <p>For buyers needing fast acquisition or renovation capital, <a href="https://hardmoneylendersofnewyork.com/property-types/multifamily-homes/" className="tf-guide-link">hard money and bridge loans</a> are available but carry significantly higher interest rates and shorter repayment terms. I generally recommend these only as a last resort or for experienced investors with a clear exit strategy.</p>
+              <div className="tf-fig"><img src="/redesign-assets/services/three-family-article-3.png" alt="Rent evaluation analysis" loading="lazy" /></div>
+              </FaqItem>
+              <FaqItem question={<>How do I evaluate the rental income potential?</>}>
+              <p>Start with actual market rents for comparable units in the same neighborhood-not what the seller says the units <em>could</em> rent for. Look at unit size, bedroom count, condition, and amenities. Then apply a realistic vacancy allowance (5–8% in most NYC neighborhoods) and a collection loss factor.</p>
+              <p>For rent-stabilized units, your income growth is capped by the Rent Guidelines Board&apos;s annual decisions. With a rent freeze approved for leases renewing between October 1, 2026 and September 30, 2027, projecting income growth on stabilized units requires particular caution.</p>
+              <p>Calculate your <strong>Net Operating Income (NOI)</strong> by subtracting all operating expenses from your effective gross income. Lenders and experienced investors use this number-not gross rent-to evaluate whether a property makes financial sense.</p>
+              </FaqItem>
+              <FaqItem question={<>What are the common maintenance and operating costs?</>}>
+              <p>For a three-family house in NYC, expect operating expenses to consume 30–50% of gross rental income. This includes:</p>
+              <ul className="tf-list">
+                <li><span className="tf-dot" /><strong>Property taxes</strong> - based on assessed value; can increase substantially after a sale</li>
+                <li><span className="tf-dot" /><strong>Insurance</strong> - premiums for small multifamily dwellings are higher than single-family, especially in older buildings or those with claims history</li>
+                <li><span className="tf-dot" /><strong>Heating and hot water</strong> - boiler maintenance, fuel costs, and eventual replacement (a new boiler can cost $15,000–$30,000+)</li>
+                <li><span className="tf-dot" /><strong>Plumbing and electrical</strong> - aging systems in pre-war buildings require ongoing attention</li>
+                <li><span className="tf-dot" /><strong>Facade and roof</strong> - Local Law 11 compliance for exterior walls, plus roofing replacement every 20–25 years</li>
+                <li><span className="tf-dot" /><strong>Common area maintenance</strong> - hallway lighting, stairwell upkeep, shared entryway repairs</li>
+                <li><span className="tf-dot" /><strong>Management</strong> - whether self-managed or professional (typically 8–10% of gross rent for professional management)</li>
+              </ul>
+              <p>Many buyers underestimate the impact of deferred maintenance. A building that looks good on the surface may be one winter away from a $40,000 boiler replacement or a $60,000 roof job.</p>
+              </FaqItem>
+              <FaqItem question={<>How do I handle existing tenants during purchase?</>}>
+              <p>In New York City, tenants have significant protections during property sales. Existing leases transfer to the new owner-you cannot terminate a lease simply because you purchased the building. Security deposits must be properly transferred and accounted for.</p>
+              <p>For rent-stabilized tenants, your obligations are even more defined. These tenants have the right to lease renewals, and you&apos;re subject to the same rent increase limits as the previous owner. The HSTPA eliminated vacancy bonuses and tightened deregulation rules, so don&apos;t assume you can raise rents to market rate when a stabilized tenant eventually moves out.</p>
+              <p>My recommendation: request copies of all leases, rent rolls, and tenant correspondence during due diligence-before you&apos;re under contract. Understanding who lives in the building, what they&apos;re paying, and what their rights are is not optional information. It&apos;s foundational to every financial projection you&apos;ll make.</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Start Your 3-Family House Search with Stanley Montfort</h2>
             <p>Finding the right three-family house in New York City takes more than browsing listings on a website. It takes someone who knows how to evaluate the legal status, financial performance, physical condition, and tenant situation of every property you consider-and who will tell you honestly when a deal doesn&apos;t make sense.</p>
             <p>If you&apos;re ready to begin a serious search for a three-family house in NYC, I&apos;d welcome the opportunity to help you navigate this process with confidence. Every engagement starts with a detailed consultation to understand your goals, your financing position, and the neighborhoods and property types that match your criteria.</p>
@@ -193,7 +200,7 @@ export default function ThreeFamilyContent() {
               <div className="tf-cta-title">Start Your 3-Family House Search with Stanley Montfort</div>
               <p>Phone: 1-646-970-1078&nbsp;&nbsp; Email: sm@montfortre.com&nbsp;&nbsp; Address: 8 West 126th Street, New York NY 10027</p>
               <div className="tf-cta-actions">
-                <a href="tel:646-970-1078" className="tf-cta-tel">Call For Information</a>
+                <a href="tel:+16469701078" className="tf-cta-tel">Call For Information</a>
                 <a href="https://calendly.com/montfort" className="tf-cta-book">Schedule A Consultation</a>
               </div>
             </div>

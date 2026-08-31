@@ -6,6 +6,7 @@ import HarlemPoiMap from "./HarlemPoiMap";
 import HarlemRealtorArticle from "./HarlemRealtorArticle";
 import { HARLEM_ABOUT_PARAS } from "../../data/harlemGuide";
 import "../../styles/harlem-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
 
 const PROPERTY_TYPES = [
   {
@@ -125,6 +126,8 @@ export default function HarlemContent() {
 
   return (
     <>
+      <NeighborhoodHubHero name="Harlem" image="harlem.webp" lead="Brownstones, townhouses, condos and co-ops across Harlem, with block-by-block guidance from first showing to closing day." />
+
       <HarlemPoiMap />
       <HarlemAreaNav />
 

@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -42,7 +44,7 @@ export default function NycCondoFreeHomeValuationContent() {
               value and maximize your potential return when it&apos;s time to sell
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
+              <a href="tel:+16469701078" className="tf-hero-tel">Call 1-(646)-970-1078</a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">Schedule a consultation</a>
             </div>
           </div>
@@ -50,6 +52,7 @@ export default function NycCondoFreeHomeValuationContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/nyc-condo-free-home-valuation.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -192,30 +195,35 @@ export default function NycCondoFreeHomeValuationContent() {
             <p>Each neighborhood has its own local market trends, buyer demographics, and building dynamics. Whether you&apos;re in a prewar doorman building on the Upper West Side or a new development in Long Island City, I bring neighborhood-specific expertise to every valuation performed.</p>
 
             <h2>Frequently Asked Questions</h2>
-            <h3>How accurate are your condo valuations compared to online estimates?</h3>
-            <p>Online home valuation tools are a good starting point, but they typically rely on public records and algorithmic models that can miss critical factors. Online estimators can vary by 5–10% from actual market value. My valuations incorporate in-person inspection, building financial analysis, amenity evaluation, and real-time comparable sales-producing the most precise valuation possible. Appraisers consider recent sales of comparable homes, and so do I, but I also factor in the subjective market perception that drives what buyers actually offer: views, light, condition, building reputation, and current buyer sentiment.</p>
-            <h3>How long does a free condo valuation take to complete?</h3>
-            <p>From initial contact to completed detailed report, most valuations are delivered within 24 hours. The process includes a phone consultation (15–20 minutes), an in-person property visit (30–45 minutes), and my research and analysis. Factors that may extend the timeline include difficulty accessing comparable sales data for unusual buildings or units, or scheduling the property visit around your availability.</p>
-            <h3>What information do you need for an accurate valuation?</h3>
-            <p>To provide the most accurate assessment, I&apos;ll need:</p>
-            <ul className="tf-list">
-              <li><span className="tf-dot" />Building name and property address</li>
-              <li><span className="tf-dot" />Unit floor, number of rooms, and approximate square footage</li>
-              <li><span className="tf-dot" />Monthly common charges and property taxes</li>
-              <li><span className="tf-dot" />Any tax abatements (421a, J-51, or other)</li>
-              <li><span className="tf-dot" />Recent renovations or home improvements completed</li>
-              <li><span className="tf-dot" />Special features: balcony, terrace, storage, parking, in-unit laundry</li>
-              <li><span className="tf-dot" />Your goals and timeline (selling, refinancing, or informational)</li>
-            </ul>
-            <p>Additional documentation-such as your building&apos;s most recent financial statement, offering plan amendment, or board minutes noting capital projects-improves accuracy further. The more I know about your building&apos;s financial health and your unit&apos;s condition, the more confident we can both be in the final number.</p>
-            <h3>Do you charge for condo valuations even if I don&apos;t list with you?</h3>
-            <p>No. My condo valuations are completely free with no obligation. I view every valuation as an educational consultation-you&apos;ll walk away understanding your home&apos;s value, what drives it, and what you could do to improve it, regardless of whether you decide to sell or which local real estate agent you ultimately work with. Message and data rates may apply for text communication, but the valuation itself costs nothing. Whether you&apos;re looking to search luxury presence home options, explore how much equity you&apos;ve built, or assess whether refinancing makes sense given your lender&apos;s ability to appraise your unit, this consultation gives you the foundation you need.</p>
-
+            <FaqAccordion>
+              <FaqItem question={<>How accurate are your condo valuations compared to online estimates?</>}>
+              <p>Online home valuation tools are a good starting point, but they typically rely on public records and algorithmic models that can miss critical factors. Online estimators can vary by 5–10% from actual market value. My valuations incorporate in-person inspection, building financial analysis, amenity evaluation, and real-time comparable sales-producing the most precise valuation possible. Appraisers consider recent sales of comparable homes, and so do I, but I also factor in the subjective market perception that drives what buyers actually offer: views, light, condition, building reputation, and current buyer sentiment.</p>
+              </FaqItem>
+              <FaqItem question={<>How long does a free condo valuation take to complete?</>}>
+              <p>From initial contact to completed detailed report, most valuations are delivered within 24 hours. The process includes a phone consultation (15–20 minutes), an in-person property visit (30–45 minutes), and my research and analysis. Factors that may extend the timeline include difficulty accessing comparable sales data for unusual buildings or units, or scheduling the property visit around your availability.</p>
+              </FaqItem>
+              <FaqItem question={<>What information do you need for an accurate valuation?</>}>
+              <p>To provide the most accurate assessment, I&apos;ll need:</p>
+              <ul className="tf-list">
+                <li><span className="tf-dot" />Building name and property address</li>
+                <li><span className="tf-dot" />Unit floor, number of rooms, and approximate square footage</li>
+                <li><span className="tf-dot" />Monthly common charges and property taxes</li>
+                <li><span className="tf-dot" />Any tax abatements (421a, J-51, or other)</li>
+                <li><span className="tf-dot" />Recent renovations or home improvements completed</li>
+                <li><span className="tf-dot" />Special features: balcony, terrace, storage, parking, in-unit laundry</li>
+                <li><span className="tf-dot" />Your goals and timeline (selling, refinancing, or informational)</li>
+              </ul>
+              <p>Additional documentation-such as your building&apos;s most recent financial statement, offering plan amendment, or board minutes noting capital projects-improves accuracy further. The more I know about your building&apos;s financial health and your unit&apos;s condition, the more confident we can both be in the final number.</p>
+              </FaqItem>
+              <FaqItem question={<>Do you charge for condo valuations even if I don&apos;t list with you?</>}>
+              <p>No. My condo valuations are completely free with no obligation. I view every valuation as an educational consultation-you&apos;ll walk away understanding your home&apos;s value, what drives it, and what you could do to improve it, regardless of whether you decide to sell or which local real estate agent you ultimately work with. Message and data rates may apply for text communication, but the valuation itself costs nothing. Whether you&apos;re looking to search luxury presence home options, explore how much equity you&apos;ve built, or assess whether refinancing makes sense given your lender&apos;s ability to appraise your unit, this consultation gives you the foundation you need.</p>
+              </FaqItem>
+            </FaqAccordion>
             <h2>Get Your Free NYC Condo Valuation Today</h2>
             <p>If you&apos;re considering selling, curious about your condo&apos;s current market value, or exploring whether you have enough equity for a home equity line or refinancing, I&apos;d welcome the opportunity to provide a thorough, no-obligation valuation. As a top local agent specializing in NYC condos, I bring the building-level expertise and real estate transactions experience that no automated tool or free valuation instant result can match.</p>
             <p>Every condo deserves to be evaluated individually-based on its location, building characteristics, condition, market demand, and consideration recent sales in the immediate area. That&apos;s exactly what I deliver.</p>
             <p>Stanley Montfort · Phone: [phone number] · Email: [email address] · Serving Manhattan, Brooklyn, Queens &amp; The Bronx</p>
-            <p className="tf-guide-center"><strong>Phone:</strong> <a href="tel:+1-646-970-1078" className="tf-guide-link">1-646-970-1078</a>{"  "}<strong>Email:</strong> <a href="mailto:sm@montfortre.com" className="tf-guide-link">[email protected]</a>{"  "}<strong>Address:</strong> 8 West 126th Street, New York NY 10027</p>
+            <p className="tf-guide-center"><strong>Phone:</strong> <a href="tel:+16469701078" className="tf-guide-link">1-646-970-1078</a>{"  "}<strong>Email:</strong> <a href="mailto:sm@montfortre.com" className="tf-guide-link">[email protected]</a>{"  "}<strong>Address:</strong> 8 West 126th Street, New York NY 10027</p>
           </div>
         </div>
       </section>

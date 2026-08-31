@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +46,7 @@ export default function SellingCoOpsInNycContent() {
               unnecessary delays, board-related issues, and costly mistakes.
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -56,6 +58,7 @@ export default function SellingCoOpsInNycContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/selling-co-ops-in-nyc.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -393,59 +396,66 @@ export default function SellingCoOpsInNycContent() {
               />
             </div>
             <h2>Frequently Asked Questions</h2>
-            <h3>How long does it typically take to sell a co-op in NYC?</h3>
-            <p>
-              Co-op sales typically take longer than condo sales due to the board approval process. From listing to
-              closing, a typical timeline ranges from three to six months, depending on market conditions, pricing
-              accuracy, buyer pool, and how quickly the board acts. Note that under the New York City Council&apos;s Local
-              Law 58 of 2026, effective July 28, 2026, co-op boards must acknowledge receipt of a complete application
-              within 15 days and issue a decision within 45 days. Co-op boards can delay sales by slow responses to
-              applications, but this new law establishes enforceable timelines for the first time.
-            </p>
-            <h3>What documents do I need to prepare before listing my co-op?</h3>
-            <p>Before listing, I recommend assembling the following:</p>
-            <ul>
-              <li>Building financial statements (most recent fiscal year)</li>
-              <li>Proprietary lease and house rules</li>
-              <li>Board application requirements and forms</li>
-              <li>Recent maintenance fee and assessment history</li>
-              <li>Floor plans and any alteration agreement records</li>
-              <li>Flip tax documentation from governing documents</li>
-              <li>Any special assessment notices or capital improvement plans</li>
-            </ul>
-            <p>
-              Having these resources prepared before the first open house signals professionalism and avoids delays once
-              a buyer signs a contract.
-            </p>
-            <h3>How do co-op boards evaluate potential buyers?</h3>
-            <p>
-              Co-op boards can require specific buyer qualifications and have significant authority over unit
-              renovations, subletting, and ownership transfers. Financial evaluation typically includes review of tax
-              returns (2–3 years), bank and brokerage statements, employment verification, and reference letters. Board
-              members look at debt-to-income ratios, down payment amount, and post-closing liquidity. The board interview
-              is usually the final step - and while co-op boards can reject buyers for various reasons without
-              explanation, a well-prepared buyer with strong financials rarely encounters problems.
-            </p>
-            <h3>Should I make renovations before selling my co-op?</h3>
-            <p>
-              This depends on your apartment&apos;s current condition, your building&apos;s style, and what buyers in your
-              market expect. In my experience, cosmetic improvements - fresh paint, clean fixtures, updated lighting,
-              decluttered rooms - deliver the best return. Over-renovating is a real risk if your building has a
-              traditional aesthetic or if comparable units are selling at a price point that doesn&apos;t justify a major
-              kitchen or bathroom investment. One of the first things I review with clients is which improvements will
-              move the needle on offers versus which will just cost money.
-            </p>
-            <h3>How do I price my co-op competitively while meeting board expectations?</h3>
-            <p>
-              Pricing a co-op requires more nuance than pricing a condo or house. Co-op boards influence the selling price
-              of units because they control who can buy, what financial standards apply, and how quickly the sale can
-              close. I determine the right asking price by analyzing recent closed sales in your building and comparable
-              buildings, adjusting for maintenance fees, floor level, exposure, view, and building amenities. Assuming
-              you can price based solely on per-square-foot comparables without accounting for maintenance costs, board
-              strictness, and building financial health is one of the most common mistakes sellers make. The goal is a
-              price that attracts multiple interested, qualified buyers - not one that sits on the market and forces price
-              cuts.
-            </p>
+            <FaqAccordion>
+              <FaqItem question={<>How long does it typically take to sell a co-op in NYC?</>}>
+              <p>
+                Co-op sales typically take longer than condo sales due to the board approval process. From listing to
+                closing, a typical timeline ranges from three to six months, depending on market conditions, pricing
+                accuracy, buyer pool, and how quickly the board acts. Note that under the New York City Council&apos;s Local
+                Law 58 of 2026, effective July 28, 2026, co-op boards must acknowledge receipt of a complete application
+                within 15 days and issue a decision within 45 days. Co-op boards can delay sales by slow responses to
+                applications, but this new law establishes enforceable timelines for the first time.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What documents do I need to prepare before listing my co-op?</>}>
+              <p>Before listing, I recommend assembling the following:</p>
+              <ul>
+                <li>Building financial statements (most recent fiscal year)</li>
+                <li>Proprietary lease and house rules</li>
+                <li>Board application requirements and forms</li>
+                <li>Recent maintenance fee and assessment history</li>
+                <li>Floor plans and any alteration agreement records</li>
+                <li>Flip tax documentation from governing documents</li>
+                <li>Any special assessment notices or capital improvement plans</li>
+              </ul>
+              <p>
+                Having these resources prepared before the first open house signals professionalism and avoids delays once
+                a buyer signs a contract.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How do co-op boards evaluate potential buyers?</>}>
+              <p>
+                Co-op boards can require specific buyer qualifications and have significant authority over unit
+                renovations, subletting, and ownership transfers. Financial evaluation typically includes review of tax
+                returns (2–3 years), bank and brokerage statements, employment verification, and reference letters. Board
+                members look at debt-to-income ratios, down payment amount, and post-closing liquidity. The board interview
+                is usually the final step - and while co-op boards can reject buyers for various reasons without
+                explanation, a well-prepared buyer with strong financials rarely encounters problems.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Should I make renovations before selling my co-op?</>}>
+              <p>
+                This depends on your apartment&apos;s current condition, your building&apos;s style, and what buyers in your
+                market expect. In my experience, cosmetic improvements - fresh paint, clean fixtures, updated lighting,
+                decluttered rooms - deliver the best return. Over-renovating is a real risk if your building has a
+                traditional aesthetic or if comparable units are selling at a price point that doesn&apos;t justify a major
+                kitchen or bathroom investment. One of the first things I review with clients is which improvements will
+                move the needle on offers versus which will just cost money.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How do I price my co-op competitively while meeting board expectations?</>}>
+              <p>
+                Pricing a co-op requires more nuance than pricing a condo or house. Co-op boards influence the selling price
+                of units because they control who can buy, what financial standards apply, and how quickly the sale can
+                close. I determine the right asking price by analyzing recent closed sales in your building and comparable
+                buildings, adjusting for maintenance fees, floor level, exposure, view, and building amenities. Assuming
+                you can price based solely on per-square-foot comparables without accounting for maintenance costs, board
+                strictness, and building financial health is one of the most common mistakes sellers make. The goal is a
+                price that attracts multiple interested, qualified buyers - not one that sits on the market and forces price
+                cuts.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <hr />
             <h2>Get Started with Your Co-op Sale Today</h2>
             <h3>Schedule Your Consultation with Stanley Montfort</h3>
@@ -466,7 +476,7 @@ export default function SellingCoOpsInNycContent() {
             </p>
             <p className="tf-guide-center">
               <strong>Phone:</strong>{" "}
-              <a href="tel:+1-646-970-1078" className="tf-guide-link">
+              <a href="tel:+16469701078" className="tf-guide-link">
                 1-646-970-1078
               </a>
               {"  "}

@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ResourcesSection from "../shared/ResourcesSection";
 import PromisesBar from "../shared/PromisesBar";
 import ReviewsSection from "../shared/ReviewsSection";
 import useReputationAggregate from "../../hooks/useReputationAggregate";
+import { ALL_LISTINGS, type ListingDetail } from "../../data/listings";
+import { fetchPublishedListings } from "../../lib/cms/listings";
 import "../../styles/home-hero.css";
 import "../../styles/home-hidden-cost.css";
 import "../../styles/home-founder.css";
@@ -203,14 +205,60 @@ const SOCIABLEKIT_IG_EMBED_ID = "25707376";
 const SOCIABLEKIT_IG_SCRIPT = "https://widgets.sociablekit.com/instagram-feed/widget.js";
 const SOCIABLEKIT_IG_SCRIPT_ID = "sociablekit-instagram-feed";
 
-function ensureSociableKitIgScript() {
-  const existing = document.getElementById(SOCIABLEKIT_IG_SCRIPT_ID);
-  if (existing) existing.remove();
+function skIgHost(feedRoot: Element): HTMLElement | null {
+  return feedRoot.querySelector<HTMLElement>(".sk-instagram-feed");
+}
+
+function skIgHasPosts(host: Element): boolean {
+  return !!host.querySelector(".sk-instagram-feed-item, .sk-ig-all-posts");
+}
+
+function skIgIsLoading(host: Element): boolean {
+  return !!host.querySelector(".first_loading_animation, .loading-img");
+}
+
+/** Ensure embed host exists and SociableKIT widget.js actually executes. */
+function mountSociableKitIgFeed(feedRoot: Element, opts?: { force?: boolean }) {
+  let host = skIgHost(feedRoot);
+  if (!host) {
+    host = document.createElement("div");
+    host.className = "sk-instagram-feed";
+    host.setAttribute("data-embed-id", SOCIABLEKIT_IG_EMBED_ID);
+    feedRoot.appendChild(host);
+  }
+
+  // Already hydrated — leave alone.
+  if (!opts?.force && (skIgHasPosts(host) || host.getAttribute("data-sk-initialized") === "1")) {
+    return;
+  }
+
+  // Still fetching from SociableKIT — do NOT wipe (that caused live feed to stick on the spinner).
+  if (!opts?.force && skIgIsLoading(host)) {
+    return;
+  }
+
+  // Reset failed/partial init without replacing the React-managed node.
+  host.removeAttribute("data-sk-initialized");
+  host.removeAttribute("style");
+  host.innerHTML = "";
+
+  // Same-URL re-insert does not re-execute in browsers — cache-bust and replace.
+  document.getElementById(SOCIABLEKIT_IG_SCRIPT_ID)?.remove();
   const script = document.createElement("script");
   script.id = SOCIABLEKIT_IG_SCRIPT_ID;
-  script.src = SOCIABLEKIT_IG_SCRIPT;
-  script.defer = true;
+  script.src = `${SOCIABLEKIT_IG_SCRIPT}?t=${Date.now()}`;
+  script.async = true;
   document.body.appendChild(script);
+}
+
+/** Page the Instagram row by roughly one viewport of posts. */
+function scrollIgFeed(direction: 1 | -1) {
+  const row = document.querySelector<HTMLElement>(".home-ig-feed .sk-ig-all-posts");
+  if (!row) return;
+  const item = row.querySelector<HTMLElement>(".sk-instagram-feed-item");
+  // Fall back to most of the visible width when no post has rendered yet.
+  const step = item ? item.getBoundingClientRect().width + 12 : row.clientWidth * 0.8;
+  row.scrollBy({ left: step * direction * 2, behavior: "smooth" });
 }
 
 /** Strip SociableKIT fixed pixel sizes so CSS can size portrait + landscape evenly. */
@@ -219,7 +267,8 @@ function normalizeSociableKitIgSizing(root: ParentNode = document) {
     img.style.width = "100%";
     img.style.height = "100%";
     img.style.maxHeight = "100%";
-    img.style.objectFit = "contain";
+    img.style.objectFit = "cover";
+    img.style.objectPosition = "top center";
   });
   root.querySelectorAll<HTMLElement>(".home-ig-feed .sk-ig-post-hover").forEach((hover) => {
     hover.style.width = "100%";
@@ -256,148 +305,19 @@ const INCLUDED = [
   },
 ] as const;
 
-const LISTINGS = [
-  {
-    href: "/523-west-121st-street-2/",
-    image: "/redesign-assets/listings/1a-living-room.jpg",
-    alt: "523 West 121st Street #2",
-    w: 700,
-    h: 467,
-    price: "$799,000",
-    title: "523 West 121st Street #2",
-    meta: "2 beds · 1 bath",
-  },
-  {
-    href: "/26-west-95th-street/",
-    image: "/redesign-assets/listings/26-west-95th.png",
-    alt: "26 West 95th Street",
-    w: 700,
-    h: 465,
-    price: "$11,995,000",
-    title: "26 West 95th Street",
-    meta: "1893 · 6,700 sqft · 5 stories",
-  },
-  {
-    href: "/124-west-131st-street-2/",
-    image: "/redesign-assets/listings/listing-1-6.png",
-    alt: "124 West 131st Street",
-    w: 700,
-    h: 472,
-    price: "$3,495,000",
-    title: "124 West 131st Street",
-    meta: "5 beds · 4.5 baths · 4,688 sqft",
-  },
-  {
-    href: "/14-west-121st-street/",
-    image: "/redesign-assets/listings/14-west-121st.jpg",
-    alt: "14 West 121st Street",
-    w: 373,
-    h: 560,
-    price: "$2,999,999",
-    title: "14 West 121st Street",
-    meta: "6 beds · 4.5 baths · 5,320 sqft",
-  },
-  {
-    href: "/475-west-144th-street/",
-    image: "/redesign-assets/listings/475-west-144th.png",
-    alt: "475 West 144th Street",
-    w: 700,
-    h: 464,
-    price: "$2,249,999",
-    title: "475 West 144th Street",
-    meta: "1901 · 4,608 sqft · 4 stories",
-  },
-  {
-    href: "/313-west-143rd-street-2a/",
-    image: "/redesign-assets/listings/313-west-143rd-2a.jpg",
-    alt: "313 West 143rd Street #2A",
-    w: 700,
-    h: 467,
-    price: "$1,250,000",
-    title: "313 West 143rd Street #2A",
-    meta: "3 beds · 2 baths · 1,650 sqft",
-  },
-  {
-    href: "/542-cathedral-parkway/",
-    image: "/redesign-assets/listings/542-cathedral-parkway.jpg",
-    alt: "542 Cathedral Parkway",
-    w: 700,
-    h: 467,
-    price: "$4,950,000",
-    title: "542 Cathedral Parkway",
-    meta: "1985 · 4,100 sqft · 4 stories",
-  },
-  {
-    href: "/544-west-148th-street/",
-    image: "/redesign-assets/listings/544-west-148th.jpg",
-    alt: "544 West 148th Street",
-    w: 700,
-    h: 467,
-    price: "$2,699,000",
-    title: "544 West 148th Street",
-    meta: "1910 · 3,536 sqft · 4 stories",
-  },
-  {
-    href: "/76-west-105th-street-thn/",
-    image: "/redesign-assets/listings/listing-1.png",
-    alt: "76 West 105th Street #THN",
-    w: 700,
-    h: 467,
-    price: "$4,750,000",
-    title: "76 West 105th Street #THN",
-    meta: "3 beds · 3+ baths · 4,232 sqft",
-  },
-  {
-    href: "/76-west-105th-street-ph/",
-    image: "/redesign-assets/listings/listing-1-2.jpg",
-    alt: "76 West 105th Street #PH",
-    w: 700,
-    h: 467,
-    price: "$4,450,000",
-    title: "76 West 105th Street #PH",
-    meta: "4 beds · 4 baths · 3,675 sqft",
-  },
-  {
-    href: "/2040-madison-avenue-4/",
-    image: "/redesign-assets/listings/2040-madison.jpg",
-    alt: "2040 Madison Avenue",
-    w: 700,
-    h: 467,
-    price: "$2,250,000",
-    title: "2040 Madison Avenue",
-    meta: "1899 · 3,240 sqft · 4 stories",
-  },
-  {
-    href: "/420-west-144th-street/",
-    image: "/redesign-assets/listings/420-west-144th.jpg",
-    alt: "420 West 144th Street",
-    w: 700,
-    h: 467,
-    price: "$3,199,000",
-    title: "420 West 144th Street",
-    meta: "1920 · 3,615 sqft · 4 stories",
-  },
-  {
-    href: "/481-west-145th-street/",
-    image: "/redesign-assets/listings/1481-west-145th.jpg",
-    alt: "481 West 145th Street",
-    w: 700,
-    h: 467,
-    price: "$2,550,000",
-    title: "481 West 145th Street",
-    meta: "1926 · 3,666 sqft · 4 stories",
-  },
-  {
-    href: "/108-west-114th-street-4b/",
-    image: "/redesign-assets/listings/108-west-114th-4b.png",
-    alt: "108 West 114th Street #4B",
-    w: 700,
-    h: 467,
-    price: "$350,000",
-    title: "108 West 114th Street #4B",
-    meta: "1 bed · 1 bath",
-  },
-] as const;
+function listingCardMeta(listing: ListingDetail): string {
+  if (listing.beds) {
+    const parts = [`${listing.beds} beds`];
+    if (listing.baths) parts.push(`${listing.baths} baths`);
+    if (listing.sqft) parts.push(`${listing.sqft} sqft`);
+    return parts.join(" · ");
+  }
+  const parts: string[] = [];
+  if (listing.year) parts.push(listing.year);
+  if (listing.sqft) parts.push(`${listing.sqft} sqft`);
+  if (listing.stories) parts.push(`${listing.stories} stories`);
+  return parts.join(" · ");
+}
 
 const LISTINGS_PREV_CLICK =
   "var t=document.getElementById('listings-track'); t.scrollBy({left:(-1)*Math.min(t.clientWidth,760), behavior:'smooth'}); return false;";
@@ -406,19 +326,51 @@ const LISTINGS_NEXT_CLICK =
 
 export default function HomeContent() {
   const { ratingLabel, stars, totalReviews } = useReputationAggregate();
+  const [listings, setListings] = useState<ListingDetail[]>(ALL_LISTINGS);
 
   useEffect(() => {
-    ensureSociableKitIgScript();
+    let cancelled = false;
+    (async () => {
+      const rows = await fetchPublishedListings();
+      if (!cancelled) setListings([...rows].sort((a, b) => a.sortOrder - b.sortOrder));
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
+  useEffect(() => {
     const feed = document.querySelector(".home-ig-feed");
     if (!feed) return;
 
+    mountSociableKitIgFeed(feed);
     normalizeSociableKitIgSizing(feed);
 
     const observer = new MutationObserver(() => normalizeSociableKitIgSizing(feed));
     observer.observe(feed, { childList: true, subtree: true, attributes: true, attributeFilter: ["style"] });
 
-    const timers = [500, 1500, 3000].map((ms) => window.setTimeout(() => normalizeSociableKitIgSizing(feed), ms));
+    // SociableKIT can hydrate late on production. Only remount when truly stalled
+    // (no posts AND not showing the loading spinner). Never wipe mid-load.
+    const timers = [2500, 6000, 12000].map((ms, i) =>
+      window.setTimeout(() => {
+        const host = skIgHost(feed);
+        if (!host) {
+          mountSociableKitIgFeed(feed);
+          return;
+        }
+        if (skIgHasPosts(host)) {
+          normalizeSociableKitIgSizing(feed);
+          return;
+        }
+        if (skIgIsLoading(host) && i < 2) {
+          // Still loading — wait for a later retry.
+          return;
+        }
+        // Empty or stuck after long wait — hard remount once.
+        mountSociableKitIgFeed(feed, { force: i === 2 });
+        normalizeSociableKitIgSizing(feed);
+      }, ms),
+    );
 
     return () => {
       observer.disconnect();
@@ -459,7 +411,7 @@ export default function HomeContent() {
                 <a href="https://calendly.com/montfort" className="home-hero-book">
                   Book Now
                 </a>
-                <a href="tel:646-970-1078" className="home-hero-call">
+                <a href="tel:+16469701078" className="home-hero-call">
                   646-970-1078
                 </a>
               </div>
@@ -939,7 +891,7 @@ export default function HomeContent() {
             <h2>Offered Realtor Services</h2>
             <p>
               Whether you are looking for realtors in{" "}
-              <a href="/featured-brownstones-for-sale/manhattan/west-harlem/" className="home-svcs-inline">
+              <a href="/harlem/" className="home-svcs-inline">
                 Harlem
               </a>
               , Upper Westside, or other parts of NYC our dedicated, and highly qualified team of brokers is at your
@@ -985,6 +937,68 @@ export default function HomeContent() {
 
       <section className="home-ig" data-screen-label="Instagram">
         <div className="home-ig-inner">
+          <div data-reveal="" className="home-ig-head">
+            <div className="home-ig-kicker">
+              <span className="home-ig-kicker-line" />
+              <span className="home-ig-kicker-label">On Instagram</span>
+            </div>
+            <div className="home-ig-head-row">
+              <div className="home-ig-identity">
+                <img
+                  className="home-ig-avatar"
+                  src="/redesign-assets/team/stanley-montfort-2026.jpg"
+                  alt="@stanleymontfort"
+                  width={72}
+                  height={72}
+                />
+                <h2>@stanleymontfort</h2>
+              </div>
+              <div className="home-ig-head-actions">
+                <div className="home-ig-arrows">
+                  <button
+                    type="button"
+                    className="home-ig-nav"
+                    aria-label="Previous Instagram posts"
+                    onClick={() => scrollIgFeed(-1)}
+                  >
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path
+                        d="M12.5 4.5L7 10l5.5 5.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    className="home-ig-nav"
+                    aria-label="Next Instagram posts"
+                    onClick={() => scrollIgFeed(1)}
+                  >
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path
+                        d="M7.5 4.5L13 10l-5.5 5.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <a
+                  className="home-ig-follow"
+                  href="https://www.instagram.com/stanleymontfort/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Follow on Instagram →
+                </a>
+              </div>
+            </div>
+          </div>
           <div className="home-ig-feed">
             <div className="sk-instagram-feed" data-embed-id={SOCIABLEKIT_IG_EMBED_ID} />
           </div>
@@ -1053,22 +1067,29 @@ export default function HomeContent() {
           </div>
         </div>
         <div id="listings-track" className="no-sb">
-          {LISTINGS.map((listing) => (
+          {listings.map((listing) => (
             <a
-              key={listing.href}
-              href={listing.href}
-              target="_blank"
-              rel="noopener"
+              key={listing.slug}
+              href={`/${listing.slug}/`}
               className="home-list-card"
             >
               <div className="home-list-media">
-                <img src={listing.image} alt={listing.alt} loading="lazy" width={listing.w} height={listing.h} />
+                <img
+                  src={listing.heroImage}
+                  alt={listing.heroAlt || listing.title}
+                  loading="lazy"
+                  width={700}
+                  height={467}
+                />
                 <span className="home-list-price">{listing.price}</span>
               </div>
               <div className="home-list-body">
                 <h3>{listing.title}</h3>
-                <div className="home-list-city">New York, NY</div>
-                <div className="home-list-meta">{listing.meta}</div>
+                <div className="home-list-city">
+                  {listing.city.trim()}, {listing.state}
+                  {listing.zip ? ` ${listing.zip}` : ""}
+                </div>
+                <div className="home-list-meta">{listingCardMeta(listing)}</div>
               </div>
             </a>
           ))}
@@ -1094,7 +1115,7 @@ export default function HomeContent() {
             </p>
             <p className="home-dl-body">
               Are you in the market for a{" "}
-              <a href="/featured-brownstones-for-sale/harlem-brownstones/" className="home-dl-link">
+              <a href="/harlem-brownstones/" className="home-dl-link">
                 brownstone
               </a>
               ? Taking the time to educate yourself on these 11 costly mistakes can make all the difference between a successful purchase and a disastrous one.

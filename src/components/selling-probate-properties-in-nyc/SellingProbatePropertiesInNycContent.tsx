@@ -3,6 +3,8 @@ import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import "../../styles/two-family-page.css";
 import "../../styles/buying-guides-page.css";
+import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
+import HeroGoogleRating from "../shared/HeroGoogleRating";
 
 
 const NEWS_ARTICLES = [
@@ -44,7 +46,7 @@ export default function SellingProbatePropertiesInNycContent() {
               avoiding costly mistakes while <strong>maximizing the value</strong> of inherited real estate
             </p>
             <div className="tf-hero-ctas">
-              <a href="tel:+1-646-970-1078" className="tf-hero-tel">
+              <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
               <a href="https://calendly.com/montfort" className="tf-hero-book">
@@ -56,6 +58,7 @@ export default function SellingProbatePropertiesInNycContent() {
             <div className="tf-hero-frame">
               <img src="/redesign-assets/services/selling-probate-properties-in-nyc.png" alt="" />
             </div>
+            <HeroGoogleRating prefix="tf" />
           </div>
         </div>
       </section>
@@ -512,116 +515,124 @@ export default function SellingProbatePropertiesInNycContent() {
             </p>
             <hr />
             <h2>Frequently Asked Questions</h2>
-            <h3>When can we legally sell an inherited property in NYC?</h3>
-            <p>
-              A property cannot be sold until probate is completed - specifically, until the executor or administrator
-              has been officially appointed by the court and received letters testamentary or letters of administration.
-              If the deceased person&apos;s will grants the named executor authority to sell real property, listing can
-              begin once letters are issued. If the will doesn&apos;t include sale power, or if there&apos;s no will at
-              all, a separate petition for authority to sell must be filed with the{" "}
-              <a
-                href="https://www.nycbar.org/get-legal-help/article/wills-trusts-and-elder-law/probate-proceeding/"
-                className="tf-guide-link"
-              >
-                surrogate&apos;s court
-              </a>
-              .
-            </p>
-            <p>
-              Many executors assume they can list the property immediately - this is one of the most common mistakes.
-              Listing before obtaining legal authority can void contracts and create serious legal exposure for the
-              estate.
-            </p>
-            <p>
-              The probate process in New York typically takes 9–18 months for estates with real property and no disputes.
-              Simple estates can clear probate in 6–9 months. Complex estates can take three years or more to probate.
-            </p>
-            <h3>Do all heirs need to agree to sell the property?</h3>
-            <p>
-              The executor has a fiduciary duty to act in the best interest of the estate, which sometimes includes
-              selling real property even without unanimous agreement from all heirs. However, beneficiaries typically
-              need to consent via waivers or receive formal citation. If a distributee objects, it can trigger a court
-              hearing and significant delays.
-            </p>
-            <p>
-              Communication with beneficiaries should be transparent to prevent disputes. One of the biggest challenges
-              families face is disagreement among siblings or heirs about whether to sell, when to sell, or at what price.
-              I always encourage open communication early - it&apos;s the best way to avoid costly legal battles.
-            </p>
-            <p>
-              Court approval is needed if beneficiaries object to the sale of a probate property, and heirs have 15 days
-              to object after a legal notice about the sale is sent.
-            </p>
-            <div className="tf-fig">
-              <img
-                src="/redesign-assets/services/selling-probate-article-3.png"
-                alt="Probate property reparation costs"
-                loading="lazy"
-              />
-            </div>
-            <h3>What if the property needs major repairs or is in poor condition?</h3>
-            <p>
-              You have options. Properties in probate are usually sold as-is without repairs, and many estate sales go
-              this route - it&apos;s faster, involves no upfront costs, and attracts investors who handle renovations
-              themselves. The trade-off is that as-is probate properties often sell below full market value.
-            </p>
-            <p>
-              If the property is structurally sound and located in a desirable neighborhood, minor improvements -
-              cleaning, painting, basic repairs - can meaningfully increase the sale price and expand the buyer pool. I
-              walk through each property with the family to give an honest assessment of what improvements are worth
-              making and what&apos;s better left alone.
-            </p>
-            <p>
-              Heirs may disagree on repair expenses, affecting inheritance amounts, so I help facilitate those
-              conversations with clear cost-benefit data.
-            </p>
-            <h3>How long does it typically take to sell a probate property in NYC?</h3>
-            <p>
-              Probate sales can take seven to nine months in New York from start to finish, depending on the complexity
-              of the estate, whether court approval for the sale is required, and property condition. Once the property
-              is listed and a buyer found, closing typically takes 45–60 days for independent administration sales and
-              longer for court-supervised sales (add several weeks for hearing notices and confirmation).
-            </p>
-            <p>
-              The biggest time variables are: how long it takes to receive letters testamentary, whether any heirs contest
-              the will or the sale, title issues or liens that need resolution, and current court backlog in your borough.
-              A lengthy process isn&apos;t inevitable, but families should plan for it.
-            </p>
-            <h3>What are the costs involved in selling inherited property?</h3>
-            <p>
-              Beyond standard real estate commissions (typically 5–6% of sale price), selling probate property involves
-              several additional costs: court filing fees, attorney fees,{" "}
-              <a
-                href="https://legalclarity.org/executor-commissions-in-new-york-statutes-and-calculation-rules/"
-                className="tf-guide-link"
-              >
-                executor commissions per SCPA 2307
-              </a>
-              , appraisal fees, title search and clearance, transfer taxes, and carrying costs (property taxes,
-              insurance, utilities) for the duration of probate.
-            </p>
-            <p>
-              The probate process must settle debts before selling property and distributing assets. For a $1 million
-              estate with no complications, expect executor commissions of approximately $34,000 plus $1,250 in filing
-              fees and several thousand in additional costs.
-            </p>
-            <p>
-              I provide families with a detailed net-proceeds estimate during our initial consultation so everyone
-              understands what to expect.
-            </p>
-            <h3>Can we get an offer before probate is complete?</h3>
-            <p>
-              Yes - and this is something I encourage. While a property cannot be formally sold until the executor has
-              legal authority, we can begin the preliminary market analysis, assess the property, and even attract early
-              interest from buyers. Some buyers will submit offers contingent on the estate obtaining full probate
-              authority (&quot;subject to court approval&quot;), which helps families plan and gives the executor a
-              clearer picture of what the property will sell for.
-            </p>
-            <p>
-              Having a pre-listing consultation and early property evaluation doesn&apos;t commit you to anything - it
-              simply reduces uncertainty and helps you make better-informed decisions as the legal process unfolds. This
-              is an important precautionary step that gives the seller&apos;s family a strategic advantage.
-            </p>
+            <FaqAccordion>
+              <FaqItem question={<>When can we legally sell an inherited property in NYC?</>}>
+              <p>
+                A property cannot be sold until probate is completed - specifically, until the executor or administrator
+                has been officially appointed by the court and received letters testamentary or letters of administration.
+                If the deceased person&apos;s will grants the named executor authority to sell real property, listing can
+                begin once letters are issued. If the will doesn&apos;t include sale power, or if there&apos;s no will at
+                all, a separate petition for authority to sell must be filed with the{" "}
+                <a
+                  href="https://www.nycbar.org/get-legal-help/article/wills-trusts-and-elder-law/probate-proceeding/"
+                  className="tf-guide-link"
+                >
+                  surrogate&apos;s court
+                </a>
+                .
+              </p>
+              <p>
+                Many executors assume they can list the property immediately - this is one of the most common mistakes.
+                Listing before obtaining legal authority can void contracts and create serious legal exposure for the
+                estate.
+              </p>
+              <p>
+                The probate process in New York typically takes 9–18 months for estates with real property and no disputes.
+                Simple estates can clear probate in 6–9 months. Complex estates can take three years or more to probate.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Do all heirs need to agree to sell the property?</>}>
+              <p>
+                The executor has a fiduciary duty to act in the best interest of the estate, which sometimes includes
+                selling real property even without unanimous agreement from all heirs. However, beneficiaries typically
+                need to consent via waivers or receive formal citation. If a distributee objects, it can trigger a court
+                hearing and significant delays.
+              </p>
+              <p>
+                Communication with beneficiaries should be transparent to prevent disputes. One of the biggest challenges
+                families face is disagreement among siblings or heirs about whether to sell, when to sell, or at what price.
+                I always encourage open communication early - it&apos;s the best way to avoid costly legal battles.
+              </p>
+              <p>
+                Court approval is needed if beneficiaries object to the sale of a probate property, and heirs have 15 days
+                to object after a legal notice about the sale is sent.
+              </p>
+              <div className="tf-fig">
+                <img
+                  src="/redesign-assets/services/selling-probate-article-3.png"
+                  alt="Probate property reparation costs"
+                  loading="lazy"
+                />
+              </div>
+              </FaqItem>
+              <FaqItem question={<>What if the property needs major repairs or is in poor condition?</>}>
+              <p>
+                You have options. Properties in probate are usually sold as-is without repairs, and many estate sales go
+                this route - it&apos;s faster, involves no upfront costs, and attracts investors who handle renovations
+                themselves. The trade-off is that as-is probate properties often sell below full market value.
+              </p>
+              <p>
+                If the property is structurally sound and located in a desirable neighborhood, minor improvements -
+                cleaning, painting, basic repairs - can meaningfully increase the sale price and expand the buyer pool. I
+                walk through each property with the family to give an honest assessment of what improvements are worth
+                making and what&apos;s better left alone.
+              </p>
+              <p>
+                Heirs may disagree on repair expenses, affecting inheritance amounts, so I help facilitate those
+                conversations with clear cost-benefit data.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>How long does it typically take to sell a probate property in NYC?</>}>
+              <p>
+                Probate sales can take seven to nine months in New York from start to finish, depending on the complexity
+                of the estate, whether court approval for the sale is required, and property condition. Once the property
+                is listed and a buyer found, closing typically takes 45–60 days for independent administration sales and
+                longer for court-supervised sales (add several weeks for hearing notices and confirmation).
+              </p>
+              <p>
+                The biggest time variables are: how long it takes to receive letters testamentary, whether any heirs contest
+                the will or the sale, title issues or liens that need resolution, and current court backlog in your borough.
+                A lengthy process isn&apos;t inevitable, but families should plan for it.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>What are the costs involved in selling inherited property?</>}>
+              <p>
+                Beyond standard real estate commissions (typically 5–6% of sale price), selling probate property involves
+                several additional costs: court filing fees, attorney fees,{" "}
+                <a
+                  href="https://legalclarity.org/executor-commissions-in-new-york-statutes-and-calculation-rules/"
+                  className="tf-guide-link"
+                >
+                  executor commissions per SCPA 2307
+                </a>
+                , appraisal fees, title search and clearance, transfer taxes, and carrying costs (property taxes,
+                insurance, utilities) for the duration of probate.
+              </p>
+              <p>
+                The probate process must settle debts before selling property and distributing assets. For a $1 million
+                estate with no complications, expect executor commissions of approximately $34,000 plus $1,250 in filing
+                fees and several thousand in additional costs.
+              </p>
+              <p>
+                I provide families with a detailed net-proceeds estimate during our initial consultation so everyone
+                understands what to expect.
+              </p>
+              </FaqItem>
+              <FaqItem question={<>Can we get an offer before probate is complete?</>}>
+              <p>
+                Yes - and this is something I encourage. While a property cannot be formally sold until the executor has
+                legal authority, we can begin the preliminary market analysis, assess the property, and even attract early
+                interest from buyers. Some buyers will submit offers contingent on the estate obtaining full probate
+                authority (&quot;subject to court approval&quot;), which helps families plan and gives the executor a
+                clearer picture of what the property will sell for.
+              </p>
+              <p>
+                Having a pre-listing consultation and early property evaluation doesn&apos;t commit you to anything - it
+                simply reduces uncertainty and helps you make better-informed decisions as the legal process unfolds. This
+                is an important precautionary step that gives the seller&apos;s family a strategic advantage.
+              </p>
+              </FaqItem>
+            </FaqAccordion>
             <hr />
             <h2>Final Thoughts</h2>
             <p>
@@ -650,7 +661,7 @@ export default function SellingProbatePropertiesInNycContent() {
             </p>
             <p className="tf-guide-center">
               <strong>Phone:</strong>{" "}
-              <a href="tel:+1-646-970-1078" className="tf-guide-link">
+              <a href="tel:+16469701078" className="tf-guide-link">
                 1-646-970-1078
               </a>
               {"  "}
