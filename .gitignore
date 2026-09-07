@@ -3,6 +3,14 @@
 # Studio stays local only — not on Feroz GitHub
 montfortre-ghl-studio/
 
+# Session / agent docs — Gitea -full only (not GitHub or Gitea code)
+*.md
+**/*.md
+.cursor/
+**/.cursor/
+*.session
+*session*
+
 node_modules/
 **/node_modules/
 .fullgit/
