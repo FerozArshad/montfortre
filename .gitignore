@@ -1,0 +1,26 @@
+# Parent workspace gitignore
+
+# Studio stays local only — not on Feroz GitHub
+montfortre-ghl-studio/
+
+node_modules/
+**/node_modules/
+.fullgit/
+
+montfortre-ghl-studio/dist/
+montfortre-loveable/dist/
+montfortre-ghl-studio/.env
+montfortre-ghl-studio/.env.*
+!montfortre-ghl-studio/.env.example
+montfortre-loveable/.env
+montfortre-loveable/.env.*
+!montfortre-loveable/.env.example
+montfortre-ghl-studio/*.local
+montfortre-ghl-studio/*.tsbuildinfo
+montfortre-loveable/*.local
+montfortre-loveable/*.tsbuildinfo
+.DS_Store
+Thumbs.db
+
+**/.git-local-backup/
+

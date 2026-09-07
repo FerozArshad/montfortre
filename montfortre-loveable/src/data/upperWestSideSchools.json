@@ -1,0 +1,609 @@
+[
+  {
+    "name": "Beit Rabban Day School",
+    "phone": "212-595-1386",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": "https://www.beitrabban.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Anderson School (the)",
+    "phone": "212-595-7193",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 5,
+    "website": "https://www.ps334school.org/",
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Robert Louis Stevenson School",
+    "phone": "212-787-6400",
+    "type": "private",
+    "grades": "8-12",
+    "rating": null,
+    "website": "https://stevenson-school.org/",
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Urban Assembly School for Green Careers (the)",
+    "phone": "212-787-1189",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Jr High School 54 Booker T Washington",
+    "phone": "212-678-2861",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": "https://www.ms54.org/",
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Bais Yaakov Bnos Aliya",
+    "phone": "646-844-5909",
+    "type": "private",
+    "grades": "1-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Manhattan Country School",
+    "phone": "212-348-0952",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Fiorello H Laguardia High School of Music, Art and Performing Arts",
+    "phone": "212-496-0700",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "PS 811 Mickey Mantle School",
+    "phone": "212-579-3788",
+    "type": "public",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "PS 333 Manhattan School for Children",
+    "phone": "212-222-1450",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Success Academy Charter School-Upper West",
+    "phone": "646-274-1580",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Yeshiva Ketana of Manhattan",
+    "phone": "212-769-1790",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "The Geneva School of Manhattan",
+    "phone": "212-754-9988",
+    "type": "private",
+    "grades": "PK-9",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "The Studio School",
+    "phone": "212-678-2416",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": "https://www.studioschoolnyc.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 163 Alfred E. Smith School",
+    "phone": "212-678-2854",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Alexander Robertson School",
+    "phone": "212-633-6441",
+    "type": "private",
+    "grades": "KG-5",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Lafayette Academy",
+    "phone": "212-222-2857",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 75 Emily Dickinson School",
+    "phone": "212-866-5400",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Manhattan/Hunter Science High School",
+    "phone": "212-501-1235",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Fusion Academy Manhattan - Upper West Side",
+    "phone": "212-362-1014",
+    "type": "private",
+    "grades": "6-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Abraham Joshua Heschel School",
+    "phone": "212-246-7717",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": "https://www.heschel.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 87 William Sherman School",
+    "phone": "212-678-2826",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": "https://www.site.ps87.info/",
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Global Learning Collaborative (the)",
+    "phone": "212-877-1103",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Professional Childrens School",
+    "phone": "212-582-3116",
+    "type": "private",
+    "grades": "6-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Innovation Diploma Plus",
+    "phone": "212-724-2039",
+    "type": "public",
+    "grades": "10-12",
+    "rating": 1,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Calhoun School",
+    "phone": "212-497-6533",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": "https://www.calhoun.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 9 Sarah Anderson School",
+    "phone": "212-678-2812",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "West End Secondary School",
+    "phone": "212-245-1506",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Middle School 245 Computer School (the)",
+    "phone": "917-441-0873",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": "https://www.thecomputerschool.org/",
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Frank McCourt High School",
+    "phone": "212-362-2015",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Middle School 247 Dual Language Middle School",
+    "phone": "212-496-1050",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Guidepost Montessori Columbus Square",
+    "phone": "551-333-1337",
+    "type": "private",
+    "grades": "KG-KG",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 199 Jessie Isador Straus School",
+    "phone": "212-799-1033",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Middle School 243 Center School",
+    "phone": "212-799-1477",
+    "type": "public",
+    "grades": "5-8",
+    "rating": 5,
+    "website": "https://www.thecenterschool.org/",
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Collegiate School",
+    "phone": "212-812-8521",
+    "type": "private",
+    "grades": "KG-12",
+    "rating": null,
+    "website": "https://www.collegiateschool.org/",
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Young Women's Leadership School",
+    "phone": "212-289-7593",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 84 Lillian Weber School",
+    "phone": "212-799-2534",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "High School of Arts and Technology",
+    "phone": "212-501-1198",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 166 the Richard Rodgers School of the Arts and Technology",
+    "phone": "212-678-2829",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Gan Aliya",
+    "phone": "646-844-7199",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Special Music School",
+    "phone": "212-501-3318",
+    "type": "public",
+    "grades": "KG-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "The Smith School",
+    "phone": "212-879-6354",
+    "type": "private",
+    "grades": "7-12",
+    "rating": null,
+    "website": "https://www.smithschool.net/",
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Dwight School",
+    "phone": "212-724-6360",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": "https://dwight.edu/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "High School for Law, Advocacy and Community Justice",
+    "phone": "212-501-1201",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": "https://lacjhs.org/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Columbia Grammar & Preparatory School",
+    "phone": "212-749-6200",
+    "type": "private",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Urban Assembly School for Media Studies",
+    "phone": "212-501-1110",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Mott Hall II",
+    "phone": "212-678-2960",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Metropolitan Montessori School",
+    "phone": "212-579-5525",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": "https://mmsny.org/",
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "West Side Montessori School",
+    "phone": "212-662-8000",
+    "type": "private",
+    "grades": "PK-KG",
+    "rating": null,
+    "website": "https://www.wsmsnyc.org/",
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "West Preparatory Academy",
+    "phone": "212-280-8502",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 1,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Community Action School-Middle School 258",
+    "phone": "212-678-5888",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  }
+]

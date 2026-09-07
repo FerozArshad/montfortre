@@ -1,0 +1,65 @@
+/* Success and error messages shared by the lead capture forms. */
+.form-note,
+.contact-thanks,
+.hlm-form-thanks {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(46, 125, 80, 0.1);
+  border: 1px solid rgba(46, 125, 80, 0.35);
+  color: #1f5c33;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.form-note a,
+.contact-thanks a,
+.hlm-form-thanks a {
+  color: inherit;
+  font-weight: 700;
+}
+
+.form-error,
+.hbfs-gate-error,
+.hv-error {
+  margin: 10px 0 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(176, 42, 42, 0.1);
+  border: 1px solid rgba(176, 42, 42, 0.35);
+  color: #8f2020;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.form-field--invalid,
+.contact-field.form-field--invalid,
+.lead-capture-field.form-field--invalid,
+.hlm-field.form-field--invalid,
+.hv-field.form-field--invalid,
+.home-dl-field.form-field--invalid {
+  border-color: #b02a2a !important;
+  box-shadow: 0 0 0 1px rgba(176, 42, 42, 0.22);
+}
+
+.form-field-hint {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #8f2020;
+}
+
+.lead-form-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.lead-form-turnstile {
+  margin: 12px 0 4px;
+  min-height: 65px;
+}

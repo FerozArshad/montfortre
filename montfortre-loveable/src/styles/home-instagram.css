@@ -1,0 +1,315 @@
+.home-ig {
+  background: #f9f6e6;
+  padding: 72px 64px;
+  border-top: 1px solid #e0d9b8;
+}
+
+.home-ig-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.home-ig-head {
+  margin-bottom: 36px;
+}
+
+.home-ig-kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.home-ig-kicker-line {
+  width: 34px;
+  height: 1px;
+  background: #c98a2c;
+  display: block;
+}
+
+.home-ig-kicker-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #3b4c5e;
+}
+
+.home-ig-head-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  margin-top: 16px;
+}
+
+.home-ig-identity {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+.home-ig-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* Waist-up source — bias up so the top of the head is not cropped */
+  object-position: center 12%;
+  flex-shrink: 0;
+  border: 2px solid #e0d9b8;
+  background: #0f1729;
+}
+
+.home-ig-head h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.008em;
+  color: #0f1729;
+  margin: 0;
+}
+
+.home-ig-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.home-ig-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.home-ig-nav {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9cfa6;
+  border-radius: 50%;
+  background: transparent;
+  color: #0f1729;
+  cursor: pointer;
+  padding: 0;
+}
+
+.home-ig-nav:hover {
+  border-color: #c98a2c;
+  color: #8a5a12;
+}
+
+.home-ig-follow {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f1729;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  white-space: nowrap;
+}
+
+.home-ig-follow:hover {
+  border-bottom-color: #c98a2c;
+  color: #8a5a12;
+}
+
+.home-ig-feed {
+  width: 100%;
+  min-height: 120px;
+}
+
+.home-ig-feed .first_loading_animation {
+  padding: 48px 0;
+}
+
+/* SociableKIT leaves its spinner mounted after the posts arrive, which left a
+   dead band above the row. Drop it once at least one post has rendered. */
+.home-ig-feed .sk-instagram-feed:has(.sk-ig-all-posts .sk-instagram-feed-item) .first_loading_animation {
+  display: none !important;
+}
+
+/* —— SociableKIT: blend into Montfort cream section —— */
+.home-ig-feed .sk-instagram-feed,
+.home-ig-feed .sk-ww-ig-feed-container,
+.home-ig-feed .instagram-user-root-container {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  font-family: "Space Grotesk", system-ui, sans-serif !important;
+  box-shadow: none !important;
+}
+
+.home-ig-feed .sk-instagram-feed iframe {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  border: 0;
+}
+
+/* Hide bio + Linktree (and related profile chrome we don't want) */
+.home-ig-feed .sk-ig-profile-bio,
+.home-ig-feed .sk-ig-profile-bio-container,
+.home-ig-feed a.bio-website,
+.home-ig-feed .bio-website {
+  display: none !important;
+}
+
+/* Prefer our section header — hide SociableKIT profile chrome */
+.home-ig-feed .sk-ig-profile-info,
+.home-ig-feed .sk-ig-profile-info-container,
+.home-ig-feed .sk-instagram-profile-pic_container,
+.home-ig-feed .sk-ig-profile-pic_container,
+.home-ig-feed [class*="profile-pic"],
+.home-ig-feed button.instagram-user-container,
+.home-ig-feed .instagram-user-container {
+  display: none !important;
+}
+
+/*
+  Single row that scrolls horizontally. Swipe on touch, arrows on desktop.
+  A fractional basis leaves the next post peeking so the row reads as scrollable.
+*/
+.home-ig-feed .sk-ig-all-posts {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  gap: 12px !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 0 4px !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.home-ig-feed .sk-ig-all-posts::-webkit-scrollbar {
+  display: none;
+}
+
+/* SociableKIT emits a sizer image as a direct child; it must not take a slot. */
+.home-ig-feed .sk-ig-all-posts > img.sk-img-sizer {
+  display: none !important;
+}
+
+.home-ig-feed .sk-ig-all-posts > .sk-instagram-feed-item {
+  flex: 0 0 calc((100% - 4 * 12px) / 4.5);
+  scroll-snap-align: start;
+}
+
+.home-ig-feed .sk-ig-load-more-posts {
+  display: none !important;
+}
+
+.home-ig-feed .sk_branding,
+.home-ig-feed a.tutorial_link,
+.home-ig-feed a.--custom-branding {
+  display: none !important;
+}
+
+/*
+  Uniform Instagram 4:5 cells. Portrait posts fill; landscape posts letterbox
+  (no crop, no stretch to taller siblings).
+*/
+.home-ig-feed .sk-instagram-feed-item {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #0f1729;
+  align-self: stretch;
+  border-radius: 2px;
+  border: 1px solid #e0d9b8;
+  margin: 0 !important;
+}
+
+.home-ig-feed .sk-instagram-feed-item > img.sk-img-sizer {
+  display: none !important;
+}
+
+.home-ig-feed .sk-instagram-feed-item > img.sk-ig-post-img,
+.home-ig-feed .sk-instagram-feed-item .sk-ig-post-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  display: block !important;
+}
+
+.home-ig-feed .sk-ig-post-hover {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  line-height: normal !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1025px) {
+  .home-ig {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .home-ig-inner {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .home-ig {
+    padding: 48px 20px;
+  }
+
+  .home-ig-head {
+    margin-bottom: 28px;
+  }
+
+  .home-ig-feed .sk-ig-all-posts {
+    gap: 10px !important;
+  }
+
+  .home-ig-feed .sk-ig-all-posts > .sk-instagram-feed-item {
+    flex-basis: calc((100% - 2 * 10px) / 2.5);
+  }
+}
+
+@media (max-width: 639.98px) {
+  .home-ig-feed .sk-ig-all-posts > .sk-instagram-feed-item {
+    flex-basis: calc((100% - 10px) / 1.25);
+  }
+}
+
+@media (max-width: 479.98px) {
+  .home-ig {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .home-ig-head-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

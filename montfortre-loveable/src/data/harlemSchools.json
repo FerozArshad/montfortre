@@ -1,0 +1,1238 @@
+[
+  {
+    "name": "James Weldon Johnson School",
+    "phone": "212-876-5522",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Manhattan Center for Science & Mathematics",
+    "phone": "212-876-4639",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 102 Jacques Cartier School",
+    "phone": "212-860-5834",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 206 Jose Celso Barbosa School",
+    "phone": "212-860-5809",
+    "type": "public",
+    "grades": "3-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 146 Ann M. Short School",
+    "phone": "212-860-5877",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "The Lexington Academy",
+    "phone": "212-860-5831",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Dream Charter School East Harlem",
+    "phone": "212-722-0232",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Harlem Children's Zone Promise Academy II Charter School",
+    "phone": "212-360-3255",
+    "type": "public",
+    "grades": "KG-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Esperanza Preparatory Academy",
+    "phone": "212-722-6507",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Edward a Reynolds West Side High School",
+    "phone": "212-678-7300",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "East Harlem Scholars Academy Charter School II",
+    "phone": "212-348-2518",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Heritage School (the)",
+    "phone": "212-828-2858",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Central Park East High School",
+    "phone": "212-860-5929",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Park East High School",
+    "phone": "212-831-1517",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Urban Assembly School for Global Commerce (the)",
+    "phone": "212-831-5201",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Harlem Renaissance High School",
+    "phone": "212-996-3795",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 1,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Capital Preparatory (CP) Harlem Charter School",
+    "phone": "212-328-9370",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Middle School 224 Manhattan East School for Arts & Academics",
+    "phone": "212-860-6047",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Innovation Charter High School",
+    "phone": "212-722-5871",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Central Park East I",
+    "phone": "212-860-5821",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "East Harlem Scholars Academy Charter School",
+    "phone": "212-348-2518",
+    "type": "public",
+    "grades": "PK-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Amber Charter School East Harlem",
+    "phone": "646-964-2452",
+    "type": "public",
+    "grades": "KG-6",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Tag Young Scholars",
+    "phone": "212-860-6003",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Harbor Science and Arts Charter School",
+    "phone": "917-261-2700",
+    "type": "public",
+    "grades": "KG-9",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Bilingual Bicultural School (the)",
+    "phone": "212-860-6031",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 96 Joseph Lanzetta School",
+    "phone": "212-860-5851",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 155 William Paca School",
+    "phone": "212-860-5885",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 83 Luis Munoz Rivera School",
+    "phone": "212-860-5847",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Renaissance School of the Arts",
+    "phone": "212-534-6072",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Storefront Academy Harlem Charter School",
+    "phone": "646-328-9730",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 7 Samuel Stern School",
+    "phone": "212-860-5827",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "River East Elementary School",
+    "phone": "212-802-3035",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Harlem Village Academy East Charter School",
+    "phone": "646-812-9400",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Harlem Preparatory Charter School",
+    "phone": "212-876-9953",
+    "type": "public",
+    "grades": "3-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Isaac Newton Middle School for Math and Science",
+    "phone": "212-860-6006",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 108 Assemblyman Angelo Del Toro Educational Complex",
+    "phone": "212-860-5803",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Mosaic Preparatory Academy",
+    "phone": "212-722-3109",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "St Paul School",
+    "phone": "212-534-0619",
+    "type": "private",
+    "grades": "KG-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Cooke School",
+    "phone": "212-280-4473",
+    "type": "private",
+    "grades": "KG-12",
+    "rating": null,
+    "website": "https://www.cookecenter.org/",
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "The Kings Academy of the True Church of God",
+    "phone": "212-348-7380",
+    "type": "private",
+    "grades": "KG-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "PS 138",
+    "phone": "212-369-2227",
+    "type": "public",
+    "grades": "PK-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Cristo Rey New York High School",
+    "phone": "212-996-7000",
+    "type": "private",
+    "grades": "9-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Mount Carmel-Holy Rosary School",
+    "phone": "217-876-7555",
+    "type": "private",
+    "grades": "KG-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Urban Dove Team Charter School IV",
+    "phone": "347-562-9832",
+    "type": "public",
+    "grades": "10-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 112 Jose Celso Barbosa School",
+    "phone": "212-860-5868",
+    "type": "public",
+    "grades": "PK-2",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Judith S Kaye School (the)",
+    "phone": "212-360-1509",
+    "type": "public",
+    "grades": "9-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Democracy Preparatory Harlem Charter School",
+    "phone": "212-281-1248",
+    "type": "public",
+    "grades": "KG-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Stem Institute of Manhattan",
+    "phone": "212-678-2898",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 180 Hugo Newman School",
+    "phone": "212-678-2849",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Success Academy Charter School-Harlem 1",
+    "phone": "646-277-7170",
+    "type": "public",
+    "grades": "KG-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 149 Sojourner Truth School",
+    "phone": "646-672-9020",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 200 the James McCune Smith School",
+    "phone": "212-491-6636",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Thurgood Marshall Academy Lower School",
+    "phone": "212-368-8731",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Success Academy Charter School-Harlem 4",
+    "phone": "646-442-6500",
+    "type": "public",
+    "grades": "KG-7",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 185 the Early Childhood Discovery and Design Magnet School",
+    "phone": "212-534-7490",
+    "type": "public",
+    "grades": "KG-2",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 175 Henry H. Garnet School",
+    "phone": "212-283-0426",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Thurgood Marshall Academy for Learning & Social Change",
+    "phone": "212-283-8055",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Eagle Academy for Young Men of Harlem",
+    "phone": "212-694-6051",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Mott Hall High School",
+    "phone": "212-694-6020",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Democracy Preparatory Charter School",
+    "phone": "212-281-8247",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Frederick Douglass Academy",
+    "phone": "212-491-4107",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Frederick Douglass Academy II Secondary School",
+    "phone": "212-865-9260",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Wadleigh Perf and Visual Arts",
+    "phone": "212-749-5800",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "New York French-American Charter School",
+    "phone": "212-666-4134",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 76 A. Philip Randolph School",
+    "phone": "212-678-2865",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 242 the Young Diplomats Magnet Academy",
+    "phone": "212-678-2908",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Future Leaders Institute Charter School",
+    "phone": "212-678-2868",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "St. Hope Leadership Academy Charter School",
+    "phone": "212-283-1204",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 92 Mary McLeod Bethune School",
+    "phone": "212-690-5915",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Harlem Children's Zone Promise Academy Charter School",
+    "phone": "646-556-6275",
+    "type": "public",
+    "grades": "KG-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 154 Harriet Tubman School",
+    "phone": "212-864-2400",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 197 John B. Russwurm School",
+    "phone": "212-690-5960",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 123 Mahalia Jackson School",
+    "phone": "212-342-6200",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Opportunity Charter School",
+    "phone": "212-866-6137",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Success Academy Charter School-Harlem 5",
+    "phone": "646-380-2580",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Harlem Village Academy West Charter School",
+    "phone": "646-812-9700",
+    "type": "public",
+    "grades": "KG-4",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Global Community Charter School",
+    "phone": "646-360-2363",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Harlem Village Academy North Charter School",
+    "phone": "646-812-9700",
+    "type": "public",
+    "grades": "5-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 194 Countee Cullen School",
+    "phone": "212-690-5954",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "St Charles Borromeo School",
+    "phone": "212-368-6666",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Ogorman Garden Montessori",
+    "phone": "212-289-6319",
+    "type": "private",
+    "grades": "PK-KG",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Fellowship of Learning School",
+    "phone": "212-690-8094",
+    "type": "private",
+    "grades": "7-7",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Great Tomorrows USA",
+    "phone": "212-427-2839",
+    "type": "private",
+    "grades": "KG-11",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 298 Alain L. Locke School",
+    "phone": "Telephone N/A",
+    "type": "public",
+    "grades": "3-5",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "William Lynch School (the)",
+    "phone": "212-862-9940",
+    "type": "public",
+    "grades": "PK-6",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 153 Adam Clayton Powell School",
+    "phone": "212-927-8611",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Neighborhood Charter School of Harlem",
+    "phone": "646-701-7117",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "New Heights Academy Charter School",
+    "phone": "212-283-5400",
+    "type": "public",
+    "grades": "5-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "PS Intermediate School 210 21st Century Academy for Community Leadership",
+    "phone": "212-283-0012",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Hamilton Grange Middle School",
+    "phone": "212-775-9600",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 192 Jacob H. Schiff School",
+    "phone": "212-775-9560",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "High School Mathematics Science and Engineering at Ccny",
+    "phone": "212-281-6490",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "A Philip Randolph Campus High School",
+    "phone": "212-690-6800",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Our Lady of Lourdes School",
+    "phone": "212-926-5820",
+    "type": "private",
+    "grades": "PK-5",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 325 New York",
+    "phone": "Telephone N/A",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Urban Assembly Academy for Future Leaders",
+    "phone": "212-543-4960",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Sisulu-Walker Charter School of Harlem",
+    "phone": "212-663-8216",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 161 Pedro Albizu Campos School",
+    "phone": "212-690-5945",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 129 John H. Finley School",
+    "phone": "212-690-5932",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Seed Harlem",
+    "phone": "332-456-1415",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "New Design Middle School",
+    "phone": "212-281-6339",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Kipp Infinity Charter School",
+    "phone": "212-991-2600",
+    "type": "public",
+    "grades": "KG-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Teachers College Community School",
+    "phone": "212-316-8080",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Urban Assembly School for the Performing Arts",
+    "phone": "212-543-4460",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 1,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  }
+]

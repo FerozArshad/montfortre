@@ -1,0 +1,34 @@
+project_id = "zmnoguzttgqufgooitpx"
+
+# Invoked by the AFTER INSERT trigger on public.leads, which authenticates with
+# the x-webhook-secret header instead of a JWT (Postgres has no user session to
+# sign one). The function rejects any request without the matching secret.
+[functions.notify-lead]
+verify_jwt = false
+
+# Called from the admin UI. Platform JWT verification is off so the CORS
+# preflight succeeds; the function authorises the caller itself by replaying
+# their token against lead_notify_status(), which admits admins only.
+[functions.gmail-oauth]
+verify_jwt = false
+
+# Invoked by the AFTER INSERT trigger on public.leads to push the contact into
+# GoHighLevel. Same shared-secret authentication as notify-lead.
+[functions.ghl-sync]
+verify_jwt = false
+
+# Called by a GoHighLevel workflow webhook, which cannot present a Supabase JWT.
+# The function checks the shared secret from the header or query string.
+[functions.ghl-inbound]
+verify_jwt = false
+
+# Public lead submit with optional Turnstile verification + Meta CAPI Lead event.
+[functions.submit-public-lead]
+verify_jwt = false
+
+# Server-side Meta Conversions API for PageView / ViewContent events.
+[functions.meta-capi]
+verify_jwt = false
+
+[functions.olr-saved-search]
+verify_jwt = false

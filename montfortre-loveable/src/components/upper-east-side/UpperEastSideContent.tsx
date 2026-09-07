@@ -1,0 +1,223 @@
+import { useState } from "react";
+import PromisesBar from "../shared/PromisesBar";
+import ResourcesSection from "../shared/ResourcesSection";
+import ReviewsSection from "../shared/ReviewsSection";
+import UpperEastSideAreaNav from "./UpperEastSideAreaNav";
+import UpperEastSidePoiMap from "./UpperEastSidePoiMap";
+import UpperEastSideRealtorArticle from "./UpperEastSideRealtorArticle";
+
+import "../../styles/harlem-page.css";
+import "../../styles/ues-page.css";
+import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
+import MarketReportForm from "../shared/MarketReportForm";
+
+const PROPERTY_TYPES = [
+  {
+    href: "/upper-east-side-townhouses/",
+    image: "/redesign-assets/hoods/ues-townhouse.png",
+    alt: "Upper East Side Main Page",
+    title: "Upper East Side Townhouses",
+    copy: "Elegant townhomes, timeless charm, and prestigious Manhattan living",
+  },
+  {
+    href: "/upper-east-side-condos/",
+    image: "/redesign-assets/hoods/ues-condo.png",
+    alt: "Upper East Side Condo",
+    title: "Upper East Side Condos",
+    copy: "Luxury residences, premium amenities, and sophisticated city living",
+  },
+  {
+    href: "/upper-east-side-co-ops/",
+    image: "/redesign-assets/hoods/ues-coops.png",
+    alt: "Co-ops Upper East Side",
+    title: "Upper East Side Co-Ops",
+    copy: "Classic residences, refined communities, and timeless Upper East Side appeal",
+  },
+] as const;
+
+
+
+
+
+
+const OLR_SALES_URL = "https://stanley.olridx.com/Search/Sales";
+
+function UesListingsIdx() {
+  const embed = window.location.hostname === "montfortre.com";
+
+  if (!embed) {
+    return (
+      <div className="hlm-listings-idx">
+        <div className="hlm-listings-fallback">
+          <p>
+            This box is the live OLR IDX sales search. OLR only allows it to embed on montfortre.com, so it stays blank
+            on localhost and preview. Open the search to see Upper East Side listings now.
+          </p>
+          <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-btn">
+            Open live listings
+          </a>
+        </div>
+        <p className="hlm-listings-footnote">
+          Live listing data provided by OLR IDX. Need help? <a href="/contact/">Contact us</a> or{" "}
+          <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener noreferrer">
+            log in to your customer account
+          </a>
+          .
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="hlm-listings-idx">
+      <iframe
+        className="hlm-listings-frame"
+        src={OLR_SALES_URL}
+        scrolling="yes"
+        title="Upper East Side homes for sale"
+        loading="lazy"
+      />
+      <p className="hlm-listings-footnote">
+        Live listing data provided by OLR IDX. Need help? <a href="/contact/">Contact us</a> or{" "}
+        <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener noreferrer">
+          log in to your customer account
+        </a>
+        .
+      </p>
+    </div>
+  );
+}
+
+const UES_ARTICLES = [
+  {
+    href: "/upper-west-side-townhouse-q2-2024-market-report/",
+    image: "/redesign-assets/hoods/upper-west-side.webp",
+    alt: "Upper West Side Townhouse Q2 2024 Market Report",
+    title: "Upper West Side Townhouse Q2 2024 Market Report",
+    excerpt: "On the Upper West Side, we observed a distinct trend that diverges from the citywide patterns. Specifically, the…",
+  },
+  {
+    href: "/harlem-brownstone-q2-2024-market-report/",
+    image: "/redesign-assets/hoods/harlem.webp",
+    alt: "Harlem Brownstone Q2 2024 Market Report",
+    title: "Harlem Brownstone Q2 2024 Market Report",
+    excerpt: "The Harlem brownstone market has seen an increase in sales activity since this time last year. In Q2…",
+  },
+  {
+    href: "/discover-your-dream-home-explore-apartments-for-sale-on-the-upper-west-side/",
+    image: "/redesign-assets/hoods/chelsea.webp",
+    alt: "Discover Your Dream Home: Explore Apartments for Sale on the …",
+    title: "Discover Your Dream Home: Explore Apartments for Sale on the …",
+    excerpt: "Are you searching for your dream home in one of New York City’s most sought-after neighborhoods? Look no…",
+  },
+] as const;
+
+export default function UpperEastSideContent() {
+  const [marketEmail, setMarketEmail] = useState(false);
+
+  return (
+    <>
+      <NeighborhoodHubHero name="Upper East Side" image="/redesign-assets/migrated-live/Upper-East-Side-Main-Page.png" lead="Townhouses, condos and co-ops across the Upper East Side, with representation for buyers and sellers alike." />
+
+      <UpperEastSidePoiMap />
+      <UpperEastSideAreaNav />
+
+      <PromisesBar variant="nbhd" />
+      <section id="featured-listings" className="hlm-listings" data-screen-label="Featured listings">
+        <div className="hlm-listings-inner">
+          <div data-reveal="">
+            <p>
+              In the beautiful area of Upper East Side resides 202,400 people where 37% are homeowners. With an average
+              age of 44, the residents of Upper East Side are well established, with many growing families of all ages.
+              Over the past 30 days roughly 23 homes have been sold with an average sold price of 5,035,880. That is an
+              increase of $2,947,592 from the previous period.
+            </p>
+            <div className="hlm-listings-cta">
+              <a href="/idx-sales" className="hlm-listings-btn">
+                View More Listings
+              </a>
+              <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">
+                Open full search in new tab
+              </a>
+            </div>
+          </div>
+          <UesListingsIdx />
+        </div>
+      </section>
+
+      <UpperEastSideRealtorArticle />
+
+<section className="hlm-types" data-screen-label="Upper East Side property types">
+        <div className="hlm-types-inner">
+          <div className="hlm-types-grid">
+            {PROPERTY_TYPES.map((item) => (
+              <a key={item.href} data-reveal="" href={item.href} className="hlm-type-card">
+                <div className="hlm-type-media">
+                  <img src={item.image} alt={item.alt} loading="eager" className="hlm-type-photo" />
+                </div>
+                <div className="hlm-type-body">
+                  <div className="hlm-type-title">{item.title}</div>
+                  <p>{item.copy}</p>
+                  <div className="hlm-type-explore">Learn More</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="market-report" className="hlm-market" data-screen-label="Market report">
+        <div className="hlm-market-inner">
+          <div data-reveal="">
+            <h2>Want the full market report for Upper East Side?</h2>
+            <p className="hlm-market-lead">
+              We want to ensure that you have all the information needed to make the best decisions when it comes to
+              your home goals. When you enter your info below you will get instant access to the area&apos;s latest
+              market report, complete with sales and demographic trends.
+            </p>
+            {!marketEmail ? (
+              <div className="hlm-market-social">
+                <button type="button" className="hlm-market-social-btn">
+                  Continue with Facebook
+                </button>
+                <button type="button" className="hlm-market-social-btn">
+                  Continue with Google
+                </button>
+                <button type="button" className="hlm-market-email-link" onClick={() => setMarketEmail(true)}>
+                  or click here to continue with your email address
+                </button>
+              </div>
+            ) : (
+              <div className="hlm-form">
+                <button type="button" className="hlm-market-back" onClick={() => setMarketEmail(false)}>
+                  ← Back
+                </button>
+                <MarketReportForm neighborhood="Upper East Side" />
+              </div>
+            )}
+          </div>
+          <div className="hlm-market-card" data-reveal="">
+            <img src="/redesign-assets/hoods/upper-east-side.webp" alt="Upper East Side market" />
+            <div className="hlm-market-card-copy">
+              <div className="hlm-market-card-title">Upper East Side</div>
+              <div className="hlm-market-card-sub">Market Report</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <div id="advice">
+        <ReviewsSection />
+
+        <ResourcesSection
+          title="Local News & Advice"
+          subtitle="Read helpful resources and articles related to the area."
+          ctaLabel="View More Articles"
+          moreLabel="Read More"
+          showCategory={false}
+          articles={UES_ARTICLES}
+        />
+      </div>
+    </>
+  );
+}

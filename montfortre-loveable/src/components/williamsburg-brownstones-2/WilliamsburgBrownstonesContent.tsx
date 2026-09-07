@@ -1,0 +1,131 @@
+import PromisesBar from "../shared/PromisesBar";
+import ResourcesSection from "../shared/ResourcesSection";
+import ReviewsSection from "../shared/ReviewsSection";
+import "../../styles/neighborhoods-page.css";
+import "../../styles/williamsburg-brownstones-page.css";
+
+import HeroGoogleRating from "../shared/HeroGoogleRating";
+import PageListingsSection from "../shared/PageListingsSection";
+import PageContactSection from "../shared/PageContactSection";
+
+
+const NEWS_ARTICLES = [
+  {
+    href: "/upper-west-side-townhouse-q2-2024-market-report/",
+    image: "/redesign-assets/hoods/upper-west-side.webp",
+    alt: "Upper West Side Townhouse Q2 2024 Market Report",
+    title: "Upper West Side Townhouse Q2 2024 Market Report",
+    excerpt:
+      "On the Upper West Side, we observed a distinct trend that diverges from the citywide patterns. Speci…",
+  },
+  {
+    href: "/harlem-brownstone-q2-2024-market-report/",
+    image: "/redesign-assets/hoods/harlem.webp",
+    alt: "Harlem Brownstone Q2 2024 Market Report",
+    title: "Harlem Brownstone Q2 2024 Market Report",
+    excerpt: "The Harlem brownstone market has seen an increase in sales activity since this time last year. In Q2…",
+  },
+  {
+    href: "/discover-your-dream-home-explore-apartments-for-sale-on-the-upper-west-side/",
+    image: "/redesign-assets/hoods/chelsea.webp",
+    alt: "Discover Your Dream Home: Explore Apartments for Sale on the Upper West Side",
+    title: "Discover Your Dream Home: Explore Apartments for Sale on the Upper West Side",
+    excerpt:
+      "Are you searching for your dream home in one of New York City’s most sought-after neighborhoods? Loo…",
+  },
+] as const;
+
+export default function WilliamsburgBrownstonesContent() {
+  return (
+    <>
+      <section className="nbhd-hero" data-screen-label="Service hero">
+        <div className="nbhd-hero-ring" />
+        <div className="nbhd-hero-inner">
+          <div data-reveal="">
+            <h1>Williamsburg Brownstones — Expert Guidance for Buyers, Sellers & Investors</h1>
+            <p className="nbhd-hero-lead">
+              We’ll help you purchase the right Williamsburg brownstone by avoiding costly structural issues, hidden repairs, and overpaying in one of Brooklyn’s most competitive markets.
+            </p>
+            <div className="nbhd-hero-ctas">
+              <a href="tel:+16469701078" className="nbhd-hero-tel">
+                Call 1-(646)-970-1078
+              </a>
+              <a href="https://calendly.com/montfort" className="nbhd-hero-book">
+                Schedule A Consultation
+              </a>
+            </div>
+          </div>
+          <div className="nbhd-hero-media" data-reveal="">
+            <div className="nbhd-hero-frame">
+              <img src="/redesign-assets/migrated-live/Williamsburg-Brownstones.png" alt="Williamsburg brownstones" width="640" height="512" loading="eager" className="nbhd-hero-photo" />
+            </div>
+            <HeroGoogleRating prefix="nbhd" />
+          </div>
+        </div>
+      </section>
+
+      <PromisesBar variant="nbhd" />
+
+      <PageListingsSection market="Williamsburg" propertyType="Brownstone" label="Williamsburg brownstones" idxUrl="https://stanley.olridx.com/Search/Sales?idr=False#115393" />
+
+      <section className="nbhd-intro" data-screen-label="Guide">
+        <div className="nbhd-intro-inner">
+          <div className="nbhd-intro-copy" data-reveal="">
+            <h2>WHY ARE WILLIAMSBURG BROWNSTONES SO DESIRABLE?</h2>
+            <p>
+              Williamsburg brownstones combine historic Brooklyn charm with one of New York City’s most vibrant and sought after neighborhoods. Known for their classic architecture, spacious layouts, and strong long term value, these properties continue to attract buyers looking for character, privacy, and investment potential.
+            </p>
+            <p>
+              Many buyers are drawn to Williamsburg brownstones because of their original details, private outdoor spaces, and multi level living. Features such as exposed brick, decorative moldings, hardwood floors, stoops, and large windows give these homes a timeless appeal while still offering access to modern city living.
+            </p>
+            <p>
+              At the same time, townhouse inventory in Williamsburg is limited, and pricing can vary significantly depending on location, condition, and renovation quality. Understanding the local market is essential before making a purchase.
+            </p>
+            <h2>OUR WILLIAMSBURG BROWNSTONE SERVICES</h2>
+            <p>
+              We help buyers navigate the Williamsburg brownstone market with personalized guidance and local expertise.
+            </p>
+            <p>
+              Our services include property searches, pricing analysis, negotiations, and support throughout the buying process. Whether you are searching for a restored historic brownstone, a luxury townhouse, or a property with renovation potential, we help identify the best opportunities for your goals and budget.
+            </p>
+            <p>
+              We also assist with inspections, renovation evaluations, attorney coordination, and closing preparation to help ensure a smooth transaction.
+            </p>
+            <h2>BUYING A BROWNSTONE IN WILLIAMSBURG</h2>
+            <p>
+              Williamsburg offers a unique mix of historic charm, modern development, and vibrant neighborhood culture that continues to attract buyers from across New York City.
+            </p>
+            <p>
+              Brownstones throughout the neighborhood range from classic historic homes to fully renovated luxury residences located near restaurants, cafes, boutiques, parks, and waterfront attractions. Combined with convenient access to Manhattan, these homes remain highly desirable for both homeowners and investors.
+            </p>
+            <p>
+              Whether you are purchasing a primary residence or a long term investment property, understanding the Williamsburg brownstone market is essential for making a confident decision.
+            </p>
+            <h2>WHY WORK WITH US</h2>
+            <p>
+              We understand the unique aspects of buying brownstone properties in Williamsburg and provide support throughout every stage of the transaction.
+            </p>
+            <p>
+              From private tours and negotiations to inspections and closing coordination, we help buyers navigate the process with confidence and clarity.
+            </p>
+            <p>
+              If you are considering buying a Williamsburg brownstone, we are ready to help you explore available opportunities and find the right property for your lifestyle and goals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <ReviewsSection />
+
+      <ResourcesSection
+        title="Recent News & Realtor Advice"
+        subtitle="Stay in the loop on the latest events, news, & happenings in and around our community!"
+        showCategory={false}
+        showCta={false}
+        articles={NEWS_ARTICLES}
+      />
+
+      <PageContactSection topic="Williamsburg Brownstones" />
+    </>
+  );
+}

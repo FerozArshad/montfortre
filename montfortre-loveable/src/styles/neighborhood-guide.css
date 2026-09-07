@@ -1,0 +1,129 @@
+.nbhd-guide-html {
+  /* Full width of the page content column — avoid a large empty right gutter */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.nbhd-guide-html .faq-ac {
+  margin-top: 12px;
+}
+
+.nbhd-guide-html .nbhd-guide-contact {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px 28px;
+  margin: 36px 0 0;
+  padding: 22px 0 0;
+  border-top: 1px solid #e0d9b8;
+  width: 100%;
+}
+
+.nbhd-guide-html .nbhd-guide-contact-item {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0f1729;
+}
+
+.nbhd-guide-html .nbhd-guide-contact-item strong {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a7b4e;
+  margin-bottom: 6px;
+}
+
+.nbhd-guide-html .nbhd-guide-contact-item a {
+  color: #113b5f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nbhd-guide-html .nbhd-guide-contact-item a:hover {
+  color: #c98a2c;
+}
+
+@media (max-width: 768px) {
+  .nbhd-guide-html .nbhd-guide-contact {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.nbhd-guide-html h1,
+.nbhd-guide-html h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  color: #0f1729;
+  letter-spacing: -0.014em;
+  text-wrap: pretty;
+}
+
+.nbhd-guide-html h1 {
+  font-size: 44px;
+  line-height: 1.16;
+  margin: 0 0 22px;
+}
+
+.nbhd-guide-html h2 {
+  font-size: 32px;
+  line-height: 1.22;
+  margin: 48px 0 18px;
+}
+
+.nbhd-guide-html h3 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #0f1729;
+  margin: 28px 0 12px;
+}
+
+.nbhd-guide-html p,
+.nbhd-guide-html li {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #3b4c5e;
+}
+
+.nbhd-guide-html p {
+  margin: 0 0 16px;
+}
+
+.nbhd-guide-html ul,
+.nbhd-guide-html ol {
+  margin: 0 0 18px;
+  padding-left: 1.25rem;
+}
+
+.nbhd-guide-html li {
+  margin: 0 0 10px;
+}
+
+.nbhd-guide-html a {
+  color: #c98a2c;
+  text-underline-offset: 2px;
+}
+
+.nbhd-guide-html img,
+.nbhd-guide-html .nbhd-guide-img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-width: 100%;
+  border-radius: 16px;
+  margin: 28px 0;
+}
+
+@media (max-width: 768px) {
+  .nbhd-guide-html h1 {
+    font-size: 32px;
+  }
+  .nbhd-guide-html h2 {
+    font-size: 26px;
+  }
+}

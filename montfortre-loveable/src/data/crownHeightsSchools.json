@@ -1,0 +1,488 @@
+[
+  {
+    "name": "Success Academy Charter School-Crown Heights",
+    "phone": "646-790-2129",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Gotham Professional Arts Academy",
+    "phone": "718-230-7270",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Chabad Girls Academy",
+    "phone": "973-472-7966",
+    "type": "private",
+    "grades": "5-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Explore Empower Charter School",
+    "phone": "718-771-2090",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Kipp Always Mentally Prepared Charter School",
+    "phone": "718-943-3710",
+    "type": "public",
+    "grades": "KG-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Arista Preparatory Academy",
+    "phone": "718-756-5550",
+    "type": "private",
+    "grades": "KG-2",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "New Bridges Elementary School",
+    "phone": "718-363-8200",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Clara Barton High School",
+    "phone": "718-636-4900",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "P.S. 335 Granville T. Woods School",
+    "phone": "718-493-7736",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 375 Jackie Robinson School",
+    "phone": "718-693-6655",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Beth Rivka High School",
+    "phone": "718-735-0400",
+    "type": "private",
+    "grades": "9-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Arts and Science Elementary School",
+    "phone": "718-230-0851",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Epiphany Lutheran Elementary School",
+    "phone": "718-773-7200",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 221 Toussaint l'Ouverture School",
+    "phone": "718-756-0122",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Academy of Science and the Environment",
+    "phone": "718-230-6363",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Yeshivas Tomchei Tmimim",
+    "phone": "718-774-4131",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Pathways in Technology Early College High School (P-Tech)",
+    "phone": "718-221-1593",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Ebbets Field Middle School",
+    "phone": "718-941-5097",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 138 Brooklyn",
+    "phone": "718-467-0800",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Brooklyn School for Music & Theater",
+    "phone": "718-230-6250",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": "https://www.bkmusicntheatre.com/",
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Elijah Stroud Middle School",
+    "phone": "718-638-3067",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Success Academy Charter School-Prospect Heights",
+    "phone": "646-790-2121",
+    "type": "public",
+    "grades": "KG-4",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Academy for Health Careers",
+    "phone": "718-773-0128",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 2,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "The School of Integrated Learning",
+    "phone": "718-774-0362",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "High School for Global Citizenship (the)",
+    "phone": "718-230-6300",
+    "type": "public",
+    "grades": "9-12",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Gan Academy",
+    "phone": "718-676-8088",
+    "type": "private",
+    "grades": "PK-3",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "MacAdemy",
+    "phone": "718-221-5566",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Middle School 394",
+    "phone": "718-756-3164",
+    "type": "public",
+    "grades": "PK-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 243k the Weeksville School",
+    "phone": "718-604-6909",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Middle School for Academic and Social Excellence",
+    "phone": "",
+    "type": "public",
+    "grades": "6-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Brooklyn Green School (the)",
+    "phone": "929-397-3340",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 161 the Crown School",
+    "phone": "718-756-3100",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 3,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "Bnos Chomesh",
+    "phone": "718-708-7078",
+    "type": "private",
+    "grades": "8-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Lubavitcher Yeshiva",
+    "phone": "718-774-4131",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 241 Emma L. Johnston School",
+    "phone": "718-636-4725",
+    "type": "public",
+    "grades": "KG-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "International High School at Prospect Heights",
+    "phone": "718-230-6333",
+    "type": "public",
+    "grades": "9-12",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "high-school"
+    ]
+  },
+  {
+    "name": "Medgar Evers College Preparatory School",
+    "phone": "718-703-5400",
+    "type": "public",
+    "grades": "6-12",
+    "rating": 4,
+    "website": "https://www.mecps.org/",
+    "categories": [
+      "middle-school",
+      "high-school"
+    ]
+  },
+  {
+    "name": "Launch Expeditionary Learning Charter School",
+    "phone": "718-604-6910",
+    "type": "public",
+    "grades": "6-8",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "middle-school"
+    ]
+  },
+  {
+    "name": "P.S. 289 George V. Brower School",
+    "phone": "718-493-3824",
+    "type": "public",
+    "grades": "PK-5",
+    "rating": 4,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "P.S. 316 Elijah Stroud School",
+    "phone": "718-638-4043",
+    "type": "public",
+    "grades": "KG-6",
+    "rating": 5,
+    "website": null,
+    "categories": [
+      "elementary-school"
+    ]
+  },
+  {
+    "name": "St Mark's Day School",
+    "phone": "718-756-6602",
+    "type": "private",
+    "grades": "PK-8",
+    "rating": null,
+    "website": null,
+    "categories": [
+      "preschool",
+      "elementary-school",
+      "middle-school"
+    ]
+  },
+  {
+    "name": "Little Angel Daycare Center #3",
+    "phone": "718-469-0229",
+    "type": "private",
+    "grades": "PK-KG",
+    "rating": null,
+    "website": "https://www.littleangelsdc.com/",
+    "categories": [
+      "preschool",
+      "elementary-school"
+    ]
+  }
+]
