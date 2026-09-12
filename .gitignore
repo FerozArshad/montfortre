@@ -1,39 +1,51 @@
-﻿# Parent workspace gitignore
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Studio stays local only â€” not on Feroz GitHub
-montfortre-ghl-studio/
+node_modules
+dist
+dist-ssr
+.output
+.vinxi
+.tanstack/**
+.nitro
+*.local
 
-# Session / agent docs â€” Gitea -full only (not GitHub or Gitea code)
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.cursor/
+
+# Local notes (keep README)
 *.md
 **/*.md
-.cursor/
-**/.cursor/
-*.session
-*session*
+!README.md
 
-node_modules/
-**/node_modules/
+# Local-only clones / mirrors
+_lovable_push/
 .fullgit/
 
-montfortre-ghl-studio/dist/
-montfortre-loveable/dist/
-montfortre-ghl-studio/.env
-montfortre-ghl-studio/.env.*
-!montfortre-ghl-studio/.env.example
-montfortre-loveable/.env
-montfortre-loveable/.env.*
-!montfortre-loveable/.env.example
-montfortre-ghl-studio/*.local
-montfortre-ghl-studio/*.tsbuildinfo
-montfortre-loveable/*.local
-montfortre-loveable/*.tsbuildinfo
-.DS_Store
-Thumbs.db
-
-**/.git-local-backup/
-
-
-_lovable_push/
-
-# Retired HTTrack / design research — never track again
-montfortre-com/
+# Scratch audits
+seo-audit-*.csv
+**/NYC_Brownstone Tax Savings_REPS_Workbook_2026-2027_Final.pdf
