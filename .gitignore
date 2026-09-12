@@ -1,9 +1,9 @@
-# Parent workspace gitignore
+﻿# Parent workspace gitignore
 
-# Studio stays local only — not on Feroz GitHub
+# Studio stays local only â€” not on Feroz GitHub
 montfortre-ghl-studio/
 
-# Session / agent docs — Gitea -full only (not GitHub or Gitea code)
+# Session / agent docs â€” Gitea -full only (not GitHub or Gitea code)
 *.md
 **/*.md
 .cursor/
@@ -35,3 +35,5 @@ Thumbs.db
 
 _lovable_push/
 
+# Retired HTTrack / design research — never track again
+montfortre-com/
