@@ -37,7 +37,10 @@
 .lead-capture-field.form-field--invalid,
 .hlm-field.form-field--invalid,
 .hv-field.form-field--invalid,
-.home-dl-field.form-field--invalid {
+.home-dl-field.form-field--invalid,
+.listing-field input.form-field--invalid,
+.listing-field textarea.form-field--invalid,
+.bsg-field.form-field--invalid {
   border-color: #b02a2a !important;
   box-shadow: 0 0 0 1px rgba(176, 42, 42, 0.22);
 }

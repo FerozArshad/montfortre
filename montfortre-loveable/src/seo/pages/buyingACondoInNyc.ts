@@ -21,6 +21,7 @@ export const BUYING_A_CONDO_METAS = [
     "name": "twitter:description",
     "content": "Learn how to buy a condo in NYC with expert guidance on financing, neighborhoods, closing costs, luxury buildings, and navigating Manhattan and Brooklyn real estate."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const BUYING_A_CONDO_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

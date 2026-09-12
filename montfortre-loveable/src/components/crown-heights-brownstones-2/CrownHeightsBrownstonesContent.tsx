@@ -8,6 +8,7 @@ import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
 import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PageListingsSection from "../shared/PageListingsSection";
 import PageContactSection from "../shared/PageContactSection";
+import NeighborhoodMistakesLead from "../shared/NeighborhoodMistakesLead";
 
 
 const NEWS_ARTICLES = [
@@ -205,6 +206,8 @@ export default function CrownHeightsBrownstonesContent() {
         showCta={false}
         articles={NEWS_ARTICLES}
       />
+
+      <NeighborhoodMistakesLead neighborhood="Crown Heights" brownstoneHref="/crown-heights-brownstones-2/" />
 
       <PageContactSection topic="Crown Heights Brownstones" />
     </>

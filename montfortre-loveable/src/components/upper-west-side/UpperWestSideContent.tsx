@@ -1,4 +1,3 @@
-import { useState } from "react";
 import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import ReviewsSection from "../shared/ReviewsSection";
@@ -9,7 +8,9 @@ import UpperWestSideRealtorArticle from "./UpperWestSideRealtorArticle";
 import "../../styles/harlem-page.css";
 import "../../styles/uws-page.css";
 import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
-import MarketReportForm from "../shared/MarketReportForm";
+import NeighborhoodMistakesLead from "../shared/NeighborhoodMistakesLead";
+import PageListingsSection from "../shared/PageListingsSection";
+import { NEIGHBORHOOD_MAIN_IDX } from "../../lib/neighborhoodMainIdx";
 
 const PROPERTY_TYPES = [
   {
@@ -40,54 +41,6 @@ const PROPERTY_TYPES = [
 
 
 
-const OLR_SALES_URL = "https://stanley.olridx.com/Search/Sales";
-
-function UwsListingsIdx() {
-  const embed = window.location.hostname === "montfortre.com";
-
-  if (!embed) {
-    return (
-      <div className="hlm-listings-idx">
-        <div className="hlm-listings-fallback">
-          <p>
-            This box is the live OLR IDX sales search. OLR only allows it to embed on montfortre.com, so it stays blank
-            on localhost and preview. Open the search to see Upper West Side listings now.
-          </p>
-          <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-btn">
-            Open live listings
-          </a>
-        </div>
-        <p className="hlm-listings-footnote">
-          Live listing data provided by OLR IDX. Need help? <a href="/contact/">Contact us</a> or{" "}
-          <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener noreferrer">
-            log in to your customer account
-          </a>
-          .
-        </p>
-      </div>
-    );
-  }
-
-  return (
-    <div className="hlm-listings-idx">
-      <iframe
-        className="hlm-listings-frame"
-        src={OLR_SALES_URL}
-        scrolling="yes"
-        title="Upper West Side homes for sale"
-        loading="lazy"
-      />
-      <p className="hlm-listings-footnote">
-        Live listing data provided by OLR IDX. Need help? <a href="/contact/">Contact us</a> or{" "}
-        <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener noreferrer">
-          log in to your customer account
-        </a>
-        .
-      </p>
-    </div>
-  );
-}
-
 const UWS_ARTICLES = [
   {
     href: "/upper-west-side-townhouse-q2-2024-market-report/",
@@ -113,7 +66,6 @@ const UWS_ARTICLES = [
 ] as const;
 
 export default function UpperWestSideContent() {
-  const [marketEmail, setMarketEmail] = useState(false);
 
   return (
     <>
@@ -132,18 +84,11 @@ export default function UpperWestSideContent() {
               Over the past 30 days roughly 53 homes have been sold with an average sold price of 2,732,813. That is a
               decrease of $404,178 from the previous period.
             </p>
-            <div className="hlm-listings-cta">
-              <a href="/idx-sales" className="hlm-listings-btn">
-                View More Listings
-              </a>
-              <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">
-                Open full search in new tab
-              </a>
-            </div>
           </div>
-          <UwsListingsIdx />
         </div>
       </section>
+
+      <PageListingsSection {...NEIGHBORHOOD_MAIN_IDX["upper-west-side"]} />
 
       <UpperWestSideRealtorArticle />
 
@@ -165,45 +110,7 @@ export default function UpperWestSideContent() {
           </div>
         </div>
       </section>
-      <section id="market-report" className="hlm-market" data-screen-label="Market report">
-        <div className="hlm-market-inner">
-          <div data-reveal="">
-            <h2>Want the full market report for Upper West Side?</h2>
-            <p className="hlm-market-lead">
-              We want to ensure that you have all the information needed to make the best decisions when it comes to
-              your home goals. When you enter your info below you will get instant access to the area&apos;s latest
-              market report, complete with sales and demographic trends.
-            </p>
-            {!marketEmail ? (
-              <div className="hlm-market-social">
-                <button type="button" className="hlm-market-social-btn">
-                  Continue with Facebook
-                </button>
-                <button type="button" className="hlm-market-social-btn">
-                  Continue with Google
-                </button>
-                <button type="button" className="hlm-market-email-link" onClick={() => setMarketEmail(true)}>
-                  or click here to continue with your email address
-                </button>
-              </div>
-            ) : (
-              <div className="hlm-form">
-                <button type="button" className="hlm-market-back" onClick={() => setMarketEmail(false)}>
-                  ← Back
-                </button>
-                <MarketReportForm neighborhood="Upper West Side" />
-              </div>
-            )}
-          </div>
-          <div className="hlm-market-card" data-reveal="">
-            <img src="/redesign-assets/hoods/upper-west-side.webp" alt="Upper West Side market" />
-            <div className="hlm-market-card-copy">
-              <div className="hlm-market-card-title">Upper West Side</div>
-              <div className="hlm-market-card-sub">Market Report</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <NeighborhoodMistakesLead neighborhood="Upper West Side" brownstoneHref="/upper-west-side-townhouses/" />
 
       
       <div id="advice">

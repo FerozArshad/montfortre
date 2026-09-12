@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2021/07/ChatGPT-Image-11-jun-2026-19-41-56-1024x683.fit.png",
+  featuredImageSrc: "/redesign-assets/blog/5-reasons-people-are-purchasing-real-estate-in-this-current-market/featured.png",
   featuredImageAlt: "5 Reasons to Buy Real Estate in Today’s Market",
   shareUrl: "https://montfortre.com/5-reasons-people-are-purchasing-real-estate-in-this-current-market/",
   toc: [

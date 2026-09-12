@@ -5,7 +5,7 @@ import {
   hasLeadErrors,
   leadValidationMessage,
   type LeadFieldErrors,
-  validateLeadFields,
+  validateLeadFieldsAsync,
 } from "../../lib/leadValidation";
 import HeroGoogleRating from "../shared/HeroGoogleRating";
 import "../../styles/harlem-brownstones-for-sale.css";
@@ -78,7 +78,7 @@ export default function HarlemBrownstonesForSaleContent() {
       requireMessage: true,
     };
 
-    const nextErrors = validateLeadFields(payload);
+    const nextErrors = await validateLeadFieldsAsync(payload);
     setFieldErrors(nextErrors);
     if (hasLeadErrors(nextErrors)) {
       setGateError(leadValidationMessage(nextErrors));

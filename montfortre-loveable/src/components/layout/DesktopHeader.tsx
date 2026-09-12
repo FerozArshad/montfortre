@@ -1,5 +1,4 @@
 import "../../styles/desktop-nav.css";
-import { prefetchOlrSalesCatalog } from "../../lib/olrListings";
 
 function ChevronIcon() {
   return (
@@ -60,6 +59,12 @@ export default function DesktopHeader() {
               <a href="/nyc-buyers-agent-service/" className="mnav-link">
                 NYC Buyer&apos;s Agent
               </a>
+              <a href="/nyc-brownstone-buyer-access/" className="mnav-link">
+                Off Market Brownstone Finder
+              </a>
+              <a href="/brownstone-violation-assessment/" className="mnav-link">
+                Brownstone Violation Assessment
+              </a>
               <a href="/nyc-listing-agent-service/" className="mnav-link">
                 NYC Listing Agent
               </a>
@@ -103,18 +108,12 @@ export default function DesktopHeader() {
                 Current Listings
               </a>
               <a
-                href="/idx-sales/"
+                href="https://stanley.olridx.com/Search/Sales?idr=False#115376"
                 className="mnav-link"
-                onPointerEnter={() => prefetchOlrSalesCatalog(12)}
-                onFocus={() => prefetchOlrSalesCatalog(12)}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Homes For Sale
-              </a>
-              <a href="/idx-rentals/" className="mnav-link">
-                Rentals
-              </a>
-              <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener noreferrer" className="mnav-link">
-                Customer Login
+                UWS Brownstones / Townhouses
               </a>
             </div>
           </div>

@@ -19,6 +19,7 @@ const COMPANY_LINKS: readonly SiteLink[] = [
 
 const SERVICE_LINKS: readonly SiteLink[] = [
   { href: "/nyc-buyers-agent-service/", label: "NYC Buyer’s Agent Service" },
+  { href: "/nyc-brownstone-buyer-access/", label: "Off Market Brownstone Finder" },
   { href: "/nyc-listing-agent-service/", label: "NYC Listing Agent Service" },
   { href: "/nyc-multifamily-real-estate-agent-service/", label: "NYC Multifamily Real Estate Agent Service" },
   { href: "/2-family-house-for-sale-nyc/", label: "2 Family House for Sale NYC" },
@@ -28,6 +29,7 @@ const SERVICE_LINKS: readonly SiteLink[] = [
   { href: "/nyc-sro-free-home-valuation/", label: "NYC SRO Free Home Valuation" },
   { href: "/nyc-co-op-free-home-valuation/", label: "NYC Co-Op Free Home Valuation" },
   { href: "/nyc-condo-free-home-valuation/", label: "NYC Condo Free Home Valuation" },
+  { href: "/brownstone-violation-assessment/", label: "Brownstone Violation Assessment" },
   { href: "/buying-a-condo-in-nyc/", label: "Buying a Condo in NYC" },
   { href: "/buying-a-brownstone-in-nyc/", label: "Buying a Brownstone in NYC" },
   { href: "/buying-sro-in-nyc/", label: "Buying SRO in NYC" },
@@ -39,9 +41,14 @@ const SERVICE_LINKS: readonly SiteLink[] = [
   { href: "/selling-brownstones-in-nyc/", label: "Selling Brownstones in NYC" },
   { href: "/home-valuation/", label: "Free Home Valuation" },
   { href: "/mortgage-calculator/", label: "Mortgage Calculator" },
+  { href: "/nyc-brownstone-buyer-closing-cost-calculator/", label: "NYC Brownstone Buyer Closing Cost Calculator" },
+  { href: "/nyc-brownstone-seller-closing-cost-calculator/", label: "NYC Brownstone Seller Closing Cost Calculator" },
+  { href: "/nyc-rent-vs-buy-brownstone-calculator/", label: "NYC Rent vs Buy Brownstone Calculator" },
+  { href: "/nyc-condo-vs-brownstone-calculator/", label: "NYC Condo vs Brownstone Calculator" },
   { href: "/nyc-first-time-home-buyer-mortages/", label: "NYC First-Time Home Buyer Mortgages" },
   { href: "/nyc-brownstone-mortgages/", label: "NYC Brownstone Mortgages" },
   { href: "/nyc-sro-mortgages/", label: "NYC SRO Mortgages" },
+  { href: "/current-listings/", label: "Current Listings" },
   { href: "/idx-sales/", label: "Search Homes for Sale" },
   { href: "/idx-rentals/", label: "Search Rentals" },
 ];

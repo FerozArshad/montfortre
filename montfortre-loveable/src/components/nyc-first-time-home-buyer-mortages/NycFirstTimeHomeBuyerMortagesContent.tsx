@@ -63,7 +63,7 @@ export default function NycFirstTimeHomeBuyerMortagesContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>NYC First Time Home Buyer Mortgages: Complete Guide for New York City</h1>
+            <h2 className="tf-guide-title">NYC First Time Home Buyer Mortgages: Complete Guide for New York City</h2>
             <div className="tf-guide-rule" />
             <p>If you&apos;re buying your first home in New York City, the mortgage process will shape every decision you make, from which neighborhoods you can afford to how competitive your offer looks to a seller. First-time home buyers in New York City have specialized mortgage and assistance options that can reduce your upfront costs by tens of thousands of dollars, but only if you understand them before you start touring apartments. I&apos;m Stanley Montfort, and over the past 11 years as a licensed NYC buyer&apos;s agent, I&apos;ve walked hundreds of first-time buyers through this process. This guide covers what I tell every new buyer before they begin.</p>
 

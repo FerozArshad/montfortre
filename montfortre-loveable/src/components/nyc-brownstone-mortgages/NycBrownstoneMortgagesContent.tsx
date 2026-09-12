@@ -65,7 +65,7 @@ export default function NycBrownstoneMortgagesContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>NYC Brownstone Mortgages: Complete Financing Guide for Buyers</h1>
+            <h2 className="tf-guide-title">NYC Brownstone Mortgages: Complete Financing Guide for Buyers</h2>
             <div className="tf-guide-rule" />
             <p>
               Financing an NYC brownstone is rarely as straightforward as getting a mortgage for a condo or a typical

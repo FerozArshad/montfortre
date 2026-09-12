@@ -77,11 +77,14 @@ export default function NycBuyersAgentContent() {
               We&apos;ll help you make a <strong>confident real estate purchase</strong> by identifying hidden risks,
               negotiating favorable terms, and ensuring <strong>you buy the right property</strong> at the right price.
             </p>
-            <div className="tf-hero-ctas">
+            <div className="tf-hero-ctas tf-hero-ctas--sym">
+              <a href="/nyc-brownstone-buyer-access/" className="tf-hero-book">
+                Find MY Off-Market Brownstone
+              </a>
               <a href="tel:+16469701078" className="tf-hero-tel">
                 Call 1-(646)-970-1078
               </a>
-              <a href="https://calendly.com/montfort" className="tf-hero-book">
+              <a href="https://calendly.com/montfort" className="tf-hero-book tf-hero-book--span">
                 Schedule A Consultation
               </a>
             </div>
@@ -100,7 +103,7 @@ export default function NycBuyersAgentContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>Expert Buyer&apos;s Agent: Real Estate Representation for Home Buyers in NYC</h1>
+            <h2 className="tf-guide-title">Expert Buyer&apos;s Agent: Real Estate Representation for Home Buyers in NYC</h2>
             <div className="tf-guide-rule" />
             <h2>
               Professional Guidance for <a href="/" className="tf-guide-link">Buying a Home in NYC</a>
@@ -141,7 +144,9 @@ export default function NycBuyersAgentContent() {
               right home and navigating the NYC market successfully.
             </p>
             <p>
-              <strong>CTA Button: Book Your Buyer Consult Today and Get the Home You Want!</strong>
+              <a href="/nyc-brownstone-buyer-access/" className="tf-hero-book">
+                Find MY Off-Market Brownstone
+              </a>
             </p>
             <h2>Why You Need a Buyer’s Agent in NYC</h2>
             <p>
@@ -197,6 +202,11 @@ export default function NycBuyersAgentContent() {
             <p>
               Working with a pro ensures your interests stay top priority from your first showing to closing day, with
               your buyer’s agent serving as your trusted advisor throughout the journey.
+            </p>
+            <p>
+              <a href="/nyc-brownstone-buyer-access/" className="tf-hero-book">
+                Find MY Off-Market Brownstone
+              </a>
             </p>
             <h2>
               <a
@@ -545,16 +555,18 @@ export default function NycBuyersAgentContent() {
               really want.
             </p>
             <div className="tf-cta-card">
-              <div className="tf-cta-actions">
+              <div className="tf-cta-actions tf-cta-actions--sym">
                 <a href="tel:+16469701078" className="tf-cta-tel">
                   Call 1-(646)-970-1078
                 </a>
-                <a href="https://calendly.com/montfort" className="tf-cta-book">
+                <a href="/nyc-brownstone-buyer-access/" className="tf-cta-book">
+                  Find MY Off-Market Brownstone
+                </a>
+                <a href="https://calendly.com/montfort" className="tf-cta-book tf-cta-book--span">
                   Schedule A Consultation
                 </a>
               </div>
               <div className="tf-cta-meta">
-                8 West 126th Street, New York NY 10027 ·{" "}
                 <a href="mailto:sm@montfortre.com" className="tf-cta-mail">
                   sm@montfortre.com
                 </a>

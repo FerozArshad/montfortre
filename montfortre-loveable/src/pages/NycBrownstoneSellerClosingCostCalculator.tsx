@@ -15,11 +15,12 @@ export default function NycBrownstoneSellerClosingCostCalculator() {
     >
       <CalculatorToolContent
         kicker="Seller closing costs"
-        title="NYC Seller Closing Cost Calculator"
-        lead="Estimate broker commission, NYC and NYS transfer taxes, flip tax, attorney fees, and your net sale proceeds before listing."
+        title="NYC Brownstone Seller Closing Cost Calculator"
+        lead="Estimate broker commission, NYC and NYS transfer taxes, flip tax, attorney fees, and your net sale proceeds before you list."
         screenLabel="Seller closing cost calculator"
         heroImage="/redesign-assets/services/home-valuation.webp"
-        heroImageAlt="NYC seller closing cost calculator"
+        heroImageAlt="NYC brownstone seller closing cost calculator"
+        heroHints={["~8–10% typical seller costs", "5–6% broker commission", "Flip tax on many co-ops"]}
         intro={<SellerClosingCostIntro />}
         calculator={<SellerClosingCostCalculator />}
         guide={<SellerClosingCostGuide />}

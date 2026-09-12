@@ -69,7 +69,7 @@ export default function SellingCoOpsInNycContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>Expert Co-op Selling Services in NYC</h1>
+            <h2 className="tf-guide-title">Expert Co-op Selling Services in NYC</h2>
             <div className="tf-guide-rule" />
             <h2>Trusted NYC Co-op Listing Agent - Maximize Your Sale Price and Navigate Board Requirements</h2>
             <p>

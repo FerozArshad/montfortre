@@ -21,6 +21,7 @@ export const BUYING_SRO_METAS = [
     "name": "twitter:description",
     "content": "Learn how to buy SRO property in NYC with expert guidance on single room occupancy investments, regulations, cash flow potential, and multifamily opportunities."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const BUYING_SRO_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

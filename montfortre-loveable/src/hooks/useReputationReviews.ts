@@ -14,19 +14,24 @@ type ReviewsState = {
   error: string | null;
 };
 
-function shuffleReviews(rows: ReputationReview[]): ReputationReview[] {
-  const next = [...rows];
-  for (let i = next.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [next[i], next[j]] = [next[j], next[i]];
-  }
-  return next;
+/** Newest published reviews first; undated curated slides keep relative order at the end. */
+function sortNewestFirst(rows: ReputationReview[]): ReputationReview[] {
+  return [...rows].sort((a, b) => {
+    const aTime = a.publishedAt ? Date.parse(a.publishedAt) : Number.NaN;
+    const bTime = b.publishedAt ? Date.parse(b.publishedAt) : Number.NaN;
+    const aOk = Number.isFinite(aTime);
+    const bOk = Number.isFinite(bTime);
+    if (aOk && bOk) return bTime - aTime;
+    if (aOk) return -1;
+    if (bOk) return 1;
+    return 0;
+  });
 }
 
 /** Live Google reviews (Places API) with curated Montfort fallback — no iframe. */
 export default function useReputationReviews() {
   const [state, setState] = useState<ReviewsState>({
-    reviews: shuffleReviews(CURATED_REVIEWS).slice(0, 8),
+    reviews: sortNewestFirst(CURATED_REVIEWS),
     aggregate: DEFAULT_AGGREGATE,
     loading: true,
     error: null,
@@ -34,48 +39,30 @@ export default function useReputationReviews() {
 
   useEffect(() => {
     let cancelled = false;
-    let pool: ReputationReview[] = CURATED_REVIEWS;
-    let reshuffleTimer = 0;
-
-    const applyPool = (source: ReputationReview[]) => {
-      pool = source.length ? source : CURATED_REVIEWS;
-      setState((prev) => ({
-        ...prev,
-        reviews: shuffleReviews(pool).slice(0, Math.max(8, Math.min(pool.length, 12))),
-        loading: false,
-        error: null,
-      }));
-    };
 
     fetchGoogleReviews()
       .then(({ reviews, aggregate }) => {
         if (cancelled) return;
-        setState((prev) => ({ ...prev, aggregate }));
-        applyPool(reviews.length ? reviews : CURATED_REVIEWS);
+        const source = reviews.length ? reviews : CURATED_REVIEWS;
+        setState({
+          reviews: sortNewestFirst(source),
+          aggregate,
+          loading: false,
+          error: null,
+        });
       })
       .catch((err: unknown) => {
         if (cancelled) return;
-        setState((prev) => ({
-          ...prev,
+        setState({
+          reviews: sortNewestFirst(CURATED_REVIEWS),
           aggregate: DEFAULT_AGGREGATE,
           loading: false,
           error: err instanceof Error ? err.message : "Failed to load reviews",
-        }));
-        applyPool(CURATED_REVIEWS);
+        });
       });
-
-    // Re-shuffle the visible deck periodically so returning visitors see fresh order.
-    reshuffleTimer = window.setInterval(() => {
-      if (cancelled || document.hidden) return;
-      setState((prev) => ({
-        ...prev,
-        reviews: shuffleReviews(pool).slice(0, Math.max(8, Math.min(pool.length, 12))),
-      }));
-    }, 90_000);
 
     return () => {
       cancelled = true;
-      window.clearInterval(reshuffleTimer);
     };
   }, []);
 

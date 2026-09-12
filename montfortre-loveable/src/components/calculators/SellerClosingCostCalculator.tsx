@@ -5,6 +5,7 @@ import {
 } from "../../lib/nycSellerClosingCostMath";
 import { formatMoney, parseCalcNumber } from "../../lib/calculatorUtils";
 import { CalculatorBreakdown, CalculatorField, MoneyInput, NumberInput } from "./shared/CalculatorFields";
+import CalculatorEmailResults from "./CalculatorEmailResults";
 import "../../styles/calculator-tools.css";
 
 const PROPERTY_TYPES: { value: SellerPropertyType; label: string }[] = [
@@ -15,6 +16,10 @@ const PROPERTY_TYPES: { value: SellerPropertyType; label: string }[] = [
   { value: "5plus", label: "5+ Family House" },
   { value: "commercial", label: "Commercial" },
 ];
+
+function propertyLabel(type: SellerPropertyType): string {
+  return PROPERTY_TYPES.find((t) => t.value === type)?.label ?? type;
+}
 
 export default function SellerClosingCostCalculator() {
   const [salePrice, setSalePrice] = useState("1500000");
@@ -41,8 +46,38 @@ export default function SellerClosingCostCalculator() {
     [price, propertyType, brokerCommissionPct, buildingFlipTax, sellerAttorneyFee, hasExistingMortgage, sellerPowerOfAttorney],
   );
 
+  const commissionLine = result.lines.find((l) => /commission/i.test(l.label));
+  const transferLines = result.lines.filter((l) => /transfer/i.test(l.label));
+  const transferTotal = transferLines.reduce((sum, l) => sum + l.amount, 0);
+  const otherTotal = result.total - (commissionLine?.amount ?? 0) - transferTotal;
+
+  function reset() {
+    setSalePrice("1500000");
+    setPropertyType("condo");
+    setBrokerCommissionPct("6");
+    setBuildingFlipTax("0");
+    setSellerAttorneyFee("3500");
+    setHasExistingMortgage(true);
+    setSellerPowerOfAttorney(false);
+  }
+
   return (
-    <div className="calc-tool" id="seller-closing-cost-calculator" data-screen-label="Seller closing cost calculator">
+    <div className="calc-tool calc-tool--seller" id="seller-closing-cost-calculator" data-screen-label="Seller closing cost calculator">
+      <div className="calc-tool-topbar">
+        <div>
+          <p className="calc-tool-topbar-kicker">Live estimate</p>
+          <h3>NYC seller closing costs</h3>
+        </div>
+        <div className="calc-actions calc-actions--top">
+          <button type="button" className="calc-btn calc-btn--ghost" onClick={reset}>
+            Reset
+          </button>
+          <button type="button" className="calc-btn calc-btn--ghost" onClick={() => window.print()}>
+            Print PDF
+          </button>
+        </div>
+      </div>
+
       <div className="calc-tool-grid">
         <div className="calc-tool-inputs">
           <h3>Property Details</h3>
@@ -67,60 +102,82 @@ export default function SellerClosingCostCalculator() {
           <CalculatorField label="Seller's Attorney Fee">
             <MoneyInput value={sellerAttorneyFee} onChange={setSellerAttorneyFee} />
           </CalculatorField>
-          <label className="calc-radio">
+          <label className="calc-check">
             <input
               type="checkbox"
               checked={hasExistingMortgage}
               onChange={(e) => setHasExistingMortgage(e.target.checked)}
             />
-            Existing mortgage to pay off
+            <span>Existing mortgage to pay off</span>
           </label>
-          <label className="calc-radio">
+          <label className="calc-check">
             <input
               type="checkbox"
               checked={sellerPowerOfAttorney}
               onChange={(e) => setSellerPowerOfAttorney(e.target.checked)}
             />
-            Seller power of attorney
+            <span>Seller power of attorney</span>
           </label>
-          <div className="calc-actions">
-            <button
-              type="button"
-              className="calc-btn calc-btn--ghost"
-              onClick={() => {
-                setSalePrice("1500000");
-                setPropertyType("condo");
-                setBrokerCommissionPct("6");
-                setBuildingFlipTax("0");
-                setSellerAttorneyFee("3500");
-                setHasExistingMortgage(true);
-                setSellerPowerOfAttorney(false);
-              }}
-            >
-              Reset
-            </button>
-            <button type="button" className="calc-btn calc-btn--ghost" onClick={() => window.print()}>
-              Print PDF
-            </button>
-          </div>
+
+          <CalculatorEmailResults
+            title="Seller Closing Cost Estimate"
+            summary={`Seller estimate on a $${formatMoney(price)} ${propertyLabel(propertyType)} sale.`}
+            lines={result.lines.map((line) => ({
+              label: line.label,
+              amount: line.amount,
+            }))}
+            totalLabel="Estimated net proceeds"
+            totalValue={`$${formatMoney(result.netProceeds)}`}
+            sourcePage="/nyc-brownstone-seller-closing-cost-calculator/"
+          />
         </div>
+
         <div className="calc-tool-results">
-          <h3>Estimated Closing Costs</h3>
-          <div className="calc-total">
-            <strong>${formatMoney(result.total)}</strong>
-            <span>{result.totalPct.toFixed(2)}% of sale price</span>
-          </div>
-          <CalculatorBreakdown lines={result.lines} total={result.total} />
-          <div className="calc-breakdown calc-breakdown--stack" style={{ marginTop: 12 }}>
-            <div className="calc-breakdown-row">
-              <strong>Net sale proceeds</strong>
-              <span />
-              <strong>${formatMoney(result.netProceeds)}</strong>
+          <div className="calc-total calc-total--hero">
+            <div>
+              <kbd>Estimated seller costs</kbd>
+              <strong>${formatMoney(result.total)}</strong>
+              <span>
+                {result.totalPct.toFixed(2)}% of ${formatMoney(price)} · {propertyLabel(propertyType)}
+              </span>
             </div>
           </div>
+
+          <div className="calc-cards calc-cards--3">
+            <article className="calc-card">
+              <kbd>Commission</kbd>
+              <strong>${formatMoney(commissionLine?.amount ?? 0)}</strong>
+              <p>{brokerCommissionPct}% broker fee</p>
+            </article>
+            <article className="calc-card">
+              <kbd>Transfer taxes</kbd>
+              <strong>${formatMoney(transferTotal)}</strong>
+              <p>NYC + NYS transfer</p>
+            </article>
+            <article className="calc-card">
+              <kbd>Other fees</kbd>
+              <strong>${formatMoney(otherTotal)}</strong>
+              <p>Attorney, flip tax &amp; misc.</p>
+            </article>
+          </div>
+
+          <h4 className="calc-subheading">Line-item breakdown</h4>
+          <CalculatorBreakdown lines={result.lines} total={result.total} totalLabel="Seller-cost total" />
+
+          <div className="calc-total calc-total--hero" style={{ marginTop: 18 }}>
+            <div>
+              <kbd>Estimated net proceeds</kbd>
+              <strong>${formatMoney(result.netProceeds)}</strong>
+              <span>Sale price minus estimated closing costs</span>
+            </div>
+          </div>
+
           <div className="calc-highlight">
             <strong>You may net ~${formatMoney(result.netProceeds)}</strong>
-            <span>After estimated seller closing costs on a ${formatMoney(price)} sale.</span>
+            <span>
+              Educational estimate for a {propertyLabel(propertyType).toLowerCase()} at ${formatMoney(price)}. Confirm
+              with your attorney and listing agreement before you rely on a net sheet.
+            </span>
           </div>
         </div>
       </div>

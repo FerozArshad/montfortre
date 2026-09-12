@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2022/08/ChatGPT-Image-11-jun-2026-19-45-32-1024x683.fit.png",
+  featuredImageSrc: "/redesign-assets/blog/a-timeline-for-renovating-your-brownstone/featured.png",
   featuredImageAlt: "A Timeline for Renovating Your Brownstone",
   shareUrl: "https://montfortre.com/a-timeline-for-renovating-your-brownstone/",
   toc: [

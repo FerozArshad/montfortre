@@ -87,7 +87,7 @@ export default function FourFamilyContent() {
         <div className="tf-guide-inner">
           <div data-reveal="">
             <div className="tf-guide-kicker">Buyer&apos;s Guide</div>
-            <h1>4 Family House for Sale NYC: Complete Buyer&apos;s Guide</h1>
+            <h2 className="tf-guide-title">4 Family House for Sale NYC: Complete Buyer&apos;s Guide</h2>
             <div className="tf-guide-rule" />
 
             <p>Buying a four-family house in New York City is one of the smartest moves a real estate investor or owner-occupant can make-but only if you understand exactly what you&apos;re getting into. These properties combine <a href="/nyc-first-time-home-buyer-mortages/" className="tf-guide-link">residential financing opportunities</a> with the operational complexity of a small apartment building, and that unique position demands a buyer who evaluates legal compliance, building systems, tenant stability, operating costs, and long-term ownership strategy-not simply rental income.</p>

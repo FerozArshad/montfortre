@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2022/02/1-3-1024x576.jpg",
+  featuredImageSrc: "/redesign-assets/blog/all-about-taxes-when-you-sell-your-new-york-home/featured.jpg",
   featuredImageAlt: "Taxes When Selling a Home in New York: What to Know",
   shareUrl: "https://montfortre.com/all-about-taxes-when-you-sell-your-new-york-home/",
   toc: [

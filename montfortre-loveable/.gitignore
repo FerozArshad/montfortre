@@ -36,4 +36,8 @@ dist-ssr
 *.sln
 *.sw?
 
+# Docs / session notes — never ship markdown
+*.md
+**/*.md
+
 .fullgit/

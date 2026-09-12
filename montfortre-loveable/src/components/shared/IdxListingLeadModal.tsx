@@ -5,7 +5,7 @@ import {
   hasLeadErrors,
   leadValidationMessage,
   type LeadFieldErrors,
-  validateLeadFields,
+  validateLeadFieldsAsync,
 } from "../../lib/leadValidation";
 import { readLeadHoneypot } from "../../lib/leadFormSecurity";
 import { useLeadFormTurnstile } from "../../hooks/useLeadFormTurnstile";
@@ -77,7 +77,7 @@ export default function IdxListingLeadModal({
       requireMessage: false,
     };
 
-    const nextErrors = validateLeadFields(payload);
+    const nextErrors = await validateLeadFieldsAsync(payload);
     setFieldErrors(nextErrors);
     if (hasLeadErrors(nextErrors)) {
       setError(leadValidationMessage(nextErrors));
@@ -145,19 +145,49 @@ export default function IdxListingLeadModal({
             <div className="listing-lead-grid">
               <label className="listing-field">
                 <span>First Name *</span>
-                <input name="firstName" type="text" autoComplete="given-name" />
+                <input
+                  name="firstName"
+                  type="text"
+                  autoComplete="given-name"
+                  className={fieldErrors.firstName ? "form-field--invalid" : ""}
+                  aria-invalid={Boolean(fieldErrors.firstName)}
+                />
+                {fieldErrors.firstName ? <span className="form-field-hint">{fieldErrors.firstName}</span> : null}
               </label>
               <label className="listing-field">
                 <span>Last Name *</span>
-                <input name="lastName" type="text" autoComplete="family-name" />
+                <input
+                  name="lastName"
+                  type="text"
+                  autoComplete="family-name"
+                  className={fieldErrors.lastName ? "form-field--invalid" : ""}
+                  aria-invalid={Boolean(fieldErrors.lastName)}
+                />
+                {fieldErrors.lastName ? <span className="form-field-hint">{fieldErrors.lastName}</span> : null}
               </label>
               <label className="listing-field">
                 <span>Email *</span>
-                <input name="email" type="email" autoComplete="email" />
+                <input
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  className={fieldErrors.email ? "form-field--invalid" : ""}
+                  aria-invalid={Boolean(fieldErrors.email)}
+                />
+                {fieldErrors.email ? <span className="form-field-hint">{fieldErrors.email}</span> : null}
               </label>
               <label className="listing-field">
                 <span>Phone *</span>
-                <input name="phone" type="tel" autoComplete="tel" inputMode="tel" />
+                <input
+                  name="phone"
+                  type="tel"
+                  autoComplete="tel"
+                  inputMode="tel"
+                  placeholder="(555) 555-5555"
+                  className={fieldErrors.phone ? "form-field--invalid" : ""}
+                  aria-invalid={Boolean(fieldErrors.phone)}
+                />
+                {fieldErrors.phone ? <span className="form-field-hint">{fieldErrors.phone}</span> : null}
               </label>
             </div>
             <label className="listing-field">

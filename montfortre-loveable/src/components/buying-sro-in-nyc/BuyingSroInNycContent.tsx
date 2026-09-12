@@ -69,7 +69,7 @@ export default function BuyingSroInNycContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>SRO Housing New York City: Making a Smart Investment</h1>
+            <h2 className="tf-guide-title">SRO Housing New York City: Making a Smart Investment</h2>
             <div className="tf-guide-rule" />
             <p>
               Single room occupancy housing (SRO housing) in NYC is a vital piece of the city’s affordable housing

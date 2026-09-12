@@ -110,7 +110,7 @@ html.mfr-header-scrolled .mfr-mobile-header {
   }
   /* Skip images that set their own inline height (logos, icons): forcing
      height:auto would blow them up to their natural pixel size. */
-  img:not([style*="position:absolute"]):not([style*="object-fit"]):not([style*="height:"]):not(.site-footer-logo-img):not(.bsg-hero-image):not(.listing-cover-img):not(.pls-card-photo):not(.home-list-photo):not(.resources-card-photo):not(.nbhd-hero-photo):not(.hlm-type-photo):not(.hlm-article-photo):not(.nbhd-guide-img) {
+  img:not([style*="position:absolute"]):not([style*="object-fit"]):not([style*="height:"]):not(.site-footer-logo-img):not(.bsg-hero-image):not(.listing-cover-img):not(.pls-card-photo):not(.home-list-photo):not(.resources-card-photo):not(.nbhd-hero-photo):not(.hlm-type-photo):not(.hlm-article-photo):not(.nbhd-guide-img):not(.cl-hero-photo-img) {
     height: auto !important;
   }
   iframe {

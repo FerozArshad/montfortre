@@ -1,0 +1,139 @@
+.calc-xlink {
+  background: #f5eecb;
+  padding: 100px 64px;
+  border-top: 1px solid #e0d9b8;
+}
+
+.calc-xlink-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.calc-xlink-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.calc-xlink-kicker-line {
+  width: 28px;
+  height: 3px;
+  background: #c98a2c;
+}
+
+.calc-xlink-kicker-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b5a3e;
+}
+
+.calc-xlink-head h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #0f1729;
+  margin: 0;
+}
+
+.calc-xlink-head p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #3b4c5e;
+  margin: 12px 0 0;
+  max-width: 640px;
+}
+
+.calc-xlink-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.calc-xlink-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 12px 36px rgba(15, 23, 41, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calc-xlink-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 44px rgba(15, 23, 41, 0.12);
+}
+
+.calc-xlink-media {
+  aspect-ratio: 16 / 9;
+  background: #e0d9b8;
+  overflow: hidden;
+}
+
+.calc-xlink-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.calc-xlink-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #0f1729;
+  margin: 20px 22px 0;
+}
+
+.calc-xlink-excerpt {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #3b4c5e;
+  margin: 10px 22px 0;
+  flex: 1;
+}
+
+.calc-xlink-more {
+  margin: 18px 22px 24px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #113b5f;
+}
+
+@media (max-width: 1024px) {
+  .calc-xlink {
+    padding: 80px 40px;
+  }
+
+  .calc-xlink-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .calc-xlink-head h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calc-xlink {
+    padding: 64px 20px;
+  }
+
+  .calc-xlink-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .calc-xlink-head h2 {
+    font-size: 28px;
+  }
+}

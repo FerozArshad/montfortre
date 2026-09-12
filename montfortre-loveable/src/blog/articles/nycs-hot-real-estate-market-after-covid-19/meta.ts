@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2021/10/Blog-Real-estate-prices-in-NYC-after-Covid-19-1-1024x769.jpg",
+  featuredImageSrc: "/redesign-assets/blog/nycs-hot-real-estate-market-after-covid-19/featured.jpg",
   featuredImageAlt: "NYC’s Hot Real Estate Market after Covid-19",
   shareUrl: "https://montfortre.com/nycs-hot-real-estate-market-after-covid-19/",
   toc: [

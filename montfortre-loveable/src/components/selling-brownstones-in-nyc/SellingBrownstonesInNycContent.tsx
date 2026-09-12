@@ -69,7 +69,7 @@ export default function SellingBrownstonesInNycContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>Selling Brownstones in NYC: Your Complete Guide to Maximizing Value</h1>
+            <h2 className="tf-guide-title">Selling Brownstones in NYC: Your Complete Guide to Maximizing Value</h2>
             <div className="tf-guide-rule" />
             <h2>Expert Brownstone Selling Services in Manhattan and Brooklyn</h2>
             <p>

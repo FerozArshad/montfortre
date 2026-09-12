@@ -20,7 +20,9 @@ export const IDX_SALES_METAS = [
   },
   { property: "og:url", content: "https://montfortre.com/idx-sales/" },
   { property: "og:site_name", content: "Montfort Real Estate" },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   { name: "twitter:card", content: "summary_large_image" },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
 ] as const;
 
 export const IDX_SALES_LINKS = [

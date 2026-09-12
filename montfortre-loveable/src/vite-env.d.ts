@@ -2,4 +2,5 @@
 
 interface ImportMetaEnv {
   readonly VITE_PUBLIC_SITE_URL?: string;
+  readonly VITE_BIGDATACLOUD_API_KEY?: string;
 }

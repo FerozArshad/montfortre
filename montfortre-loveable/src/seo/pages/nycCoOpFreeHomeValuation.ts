@@ -21,6 +21,7 @@ export const NYC_CO_OP_VALUATION_METAS = [
     "name": "twitter:description",
     "content": "Get a free co-op home valuation in NYC with Montfort Real Estate. Discover your co-op’s market value with expert analysis tailored to New York City co-op buildings and buyer demand."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const NYC_CO_OP_VALUATION_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

@@ -21,6 +21,7 @@ export const BLOG_METAS = [
     "name": "twitter:description",
     "content": "Explore real estate insights, market trends and expert guides on buying, selling and investing in New York City property."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const BLOG_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

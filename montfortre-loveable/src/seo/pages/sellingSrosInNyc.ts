@@ -21,6 +21,7 @@ export const SELLING_SROS_METAS = [
     "name": "twitter:description",
     "content": "Sell your NYC SRO property with expert valuation, investor-focused marketing, and strategic positioning. Montfort helps maximize exposure and attract qualified SRO buyers across New York City."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const SELLING_SROS_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

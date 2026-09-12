@@ -10,8 +10,8 @@ interface NeighborhoodHubHeroProps {
 }
 
 /**
- * Hero for the neighborhood hub pages. The title is a styled paragraph rather
- * than a heading: these pages already carry their h1 in the article below.
+ * Hero for the neighborhood hub pages. Uses a single page h1 for SEO;
+ * property-type pages under each hub keep their own article h1.
  */
 export default function NeighborhoodHubHero({ name, image, lead }: NeighborhoodHubHeroProps) {
   return (
@@ -25,7 +25,7 @@ export default function NeighborhoodHubHero({ name, image, lead }: NeighborhoodH
             </a>{" "}
             <span className="nbhd-crumb-sep">/</span> <span className="nbhd-crumb-here">{name}</span>
           </div>
-          <p className="nbhd-hero-title">{name} real estate</p>
+          <h1 className="nbhd-hero-title">{name} real estate</h1>
           <p className="nbhd-hero-lead">{lead}</p>
           <div className="nbhd-hero-ctas">
             <a href="tel:+16469701078" className="nbhd-hero-tel">

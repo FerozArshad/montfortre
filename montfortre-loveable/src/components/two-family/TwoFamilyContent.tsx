@@ -62,7 +62,7 @@ export default function TwoFamilyContent() {
         <div className="tf-guide-inner">
           <div data-reveal="">
             <div className="tf-guide-kicker">Buyer's Guide</div>
-            <h1>2 Family House for Sale NYC: your complete buyer's guide</h1>
+            <h2 className="tf-guide-title">2 Family House for Sale NYC: your complete buyer's guide</h2>
             <div className="tf-guide-rule" />
 
             <p>If you're searching for a 2 family house for sale in NYC, you're not just buying a home, you're evaluating an income-producing asset in one of the most complex real estate markets in the country. The difference between a smart purchase and a costly mistake often comes down to understanding legal configuration, realistic rental income, financing options, and the dozens of details that don't show up in a listing photo. I'm Stanley Montfort, a NYC buyer's agent specializing in multifamily properties, and this guide walks you through everything I tell my clients before they make an offer.</p>

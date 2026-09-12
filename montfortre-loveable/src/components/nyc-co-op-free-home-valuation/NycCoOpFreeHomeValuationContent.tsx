@@ -63,7 +63,7 @@ export default function NycCoOpFreeHomeValuationContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>Free NYC Co-op Home Valuation</h1>
+            <h2 className="tf-guide-title">Free NYC Co-op Home Valuation</h2>
             <div className="tf-guide-rule" />
             <h2>Why NYC Co-op Owners Trust Stanley Montfort</h2>
             <p>

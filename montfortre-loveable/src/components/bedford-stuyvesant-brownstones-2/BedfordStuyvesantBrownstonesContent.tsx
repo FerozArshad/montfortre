@@ -7,6 +7,7 @@ import "../../styles/bedford-stuyvesant-brownstones-page.css";
 import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PageListingsSection from "../shared/PageListingsSection";
 import PageContactSection from "../shared/PageContactSection";
+import NeighborhoodMistakesLead from "../shared/NeighborhoodMistakesLead";
 import NeighborhoodGuideBody from "../shared/NeighborhoodGuideBody";
 import bedStuyBrownstonesGuide from "../../data/neighborhood-guides/bedford-stuyvesant-brownstones-2.html?raw";
 
@@ -87,6 +88,8 @@ export default function BedfordStuyvesantBrownstonesContent() {
         showCta={false}
         articles={NEWS_ARTICLES}
       />
+
+      <NeighborhoodMistakesLead neighborhood="Bedford Stuyvesant" brownstoneHref="/bedford-stuyvesant-brownstones-2/" />
 
       <PageContactSection topic="Bedford Stuyvesant Brownstones" />
     </>

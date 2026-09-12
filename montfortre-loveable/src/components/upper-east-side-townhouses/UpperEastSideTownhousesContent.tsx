@@ -7,6 +7,7 @@ import "../../styles/upper-east-side-townhouses-page.css";
 import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PageListingsSection from "../shared/PageListingsSection";
 import PageContactSection from "../shared/PageContactSection";
+import NeighborhoodMistakesLead from "../shared/NeighborhoodMistakesLead";
 import NeighborhoodGuideBody from "../shared/NeighborhoodGuideBody";
 import uesTownhousesGuide from "../../data/neighborhood-guides/upper-east-side-townhouses.html?raw";
 
@@ -88,6 +89,8 @@ export default function UpperEastSideTownhousesContent() {
         showCta={false}
         articles={NEWS_ARTICLES}
       />
+
+      <NeighborhoodMistakesLead neighborhood="Upper East Side" brownstoneHref="/upper-east-side-townhouses/" />
 
       <PageContactSection topic="Upper East Side Townhouses" />
     </>

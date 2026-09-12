@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2022/01/ChatGPT-Image-11-jun-2026-19-55-36-1024x683.fit.png",
+  featuredImageSrc: "/redesign-assets/blog/co-ownership-advantages-and-disadvantages-in-nyc/featured.png",
   featuredImageAlt: "Co-Ownership in NYC: Pros and Cons",
   shareUrl: "https://montfortre.com/co-ownership-advantages-and-disadvantages-in-nyc/",
   toc: [

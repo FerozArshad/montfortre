@@ -21,6 +21,7 @@ export const FOUR_FAMILY_METAS = [
     "name": "twitter:description",
     "content": "Explore 4 family houses for sale in NYC with Montfort Real Estate. Find income-producing multi-family properties, brownstones, and investment opportunities across Brooklyn and Manhattan."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const FOUR_FAMILY_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

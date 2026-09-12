@@ -15,11 +15,12 @@ export default function NycBrownstoneBuyerClosingCostCalculator() {
     >
       <CalculatorToolContent
         kicker="Buyer closing costs"
-        title="NYC Buyer Closing Cost Calculator"
-        lead="Estimate mansion tax, title insurance, mortgage recording tax, and financing-related fees for NYC condos, co-ops, and townhouses."
+        title="NYC Brownstone Buyer Closing Cost Calculator"
+        lead="Estimate mansion tax, title insurance, mortgage recording tax, and financing fees for NYC condos, co-ops, and brownstones — before you write the offer."
         screenLabel="Buyer closing cost calculator"
         heroImage="/redesign-assets/services/mortgage.webp"
-        heroImageAlt="NYC buyer closing cost calculator"
+        heroImageAlt="NYC brownstone buyer closing cost calculator"
+        heroHints={["~2% co-op rule of thumb", "~4% condo / house when financed", "6%+ new development"]}
         intro={<BuyerClosingCostIntro />}
         calculator={<BuyerClosingCostCalculator />}
         guide={<BuyerClosingCostGuide />}

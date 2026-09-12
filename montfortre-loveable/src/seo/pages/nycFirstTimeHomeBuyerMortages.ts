@@ -22,6 +22,10 @@ export const NYC_FIRST_TIME_HOME_BUYER_MORTAGES_METAS = [
     "content": "Discover NYC first time home buyer mortgage solutions with Montfort Mortgage. Explore financing options, pre-approvals, and expert guidance for buying your first home in New York City."
   },
   {
+    "name": "twitter:image",
+    "content": "https://montfortre.com/og-home.jpg"
+  },
+  {
     "property": "og:locale",
     "content": "en_US"
   },
@@ -44,6 +48,10 @@ export const NYC_FIRST_TIME_HOME_BUYER_MORTAGES_METAS = [
   {
     "property": "og:site_name",
     "content": "Montfort Real Estate"
+  },
+  {
+    "property": "og:image",
+    "content": "https://montfortre.com/og-home.jpg"
   }
 ] as const;
 

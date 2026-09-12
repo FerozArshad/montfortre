@@ -17,6 +17,7 @@ export default function NycRentVsBuyBrownstoneCalculator() {
         screenLabel="Rent vs buy brownstone calculator"
         heroImage="/redesign-assets/services/buyers-agent.webp"
         heroImageAlt="NYC brownstone rent vs buy calculator"
+        heroHints={["Net cost after rent", "2–4 unit house-hack math", "Illustrative tax offsets"]}
         intro={<RentVsBuyIntro />}
         calculator={<RentVsBuyBrownstoneCalculator />}
         guide={<RentVsBuyGuide />}

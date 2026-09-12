@@ -96,6 +96,16 @@
   margin-top: 34px;
 }
 
+.tf-hero-ctas--sym {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 640px;
+}
+
+.tf-hero-ctas--sym .tf-hero-book--span {
+  grid-column: 1 / -1;
+}
+
 .two-family-page a.tf-hero-book {
   display: inline-flex;
   align-items: center;
@@ -344,7 +354,8 @@
   color: #c98a2c;
 }
 
-.tf-guide h1 {
+.tf-guide h1,
+.tf-guide .tf-guide-title {
   font-family: "Space Grotesk", system-ui, sans-serif;
   font-weight: 700;
   font-size: 42px;
@@ -481,6 +492,23 @@
   margin-top: 28px;
 }
 
+.tf-cta-actions--sym {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tf-cta-actions--sym .tf-cta-book--span {
+  grid-column: 1 / -1;
+}
+
+.tf-cta-actions--sym .tf-cta-tel,
+.tf-cta-actions--sym .tf-cta-book {
+  width: 100%;
+}
+
 .two-family-page a.tf-cta-tel {
   display: inline-flex;
   align-items: center;
@@ -592,6 +620,17 @@
     flex-wrap: nowrap;
     gap: 8px;
     width: 100%;
+  }
+
+  .tf-hero-ctas--sym {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: none;
+  }
+
+  .tf-hero-ctas--sym .tf-hero-book--span {
+    grid-column: 1 / -1;
   }
 
   .two-family-page a.tf-hero-book,

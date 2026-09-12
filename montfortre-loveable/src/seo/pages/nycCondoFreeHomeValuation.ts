@@ -21,6 +21,7 @@ export const NYC_CONDO_VALUATION_METAS = [
     "name": "twitter:description",
     "content": "Get a free condo home valuation in NYC with Montfort Real Estate. Discover your condo’s market value with expert local analysis and strategic pricing insights."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const NYC_CONDO_VALUATION_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

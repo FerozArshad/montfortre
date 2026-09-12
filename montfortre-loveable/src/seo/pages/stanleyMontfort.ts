@@ -17,6 +17,7 @@ export const STANLEY_MONTFORT_METAS = [
     content:
       "Meet Stanley Montfort, NYC real estate expert specializing in brownstones and townhouses with over $1B in sales and proven results.",
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   { property: "og:locale", content: "en_US" },
   { property: "og:type", content: "article" },
   { property: "og:title", content: "Stanley Montfort | Montfort Real Estate" },
@@ -27,6 +28,7 @@ export const STANLEY_MONTFORT_METAS = [
   },
   { property: "og:url", content: "https://montfortre.com/stanley-montfort/" },
   { property: "og:site_name", content: "Montfort Real Estate" },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   { property: "article:publisher", content: "https://www.facebook.com/montfortrealestate" },
 ] as const;
 

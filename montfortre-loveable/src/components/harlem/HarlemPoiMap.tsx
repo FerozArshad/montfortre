@@ -85,7 +85,7 @@ export default function HarlemPoiMap() {
         />
         <div className="hlm-map-badge">
           <div className="hlm-map-subtitle">Welcome to</div>
-          <h1 className="hlm-map-title">Harlem</h1>
+          <h2 className="hlm-map-title">Harlem</h2>
         </div>
       </div>
       <div className="hlm-map-filters" role="toolbar" aria-label="POI Category">

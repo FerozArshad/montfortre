@@ -118,7 +118,7 @@
   box-sizing: border-box;
 }
 
-.home-page a.home-areas-card h3 {
+.home-page a.home-areas-card h2 {
   font-family: "Space Grotesk", system-ui, sans-serif;
   font-weight: 700;
   font-size: clamp(20px, 1.7vw, 27px);
@@ -252,7 +252,7 @@
     height: 400px;
   }
 
-  .home-page a.home-areas-card h3 {
+  .home-page a.home-areas-card h2 {
     font-size: 19px;
   }
 

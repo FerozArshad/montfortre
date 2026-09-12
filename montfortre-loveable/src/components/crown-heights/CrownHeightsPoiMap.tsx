@@ -89,7 +89,7 @@ export default function CrownHeightsPoiMap() {
         />
         <div className="hlm-map-badge">
           <div className="hlm-map-subtitle">Welcome to</div>
-          <h1 className="hlm-map-title">Crown Heights</h1>
+          <h2 className="hlm-map-title">Crown Heights</h2>
         </div>
       </div>
       <div className="hlm-map-filters" role="toolbar" aria-label="POI Category">

@@ -22,6 +22,10 @@ export const NYC_SRO_MORTGAGES_METAS = [
     "content": "Explore NYC SRO mortgage and financing solutions with Montfort Real Estate. Get expert guidance for Single Room Occupancy investments, refinancing, and multifamily lending in New York City."
   },
   {
+    "name": "twitter:image",
+    "content": "https://montfortre.com/og-home.jpg"
+  },
+  {
     "property": "og:locale",
     "content": "en_US"
   },
@@ -44,6 +48,10 @@ export const NYC_SRO_MORTGAGES_METAS = [
   {
     "property": "og:site_name",
     "content": "Montfort Real Estate"
+  },
+  {
+    "property": "og:image",
+    "content": "https://montfortre.com/og-home.jpg"
   }
 ] as const;
 

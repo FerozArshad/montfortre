@@ -87,7 +87,7 @@ export default function ThreeFamilyContent() {
         <div className="tf-guide-inner">
           <div data-reveal="">
             <div className="tf-guide-kicker">Buyer&apos;s Guide</div>
-            <h1>3 Family House for Sale NYC: Complete Buyer&apos;s Guide</h1>
+            <h2 className="tf-guide-title">3 Family House for Sale NYC: Complete Buyer&apos;s Guide</h2>
             <div className="tf-guide-rule" />
 
             <h2>Why Buying a 3-Family House in NYC Requires Specialized Guidance</h2>

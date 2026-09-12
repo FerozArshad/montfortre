@@ -5,6 +5,7 @@ import { fetchPublishedListings } from "../../lib/cms/listings";
 import {
   extractOlrSavedSearchId,
   fetchOlrSavedSearchListings,
+  OLR_CARD_FETCH_SIZE,
   peekOlrSavedSearchCache,
   type OlrListingCard,
 } from "../../lib/olrListings";
@@ -33,6 +34,87 @@ function matches(listing: ListingDetail, market: string, propertyType?: string):
   return type.includes(norm(propertyType));
 }
 
+function OlrListingCardButton({
+  listing,
+  onOpen,
+}: {
+  listing: OlrListingCard;
+  onOpen: (href: string, title: string) => void;
+}) {
+  const [imgSrc, setImgSrc] = useState(listing.image || "/placeholder.svg");
+
+  useEffect(() => {
+    setImgSrc(listing.image || "/placeholder.svg");
+  }, [listing.image, listing.id]);
+
+  return (
+    <button
+      type="button"
+      className="pls-card pls-card--btn"
+      onClick={() => onOpen(listing.href, listing.title)}
+    >
+      <div className="pls-card-media">
+        {listing.ribbon ? <span className="pls-card-ribbon">{listing.ribbon}</span> : null}
+        <img
+          className="pls-card-photo"
+          src={imgSrc}
+          alt={listing.title}
+          loading="lazy"
+          decoding="async"
+          onError={() => setImgSrc("/placeholder.svg")}
+        />
+      </div>
+      <div className="pls-card-body">
+        <div className="pls-card-price">{listing.price}</div>
+        <div className="pls-card-title">{listing.title}</div>
+        <div className="pls-card-meta">
+          {[listing.neighborhood, listing.borough].filter(Boolean).join(" · ")}
+        </div>
+        {listing.meta ? <div className="pls-card-meta">{listing.meta}</div> : null}
+      </div>
+    </button>
+  );
+}
+
+function ListingsPager({
+  page,
+  pageCount,
+  onPrev,
+  onNext,
+}: {
+  page: number;
+  pageCount: number;
+  onPrev: () => void;
+  onNext: () => void;
+}) {
+  if (pageCount <= 1) return null;
+  return (
+    <div className="pls-pager" role="navigation" aria-label="Listings pages">
+      <button
+        type="button"
+        className="pls-pager-btn"
+        disabled={page <= 0}
+        onClick={onPrev}
+        aria-label="Previous listings"
+      >
+        ←
+      </button>
+      <span className="pls-pager-status">
+        Page {page + 1} of {pageCount}
+      </span>
+      <button
+        type="button"
+        className="pls-pager-btn"
+        disabled={page >= pageCount - 1}
+        onClick={onNext}
+        aria-label="Next listings"
+      >
+        →
+      </button>
+    </div>
+  );
+}
+
 /**
  * Listings for one market page.
  * When idxUrl is set, loads that OLR saved search and shows 6 cards at a time
@@ -41,7 +123,7 @@ function matches(listing: ListingDetail, market: string, propertyType?: string):
 export default function PageListingsSection({ market, propertyType, label, idxUrl }: PageListingsSectionProps) {
   const searchUrl = idxUrl?.trim() || OLR_SALES_URL;
   const savedSearchId = idxUrl ? extractOlrSavedSearchId(idxUrl) : null;
-  const cachedOlr = savedSearchId ? peekOlrSavedSearchCache(savedSearchId, { pageSize: 48 }) : null;
+  const cachedOlr = savedSearchId ? peekOlrSavedSearchCache(savedSearchId, { pageSize: OLR_CARD_FETCH_SIZE }) : null;
 
   const [rows, setRows] = useState<ListingDetail[]>([]);
   const [olrListings, setOlrListings] = useState<OlrListingCard[]>(cachedOlr?.listings ?? []);
@@ -77,7 +159,7 @@ export default function PageListingsSection({ market, propertyType, label, idxUr
     }
 
     let cancelled = false;
-    const cached = peekOlrSavedSearchCache(savedSearchId, { pageSize: 48 });
+    const cached = peekOlrSavedSearchCache(savedSearchId, { pageSize: OLR_CARD_FETCH_SIZE });
     if (cached) {
       setOlrListings(cached.listings);
       setOlrTotal(cached.total);
@@ -92,7 +174,7 @@ export default function PageListingsSection({ market, propertyType, label, idxUr
     void (async () => {
       try {
         const result = await fetchOlrSavedSearchListings(savedSearchId, {
-          pageSize: 48,
+          pageSize: OLR_CARD_FETCH_SIZE,
           onUpdate: (fresh) => {
             if (cancelled) return;
             setOlrListings(fresh.listings);
@@ -161,12 +243,6 @@ export default function PageListingsSection({ market, propertyType, label, idxUr
           <div>
             <div className="pls-kicker">Current listings</div>
             <h2>{label} for sale</h2>
-            {showOlr && olrStatus === "ready" && olrListings.length > 0 ? (
-              <p className="pls-count">
-                Showing {rangeStart}–{rangeEnd} of {displayTotal} live MLS results
-                {olrListings.length < displayTotal ? " · use arrows or open full search for more" : ""}
-              </p>
-            ) : null}
           </div>
           <div className="pls-actions">
             <a href={searchUrl} target="_blank" rel="noopener noreferrer" className="pls-btn">
@@ -206,55 +282,24 @@ export default function PageListingsSection({ market, propertyType, label, idxUr
 
             {visible.length > 0 ? (
               <>
-                <div className="pls-grid">
-                  {visible.map((listing) => (
-                    <button
-                      key={listing.id}
-                      type="button"
-                      className="pls-card pls-card--btn"
-                      onClick={() => openListing(listing.href, listing.title)}
-                    >
-                      <div className="pls-card-media">
-                        {listing.ribbon ? <span className="pls-card-ribbon">{listing.ribbon}</span> : null}
-                        <img className="pls-card-photo" src={listing.image} alt={listing.title} loading="lazy" />
-                      </div>
-                      <div className="pls-card-body">
-                        <div className="pls-card-price">{listing.price}</div>
-                        <div className="pls-card-title">{listing.title}</div>
-                        <div className="pls-card-meta">
-                          {[listing.neighborhood, listing.borough].filter(Boolean).join(" · ")}
-                        </div>
-                        {listing.meta ? <div className="pls-card-meta">{listing.meta}</div> : null}
-                      </div>
-                    </button>
-                  ))}
+                <div className="pls-toolbar">
+                  <p className="pls-count">
+                    Showing {rangeStart}–{rangeEnd} of {displayTotal} live MLS results
+                    {olrListings.length < displayTotal ? " · open full search for more" : ""}
+                  </p>
+                  <ListingsPager
+                    page={safePage}
+                    pageCount={pageCount}
+                    onPrev={() => setPage((p) => Math.max(0, p - 1))}
+                    onNext={() => setPage((p) => Math.min(pageCount - 1, p + 1))}
+                  />
                 </div>
 
-                {pageCount > 1 ? (
-                  <div className="pls-pager">
-                    <button
-                      type="button"
-                      className="pls-pager-btn"
-                      disabled={safePage <= 0}
-                      onClick={() => setPage((p) => Math.max(0, p - 1))}
-                      aria-label="Previous listings"
-                    >
-                      ←
-                    </button>
-                    <span className="pls-pager-status">
-                      Page {safePage + 1} of {pageCount}
-                    </span>
-                    <button
-                      type="button"
-                      className="pls-pager-btn"
-                      disabled={safePage >= pageCount - 1}
-                      onClick={() => setPage((p) => Math.min(pageCount - 1, p + 1))}
-                      aria-label="Next listings"
-                    >
-                      →
-                    </button>
-                  </div>
-                ) : null}
+                <div className="pls-grid">
+                  {visible.map((listing) => (
+                    <OlrListingCardButton key={listing.id} listing={listing} onOpen={openListing} />
+                  ))}
+                </div>
               </>
             ) : null}
 

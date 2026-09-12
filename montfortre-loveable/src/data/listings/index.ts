@@ -17,9 +17,11 @@ import { LISTING_420_WEST_144TH_STREET } from "./listing420West144thStreet";
 import { LISTING_108_WEST_114TH_STREET_4B } from "./listing108West114thStreet4b";
 
 import { withLocalListingMedia } from "./localMedia";
+import { LISTING_SLUGS } from "./slugs";
 
 export type { ListingDetail, ListingFact, ListingGalleryImage, ListingInsight } from "./types";
 export { LISTING_AGENT, parsePriceValue } from "./types";
+export { LISTING_SLUGS } from "./slugs";
 
 export const ALL_LISTINGS: ListingDetail[] = [
   LISTING_523_WEST_121ST_2,
@@ -40,12 +42,10 @@ export const ALL_LISTINGS: ListingDetail[] = [
   .map(withLocalListingMedia)
   .sort((a, b) => a.sortOrder - b.sortOrder);
 
-export const LISTING_SLUGS = ALL_LISTINGS.map((l) => l.slug);
-
 export function getListingBySlug(slug: string): ListingDetail | undefined {
   return ALL_LISTINGS.find((l) => l.slug === slug);
 }
 
 export function isListingSlug(slug: string): boolean {
-  return LISTING_SLUGS.includes(slug);
+  return (LISTING_SLUGS as readonly string[]).includes(slug);
 }

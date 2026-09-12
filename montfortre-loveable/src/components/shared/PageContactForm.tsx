@@ -4,7 +4,7 @@ import {
   hasLeadErrors,
   leadValidationMessage,
   type LeadFieldErrors,
-  validateLeadFields,
+  validateLeadFieldsAsync,
 } from "../../lib/leadValidation";
 import { readLeadHoneypot } from "../../lib/leadFormSecurity";
 import { useLeadFormTurnstile } from "../../hooks/useLeadFormTurnstile";
@@ -56,7 +56,7 @@ export default function PageContactForm({
       requireMessage: true,
     };
 
-    const nextErrors = validateLeadFields(payload);
+    const nextErrors = await validateLeadFieldsAsync(payload);
     setFieldErrors(nextErrors);
     if (hasLeadErrors(nextErrors)) {
       setError(leadValidationMessage(nextErrors));

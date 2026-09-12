@@ -7,6 +7,7 @@ import "../../styles/brooklyn-heights-townhouses-page.css";
 import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PageListingsSection from "../shared/PageListingsSection";
 import PageContactSection from "../shared/PageContactSection";
+import NeighborhoodMistakesLead from "../shared/NeighborhoodMistakesLead";
 import NeighborhoodGuideBody from "../shared/NeighborhoodGuideBody";
 import bhTownhousesGuide from "../../data/neighborhood-guides/brooklyn-heights-townhouses-2.html?raw";
 
@@ -87,6 +88,8 @@ export default function BrooklynHeightsTownhousesContent() {
         showCta={false}
         articles={NEWS_ARTICLES}
       />
+
+      <NeighborhoodMistakesLead neighborhood="Brooklyn Heights" brownstoneHref="/brooklyn-heights-townhouses-2/" />
 
       <PageContactSection topic="Brooklyn Heights Townhouses" />
     </>

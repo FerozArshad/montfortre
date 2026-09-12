@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2021/07/ChatGPT-Image-11-jun-2026-19-33-45-1024x683.fit.png",
+  featuredImageSrc: "/redesign-assets/blog/demystifying-the-reopening-of-nyc-and-what-it-means-for-real-estate/featured.png",
   featuredImageAlt: "Demystifying the Reopening of NYC and What it Means for Real Estate",
   shareUrl: "https://montfortre.com/demystifying-the-reopening-of-nyc-and-what-it-means-for-real-estate/",
   toc: [

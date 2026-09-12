@@ -4,7 +4,7 @@ import {
   hasLeadErrors,
   leadValidationMessage,
   type LeadFieldErrors,
-  validateLeadFields,
+  validateLeadFieldsAsync,
 } from "../../lib/leadValidation";
 import { readLeadHoneypot } from "../../lib/leadFormSecurity";
 import { useLeadFormTurnstile } from "../../hooks/useLeadFormTurnstile";
@@ -97,8 +97,8 @@ export default function HomeValuationTool() {
     return [questions.trim(), addressLine].filter(Boolean).join("\n\n");
   }
 
-  function validateLeadForm(): LeadFieldErrors {
-    return validateLeadFields({
+  async function validateLeadForm(): Promise<LeadFieldErrors> {
+    return validateLeadFieldsAsync({
       firstName: lead.firstName,
       lastName: lead.lastName,
       email: lead.email,
@@ -115,7 +115,7 @@ export default function HomeValuationTool() {
   async function saveValuationLead(honeypot = "", turnstileToken = "") {
     if (savedRef.current) return;
 
-    const nextErrors = validateLeadForm();
+    const nextErrors = await validateLeadForm();
     setFieldErrors(nextErrors);
     if (hasLeadErrors(nextErrors)) {
       setSaveError(leadValidationMessage(nextErrors));
@@ -196,13 +196,15 @@ export default function HomeValuationTool() {
 
   async function handleLockSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const nextErrors = validateLeadForm();
+    const form = event.currentTarget;
+    const honeypot = readLeadHoneypot(new FormData(form));
+    const nextErrors = await validateLeadForm();
     setFieldErrors(nextErrors);
     if (hasLeadErrors(nextErrors)) {
       setSaveError(leadValidationMessage(nextErrors));
       return;
     }
-    await saveValuationLead(readLeadHoneypot(new FormData(event.currentTarget)));
+    await saveValuationLead(honeypot);
     if (savedRef.current) {
       setShowEmailFields(true);
       setStep("error");
@@ -211,13 +213,15 @@ export default function HomeValuationTool() {
 
   async function handleErrorSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const nextErrors = validateLeadForm();
+    const form = event.currentTarget;
+    const honeypot = readLeadHoneypot(new FormData(form));
+    const nextErrors = await validateLeadForm();
     setFieldErrors(nextErrors);
     if (hasLeadErrors(nextErrors)) {
       setSaveError(leadValidationMessage(nextErrors));
       return;
     }
-    await saveValuationLead(readLeadHoneypot(new FormData(event.currentTarget)));
+    await saveValuationLead(honeypot);
     if (savedRef.current) {
       setStep("success");
     }

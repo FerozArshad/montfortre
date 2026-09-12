@@ -69,7 +69,7 @@ export default function SellingProbatePropertiesInNycContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>Selling Probate Properties in NYC</h1>
+            <h2 className="tf-guide-title">Selling Probate Properties in NYC</h2>
             <div className="tf-guide-rule" />
             <p>
               If you&apos;ve recently lost a loved one and now face the responsibility of selling an inherited property

@@ -64,10 +64,13 @@ function CatalogGroup({
   overviewHref: string;
   thumb: ReactNode;
   cards: CatalogCardData[];
+  /** Prefer 4 to match other service groups; use 3 only when a group has exactly three cards. */
   columns?: 3 | 4;
   first?: boolean;
   id?: string;
 }) {
+  const gridClass =
+    columns === 3 ? "svc-catalog-grid svc-catalog-grid--3" : "svc-catalog-grid";
   return (
     <div
       id={id}
@@ -86,7 +89,7 @@ function CatalogGroup({
           View overview →
         </a>
       </div>
-      <div className={columns === 3 ? "svc-catalog-grid svc-catalog-grid--3" : "svc-catalog-grid"}>
+      <div className={gridClass}>
         {cards.map((card) => (
           <CatalogCard key={card.href} {...card} />
         ))}
@@ -182,6 +185,15 @@ export default function ServicesContent() {
               thumb={<ThumbImage src="/redesign-assets/services/buyers-agent.webp" alt="NYC Buyer’s Agent" />}
               cards={[
                 {
+                  href: "/nyc-brownstone-buyer-access/",
+                  image: "/redesign-assets/services/buyers-agent.webp",
+                  alt: "Off Market Brownstone Finder",
+                  title: "Off Market Brownstone Finder",
+                  description:
+                    "Private matching for 3–4 family brownstones — house-hack strategy, low-down-payment paths, and off-market inventory.",
+                  lazy: true,
+                },
+                {
                   href: "/buying-a-condo-in-nyc/",
                   image: "/redesign-assets/slots/svc-buying-a-condo-in-nyc.webp",
                   alt: "svc buying a condo in nyc",
@@ -260,6 +272,7 @@ export default function ServicesContent() {
               eyebrow="Invest"
               title="NYC Multifamily Real Estate Agent"
               overviewHref="/nyc-multifamily-real-estate-agent-service/"
+              columns={3}
               thumb={<ThumbImage src="/redesign-assets/services/multifamily.webp" alt="NYC Multifamily Real Estate Agent" />}
               cards={[
                 {
@@ -284,6 +297,29 @@ export default function ServicesContent() {
                   alt: "4-Family House for Sale NYC",
                   title: "4-Family House for Sale NYC",
                   description: "Maximum cash flow, strong returns, and multifamily ownership.",
+                  lazy: true,
+                },
+              ]}
+            />
+            <CatalogGroup
+              eyebrow="Due Diligence"
+              title="Brownstone Violation Assessment"
+              overviewHref="/brownstone-violation-assessment/"
+              columns={1}
+              thumb={
+                <ThumbImage
+                  src="/redesign-assets/services/buying-a-brownstone-nyc.png"
+                  alt="Brownstone Violation Assessment"
+                />
+              }
+              cards={[
+                {
+                  href: "/brownstone-violation-assessment/",
+                  image: "/redesign-assets/services/buying-a-brownstone-nyc.png",
+                  alt: "Grade That Brownstone",
+                  title: "Grade That Brownstone",
+                  description:
+                    "Screen DOB, HPD, tax, and zoning public records before you offer — then unlock Stanley’s property intelligence read.",
                   lazy: true,
                 },
               ]}
@@ -331,6 +367,7 @@ export default function ServicesContent() {
               eyebrow="Finance"
               title="NYC Mortgage Calculator"
               overviewHref="/mortgage-calculator/"
+              columns={3}
               thumb={<ThumbImage src="/redesign-assets/services/mortgage.webp" alt="NYC Mortgage Calculator" />}
               cards={[
                 {
@@ -363,23 +400,7 @@ export default function ServicesContent() {
               eyebrow="Finance"
               title="NYC Brownstone Calculators"
               overviewHref="/mortgage-calculator/"
-              columns={2}
-              thumb={
-                <div className="svc-thumb svc-thumb--calc">
-                  <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#F0D9A8" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="4" y="2" width="16" height="20" rx="2" />
-                    <line x1="8" y1="6" x2="16" y2="6" />
-                    <line x1="8" y1="10" x2="9" y2="10" />
-                    <line x1="12" y1="10" x2="13" y2="10" />
-                    <line x1="16" y1="10" x2="16" y2="10" />
-                    <line x1="8" y1="14" x2="9" y2="14" />
-                    <line x1="12" y1="14" x2="13" y2="14" />
-                    <line x1="16" y1="14" x2="16" y2="18" />
-                    <line x1="8" y1="18" x2="9" y2="18" />
-                    <line x1="12" y1="18" x2="13" y2="18" />
-                  </svg>
-                </div>
-              }
+              thumb={<ThumbImage src="/redesign-assets/services/mortgage.webp" alt="NYC Brownstone Calculators" />}
               cards={[
                 {
                   href: "/nyc-brownstone-buyer-closing-cost-calculator/",

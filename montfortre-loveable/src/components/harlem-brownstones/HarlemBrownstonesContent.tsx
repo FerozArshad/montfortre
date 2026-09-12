@@ -8,6 +8,7 @@ import "../../styles/harlem-brownstones-page.css";
 import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PageListingsSection from "../shared/PageListingsSection";
 import PageContactSection from "../shared/PageContactSection";
+import NeighborhoodMistakesLead from "../shared/NeighborhoodMistakesLead";
 import NeighborhoodGuideBody from "../shared/NeighborhoodGuideBody";
 import harlemBrownstonesGuide from "../../data/neighborhood-guides/harlem-brownstones.html?raw";
 
@@ -133,6 +134,8 @@ export default function HarlemBrownstonesContent() {
           </ul>
         </div>
       </section>
+
+      <NeighborhoodMistakesLead neighborhood="Harlem" brownstoneHref="/harlem-brownstones/" />
 
       <PageContactSection topic="Harlem Brownstones" />
     </>

@@ -392,13 +392,6 @@
   display: block;
 }
 
-.svc-thumb--calc {
-  background: #113b5f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .svc-catalog-eyebrow {
   font-size: 11px;
   font-weight: 700;

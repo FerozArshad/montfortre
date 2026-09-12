@@ -47,6 +47,7 @@ function rowToReview(row: GoogleReviewRow, mapsUri: string): ReputationReview {
     quote: row.quote || "",
     rating: Number(row.rating) || 5,
     photo: row.photo_url?.trim() || undefined,
+    publishedAt: row.published_at,
   };
 }
 
@@ -85,8 +86,8 @@ export async function fetchReviewsFromDb(): Promise<{
       .from("google_reviews")
       .select(REVIEW_COLUMNS)
       .eq("hidden", false)
-      .order("sort_order", { ascending: true })
-      .order("published_at", { ascending: false }),
+      .order("published_at", { ascending: false })
+      .order("sort_order", { ascending: true }),
     sb
       .from("google_review_stats")
       .select("rating, total_reviews, maps_uri")

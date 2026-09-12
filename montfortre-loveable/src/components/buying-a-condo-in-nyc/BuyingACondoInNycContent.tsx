@@ -69,7 +69,7 @@ export default function BuyingACondoInNycContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>Buying a Condo in NYC - A Complete Guide</h1>
+            <h2 className="tf-guide-title">Buying a Condo in NYC - A Complete Guide</h2>
             <div className="tf-guide-rule" />
             <h2>Get Expert Advice on Buying a Condo in NYC</h2>
             <p>

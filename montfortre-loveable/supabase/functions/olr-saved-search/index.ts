@@ -6,7 +6,7 @@ const CORS = {
 
 const OLR_ORIGIN = "https://stanley.olridx.com";
 /** OLR is slow; keep edge responses warm so pages paint from CDN/cache. */
-const CACHE_MAX_AGE = 900;
+const CACHE_MAX_AGE = 1800;
 
 type CookieCache = { at: number; value: string };
 let cookieCache: CookieCache | null = null;
@@ -76,7 +76,7 @@ Deno.serve(async (req) => {
   const id = (url.searchParams.get("id") || "").replace(/^#/, "").trim();
   const modeParam = url.searchParams.get("mode");
   const pageIndex = Math.max(0, Number(url.searchParams.get("page") || 0) || 0);
-  const pageSize = Math.min(48, Math.max(1, Number(url.searchParams.get("pageSize") || 24) || 24));
+  const pageSize = Math.min(48, Math.max(1, Number(url.searchParams.get("pageSize") || 12) || 12));
 
   try {
     let data: unknown;

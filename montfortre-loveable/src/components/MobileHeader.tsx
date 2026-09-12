@@ -22,6 +22,8 @@ const MENU: MenuSection[] = [
     href: "/services/",
     links: [
       { label: "NYC Buyer\u2019s Agent", href: "/nyc-buyers-agent-service/" },
+      { label: "Off Market Brownstone Finder", href: "/nyc-brownstone-buyer-access/" },
+      { label: "Brownstone Violation Assessment", href: "/brownstone-violation-assessment/" },
       { label: "NYC Listing Agent", href: "/nyc-listing-agent-service/" },
       { label: "NYC Multifamily Agent", href: "/nyc-multifamily-real-estate-agent-service/" },
       { label: "Free Home Valuation", href: "/whats-my-home-worth/" },
@@ -52,9 +54,11 @@ const MENU: MenuSection[] = [
     href: "/current-listings/",
     links: [
       { label: "Current Listings", href: "/current-listings/" },
-      { label: "Homes For Sale", href: "/idx-sales/" },
-      { label: "Rentals", href: "/idx-rentals/" },
-      { label: "Customer Login", href: "https://stanley.olridx.com/#", external: true },
+      {
+        label: "UWS Brownstones / Townhouses",
+        href: "https://stanley.olridx.com/Search/Sales?idr=False#115376",
+        external: true,
+      },
     ],
   },
   { label: "Success Stories", href: "/success-stories/" },

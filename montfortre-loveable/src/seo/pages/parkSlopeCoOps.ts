@@ -8,6 +8,7 @@ export const PARK_SLOPE_CO_OPS_METAS = [
   { name: "description", content: "Explore Park Slope co-ops with Montfort Real Estate. Discover available co-op apartments, buying opportunities, and expert guidance in Park Slope, Brooklyn" },
   { name: "twitter:card", content: "summary_large_image" },
   { name: "twitter:description", content: "Explore Park Slope co-ops with Montfort Real Estate. Discover available co-op apartments, buying opportunities, and expert guidance in Park Slope, Brooklyn" },
+  { name: "twitter:image", content: "https://montfortre.com/redesign-assets/og/park-slope.png" },
   { name: "twitter:title", content: PARK_SLOPE_CO_OPS_TITLE },
   { property: "og:locale", content: "en_US" },
   { property: "og:type", content: "article" },
@@ -15,6 +16,7 @@ export const PARK_SLOPE_CO_OPS_METAS = [
   { property: "og:description", content: "Explore Park Slope co-ops with Montfort Real Estate. Discover available co-op apartments, buying opportunities, and expert guidance in Park Slope, Brooklyn" },
   { property: "og:url", content: "https://montfortre.com/park-slope-coops/" },
   { property: "og:site_name", content: "Montfort Real Estate" },
+  { property: "og:image", content: "https://montfortre.com/redesign-assets/og/park-slope.png" },
   { property: "article:publisher", content: "https://www.facebook.com/montfortrealestate" },
 ] as const;
 

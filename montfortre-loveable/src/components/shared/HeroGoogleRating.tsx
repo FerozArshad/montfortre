@@ -7,7 +7,7 @@ interface HeroGoogleRatingProps {
    * "solo" on heroes with no matching styles of their own: it carries its own
    * self-contained card styling that reads on light and dark backgrounds.
    */
-  prefix: "nbhd" | "tf" | "stan" | "solo";
+  prefix: "nbhd" | "tf" | "stan" | "solo" | "nba" | "cl";
 }
 
 /**

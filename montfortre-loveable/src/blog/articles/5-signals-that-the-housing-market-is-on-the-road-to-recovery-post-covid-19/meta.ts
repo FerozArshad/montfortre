@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2021/07/ChatGPT-Image-11-jun-2026-19-38-25-1024x683.fit.png",
+  featuredImageSrc: "/redesign-assets/blog/5-signals-that-the-housing-market-is-on-the-road-to-recovery-post-covid-19/featured.png",
   featuredImageAlt: "5 Signs the Housing Market Is Recovering After COVID-19",
   shareUrl: "https://montfortre.com/5-signals-that-the-housing-market-is-on-the-road-to-recovery-post-covid-19/",
   toc: [

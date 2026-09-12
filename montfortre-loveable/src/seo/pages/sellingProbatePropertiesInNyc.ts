@@ -21,6 +21,7 @@ export const SELLING_PROBATE_METAS = [
     "name": "twitter:description",
     "content": "Sell probate properties in NYC with compassionate guidance, expert valuation, and strategic marketing. Montfort helps families navigate probate real estate sales across Manhattan and Brooklyn."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const SELLING_PROBATE_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

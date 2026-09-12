@@ -7,6 +7,7 @@ import "../../styles/upper-west-side-townhouses-page.css";
 import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PageListingsSection from "../shared/PageListingsSection";
 import PageContactSection from "../shared/PageContactSection";
+import NeighborhoodMistakesLead from "../shared/NeighborhoodMistakesLead";
 import NeighborhoodGuideBody from "../shared/NeighborhoodGuideBody";
 import uwsTownhousesGuide from "../../data/neighborhood-guides/upper-west-side-townhouses.html?raw";
 
@@ -88,6 +89,8 @@ export default function UpperWestSideTownhousesContent() {
         showCta={false}
         articles={NEWS_ARTICLES}
       />
+
+      <NeighborhoodMistakesLead neighborhood="Upper West Side" brownstoneHref="/upper-west-side-townhouses/" />
 
       <PageContactSection topic="Upper West Side Townhouses" />
     </>

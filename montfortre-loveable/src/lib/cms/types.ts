@@ -13,16 +13,24 @@ import { withHeadingAnchors } from "./articleToc";
 
 const DEFAULT_FEATURED = "/redesign-assets/hoods/harlem.webp";
 
-/** Prefer CMS meta, then static article registry, then neighborhood fallback. */
+function isRemoteCdnSrc(src: string): boolean {
+  return /^https?:\/\//i.test(src.trim());
+}
+
+/** Prefer local static assets over AgentFire CDN (blocked / flaky from localhost and some clients). */
 export function resolveBlogFeaturedImage(
   slug: string,
   fromMeta?: { src?: string | null; alt?: string | null },
   titleFallback = "",
 ): { src: string; alt: string } {
   const staticMeta = BLOG_ARTICLE_REGISTRY[slug]?.meta;
+  const metaSrc = (fromMeta?.src || "").trim();
+  const staticSrc = (staticMeta?.featuredImageSrc || "").trim();
   const src =
-    (fromMeta?.src || "").trim() ||
-    staticMeta?.featuredImageSrc ||
+    (metaSrc && !isRemoteCdnSrc(metaSrc) ? metaSrc : "") ||
+    (staticSrc && !isRemoteCdnSrc(staticSrc) ? staticSrc : "") ||
+    metaSrc ||
+    staticSrc ||
     DEFAULT_FEATURED;
   const alt =
     (fromMeta?.alt || "").trim() ||

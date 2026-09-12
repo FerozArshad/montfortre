@@ -65,7 +65,7 @@ export default function NycBrownstoneFreeHomeValuationContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>NYC Brownstone Free Home Valuation</h1>
+            <h2 className="tf-guide-title">NYC Brownstone Free Home Valuation</h2>
             <div className="tf-guide-rule" />
             <p>
               If you own a brownstone in New York City and you&apos;re wondering what it&apos;s actually worth in

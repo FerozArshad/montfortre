@@ -1,4 +1,3 @@
-import { useState } from "react";
 import PromisesBar from "../shared/PromisesBar";
 import ResourcesSection from "../shared/ResourcesSection";
 import ReviewsSection from "../shared/ReviewsSection";
@@ -9,7 +8,9 @@ import DowntownBrooklynRealtorArticle from "./DowntownBrooklynRealtorArticle";
 import "../../styles/harlem-page.css";
 import "../../styles/downtown-brooklyn-page.css";
 import NeighborhoodHubHero from "../shared/NeighborhoodHubHero";
-import MarketReportForm from "../shared/MarketReportForm";
+import NeighborhoodMistakesLead from "../shared/NeighborhoodMistakesLead";
+import PageListingsSection from "../shared/PageListingsSection";
+import { NEIGHBORHOOD_MAIN_IDX } from "../../lib/neighborhoodMainIdx";
 
 const PROPERTY_TYPES = [
   {
@@ -32,54 +33,6 @@ const PROPERTY_TYPES = [
 
 
 
-
-const OLR_SALES_URL = "https://stanley.olridx.com/Search/Sales";
-
-function DowntownBrooklynListingsIdx() {
-  const embed = window.location.hostname === "montfortre.com";
-
-  if (!embed) {
-    return (
-      <div className="hlm-listings-idx">
-        <div className="hlm-listings-fallback">
-          <p>
-            This box is the live OLR IDX sales search. OLR only allows it to embed on montfortre.com, so it stays blank
-            on localhost and preview. Open the search to see Downtown Brooklyn listings now.
-          </p>
-          <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-btn">
-            Open live listings
-          </a>
-        </div>
-        <p className="hlm-listings-footnote">
-          Live listing data provided by OLR IDX. Need help? <a href="/contact/">Contact us</a> or{" "}
-          <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener noreferrer">
-            log in to your customer account
-          </a>
-          .
-        </p>
-      </div>
-    );
-  }
-
-  return (
-    <div className="hlm-listings-idx">
-      <iframe
-        className="hlm-listings-frame"
-        src={OLR_SALES_URL}
-        scrolling="yes"
-        title="Downtown Brooklyn homes for sale"
-        loading="lazy"
-      />
-      <p className="hlm-listings-footnote">
-        Live listing data provided by OLR IDX. Need help? <a href="/contact/">Contact us</a> or{" "}
-        <a href="https://stanley.olridx.com/#" target="_blank" rel="noopener noreferrer">
-          log in to your customer account
-        </a>
-        .
-      </p>
-    </div>
-  );
-}
 
 const DOWNTOWN_BROOKLYN_ARTICLES = [
   {
@@ -106,7 +59,6 @@ const DOWNTOWN_BROOKLYN_ARTICLES = [
 ] as const;
 
 export default function DowntownBrooklynContent() {
-  const [marketEmail, setMarketEmail] = useState(false);
 
   return (
     <>
@@ -125,18 +77,11 @@ export default function DowntownBrooklynContent() {
               past 30 days roughly 13 homes have been sold with an average sold price of 1,242,075. That is a decrease of
               $457,475 from the previous period.
             </p>
-            <div className="hlm-listings-cta">
-              <a href="/idx-sales" className="hlm-listings-btn">
-                View More Listings
-              </a>
-              <a href={OLR_SALES_URL} target="_blank" rel="noopener noreferrer" className="hlm-listings-ext">
-                Open full search in new tab
-              </a>
-            </div>
           </div>
-          <DowntownBrooklynListingsIdx />
         </div>
       </section>
+
+      <PageListingsSection {...NEIGHBORHOOD_MAIN_IDX["downtown-brooklyn"]} />
 
       <DowntownBrooklynRealtorArticle />
 
@@ -158,45 +103,7 @@ export default function DowntownBrooklynContent() {
           </div>
         </div>
       </section>
-      <section id="market-report" className="hlm-market" data-screen-label="Market report">
-        <div className="hlm-market-inner">
-          <div data-reveal="">
-            <h2>Want the full market report for Downtown Brooklyn?</h2>
-            <p className="hlm-market-lead">
-              We want to ensure that you have all the information needed to make the best decisions when it comes to
-              your home goals. When you enter your info below you will get instant access to the area&apos;s latest
-              market report, complete with sales and demographic trends.
-            </p>
-            {!marketEmail ? (
-              <div className="hlm-market-social">
-                <button type="button" className="hlm-market-social-btn">
-                  Continue with Facebook
-                </button>
-                <button type="button" className="hlm-market-social-btn">
-                  Continue with Google
-                </button>
-                <button type="button" className="hlm-market-email-link" onClick={() => setMarketEmail(true)}>
-                  or click here to continue with your email address
-                </button>
-              </div>
-            ) : (
-              <div className="hlm-form">
-                <button type="button" className="hlm-market-back" onClick={() => setMarketEmail(false)}>
-                  ← Back
-                </button>
-                <MarketReportForm neighborhood="Downtown Brooklyn" />
-              </div>
-            )}
-          </div>
-          <div className="hlm-market-card" data-reveal="">
-            <img src="/redesign-assets/hoods/downtown-brooklyn.webp" alt="Downtown Brooklyn" />
-            <div className="hlm-market-card-copy">
-              <div className="hlm-market-card-title">Downtown Brooklyn</div>
-              <div className="hlm-market-card-sub">Market Report</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <NeighborhoodMistakesLead neighborhood="Downtown Brooklyn" brownstoneHref="/downtown-brooklyn/" />
 
       
       <div id="advice">

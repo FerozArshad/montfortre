@@ -7,6 +7,7 @@ import "../../styles/williamsburg-brownstones-page.css";
 import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PageListingsSection from "../shared/PageListingsSection";
 import PageContactSection from "../shared/PageContactSection";
+import NeighborhoodMistakesLead from "../shared/NeighborhoodMistakesLead";
 
 
 const NEWS_ARTICLES = [
@@ -124,6 +125,8 @@ export default function WilliamsburgBrownstonesContent() {
         showCta={false}
         articles={NEWS_ARTICLES}
       />
+
+      <NeighborhoodMistakesLead neighborhood="Williamsburg" brownstoneHref="/williamsburg-brownstones-2/" />
 
       <PageContactSection topic="Williamsburg Brownstones" />
     </>

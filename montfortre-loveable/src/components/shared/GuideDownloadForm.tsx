@@ -4,7 +4,7 @@ import {
   hasLeadErrors,
   leadValidationMessage,
   type LeadFieldErrors,
-  validateLeadFields,
+  validateLeadFieldsAsync,
 } from "../../lib/leadValidation";
 import { readLeadHoneypot } from "../../lib/leadFormSecurity";
 import { useLeadFormTurnstile } from "../../hooks/useLeadFormTurnstile";
@@ -51,6 +51,9 @@ export default function GuideDownloadForm({
     event.preventDefault();
     if (busy) return;
 
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
     const payload = {
       firstName: firstName.trim(),
       lastName: lastName.trim(),
@@ -60,7 +63,7 @@ export default function GuideDownloadForm({
       requireMessage: true,
     };
 
-    const nextErrors = validateLeadFields(payload);
+    const nextErrors = await validateLeadFieldsAsync(payload);
     setFieldErrors(nextErrors);
     if (hasLeadErrors(nextErrors)) {
       setError(leadValidationMessage(nextErrors));
@@ -69,9 +72,6 @@ export default function GuideDownloadForm({
 
     setBusy(true);
     setError("");
-
-    const form = event.currentTarget;
-    const data = new FormData(form);
 
     try {
       await submitLead({

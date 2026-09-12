@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2022/02/2022-01-0911-1024x576.jpg",
+  featuredImageSrc: "/redesign-assets/blog/everything-you-need-to-know-about-buying-and-selling-probate-property-in-new-york-city/featured.jpg",
   featuredImageAlt: "Everything You Need to Know About Buying and Selling Probate Property In New York City",
   shareUrl: "https://montfortre.com/everything-you-need-to-know-about-buying-and-selling-probate-property-in-new-york-city/",
   toc: [

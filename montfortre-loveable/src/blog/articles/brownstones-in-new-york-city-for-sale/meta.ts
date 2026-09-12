@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2023/04/ChatGPT-Image-11-jun-2026-19-29-44-1024x683.fit.png",
+  featuredImageSrc: "/redesign-assets/blog/brownstones-in-new-york-city-for-sale/featured.png",
   featuredImageAlt: "How to Find Brownstones in New York City for Sale",
   shareUrl: "https://montfortre.com/brownstones-in-new-york-city-for-sale/",
   toc: [

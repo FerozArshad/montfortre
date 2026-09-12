@@ -5,7 +5,7 @@ import {
   leadFormRequiresMessage,
   leadValidationMessage,
   type LeadFieldErrors,
-  validateLeadFields,
+  validateLeadFieldsAsync,
 } from "../../lib/leadValidation";
 import { readLeadHoneypot } from "../../lib/leadFormSecurity";
 import { useLeadFormTurnstile } from "../../hooks/useLeadFormTurnstile";
@@ -20,6 +20,12 @@ type Props = {
   className?: string;
   submitLabel?: string;
   messagePlaceholder?: string;
+  /** Extra fields stored on the lead (intent, campaign, etc.). */
+  meta?: Record<string, unknown>;
+  /** Hide the questions textarea; pair with defaultMessage for lead magnets. */
+  hideMessage?: boolean;
+  /** Used when the visitor leaves message blank (or when hideMessage is true). */
+  defaultMessage?: string;
   onSuccess?: () => void;
   compact?: boolean;
 };
@@ -35,6 +41,9 @@ export default function LeadCaptureForm({
   className = "",
   submitLabel = "Submit",
   messagePlaceholder = "Questions or comments?",
+  meta,
+  hideMessage = false,
+  defaultMessage = "",
   onSuccess,
   compact = false,
 }: Props) {
@@ -42,7 +51,7 @@ export default function LeadCaptureForm({
   const [error, setError] = useState("");
   const [fieldErrors, setFieldErrors] = useState<LeadFieldErrors>({});
   const [done, setDone] = useState(false);
-  const requireMessage = leadFormRequiresMessage(formType);
+  const requireMessage = !hideMessage && leadFormRequiresMessage(formType);
   const turnstile = useLeadFormTurnstile();
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -50,16 +59,19 @@ export default function LeadCaptureForm({
     const form = e.currentTarget;
     const data = new FormData(form);
 
+    const typedMessage = String(data.get("message") || data.get("comments") || "").trim();
+    const message = typedMessage || defaultMessage.trim();
+
     const payload = {
       firstName: String(data.get("firstName") || data.get("first_name") || ""),
       lastName: String(data.get("lastName") || data.get("last_name") || ""),
       email: String(data.get("email") || ""),
       phone: String(data.get("phone") || ""),
-      message: String(data.get("message") || data.get("comments") || ""),
+      message,
       requireMessage,
     };
 
-    const nextErrors = validateLeadFields(payload);
+    const nextErrors = await validateLeadFieldsAsync(payload);
     setFieldErrors(nextErrors);
     if (hasLeadErrors(nextErrors)) {
       setError(leadValidationMessage(nextErrors));
@@ -74,10 +86,11 @@ export default function LeadCaptureForm({
         lastName: payload.lastName.trim(),
         email: payload.email.trim(),
         phone: payload.phone.trim(),
-        message: payload.message.trim(),
+        message: payload.message.trim() || defaultMessage.trim() || "Lead inquiry",
         formType,
         listingSlug,
         sourcePage,
+        meta,
         honeypot: readLeadHoneypot(data),
         turnstileToken: turnstile.requireToken(),
       });
@@ -156,17 +169,19 @@ export default function LeadCaptureForm({
         />
         {fieldErrors.phone ? <p className="form-field-hint">{fieldErrors.phone}</p> : null}
       </div>
-      <div>
-        <textarea
-          name="message"
-          rows={compact ? 3 : 4}
-          required={requireMessage}
-          placeholder={`${messagePlaceholder}${requireMessage ? " *" : ""}`}
-          className={fieldClass("lead-capture-field lead-capture-field--area", Boolean(fieldErrors.message))}
-          aria-invalid={Boolean(fieldErrors.message)}
-        />
-        {fieldErrors.message ? <p className="form-field-hint">{fieldErrors.message}</p> : null}
-      </div>
+      {!hideMessage ? (
+        <div>
+          <textarea
+            name="message"
+            rows={compact ? 3 : 4}
+            required={requireMessage}
+            placeholder={`${messagePlaceholder}${requireMessage ? " *" : ""}`}
+            className={fieldClass("lead-capture-field lead-capture-field--area", Boolean(fieldErrors.message))}
+            aria-invalid={Boolean(fieldErrors.message)}
+          />
+          {fieldErrors.message ? <p className="form-field-hint">{fieldErrors.message}</p> : null}
+        </div>
+      ) : null}
       {error ? <div className="lead-capture-error" role="alert">{error}</div> : null}
       {turnstile.required ? (
         <LeadFormTurnstile

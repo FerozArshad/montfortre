@@ -5,6 +5,7 @@ import {
 } from "../../lib/nycBuyerClosingCostMath";
 import { formatMoney, parseCalcNumber } from "../../lib/calculatorUtils";
 import { CalculatorBreakdown, CalculatorField, MoneyInput, NumberInput } from "./shared/CalculatorFields";
+import CalculatorEmailResults from "./CalculatorEmailResults";
 import "../../styles/calculator-tools.css";
 
 const FINANCING_PRESETS = [
@@ -23,6 +24,11 @@ const DEFAULTS = {
   buyerAttorneyFee: "3500",
   newConstruction: false,
 };
+
+function housingLabel(type: BuyerHousingType): string {
+  if (type === "coop") return "Co-op";
+  return type.charAt(0).toUpperCase() + type.slice(1);
+}
 
 export default function BuyerClosingCostCalculator() {
   const [purchasePrice, setPurchasePrice] = useState(DEFAULTS.purchasePrice);
@@ -60,7 +66,22 @@ export default function BuyerClosingCostCalculator() {
   }
 
   return (
-    <div className="calc-tool" id="buyer-closing-cost-calculator" data-screen-label="Buyer closing cost calculator">
+    <div className="calc-tool calc-tool--buyer" id="buyer-closing-cost-calculator" data-screen-label="Buyer closing cost calculator">
+      <div className="calc-tool-topbar">
+        <div>
+          <p className="calc-tool-topbar-kicker">Live estimate</p>
+          <h3>NYC buyer closing costs</h3>
+        </div>
+        <div className="calc-actions calc-actions--top">
+          <button type="button" className="calc-btn calc-btn--ghost" onClick={reset}>
+            Reset
+          </button>
+          <button type="button" className="calc-btn calc-btn--ghost" onClick={() => window.print()}>
+            Print PDF
+          </button>
+        </div>
+      </div>
+
       <div className="calc-tool-grid">
         <div className="calc-tool-inputs">
           <h3>Property Details</h3>
@@ -119,7 +140,7 @@ export default function BuyerClosingCostCalculator() {
                     checked={housingType === type}
                     onChange={() => setHousingType(type)}
                   />
-                  {type === "coop" ? "Co-op" : type.charAt(0).toUpperCase() + type.slice(1)}
+                  {housingLabel(type)}
                 </label>
               ))}
             </div>
@@ -127,29 +148,68 @@ export default function BuyerClosingCostCalculator() {
           <CalculatorField label="Buyer's Attorney Fee">
             <MoneyInput value={buyerAttorneyFee} onChange={setBuyerAttorneyFee} />
           </CalculatorField>
-          <label className="calc-radio">
+          <label className="calc-check">
             <input type="checkbox" checked={newConstruction} onChange={(e) => setNewConstruction(e.target.checked)} />
-            New construction / sponsor unit
+            <span>New construction / sponsor unit</span>
           </label>
-          <div className="calc-actions">
-            <button type="button" className="calc-btn calc-btn--ghost" onClick={reset}>
-              Reset
-            </button>
-            <button type="button" className="calc-btn calc-btn--ghost" onClick={() => window.print()}>
-              Print PDF
-            </button>
-          </div>
+
+          <CalculatorEmailResults
+            title="Buyer Closing Cost Estimate"
+            summary={`${housingLabel(housingType)} purchase at $${formatMoney(price)} with $${formatMoney(amountFinanced)} financed${newConstruction ? " (new construction / sponsor)" : ""}.`}
+            lines={[
+              ...result.lines.map((line) => ({
+                label: line.label,
+                amount: line.amount,
+              })),
+              ...result.financingLines.map((line) => ({
+                label: line.label,
+                amount: line.amount,
+              })),
+              ...result.newConstructionLines.map((line) => ({
+                label: line.label,
+                amount: line.amount,
+              })),
+            ]}
+            totalValue={`$${formatMoney(result.total)}`}
+            sourcePage="/nyc-brownstone-buyer-closing-cost-calculator/"
+          />
         </div>
+
         <div className="calc-tool-results">
-          <h3>Estimated Closing Costs</h3>
-          <div className="calc-total">
-            <strong>${formatMoney(result.total)}</strong>
-            <span>{result.totalPct.toFixed(2)}% of purchase price</span>
+          <div className="calc-total calc-total--hero">
+            <div>
+              <kbd>Estimated closing costs</kbd>
+              <strong>${formatMoney(result.total)}</strong>
+              <span>
+                {result.totalPct.toFixed(2)}% of ${formatMoney(price)} · {housingLabel(housingType)}
+                {newConstruction ? " · sponsor" : ""}
+              </span>
+            </div>
           </div>
-          <CalculatorBreakdown lines={result.lines} total={nonFinancingTotal} totalLabel="Subtotal" />
+
+          <div className="calc-cards calc-cards--3">
+            <article className="calc-card">
+              <kbd>Purchase costs</kbd>
+              <strong>${formatMoney(nonFinancingTotal)}</strong>
+              <p>Taxes, title, attorney &amp; board fees</p>
+            </article>
+            <article className="calc-card">
+              <kbd>Financing</kbd>
+              <strong>${formatMoney(result.financingTotal)}</strong>
+              <p>{amountFinanced > 0 ? "MRT, lender &amp; appraisal" : "All-cash — no loan fees"}</p>
+            </article>
+            <article className="calc-card">
+              <kbd>Sponsor / transfer</kbd>
+              <strong>${formatMoney(result.newConstructionTotal)}</strong>
+              <p>{newConstruction ? "New development extras" : "Not applied"}</p>
+            </article>
+          </div>
+
+          <h4 className="calc-subheading">Line-item breakdown</h4>
+          <CalculatorBreakdown lines={result.lines} total={nonFinancingTotal} totalLabel="Purchase-cost subtotal" />
           {result.financingLines.length ? (
             <>
-              <h4 className="calc-subheading">Financing Related Costs</h4>
+              <h4 className="calc-subheading">Financing related costs</h4>
               <CalculatorBreakdown
                 lines={result.financingLines}
                 total={result.financingTotal}
@@ -159,7 +219,7 @@ export default function BuyerClosingCostCalculator() {
           ) : null}
           {result.newConstructionLines.length ? (
             <>
-              <h4 className="calc-subheading">New Construction Related Costs</h4>
+              <h4 className="calc-subheading">New construction related costs</h4>
               <CalculatorBreakdown
                 lines={result.newConstructionLines}
                 total={result.newConstructionTotal}
@@ -167,9 +227,14 @@ export default function BuyerClosingCostCalculator() {
               />
             </>
           ) : null}
+
           <div className="calc-highlight">
             <strong>All-in total: ${formatMoney(result.total)}</strong>
-            <span>Estimated buyer closing costs for a NYC {housingType === "coop" ? "co-op" : housingType}.</span>
+            <span>
+              Educational estimate for a NYC {housingLabel(housingType).toLowerCase()} at ${formatMoney(price)}
+              {amountFinanced > 0 ? ` with $${formatMoney(amountFinanced)} financed` : " (all cash)"}. Confirm with your
+              attorney and lender before closing.
+            </span>
           </div>
         </div>
       </div>

@@ -69,7 +69,7 @@ export default function CoOwnershipBuyingInNycContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>Co-Ownership Buying Services in New York City</h1>
+            <h2 className="tf-guide-title">Co-Ownership Buying Services in New York City</h2>
             <div className="tf-guide-rule" />
             <h2>Expert Co-Ownership Buying Guidance and Advisory Services</h2>
             <p>

@@ -2,6 +2,8 @@ import "../../styles/site-footer.css";
 
 const SERVICES = [
   ["NYC Buyer's Agent", "/nyc-buyers-agent-service/"],
+  ["Off Market Brownstone Finder", "/nyc-brownstone-buyer-access/"],
+  ["Brownstone Violation Assessment", "/brownstone-violation-assessment/"],
   ["NYC Listing Agent", "/nyc-listing-agent-service/"],
   ["NYC Multifamily Real Estate Agent", "/nyc-multifamily-real-estate-agent-service/"],
   ["NYC Home Valuation", "/home-valuation/"],

@@ -1,6 +1,7 @@
 import ResourcesSection from "../shared/ResourcesSection";
 import ReviewsSection from "../shared/ReviewsSection";
 import PromisesBar from "../shared/PromisesBar";
+import CalculatorCrossLinks from "../shared/CalculatorCrossLinks";
 import MortgageCalculator from "./MortgageCalculator";
 import "../../styles/two-family-page.css";
 import "../../styles/mortgage-calculator-page.css";
@@ -73,7 +74,7 @@ export default function MortgageCalculatorContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>NYC Mortgage Calculator: Complete Guide for New York City Home Buyers</h1>
+            <h2 className="tf-guide-title">NYC Mortgage Calculator: Complete Guide for New York City Home Buyers</h2>
             <div className="tf-guide-rule" />
             <h2>Expert NYC Mortgage Calculator and Home Buying Guidance</h2>
             <p>
@@ -473,26 +474,7 @@ export default function MortgageCalculatorContent() {
         </div>
       </section>
 
-      <section className="hb-calc-strip" data-screen-label="Brownstone calculators">
-        <div className="hb-calc-strip-inner">
-          <h2>NYC Brownstone Calculators</h2>
-          <p>Estimate closing costs, compare rent vs buy, and weigh condo vs brownstone ownership.</p>
-          <ul className="hb-calc-strip-links">
-            <li>
-              <a href="/nyc-brownstone-buyer-closing-cost-calculator/">Buyer Closing Cost Calculator</a>
-            </li>
-            <li>
-              <a href="/nyc-brownstone-seller-closing-cost-calculator/">Seller Closing Cost Calculator</a>
-            </li>
-            <li>
-              <a href="/nyc-rent-vs-buy-brownstone-calculator/">Rent vs Buy Brownstone Calculator</a>
-            </li>
-            <li>
-              <a href="/nyc-condo-vs-brownstone-calculator/">Condo vs Brownstone Calculator</a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <CalculatorCrossLinks />
 
       <ReviewsSection />
 

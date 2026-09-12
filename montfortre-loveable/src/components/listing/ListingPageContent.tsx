@@ -5,7 +5,8 @@ import { submitLead } from "../../lib/cms/leads";
 import {
   hasLeadErrors,
   leadValidationMessage,
-  validateLeadFields,
+  type LeadFieldErrors,
+  validateLeadFieldsAsync,
 } from "../../lib/leadValidation";
 import ListingLeadModal, {
   dismissListingLeadSession,
@@ -123,6 +124,7 @@ export default function ListingPageContent({ listing, preview = false }: Props) 
   const [tourBusy, setTourBusy] = useState(false);
   const turnstile = useLeadFormTurnstile();
   const [tourError, setTourError] = useState("");
+  const [tourFieldErrors, setTourFieldErrors] = useState<LeadFieldErrors>({});
   const [leadOpen, setLeadOpen] = useState(false);
   const [heroPassed, setHeroPassed] = useState(false);
   const heroRef = useRef<HTMLElement | null>(null);
@@ -688,29 +690,31 @@ export default function ListingPageContent({ listing, preview = false }: Props) 
                 const email = String(data.get("email") || "").trim();
                 const phone = String(data.get("phone") || "").trim();
                 const comments = String(data.get("comments") || "").trim();
-                const fieldErrors = validateLeadFields({
-                  firstName,
-                  lastName,
-                  email,
-                  phone,
-                  message: comments,
-                  requireMessage: true,
-                });
-                if (hasLeadErrors(fieldErrors)) {
-                  setTourError(leadValidationMessage(fieldErrors));
-                  return;
-                }
-                setTourBusy(true);
-                setTourError("");
-                let turnstileToken = "";
-                try {
-                  turnstileToken = turnstile.requireToken();
-                } catch (err) {
-                  setTourError(err instanceof Error ? err.message : "Complete the security check and try again.");
-                  setTourBusy(false);
-                  return;
-                }
                 void (async () => {
+                  const fieldErrors = await validateLeadFieldsAsync({
+                    firstName,
+                    lastName,
+                    email,
+                    phone,
+                    message: comments,
+                    requireMessage: true,
+                  });
+                  setTourFieldErrors(fieldErrors);
+                  if (hasLeadErrors(fieldErrors)) {
+                    setTourError(leadValidationMessage(fieldErrors));
+                    return;
+                  }
+                  setTourBusy(true);
+                  setTourError("");
+                  setTourFieldErrors({});
+                  let turnstileToken = "";
+                  try {
+                    turnstileToken = turnstile.requireToken();
+                  } catch (err) {
+                    setTourError(err instanceof Error ? err.message : "Complete the security check and try again.");
+                    setTourBusy(false);
+                    return;
+                  }
                   try {
                     await submitLead({
                       firstName,
@@ -751,21 +755,62 @@ export default function ListingPageContent({ listing, preview = false }: Props) 
               <div className="listing-field-row">
                 <label className="listing-field">
                   <span>First name *</span>
-                  <input name="firstName" type="text" autoComplete="given-name" placeholder="First name" />
+                  <input
+                    name="firstName"
+                    type="text"
+                    autoComplete="given-name"
+                    placeholder="First name"
+                    className={tourFieldErrors.firstName ? "form-field--invalid" : ""}
+                    aria-invalid={Boolean(tourFieldErrors.firstName)}
+                  />
+                  {tourFieldErrors.firstName ? (
+                    <span className="form-field-hint">{tourFieldErrors.firstName}</span>
+                  ) : null}
                 </label>
                 <label className="listing-field">
                   <span>Last name *</span>
-                  <input name="lastName" type="text" autoComplete="family-name" placeholder="Last name" />
+                  <input
+                    name="lastName"
+                    type="text"
+                    autoComplete="family-name"
+                    placeholder="Last name"
+                    className={tourFieldErrors.lastName ? "form-field--invalid" : ""}
+                    aria-invalid={Boolean(tourFieldErrors.lastName)}
+                  />
+                  {tourFieldErrors.lastName ? (
+                    <span className="form-field-hint">{tourFieldErrors.lastName}</span>
+                  ) : null}
                 </label>
               </div>
               <div className="listing-field-row">
                 <label className="listing-field">
                   <span>Email address *</span>
-                  <input name="email" type="email" autoComplete="email" placeholder="you@email.com" />
+                  <input
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    placeholder="you@email.com"
+                    className={tourFieldErrors.email ? "form-field--invalid" : ""}
+                    aria-invalid={Boolean(tourFieldErrors.email)}
+                  />
+                  {tourFieldErrors.email ? (
+                    <span className="form-field-hint">{tourFieldErrors.email}</span>
+                  ) : null}
                 </label>
                 <label className="listing-field">
                   <span>Phone number *</span>
-                  <input name="phone" type="tel" autoComplete="tel" inputMode="tel" placeholder="(555) 555-5555" />
+                  <input
+                    name="phone"
+                    type="tel"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    placeholder="(555) 555-5555"
+                    className={tourFieldErrors.phone ? "form-field--invalid" : ""}
+                    aria-invalid={Boolean(tourFieldErrors.phone)}
+                  />
+                  {tourFieldErrors.phone ? (
+                    <span className="form-field-hint">{tourFieldErrors.phone}</span>
+                  ) : null}
                 </label>
               </div>
 

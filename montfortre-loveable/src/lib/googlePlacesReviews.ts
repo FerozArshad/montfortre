@@ -20,6 +20,8 @@ export type ReputationReview = {
   quote: string;
   rating: number;
   photo?: string;
+  /** ISO timestamp when present — used to sort newest → oldest sitewide. */
+  publishedAt?: string | null;
 };
 
 export type ReputationAggregate = {

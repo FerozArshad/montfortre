@@ -69,7 +69,7 @@ export default function SellingCondosInNycContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>Selling Condos in NYC: Complete Guide and Expert Services</h1>
+            <h2 className="tf-guide-title">Selling Condos in NYC: Complete Guide and Expert Services</h2>
             <div className="tf-guide-rule" />
             <h2>Expert NYC Condo Listing and Marketing Services</h2>
             <p>

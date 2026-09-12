@@ -21,6 +21,7 @@ export const THREE_FAMILY_METAS = [
     "name": "twitter:description",
     "content": "Discover 3 family houses for sale in NYC with Montfort Real Estate. Explore multi-family investment properties, owner-occupied homes, and income-producing real estate across Brooklyn and Manhattan."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const THREE_FAMILY_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

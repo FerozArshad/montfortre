@@ -33,6 +33,7 @@ export const NEIGHBORHOODS_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "name": "twitter:card",
     "content": "summary_large_image"
@@ -41,6 +42,7 @@ export const NEIGHBORHOODS_METAS = [
     "name": "twitter:description",
     "content": "Explore NYC neighborhoods across Manhattan and Brooklyn. Compare lifestyle, pricing, architecture, and real estate opportunities with Montfort Real Estate."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "name": "twitter:title",
     "content": "Neighborhoods | Montfort Real Estate"

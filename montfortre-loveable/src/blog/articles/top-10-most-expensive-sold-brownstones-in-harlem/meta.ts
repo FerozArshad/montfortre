@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2023/11/ChatGPT-Image-11-jun-2026-19-24-02-1024x576.fit.png",
+  featuredImageSrc: "/redesign-assets/blog/top-10-most-expensive-sold-brownstones-in-harlem/featured.png",
   featuredImageAlt: "Top 10 Most Expensive Sold Brownstones in Harlem",
   shareUrl: "https://montfortre.com/top-10-most-expensive-sold-brownstones-in-harlem/",
   toc: [

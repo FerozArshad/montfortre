@@ -11,6 +11,7 @@ export const BROOKLYN_HEIGHTS_TOWNHOUSES_METAS = [
   { name: "description", content: DESCRIPTION },
   { name: "twitter:card", content: "summary_large_image" },
   { name: "twitter:description", content: DESCRIPTION },
+  { name: "twitter:image", content: "https://montfortre.com/redesign-assets/og/brooklyn-heights.png" },
   { name: "twitter:title", content: BROOKLYN_HEIGHTS_TOWNHOUSES_TITLE },
   { property: "og:locale", content: "en_US" },
   { property: "og:type", content: "article" },
@@ -18,6 +19,7 @@ export const BROOKLYN_HEIGHTS_TOWNHOUSES_METAS = [
   { property: "og:description", content: DESCRIPTION },
   { property: "og:url", content: "https://montfortre.com/brooklyn-heights-townhouses-2/" },
   { property: "og:site_name", content: "Montfort Real Estate" },
+  { property: "og:image", content: "https://montfortre.com/redesign-assets/og/brooklyn-heights.png" },
   { property: "article:publisher", content: "https://www.facebook.com/montfortrealestate" },
 ] as const;
 

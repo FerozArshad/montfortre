@@ -63,7 +63,7 @@ export default function NycCondoFreeHomeValuationContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>Free NYC Condo Home Valuation - Expert Market Analysis by Stanley Montfort</h1>
+            <h2 className="tf-guide-title">Free NYC Condo Home Valuation - Expert Market Analysis by Stanley Montfort</h2>
             <div className="tf-guide-rule" />
             <h2>Why NYC Condo Owners Trust Stanley Montfort</h2>
             <p>

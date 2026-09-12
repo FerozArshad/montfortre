@@ -21,6 +21,7 @@ export const SELLING_CONDOS_METAS = [
     "name": "twitter:description",
     "content": "Sell your NYC condo with expert pricing, luxury marketing, and strategic buyer targeting. Montfort helps condo sellers maximize visibility and attract qualified buyers across Manhattan and Brooklyn."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const SELLING_CONDOS_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

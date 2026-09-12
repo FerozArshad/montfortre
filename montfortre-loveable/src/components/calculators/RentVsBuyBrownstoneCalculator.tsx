@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { formatMoney, parseCalcNumber } from "../../lib/calculatorUtils";
 import { calculateRentVsBuy } from "../../lib/rentVsBuyBrownstoneMath";
 import { rentalUnitsForBrownstone, rentalUsePctForUnits } from "../../lib/propertyComparisonMath";
-import LeadCaptureForm from "../shared/LeadCaptureForm";
+import CalculatorEmailResults from "./CalculatorEmailResults";
 import { CalculatorField, MoneyInput, NumberInput } from "./shared/CalculatorFields";
 import "../../styles/calculator-tools.css";
 
@@ -73,27 +73,60 @@ export default function RentVsBuyBrownstoneCalculator() {
     ],
   );
 
+  function reset() {
+    setCurrentRent("6000");
+    setAnnualRentIncreasePct("3");
+    setPurchasePrice("2000000");
+    setDownPaymentPct("20");
+    setInterestRatePct("6.5");
+    setTermYears("30");
+    setAnnualPropertyTaxes("12000");
+    setTotalUnits(3);
+    setRent1("3500");
+    setRent2("3500");
+    setRent3("0");
+    setMonthlyInsurance("500");
+    setMonthlyWater("200");
+    setMonthlyCommonUtilities("250");
+    setLandValuePct("20");
+    setMarginalTaxRatePct("32");
+  }
+
   return (
-    <div className="calc-tool" id="rent-vs-buy-calculator" data-screen-label="Rent vs buy brownstone calculator">
-      <div className="calc-tool-shell">
-        <div className="calc-cards">
-          <div className="calc-card">
-            <kbd>Net monthly cost to own</kbd>
-            <strong>${formatMoney(result.netMonthlyOwnershipCost)}/mo</strong>
-            <p>After collecting ${formatMoney(result.netRentalIncome)}/mo from rental units.</p>
-          </div>
-          <div className="calc-card">
-            <kbd>Rental income offset</kbd>
-            <strong>${formatMoney(result.netRentalIncome)}/mo</strong>
-            <p>From {rentalUnitsForBrownstone(totalUnits)} tenant-occupied unit(s).</p>
-          </div>
-          <div className="calc-card">
-            <kbd>Est. year-1 tax deductions</kbd>
-            <strong>${formatMoney(result.yearOneDeductions)}</strong>
-            <p>Potential monthly tax benefit ~${formatMoney(result.monthlyTaxBenefit)}/mo.</p>
-          </div>
+    <div className="calc-tool calc-tool--rent" id="rent-vs-buy-calculator" data-screen-label="Rent vs buy brownstone calculator">
+      <div className="calc-tool-topbar">
+        <div>
+          <p className="calc-tool-topbar-kicker">Live estimate</p>
+          <h3>NYC rent vs buy</h3>
+        </div>
+        <div className="calc-actions calc-actions--top">
+          <button type="button" className="calc-btn calc-btn--ghost" onClick={reset}>
+            Reset
+          </button>
+          <button type="button" className="calc-btn calc-btn--ghost" onClick={() => window.print()}>
+            Print PDF
+          </button>
         </div>
       </div>
+
+      <div className="calc-cards calc-cards--3">
+        <article className="calc-card">
+          <kbd>Net monthly cost to own</kbd>
+          <strong>${formatMoney(result.netMonthlyOwnershipCost)}/mo</strong>
+          <p>After collecting ${formatMoney(result.netRentalIncome)}/mo from rental units.</p>
+        </article>
+        <article className="calc-card">
+          <kbd>Rental income offset</kbd>
+          <strong>${formatMoney(result.netRentalIncome)}/mo</strong>
+          <p>From {rentalUnitsForBrownstone(totalUnits)} tenant-occupied unit(s).</p>
+        </article>
+        <article className="calc-card">
+          <kbd>Est. year-1 tax deductions</kbd>
+          <strong>${formatMoney(result.yearOneDeductions)}</strong>
+          <p>Potential monthly tax benefit ~${formatMoney(result.monthlyTaxBenefit)}/mo.</p>
+        </article>
+      </div>
+
       <div className="calc-tool-grid">
         <div className="calc-tool-inputs">
           <div className="calc-tool-section">
@@ -217,8 +250,40 @@ export default function RentVsBuyBrownstoneCalculator() {
               </select>
             </CalculatorField>
           </div>
+
+          <CalculatorEmailResults
+            title="Rent vs Buy Brownstone Analysis"
+            summary={`Comparing $${formatMoney(result.currentRent)}/mo rent vs a $${formatMoney(parseCalcNumber(purchasePrice))} ${totalUnits}-unit brownstone. Net ownership cost $${formatMoney(result.netMonthlyOwnershipCost)}/mo; illustrative after-tax $${formatMoney(result.afterTaxMonthlyCost)}/mo.`}
+            lines={[
+              { label: "Current rent", amount: result.currentRent },
+              { label: "Mortgage P&I", amount: result.monthlyPi },
+              { label: "Property taxes (monthly)", amount: result.monthlyTaxes },
+              { label: "Gross carrying cost", amount: result.grossCarrying },
+              { label: "Rental income offset", amount: -result.netRentalIncome },
+              { label: "Net out-of-pocket", amount: result.netMonthlyOwnershipCost },
+              { label: "Est. Year-1 deductions", amount: result.yearOneDeductions },
+              { label: "Illustrative after-tax ownership cost / mo", amount: result.afterTaxMonthlyCost },
+            ]}
+            totalLabel={
+              result.monthlySavingsVsRent >= 0
+                ? "Potential monthly savings by owning"
+                : "Additional monthly cost to own"
+            }
+            totalValue={`$${formatMoney(Math.abs(result.monthlySavingsVsRent))}/mo`}
+            sourcePage="/nyc-rent-vs-buy-brownstone-calculator/"
+          />
         </div>
         <div className="calc-tool-results">
+          <div className="calc-total calc-total--hero">
+            <div>
+              <kbd>Net cost to own</kbd>
+              <strong>${formatMoney(result.netMonthlyOwnershipCost)}/mo</strong>
+              <span>
+                vs ${formatMoney(result.currentRent)}/mo current rent · {totalUnits}-unit brownstone
+              </span>
+            </div>
+          </div>
+
           <h3>Live Financial Breakdown</h3>
 
           <div className="calc-compare-pair">
@@ -337,15 +402,6 @@ export default function RentVsBuyBrownstoneCalculator() {
             </div>
           </div>
 
-          <div className="calc-tool-lead-form">
-            <h4>Receive Complete PDF &amp; Analysis Report</h4>
-            <LeadCaptureForm
-              formType="contact"
-              submitLabel="Show My Analysis"
-              messagePlaceholder="Tell us about your timeline or target neighborhoods"
-              compact
-            />
-          </div>
           <p className="calc-disclaimer">
             Tax estimates are educational and illustrative only — not tax, legal, or mortgage advice. Actual deductions
             depend on basis, land allocation, rental vs. personal use, and passive activity rules. Consult a CPA.

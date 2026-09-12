@@ -21,6 +21,7 @@ export const BUYING_A_BROWNSTONE_METAS = [
     "name": "twitter:description",
     "content": "Learn how to buy a brownstone in NYC with expert guidance on historic homes, renovations, financing, inspections, and prime Brooklyn and Manhattan neighborhoods."
   },
+  { name: "twitter:image", content: "https://montfortre.com/redesign-assets/og/brownstone-guide.png" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const BUYING_A_BROWNSTONE_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/redesign-assets/og/brownstone-guide.png" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

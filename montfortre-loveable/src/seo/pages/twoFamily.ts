@@ -21,6 +21,7 @@ export const TWO_FAMILY_METAS = [
     "name": "twitter:description",
     "content": "Explore 2 family houses for sale in NYC with expert guidance from Montfort. Discover investment opportunities, owner-occupied properties, and multi-family homes across Manhattan and Brooklyn."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const TWO_FAMILY_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

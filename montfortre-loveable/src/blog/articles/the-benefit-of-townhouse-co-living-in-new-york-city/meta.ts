@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2022/01/Blog-The-Benefit-of-Townhouse-Co-Living-In-New-York-City-1024x768.jpg",
+  featuredImageSrc: "/redesign-assets/blog/the-benefit-of-townhouse-co-living-in-new-york-city/featured.jpg",
   featuredImageAlt: "The Benefit of Townhouse Co-Living In New York City",
   shareUrl: "https://montfortre.com/the-benefit-of-townhouse-co-living-in-new-york-city/",
   toc: [

@@ -20,6 +20,7 @@ export default function NycCondoVsBrownstoneCalculator() {
         screenLabel="Condo vs brownstone calculator"
         heroImage="/redesign-assets/services/2-family-investment.webp"
         heroImageAlt="NYC condo vs brownstone calculator"
+        heroHints={["Effective monthly cost", "5 & 10-year equity", "Rental income offset"]}
         intro={<CondoVsBrownstoneIntro />}
         calculator={<CondoVsBrownstoneCalculator />}
         guide={<CondoVsBrownstoneGuide />}

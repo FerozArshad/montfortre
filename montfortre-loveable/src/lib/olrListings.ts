@@ -1,4 +1,5 @@
 import { getSupabaseUrl } from "./supabase";
+import { NEIGHBORHOOD_MAIN_IDX } from "./neighborhoodMainIdx";
 
 function readAnonKey(): string {
   return (
@@ -60,14 +61,25 @@ type CacheEntry = {
   total: number;
 };
 
-/** Serve instantly; OLR itself is often 30–60s on a cold cookie. */
-const FRESH_MS = 5 * 60 * 1000;
-const STALE_MS = 2 * 60 * 60 * 1000;
-const STORAGE_PREFIX = "montfort-olr-v2:";
+/**
+ * OLR SearchListingsByQuery returns one fixed page (~12–13) regardless of PageSize.
+ * Keep one size so home / hubs / listings share the same cache key.
+ */
+export const OLR_CARD_FETCH_SIZE = 12;
+
+/** Prefer memory/localStorage; OLR cold calls are often 10–60s. */
+const FRESH_MS = 10 * 60 * 1000;
+const STALE_MS = 6 * 60 * 60 * 1000;
+/** Still paint from disk after STALE — refresh in background. */
+const SOFT_STALE_MS = 7 * 24 * 60 * 60 * 1000;
+const STORAGE_PREFIX = "montfort-olr-v3:";
+const MAX_RETRIES = 3;
 
 const memoryCache = new Map<string, CacheEntry>();
 const inflight = new Map<string, Promise<OlrListingsResult>>();
 let catalogPrefetchStarted = false;
+let hubPrefetchStarted = false;
+const prefetchQueued = new Set<string>();
 
 export function extractOlrSavedSearchId(idxUrl: string): string | null {
   try {
@@ -155,11 +167,11 @@ function writeStorage(key: string, entry: CacheEntry) {
   }
 }
 
-function getCacheEntry(key: string): CacheEntry | null {
+function getCacheEntry(key: string, maxAge = SOFT_STALE_MS): CacheEntry | null {
   const mem = memoryCache.get(key);
-  if (mem && Date.now() - mem.at < STALE_MS) return mem;
+  if (mem && Date.now() - mem.at < maxAge) return mem;
   const stored = readStorage(key);
-  if (stored && Date.now() - stored.at < STALE_MS) {
+  if (stored && Date.now() - stored.at < maxAge) {
     memoryCache.set(key, stored);
     return stored;
   }
@@ -189,6 +201,10 @@ function olrApiUrl(params: Record<string, string>): string {
   return `${base}/functions/v1/olr-saved-search?${qs}`;
 }
 
+function delay(ms: number) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
 async function networkFetch(params: Record<string, string>): Promise<OlrListingsResult> {
   const key = cacheKey(params);
   const existing = inflight.get(key);
@@ -204,28 +220,34 @@ async function networkFetch(params: Record<string, string>): Promise<OlrListings
   }
 
   const request = (async () => {
-    const controller = new AbortController();
-    const timer = window.setTimeout(() => controller.abort(), 90000);
-    try {
-      const res = await fetch(olrApiUrl(params), { headers, signal: controller.signal });
-      const data = (await res.json()) as OlrApiResponse;
-      if (!res.ok) {
-        throw new Error(data.error || `OLR lookup failed (${res.status})`);
+    let lastErr: unknown;
+    for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+      const controller = new AbortController();
+      const timer = window.setTimeout(() => controller.abort(), 90000);
+      try {
+        const res = await fetch(olrApiUrl(params), { headers, signal: controller.signal });
+        const data = (await res.json()) as OlrApiResponse;
+        if (!res.ok) {
+          throw new Error(data.error || `OLR lookup failed (${res.status})`);
+        }
+        const listings = mapOlrListings(data);
+        const total = Number(data.TotalListingsCount || listings.length);
+        putCache(key, listings, total);
+        return { listings, total, fromCache: false };
+      } catch (err) {
+        lastErr = err;
+        if (err instanceof DOMException && err.name === "AbortError") {
+          throw new Error("Listings are taking too long to load. Open the full search or try again.");
+        }
+        if (attempt < MAX_RETRIES - 1) await delay(400 * (attempt + 1));
+      } finally {
+        window.clearTimeout(timer);
       }
-      const listings = mapOlrListings(data);
-      const total = Number(data.TotalListingsCount || listings.length);
-      putCache(key, listings, total);
-      return { listings, total, fromCache: false };
-    } catch (err) {
-      if (err instanceof DOMException && err.name === "AbortError") {
-        throw new Error("Listings are taking too long to load. Open the full search or try again.");
-      }
-      throw err;
-    } finally {
-      window.clearTimeout(timer);
-      inflight.delete(key);
     }
-  })();
+    throw lastErr instanceof Error ? lastErr : new Error("Could not load listings");
+  })().finally(() => {
+    inflight.delete(key);
+  });
 
   inflight.set(key, request);
   return request;
@@ -237,8 +259,8 @@ type FetchOpts = {
 };
 
 /**
- * Stale-while-revalidate: return cached cards immediately when we have them,
- * then refresh OLR in the background (OLR often takes 30–60s).
+ * Stale-while-revalidate: paint cached cards immediately (even hours later),
+ * then refresh OLR in the background.
  */
 async function fetchOlrPayload(params: Record<string, string>, opts?: FetchOpts): Promise<OlrListingsResult> {
   const key = cacheKey(params);
@@ -249,7 +271,7 @@ async function fetchOlrPayload(params: Record<string, string>, opts?: FetchOpts)
     return { listings: entry.listings, total: entry.total, fromCache: true };
   }
 
-  if (entry && age < STALE_MS) {
+  if (entry) {
     void networkFetch(params)
       .then((fresh) => opts?.onUpdate?.(fresh))
       .catch(() => {
@@ -265,8 +287,7 @@ export async function fetchOlrSavedSearchListings(
   savedSearchId: string,
   opts?: { pageSize?: number; page?: number; onUpdate?: (result: OlrListingsResult) => void },
 ): Promise<OlrListingsResult> {
-  // OLR SearchListingsByQuery ignores PageIndex and returns one fixed page (~13).
-  const pageSize = Math.min(48, Math.max(1, opts?.pageSize ?? 48));
+  const pageSize = Math.min(48, Math.max(1, opts?.pageSize ?? OLR_CARD_FETCH_SIZE));
   const page = Math.max(0, opts?.page ?? 0);
   return fetchOlrPayload(
     {
@@ -281,7 +302,7 @@ export async function fetchOlrSavedSearchListings(
 export async function fetchOlrCatalogListings(
   mode: "sales" | "rentals",
   page = 0,
-  pageSize = 24,
+  pageSize = OLR_CARD_FETCH_SIZE,
   opts?: { onUpdate?: (result: OlrListingsResult) => void },
 ): Promise<OlrListingsResult> {
   return fetchOlrPayload(
@@ -298,7 +319,7 @@ export function peekOlrSavedSearchCache(
   savedSearchId: string,
   opts?: { pageSize?: number; page?: number },
 ): OlrListingsResult | null {
-  const pageSize = Math.min(48, Math.max(1, opts?.pageSize ?? 48));
+  const pageSize = Math.min(48, Math.max(1, opts?.pageSize ?? OLR_CARD_FETCH_SIZE));
   const page = Math.max(0, opts?.page ?? 0);
   return peekOlrCache({
     id: savedSearchId,
@@ -310,7 +331,7 @@ export function peekOlrSavedSearchCache(
 export function peekOlrCatalogCache(
   mode: "sales" | "rentals",
   page = 0,
-  pageSize = 24,
+  pageSize = OLR_CARD_FETCH_SIZE,
 ): OlrListingsResult | null {
   return peekOlrCache({
     mode,
@@ -320,14 +341,79 @@ export function peekOlrCatalogCache(
 }
 
 /**
- * Warm the sales catalog in the background so /idx-sales paints from cache.
+ * Warm the sales catalog in the background so listing pages paint from cache.
  * Safe to call many times — only the first call starts a network request.
  */
-export function prefetchOlrSalesCatalog(pageSize = 12): void {
+export function prefetchOlrSalesCatalog(pageSize = OLR_CARD_FETCH_SIZE): void {
   if (typeof window === "undefined" || catalogPrefetchStarted) return;
-  if (peekOlrCatalogCache("sales", 0, pageSize)) return;
+  if (peekOlrCatalogCache("sales", 0, pageSize)) {
+    catalogPrefetchStarted = true;
+    return;
+  }
   catalogPrefetchStarted = true;
   void fetchOlrCatalogListings("sales", 0, pageSize).catch(() => {
     catalogPrefetchStarted = false;
   });
+}
+
+/** Warm one saved-search feed (deduped). */
+export function prefetchOlrSavedSearch(savedSearchId: string, pageSize = OLR_CARD_FETCH_SIZE): void {
+  if (typeof window === "undefined" || !savedSearchId) return;
+  const key = `id=${savedSearchId}&page=0&pageSize=${pageSize}`;
+  if (prefetchQueued.has(key) || peekOlrSavedSearchCache(savedSearchId, { pageSize })) return;
+  prefetchQueued.add(key);
+  void fetchOlrSavedSearchListings(savedSearchId, { pageSize }).catch(() => {
+    prefetchQueued.delete(key);
+  });
+}
+
+export function neighborhoodSavedSearchIds(): string[] {
+  const ids: string[] = [];
+  for (const entry of Object.values(NEIGHBORHOOD_MAIN_IDX)) {
+    const id = extractOlrSavedSearchId(entry.idxUrl);
+    if (id) ids.push(id);
+  }
+  return ids;
+}
+
+/**
+ * Idle-warm neighborhood hub feeds one-at-a-time (avoids hammering OLR).
+ */
+export function prefetchOlrNeighborhoodHubs(): void {
+  if (typeof window === "undefined" || hubPrefetchStarted) return;
+  hubPrefetchStarted = true;
+
+  const ids = neighborhoodSavedSearchIds().filter((id) => !peekOlrSavedSearchCache(id));
+  if (!ids.length) return;
+
+  let i = 0;
+  const runNext = () => {
+    if (i >= ids.length) return;
+    const id = ids[i++];
+    void fetchOlrSavedSearchListings(id)
+      .catch(() => {
+        /* continue queue */
+      })
+      .finally(() => {
+        if (typeof window.requestIdleCallback === "function") {
+          window.requestIdleCallback(runNext, { timeout: 8000 });
+        } else {
+          window.setTimeout(runNext, 1500);
+        }
+      });
+  };
+
+  if (typeof window.requestIdleCallback === "function") {
+    window.requestIdleCallback(runNext, { timeout: 5000 });
+  } else {
+    window.setTimeout(runNext, 2000);
+  }
+}
+
+/** Map `/harlem/` → saved-search id for hover prefetch. */
+export function savedSearchIdForPath(pathname: string): string | null {
+  const key = pathname.replace(/^\/+|\/+$/g, "").toLowerCase();
+  const entry = (NEIGHBORHOOD_MAIN_IDX as Record<string, { idxUrl: string }>)[key];
+  if (!entry) return null;
+  return extractOlrSavedSearchId(entry.idxUrl);
 }

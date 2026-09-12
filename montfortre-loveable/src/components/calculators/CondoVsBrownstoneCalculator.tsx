@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { formatMoney, parseCalcNumber } from "../../lib/calculatorUtils";
 import { calculateCondoVsBrownstone } from "../../lib/condoVsBrownstoneMath";
 import { rentalUnitsForBrownstone } from "../../lib/propertyComparisonMath";
-import LeadCaptureForm from "../shared/LeadCaptureForm";
+import CalculatorEmailResults from "./CalculatorEmailResults";
 import { CalculatorField, MoneyInput, NumberInput } from "./shared/CalculatorFields";
 import "../../styles/calculator-tools.css";
 
@@ -157,25 +157,25 @@ export default function CondoVsBrownstoneCalculator() {
 
   return (
     <div className="calc-tool calc-tool--compare" id="condo-vs-brownstone-calculator" data-screen-label="Condo vs brownstone calculator">
-      <div className="calc-tool-shell">
-        <div className="calc-agent-bar">
-          <div>
-            <strong>Stanley Montfort</strong>
-            <span>NYC Brownstone Expert · Over $100M+ in brownstone transactions</span>
-          </div>
-          <div className="calc-actions calc-actions--toolbar">
-            <button type="button" className="calc-btn calc-btn--ghost" onClick={reset}>
-              Reset
-            </button>
-            <button type="button" className="calc-btn calc-btn--ghost" onClick={() => void share()}>
-              Share
-            </button>
-            <button type="button" className="calc-btn calc-btn--ghost" onClick={() => window.print()}>
-              Print PDF
-            </button>
-          </div>
+      <div className="calc-tool-topbar">
+        <div>
+          <p className="calc-tool-topbar-kicker">Live estimate</p>
+          <h3>Condo vs brownstone</h3>
         </div>
+        <div className="calc-actions calc-actions--top">
+          <button type="button" className="calc-btn calc-btn--ghost" onClick={reset}>
+            Reset
+          </button>
+          <button type="button" className="calc-btn calc-btn--ghost" onClick={() => void share()}>
+            Share
+          </button>
+          <button type="button" className="calc-btn calc-btn--ghost" onClick={() => window.print()}>
+            Print PDF
+          </button>
+        </div>
+      </div>
 
+      <div className="calc-tool-shell">
         <div className="calc-compare-pair calc-compare-pair--hero">
           <div className={`calc-compare-box ${!result.isBrownstoneCheaper ? "is-winner" : ""}`}>
             <kbd>NYC Condo{!result.isBrownstoneCheaper ? " · Cheaper Option" : ""}</kbd>
@@ -206,14 +206,14 @@ export default function CondoVsBrownstoneCalculator() {
             className={`calc-btn ${horizonYears === 5 ? "calc-btn--gold" : "calc-btn--ghost"}`}
             onClick={() => setHorizonYears(5)}
           >
-            5-Year Horizon
+            5 Year Horizon
           </button>
           <button
             type="button"
             className={`calc-btn ${horizonYears === 10 ? "calc-btn--gold" : "calc-btn--ghost"}`}
             onClick={() => setHorizonYears(10)}
           >
-            10-Year Horizon
+            10 Year Horizon
           </button>
         </div>
       </div>
@@ -492,17 +492,32 @@ export default function CondoVsBrownstoneCalculator() {
             {formatMoney(result.brownstoneEquity10Y)}.
           </span>
         </div>
-      </div>
 
-      <div className="calc-tool-lead-form">
-        <h4>Want to See Brownstones Where the Numbers Actually Work?</h4>
-        <LeadCaptureForm
-          formType="contact"
-          submitLabel="Show Me Properties That Fit My Numbers"
-          messagePlaceholder="Desired neighborhood, timing, or questions"
-          compact
+        <CalculatorEmailResults
+          title="Condo vs Brownstone Comparison"
+          summary={`Condo effective $${formatMoney(result.condo.effectiveMonthly)}/mo vs brownstone effective $${formatMoney(result.brownstone.effectiveMonthly)}/mo. ${result.isBrownstoneCheaper ? "Brownstone" : "Condo"} has the monthly advantage. ${horizonYears}-year equity: condo $${formatMoney(result.condoEquity10Y)} vs brownstone $${formatMoney(result.brownstoneEquity10Y)}.`}
+          lines={[
+            { label: "Condo effective monthly", amount: result.condo.effectiveMonthly },
+            { label: "Brownstone effective monthly", amount: result.brownstone.effectiveMonthly },
+            { label: "Brownstone net rental income", amount: result.brownstone.netRentalIncome },
+            {
+              label: "Monthly advantage",
+              amount: Math.abs(result.monthlySavingsWithBrownstone),
+              note: result.isBrownstoneCheaper ? "brownstone lower" : "condo lower",
+            },
+            { label: `Condo projected equity (${horizonYears} yr)`, amount: result.condoEquity10Y },
+            { label: `Brownstone projected equity (${horizonYears} yr)`, amount: result.brownstoneEquity10Y },
+            {
+              label: "Tenant carrying-cost coverage",
+              amount: `${Math.min(100, result.tenantOffsetPct).toFixed(0)}%`,
+            },
+          ]}
+          totalLabel="Advantage"
+          totalValue={`${result.isBrownstoneCheaper ? "Brownstone" : "Condo"} · $${formatMoney(Math.abs(result.monthlySavingsWithBrownstone))}/mo`}
+          sourcePage="/nyc-condo-vs-brownstone-calculator/"
         />
       </div>
+
       <p className="calc-disclaimer calc-tool-footer">
         This calculator is for educational and illustrative purposes only. Results are estimates based on the
         assumptions entered and are not a guarantee of future performance, property appreciation, rental income,

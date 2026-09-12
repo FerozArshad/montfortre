@@ -21,6 +21,7 @@ export const SELLING_CO_OPS_METAS = [
     "name": "twitter:description",
     "content": "Sell your NYC co-op with expert pricing, board approval guidance, and strategic luxury marketing. Montfort helps maximize exposure and attract qualified buyers across Manhattan and Brooklyn"
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const SELLING_CO_OPS_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

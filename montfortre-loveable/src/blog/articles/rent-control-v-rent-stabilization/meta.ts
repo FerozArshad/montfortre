@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2022/03/DSC-6520-1024x681.jpg",
+  featuredImageSrc: "/redesign-assets/blog/rent-control-v-rent-stabilization/featured.jpg",
   featuredImageAlt: "Rent Control v. Rent Stabilization",
   shareUrl: "https://montfortre.com/rent-control-v-rent-stabilization/",
   toc: [

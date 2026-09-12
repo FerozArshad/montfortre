@@ -21,6 +21,7 @@ export const SERVICES_METAS = [
     "name": "twitter:description",
     "content": "Explore Montfort Real Estate’s luxury real estate services in NYC, including buyer representation, home selling strategies, property investment guidance, multifamily real estate, co-ops, condos, and townhomes across Manhattan and Brooklyn."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const SERVICES_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

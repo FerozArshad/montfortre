@@ -65,7 +65,7 @@ export default function NycSroFreeHomeValuationContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>NYC SRO Free Home Valuation</h1>
+            <h2 className="tf-guide-title">NYC SRO Free Home Valuation</h2>
             <div className="tf-guide-rule" />
             <p>If you own a Single Room Occupancy property in New York City and you&apos;re trying to determine your home&apos;s value, the standard tools won&apos;t give you an accurate answer. Online home valuations provide general estimates of property worth, but SRO buildings are a different category entirely. Automated Valuation Models analyze public data for quick estimates based on square footage, recent sale prices, and neighborhood averages-none of which capture the legal complexity, occupancy dynamics, or regulatory exposure that drive what a buyer will actually pay for an SRO in today&apos;s market. Home valuations help determine your property&apos;s current market value, but for SROs, that determination depends on factors most algorithms simply can&apos;t see.</p>
             <p>I&apos;m Stanley Montfort, and I specialize in evaluating and marketing SRO properties across New York City. I offer a free home valuation for SRO owners that goes well beyond what major real estate portals can deliver-a personalized, no-obligation consultation built on the same criteria professional buyers use when making acquisition decisions.</p>

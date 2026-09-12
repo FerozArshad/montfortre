@@ -7,6 +7,7 @@ import { FaqAccordion, FaqItem } from "../shared/FaqAccordion";
 import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PageListingsSection from "../shared/PageListingsSection";
 import PageContactSection from "../shared/PageContactSection";
+import NeighborhoodMistakesLead from "../shared/NeighborhoodMistakesLead";
 
 const NEWS_ARTICLES = [
   {
@@ -163,6 +164,8 @@ export default function ParkSlopeBrownstoneContent() {
         articleTitlesAsHeadings
         articles={NEWS_ARTICLES}
       />
+
+      <NeighborhoodMistakesLead neighborhood="Park Slope" brownstoneHref="/park-slope-brownstone-2/" />
 
       <PageContactSection topic="Park Slope Brownstone" />
     </>

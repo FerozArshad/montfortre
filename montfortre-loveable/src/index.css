@@ -25,3 +25,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.route-fallback {
+  min-height: 40vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.5rem;
+  color: #5a6570;
+  font: 500 0.95rem/1.4 "Segoe UI", system-ui, sans-serif;
+}

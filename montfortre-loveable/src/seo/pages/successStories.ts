@@ -15,6 +15,7 @@ export const SUCCESS_STORIES_METAS = [
     name: "twitter:description",
     content: "Read reviews from real clients about what they think of Montfort Real Estate % %",
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   { property: "og:locale", content: "en_US" },
   { property: "og:type", content: "article" },
   { property: "og:title", content: "Success Stories | Montfort Real Estate" },
@@ -24,6 +25,7 @@ export const SUCCESS_STORIES_METAS = [
   },
   { property: "og:url", content: "https://montfortre.com/success-stories/" },
   { property: "og:site_name", content: "Montfort Real Estate" },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   { property: "article:publisher", content: "https://www.facebook.com/montfortrealestate" },
 ] as const;
 

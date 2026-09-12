@@ -22,6 +22,10 @@ export const NYC_BROWNSTONE_MORTGAGES_METAS = [
     "content": "Explore NYC brownstone mortgage solutions with Montfort Real Estate. Get expert guidance on financing brownstones, multi-family homes, and investment properties across New York City."
   },
   {
+    "name": "twitter:image",
+    "content": "https://montfortre.com/redesign-assets/og/brownstone-guide.png"
+  },
+  {
     "property": "og:locale",
     "content": "en_US"
   },
@@ -44,6 +48,10 @@ export const NYC_BROWNSTONE_MORTGAGES_METAS = [
   {
     "property": "og:site_name",
     "content": "Montfort Real Estate"
+  },
+  {
+    "property": "og:image",
+    "content": "https://montfortre.com/redesign-assets/og/brownstone-guide.png"
   }
 ] as const;
 

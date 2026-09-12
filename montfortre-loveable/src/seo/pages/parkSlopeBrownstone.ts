@@ -8,6 +8,7 @@ export const PARK_SLOPE_BROWNSTONE_METAS = [
   { name: "description", content: "Explore Park Slope brownstones with Montfort Real Estate. Discover historic Brooklyn brownstones, classic townhomes, and luxury properties for sale in Park Slope NYC" },
   { name: "twitter:card", content: "summary_large_image" },
   { name: "twitter:description", content: "Explore Park Slope brownstones with Montfort Real Estate. Discover historic Brooklyn brownstones, classic townhomes, and luxury properties for sale in Park Slope NYC" },
+  { name: "twitter:image", content: "https://montfortre.com/redesign-assets/og/park-slope.png" },
   { name: "twitter:title", content: PARK_SLOPE_BROWNSTONE_TITLE },
   { property: "og:locale", content: "en_US" },
   { property: "og:type", content: "article" },
@@ -15,6 +16,7 @@ export const PARK_SLOPE_BROWNSTONE_METAS = [
   { property: "og:description", content: "Explore Park Slope brownstones with Montfort Real Estate. Discover historic Brooklyn brownstones, classic townhomes, and luxury properties for sale in Park Slope NYC" },
   { property: "og:url", content: "https://montfortre.com/park-slope-brownstone-2/" },
   { property: "og:site_name", content: "Montfort Real Estate" },
+  { property: "og:image", content: "https://montfortre.com/redesign-assets/og/park-slope.png" },
   { property: "article:publisher", content: "https://www.facebook.com/montfortrealestate" },
 ] as const;
 

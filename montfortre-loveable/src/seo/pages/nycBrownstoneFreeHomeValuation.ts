@@ -21,6 +21,7 @@ export const NYC_BROWNSTONE_VALUATION_METAS = [
     "name": "twitter:description",
     "content": "Get a free brownstone home valuation in NYC with Montfort Real Estate. Discover your brownstone’s current market value with expert local analysis and strategic pricing insights."
   },
+  { name: "twitter:image", content: "https://montfortre.com/redesign-assets/og/brownstone-guide.png" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const NYC_BROWNSTONE_VALUATION_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/redesign-assets/og/brownstone-guide.png" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

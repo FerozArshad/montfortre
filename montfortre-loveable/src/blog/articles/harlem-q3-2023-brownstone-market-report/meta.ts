@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2023/10/Harlem-Q3-2023-Market-Report-1024x683.fit.jpg",
+  featuredImageSrc: "/redesign-assets/blog/harlem-q3-2023-brownstone-market-report/featured.jpg",
   featuredImageAlt: "Harlem Brownstone Q3 2023 Market Report",
   shareUrl: "https://montfortre.com/harlem-q3-2023-brownstone-market-report/",
   toc: [

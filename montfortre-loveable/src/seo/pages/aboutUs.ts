@@ -6,12 +6,14 @@ export const ABOUT_US_TITLE = "About Us | Montfort Real Estate";
 
 export const ABOUT_US_METAS = [
   { name: "twitter:card", content: "summary_large_image" },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   { name: "twitter:title", content: "About Us | Montfort Real Estate" },
   { property: "og:locale", content: "en_US" },
   { property: "og:type", content: "article" },
   { property: "og:title", content: "About Us | Montfort Real Estate" },
   { property: "og:url", content: "https://montfortre.com/about-us/" },
   { property: "og:site_name", content: "Montfort Real Estate" },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   { property: "article:publisher", content: "https://www.facebook.com/montfortrealestate" },
 ] as const;
 

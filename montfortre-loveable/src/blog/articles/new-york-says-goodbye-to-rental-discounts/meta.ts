@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2021/10/Blog-New-York-Says-Goodbye-to-Rental-Discounts-1024x683.jpg",
+  featuredImageSrc: "/redesign-assets/blog/new-york-says-goodbye-to-rental-discounts/featured.jpg",
   featuredImageAlt: "New York Says Goodbye to Rental Discounts",
   shareUrl: "https://montfortre.com/new-york-says-goodbye-to-rental-discounts/",
   toc: [

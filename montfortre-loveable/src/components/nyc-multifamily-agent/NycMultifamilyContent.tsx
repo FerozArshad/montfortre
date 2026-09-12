@@ -93,7 +93,7 @@ export default function NycMultifamilyContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>NYC Residential Multifamily Real Estate Agent Services</h1>
+            <h2 className="tf-guide-title">NYC Residential Multifamily Real Estate Agent Services</h2>
             <div className="tf-guide-rule" />
             <h2>Expert Guidance for Selling or Buying Multifamily Properties in NYC</h2>
             <p>

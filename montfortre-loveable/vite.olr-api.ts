@@ -106,10 +106,36 @@ function sendJson(res: import("http").ServerResponse, status: number, data: unkn
 async function warmCookieAndSalesCatalog() {
   try {
     const cookie = await olrCookie();
-    const cacheKey = "/api/olr-listings?mode=sales&page=0&pageSize=12";
-    if (fromCache(cacheKey)) return;
-    const data = await fetchOlrCatalog("sales", 0, 12, cookie);
-    toCache(cacheKey, data);
+    const catalogKey = "/api/olr-listings?mode=sales&page=0&pageSize=12";
+    if (!fromCache(catalogKey)) {
+      const data = await fetchOlrCatalog("sales", 0, 12, cookie);
+      toCache(catalogKey, data);
+    }
+
+    // Warm neighborhood saved searches serially so first hub visits hit Vite cache.
+    const hubIds = [
+      "115357",
+      "115376",
+      "115380",
+      "115381",
+      "115388",
+      "115393",
+      "115389",
+      "115397",
+      "115398",
+      "115385",
+      "94747",
+    ];
+    for (const id of hubIds) {
+      const key = `/api/olr-saved-search?id=${id}&page=0&pageSize=12`;
+      if (fromCache(key)) continue;
+      try {
+        const data = await fetchOlrSavedSearch(id, cookie, 0, 12);
+        toCache(key, data);
+      } catch {
+        /* keep going — OLR flakes under load */
+      }
+    }
   } catch {
     /* OLR may be down during boot — first browser request will retry */
   }

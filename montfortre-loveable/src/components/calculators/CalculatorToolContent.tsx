@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import CalculatorCrossLinks from "../shared/CalculatorCrossLinks";
 import ContactSection from "../shared/ContactSection";
 import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PromisesBar from "../shared/PromisesBar";
@@ -13,6 +14,8 @@ type Props = {
   screenLabel: string;
   heroImage: string;
   heroImageAlt?: string;
+  /** Short framing chips under the hero lead */
+  heroHints?: readonly string[];
   /** Short framing section above the interactive tool */
   intro?: ReactNode;
   /** Long-form educational guide / FAQ below the tool */
@@ -27,13 +30,15 @@ export default function CalculatorToolContent({
   screenLabel,
   heroImage,
   heroImageAlt,
+  heroHints,
   intro,
   guide,
 }: Props) {
   return (
     <>
-      <section className="tf-hero calc-hero" data-screen-label={screenLabel}>
+      <section className="tf-hero calc-hero calc-hero--premium" data-screen-label={screenLabel}>
         <div className="tf-hero-ring" />
+        <div className="calc-hero-ring calc-hero-ring--bl" />
         <div className="tf-hero-inner">
           <div className="tf-hero-copy">
             <p className="tf-crumb">
@@ -41,6 +46,13 @@ export default function CalculatorToolContent({
             </p>
             <h1>{title}</h1>
             <p className="tf-hero-lead">{lead}</p>
+            {heroHints?.length ? (
+              <ul className="calc-hero-hints">
+                {heroHints.map((hint) => (
+                  <li key={hint}>{hint}</li>
+                ))}
+              </ul>
+            ) : null}
             <div className="tf-hero-ctas">
               <a href="#calculator" className="tf-hero-book">
                 Use the calculator
@@ -83,6 +95,7 @@ export default function CalculatorToolContent({
         </section>
       ) : null}
 
+      <CalculatorCrossLinks />
       <ContactSection />
     </>
   );

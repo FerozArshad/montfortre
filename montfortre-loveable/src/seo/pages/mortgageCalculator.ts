@@ -11,6 +11,7 @@ export const MORTGAGE_CALCULATOR_METAS = [
   { name: "description", content: DESCRIPTION },
   { name: "twitter:card", content: "summary_large_image" },
   { name: "twitter:description", content: DESCRIPTION },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   { name: "twitter:title", content: MORTGAGE_CALCULATOR_TITLE },
   { property: "og:locale", content: "en_US" },
   { property: "og:type", content: "article" },
@@ -18,6 +19,7 @@ export const MORTGAGE_CALCULATOR_METAS = [
   { property: "og:description", content: DESCRIPTION },
   { property: "og:url", content: "https://montfortre.com/mortgage-calculator/" },
   { property: "og:site_name", content: "Montfort Real Estate" },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   { property: "article:publisher", content: "https://www.facebook.com/montfortrealestate" },
 ] as const;
 

@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2022/01/ChatGPT-Image-11-jun-2026-19-52-42-1024x683.fit.png",
+  featuredImageSrc: "/redesign-assets/blog/co-ownership-and-resolving-property-disputes-in-new-york-city/featured.png",
   featuredImageAlt: "Co-Ownership and Resolving Property Disputes in New York City",
   shareUrl: "https://montfortre.com/co-ownership-and-resolving-property-disputes-in-new-york-city/",
   toc: [

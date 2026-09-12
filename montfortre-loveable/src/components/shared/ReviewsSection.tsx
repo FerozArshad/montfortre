@@ -19,6 +19,67 @@ type ReviewsSectionProps = {
 
 const GRID_PAGE_SIZE = 8;
 
+function formatReviewDate(iso?: string | null): string | null {
+  if (!iso) return null;
+  const t = Date.parse(iso);
+  if (!Number.isFinite(t)) return null;
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  }).format(new Date(t));
+}
+
+function ReviewCard({
+  review,
+}: {
+  review: {
+    id: string;
+    href: string;
+    name: string;
+    quote: string;
+    rating: number;
+    photo?: string;
+    publishedAt?: string | null;
+  };
+}) {
+  const postedOn = formatReviewDate(review.publishedAt);
+  return (
+    <a href={review.href} target="_blank" rel="noopener noreferrer" className="home-rev-slide">
+      <div className="home-rev-author">
+        {review.photo ? (
+          <img src={review.photo} alt="" referrerPolicy="no-referrer" />
+        ) : (
+          <span className="home-rev-author-fallback" aria-hidden="true">
+            {(review.name.trim()[0] || "G").toUpperCase()}
+          </span>
+        )}
+        <div>
+          <h4>{review.name}</h4>
+          <div className="home-rev-posted">
+            <img src={GOOGLE_G_MARK} alt="" /> Posted on Google
+            {postedOn ? (
+              <>
+                <span className="home-rev-posted-sep" aria-hidden="true">
+                  ·
+                </span>
+                <time className="home-rev-posted-date" dateTime={review.publishedAt || undefined}>
+                  {postedOn}
+                </time>
+              </>
+            ) : null}
+          </div>
+        </div>
+        <span className="home-rev-slide-stars">{ratingStars(review.rating)}</span>
+      </div>
+      <div>
+        <span className="home-rev-quote-mark">“</span>
+        <p>{review.quote}</p>
+      </div>
+    </a>
+  );
+}
+
 /** Sitewide Google reviews — original Montfort cream carousel (no GHL iframe). */
 export default function ReviewsSection({
   variant = "carousel",
@@ -70,34 +131,7 @@ export default function ReviewsSection({
           <>
             <div className="home-rev-grid">
               {slides.map((review) => (
-                <a
-                  key={review.id}
-                  href={review.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="home-rev-slide"
-                >
-                  <div className="home-rev-author">
-                    {review.photo ? (
-                      <img src={review.photo} alt="" referrerPolicy="no-referrer" />
-                    ) : (
-                      <span className="home-rev-author-fallback" aria-hidden="true">
-                        {(review.name.trim()[0] || "G").toUpperCase()}
-                      </span>
-                    )}
-                    <div>
-                      <h4>{review.name}</h4>
-                      <div className="home-rev-posted">
-                        <img src={GOOGLE_G_MARK} alt="" /> Posted on Google
-                      </div>
-                    </div>
-                    <span className="home-rev-slide-stars">{ratingStars(review.rating)}</span>
-                  </div>
-                  <div>
-                    <span className="home-rev-quote-mark">“</span>
-                    <p>{review.quote}</p>
-                  </div>
-                </a>
+                <ReviewCard key={review.id} review={review} />
               ))}
             </div>
             {hasMore ? (
@@ -117,34 +151,7 @@ export default function ReviewsSection({
             <div className="home-rev-slider">
               <div id="review-track" className="no-sb">
                 {slides.map((review) => (
-                  <a
-                    key={review.id}
-                    href={review.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="home-rev-slide"
-                  >
-                    <div className="home-rev-author">
-                      {review.photo ? (
-                        <img src={review.photo} alt="" referrerPolicy="no-referrer" />
-                      ) : (
-                        <span className="home-rev-author-fallback" aria-hidden="true">
-                          {(review.name.trim()[0] || "G").toUpperCase()}
-                        </span>
-                      )}
-                      <div>
-                        <h4>{review.name}</h4>
-                        <div className="home-rev-posted">
-                          <img src={GOOGLE_G_MARK} alt="" /> Posted on Google
-                        </div>
-                      </div>
-                      <span className="home-rev-slide-stars">{ratingStars(review.rating)}</span>
-                    </div>
-                    <div>
-                      <span className="home-rev-quote-mark">“</span>
-                      <p>{review.quote}</p>
-                    </div>
-                  </a>
+                  <ReviewCard key={review.id} review={review} />
                 ))}
               </div>
               <button type="button" id="review-prev" className="home-rev-nav" aria-label="Previous review">

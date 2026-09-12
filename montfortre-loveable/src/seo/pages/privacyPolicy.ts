@@ -5,13 +5,18 @@ import type { PageSeo } from "../types";
 export const PRIVACY_POLICY_TITLE = "Privacy Policy | Montfort Real Estate";
 
 export const PRIVACY_POLICY_METAS = [
+  { name: "description", content: "Read how Montfort Real Estate collects, uses, and protects your personal information when you use our website and real estate services." },
+  { name: "twitter:description", content: "Read how Montfort Real Estate collects, uses, and protects your personal information when you use our website and real estate services." },
+  { property: "og:description", content: "Read how Montfort Real Estate collects, uses, and protects your personal information when you use our website and real estate services." },
   { property: "og:locale", content: "en_US" },
   { property: "og:type", content: "article" },
   { property: "og:title", content: "Privacy Policy | Montfort Real Estate" },
   { property: "og:url", content: "https://montfortre.com/privacy-policy/" },
   { property: "og:site_name", content: "Montfort Real Estate" },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   { property: "article:publisher", content: "https://www.facebook.com/montfortrealestate" },
   { name: "twitter:card", content: "summary_large_image" },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   { name: "twitter:title", content: "Privacy Policy | Montfort Real Estate" },
 ] as const;
 

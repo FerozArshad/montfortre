@@ -21,6 +21,7 @@ export const CO_OWNERSHIP_BUYING_METAS = [
     "name": "twitter:description",
     "content": "Explore co-ownership buying opportunities in NYC with expert guidance on shared property investments, fractional ownership strategies, and affordable entry into the New York real estate market."
   },
+  { name: "twitter:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const CO_OWNERSHIP_BUYING_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/og-home.jpg" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

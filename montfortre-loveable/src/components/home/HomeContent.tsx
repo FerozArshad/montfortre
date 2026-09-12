@@ -6,7 +6,7 @@ import GuideDownloadForm from "../shared/GuideDownloadForm";
 import useReputationAggregate from "../../hooks/useReputationAggregate";
 import { ALL_LISTINGS, type ListingDetail } from "../../data/listings";
 import { fetchPublishedListings } from "../../lib/cms/listings";
-import { prefetchOlrSalesCatalog } from "../../lib/olrListings";
+import { prefetchOlrNeighborhoodHubs, prefetchOlrSalesCatalog } from "../../lib/olrListings";
 import "../../styles/home-hero.css";
 import "../../styles/home-hidden-cost.css";
 import "../../styles/home-founder.css";
@@ -167,6 +167,13 @@ const PLAN_STEPS = [
 
 const SERVICE_CARDS = [
   {
+    href: "/nyc-brownstone-buyer-access/",
+    image: "/redesign-assets/services/buyers-agent.webp",
+    alt: "Off Market Brownstone Finder",
+    title: "Off Market Brownstone Finder",
+    copy: "Get matched to 3–4 family brownstones where rental income can help pay the note — private inventory and owner-occupant financing guidance.",
+  },
+  {
     href: "/nyc-buyers-agent-service/",
     image: "/redesign-assets/services/buyers-agent.webp",
     alt: "NYC Buyer's Agent materials on a desk",
@@ -188,6 +195,13 @@ const SERVICE_CARDS = [
     copy: "Guidance on 2–4 unit buildings, brownstone conversions, and value-add investments to build long-term wealth across the boroughs.",
   },
   {
+    href: "/brownstone-violation-assessment/",
+    image: "/redesign-assets/services/nyc-brownstone-free-home-valuation.webp",
+    alt: "Brownstone Violation Assessment",
+    title: "Brownstone Violation Assessment",
+    copy: "Screen DOB, HPD, tax, and zoning public records before you make an offer — then get Stanley’s read on what matters.",
+  },
+  {
     href: "/home-valuation/",
     image: "/redesign-assets/services/home-valuation.webp",
     alt: "NYC Free Home Valuation flyer and tablet",
@@ -200,6 +214,13 @@ const SERVICE_CARDS = [
     alt: "NYC Mortgage Calculator on a laptop",
     title: "NYC Mortgage Calculator",
     copy: "See your full monthly cost, maintenance, common charges, taxes, and closing costs, before you make an offer.",
+  },
+  {
+    href: "/services/#nyc-brownstone-calculators",
+    image: "/redesign-assets/services/buying-a-brownstone-nyc.png",
+    alt: "NYC brownstone calculators",
+    title: "NYC Brownstone Calculators",
+    copy: "Estimate buyer and seller closing costs, compare rent vs buy, and weigh condo vs brownstone ownership before you commit.",
   },
 ] as const;
 
@@ -342,7 +363,10 @@ export default function HomeContent() {
   }, []);
 
   useEffect(() => {
-    const run = () => prefetchOlrSalesCatalog(12);
+    const run = () => {
+      prefetchOlrSalesCatalog();
+      prefetchOlrNeighborhoodHubs();
+    };
     let idleId: number | undefined;
     let timer: ReturnType<typeof setTimeout> | undefined;
     if (typeof window.requestIdleCallback === "function") {
@@ -633,8 +657,8 @@ export default function HomeContent() {
                 <a href="/featured-brownstones-for-sale/" className="home-cost-link">real estate</a> that will{" "}
                 <strong>give you a headache</strong>.
               </p>
-              <a href="https://calendly.com/montfort" className="home-cost-cta">
-                Schedule a Free Consultation
+              <a href="#home-download" className="home-cost-cta">
+                Download 15 Costly Mistakes Guide
               </a>
             </div>
           </div>
@@ -749,7 +773,7 @@ export default function HomeContent() {
                 <div className="home-areas-veil" />
                 <div className="home-areas-boro">{card.boro}</div>
                 <div className="home-areas-copy">
-                  <h3>{card.title}</h3>
+                  <h2>{card.title}</h2>
                   <div className="home-areas-blurb">{card.blurb}</div>
                   <div className="home-areas-explore">
                     Explore <span>→</span>
@@ -787,8 +811,8 @@ export default function HomeContent() {
                   className="home-expect-img--220"
                   src="/redesign-assets/expect/offmarket.webp"
                   alt="On and off market real estate search"
-                  width="250"
-                  height="250"
+                  width="300"
+                  height="300"
                 />
               </div>
               <div className="home-expect-divider" />
@@ -819,8 +843,8 @@ export default function HomeContent() {
                   className="home-expect-img--231"
                   src="/redesign-assets/expect/troublesome.webp"
                   alt="Troublesome brownstone interior"
-                  width="250"
-                  height="250"
+                  width="315"
+                  height="300"
                 />
               </div>
               <div className="home-expect-divider" />
@@ -847,8 +871,8 @@ export default function HomeContent() {
                   className="home-expect-img--220"
                   src="/redesign-assets/expect/team.webp"
                   alt="Attorneys, contractors and inspectors"
-                  width="250"
-                  height="250"
+                  width="300"
+                  height="300"
                 />
               </div>
               <div className="home-expect-divider" />
@@ -1123,9 +1147,42 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <ResourcesSection />
+      <ResourcesSection
+        title="Free Buyer Resources"
+        subtitle="Start with the 15 Costly Mistakes guide — enter your details to download — then explore more brownstone buyer advice."
+        moreLabel="Learn more"
+        articles={[
+          {
+            href: "#home-download",
+            image: "/redesign-assets/hoods/harlem.webp",
+            alt: "15 Costly Mistakes Made When Buying a Brownstone",
+            category: "Free Guide",
+            title: "15 Costly Mistakes Made When Buying a Brownstone",
+            excerpt:
+              "Educate yourself on the mistakes that separate a successful brownstone purchase from a costly one. Download the free guide.",
+          },
+          {
+            href: "/buying-a-brownstone-in-nyc/",
+            image: "/redesign-assets/services/buying-a-brownstone-nyc.png",
+            alt: "Buying a Brownstone in NYC",
+            category: "Buyer Guide",
+            title: "Buying a Brownstone in NYC",
+            excerpt:
+              "Walk through pricing, due diligence, and negotiation so you buy with confidence in New York City.",
+          },
+          {
+            href: "/discover-your-dream-home-explore-apartments-for-sale-on-the-upper-west-side/",
+            image: "/redesign-assets/hoods/upper-west-side.webp",
+            alt: "Explore apartments for sale on the Upper West Side",
+            category: "Buyer Guide",
+            title: "Discover Your Dream Home on the Upper West Side",
+            excerpt:
+              "Are you searching for your dream home in one of New York City’s most sought-after neighborhoods?",
+          },
+        ]}
+      />
 
-      <section className="home-dl" data-screen-label="Download">
+      <section className="home-dl" id="home-download" data-screen-label="Download">
         <div className="home-dl-inner">
           <div data-reveal="" className="home-dl-copy">
             <div className="home-dl-kicker">Free Download</div>

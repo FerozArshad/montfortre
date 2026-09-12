@@ -93,7 +93,7 @@ export default function HomeValuationContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>Free Home Value Estimator: Guide &amp; Consultation Services</h1>
+            <h2 className="tf-guide-title">Free Home Value Estimator: Guide &amp; Consultation Services</h2>
             <p>
               Get instant property insights with our free home value estimator tool, and connect with a real estate
               expert for personalized advice.

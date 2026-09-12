@@ -112,4 +112,5 @@ export const BLOG_ARTICLE_REGISTRY: Record<string, BlogArticleModule> = {
   "how-to-price-a-harlem-townhouse": a53,
 };
 
-export const BLOG_ARTICLE_SLUGS = Object.keys(BLOG_ARTICLE_REGISTRY);
+export { BLOG_ARTICLE_SLUGS } from "./slugs";
+

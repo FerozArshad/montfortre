@@ -8,7 +8,7 @@ export const meta: BlogArticleMeta = {
   authorName: "Stanley Montfort",
   authorHref: "/stanley-montfort/",
   authorRole: "NYC Buyer's Agent",
-  featuredImageSrc: "https://assets.agentfire3.com/uploads/sites/312/2023/11/townhouses-with-elevators-682x1024.fit.png",
+  featuredImageSrc: "/redesign-assets/blog/top-harlem-new-york-townhouses-with-elevators/featured.png",
   featuredImageAlt: "Top Harlem New York Townhouses With Elevators",
   shareUrl: "https://montfortre.com/top-harlem-new-york-townhouses-with-elevators/",
   toc: [

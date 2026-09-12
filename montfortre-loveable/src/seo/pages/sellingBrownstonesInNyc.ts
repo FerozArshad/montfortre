@@ -21,6 +21,7 @@ export const SELLING_BROWNSTONES_METAS = [
     "name": "twitter:description",
     "content": "Sell your NYC brownstone with expert marketing, pricing strategies, and luxury real estate guidance. Montfort helps maximize exposure and attract qualified buyers across New York City."
   },
+  { name: "twitter:image", content: "https://montfortre.com/redesign-assets/og/brownstone-guide.png" },
   {
     "property": "og:locale",
     "content": "en_US"
@@ -45,6 +46,7 @@ export const SELLING_BROWNSTONES_METAS = [
     "property": "og:site_name",
     "content": "Montfort Real Estate"
   },
+  { property: "og:image", content: "https://montfortre.com/redesign-assets/og/brownstone-guide.png" },
   {
     "property": "article:publisher",
     "content": "https://www.facebook.com/montfortrealestate"

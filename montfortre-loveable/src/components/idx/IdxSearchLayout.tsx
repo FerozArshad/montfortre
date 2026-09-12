@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import "../../styles/idx-page.css";
 import "../../styles/page-listings.css";
 import DesktopHeader from "../layout/DesktopHeader";
-import { fetchOlrCatalogListings, peekOlrCatalogCache, type OlrListingCard } from "../../lib/olrListings";
+import {
+  fetchOlrCatalogListings,
+  OLR_CARD_FETCH_SIZE,
+  peekOlrCatalogCache,
+  type OlrListingCard,
+} from "../../lib/olrListings";
 
 export interface IdxSearchLayoutProps {
   eyebrow: string;
@@ -13,8 +18,8 @@ export interface IdxSearchLayoutProps {
   externalButtonLabel: string;
 }
 
-/** Smaller first page = faster OLR response on cold loads. */
-const PAGE_SIZE = 12;
+/** Match shared OLR_CARD_FETCH_SIZE so home/current-listings warm the same cache. */
+const PAGE_SIZE = OLR_CARD_FETCH_SIZE;
 
 export default function IdxSearchLayout({
   eyebrow,

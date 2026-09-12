@@ -68,7 +68,7 @@ export default function NycSroMortgagesContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>NYC SRO Mortgages: Complete Financing Guide for Single Room Occupancy Properties</h1>
+            <h2 className="tf-guide-title">NYC SRO Mortgages: Complete Financing Guide for Single Room Occupancy Properties</h2>
             <div className="tf-guide-rule" />
 
             <h2>Why Standard Mortgage Pre-Approval Won&apos;t Work for SRO Properties</h2>

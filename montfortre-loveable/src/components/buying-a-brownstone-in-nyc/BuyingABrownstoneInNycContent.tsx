@@ -68,7 +68,7 @@ export default function BuyingABrownstoneInNycContent() {
       <section className="tf-guide" data-screen-label="Guide">
         <div className="tf-guide-inner">
           <div data-reveal="">
-            <h1>Buying a Brownstone in NYC: The Complete Buyer&apos;s Guide</h1>
+            <h2 className="tf-guide-title">Buying a Brownstone in NYC: The Complete Buyer&apos;s Guide</h2>
             <div className="tf-guide-rule" />
             <p>
               Buying a brownstone in New York City is unlike buying any other type of property. Whether you&apos;re

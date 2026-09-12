@@ -7,6 +7,7 @@ import "../../styles/chelsea-townhouses-page.css";
 import HeroGoogleRating from "../shared/HeroGoogleRating";
 import PageListingsSection from "../shared/PageListingsSection";
 import PageContactSection from "../shared/PageContactSection";
+import NeighborhoodMistakesLead from "../shared/NeighborhoodMistakesLead";
 import NeighborhoodGuideBody from "../shared/NeighborhoodGuideBody";
 import chelseaTownhousesGuide from "../../data/neighborhood-guides/chelsea-townhouses.html?raw";
 
@@ -88,6 +89,8 @@ export default function ChelseaTownhousesContent() {
         showCta={false}
         articles={NEWS_ARTICLES}
       />
+
+      <NeighborhoodMistakesLead neighborhood="Chelsea" brownstoneHref="/chelsea-townhouses/" />
 
       <PageContactSection topic="Chelsea Townhouses" />
     </>
